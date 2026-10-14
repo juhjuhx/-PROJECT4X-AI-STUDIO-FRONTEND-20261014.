@@ -1,0 +1,10 @@
+* text=auto
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.woff2 binary
+*.zip binary
+*.command text eol=lf
+# Preserve upstream third-party license texts verbatim; whitespace is upstream.
+docs/research/第三方授權/** -whitespace

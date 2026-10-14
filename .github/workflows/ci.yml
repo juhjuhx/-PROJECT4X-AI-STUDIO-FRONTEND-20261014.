@@ -1,0 +1,27 @@
+name: Core checks (not product acceptance)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  core-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+          cache: npm
+      - name: Restore exact lockfile
+        run: npm ci --ignore-scripts
+      - name: Typecheck
+        run: npm run check
+      - name: Existing unit and review tests
+        run: npm test
+      - name: Build
+        run: npm run build
+# This workflow intentionally does not call full100 PASS. The recorded headless
+# result is 62/100 complete, 38 turn limits; product engineering gate FAIL.

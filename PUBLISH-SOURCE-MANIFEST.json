@@ -1,0 +1,80 @@
+{
+  "schema": "project4x-public-publish-1",
+  "originSourceSnapshot": "f132db11dd8842a59100ad994c7abc7c6ed64053ce63adf25de7bba114249e4c",
+  "unmodifiedSource": {
+    "src/main.ts": {
+      "unchanged": true,
+      "sha256": "c365f4ce4bcce137aae48a9c99067c03ff5bd179dd1216e3d200e17b02c3becc"
+    },
+    "src/styles.css": {
+      "unchanged": true,
+      "sha256": "1a7b061e780823db8a11ce6dd0fbfee2e617c368cb1fa7bc05c3f6039ab4615c"
+    },
+    "src/ui/map.ts": {
+      "unchanged": true,
+      "sha256": "9e5a2e5cd0f744e9ece60e9e79f5172882cdc0ec534919bd2508f12f6bc6b3dd"
+    },
+    "src/ui/assets.d.ts": {
+      "unchanged": true,
+      "sha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c"
+    },
+    "src/core/persistence.ts": {
+      "unchanged": true,
+      "sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8"
+    },
+    "src/core/types.ts": {
+      "unchanged": true,
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd"
+    },
+    "src/core/game.ts": {
+      "unchanged": true,
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7"
+    },
+    "src/core/ai.ts": {
+      "unchanged": true,
+      "sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a"
+    },
+    "tests/流亡重建.test.ts": {
+      "unchanged": true,
+      "sha256": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394"
+    },
+    "tests/core.test.ts": {
+      "unchanged": true,
+      "sha256": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb"
+    },
+    "tests/review.test.ts": {
+      "unchanged": true,
+      "sha256": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab"
+    },
+    "tests/artifact-proof.test.mjs": {
+      "unchanged": true,
+      "sha256": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6"
+    },
+    "scripts/context-init.mjs": {
+      "unchanged": true,
+      "sha256": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b"
+    },
+    "scripts/verify.mjs": {
+      "unchanged": true,
+      "sha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553"
+    },
+    "scripts/headless.ts": {
+      "unchanged": true,
+      "sha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d"
+    },
+    "scripts/browser-check.mjs": {
+      "unchanged": true,
+      "sha256": "13e515cc603332b8b8a2cb1cabbdacc73eccf743c334a1c76fa2404b4b76c1f3"
+    },
+    "scripts/serve.mjs": {
+      "unchanged": true,
+      "sha256": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38"
+    },
+    "scripts/artifact-proof.mjs": {
+      "unchanged": true,
+      "sha256": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367"
+    }
+  },
+  "excluded": "evidence, private historical archives, dist, node_modules, direct private paths",
+  "engineeringGate": "NOT_PASS"
+}

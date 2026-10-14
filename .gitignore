@@ -1,0 +1,27 @@
+# Dependencies and generated content
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+.credentials/
+
+# Private/local handoff and test artifacts
+證據/完整驗證-*/
+evidence/
+PROJECT4X-*.zip
+*.zip
+*.log
+.DS_Store
+.idea/
+.vscode/
