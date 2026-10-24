@@ -1,3 +1,5 @@
+> Demo03隔離預覽工程更新：兩兵/兩科技、固定版本registry/Save2/Replay2/Session/AI/事件/UI已實作；254tests、舊完整工程Gate與新桌機/觸控20指令旅程PASS，Core獨立review APPROVE，最終UI review/PR待完成。入口README→MASTER-TODO→NEXT-ACTION；不是正式平衡或Demo03 Release。以下保留Demo02已發布狀態與歷史。
+
 # PROJECT-4X 當前工程狀態
 
 Demo02為已發布的既有規則可玩Web/PWA預覽版，package0.1.0／g1-ccts-1／save1／replay1；Playable Alpha PARTIAL。正式玩法：24×24程序地圖、三兵/三科技、探索/攻擊/佔領/招募/遺跡、流亡/建中心、AI與Save/Replay。

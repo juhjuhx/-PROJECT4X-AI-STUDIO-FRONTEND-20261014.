@@ -16,12 +16,21 @@ export const DEMO_PACK: NarrativePack=Object.freeze({
   completion:'首段探索紀錄已完成。這不是對戰勝利；你可以保存航程、繼續探索，或重新出發。',
  })
 });
+export const PREVIEW_DEMO_PACK: NarrativePack=Object.freeze({
+ ...DEMO_PACK,id:'mistbound.demo03.first-observation',rulesets:Object.freeze(['demo03-preview-1']),
+ text:Object.freeze({...DEMO_PACK.text,lead:'防禦工程解鎖盾衛；尋徑之後可研究軍事機動，招募機動偵察。投入研究與招募需要金幣，先決定這段航程要守備或探索。'}),
+});
+export function getNarrativePack(ruleset:string):NarrativePack {
+ if(ruleset==='g1-ccts-1')return DEMO_PACK;
+ if(ruleset==='demo03-preview-1')return PREVIEW_DEMO_PACK;
+ throw new Error('不支援的敘事版本');
+}
 export function parseNarrativePack(value:unknown):NarrativePack {
  if(!value||typeof value!=='object')throw new Error('pack');
  const v=value as Record<string,unknown>;
  if(v.schema!=='project4x-narrative-pack-1'||typeof v.id!=='string'||!/^mistbound\.[a-z0-9.-]+$/.test(v.id)
    ||typeof v.version!=='string'||!/^\d+\.\d+\.\d+$/.test(v.version)||v.locale!=='zh-Hant'||v.license!=='MIT')throw new Error('manifest');
- if(!Array.isArray(v.rulesets)||v.rulesets.length!==1||v.rulesets[0]!=='g1-ccts-1')throw new Error('rulesets');
+ if(!Array.isArray(v.rulesets)||v.rulesets.length!==1||!['g1-ccts-1','demo03-preview-1'].includes(v.rulesets[0] as string))throw new Error('rulesets');
  if(!Array.isArray(v.effects)||!v.effects.length||!v.effects.every(x=>x==='text'||x==='objectives'))throw new Error('effects');
  if(!Array.isArray(v.requiredAssets)||!v.requiredAssets.every(x=>typeof x==='string'&&/^[a-z0-9/_-]+\.(png|svg|ico)$/.test(x)))throw new Error('assets');
  const text=v.text as Record<string,unknown>;

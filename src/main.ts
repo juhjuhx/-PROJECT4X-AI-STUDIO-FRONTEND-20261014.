@@ -1,7 +1,8 @@
 import './styles.css';
 import { createGameSession } from './session/game-session';
 import type { DeepReadonly } from './session/contracts';
-import { technologyDefinition, unitDefinition } from './core/rulesets';
+import { getRuleset, technologyDefinition, unitDefinition } from './core/rulesets';
+import { entryRuleset, storageKeys } from './ui/preview-entry';
 import type { Action, KnownTile, Point, Tech, UnitKind } from './core/types';
 import { WorldMap } from './ui/map';
 import { recruitmentStatus } from './ui/recruitment';
@@ -9,12 +10,12 @@ import { createDemoShell } from './demo/shell';
 import { bindProgressToSave, readBoundProgress } from './demo/local-progress';
 
 const HUMAN = 0;
-const SAVE_KEY = 'project4x-save-1';
-const DEMO_SAVE_KEY = 'project4x-demo-progress-1';
+const initialRuleset = entryRuleset(window.location.search);
+const currentStorage = () => storageKeys(gameplay.getObservation().ruleset);
 const MAX_IMPORT_BYTES = 10 * 1024 * 1024;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const requestSession = crypto.randomUUID();
-const { gameplay, files, dispose } = createGameSession({ seed: '霧境初航-01', reducedMotion });
+const { gameplay, files, dispose } = createGameSession({ seed: '霧境初航-01', ruleset: initialRuleset, reducedMotion });
 let view = gameplay.getObservation();
 let selection: Point | null = null;
 let selectedUnitId: string | null = null;
@@ -393,6 +394,7 @@ function dispatch(action: Action): void {
 
 function render(): void {
   view = gameplay.getObservation();
+  brandCopy.querySelector('.brand-subtitle')!.textContent = view.ruleset === 'demo03-preview-1' ? 'Demo03 隔離玩法預覽 · 測試數值，尚未完成平衡驗收' : 'PROJECT-4X · 探索、征服與重建';
   const aiPaused = gameplay.getSnapshot().ai.phase === 'paused';
   if (selectedUnitId && !selectedUnit()) selectedUnitId = null;
   goldValue.textContent = String(view.faction.gold);
@@ -506,7 +508,7 @@ function renderInspection(): void {
         recruitSection.append(recruitHeader);
 
         const recruits = el('div', 'recruit-list');
-        (['infantry', 'scout', 'archer'] as UnitKind[]).forEach((kind) => {
+        getRuleset(view.ruleset).units.forEach(({id:kind}) => {
           const stat = unitDefinition(view.ruleset,kind);
           const action: Action = { type: 'Recruit', siteId: site.id, kind };
           const legal = isLegal(action);
@@ -525,8 +527,9 @@ function renderInspection(): void {
             reason = recruitLabel;
           } else if (view.faction.gold < stat.cost) {
             reason = `金幣不足 (${view.faction.gold}/${stat.cost}G)`;
-          } else if (kind === 'archer' && !view.faction.techs.includes('archery')) {
-            reason = '需先研發【弓術】';
+          } else if (getRuleset(view.ruleset).technologies.some(t => !view.faction.techs.includes(t.id) && t.effects.some(e => e.type === 'unlockUnit' && e.unit === kind))) {
+            const required = getRuleset(view.ruleset).technologies.find(t => t.effects.some(e => e.type === 'unlockUnit' && e.unit === kind))!;
+            reason = `需先研發【${required.name}】`;
           } else {
             reason = '暫不可招募';
           }
@@ -562,7 +565,7 @@ function renderUnits(): void {
   const list = el('div', 'unit-list');
   units.forEach((unit) => {
     const node = button('', () => selectUnit(unit.id), unit.id === selectedUnitId ? 'unit-row selected' : 'unit-row');
-    const glyph = el('span', `unit-glyph ${unit.kind}`, unit.kind === 'infantry' ? '步' : unit.kind === 'scout' ? '斥' : '弓'); glyph.setAttribute('aria-hidden', 'true');
+    const glyph = el('span', `unit-glyph ${unit.kind}`, ({infantry:'步',scout:'斥',archer:'弓',shieldGuard:'盾',mobileScout:'巡'} as const)[unit.kind]); glyph.setAttribute('aria-hidden', 'true');
     const copy = el('span', 'unit-copy');
     copy.append(el('strong', '', unitDefinition(view.ruleset,unit.kind).name), el('span', '', `${unit.x + 1} · ${unit.y + 1} / ${unit.hp} HP`));
     node.append(glyph, copy, el('span', 'unit-ready', unit.moved && unit.acted ? '已行動' : '待命'));
@@ -574,7 +577,7 @@ function renderUnits(): void {
 
 function renderTech(): void {
   techPanel.body.replaceChildren();
-  const currentTechs = ['farm', 'archery', 'pathfinding'] as Tech[];
+  const currentTechs = getRuleset(view.ruleset).technologies.map(t => t.id);
   const researchedCount = currentTechs.filter((t) => view.faction.techs.includes(t)).length;
   const overview = el('div', 'tech-overview');
   overview.append(
@@ -596,6 +599,7 @@ function renderTech(): void {
     const action: Action = { type: 'Research', tech };
     const research = makeActionButton(known ? '已習得' : `${stat.cost} 金`, action, known ? 'secondary-button' : 'primary-button');
     research.title = known ? '已完成研究' : `研究「${stat.name}」（需 ${stat.cost} 金幣）`;
+    if (!known && stat.prerequisites.some(id => !view.faction.techs.includes(id))) copy.append(el('p','muted',`前置：${stat.prerequisites.map(id => technologyDefinition(view.ruleset,id).name).join('、')}`));
     row.append(copy, research);
     techPanel.body.append(row);
   });
@@ -623,20 +627,22 @@ function updateRelic(): void {
 
 function updateSaveNotice(): void {
   try {
-    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(SAVE_KEY) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
+    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(currentStorage().save) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
   } catch (error) { saveNotice.textContent = `本機保存無法存取：${errorText(error)}。仍可匯出檔案。`; }
 }
 
 function saveLocal(): void {
   const result = files.save();
   if (!result.ok) { notify(result.error.message, true); return; }
+  const keys = currentStorage();
+  const savedRuleset = view.ruleset;
   try {
-    localStorage.setItem(SAVE_KEY, result.file.text);
+    localStorage.setItem(keys.save, result.file.text);
     const acknowledged = files.acknowledgeSave(result.file.stamp);
     if (!acknowledged.ok) { notify(acknowledged.error.message, true); return; }
     const journal = demo.getProgress();
-    void bindProgressToSave(result.file.text, journal).then(sidecar => {
-      if (localStorage.getItem(SAVE_KEY) === result.file.text) localStorage.setItem(DEMO_SAVE_KEY, sidecar);
+    void bindProgressToSave(result.file.text, journal, savedRuleset).then(sidecar => {
+      if (localStorage.getItem(keys.save) === result.file.text) localStorage.setItem(keys.progress, sidecar);
     }).catch(error => notify(`戰局已保存，但探索手札保存失敗：${errorText(error)}`, true));
     notify('進度已保存在此瀏覽器。也可匯出檔案備份。');
     updateSaveNotice();
@@ -667,14 +673,15 @@ function newGame(): void {
 
 async function loadLocal(isCurrent: () => boolean = () => true): Promise<boolean> {
   const expected = gameplay.getSnapshot().stamp;
+  const keys = currentStorage();
   try {
-    const text = localStorage.getItem(SAVE_KEY);
+    const text = localStorage.getItem(keys.save);
     if (!text) { notify('此瀏覽器尚無保存。可選擇匯入保存檔。', true); return false; }
     if (!confirmReplacement()) return false;
     let journal = null;
     let journalError: unknown = null;
     try {
-      const sidecar = localStorage.getItem(DEMO_SAVE_KEY);
+      const sidecar = localStorage.getItem(keys.progress);
       if (sidecar) journal = await readBoundProgress(text, sidecar);
     } catch (error) { journalError = error; }
     const now = gameplay.getSnapshot().stamp;
@@ -750,7 +757,7 @@ window.addEventListener('keydown', (event) => {
 
 const demo = createDemoShell({
   gameplay, mount: sidebar,
-  hasSave: () => { try { return Boolean(localStorage.getItem(SAVE_KEY)); } catch { return false; } },
+  hasSave: () => { try { return Boolean(localStorage.getItem(currentStorage().save)); } catch { return false; } },
   start: seed => {
     if (!confirmReplacement()) return false;
     const result = files.newGame(seed, gameplay.getSnapshot().stamp);

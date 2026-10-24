@@ -1,0 +1,289 @@
+{
+  "schema": "project4x-preview-task5-verification-1",
+  "baseCommit": "cf0e72e8d2c7056c4d01fdcb618517cf6872cb89",
+  "status": "TESTED_PASS",
+  "tests": 254,
+  "failed": 0,
+  "skipped": 0,
+  "results": [
+    {
+      "runId": "preview-entry-red-20261024-230815-71ab9e35",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-entry.test.ts"
+      ],
+      "sourceFingerprint": "47125ae8f0063c7c187ba5fa77a3fa65469a029e657cefa82c3d7c34a43030f1",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T15:08:15.783655+00:00",
+      "logSha": "3496e06a52604cbd8d5f523792546034bc67dface87e95b1ae59e9f75d5020fd",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-dom-red-20261024-230818-78c1272a",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-check.mjs"
+      ],
+      "sourceFingerprint": "47125ae8f0063c7c187ba5fa77a3fa65469a029e657cefa82c3d7c34a43030f1",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T15:08:20.894451+00:00",
+      "logSha": "0627d19141b6157b387d6ffb2fb78a086220b4d04ea88657c233b38d1be433b2",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-entry-green-20261024-230909-3aa53777",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-entry.test.ts"
+      ],
+      "sourceFingerprint": "bbbebd012585216f96bdb68b1c88d662b90089cafca0c50d1b8716d3975cbda5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:09:09.873020+00:00",
+      "logSha": "d0967c9c203c130d0fecbdee9996083e1dbfee23c3f33548291944bc19f1114b",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ui-build-20261024-230909-f66d779c",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "sourceFingerprint": "bbbebd012585216f96bdb68b1c88d662b90089cafca0c50d1b8716d3975cbda5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:09:11.190045+00:00",
+      "logSha": "0a26a20ee2c579a8530c43d36897c042ad44c7b3ec52cbdbc15ce1f217a0713d",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-dom-001-20261024-230925-6e6146c5",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-check.mjs"
+      ],
+      "sourceFingerprint": "bbbebd012585216f96bdb68b1c88d662b90089cafca0c50d1b8716d3975cbda5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:09:53.921608+00:00",
+      "logSha": "d4b5f6831cf548ee2ea5b5b011fd99123ef72d9592cbe222f26f862eff03bae4",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "integrated-preview-g1-regression-20261024-231121-6076f30e",
+      "command": [
+        "node",
+        "scripts/verify-demo02.mjs"
+      ],
+      "sourceFingerprint": "bbbebd012585216f96bdb68b1c88d662b90089cafca0c50d1b8716d3975cbda5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:13:16.386983+00:00",
+      "logSha": "cc7ad5d3df99493b2442f7f6dcc48a7784b3fe62d9071406b7d7a774ff1c2abb",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "legacy-seed010-regression-20261024-231329-d391d593",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/headless.ts"
+      ],
+      "sourceFingerprint": "bbbebd012585216f96bdb68b1c88d662b90089cafca0c50d1b8716d3975cbda5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:14:15.848676+00:00",
+      "logSha": "794b170e216a4a0a5ea5471f23b19dedbff0776e5d7c050df377d24b991bf288",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    }
+  ],
+  "productSourceHash": "e88c315c08122c2b33aac9c90abd68d45a208764dcd07e4c23e1c6e7cfd822bc",
+  "methodFingerprint": "c22f83d6799e997241282cabc8f19001b48198c790fab4c00a293e19caa45db5",
+  "artifacts": {
+    "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+    "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+    "assets/index-C1iZTVWd.js": "cbbf94dcf5c1aed5bfaae8fbb3905a091a71f2b11f139650dd2d088a4faec333",
+    "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+    "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+    "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+    "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+    "index.html": "566c36fc537fd73f1c3a601e54015b545b4494e9acbed0b89fe02fb4392294e1",
+    "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+    "pwa-assets.json": "445b8ff192fbe13c3f701119d8bbdd4d44f2a602eb77fd64e1221f38a1661a50",
+    "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+    "service-worker.js": "7ec51cecae6b4c718905c4035a7f24e4b5e255d0e4679dfdbaa119f244882d2a"
+  },
+  "legacyGates": [
+    {
+      "kind": "browser",
+      "status": "PASS",
+      "scenarioCount": 11,
+      "receiptSha256": "ed514c4d24d6a6ce1aa8b03186a9230e8d41ebfa2ee9bca31514a3d9fea91205"
+    },
+    {
+      "kind": "gameplay",
+      "status": "PASS",
+      "scenarioCount": 12,
+      "receiptSha256": "1d1f8d8244efc92df42e32ed447e369a83c3c2f272e44710f06c412372aff710"
+    },
+    {
+      "kind": "demo",
+      "status": "PASS",
+      "scenarioCount": 4,
+      "receiptSha256": "b23c8630bbb319fb272594d65db04b14e74fa0055bcbe5b5d093fa1ecbe52422"
+    },
+    {
+      "kind": "pwa",
+      "status": "PASS",
+      "scenarioCount": 2,
+      "receiptSha256": "03934574c844f78cacb07ccdbbdd2907a7299c9a02f9f7b4f6039ac50c3a57b6"
+    },
+    {
+      "kind": "pwa-update",
+      "status": "PASS",
+      "scenarioCount": null,
+      "receiptSha256": "54b2e5337524324edcdbce881856e65c4330451c18e751beb713c95ba205b096"
+    }
+  ],
+  "previewScenarios": [
+    {
+      "id": "desktop-preview-legal-journey",
+      "status": "TESTED_PASS",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "simulatedTouch": false,
+      "humanCommands": 20,
+      "research": [
+        "defensiveEngineering",
+        "pathfinding",
+        "militaryMobility"
+      ],
+      "recruited": [
+        "shieldGuard",
+        "mobileScout"
+      ],
+      "threeTileMove": true,
+      "legacySlotUnchanged": true,
+      "saveLoadReplay": true
+    },
+    {
+      "id": "phone-preview-legal-journey",
+      "status": "TESTED_PASS",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "simulatedTouch": true,
+      "humanCommands": 20,
+      "research": [
+        "defensiveEngineering",
+        "pathfinding",
+        "militaryMobility"
+      ],
+      "recruited": [
+        "shieldGuard",
+        "mobileScout"
+      ],
+      "threeTileMove": true,
+      "legacySlotUnchanged": true,
+      "saveLoadReplay": true
+    }
+  ],
+  "previewReceiptSha256": "ebdf471d2a4070ad148adbe0642c6c4480898717f59878f479c4716c7820d4a2",
+  "sourceUnchanged": true,
+  "cleanup": [
+    {
+      "stage": "owned-server",
+      "status": "PASS"
+    }
+  ],
+  "legacySeed010": {
+    "seed": "獨立QA-010",
+    "seedNumber": 10,
+    "status": "COMPLETE",
+    "winner": 1,
+    "turns": 248,
+    "endTurn": 247,
+    "commands": 6705,
+    "duration": 45.758521333,
+    "milliseconds": 45758.521333,
+    "failureReason": null,
+    "failure": null,
+    "terminalSaveVerified": true,
+    "terminalReplayVerified": true,
+    "terminalSaveReplayChecked": true,
+    "partialReplayVerified": false,
+    "partialSaveVerified": false,
+    "sourceHash": "e88c315c08122c2b33aac9c90abd68d45a208764dcd07e4c23e1c6e7cfd822bc",
+    "methodFingerprint": "c22f83d6799e997241282cabc8f19001b48198c790fab4c00a293e19caa45db5",
+    "metrics": {
+      "actions": {
+        "Move": 5105,
+        "Attack": 1019,
+        "Capture": 12,
+        "Recruit": 312,
+        "Research": 6,
+        "ResolveRelic": 4,
+        "EstablishCapital": 0,
+        "EndTurn": 247
+      },
+      "relicGold": 2,
+      "relicIntel": 2,
+      "exileEntries": 0,
+      "centersEstablished": 0,
+      "eliminations": 1,
+      "maxUnits": 61
+    },
+    "timing": {
+      "observeMs": 5271.189371000071,
+      "aiMs": 12079.127014000002,
+      "applyMs": 9484.314011000131,
+      "persistenceMs": 18903.544583999996,
+      "shadowMs": 0
+    },
+    "decisionMetrics": {
+      "count": 6705,
+      "totalMs": 12079.127014000002,
+      "medianMs": 1.5859159999999974,
+      "p95Ms": 4.624667000000045,
+      "maxMs": 12.384582999999566,
+      "percentileDefinition": "nearest-rank: sorted[ceil(p*n)-1]"
+    },
+    "pathWorkload": {
+      "status": "NOT_CONFIGURED",
+      "decisionsCompared": 0,
+      "counters": {}
+    },
+    "finalLife": [
+      "eliminated",
+      "active"
+    ]
+  },
+  "full100": "UNVERIFIED for this source; single seed only",
+  "alpha": "PARTIAL",
+  "human": "UNVERIFIED",
+  "physicalPhone": "UNVERIFIED",
+  "balancedNumbers": "NOT_VALIDATED; isolated approved baseline",
+  "limitations": [
+    "LSP diagnostics tool unavailable; fresh TypeScript check used",
+    "Preview E2E proves recruit/research/move/save/replay and legacy slot separation; shield defense effect proven in core actual Attack tests, not full human balance test",
+    "No new city/terrain/relic migration or Canon added",
+    "Task1-4 independent core review APPROVE; Task5 final review pending"
+  ]
+}

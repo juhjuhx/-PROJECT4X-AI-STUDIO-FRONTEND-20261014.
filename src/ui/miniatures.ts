@@ -22,7 +22,7 @@ export function paintMiniature(c: CanvasRenderingContext2D, x: number, y: number
   }
   polygon([[-4,-10],[-1,-10],[-1,0],[-6,0]],materials.ink);
   polygon([[1,-10],[4,-10],[6,0],[1,0]],materials.ink);
-  if (visual.silhouette==='wanderer') {
+  if (visual.silhouette==='wanderer' || visual.silhouette==='runner') {
    polygon([[-5,-26],[5,-26],[10,-5],[-10,-5]],m.shade);
    polygon([[-4,-23],[3,-23],[5,-8],[-5,-8]],m.cloth);
    polygon([[-6,-28],[0,-35],[6,-28],[4,-21],[-4,-21]],m.cloth);
@@ -32,18 +32,20 @@ export function paintMiniature(c: CanvasRenderingContext2D, x: number, y: number
    line([[9,-35],[9,1]],materials.wood,2);
    c.beginPath(); c.arc(9,-34,2.4,0,Math.PI*2); c.fillStyle=m.trim; c.fill();
    line([[5,-17],[9,-16]],materials.skin,2.5);
+   if (visual.silhouette==='runner') {polygon([[8,-34],[19,-31],[9,-27]],m.trim);line([[-6,-4],[-10,2]],materials.ink,3);}
   } else {
    polygon([[-5,-23],[5,-23],[6,-9],[-6,-9]],m.cloth);
    polygon([[0,-23],[5,-23],[6,-9],[0,-9]],m.shade);
    line([[-5,-11],[6,-11]],m.trim,1.5);
    head(0,-28,materials.skin);
-   if (visual.silhouette==='soldier') {
+   if (visual.silhouette==='soldier' || visual.silhouette==='bulwark') {
     polygon([[-5,-29],[-4,-34],[3,-35],[6,-30],[3,-27],[-4,-27]],materials.steel);
     polygon([[0,-34],[3,-35],[6,-30],[3,-27],[0,-28]],materials.steelShade);
     line([[-1,-35],[2,-38],[4,-35]],m.trim,2);
     polygon([[-13,-23],[-4,-24],[-3,-10],[-8,-4],[-13,-11]],m.trim);
     polygon([[-11,-21],[-6,-22],[-5,-11],[-8,-7],[-11,-12]],m.shade);
     line([[-8,-19],[-8,-11]],m.trim,1.2);
+    if (visual.silhouette==='bulwark') {polygon([[-17,-27],[-3,-27],[-3,-6],[-10,-1],[-17,-6]],materials.steel);polygon([[-14,-24],[-6,-24],[-6,-8],[-10,-4],[-14,-8]],m.shade);line([[-10,-22],[-10,-8]],m.trim,2);}
     polygon([[7,-21],[10,-29],[11,-20],[8,-10]],materials.steel);
     line([[6,-17],[12,-15]],materials.wood,2);
    } else {

@@ -1,9 +1,11 @@
 # NEXT-ACTION
 
-Demo02 已發布，Tag/Web/兩輪文件發布與53檔安全歸檔維持，入口見 RELEASE-STATUS。Demo03 視覺 PR3 已 merge 578a3d0e8163aa599e8602ed08ad612945be1903；精確 head620669e 的 PR CI40103369463及 main CI40103694634 SUCCESS。233單元測試及既有11Browser/12Gameplay/4Demo/PWA、4真互動與8真圖證據見 DEMO03-V01，沒有Demo03正式Release。
+Demo02已正式發布，Tag/Web/歸檔不變。Demo03視覺PR3已merge578a3d0e，精確head620669e的PR/main CI均SUCCESS；未發Demo03正式Release。
 
-目前隔離 branch experiment/demo03-gameplay-preview，base620669e；只 root 改source。主創已依D03-PREVIEW-001批准兩兵/兩科技測試數值與新局專用方向，不需重問。權威計畫：docs/product/DEMO03-PREVIEW-IMPLEMENTATION-PLAN.md。
+目前branch experiment/demo03-gameplay-preview，base620669e。D03-PREVIEW-001批准的盾衛/機動偵察及兩科技已完成隔離閉環：唯一reducer/Session、固定兩包/內容SHA、Save2/Replay2、AI只讀Observation、安全事件、真UI及分開存檔槽。runtime checkpoint分片見git log 62e210b→6d91550→9841994→cf0e72e→Task5。權威計畫在product/DEMO03-PREVIEW-IMPLEMENTATION-PLAN。
 
-Task1固定內建內容registry及4個發布G1 golden已通過240tests/check/build（詳細來源/歷史失敗保留於verification/DEMO03-PREVIEW/TASK1-RESULTS）。尚未接Core/Session/UI，因此新兵、新研究仍不可玩。Task2已有4項行為RED；接下來依計畫接唯一applyCommand，保持default G1、舊Save/Replay bytes及唯一GameSession。不把新定義檔存在寫成玩法已實作。
+最新凍結runtime Gate：254 tests/check/build、Browser11/Gameplay12（原220門檻）/Demo4/PWA2/更新PASS；桌面1440×960與手機375×812真觸控模擬各20玩家指令，真研究/招募/三格移動/保存/讀取/Replay及舊槽不變PASS。Core獨立審查APPROVE，Task5全分支審查待完成。來源/收據/圖在verification/DEMO03-PREVIEW，原private/world在專案外。
 
-尋徑+1視野仍只舊scout；新偵察額外視野未批准，不啟用。城市/地形/遺跡遷移另審。R5 87/13、R6失敗與private traces不變；現行Full100/T3/T6未重跑，Alpha PARTIAL、真人/真機/45–90分鐘UNVERIFIED。
+G1 seed010補驗：winner1、247 EndTurn、6705commands，自然終局且Terminal Save/Replay PASS。這是1局，不是新Full100；R5原87/13與R6失敗不變，新ruleset Full100/T3/T6未驗。Alpha PARTIAL、真人/真機/平衡未驗。
+
+NEXT：完成Task5獨立review與本地checkpoint→建立隔離預覽PR/CI及可啟動預覽包；不將測試數值升格正式平衡，不自動合併新規則main。再交主創真人試玩；城市/道路/新遺跡須另裁決，不自行補數值。尋徑額外視野仍僅舊scout。

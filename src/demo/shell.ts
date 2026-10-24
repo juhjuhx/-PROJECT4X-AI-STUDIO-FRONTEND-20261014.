@@ -1,14 +1,14 @@
 import type {Action,Observation} from '../core/types';
 import type {DeepReadonly,GameplayPort} from '../session/contracts';
-import {DEMO_PACK,parseNarrativePack} from './content';
+import {getNarrativePack,parseNarrativePack} from './content';
 import {createProgress,advanceProgress,completeProgress,type DemoProgress} from './progress';
 interface Options {gameplay:GameplayPort;mount:HTMLElement;hasSave:()=>boolean;start:(seed:string)=>boolean;load:(isCurrent:()=>boolean)=>Promise<boolean>;save:()=>void;help:()=>void;afterClose:()=>void;}
 export function createDemoShell(options:Options){
- const pack=parseNarrativePack(DEMO_PACK);let progress=createProgress(options.gameplay.getObservation()),started=false,intent=0;
+ let pack=parseNarrativePack(getNarrativePack(options.gameplay.getObservation().ruleset));let progress=createProgress(options.gameplay.getObservation()),started=false,intent=0;
  const node=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string,className?:string)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
  const button=(text:string,act:()=>void,className='secondary-button')=>{const b=node('button',text,className);b.type='button';b.addEventListener('click',act);return b;};
  const menu=node('dialog',undefined,'game-dialog demo-menu');menu.setAttribute('aria-labelledby','demo-menu-title');
- const title=node('h2','霧境初航 · 探索Demo');title.id='demo-menu-title';
+ const title=node('h2',options.gameplay.getObservation().ruleset==='demo03-preview-1'?'霧境初航 · Demo03隔離預覽':'霧境初航 · 探索Demo');title.id='demo-menu-title';
  const description=node('p','從一座城邦出發，探索未知地形、處置遺跡並研究能力，完成第一份觀測紀錄。之後仍可繼續對戰。');
  const seedLabel=node('label','世界種子');seedLabel.htmlFor='demo-world-seed';
  const seed=node('input',undefined,'seed-input');seed.id='demo-world-seed';seed.maxLength=120;
@@ -39,6 +39,9 @@ export function createDemoShell(options:Options){
   node('p','探索：選取部隊並點合法目的地。發展：使用知識面板研究。遺跡：立即選擇金幣或地形情報。保存與匯入在「航行紀錄」。','muted'),
   button('玩法指南',()=>options.help()),button('探索手札',openJournal),save,
   node('p','開發中探索Demo · 本機單人對AI。探索紀錄完成不代表軍事勝利。','muted'));
+ const switchVersion=node('a',options.gameplay.getObservation().ruleset==='demo03-preview-1'?'返回G1規則入口':'試玩Demo03隔離玩法預覽','secondary-button');
+ switchVersion.href=options.gameplay.getObservation().ruleset==='demo03-preview-1'?location.pathname:location.pathname+'?preview=demo03';
+ switchVersion.addEventListener('click',event=>{if(options.gameplay.getSnapshot().hasUnsavedChanges&&!window.confirm('切換玩法前請先保存。目前有未保存的進度，是否繼續？'))event.preventDefault();});menu.append(switchVersion);
  const panel=node('section',undefined,'panel-section journey-panel demo-progress');panel.append(node('h2','探索紀錄'));
  const list=node('ul',undefined,'demo-objectives'),status=node('p',undefined,'demo-status');panel.append(list,status,button('閱讀探索手札',openJournal));
  options.mount.append(panel);document.body.append(menu,journal);
@@ -50,7 +53,7 @@ export function createDemoShell(options:Options){
  const openMenu=()=>{intent++;seed.value=options.gameplay.getObservation().seed;load.disabled=!options.hasSave();resume.hidden=!started;save.hidden=!started;error.textContent='';if(journal.open)journal.close();if(!menu.open)menu.showModal();seed.focus();};
  render();openMenu();
  return {isMenuOpen:()=>menu.open,openMenu,render,getProgress:()=>({...progress}),
-  reset:(view:DeepReadonly<Observation>)=>{progress=createProgress(view);render();},
+  reset:(view:DeepReadonly<Observation>)=>{pack=parseNarrativePack(getNarrativePack(view.ruleset));journalTitle.textContent=pack.text.title;title.textContent=view.ruleset==='demo03-preview-1'?'霧境初航 · Demo03隔離預覽':'霧境初航 · 探索Demo';progress=createProgress(view);render();},
   restore:(value:DemoProgress)=>{if(value.seed===options.gameplay.getObservation().seed){progress={...value};render();}},
   accepted:(action:DeepReadonly<Action>,before:DeepReadonly<Observation>,after:DeepReadonly<Observation>)=>{progress=advanceProgress(progress,action,before,after);render();}};
 }

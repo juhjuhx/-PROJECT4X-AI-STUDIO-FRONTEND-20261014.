@@ -7,6 +7,14 @@
 
 [下載 Web Demo](https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./releases/tag/demo02-web-20261024-r3) · [目前狀態](docs/handoff/PROJECT-STATUS.md) · [Roadmap](docs/roadmap/ROADMAP.md) · [文件索引](docs/INDEX.md)
 
+## Demo03 隔離玩法預覽（開發分支）
+
+主創已批准測試數值；盾衛/機動偵察、兩項新研究與版本化內容包已有真實可玩閉環。這不是正式平衡或Alpha完成，城市/新地形/新版遺跡仍待後續裁決。
+
+本分支建置啟動後開啟 `http://127.0.0.1:4173/?preview=demo03`，或主選單選「試玩Demo03隔離玩法預覽」。預設G1入口及Demo02下載不變；預覽與G1使用不同本機保存槽。Save2/Replay2不支援降版到Demo02，舊G1存檔仍可用原規則續玩。
+
+[數值/版本決策](docs/product/DEMO03-GAMEPLAY-DECISIONS.md) · [254測試/真桌機手機旅程](docs/verification/DEMO03-PREVIEW/TASK5-RESULTS.json) · [預覽畫面](docs/verification/DEMO03-PREVIEW/screenshots/desktop-preview.png)
+
 ![實際戰鬥與佔領畫面](docs/verification/DEMO02/screenshots/真實戰鬥佔領旅程.png)
 
 ## 遊玩

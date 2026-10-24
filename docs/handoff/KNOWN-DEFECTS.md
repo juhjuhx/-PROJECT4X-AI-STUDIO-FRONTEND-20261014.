@@ -1,3 +1,5 @@
+> Demo03隔離預覽：兩兵/科技工程Gate已通過，平衡/真人/實體手機UNVERIFIED；盾衛可能加劇攻城僵持，尚未驗證完整新ruleset對局。當前G1 seed010合法終局且Save/Replay通過，僅單種子；R5 87/13與R6歷史FAIL保留，不宣稱新版Full100或T3/T6通過。預覽Save2不可降版舊Demo02。
+
 > Demo03-V01：站立頭部選到後方地格、QA局部transform探針、未登錄SVG與QA手機觸點被header遮擋等歷次FAIL保留於DEMO03-V01；目前231tests/4真互動PASS，未降低門檻。真人/真機未驗，歷史AI僵局不因此關閉。
 
 # 2026-10-24 Demo更新
