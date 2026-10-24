@@ -109,54 +109,126 @@
       "logSha": "794b170e216a4a0a5ea5471f23b19dedbff0776e5d7c050df377d24b991bf288",
       "changedFiles": [],
       "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-version-red-20261025-034700-f3424d48",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-version-check.mjs"
+      ],
+      "sourceFingerprint": "292f538351e5fb17835840cbe2877a5fe34d3d111c41c4ba3bf1a8153846bd02",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T19:47:04.409435+00:00",
+      "logSha": "0627d19141b6157b387d6ffb2fb78a086220b4d04ea88657c233b38d1be433b2",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "version-caption-build-20261025-034725-a86bca47",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "sourceFingerprint": "e5143cb7ef28d57b75fc2ccbad9b9c4056148c9b27e1f8c92610092fa3239e52",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:47:27.640201+00:00",
+      "logSha": "94ce8aa8102802f655f8df4535b8495975803249e48031dd5e63e11b4daef00c",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-version-green-20261025-034729-89f316da",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-version-check.mjs"
+      ],
+      "sourceFingerprint": "e5143cb7ef28d57b75fc2ccbad9b9c4056148c9b27e1f8c92610092fa3239e52",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:47:40.786384+00:00",
+      "logSha": "83292a1ecfb835a736fc0df6af0dd435620f0cc54a0ba38636cea587be18ba1b",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-dom-002-20261025-034804-60557ef1",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-check.mjs"
+      ],
+      "sourceFingerprint": "e5143cb7ef28d57b75fc2ccbad9b9c4056148c9b27e1f8c92610092fa3239e52",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:48:27.294738+00:00",
+      "logSha": "d4b5f6831cf548ee2ea5b5b011fd99123ef72d9592cbe222f26f862eff03bae4",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "final-preview-g1-regression-20261025-034859-252e96eb",
+      "command": [
+        "node",
+        "scripts/verify-demo02.mjs"
+      ],
+      "sourceFingerprint": "e5143cb7ef28d57b75fc2ccbad9b9c4056148c9b27e1f8c92610092fa3239e52",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:50:35.472732+00:00",
+      "logSha": "176e4eea26688c10f09b38a83a234b1518f51bbf6649b3109205e9a4405869f3",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
     }
   ],
-  "productSourceHash": "e88c315c08122c2b33aac9c90abd68d45a208764dcd07e4c23e1c6e7cfd822bc",
-  "methodFingerprint": "c22f83d6799e997241282cabc8f19001b48198c790fab4c00a293e19caa45db5",
+  "productSourceHash": "0f7099307d28cc8652f34845799a0e95a8846e8a6d2c3b9bc7dd151ec9782fb7",
+  "methodFingerprint": "7de61a07f893cad8a6141cf92417e0b19f4c5048cdbb32f2a2b24b2ede89835e",
   "artifacts": {
     "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
     "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
-    "assets/index-C1iZTVWd.js": "cbbf94dcf5c1aed5bfaae8fbb3905a091a71f2b11f139650dd2d088a4faec333",
+    "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
     "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
     "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
     "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
     "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
-    "index.html": "566c36fc537fd73f1c3a601e54015b545b4494e9acbed0b89fe02fb4392294e1",
+    "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
     "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
-    "pwa-assets.json": "445b8ff192fbe13c3f701119d8bbdd4d44f2a602eb77fd64e1221f38a1661a50",
+    "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
     "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
-    "service-worker.js": "7ec51cecae6b4c718905c4035a7f24e4b5e255d0e4679dfdbaa119f244882d2a"
+    "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
   },
   "legacyGates": [
     {
       "kind": "browser",
       "status": "PASS",
       "scenarioCount": 11,
-      "receiptSha256": "ed514c4d24d6a6ce1aa8b03186a9230e8d41ebfa2ee9bca31514a3d9fea91205"
+      "receiptSha256": "6eba141931e1ff761ec6a09accb6cd997a3714970ea0260118e3578f065953f6"
     },
     {
       "kind": "gameplay",
       "status": "PASS",
       "scenarioCount": 12,
-      "receiptSha256": "1d1f8d8244efc92df42e32ed447e369a83c3c2f272e44710f06c412372aff710"
+      "receiptSha256": "0bf4a4d4f6ec78385127a741bee67ccb5e18f431fcae9057454c9bab87a52b6b"
     },
     {
       "kind": "demo",
       "status": "PASS",
       "scenarioCount": 4,
-      "receiptSha256": "b23c8630bbb319fb272594d65db04b14e74fa0055bcbe5b5d093fa1ecbe52422"
+      "receiptSha256": "666fb9f95f6a7114655a3538bb3b4285f59b9f5892ea71acdaf92b9f06b10e83"
     },
     {
       "kind": "pwa",
       "status": "PASS",
       "scenarioCount": 2,
-      "receiptSha256": "03934574c844f78cacb07ccdbbdd2907a7299c9a02f9f7b4f6039ac50c3a57b6"
+      "receiptSha256": "bc457d2116853475d35ec2697d23f9f2dcacb9812702d890e6726e70514161f1"
     },
     {
       "kind": "pwa-update",
       "status": "PASS",
       "scenarioCount": null,
-      "receiptSha256": "54b2e5337524324edcdbce881856e65c4330451c18e751beb713c95ba205b096"
+      "receiptSha256": "68fdf1d9940d8f23b048ad7224a74e43833097895f08f8899cbe6a283a173039"
     }
   ],
   "previewScenarios": [
@@ -205,7 +277,7 @@
       "saveLoadReplay": true
     }
   ],
-  "previewReceiptSha256": "ebdf471d2a4070ad148adbe0642c6c4480898717f59878f479c4716c7820d4a2",
+  "previewReceiptSha256": "efff0ce53967f39192a9c4239d80515b3018046e8665dd4d713376acb5c193b0",
   "sourceUnchanged": true,
   "cleanup": [
     {
@@ -284,6 +356,54 @@
     "LSP diagnostics tool unavailable; fresh TypeScript check used",
     "Preview E2E proves recruit/research/move/save/replay and legacy slot separation; shield defense effect proven in core actual Attack tests, not full human balance test",
     "No new city/terrain/relic migration or Canon added",
-    "Task1-4 independent core review APPROVE; Task5 final review pending"
-  ]
+    "seed010是在1f0b9b1之前的同core/AI來源，後續只有main/shell新局文案與QA變更；保留它原source/method fingerprint，不與新版Full100混算。"
+  ],
+  "originalPreFixProductSourceHash": "e88c315c08122c2b33aac9c90abd68d45a208764dcd07e4c23e1c6e7cfd822bc",
+  "originalPreFixMethodFingerprint": "c22f83d6799e997241282cabc8f19001b48198c790fab4c00a293e19caa45db5",
+  "crossVersionScenarios": [
+    {
+      "id": "desktop-demo03-preview-1-cross-import-next-game",
+      "status": "TESTED_PASS",
+      "loadedRuleset": "g1-ccts-1",
+      "newGameRuleset": "demo03-preview-1",
+      "menuCaptionVerified": true,
+      "recordCaptionAndConfirmationVerified": true,
+      "simulatedTouch": false
+    },
+    {
+      "id": "desktop-g1-ccts-1-cross-import-next-game",
+      "status": "TESTED_PASS",
+      "loadedRuleset": "demo03-preview-1",
+      "newGameRuleset": "g1-ccts-1",
+      "menuCaptionVerified": true,
+      "recordCaptionAndConfirmationVerified": true,
+      "simulatedTouch": false
+    },
+    {
+      "id": "phone-demo03-preview-1-cross-import-next-game",
+      "status": "TESTED_PASS",
+      "loadedRuleset": "g1-ccts-1",
+      "newGameRuleset": "demo03-preview-1",
+      "menuCaptionVerified": true,
+      "recordCaptionAndConfirmationVerified": true,
+      "simulatedTouch": true
+    },
+    {
+      "id": "phone-g1-ccts-1-cross-import-next-game",
+      "status": "TESTED_PASS",
+      "loadedRuleset": "demo03-preview-1",
+      "newGameRuleset": "g1-ccts-1",
+      "menuCaptionVerified": true,
+      "recordCaptionAndConfirmationVerified": true,
+      "simulatedTouch": true
+    }
+  ],
+  "crossVersionReceiptSha256": "c9e429b5a0441961fd7140049f81ba27103337d9565f0367a14f81346e954cfc",
+  "independentReview": {
+    "reviewedCommit": "1f0b9b1e5115efcdc6f3fd97a22f2dcd5b32058b",
+    "originalVerdict": "REQUEST_CHANGES",
+    "importantFindings": 1,
+    "finding": "P2 跨版本匯入後，UI未先說明下一新局的factory規則",
+    "resolution": "root以真Browser RED→4桌機/觸控雙向GREEN、2預覽旅程和整套254/Browser/Gameplay/Demo/PWA重新通過；單次fix pass，未冒稱reviewer重新APPROVE"
+  }
 }

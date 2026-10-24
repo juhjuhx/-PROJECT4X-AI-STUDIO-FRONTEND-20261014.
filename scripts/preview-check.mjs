@@ -39,7 +39,7 @@ try{
   async function move(unit,action){if(await page.locator('#tab-inspect').isVisible())await press(page.locator('#tab-inspect'));await press(page.locator('.unit-row').filter({has:page.locator('strong').filter({hasText:unit})}).first());if(await page.locator('.move-list').getAttribute('open')===null)await press(page.locator('.move-list summary'));await press(page.locator('.tile-actions').getByRole('button',{name:`${action.to.x+1} · ${action.to.y+1}`,exact:true}));commands++;}
   await page.goto(base+'/?preview=demo03');
   assert.match(await page.locator('#demo-menu-title').innerText(),/隔離預覽/);
-  await page.locator('#demo-world-seed').fill('預覽合法持久旅程');await press(page.locator('.demo-menu').getByRole('button',{name:'開始探索Demo',exact:true}));
+  await page.locator('#demo-world-seed').fill('預覽合法持久旅程');await press(page.locator('.demo-menu').getByRole('button',{name:'開始Demo03隔離預覽',exact:true}));
   assert.equal((await state()).ruleset,'demo03-preview-1');
   await research('防禦工程',7);assert.equal((await state()).factions[0].gold,1);
   let s=await state();const leave=observe(s,0).legalActions.find(a=>a.type==='Move'&&a.unitId==='兵-0');assert.ok(leave);await move('步兵',leave);

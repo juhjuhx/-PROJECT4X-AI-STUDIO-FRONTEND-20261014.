@@ -11,6 +11,7 @@ import { bindProgressToSave, readBoundProgress } from './demo/local-progress';
 
 const HUMAN = 0;
 const initialRuleset = entryRuleset(window.location.search);
+const nextRulesetLabel = initialRuleset === 'demo03-preview-1' ? 'Demo03隔離預覽' : 'G1既有規則';
 const currentStorage = () => storageKeys(gameplay.getObservation().ruleset);
 const MAX_IMPORT_BYTES = 10 * 1024 * 1024;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -232,8 +233,8 @@ seedLabel.htmlFor = 'world-seed';
 const seedInput = el('input', 'seed-input');
 seedInput.id = 'world-seed'; seedInput.maxLength = 120; seedInput.value = view.seed;
 const newGameRow = el('div', 'seed-row');
-newGameRow.append(seedInput, button('重新開局', () => newGame(), 'danger-button'));
-newGameBlock.append(seedLabel, newGameRow, el('p', 'muted', '相同種子與規則版本會生成相同世界。更換文字即可展開新地圖。'));
+newGameRow.append(seedInput, button(initialRuleset === 'demo03-preview-1' ? '重新開局（Demo03隔離預覽）' : '重新開局', () => newGame(), 'danger-button'));
+newGameBlock.append(el('p', 'next-game-ruleset', `下一新局：${nextRulesetLabel}。載入的戰局維持原規則。`), seedLabel, newGameRow, el('p', 'muted', '相同種子與規則版本會生成相同世界。更換文字即可展開新地圖。'));
 recordDialog.append(recordHead, recordDescription, saveNotice, recordFeedback, saveRow, saveInput, replayBlock, newGameBlock);
 
 const helpDialog = el('dialog', 'game-dialog help-dialog');
@@ -649,8 +650,8 @@ function saveLocal(): void {
   } catch (error) { notify(`保存失敗：${errorText(error)}。請使用匯出保存。`, true); updateSaveNotice(); }
 }
 
-function confirmReplacement(): boolean {
-  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm('目前有未保存的進度。是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。');
+function confirmReplacement(nextGame?: string): boolean {
+  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm(`目前有未保存的進度。${nextGame ? `下一新局將採${nextGame}。` : ''}是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。`);
 }
 
 function showReplacement(message: string): void {
@@ -665,7 +666,7 @@ function showReplacement(message: string): void {
 function newGame(): void {
   const seed = seedInput.value.trim();
   if (!seed) { notify('請輸入世界種子。', true); seedInput.focus(); return; }
-  if (!window.confirm('重新開局會結束目前航程。請確認需要的進度已保存或匯出。')) return;
+  if (!window.confirm(`重新開局會結束目前航程，下一新局將採${nextRulesetLabel}。請確認需要的進度已保存或匯出。`)) return;
   const result = files.newGame(seed, gameplay.getSnapshot().stamp);
   if (result.ok) showReplacement(`以「${seed}」展開新的航程。`);
   else notify(`建立世界失敗：${result.error.message}`, true);
@@ -759,7 +760,7 @@ const demo = createDemoShell({
   gameplay, mount: sidebar,
   hasSave: () => { try { return Boolean(localStorage.getItem(currentStorage().save)); } catch { return false; } },
   start: seed => {
-    if (!confirmReplacement()) return false;
+    if (!confirmReplacement(nextRulesetLabel)) return false;
     const result = files.newGame(seed, gameplay.getSnapshot().stamp);
     if (!result.ok) { notify(result.error.message, true); return false; }
     showReplacement(`以「${seed}」展開探索Demo。`); return true;

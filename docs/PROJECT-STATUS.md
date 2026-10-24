@@ -1,4 +1,4 @@
-> Demo03隔離預覽工程更新：兩兵/兩科技、固定版本registry/Save2/Replay2/Session/AI/事件/UI已實作；254tests、舊完整工程Gate與新桌機/觸控20指令旅程PASS，Core獨立review APPROVE，最終UI review/PR待完成。入口README→MASTER-TODO→NEXT-ACTION；不是正式平衡或Demo03 Release。以下保留Demo02已發布狀態與歷史。
+> Demo03隔離預覽工程更新：兩兵/兩科技、固定版本registry/Save2/Replay2/Session/AI/事件/UI已實作；254tests、舊完整工程Gate與新桌機/觸控20指令旅程PASS，Core獨立review APPROVE，全分支UI review提出1項P2已真RED/GREEN修復，隔離PR/包收尾。入口README→MASTER-TODO→NEXT-ACTION；不是正式平衡或Demo03 Release。以下保留Demo02已發布狀態與歷史。
 
 # PROJECT-4X 當前工程狀態
 

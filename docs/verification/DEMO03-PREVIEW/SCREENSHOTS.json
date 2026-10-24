@@ -8,7 +8,8 @@
     "fullPage": true,
     "simulatedTouch": false,
     "realExecution": true,
-    "state": "真研究/招募兩新兵/三格移動/Save Load Replay後",
+    "runId": "preview-dom-002",
+    "state": "修正新局規則提示後的真研究/招募兩新兵/三格移動/Save Load Replay旅程",
     "sha256": "dcd568417060bb457d31bbfdd36ca8c206c303f601af8190026640349d890073"
   },
   {
@@ -20,7 +21,8 @@
     "fullPage": true,
     "simulatedTouch": true,
     "realExecution": true,
-    "state": "真研究/招募兩新兵/三格移動/Save Load Replay後",
-    "sha256": "84f4407da4d39c5fab206c26d53b2fe352133d7c870f9668771b9dfde0bc2f19"
+    "runId": "preview-dom-002",
+    "state": "修正新局規則提示後的真研究/招募兩新兵/三格移動/Save Load Replay旅程",
+    "sha256": "cfb3f7fe68a8ac5faf4722aba0e6a566ac23d70b228d4aedc5b6e8bb6f492ef5"
   }
 ]

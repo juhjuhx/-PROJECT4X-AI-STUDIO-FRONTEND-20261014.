@@ -76,9 +76,9 @@
 
 **Interfaces:** 明確 URL/入口選 preview factory，default G1 不變；HUD 讀 GameplayPort + 公開 definitions，檔案控件才 LocalPersistencePort；分開 autosave key。
 
-- [ ] Step 1: RED 真 DOM 新研究→調位→招募→EndTurn/AI→新兵行動→Save/Load/Replay；mobile/desktop，無 console/pageerror。
-- [ ] Step 2: 明確「隔離玩法預覽」標識/新種 fallback/真 legalActions；不假造 UI、第二 reducer 或 scenario winner。
-- [ ] Step 3: GREEN npm check/test/build、既有 Browser/Gameplay220/Demo/PWA、preview journey、獨立 whole-branch review、正式 PR；真人/真機維持 UNVERIFIED。
+- [x] Step 1: RED 真 DOM 新研究→調位→招募→EndTurn/AI→新兵行動→Save/Load/Replay；mobile/desktop，無 console/pageerror。
+- [x] Step 2: 明確「隔離玩法預覽」標識/新種 fallback/真 legalActions；不假造 UI、第二 reducer 或 scenario winner。
+- [x] Step 3: GREEN npm check/test/build、既有 Browser/Gameplay220/Demo/PWA、preview journey、獨立 whole-branch review、正式 PR；真人/真機維持 UNVERIFIED。
 
 ## Pre-flight 與狀態
 
@@ -86,3 +86,7 @@ Task1→2：registry 的效果/先決是唯一資料來源，legacy alias 保留
 Task2→3：metadata/版本配對必須先定，rebuild 使用同 createGame 版本，無局中遷移。
 Task3→4→5：Session 回報真實 ruleset、AI/事件白名單與 UI definitions 按 Observation 同版，不能固定舊成功摘要。
 本計畫以既有 docs/handoff/MASTER-TODO 與 NEXT-ACTION 為權威入口；執行細節 ledger 在本 plan 專用 ignored workspace，證據在專案外。主創已批准隔離方法/數值，計畫不新增玩法裁決。
+
+## 執行結案界線
+
+五個工程切片與獨立審查已完成；P2經單次TDD修復，真四個跨版本情境與完整Gate重跑通過。PR只供隔離預覽，不把測試數值合併成正式平衡。真人/真機/城市/地形/新遺跡/正式Demo03 Release不在本次工程PASS內；續作以NEXT-ACTION及MASTER-TODO為準。
