@@ -46,9 +46,9 @@
 
 **Interfaces:** `createGame(seed: string, ruleset?: RulesetId): GameState` 預設 G1；`validAction(value, ruleset?)`/`validCommand(value, ruleset?)` 預設 G1。每個 runtime consumer 明確帶 state.ruleset；legacy 常數相容 alias 不擴成5種。
 
-- [ ] Step 1: RED：預覽初局有 defense 研究/G1 無新 Action；未知版本拒絕。研究7扣款後合法招募盾衛費6，新兵當回合不可動/攻；下己回合可動。機動研究先決與移動3、障礙/友軍負例；plain/cover 盾衛實傷與 minimum1。
-- [ ] Step 2: registry lookup 接到唯一 reducer，保持 RNG 呼叫/地圖/舊 Action 順序及交易語意；只預覽增加 metadata。
-- [ ] Step 3: GREEN focused + 全套/G1 golden；check/build；checkpoint。
+- [x] Step 1: RED：預覽初局有 defense 研究/G1 無新 Action；未知版本拒絕。研究7扣款後合法招募盾衛費6，新兵當回合不可動/攻；下己回合可動。機動研究先決與移動3、障礙/友軍負例；plain/cover 盾衛實傷與 minimum1。
+- [x] Step 2: registry lookup 接到唯一 reducer，保持 RNG 呼叫/地圖/舊 Action 順序及交易語意；只預覽增加 metadata。
+- [x] Step 3: GREEN focused + 全套/G1 golden；check/build；checkpoint。
 
 ## Task 3: Save2/Replay2 與 Session capability
 
@@ -56,9 +56,9 @@
 
 **Interfaces:** 原 `newGame(seed, expected)` 兩參數保留；factory options 增可選 ruleset。ReplayVerificationResult 成功型別擴為已知版本配對，回報真實 candidate。舊 DTO keys 不變；新 DTO 明確 contentHash/generatorVersion。
 
-- [ ] Step 1: RED 新 Save/Replay roundtrip、篡改內容/配對/generator/前置/新 unit HP 拒絕；舊 golden bytes/重播/延續/去重。
-- [ ] Step 2: 只按已知版本重建同一 reducer；Session 預設不變，新預覽 load legacy 不轉換，newGame 回 factory ruleset。
-- [ ] Step 3: duplicate不扣款/加version/重播事件，failed import 不改局/AI/dirty，stale generation、dispose/AI cancellation 全回歸；GREEN/check/build/checkpoint。
+- [x] Step 1: RED 新 Save/Replay roundtrip、篡改內容/配對/generator/前置/新 unit HP 拒絕；舊 golden bytes/重播/延續/去重。
+- [x] Step 2: 只按已知版本重建同一 reducer；Session 預設不變，新預覽 load legacy 不轉換，newGame 回 factory ruleset。
+- [x] Step 3: duplicate不扣款/加version/重播事件，failed import 不改局/AI/dirty，stale generation、dispose/AI cancellation 全回歸；GREEN/check/build/checkpoint。
 
 ## Task 4: AI 與安全事件
 
@@ -66,9 +66,9 @@
 
 **Interfaces:** chooseAction(Observation) 不改；依 view.ruleset 解析公開定義。只擴已知兩版事件白名單，未知版本仍不投影。
 
-- [ ] Step 1: RED 合法研究/招募/移攻新兵、同 Observation 不同 truth、freeze/clone/interleaved deterministic；新研究/招募事件僅 own 合法資訊。
-- [ ] Step 2: 最小合法候選政策接線，G1 分支決策不變；不引入持久記憶或新協同演算法。
-- [ ] Step 3: GREEN 全套、oscillation、D-02、舊 AI 反例及必要代表 seed；記錄行為/效能與限制，不宣稱 Full100。
+- [x] Step 1: RED 合法研究/招募/移攻新兵、同 Observation 不同 truth、freeze/clone/interleaved deterministic；新研究/招募事件僅 own 合法資訊。
+- [x] Step 2: 最小合法候選政策接線，G1 分支決策不變；不引入持久記憶或新協同演算法。
+- [x] Step 3: GREEN 全套、oscillation、D-02、舊 AI 反例及必要代表 seed；記錄行為/效能與限制，不宣稱 Full100。
 
 ## Task 5: 真實 UI 閉環與預覽交付
 

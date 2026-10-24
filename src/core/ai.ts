@@ -1,5 +1,5 @@
-import { unitDefinition } from './rulesets';
-import type { Action, KnownTile, Observation, Point, Unit } from './types';
+import { unitDefinition, technologyDefinition } from './rulesets';
+import type { Action, KnownTile, Observation, Point, Unit, Tech, UnitKind } from './types';
 
 const distance = (a: Point, b: Point): number => Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 const same = (a: Point, b: Point): boolean => a.x === b.x && a.y === b.y;
@@ -11,6 +11,8 @@ export function chooseAction(view: Observation): Action | null {
   const legal = view.legalActions;
   if (!legal.length) return null;
   const owned = view.units.filter(u => u.owner === view.actor);
+  const recon = (u: Unit): boolean => unitDefinition(view.ruleset,u.kind).role === 'recon';
+  const sightFor = (unit: Unit): number => unitDefinition(view.ruleset,unit.kind).sight + (unit.kind === 'scout' && view.faction.techs.includes('pathfinding') ? 1 : 0);
   const enemies = view.units.filter(u => u.owner !== view.actor);
   const ownSites = view.tiles.filter(t => t.site?.owner === view.actor);
   const unknownTiles = view.tiles.filter(t => t.visibility === 'unknown');
@@ -90,8 +92,8 @@ export function chooseAction(view: Observation): Action | null {
     }
     // Reserve a scout for exploration only while a legal move can reveal new
     // terrain this turn. A spent or blocked scout loses nothing by attacking.
-    const exploringScouts = new Set(owned.filter(u => u.kind === 'scout' && !u.moved && !u.acted && legal.some(a =>
-      a.type === 'Move' && a.unitId === u.id && unknownTiles.some(t => distance(a.to, t) <= unitDefinition(view.ruleset,'scout').sight + (view.faction.techs.includes('pathfinding') ? 1 : 0))
+    const exploringScouts = new Set(owned.filter(u => recon(u) && !u.moved && !u.acted && legal.some(a =>
+      a.type === 'Move' && a.unitId === u.id && unknownTiles.some(t => distance(a.to, t) <= sightFor(u))
     )).map(u => u.id));
     const score = (a: typeof attacks[number]): number => {
       const unit = owned.find(u => u.id === a.unitId)!, target = enemies.find(u => u.id === a.targetId)!;
@@ -131,7 +133,18 @@ export function chooseAction(view: Observation): Action | null {
     if (counterstrikes[0]) return copyAction(counterstrikes[0].move);
   }
 
-  const research = (tech: 'farm' | 'archery' | 'pathfinding') => legal.find(a => a.type === 'Research' && a.tech === tech);
+  const research = (tech: Tech) => legal.find(a => a.type === 'Research' && a.tech === tech);
+  // 預覽專用角色投資；既有 G1 排序不變，擊殺/佔領仍在這段之前。
+  if (view.ruleset === 'demo03-preview-1') {
+    const investment = (tech: Tech, kind: UnitKind) => !owned.some(u => u.kind === kind)
+      && view.faction.gold >= technologyDefinition(view.ruleset,tech).cost + unitDefinition(view.ruleset,kind).cost && research(tech);
+    const defense = enemies.length ? investment('defensiveEngineering','shieldGuard') : undefined;
+    if (defense) return copyAction(defense);
+    const mobility = unknownTiles.length ? investment('militaryMobility','mobileScout') : undefined;
+    if (mobility) return copyAction(mobility);
+    const path = research('pathfinding');
+    if (unknownTiles.length && path && !owned.some(u => u.kind === 'mobileScout') && view.faction.gold >= technologyDefinition(view.ruleset,'pathfinding').cost + technologyDefinition(view.ruleset,'militaryMobility').cost + unitDefinition(view.ruleset,'mobileScout').cost) return copyAction(path);
+  }
   if (ownSites.length >= 2 && owned.length >= 3 && research('farm')) return copyAction(research('farm')!);
   if (enemies.length && owned.length >= 4 && view.faction.gold >= 10 && research('archery')) return copyAction(research('archery')!);
   if (view.faction.gold >= 12 && owned.length >= 4 && research('pathfinding')) return copyAction(research('pathfinding')!);
@@ -141,7 +154,11 @@ export function chooseAction(view: Observation): Action | null {
   // four-per-holding cap stranded rich factions below the defender's refill rate.
   if (recruits.length && owned.length < Math.max(6, ownSites.length * 8)) {
     const desiredScouts = unknownTiles.length > 120 && owned.length >= 8 ? 2 : 1;
-    const desired = owned.filter(u => u.kind === 'scout').length < desiredScouts ? 'scout' : view.faction.techs.includes('archery') && owned.filter(u => u.kind === 'archer').length * 3 < owned.length ? 'archer' : 'infantry';
+    let desired: UnitKind = owned.filter(u => u.kind === 'scout').length < desiredScouts ? 'scout' : view.faction.techs.includes('archery') && owned.filter(u => u.kind === 'archer').length * 3 < owned.length ? 'archer' : 'infantry';
+    if (view.ruleset === 'demo03-preview-1') {
+      if (enemies.length && !owned.some(u => u.kind === 'shieldGuard') && recruits.some(a => a.kind === 'shieldGuard')) desired = 'shieldGuard';
+      else if (unknownTiles.length && !owned.some(u => u.kind === 'mobileScout') && recruits.some(a => a.kind === 'mobileScout')) desired = 'mobileScout';
+    }
     // Use the nearest known front instead of array order: rear-capital recruits
     // took many turns to reach battles while empty forward holdings stayed idle.
     const objectives = view.tiles.filter(t => t.site && t.site.owner !== view.actor && t.site.owner !== null);
@@ -189,7 +206,6 @@ export function chooseAction(view: Observation): Action | null {
       else if (tile.relic?.resolved === false) goals.push({ tile, sources: [tile], purpose: 'relic', weight: 160, distances: distances([tile]) });
     }
     for (const enemy of enemies) goals.push({ tile: enemy, sources: [enemy], purpose: 'enemy', weight: 650, distances: distances([enemy]) });
-    const sightFor = (unit: Unit): number => unitDefinition(view.ruleset,unit.kind).sight + (unit.kind === 'scout' && view.faction.techs.includes('pathfinding') ? 1 : 0);
     const boundary = unknownTiles.filter(t => neighbors(t).some(i => view.tiles[i].terrain !== null && validTerrain(view.tiles[i])));
     const adjacent = view.tiles.filter(t => t.terrain !== null && validTerrain(t) && neighbors(t).some(i => view.tiles[i].visibility === 'unknown'));
     let primaryExplore: typeof goals[number] | undefined;
@@ -236,7 +252,7 @@ export function chooseAction(view: Observation): Action | null {
       const blocked = new Set(view.units.filter(u => u.id !== unit.id).map(u => u.y * view.width + u.x));
       // An occupied objective seeds the graph; other occupied cells block transit.
       const sight = sightFor(unit);
-      const roles = goals.filter(g => (g.sight === undefined || g.sight === sight) && (!g.fallback || !primaryExplore || !Number.isFinite(primaryExplore.distances[i]))).map(g => ({ ...g, weight: g.purpose === 'explore' && unit.kind === 'scout' ? 1600 : g.weight }));
+      const roles = goals.filter(g => (g.sight === undefined || g.sight === sight) && (!g.fallback || !primaryExplore || !Number.isFinite(primaryExplore.distances[i]))).map(g => ({ ...g, weight: g.purpose === 'explore' && recon(unit) ? 1600 : g.weight }));
       if (!roles.length && knownLand.length) {
         // Explored is not currently visible. Sweep uniform sight-sized cells,
         // rather than four corners, using the existing replayed turn counter.

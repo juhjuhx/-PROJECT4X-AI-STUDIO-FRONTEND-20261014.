@@ -23,7 +23,7 @@ export function projectPresentationEvents(
     || after.version !== before.version + 1
     || (before.actor !== 0 && before.actor !== 1) || before.actor !== after.actor
     || before.faction.id !== before.actor || after.faction.id !== after.actor
-    || before.ruleset !== 'g1-ccts-1' || after.ruleset !== before.ruleset
+    || !['g1-ccts-1','demo03-preview-1'].includes(before.ruleset) || after.ruleset !== before.ruleset
     || before.seed !== after.seed || before.width !== after.width || before.height !== after.height
     || !Number.isSafeInteger(before.width) || before.width <= 0
     || !Number.isSafeInteger(before.height) || before.height <= 0) return freezePublic([]);
@@ -36,7 +36,7 @@ export function projectPresentationEvents(
   for (const unit of [...before.units].sort((a, b) => compareId(a.id, b.id))) {
     const next = newUnits.get(unit.id);
     if (next && unit.hp !== next.hp) health.push({ type: 'UnitHealthChanged', unitId: unit.id, at: point(next), beforeHP: unit.hp, afterHP: next.hp });
-    // g1-ccts-1 的己軍總是出現在自己的 Observation，僅 combat 能移除。
+    // 經審查兩版的己軍總出現在自己的 Observation，僅 combat 能移除。
     if (!next && unit.owner === before.actor) destroyed.push({ type: 'OwnUnitDestroyed', unitId: unit.id, lastKnownAt: point(unit) });
   }
 
