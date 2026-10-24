@@ -1,9 +1,11 @@
 # NEXT-ACTION
 
-目前：R02-004 DONE／005 TESTED_PASS／006 IN_PROGRESS。下一項執行：release/demo02-playable-web本機一鍵Gate已PASS（223tests/11 Browser/12 Gameplay/4 Demo/PWA離線與更新）。完整1069原tracked已保留，d6caa389獨立review APPROVE；PR1已建立。核對最新PR SHA的CI→安全merge→merged CI→Release。發布未完成前不能把計畫URL當真發布。
+目前：Demo02已發布。PR1→cd59f348 merge→main CI PASS→Tag demo02-web-20261024-r3→匿名Web附件SHA/CRC PASS。正式URLs只有RELEASE-STATUS維護；任務權威MASTER-TODO，文件權威docs/INDEX。
 
-Task權威MASTER-TODO；遠端事實RELEASE-STATUS；產品狀態PROJECT-STATUS入口；文件權威docs/INDEX。先git status/rev-parse及核遠端main，不用舊聊天猜HEAD。
+本輪R02-001～009完成；R02-010剩發布後文件PR與最終Git/跨上下文複核。當前公開文件分支docs/demo02-release-and-workspace；先git status/rev-parse、核GitHub main與worktree清單，不用舊聊天猜HEAD。main原始碼與Tag可直接npm ci --ignore-scripts→node scripts/verify-demo02.mjs恢復。
 
-Demo02產品32檔保持基線，g1-ccts-1/save1/replay1不變；新公開資料/證據驗證只屬QA。Full100入口原封保留，不能以Demo PASS覆蓋歷史R5/R6 FAIL。原完整Git/私人evidence及Downloads仍保留原位。
+後續已授權：以最新公開main建立或恢復獨立Demo03 branch/worktree。先D03-V01呈現registry/tokens與實際地形/兵模/menu/遺跡/手機增量，再D03-001最窄內容registry及可驗證隔離切片；不得覆蓋Demo02 Tag/原完整Git。不要重建GameSession或匯入D3。
 
-若Release Gate完成，依序R02-008 Desktop read-only inventory→可回退整理→Demo03獨立branch。新兵種精確數值尚未批准，只有隔離實驗授權；不要混入正式Demo02。真人/真機仍未驗，Alpha PARTIAL。
+新兵種/科技精確數值尚未獲主創答覆，僅有隔離實驗授權；未批准不得混正式ruleset。城市/新地形/遺跡發現取得migration另立裁決；舊g1-ccts-1/save1/replay1不變。真人/真機/45–90分鐘未驗，Alpha PARTIAL，R5 87/13與T3/T6 FAIL保留，現行E Full100未驗。
+
+本機Desktop/PROJECT-4X為七區管理入口。所有Git worktree/private evidence/Downloads仍保留；只歸檔獨立Demo資料夾並保留舊路徑捷徑，完整manifest與rollback僅本機。不要把含私人索引的管理根整包上傳。

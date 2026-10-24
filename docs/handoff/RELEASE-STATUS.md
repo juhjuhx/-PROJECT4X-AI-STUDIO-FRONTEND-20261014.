@@ -1,6 +1,6 @@
 # Demo02 Release 狀態（唯一遠端發布入口）
 
-目前狀態：IN_PROGRESS；PR1已建立，merge／Release尚未完成，不宣稱DONE。
+目前狀態：DONE。Demo02 Web/PWA預覽版已正式建立GitHub Release並驗證匿名下載；Playable Alpha仍PARTIAL。
 
 | 欄位 | 真實值 |
 |---|---|
@@ -11,12 +11,12 @@
 | Remote main at recovery | c21b16cd75572d069369f41426f7323c63c05083 |
 | Release branch | release/demo02-playable-web |
 | PR | https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./pull/1 |
-| Merge commit | TODO |
-| GitHub Release | TODO |
+| Merge commit | cd59f348116ec47e3e3b88475ec12a8c2f5eb2d5 |
+| GitHub Release | https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./releases/tag/demo02-web-20261024-r3 |
 | Target asset | PROJECT4X-DEMO02-WEB-20261024-r3.zip |
 | Asset SHA256 | 6b7d54df848887cd1c487742f7dbcebedfe4b0ee90bf39830a23cf25410af8f3 |
 | Asset size | 91350 bytes／19files |
-| CI | PR run 40063200214 已觸發，尚待結果；以最新PR SHA為準 |
+| CI | 最終PR 0a3c5cdb run40063343855 PASS；merged cd59f348 run40063634958 PASS |
 | Unit baseline | 203原測試＋4 publication＋4 release-proof＋5 worker HTTP/contract＋7審查隱私/生命週期＝223/223 fresh PASS |
 | Human/physical phone | UNVERIFIED |
 | Playable Alpha | PARTIAL |
@@ -26,3 +26,7 @@
 發布步驟按MASTER-TODO；如403或branch保護阻擋，不關規則、不暴露憑證、不force push，保留BLOCKED及下一條可執行命令。GitHub connector無Release附件API，使用本機已授權gh CLI補足。
 
 獨立review：d6caa389c3c8387e648434170f2805eb60722083 APPROVE（詳RELEASE02/INDEPENDENT-REVIEW）。GitHub connector寫PR回403，已核對juhjuhx CLI身分後建立PR1；不是繞過權限。兩次Git HTTP408保留，單次32MiB POST transport重試才成功，不改全域Git配置。
+
+正式Tag為demo02-web-20261024-r3，target cd59f348；draft=false/prerelease=true。公開source由該Tag提供，Web附件91350 bytes、19項CRC通過，匿名系統curl下載SHA與原件相同，TLS未關閉。Python urllib首次因本機CA缺件BLOCKED保留，沒有將它冒稱成功；詳RELEASE02/PUBLISHED.json。Release不是HTTPS線上遊戲部署。
+
+先前4c03f747文件run因pending被新SHA替代而cancelled；未當PASS。程式d6caa389 run40063200214也PASS。原R5/R6 FAIL不因發布改寫。後續文件提交不改Tag中的產品32檔；現行main以GitHub即時SHA為準。

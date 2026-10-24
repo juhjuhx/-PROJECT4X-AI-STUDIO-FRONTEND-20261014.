@@ -2,10 +2,10 @@
 
 在迷霧中帶領一座城邦探索、研究、交戰，並在失去國土後延續文明的原創回合制策略遊戲。
 
-**Demo02：可玩的 Web/PWA 工程候選。Playable Alpha 仍為 PARTIAL。**
+**Demo02：已發布的 Web/PWA 預覽版。Playable Alpha 仍為 PARTIAL。**
 目前三兵種、三科技與既有規則可玩；Demo03 新內容另外開發，不覆蓋 Demo02。
 
-[下載 Web Demo](https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./releases) · [目前狀態](docs/handoff/PROJECT-STATUS.md) · [Roadmap](docs/roadmap/ROADMAP.md) · [文件索引](docs/INDEX.md)
+[下載 Web Demo](https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./releases/tag/demo02-web-20261024-r3) · [目前狀態](docs/handoff/PROJECT-STATUS.md) · [Roadmap](docs/roadmap/ROADMAP.md) · [文件索引](docs/INDEX.md)
 
 ![實際戰鬥與佔領畫面](docs/verification/DEMO02/screenshots/真實戰鬥佔領旅程.png)
 

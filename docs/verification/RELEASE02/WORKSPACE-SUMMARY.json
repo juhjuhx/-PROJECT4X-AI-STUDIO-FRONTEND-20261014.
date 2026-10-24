@@ -1,0 +1,20 @@
+{
+  "status": "TESTED_PASS",
+  "operation": "單一獨立Demo交付資料夾歸檔＋舊路徑相容捷徑",
+  "managementRoot": "Desktop/PROJECT-4X",
+  "sections": 7,
+  "shortcutCount": 19,
+  "movedDirectories": 1,
+  "verifiedFiles": 53,
+  "verifiedBytes": 27505657,
+  "oldPathCompatible": true,
+  "shaAndModesEqual": true,
+  "gitWorktreesMoved": 0,
+  "deletedFiles": 0,
+  "downloadsChanged": 0,
+  "bytesFreed": 0,
+  "localArchiveManifestSha256": "01b2326ed9c42b4b592516a75920edcfc08515a3b0eb724d80c3e297c008793d",
+  "rollbackFixtureTests": 3,
+  "realRollbackDryCheck": "READY_TO_ROLLBACK",
+  "privateMapping": "完整來源/目的地/每檔SHA與回退工具只在本機管理入口，不送GitHub"
+}
