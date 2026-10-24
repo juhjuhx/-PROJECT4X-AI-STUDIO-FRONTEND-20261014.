@@ -1,0 +1,10 @@
+{"label": "C3-recruit-green", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/recruit-presentation.test.ts"], "startedAt": "2026-10-17T23:50:07.699259+00:00", "snapshotSha256": "36d8d051df3ae19855b7e5c23cc910b296c7e749b8a52c529d04ee4eedf1c050", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "e5bc16fedde9245e29284a4ec954299212089139", "timeoutSeconds": 240}
+✔ C3 招募狀態只由觀測判定：等待／必答／駐軍／合法候選不混成已徵召 (58.193917ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167.211459

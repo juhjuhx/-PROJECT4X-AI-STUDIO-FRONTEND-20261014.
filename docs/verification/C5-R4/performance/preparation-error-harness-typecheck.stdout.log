@@ -1,0 +1,6 @@
+error TS6053: File 'frozen/baseline/src/core/measured-ai.ts' not found.
+  The file is in the program because:
+    Root file specified for compilation
+error TS6053: File 'frozen/candidate/src/core/measured-ai.ts' not found.
+  The file is in the program because:
+    Root file specified for compilation

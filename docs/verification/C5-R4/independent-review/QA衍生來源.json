@@ -1,0 +1,7 @@
+{
+  "candidateSHA": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+  "candidateSeamSHA": "ba84037f4471ca0ed4eba0e39abb2fa9c1197ff92bdf4ede7cea37b08476b1cb",
+  "R3OriginalSHA": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "R3SeamSHA": "c28993ef024a0946380ae72abab903ce10d14da632c17a8a2ccaaf6eb1e2892b",
+  "scope": "只匯出function-local helper與角色資訊；每fixture核對接縫與原產品action parity。無改project。"
+}

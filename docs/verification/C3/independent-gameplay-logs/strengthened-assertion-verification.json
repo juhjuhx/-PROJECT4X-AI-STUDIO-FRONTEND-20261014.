@@ -1,0 +1,42 @@
+{
+  "sourceSha256": "e7c50d0cf771f68560e39e47eb2d87a718281d498b72dca1234292ea3f3effd3",
+  "executedAssertionBlock": "    assert.ok(appended.length >= 1);\n    assert.equal(appended[0].actor, 0);\n    assert.deepEqual(appended[0].action, action, '真UI必須提交所選完整合法Action');\n    const ownCommands = appended.filter(c=>c.actor===0);\n    const expectedActions = relicChoice ? [action,{type:'ResolveRelic',choice:relicChoice}] : [action];\n    assert.deepEqual(ownCommands.map(c=>c.action),expectedActions,'包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command');\n    if (action.type !== 'EndTurn') assert.equal(appended.length, expectedActions.length);\n    humanCommands += ownCommands.length;\n    assert.ok(humanCommands<=220,'強制遺跡command也必須計入220上限');\n",
+  "results": [
+    {
+      "id": "WRONG_RELIC_CHOICE_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command"
+    },
+    {
+      "id": "CORRECT_RELIC_CHOICE_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "FORCED_RELIC_OVER_220_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "強制遺跡command也必須計入220上限"
+    },
+    {
+      "id": "EXACTLY_220_HUMAN_COMMANDS_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "NORMAL_ENDTURN_AND_AI_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "EXTRA_HUMAN_AFTER_ENDTURN_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command"
+    }
+  ]
+}

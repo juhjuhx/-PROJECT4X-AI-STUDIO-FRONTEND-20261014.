@@ -1,0 +1,23 @@
+--- AI-4490459c
++++ AI-e7721d53
+@@ -64,7 +64,19 @@
+       return (reserved.has(unit.id) ? -10000 : 0) + (scoutExplore ? -1000 : 0) + (siegeTargets.has(target.id) ? 2000 : 0) + (damage >= target.hp ? 1000 : 0) + damage * 10 - target.hp + (tile.site ? 20 : 0);
+     };
+     attacks.sort((a, b) => score(b) - score(a) || compareIds(a.unitId, b.unitId) || compareIds(a.targetId, b.targetId));
+-    if (score(attacks[0]) >= 0) return copyAction(attacks[0]);
++    if (score(attacks[0]) >= 0) {
++      const shot = attacks[0], unit = owned.find(u => u.id === shot.unitId)!, target = enemies.find(u => u.id === shot.targetId)!;
++      // Shooting in place consumes movement and blocks reinforcement. When the
++      // same kill remains legal after moving off a holding, free its spawn cell
++      // first. No new rule, cost, memory, or guessed hidden movement is needed.
++      if (ownSites.some(t => same(t, unit)) && view.faction.gold >= UNIT_STATS.infantry.cost
++        && owned.length < Math.max(6, ownSites.length * 8) && damageFor(shot) >= target.hp) {
++        const firingMove = legal.find(a => a.type === 'Move' && a.unitId === unit.id
++          && distance(a.to, target) <= UNIT_STATS[unit.kind].range && !ownSites.some(t => same(t, a.to)));
++        if (firingMove) return copyAction(firingMove);
++      }
++      return copyAction(shot);
++    }
+   }
+ 
+   const research = (tech: 'farm' | 'archery' | 'pathfinding') => legal.find(a => a.type === 'Research' && a.tech === tech);

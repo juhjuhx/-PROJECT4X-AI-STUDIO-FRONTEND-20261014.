@@ -1,0 +1,18 @@
+{
+  "label": "C5-paired-gameplay",
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "command": [
+    "npm",
+    "run",
+    "qa:gameplay"
+  ],
+  "startedAt": "2026-10-18T12:37:34.024923+00:00",
+  "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T12:40:39.785105+00:00",
+  "durationSeconds": 185.604,
+  "log": "C5-paired-gameplay.log"
+}

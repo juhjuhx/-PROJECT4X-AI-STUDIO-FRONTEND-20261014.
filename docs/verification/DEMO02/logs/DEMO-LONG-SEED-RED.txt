@@ -1,0 +1,35 @@
+✔ Demo journal derives real exploration/research/relic consequences without writing winner or core (18.617417ms)
+✔ unchanged or duplicate observation cannot manufacture progress; another seed resets journal (3.359875ms)
+✔ narrative packs only allow versioned text/objectives; never authority gameplay effects (0.398792ms)
+✖ journal accepts every legal core seed length, rejects invalid empty/oversize metadata (7.346375ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 242.712792
+
+✖ failing tests:
+
+test at tests/demo-journal.test.ts:1:2559
+✖ journal accepts every legal core seed length, rejects invalid empty/oversize metadata (7.346375ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(parseProgress(createProgress(view)))
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/demo-journal.test.ts:32:93)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

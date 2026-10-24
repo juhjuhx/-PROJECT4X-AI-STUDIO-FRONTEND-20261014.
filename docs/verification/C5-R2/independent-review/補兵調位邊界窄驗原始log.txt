@@ -1,0 +1,13 @@
+PASS scout moves within own range, same lethal shot remains legal
+PASS archer uses range2 rather than infantry range1
+PASS infantry has no same-range legal sidestep and retains Attack
+PASS nonlethal shot retains Attack
+PASS gold3 retains Attack
+PASS one holding: count7 below cap8 moves
+PASS one holding: count8 at cap8 retains Attack
+PASS two holdings: count15 below cap16 moves
+PASS two holdings: count16 at cap16 retains Attack
+PASS no legal firing move retains Attack
+PASS firing move onto another own holding is excluded
+PASS reserved fresh occupier still enters and captures after relocated archer kill
+PASS hidden recruited flag gives identical Observation/action; no guaranteed recruitment claim

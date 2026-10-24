@@ -1,0 +1,92 @@
+START 2026-10-18T04:47:07.494506+00:00
+COMMAND node --input-type=module - <<STDIN
+
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const source=fs.readFileSync('../evidence/independent-gameplay-logs/reviewed-ordered-source.log','utf8');
+const update=source.match(/if \(seen\.has\('Attack'\)\) captureAfterAttack = true;/)[0];
+const gate=source.match(/assert\.ok\(seen\.has\('Attack'\)&&captureAfterAttack,[^\n]+/)[0];
+const cases=[];
+for (const [types,expected] of [[['Capture','Attack'],false],[['Attack','Capture'],true],[['Capture','Attack','Capture'],true],[['Capture'],false],[['Attack'],false]]) {
+ const seen=new Set();let captureAfterAttack=false;
+ for (const type of types) {if(type==='Capture')captureAfterAttack=Function('seen','captureAfterAttack',update+'return captureAfterAttack;')(seen,captureAfterAttack);seen.add(type);}
+ let accepted=true;try{Function('assert','seen','captureAfterAttack',gate)(assert,seen,captureAfterAttack);}catch{accepted=false;}
+ assert.equal(accepted,expected);cases.push({types,accepted,expected});
+}
+const snippet=source.slice(source.indexOf('async function privateSave('),source.indexOf('// C3/C4'));
+const makePrivateSave=Function('readFile',snippet+'return privateSave;');
+const cleanup=[];
+for (const shouldThrow of [false,true]) {
+ let deleted=0,closed=0;
+ const download={path:async()=>'/synthetic-private-qa-download',delete:async()=>{deleted++;}};
+ const dialog={isVisible:async()=>false,getByRole:(_role,options)=>({click:async()=>{if(options.name==='關閉')closed++;}})};
+ const page={locator:()=>dialog,getByRole:()=>({click:async()=>{}}),waitForEvent:()=>Promise.resolve(download)};
+ const privateSave=makePrivateSave(async()=>{if(shouldThrow)throw new Error('synthetic read failure');return 'synthetic private export';});
+ let threw=false;try{await privateSave(page);}catch{threw=true;}
+ assert.equal(threw,shouldThrow);assert.equal(deleted,1);assert.equal(closed,1);
+ cleanup.push({readFailure:shouldThrow,downloadDeleteCalls:deleted,dialogCloseCalls:closed});
+}
+console.log(JSON.stringify({sourceSha256:createHash('sha256').update(source).digest('hex'),orderCases:cases,privateSaveCleanup:cleanup},null,2));
+
+STDIN
+EXIT 0
+STDOUT
+{
+  "sourceSha256": "426d731d039ed28bb64532785fb30a9a4ad2b3db664eaaabf97019b06b0fae27",
+  "orderCases": [
+    {
+      "types": [
+        "Capture",
+        "Attack"
+      ],
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "types": [
+        "Attack",
+        "Capture"
+      ],
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "types": [
+        "Capture",
+        "Attack",
+        "Capture"
+      ],
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "types": [
+        "Capture"
+      ],
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "types": [
+        "Attack"
+      ],
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "privateSaveCleanup": [
+    {
+      "readFailure": false,
+      "downloadDeleteCalls": 1,
+      "dialogCloseCalls": 1
+    },
+    {
+      "readFailure": true,
+      "downloadDeleteCalls": 1,
+      "dialogCloseCalls": 1
+    }
+  ]
+}
+
+STDERR
+
+END 2026-10-18T04:47:07.581336+00:00

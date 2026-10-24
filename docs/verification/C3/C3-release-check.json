@@ -1,0 +1,18 @@
+{
+  "label": "C3-release-check",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "startedAt": "2026-10-18T04:47:47.823326+00:00",
+  "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "e5bc16fedde9245e29284a4ec954299212089139",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T04:47:48.473166+00:00",
+  "durationSeconds": 0.65,
+  "log": "C3-release-check.log"
+}

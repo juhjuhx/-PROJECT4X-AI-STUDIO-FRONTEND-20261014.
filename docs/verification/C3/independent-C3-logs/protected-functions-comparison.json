@@ -1,0 +1,86 @@
+[
+  {
+    "function": "canAct",
+    "identical": true,
+    "C2sha256": "71dfcfc7f14e6647baeb58a42cbfc5d6201ef3e9b7a93ba343d48ec199e1b5e3",
+    "C3sha256": "71dfcfc7f14e6647baeb58a42cbfc5d6201ef3e9b7a93ba343d48ec199e1b5e3"
+  },
+  {
+    "function": "sameAction",
+    "identical": true,
+    "C2sha256": "c9c79962078478e6552cb9e55fa167c9bc8dff2f4c01848eafbd43dbd19f6ddf",
+    "C3sha256": "c9c79962078478e6552cb9e55fa167c9bc8dff2f4c01848eafbd43dbd19f6ddf"
+  },
+  {
+    "function": "isLegal",
+    "identical": true,
+    "C2sha256": "568e1fcd1873b3625fc2cb4324c1f8f079164584c8d2530272c0bc3d6aa3ba2b",
+    "C3sha256": "568e1fcd1873b3625fc2cb4324c1f8f079164584c8d2530272c0bc3d6aa3ba2b"
+  },
+  {
+    "function": "makeActionButton",
+    "identical": true,
+    "C2sha256": "4bac5d42fcc8a9957edba6feb86c2acc74a21cceb2dd2d7e7f2f2f4620fcaca8",
+    "C3sha256": "4bac5d42fcc8a9957edba6feb86c2acc74a21cceb2dd2d7e7f2f2f4620fcaca8"
+  },
+  {
+    "function": "dispatch",
+    "identical": true,
+    "C2sha256": "b6597a377467c642d08589934ac509a451c8a4305545c71551b5a51852b02248",
+    "C3sha256": "b6597a377467c642d08589934ac509a451c8a4305545c71551b5a51852b02248"
+  },
+  {
+    "function": "render",
+    "identical": true,
+    "C2sha256": "bbfa50c66d8b64b43c6d6f85b94afc01d1ff356ec30923b7bfeeb8246fd2f579",
+    "C3sha256": "bbfa50c66d8b64b43c6d6f85b94afc01d1ff356ec30923b7bfeeb8246fd2f579"
+  },
+  {
+    "function": "updateSaveNotice",
+    "identical": true,
+    "C2sha256": "e221b7e80525bd67fdf19161d7e12c64c880bb008e3a5e8d80cbc676272379ef",
+    "C3sha256": "e221b7e80525bd67fdf19161d7e12c64c880bb008e3a5e8d80cbc676272379ef"
+  },
+  {
+    "function": "saveLocal",
+    "identical": true,
+    "C2sha256": "f5f64e76708f623f61470fd38f298c4e7507ef6e95845f1a80251a5f89c8401a",
+    "C3sha256": "f5f64e76708f623f61470fd38f298c4e7507ef6e95845f1a80251a5f89c8401a"
+  },
+  {
+    "function": "confirmReplacement",
+    "identical": true,
+    "C2sha256": "f814ad333d1ffeb8d089ca206fef1f9e55e331129855ee5fa042602ffc2f5a35",
+    "C3sha256": "f814ad333d1ffeb8d089ca206fef1f9e55e331129855ee5fa042602ffc2f5a35"
+  },
+  {
+    "function": "showReplacement",
+    "identical": true,
+    "C2sha256": "337a458d4c74a84c50a4778e53da83391b167a22619a72b5d36d23abb35ab160",
+    "C3sha256": "337a458d4c74a84c50a4778e53da83391b167a22619a72b5d36d23abb35ab160"
+  },
+  {
+    "function": "newGame",
+    "identical": true,
+    "C2sha256": "45d9f46ab24b864bc08080325bfd0639077f703a66e131e16cbffddf19977199",
+    "C3sha256": "45d9f46ab24b864bc08080325bfd0639077f703a66e131e16cbffddf19977199"
+  },
+  {
+    "function": "loadLocal",
+    "identical": true,
+    "C2sha256": "9a559f6c56c0e0c7289229f948c2aad07a879421a9006c2dc6a4c6edb2880b01",
+    "C3sha256": "9a559f6c56c0e0c7289229f948c2aad07a879421a9006c2dc6a4c6edb2880b01"
+  },
+  {
+    "function": "download",
+    "identical": true,
+    "C2sha256": "62781b4139301482fc8061fef0991250b277a1c63242667dd6460d7cf7620cf8",
+    "C3sha256": "62781b4139301482fc8061fef0991250b277a1c63242667dd6460d7cf7620cf8"
+  },
+  {
+    "function": "importFile",
+    "identical": true,
+    "C2sha256": "28552876ab5ff8ae1c4cc012ae65ec9ca45b580956939f6614ba506bcf6912db",
+    "C3sha256": "28552876ab5ff8ae1c4cc012ae65ec9ca45b580956939f6614ba506bcf6912db"
+  }
+]

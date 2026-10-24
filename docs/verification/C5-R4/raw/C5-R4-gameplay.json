@@ -1,0 +1,18 @@
+{
+  "label": "C5-R4-gameplay",
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "command": [
+    "npm",
+    "run",
+    "qa:gameplay"
+  ],
+  "startedAt": "2026-10-20T12:50:11.514848+00:00",
+  "snapshotSha256": "b33f0d9268c250a937023b908e590492e4841f426fadb58c47202d90a20647ce",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-20T12:50:23.645408+00:00",
+  "durationSeconds": 12.13,
+  "log": "C5-R4-gameplay.log"
+}

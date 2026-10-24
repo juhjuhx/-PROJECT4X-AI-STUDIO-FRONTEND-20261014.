@@ -2,7 +2,9 @@
 
 查證日期：2026-10-13。這是精確依賴／候選／資產的工程授權盤查；不替使用者選專案LICENSE。本輪只封存與交接，沒有公開發布或生產整合。
 
-## 未完成的專案對外授權
+**2026-10-17 當前補充**：主創已明確重申採用根目錄 MIT LICENSE，README／LICENSE-STATUS 已對齊；下段「無 LICENSE／尚未選定」只描述 2026-10-13 原始封存，不再代表當前專案授權。第三方元件、素材及二進位義務仍各自有效，本次沒有新導入或重新授權它們。
+
+## 2026-10-13 原始封存的授權狀態（歷史）
 
 原始 `project-4x-mvp@0.1.0` 根目錄無LICENSE/COPYING/NOTICE，manifest也無license欄位；自有程式與原創素材的**對外授權UNVERIFIED**。`private: true`限制npm發布，並不是著作權license。使用者明確授權本次自己的專案交接／AI閱讀，這個範圍可保留；公共repository、商業散布或授權第三人二次創作不能由本盤查自行批准。[GitHub官方授權說明](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)也把無license與開源授權區分。
 

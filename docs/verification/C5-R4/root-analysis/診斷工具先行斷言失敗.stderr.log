@@ -1,0 +1,27 @@
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+456 !== 476
+
+    at assert (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-root-analysis/唯讀診斷.ts:69:8)
+    at Object.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-root-analysis/唯讀診斷.ts:77:10)
+    at Module._compile (node:internal/modules/cjs/loader:1956:14)
+    at Object.transformer (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/tsx/dist/register-B1c7OH6V.cjs:22:2188)
+    at Module.load (node:internal/modules/cjs/loader:1678:32)
+    at Module._load (node:internal/modules/cjs/loader:1470:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:376:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:248:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 456,
+  expected: 476,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.10.0

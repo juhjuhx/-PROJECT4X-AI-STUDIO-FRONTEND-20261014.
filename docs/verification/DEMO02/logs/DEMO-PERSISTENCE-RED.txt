@@ -1,0 +1,36 @@
+✖ private local I/O binds public journal to exact save bytes; other/corrupt save never restores completion (6.212833ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 243.305833
+
+✖ failing tests:
+
+test at tests/demo-local-progress.test.ts:1:253
+✖ private local I/O binds public journal to exact save bytes; other/corrupt save never restores completion (6.212833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   explored: true,
+  +   intelCount: 0,
+  +   relicChoice: 'gold',
+  +   researched: true,
+  +   seed: 'demo-binding'
+  + }
+  - null
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/demo-local-progress.test.ts:13:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { seed: 'demo-binding', explored: true, researched: true, relicChoice: 'gold', intelCount: 0 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

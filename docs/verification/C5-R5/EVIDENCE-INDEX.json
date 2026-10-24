@@ -1,0 +1,1007 @@
+{
+  "schema": "c5-r5-safe-evidence-index-1",
+  "generatedAt": "2026-10-21T20:32:44.337565+08:00",
+  "privateRoot": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235",
+  "records": [
+    {
+      "label": "T3-final",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/T3-check.mjs"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:24:50.944556+08:00",
+      "endedAt": "2026-10-21T20:24:51.304382+08:00",
+      "durationSeconds": 0.291,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "5de02471d5ef79113428b8eb53544eafad1d0800c74eca9edcc0d401a2f9e141",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "T6-final",
+      "command": [
+        "npm",
+        "run",
+        "verify"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:23:13.171560+08:00",
+      "endedAt": "2026-10-21T20:23:20.230617+08:00",
+      "durationSeconds": 6.933,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "aa78a1f5e3365cb7d95ad8dd5090f326813ff6473dbd7d3476f31b6ee4c52723",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "browser-contract-GREEN",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-browser-contract.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:13:43.863633+08:00",
+      "endedAt": "2026-10-21T12:13:44.103410+08:00",
+      "durationSeconds": 0.189,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "b865869969cb40a23b34f9ea8a8073551f3ecd7070a1227226657e5a5926f58d",
+      "testsCount": 13,
+      "passCount": 13,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "browser-contract-RED",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-browser-contract.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:13:08.167807+08:00",
+      "endedAt": "2026-10-21T12:13:08.413398+08:00",
+      "durationSeconds": 0.18,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "12a09a6b4c62cf196594236a881d6335994cb0b16eb8e61a5b0d4286641c1ee8",
+      "testsCount": 13,
+      "passCount": 11,
+      "failCount": 2,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "browser-final",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/browser-host.mjs",
+        "browser-final"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:21:02.745780+08:00",
+      "endedAt": "2026-10-21T12:21:08.916730+08:00",
+      "durationSeconds": 6.122,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "c3ca1368a3f9b33dd02c4022736182ec25707b54a184ef93a8a2d907f9314563",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "browser-receipts-GREEN",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-browser-contract.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:01.299883+08:00",
+      "endedAt": "2026-10-21T12:20:01.542081+08:00",
+      "durationSeconds": 0.193,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "9bd9ee706a4b607e0696b9f0041e612273985f9ea7abdf7eede341e1a9b39c0f",
+      "testsCount": 18,
+      "passCount": 18,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "browser-receipts-RED",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-browser-contract.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:19:36.276419+08:00",
+      "endedAt": "2026-10-21T12:19:36.590050+08:00",
+      "durationSeconds": 0.253,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "1924447e8bfbd34fba42ba28f98711dd932af2c6b6bebaf0d5943c56e639a4ec",
+      "testsCount": 18,
+      "passCount": 13,
+      "failCount": 5,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "browser-review-GREEN",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-download.test.mjs",
+        "tests/qa-browser-lifecycle.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:19:05.342855+08:00",
+      "endedAt": "2026-10-21T12:19:05.676353+08:00",
+      "durationSeconds": 0.27,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "2e2bfbf5a05c4d948da2cb7282c55845f6c0375bb512644e1df02935a3485cb3",
+      "testsCount": 12,
+      "passCount": 12,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "browser-review-RED",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-download.test.mjs",
+        "tests/qa-browser-lifecycle.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:18:20.751579+08:00",
+      "endedAt": "2026-10-21T12:18:21.065869+08:00",
+      "durationSeconds": 0.254,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "373f07ba99ad4973654acf9a54f94d494fc958372930decd070614651f0f3774",
+      "testsCount": 12,
+      "passCount": 6,
+      "failCount": 6,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "build-before-gameplay",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:11:32.414411+08:00",
+      "endedAt": "2026-10-21T12:11:33.278546+08:00",
+      "durationSeconds": 0.819,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "16c1750a41b389962792bfbd9d0cd2dc50c3a43514457ea0a00f6e9ef5931654",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "dependency-audit-host",
+      "command": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:43:15.757532+08:00",
+      "endedAt": "2026-10-21T12:43:16.573954+08:00",
+      "durationSeconds": 0.764,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "2c05ee6453cc2123a736354e9ddfdc031b0eb8532b13df03ce1451be16b59330",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "dependency-audit",
+      "command": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:43:04.266837+08:00",
+      "endedAt": "2026-10-21T12:43:05.014055+08:00",
+      "durationSeconds": 0.691,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "033efa801d1373554bd03be253deda412a99b6d5e9c9442b5b68560108918f53",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "download-mre-host",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/download-mre.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:05:24.377281+08:00",
+      "endedAt": "2026-10-21T12:05:55.924173+08:00",
+      "durationSeconds": 31.499,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "eba109883e9a3606f1de8847544589ec685a40d18e7791f859a34fff2df15020",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "download-mre-paced",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/download-mre.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:09:01.955827+08:00",
+      "endedAt": "2026-10-21T12:09:21.606719+08:00",
+      "durationSeconds": 19.589,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "8a757dd9b3b1cda1f978a2a8101b28f1cdb4f15b6b6240129d08c8fb40d6c10a",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "download-mre",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/download-mre.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:05:10.138287+08:00",
+      "endedAt": "2026-10-21T12:05:10.454546+08:00",
+      "durationSeconds": 0.256,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "8201ecb888c01e2e77b0886e6a1530e25c9a4ce52df77ce8eb04066853b01f92",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "download-wrapper-GREEN",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-download.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:09:54.972055+08:00",
+      "endedAt": "2026-10-21T12:09:55.232135+08:00",
+      "durationSeconds": 0.199,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "fef58b22e0581cdeefa306d88bd109293c1601d0a0aa23b6db871785dbecb287",
+      "testsCount": 4,
+      "passCount": 4,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "download-wrapper-RED",
+      "command": [
+        "node",
+        "--test",
+        "tests/qa-download.test.mjs"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:07:53.748569+08:00",
+      "endedAt": "2026-10-21T12:07:53.999204+08:00",
+      "durationSeconds": 0.189,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "7809b3e15c14e1080994ad235fdf3437187af10a927e770f6215b6e08f389624",
+      "testsCount": 4,
+      "passCount": 1,
+      "failCount": 3,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "final-D02",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:41:59.054855+08:00",
+      "endedAt": "2026-10-21T12:41:59.731016+08:00",
+      "durationSeconds": 0.626,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "ff5d147012d2dfa5822064c1774e35ff53c730aa3acf7d409b80ed27a80d4daf",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-audit-after100",
+      "command": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:23:51.183967+08:00",
+      "endedAt": "2026-10-21T20:23:52.120566+08:00",
+      "durationSeconds": 0.877,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "2c05ee6453cc2123a736354e9ddfdc031b0eb8532b13df03ce1451be16b59330",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-browser-after100",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/browser-host.mjs",
+        "browser-after100"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:28:16.379665+08:00",
+      "endedAt": "2026-10-21T20:28:22.289906+08:00",
+      "durationSeconds": 5.866,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "989e795d269a7d93e1ce6902c6feff722cb9f7d936047a4efcb78adff76b9853",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:40:55.569241+08:00",
+      "endedAt": "2026-10-21T12:40:56.193584+08:00",
+      "durationSeconds": 0.579,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "6e370316cc54477206a2b64f74856e303bfeb85ad38637d7765981f9608dc518",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:40:55.148461+08:00",
+      "endedAt": "2026-10-21T12:40:55.493853+08:00",
+      "durationSeconds": 0.3,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-gameplay-after100",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/browser-host.mjs",
+        "gameplay-after100",
+        "--gameplay"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:23:47.376053+08:00",
+      "endedAt": "2026-10-21T20:25:04.419886+08:00",
+      "durationSeconds": 76.991,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "e738291f3e110883b1735018b34067febd64352ce6aa855568a5cf5be2ffb437",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "final-prefix",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:41:56.252781+08:00",
+      "endedAt": "2026-10-21T12:41:58.956087+08:00",
+      "durationSeconds": 2.658,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "48eb8b9ee042a2c086abc35345880d2888839166dde16785c5d0db353e1b6f26",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-005-020",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:44:10.772077+08:00",
+      "endedAt": "2026-10-21T12:54:24.584192+08:00",
+      "durationSeconds": 613.754,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "f9ea2429a65cd44e5a3d366c7f2107547e414d63424c62c72c8edf3035f2d088",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-021-036",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:54:24.678501+08:00",
+      "endedAt": "2026-10-21T13:03:58.364194+08:00",
+      "durationSeconds": 573.617,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "04137ba53000fb3128f4ee124fc286d3260f3a8e970793b6af1cf41963175404",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-037-052",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T13:03:58.470943+08:00",
+      "endedAt": "2026-10-21T13:21:07.387773+08:00",
+      "durationSeconds": 1030.065,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "d203e8d10af9cf7e9ecc43111a15abe389f72526e072ef181571af3d8aafbc1d",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-053-068",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T13:21:07.572145+08:00",
+      "endedAt": "2026-10-21T13:42:41.799458+08:00",
+      "durationSeconds": 1294.073,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "ba6af420804be6674c17cca785773a7f7a2333d8530418fba95ca23b94622be9",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-069-084",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T13:42:41.942948+08:00",
+      "endedAt": "2026-10-21T13:55:12.395871+08:00",
+      "durationSeconds": 750.346,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "4ecad129ab0352f3159730eb1bcf92584175daa22a6bc3754f6e16c88bf150e2",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-batch-085-100",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T13:55:12.503033+08:00",
+      "endedAt": "2026-10-21T14:07:03.343330+08:00",
+      "durationSeconds": 710.792,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "7d517038141e9d25eb58378f2a03a23cb16c2a7f33b9d6dbeb5b49c2da221a3b",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "full100-pilot-001-004",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/frozen-project/scripts/headless.ts"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:42:48.356436+08:00",
+      "endedAt": "2026-10-21T12:43:50.326816+08:00",
+      "durationSeconds": 61.921,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "308941cdfc05cb8aaf01141f7c55350b3badc36c15cbfb4fefd07b840ff4efa6",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gameplay-final",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/browser-host.mjs",
+        "gameplay-final",
+        "--gameplay"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:21:06.845097+08:00",
+      "endedAt": "2026-10-21T12:22:17.506330+08:00",
+      "durationSeconds": 70.61,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "12655bcbe6dfff5200260204184fad1cd622497dfb45315ac1a6015b33ac3284",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gameplay-unpaced",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/browser-host.mjs",
+        "gameplay-unpaced",
+        "--gameplay"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:12:04.846364+08:00",
+      "endedAt": "2026-10-21T12:13:16.798605+08:00",
+      "durationSeconds": 71.901,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "33975ac462fd32bb964bac93e558896baa7a022e0da08ed76de8782366567acc",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gate-D02",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:44.779928+08:00",
+      "endedAt": "2026-10-21T12:20:45.408036+08:00",
+      "durationSeconds": 0.578,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "33b27de2c5bc1d9d77c2d72d2e8d1c88222935aa7af1798e33df4018f4790157",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gate-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:45.938370+08:00",
+      "endedAt": "2026-10-21T12:20:46.649298+08:00",
+      "durationSeconds": 0.659,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "b016dca3b54212c59f7b02c16d4e6041ff054f5ad38b763a6dcc2098cb322459",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gate-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:01.627343+08:00",
+      "endedAt": "2026-10-21T12:20:02.349793+08:00",
+      "durationSeconds": 0.674,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gate-prefix",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:44.779915+08:00",
+      "endedAt": "2026-10-21T12:20:47.445412+08:00",
+      "durationSeconds": 2.616,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "52aaac02d12f36ae4e10551db5cc3e655f1fbafc4ed6cdb0b02eb94671c69269",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "gate-unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:20:01.627310+08:00",
+      "endedAt": "2026-10-21T12:20:05.303025+08:00",
+      "durationSeconds": 3.627,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "16db66fb4c012010a809f424038910ba4d97da2a0afc21466bfbc6a4e9c24201",
+      "testsCount": 153,
+      "passCount": 153,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "harness-check-fixed",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:32:16.788850+08:00",
+      "endedAt": "2026-10-21T12:32:17.485667+08:00",
+      "durationSeconds": 0.644,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "harness-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:31:54.081833+08:00",
+      "endedAt": "2026-10-21T12:31:54.561662+08:00",
+      "durationSeconds": 0.418,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "159a4e2c1951ceaec7ffc93c1d980cac141f50d49feca0c47075fab2a1deb0dd",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "harness-final-unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:40:00.229933+08:00",
+      "endedAt": "2026-10-21T12:40:03.836170+08:00",
+      "durationSeconds": 3.546,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "fe15631430066d89f98afde579103f24e18d7af339f9ed909d2d36cc22e232eb",
+      "testsCount": 179,
+      "passCount": 179,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "harness-reviewed-suite",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:40:44.043608+08:00",
+      "endedAt": "2026-10-21T12:40:47.527623+08:00",
+      "durationSeconds": 3.434,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "b25b596a0a22f50bd49e8342f5fe6383c778359db73cceab862d16120ecef72f",
+      "testsCount": 180,
+      "passCount": 180,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "harness-suite",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:32:16.788849+08:00",
+      "endedAt": "2026-10-21T12:32:20.327297+08:00",
+      "durationSeconds": 3.486,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "f1231e99bf5ff5e03a9750bebfa33e92ab57fea5f91700d0d7dd0efbdaeac64a",
+      "testsCount": 173,
+      "passCount": 173,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "ledger-GREEN",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-ledger.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:27:30.001777+08:00",
+      "endedAt": "2026-10-21T12:27:30.537688+08:00",
+      "durationSeconds": 0.476,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "f4e0032e8561794a16a9f95caf51b8d0ac40cd7288169c469fc87c49af260149",
+      "testsCount": 12,
+      "passCount": 12,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "ledger-RED",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-ledger.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:25:57.493985+08:00",
+      "endedAt": "2026-10-21T12:25:57.864523+08:00",
+      "durationSeconds": 0.309,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "d0b70c6d30061bfa26c77944dc888db79dd501cc873736f62c17fe1daf2ce111",
+      "testsCount": 12,
+      "passCount": 0,
+      "failCount": 12,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "match-harness-GREEN",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-match.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:23:29.013565+08:00",
+      "endedAt": "2026-10-21T12:23:29.447108+08:00",
+      "durationSeconds": 0.373,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "355937ecfb01c9aad7b71e05e218bca483f2d509aa42aa61946061b857173342",
+      "testsCount": 8,
+      "passCount": 8,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "match-harness-RED",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-match.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:22:36.336930+08:00",
+      "endedAt": "2026-10-21T12:22:36.711376+08:00",
+      "durationSeconds": 0.315,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "7627da740cb4785106562445dbb1fcf3fe26b7e3bfcdbd89b24317a473773cf6",
+      "testsCount": 8,
+      "passCount": 0,
+      "failCount": 8,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "performance-retest-esm",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/performance/有界性能.ts",
+        "baseline",
+        "candidate"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:41:15.001806+08:00",
+      "endedAt": "2026-10-21T12:41:16.942327+08:00",
+      "durationSeconds": 1.895,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "6e1efbfdcb35148eaecc3347d2d5c5864a3c9965f8b8b40f7af5deee52c5efaf",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "performance-retest",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/performance/有界性能.ts",
+        "baseline",
+        "candidate"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:41:09.450436+08:00",
+      "endedAt": "2026-10-21T12:41:09.693985+08:00",
+      "durationSeconds": 0.194,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "62ebcb6b6bd60d579e9879bf28503f0f50835e9c36723aba0501ec5e3d274476",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "review-harness-GREEN",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-harness-cli.test.ts",
+        "tests/qa-ledger.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:39:23.038381+08:00",
+      "endedAt": "2026-10-21T12:39:23.783809+08:00",
+      "durationSeconds": 0.684,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "ccd492a95f9ee4ffd8283fc6784c582e3307e8447b11a717c1f945fa52907ab2",
+      "testsCount": 15,
+      "passCount": 15,
+      "failCount": 0,
+      "skippedCount": 0,
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    },
+    {
+      "label": "review-harness-RED",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/qa-harness-cli.test.ts",
+        "tests/qa-ledger.test.ts"
+      ],
+      "head": "60738920a66b0c49a44115cfb66cc16ac695a737",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T12:38:41.663822+08:00",
+      "endedAt": "2026-10-21T12:38:42.255320+08:00",
+      "durationSeconds": 0.53,
+      "exitCode": 1,
+      "productUnchanged": true,
+      "logSha256": "a7895d53ef285ebae54dfb4d59944a31d31243bdd859e5010861b45710a92c0a",
+      "testsCount": 15,
+      "passCount": 12,
+      "failCount": 3,
+      "skippedCount": 0,
+      "purpose": "預期RED反例，不能當現行Gate通過"
+    },
+    {
+      "label": "round-integrity",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235/verify-round-integrity.mjs"
+      ],
+      "head": "74c87dcb6b82be3b1167898e7df9a91b002707e1",
+      "productSourceHash": "d5200357d155228fc43cb994c6897e3b6b8499fee507f76d7abad2ba0650bdc9",
+      "startedAt": "2026-10-21T20:22:49.597080+08:00",
+      "endedAt": "2026-10-21T20:22:50.365305+08:00",
+      "durationSeconds": 0.614,
+      "exitCode": 0,
+      "productUnchanged": true,
+      "logSha256": "5156d21bafa8275ee4c6544ce8dbd7c2f21626e17664dfb7790b770b2b636564",
+      "purpose": "實際執行結果；歷史／診斷／最終Gate依VERIFICATION判讀"
+    }
+  ],
+  "scope": "公開僅指令／來源／exit／統計與hash；完整log、canonical、decision trace在專案外private",
+  "finalIndependentAudit": {
+    "rows": 100,
+    "naturalTerminal": 87,
+    "turnLimit": 13,
+    "start": 100,
+    "end": 100,
+    "diagnosticsPass": 13,
+    "batchCompactComparisons": 364,
+    "batchMismatches": 0,
+    "initialHashKnownSeeds": [
+      8
+    ],
+    "otherInitialByteHashes": "UNVERIFIED at first publication; current archival hashes provided"
+  }
+}

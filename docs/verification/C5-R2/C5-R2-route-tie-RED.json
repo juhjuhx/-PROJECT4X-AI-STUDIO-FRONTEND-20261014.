@@ -1,0 +1,20 @@
+{
+  "label": "C5-R2-route-tie-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-stalemate.test.ts"
+  ],
+  "startedAt": "2026-10-18T17:36:14.800597+00:00",
+  "snapshotSha256": "8f7e723dd65ed4914c88b80f6d00286cdb853607377b06653a3ae056f8945719",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T17:36:15.347244+00:00",
+  "durationSeconds": 0.546,
+  "log": "C5-R2-route-tie-RED.log"
+}

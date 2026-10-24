@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createGame,applyCommand,observe } from '../src/core/game';
+const modulePath='../src/ui/recruitment.ts';
+test('C3 招募狀態只由觀測判定：等待／必答／駐軍／合法候選不混成已徵召',async()=>{
+ const mod=await import(modulePath).catch(()=>null);
+ assert.equal(typeof mod?.recruitmentStatus,'function');
+ let s=createGame('霧境初航-01');
+ assert.equal(mod!.recruitmentStatus(observe(s,0),'首都-0'),'occupied');
+ s=applyCommand(s,{actor:0,requestId:'recruit-view-0',expectedVersion:s.version,action:{type:'Move',unitId:'兵-0',to:{x:3,y:2}}}).state;
+ assert.equal(mod!.recruitmentStatus(observe(s,0),'首都-0'),'available');
+ const end=applyCommand(s,{actor:0,requestId:'recruit-view-1',expectedVersion:s.version,action:{type:'EndTurn'}});assert.ok(end.ok);
+ assert.equal(mod!.recruitmentStatus(observe(end.state,0),'首都-0'),'waiting');
+ const relic=applyCommand(s,{actor:0,requestId:'recruit-view-relic',expectedVersion:s.version,action:{type:'Move',unitId:'兵-1',to:{x:5,y:3}}});assert.ok(relic.ok);assert.ok(relic.state.pendingRelic);
+ assert.equal(mod!.recruitmentStatus(observe(relic.state,0),'首都-0'),'pending-relic');
+ const v=observe(s,0);v.faction.gold=0;v.legalActions=[];
+ assert.equal(mod!.recruitmentStatus(v,'首都-0'),'insufficient-gold');
+ v.faction.gold=8;
+ assert.equal(mod!.recruitmentStatus(v,'首都-0'),'unavailable');
+ assert.equal(mod!.recruitmentStatus(v,'不存在'),'unavailable');
+});

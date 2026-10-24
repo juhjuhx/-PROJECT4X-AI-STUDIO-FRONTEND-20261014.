@@ -6,8 +6,9 @@ import { openSync, closeSync, readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { createServer } from 'node:net';
 import { artifactHashes } from './artifact-proof.mjs';
+import { validateBrowserEvidence } from './qa-browser-contract.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const evidenceDir = resolve(process.env.PROJECT4X_EVIDENCE_DIR || resolve(root, `證據/完整驗證-${Date.now()}`));
+const evidenceDir = resolve(process.env.PROJECT4X_EVIDENCE_DIR || resolve(root, `../evidence/完整驗證-${Date.now()}`));
 await mkdir(evidenceDir, { recursive: true });
 const checks = [];
 const labels = ['型別', '規則與反例', '建置', '完整對局', '依賴審計', '瀏覽器與觸控'];
@@ -49,9 +50,13 @@ try {
   await run('建置', 'npm', ['run', 'build']);
   buildStart = artifactHashes(resolve(root, 'dist'));
   const headlessFile = resolve(evidenceDir, 'headless.json');
-  await run('完整對局', process.execPath, ['--import', 'tsx', 'scripts/headless.ts'], { PROJECT4X_QA_OUTPUT: headlessFile, PROJECT4X_QA_START_SEED: '1', PROJECT4X_QA_GAMES: '100', PROJECT4X_QA_WORKERS: '4' });
+  const reuse = process.env.PROJECT4X_FULL100_LEDGER;
+  const shadow = process.env.PROJECT4X_FULL100_SHADOW;
+  await run('完整對局', process.execPath, ['--import', 'tsx', 'scripts/headless.ts'], { PROJECT4X_QA_OUTPUT: headlessFile, PROJECT4X_QA_START_SEED: '1', PROJECT4X_QA_GAMES: '100', PROJECT4X_QA_WORKERS: '4',
+    ...(reuse ? {PROJECT4X_QA_LEDGER:resolve(reuse)} : {}), ...(shadow ? {PROJECT4X_QA_SHADOW_PATH:resolve(shadow)} : {}) });
   const matches = JSON.parse(await readFile(headlessFile, 'utf8'));
   if (matches.status !== 'PASS' || matches.requestedGames !== 100 || matches.completedGames !== 100 || matches.finishedGames !== 100 || matches.failedGames !== 0 || !matches.sourceUnchanged || !matches.methodUnchanged || matches.seedRange?.first !== 1 || matches.seedRange?.last !== 100) throw new Error('固定001–100證據不成立；診斷子集不能當發行驗證。');
+  await run('完整對局逐列驗證', process.execPath, ['--import','tsx','scripts/validate-headless.ts',headlessFile]);
   await run('依賴審計', 'npm', ['audit', '--json']);
   const port = await reservePort();
   const base = `http://127.0.0.1:${port}`;
@@ -74,7 +79,7 @@ try {
   if (!ready) throw new Error('本機遊戲服务無法啟動，未執行GUI驗證。');
   await run('瀏覽器與觸控', process.execPath, ['scripts/browser-check.mjs'], { PROJECT4X_URL: base, PROJECT4X_EVIDENCE_DIR: evidenceDir });
   const browser = JSON.parse(await readFile(resolve(evidenceDir, 'browser.json'), 'utf8'));
-  if (browser.status !== 'PASS' || browser.scenarios.length !== 7 || browser.servedIndexSha256 !== servedIndexSha256 || JSON.stringify(browser.artifactHashes) !== JSON.stringify(buildStart)) throw new Error('browser證據與本輪完整建置不一致');
+  validateBrowserEvidence(browser,{artifacts:buildStart,servedIndexSha256});
 } catch (error) {
   failure = error.message;
   console.error(failure); process.exitCode = 1;

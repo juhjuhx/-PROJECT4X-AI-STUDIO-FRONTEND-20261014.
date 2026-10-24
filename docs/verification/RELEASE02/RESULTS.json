@@ -1,0 +1,523 @@
+{
+  "status": "TESTED_PASS",
+  "scope": "Demo02 engineering，不代表Full100/真人/真機/Alpha",
+  "baselineCommit": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+  "productSha256": "8ad7d798b910e774c929a277787f2f7c7e4c20d9f4583c4e586200e1d37dedb5",
+  "productManifest": {
+    "index.html": "cdcd64c14eadd906f36547327ab5fd050e712ac3adf6de5d3e7cbf9f8342e06f",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+    "package.json": "0cbb80849a2041951c573de6f4c40b4b3884ab49f1192ded983957852aa28655",
+    "public/favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+    "public/icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+    "public/icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+    "public/icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+    "public/manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+    "scripts/build-pwa.mjs": "d2003ded0852a97d4ecafd022ba5bfed48aed27d4f755d51adae59ea7ef0e784",
+    "scripts/serve.mjs": "07c0ef6d3db61baed7803a4e641100e71074fdf9f314d5a1aa650570d9890d1d",
+    "src/core/ai.ts": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/persistence.ts": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/demo/content.ts": "399a6610d0349292e9eef3b5e2b1dcc1d72671b0784c6e740cb5d5682e850ba9",
+    "src/demo/local-progress.ts": "7d9295a1d2d6e7e249427de02476f3bb62df3023662c0d5b449af7822a793b1a",
+    "src/demo/progress.ts": "aba17f79a1ccac005ba1f4dae2ebc877d5fc41d41d030d0b4300115097f59367",
+    "src/demo/shell.ts": "9f4d99dbcaa27b9e0a814ec6977d3b5be7c1154ec0f9f47e0574ec3fac373888",
+    "src/main.ts": "5efbe16d57d2e1d7f72bdcbe44c167003b82265890e8cc160e00e3ea0ecdb45f",
+    "src/presentation/events.ts": "3be960186042af847caa1caed9d62df3bf69964fa3491ac6177c2b54563dc53b",
+    "src/session/ai-driver.ts": "b19f1a17372e93640ac7ca7f08a3b65e04f5e2eaf122c4ae2bc1af0858b8740d",
+    "src/session/contracts.ts": "c8751a8a43ca2cc8d2a2cbd1f0a8bfd18ac2eac9794d4e093c53e0bed094ae8b",
+    "src/session/errors.ts": "ef689209695a54169fbd6f6c87458b146ba46ef76900c3e6a5bf6cd2a14fdbf5",
+    "src/session/game-session.ts": "a28986cf385b2e7b35a81b9be17e8bfeb83091ed79e6e581666a153c4d6a13d4",
+    "src/session/immutable.ts": "82f684610efe4422b2b6e33e13eb443c0b17fa08baebe25ef05da44bca559269",
+    "src/session/persistence.ts": "905f933b124baf1b2e83fac621b6ab3ed2be2246c9e02f44e172e4d239192eaf",
+    "src/styles.css": "bfe2664b4f44253124060d4d88a78536b3241fd5d6f49d7e3079a587733a6abf",
+    "src/ui/assets.d.ts": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+    "src/ui/map.ts": "11312217cb0ff52adc559e5c16a130489ebfbc1d7e66c8279700029643b9857f",
+    "src/ui/recruitment.ts": "b7d68346c63abcebb3e717706cd1dd3ea0e44dd99a9b589583db99f0299a31cb",
+    "tsconfig.json": "25a9a8b3805cb40bead5e4956a3075224e7c418fc5a98dedba326f8d1996d645",
+    "vite.config.ts": "c6c788976ebe37ef8daaebd8cf130c7faea96a80dd1ae1a3641e0a86a61a213b"
+  },
+  "aiSha256": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "runId": "release-final-local-20261024-072458-401b8845",
+  "testDelta": {
+    "original": 203,
+    "publicationSafety": 4,
+    "releaseProof": 4,
+    "workerHttpAndContract": 5,
+    "total": 223,
+    "publicationCli": 2,
+    "failurePrivacy": 3,
+    "pwaUpdateLifecycle": 2
+  },
+  "failedAttemptsPreserved": [
+    {
+      "id": "release-negative-browser-cleanup-20261024-071207-1f1513bd",
+      "purpose": "受控不存在Chromium反例，確認失敗退出及server清理"
+    },
+    {
+      "id": "release-integrated-positive-20261024-071334-d53cee4e",
+      "reason": "worker不在page response，舊收據合約拒絕；保留FAIL，不忽略資產"
+    },
+    {
+      "id": "worker-proof-red-20261024-071841-ab5d50fe",
+      "reason": "localhost sandbox EPERM，不當作行為RED"
+    },
+    {
+      "id": "worker-proof-red-localhost-20261024-071855-fbbf3a89",
+      "reason": "真HTTP服務下5個預期斷言RED"
+    },
+    {
+      "id": "worker-proof-green-20261024-071913-543fda87",
+      "reason": "修正後23 focused tests PASS"
+    }
+  ],
+  "priorIntegratedRun": {
+    "status": "PASS",
+    "gate": "Demo02 engineering; not full100 or Playable Alpha",
+    "checks": [
+      {
+        "label": "publication",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "scripts/check-publication.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 122,
+        "logSha256": "703c233959d6b4d9ac6cc5ec3a61a79ea23401b6d5091acd317557e06103d9d2"
+      },
+      {
+        "label": "check",
+        "command": [
+          "npm",
+          "run",
+          "check"
+        ],
+        "exitCode": 0,
+        "milliseconds": 422,
+        "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627"
+      },
+      {
+        "label": "tests",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 0,
+        "milliseconds": 3615,
+        "logSha256": "9f5acc3be15b4142b484d22d7eafc8b75d56ec082be76061a9029c56acba6182",
+        "testCounts": {
+          "tests": 216,
+          "pass": 216,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      {
+        "label": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0,
+        "milliseconds": 598,
+        "logSha256": "b2a6a88b37681a4a355c5941311b1302fec31cfda6b2f5b77f25b115b7b453c8"
+      },
+      {
+        "label": "browser",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "scripts/browser-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 6851,
+        "logSha256": "1e6f0acc3abe040741aa3aa9d6ac714b6ec5cbe8b06baa95331c2b184bd97194"
+      },
+      {
+        "label": "gameplay",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "--import",
+          "tsx",
+          "scripts/browser-check.mjs",
+          "--gameplay"
+        ],
+        "exitCode": 0,
+        "milliseconds": 66004,
+        "logSha256": "949fb9b70a5e04e8a69b673e4f90a5f2d9507c71c61204e8cfd1931fddf9f17f"
+      },
+      {
+        "label": "demo",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "--import",
+          "tsx",
+          "scripts/demo-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 4692,
+        "logSha256": "604363a274e163d825d32cd1d8523b47d96c8acca8e3735b30e8a20b16b42339"
+      },
+      {
+        "label": "pwa",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "--import",
+          "tsx",
+          "scripts/pwa-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 1623,
+        "logSha256": "2d899bb7eb2254d9cfd5303b7e7216ad9bdc4826f95f5f657e098325e88adca8"
+      },
+      {
+        "label": "pwa-update",
+        "command": [
+          "/opt/homebrew/Cellar/node/26.10.0_1/bin/node",
+          "scripts/pwa-update-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 3956,
+        "logSha256": "784841dd72e7111b20d7fb00661f60bb5033c7096a586ecce77891982254cada"
+      }
+    ],
+    "proofs": [
+      {
+        "kind": "browser",
+        "status": "PASS",
+        "scenarioCount": 11,
+        "receiptSha256": "5928c1de2ebab84c618c151ba53099f75a601e86d8ed92a0b050e66135fc6cbd"
+      },
+      {
+        "kind": "gameplay",
+        "status": "PASS",
+        "scenarioCount": 12,
+        "receiptSha256": "a85bff726fd0630f0fddec09e60dabcc229ea5eff20eca6c9e082a8b04571430"
+      },
+      {
+        "kind": "demo",
+        "status": "PASS",
+        "scenarioCount": 4,
+        "scenarios": [
+          {
+            "id": "desktop-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "desktop-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+          "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+        },
+        "receiptSha256": "2a12d771e682b4e08ceb041f4a489c8ebf7f52d5af106a6cc7c180f405f92663"
+      },
+      {
+        "kind": "pwa",
+        "status": "PASS",
+        "scenarioCount": 2,
+        "scenarios": [
+          {
+            "id": "manifest-installability-static-only-cache",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "offline-reload-real-world-local-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+          "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+        },
+        "receiptSha256": "6aff677dfe71e5ba44984af65ca60feb1c45318838cdb4d857a9a61164684530"
+      },
+      {
+        "kind": "pwa-update",
+        "status": "PASS",
+        "waitingWithOldClient": "TESTED_PASS",
+        "activationAfterOldClientsClosed": "TESTED_PASS",
+        "receiptSha256": "dd5a33d5bcef748f20e2edd6d97a2ab5c3ae237ca6379b7a1a847e1c9412761e"
+      }
+    ],
+    "cleanup": [
+      {
+        "stage": "owned-server",
+        "status": "PASS"
+      }
+    ],
+    "sourceUnchanged": true,
+    "sourceFingerprint": "2ca3f248877ce16c69a5b79e271218d9cc32560f29ab58aa74b3e24fc42129c4",
+    "artifacts": {
+      "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+      "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+      "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+      "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+      "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+      "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+      "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+      "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+      "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+      "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+      "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+    },
+    "primaryFailure": null,
+    "human": "UNVERIFIED",
+    "physicalPhone": "UNVERIFIED"
+  },
+  "evidence": {
+    "status": "PASS",
+    "gate": "Demo02 engineering; not full100 or Playable Alpha",
+    "checks": [
+      {
+        "label": "publication",
+        "command": [
+          "node",
+          "scripts/check-publication.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 124,
+        "logSha256": "0cf41eb53ac48c3c15901a19454f6513d2485a8f5cb93c59c5bb2411867dbf42"
+      },
+      {
+        "label": "check",
+        "command": [
+          "npm",
+          "run",
+          "check"
+        ],
+        "exitCode": 0,
+        "milliseconds": 448,
+        "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627"
+      },
+      {
+        "label": "tests",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 0,
+        "milliseconds": 3640,
+        "logSha256": "b4f8e393f0cc1039e397fa4c2c3a131e339a5f4af7bd6a2ca4cb8652c1b66ead",
+        "testCounts": {
+          "tests": 223,
+          "pass": 223,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      {
+        "label": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0,
+        "milliseconds": 605,
+        "logSha256": "b2a6a88b37681a4a355c5941311b1302fec31cfda6b2f5b77f25b115b7b453c8"
+      },
+      {
+        "label": "browser",
+        "command": [
+          "node",
+          "scripts/browser-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 6468,
+        "logSha256": "c12229a9d16484c31d4c0123bc6582e0a6d9120d76026fc33d53668a486bc09b"
+      },
+      {
+        "label": "gameplay",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/browser-check.mjs",
+          "--gameplay"
+        ],
+        "exitCode": 0,
+        "milliseconds": 66005,
+        "logSha256": "204eac3ed992acaf0cc4031ce70bd505c65aa177259a5e00db7c313517917227"
+      },
+      {
+        "label": "demo",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/demo-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 5161,
+        "logSha256": "604363a274e163d825d32cd1d8523b47d96c8acca8e3735b30e8a20b16b42339"
+      },
+      {
+        "label": "pwa",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/pwa-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 1657,
+        "logSha256": "2d899bb7eb2254d9cfd5303b7e7216ad9bdc4826f95f5f657e098325e88adca8"
+      },
+      {
+        "label": "pwa-update",
+        "command": [
+          "node",
+          "scripts/pwa-update-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 3975,
+        "logSha256": "81db4d8f0765f0f3612aeb3cc5696899fcc6d64347247ce5b6ef8e1f9d7ad893"
+      }
+    ],
+    "proofs": [
+      {
+        "kind": "browser",
+        "status": "PASS",
+        "scenarioCount": 11,
+        "receiptSha256": "c4f33825ec7d3cd1d887fe99c51f584e2aff81dd8f0a0580cc0c13231356c953"
+      },
+      {
+        "kind": "gameplay",
+        "status": "PASS",
+        "scenarioCount": 12,
+        "receiptSha256": "6c39bf15ef99b80ad44caf44e667d915dde5fbdc2bc9f8ece44dac36833a9dc7"
+      },
+      {
+        "kind": "demo",
+        "status": "PASS",
+        "scenarioCount": 4,
+        "scenarios": [
+          {
+            "id": "desktop-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "desktop-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+          "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+        },
+        "receiptSha256": "4d08ae2322a40e5091ab7e53b0e072efecc06fada51064387f2d97b082f378d7"
+      },
+      {
+        "kind": "pwa",
+        "status": "PASS",
+        "scenarioCount": 2,
+        "scenarios": [
+          {
+            "id": "manifest-installability-static-only-cache",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "offline-reload-real-world-local-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+          "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+        },
+        "receiptSha256": "7be53404fedb50de7d354d85a266f9c42a38a69508ec754d02b33a4883d9daa0"
+      },
+      {
+        "kind": "pwa-update",
+        "status": "PASS",
+        "waitingWithOldClient": "TESTED_PASS",
+        "activationAfterOldClientsClosed": "TESTED_PASS",
+        "receiptSha256": "d90d307f7a216581f85440b64abb699e3e9c4faa2c4ff96a62e3dfed450a9dc3"
+      }
+    ],
+    "sourceUnchanged": true,
+    "sourceFingerprint": "9828dd5dcf032a174cc987e26450496493c1218570cbf9f11914c2c554535870",
+    "artifacts": {
+      "assets/index-C6BW8wyj.css": "2a4f9f03d2886d7d7bbd045005e2b07e0a451976e386353fd8427f9e663b05c3",
+      "assets/index-C8ZD7Rbe.js": "65f80b37d1da8895223d760e16332039070465cea332e40e2824d97c4128890b",
+      "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+      "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+      "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+      "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+      "index.html": "e0c7787a4b8e5710f688b39d35ea12312dd4f39ad84bed8f028307e3d1a8da96",
+      "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+      "pwa-assets.json": "e668d217e9f491ad0df8ac2f701e16fd460790930000bd62a2fd4323e506ddff",
+      "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+      "service-worker.js": "99715f72e26a840ef244b74d0491d99c06284a43c3f0eacb6a201c9222815d7c"
+    },
+    "human": "UNVERIFIED",
+    "physicalPhone": "UNVERIFIED",
+    "cleanup": [
+      {
+        "stage": "owned-server",
+        "status": "PASS"
+      }
+    ],
+    "primaryFailure": null
+  },
+  "reviewFindingsFixed": [
+    "歷史log/jsonl實際CLI掃描與canonical JSONL拒絕",
+    "初始化/原始/cleanup錯誤及home安裝Node路徑不進公開stdout",
+    "PWA update每項資源獨立清理，兩頁runtime/console均監聽"
+  ]
+}

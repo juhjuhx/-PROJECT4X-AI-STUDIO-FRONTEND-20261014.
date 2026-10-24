@@ -1,0 +1,97 @@
+{
+  "url": "http://127.0.0.1:4173",
+  "generatedAt": "2026-10-15T23:54:47.183Z",
+  "browser": "155.0.8059.12",
+  "artifactHashes": {
+    "assets/index-3ykaqwQ1.js": "37aca8e76e7c8d4be008788913a72b368539e1a24c5446822f013a0be83b76a6",
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+    "index.html": "977fe7e0296278c4ae3c6f66153991db21d30998588d3534bc3f7c1457cca348"
+  },
+  "servedAssets": {
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+    "assets/index-3ykaqwQ1.js": "37aca8e76e7c8d4be008788913a72b368539e1a24c5446822f013a0be83b76a6"
+  },
+  "device": {
+    "platform": "linux",
+    "release": "4.19.0-gvisor",
+    "arch": "x64",
+    "cpu": "unknown"
+  },
+  "scenarios": [
+    {
+      "id": "desktop-load",
+      "milliseconds": 948,
+      "status": "PASS"
+    },
+    {
+      "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+      "status": "PASS"
+    },
+    {
+      "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+      "status": "PASS",
+      "saveBytes": 23864
+    },
+    {
+      "id": "keyboard-selection-navigation",
+      "status": "PASS"
+    },
+    {
+      "id": "手機直式",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 754,
+          "bottom": 800,
+          "viewport": 812
+        }
+      }
+    },
+    {
+      "id": "手機橫式",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 313,
+          "bottom": 361,
+          "viewport": 375
+        }
+      }
+    },
+    {
+      "id": "窄手機",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 582,
+          "bottom": 628,
+          "viewport": 640
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "servedIndexSha256": "977fe7e0296278c4ae3c6f66153991db21d30998588d3534bc3f7c1457cca348"
+}

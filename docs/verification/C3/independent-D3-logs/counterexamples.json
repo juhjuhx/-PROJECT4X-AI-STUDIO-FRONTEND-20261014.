@@ -1,0 +1,155 @@
+{
+  "scope": "D3 original source snippets, no browser and no source edits",
+  "node": "v26.10.0",
+  "cases": [
+    {
+      "id": "GLOBAL_ERROR_FIRST_PARTY",
+      "message": "TypeError: querySelectorAll failed in first-party HUD",
+      "filename": "http://127.0.0.1:5173/src/main.ts",
+      "defaultPrevented": true,
+      "laterListenerCalls": 0,
+      "expected": "first-party error should remain observable",
+      "counterexample": true
+    },
+    {
+      "id": "GLOBAL_REJECTION_ANONYMOUS",
+      "reason": {
+        "message": "Game UI failed",
+        "stack": "TypeError: Game UI failed\n at <anonymous> (http://127.0.0.1:5173/src/main.ts:1:1)"
+      },
+      "defaultPrevented": true,
+      "laterListenerCalls": 0,
+      "counterexample": true
+    },
+    {
+      "id": "SELECTOR_NATIVE_CONTRACT_CHANGED",
+      "before": [
+        {
+          "selector": "",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": "#",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": ".",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": ":",
+          "threw": "SyntaxError"
+        }
+      ],
+      "after": [
+        {
+          "selector": "",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": "#",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": ".",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": ":",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        }
+      ],
+      "validSelectorPreserved": true,
+      "counterexample": true
+    },
+    {
+      "id": "UNKNOWN_OWNER_ENEMY_PRESENTATION",
+      "ownershipCases": [
+        {
+          "kind": "own",
+          "labels": [
+            "城邦據點"
+          ],
+          "roofFill": "#4a6d59",
+          "flagFill": "#f3ce6d"
+        },
+        {
+          "kind": "known-enemy",
+          "labels": [
+            "敵方據點"
+          ],
+          "roofFill": "#8f4a3e",
+          "flagFill": "#d96c55"
+        },
+        {
+          "kind": "neutral",
+          "labels": [
+            "荒野村落"
+          ],
+          "roofFill": "#9c7b5d",
+          "flagFill": "#e6e3c8"
+        },
+        {
+          "kind": "unknown",
+          "labels": [
+            "敵方據點"
+          ],
+          "roofFill": "#8f4a3e",
+          "flagFill": "#e6e3c8"
+        }
+      ],
+      "counterexample": true,
+      "expected": "own / known-enemy / neutral / unknown must branch independently"
+    },
+    {
+      "id": "POLITICAL_CENTER_HARDCODED_NAME",
+      "observedName": "聚落1",
+      "relocated": {
+        "labels": [
+          "曙光城 · 首都"
+        ],
+        "roofFill": "#3a5f4c",
+        "flagFill": "#4b755e"
+      },
+      "capturedEnemyCapital": {
+        "labels": [
+          "曙光城 · 首都"
+        ],
+        "roofFill": "#3a5f4c",
+        "flagFill": "#4b755e"
+      },
+      "counterexample": true,
+      "expected": "use observed site.name, political center suffix only when centerOf is known"
+    },
+    {
+      "id": "RECRUIT_REASON_FALSE_DURING_OPPONENT_TURN",
+      "executedD3Source": "const occupyingUnit = view.units.find((u) => u.x === tile.x && u.y === tile.y);\n        const canRecruitAny = view.legalActions.some((a) => a.type === 'Recruit' && a.siteId === site.id);\n        const siteRecruited = !occupyingUnit && !canRecruitAny && view.faction.gold >= 4;",
+      "usedRealCommands": [
+        {
+          "type": "Move",
+          "unitId": "兵-0",
+          "to": {
+            "x": 3,
+            "y": 2
+          }
+        },
+        {
+          "type": "EndTurn"
+        }
+      ],
+      "active": 1,
+      "gold": 8,
+      "ownSiteRecruitedCanonical": false,
+      "occupyingUnit": false,
+      "canRecruitAny": false,
+      "D3SiteRecruitedInference": true,
+      "D3Label": "本回合已徵召",
+      "counterexample": true,
+      "expected": "action absence does not prove recruitment already happened"
+    }
+  ]
+}

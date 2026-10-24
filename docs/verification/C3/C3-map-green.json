@@ -1,0 +1,20 @@
+{
+  "label": "C3-map-green",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ui-map.test.ts"
+  ],
+  "startedAt": "2026-10-17T23:49:40.348544+00:00",
+  "snapshotSha256": "d1d32bab3eb60cc0be851a0c24f94df9583066c2a96b2a4166ff74071b562c09",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "e5bc16fedde9245e29284a4ec954299212089139",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-17T23:49:40.663986+00:00",
+  "durationSeconds": 0.315,
+  "log": "C3-map-green.log"
+}

@@ -1,0 +1,107 @@
+{
+  "phase": "C5-R5 preflight",
+  "matrix": [
+    {
+      "SKILL": "using-superpowers",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/using-superpowers/SKILL.md",
+      "skillSha256": "fa0fa16abfaf17198e5b60145a656b55b907f9160b5d378d4d207ab2287a72e7"
+    },
+    {
+      "SKILL": "systematic-debugging",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/systematic-debugging/SKILL.md",
+      "skillSha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+    },
+    {
+      "SKILL": "test-driven-development",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": false,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "TDD僅載入供必要QA修正，環境阻塞尚未開始RED/GREEN",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/test-driven-development/SKILL.md",
+      "skillSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+    },
+    {
+      "SKILL": "verification-before-completion",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/verification-before-completion/SKILL.md",
+      "skillSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    },
+    {
+      "SKILL": "writing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/writing-plans/SKILL.md",
+      "skillSha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+    },
+    {
+      "SKILL": "executing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/executing-plans/SKILL.md",
+      "skillSha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71"
+    },
+    {
+      "SKILL": "requesting-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/requesting-code-review/SKILL.md",
+      "skillSha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a"
+    },
+    {
+      "SKILL": "receiving-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1 source/env/plan/review",
+      "PURPOSE": "依本輪既有source與環境證據路由；以C5-R5-VERIFICATION ledger為準",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/receiving-code-review/SKILL.md",
+      "skillSha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+    },
+    {
+      "SKILL": "codex-engineering-guardrails:code-work",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": false,
+      "PHASE": "R0/R1",
+      "PURPOSE": "實作受阻尚未改QA code；唯讀驗證與scope保全",
+      "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-work/SKILL.md",
+      "skillSha256": "a3727efa825ff26a2ce67ff60379ad0e3a4bfcfc498c3632514fd662e7a0f3a6"
+    },
+    {
+      "SKILL": "codex-engineering-guardrails:code-verification",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "APPLIED": true,
+      "PHASE": "R0/R1",
+      "PURPOSE": "來源hash、環境、獨立審查的證據界線",
+      "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-verification/SKILL.md",
+      "skillSha256": "4aab85003f547ac6e1ee12e3ceb3f89d5744af56f3b22a3643e545007474fc87"
+    }
+  ],
+  "method": "user supplied using-superpowers body plus actual file loads; no phantom plugin/LLM run",
+  "notes": "user授權原位既有worktree/native執行與指定文件結構，沿用VERIFICATION作plan；不額外啟動視覺／不相關skills"
+}

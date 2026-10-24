@@ -1,0 +1,59 @@
+{"label": "C5-R4-vantage-focused", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-frontier.test.ts", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-19T13:09:34.208010+00:00", "snapshotSha256": "1e92eebda3d90a3057f38ed28722f2cd1e25801b52566c4adfefaa898750777a", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279", "timeoutSeconds": 240}
+✔ C5-R4：中央未知格沒有可進入鄰格時，仍走向合法已知視野vantage (23.838875ms)
+✔ C5-R4：少量真命令可揭露山圈中的未知區域，而非只有方向斷言 (107.572208ms)
+✖ C5-R4：已知七格廊道仍有不可見情報時，不停在原四角目標 (10.925208ms)
+✔ C5-R4：目前可達地形全可見時，不為不可達偵巡目標反覆移動 (2.776708ms)
+✔ C5-R4 Fog：不同隱藏地形與敵兵位置，完全相同Observation產生相同行動 (8.025292ms)
+✔ C5-R4：山脈隔絕所有資訊vantage時，只能選合法動作並合理等待 (2.724958ms)
+✔ C5-R4：友軍暫時截斷已知探索路線時，仍合法接近而不穿兵 (2.547291ms)
+✔ C5-R4：新探索不無條件壓過合法攻擊與佔領 (5.086167ms)
+✔ C5-R4：deepfreeze／clone／重複／穿插決策／回傳修改均不影響確定性 (34.334041ms)
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (18.796375ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (3.123208ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (19.087208ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (2.76775ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (11.444958ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (3.860292ms)
+✔ C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點 (17.308792ms)
+✔ C5-R3：友軍阻斷完整路線時，增援仍走到合法接近格而不提前EndTurn (9.705417ms)
+✔ C5-R3：地形真正隔絕時不把不可通過地形當作暫時友軍佔位 (3.184458ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 17
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 836.380917
+
+✖ failing tests:
+
+test at tests/ai-frontier.test.ts:1:2954
+✖ C5-R4：已知七格廊道仍有不可見情報時，不停在原四角目標 (10.925208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   type: 'EndTurn'
+  -   to: {
+  -     x: 3,
+  -     y: 2
+  -   },
+  -   type: 'Move',
+  -   unitId: 'patrol-0'
+    }
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-frontier.test.ts:74:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { type: 'EndTurn' },
+    expected: { type: 'Move', unitId: 'patrol-0', to: { x: 3, y: 2 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

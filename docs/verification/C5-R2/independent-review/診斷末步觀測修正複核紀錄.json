@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "node",
+    "--import",
+    "tsx",
+    "--input-type=module",
+    "-"
+  ],
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "stdin腳本": "診斷末步觀測修正複核.stdin.mjs",
+  "開始UTC": "2026-10-18T17:54:25.805926+00:00",
+  "exit": 0,
+  "log": "診斷末步觀測修正複核原始log.txt",
+  "target_SHA256": {
+    "scripts/ai-endgame-search-check.ts": "913a727ee95e2d2d0d968228907064dfcdccf997263af4e782739ad52d0dc60e",
+    "scripts/ai-decision-trace.mjs": "bfd04bf8a065a233cb90958bf8f2d45838af1381143367f240c79b362836c38d",
+    "src/core/ai.ts": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595"
+  },
+  "root提供且reviewer未重跑": "修正後原1000command仍seen=false/winner=null/exit1"
+}

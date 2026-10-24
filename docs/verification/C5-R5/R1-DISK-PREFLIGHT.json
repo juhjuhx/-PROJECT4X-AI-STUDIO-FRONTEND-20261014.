@@ -1,0 +1,137 @@
+{
+  "schema": "project4x-r5-disk-preflight-1",
+  "UTC": "2026-10-20T13:23:21.041958+00:00",
+  "status": "BLOCKED",
+  "diskTotalBytes": 245107195904,
+  "diskFreeBytes": 276054016,
+  "inodeAvailable": 2695840,
+  "sameDevice": {
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project": 16777230,
+    "/private/tmp": 16777230,
+    "LOCAL_TEMP": 16777230
+  },
+  "df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s5   228Gi   204Gi   263Mi   100%    2.0M  2.7M   43%   /System/Volumes/Data\n/dev/disk3s5   228Gi   204Gi   263Mi   100%    2.0M  2.7M   43%   /System/Volumes/Data\n",
+  "dfInodes": "Filesystem   512-blocks      Used Available Capacity iused   ifree %iused  Mounted on\n/dev/disk3s5  478724992 428018600    539168   100% 2046199 2695840   43%   /System/Volumes/Data\n/dev/disk3s5  478724992 428018600    539168   100% 2046199 2695840   43%   /System/Volumes/Data\n",
+  "temporaryEntries": [
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 24,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 2360,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 2640,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 24,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 4,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "/privateLOCAL_TEMP/qa-artifact",
+      "ownerUid": 501,
+      "sizeKiB": 24,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/playwright-artifacts-U8nbwE",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/playwright-artifacts-Tk5d4j",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/playwright_chromiumdev_profile-s6Yiba",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/project4x-review-ken3s_cw",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/project4x-ccts-audit-p6o9kyxt",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/project4x-doc-audit-8brd3pfi",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    },
+    {
+      "path": "LOCAL_TEMP/playwright_chromiumdev_profile-0Im15P",
+      "ownerUid": 501,
+      "sizeKiB": 0,
+      "duExitCode": 0,
+      "stderr": "",
+      "deleted": false
+    }
+  ],
+  "lsofExitCode": 0,
+  "openDeletedQARecords": [],
+  "otherApplicationRecords": "not acted on; raw paths not archived",
+  "availableVolumes": [
+    "Macintosh HD"
+  ],
+  "resourceBudget": {
+    "minimumFreeBytesProposed": 2147483648,
+    "additionalBytesNeededAtMeasurement": 1871429632,
+    "status": "PROPOSED conservative execution budget, not measured minimum or gameplay rule",
+    "reason": "past ENOSPC at few hundred MiB; no safe substantial QA-only reclaimable data found; need pilot for actual browser/memory peak"
+  },
+  "proposedExternalLocation": "/Volumes/<user-provided separate volume>/PROJECT4X-QA/C5-R5/{tmp,private,evidence}; not mounted/created",
+  "sameDiskMovesDoNotRecoverSpace": true,
+  "reclaimedUserDataBytes": 0,
+  "productChanged": false
+}

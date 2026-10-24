@@ -1,0 +1,10 @@
+{
+  "baseline": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "frozen_at": "2026-10-19T03:48:22.834988+00:00",
+  "files": {
+    "src/core/ai.ts": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "tests/ai-stalemate.test.ts": "e014f1c07f8c101d66aa03cf6c40cd8d041343dc54f85ae42dc05a205e47a7fe"
+  }
+}

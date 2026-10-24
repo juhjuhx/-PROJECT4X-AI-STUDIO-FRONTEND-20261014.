@@ -1,0 +1,12 @@
+{
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "aiSHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+  "allFrozenProductAndTestBytesStillEqual": true,
+  "trackedDiffNames": [
+    "src/core/ai.ts"
+  ],
+  "protectedTrackedDiffNames": [],
+  "status": " M src/core/ai.ts\n?? docs/verification/C5-R4/\n?? tests/ai-frontier.test.ts\n",
+  "evidenceBytes": 158387,
+  "freeBytes": 225554432
+}

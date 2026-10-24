@@ -1,0 +1,5 @@
+{"label": "C5-R2-route-check", "cwd": ".", "command": ["npm", "run", "check"], "startedAt": "2026-10-18T17:36:43.867158+00:00", "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 check
+> tsc --noEmit
+

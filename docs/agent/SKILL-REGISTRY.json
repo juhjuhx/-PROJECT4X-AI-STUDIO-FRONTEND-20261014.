@@ -1,0 +1,173 @@
+{
+  "schema": "project4x-skill-registry-1",
+  "origin": "https://github.com/addyosmani/agent-skills",
+  "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+  "packageVersion": "0.6.13",
+  "license": "MIT",
+  "licenseFile": "tools/agent-skills/0.6.13-aeac41d4/LICENSE",
+  "installMode": "project-local documentation only; no hook/plugin/global installation",
+  "files": {
+    "tools/agent-skills/0.6.13-aeac41d4/LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/code-review-and-quality/SKILL.md": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/constraint-driven-development/SKILL.md": "06479d4305f286d23cfb99f5dc85695896785269664e1f6a8d800e3b71e70c10",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/constraint-driven-development/references/floor-guard.md": "59715dc6c3c6c36ec9177f9ced65c379e80a4539b36115456666bfabc43a6a9c",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/incremental-implementation/SKILL.md": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/planning-and-task-breakdown/SKILL.md": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/spec-driven-development/SKILL.md": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+    "tools/agent-skills/0.6.13-aeac41d4/skills/test-driven-development/SKILL.md": "a3aa6ba95638497025577469eda10ed17918698209615aeafbc26f131bf2469d"
+  },
+  "methods": [
+    {
+      "actualName": "code-review-and-quality",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/code-review-and-quality/SKILL.md",
+      "available": true,
+      "loaded": true,
+      "phase": "Demo02規格/切片/約束/TDD/獨立review；不啟用上游hooks",
+      "status": "LOADED_DOCUMENT_WORKFLOW"
+    },
+    {
+      "actualName": "constraint-driven-development",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/constraint-driven-development/SKILL.md",
+      "available": true,
+      "loaded": false,
+      "phase": "上游版本已固定及靜態審查；實際規格/規劃/TDD使用已載入本機等價技能及CONSTRAINTS，不把下載當啟用",
+      "status": "PINNED_REFERENCE_CANONICAL_WORKFLOW"
+    },
+    {
+      "actualName": "incremental-implementation",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/incremental-implementation/SKILL.md",
+      "available": true,
+      "loaded": false,
+      "phase": "上游版本已固定及靜態審查；實際規格/規劃/TDD使用已載入本機等價技能及CONSTRAINTS，不把下載當啟用",
+      "status": "PINNED_REFERENCE_CANONICAL_WORKFLOW"
+    },
+    {
+      "actualName": "planning-and-task-breakdown",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/planning-and-task-breakdown/SKILL.md",
+      "available": true,
+      "loaded": false,
+      "phase": "上游版本已固定及靜態審查；實際規格/規劃/TDD使用已載入本機等價技能及CONSTRAINTS，不把下載當啟用",
+      "status": "PINNED_REFERENCE_CANONICAL_WORKFLOW"
+    },
+    {
+      "actualName": "spec-driven-development",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/spec-driven-development/SKILL.md",
+      "available": true,
+      "loaded": false,
+      "phase": "上游版本已固定及靜態審查；實際規格/規劃/TDD使用已載入本機等價技能及CONSTRAINTS，不把下載當啟用",
+      "status": "PINNED_REFERENCE_CANONICAL_WORKFLOW"
+    },
+    {
+      "actualName": "test-driven-development",
+      "source": "tools/agent-skills/0.6.13-aeac41d4/skills/test-driven-development/SKILL.md",
+      "available": true,
+      "loaded": false,
+      "phase": "上游版本已固定及靜態審查；實際規格/規劃/TDD使用已載入本機等價技能及CONSTRAINTS，不把下載當啟用",
+      "status": "PINNED_REFERENCE_CANONICAL_WORKFLOW"
+    }
+  ],
+  "hooksAudit": {
+    "downloadedToPrivateQuarantine": true,
+    "executed": false,
+    "sessionStart": "注入第二個router，與Superpowers/native routing可能重複；不啟用",
+    "sddCache": "可能網路HEAD重驗並寫.claude/sdd-cache；不啟用",
+    "simplifyIgnore": "讀檔前會暫時改寫原檔為placeholder，與source保全衝突；不啟用",
+    "globalConfigurationChanged": false
+  },
+  "compatibility": "使用者本次自治範圍優先；Superpowers負責路由／除錯／驗證，Addy提供規格、任務與增量流程，不再安裝另一個meta-router。",
+  "unavailableRequestedName": {
+    "verification-before-completion": "本commit沒有此名稱，fallback到已安裝Superpowers同名技能，不假稱Addy提供"
+  },
+  "dependencies": "各SKILL正文的建議性同包skill引用以既有canonical技能或人工流程補足；constraint floor-guard.md已隨同原文保留，只靜態讀取，不執行參考checker或新增門檻。",
+  "additionalLocalSkills": [
+    {
+      "skill": "using-superpowers",
+      "available": true,
+      "loaded": true,
+      "purpose": "恢復及任務路由"
+    },
+    {
+      "skill": "systematic-debugging",
+      "available": true,
+      "loaded": true,
+      "purpose": "競態/選單及QA根因"
+    },
+    {
+      "skill": "test-driven-development",
+      "available": true,
+      "loaded": true,
+      "purpose": "RED/GREEN及完整回歸"
+    },
+    {
+      "skill": "verification-before-completion",
+      "available": true,
+      "loaded": true,
+      "purpose": "fresh gate與來源身份"
+    },
+    {
+      "skill": "requesting-code-review",
+      "available": true,
+      "loaded": true,
+      "purpose": "唯讀獨立複核"
+    },
+    {
+      "skill": "receiving-code-review",
+      "available": true,
+      "loaded": true,
+      "purpose": "四項UI/PWA兩項缺陷修正"
+    },
+    {
+      "skill": "codex-engineering-guardrails:code-work",
+      "available": true,
+      "loaded": true,
+      "purpose": "約束與單一writer"
+    },
+    {
+      "skill": "codex-engineering-guardrails:code-verification",
+      "available": true,
+      "loaded": true,
+      "purpose": "證據與來源一致"
+    },
+    {
+      "skill": "addyosmani-shipping-and-launch",
+      "available": true,
+      "loaded": true,
+      "purpose": "本地發行候選/回復方式；不自動deploy"
+    },
+    {
+      "skill": "addyosmani-spec-driven-development",
+      "available": true,
+      "loaded": true,
+      "purpose": "本機已載入同名工作流程；上游固定副本另列來源"
+    },
+    {
+      "skill": "addyosmani-planning-and-task-breakdown",
+      "available": true,
+      "loaded": true,
+      "purpose": "本機已載入同名工作流程；上游固定副本另列來源"
+    },
+    {
+      "skill": "addyosmani-incremental-implementation",
+      "available": true,
+      "loaded": true,
+      "purpose": "本機已載入同名工作流程；上游固定副本另列來源"
+    }
+  ],
+  "release02Routing": {
+    "availableAndLoaded": [
+      "using-superpowers",
+      "writing-plans",
+      "executing-plans",
+      "using-git-worktrees",
+      "requesting-code-review",
+      "finishing-a-development-branch",
+      "codex-engineering-guardrails:code-verification",
+      "test-driven-development",
+      "addyosmani-shipping-and-launch"
+    ],
+    "constraintSource": "tools/agent-skills/0.6.13-aeac41d4/skills/constraint-driven-development/SKILL.md（本機同名addon未安裝，使用已固定專案副本及既有CONSTRAINTS）",
+    "routing": "清楚user spec；TDD以已載入規則與新反例執行；Addy規劃/增量方法按本次實作使用，沒有重新安裝另一個router",
+    "authorization": "本輪明確授權PR/merge/Release，取代Demo02舊本地-only限制；不重問已指定執行方式",
+    "shippingApplication": "僅適用本次靜態下載候選：PR/CI/review/附件HTTP與SHA/回退PR；公開網站、真人、真機、無障礙與效能尚未驗，不宣稱全表綠燈"
+  }
+}

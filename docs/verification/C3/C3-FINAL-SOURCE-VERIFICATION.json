@@ -1,0 +1,8 @@
+{
+  "status": "TESTED_PASS",
+  "sourceSnapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+  "manifestFilesVerified": 54,
+  "reconstructedSourceHashesVerified": true,
+  "publicEvidenceSecretPatternHits": 0,
+  "note": "bounded pattern scan, not exhaustive secret guarantee"
+}

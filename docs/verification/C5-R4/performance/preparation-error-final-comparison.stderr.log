@@ -1,0 +1,20 @@
+node:internal/modules/esm/resolve:241
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-performance/最終候選8261/frozen/baseline/src/core/measured-ai.ts' imported from LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-performance/最終候選8261/有界性能.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:241:11)
+    at moduleResolve (node:internal/modules/esm/resolve:846:10)
+    at defaultResolve (node:internal/modules/esm/resolve:973:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+    at nextStep (node:internal/modules/customization_hooks:189:26)
+    at resolveBaseSync (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11092)
+    at resolveDirectorySync (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:12398)
+    at resolveTsPathsSync (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13605)
+    at resolve (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:16832) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/evidence/C5-R4-performance/%E6%9C%80%E7%B5%82%E5%80%99%E9%81%B88261/frozen/baseline/src/core/measured-ai.ts'
+}
+
+Node.js v26.10.0

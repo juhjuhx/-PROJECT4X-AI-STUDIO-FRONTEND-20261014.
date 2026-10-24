@@ -1,0 +1,22 @@
+START 2026-10-18T04:38:36.820203+00:00
+COMMAND ["node", "--import", "tsx", "--test", "tests/ui-map.test.ts", "tests/recruit-presentation.test.ts", "tests/session-boundaries.test.mjs"]
+EXIT 0
+STDOUT
+✔ C3 招募狀態只由觀測判定：等待／必答／駐軍／合法候選不混成已徵召 (10.89475ms)
+✔ C2-G：composition root 不持 canonical state、不執行 core/AI/persistence 編排 (1.314ms)
+✔ C0-01 regression：不覆寫原生 selector、不安裝全域吞錯 guard (1.264042ms)
+✔ C3 地圖：未知owner不畫敵方屋頂或標籤；中立／敵方／己方明確區分 (3.802542ms)
+✔ C3 地圖：異地政治中心用Observation真實名稱，不硬編原首都 (1.881833ms)
+✔ C3 Fog 非干擾：同Observation不同隱藏世界產生完全相同Canvas draw calls (12.279375ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150.137959
+
+STDERR
+
+END 2026-10-18T04:38:37.038087+00:00

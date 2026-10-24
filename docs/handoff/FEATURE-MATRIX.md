@@ -1,4 +1,64 @@
+# Demo02 當前功能矩陣（2026-10-24）
+
+本段局部覆寫下方歷史工程狀態，不刪舊FAIL。主要證據入口：[DEMO02驗證](../verification/DEMO02/VERIFICATION.md)；原始收據位於專案外DEMO02 evidence，完整私人save/world不公開。既有規則可玩Demo與完整Playable Alpha分列；新規則遵主創最新決定另審。
+
+| Feature ID | Design Authority | Current Implementation | Test Coverage | Presentation Status | Dependency | Target Milestone | Acceptance Criteria | Owner | Evidence／狀態 |
+|---|---|---|---|---|---|---|---|---|---|
+| F01 Map | G1/規則書 | game.ts:createGame；24×24程序圖 | core.test連通/seed；ui-map | D3等角Canvas | RNG/地形 | Demo | 開局可達、可選合法格 | Codex/Gemini | TESTED_PASS；真人地圖體驗UNVERIFIED |
+| F02 Terrain | G1/UNIT_STATS | 五地形union；game.ts移動/掩護 | core/review/ai-frontier | 五種繪製；新地形未做 | Map/Observation | Demo/後續 | 不可穿山水或友軍，未知不洩漏 | Codex/Gemini | TESTED_PASS有限fixtures |
+| F03 Units | G1 UNIT_STATS | 步兵/斥候/弓兵；無新兵 | core/session/ai-tactical-advance | D3幾何兵模與選取 | 招募/弓術 | Demo | 選兵→Move/Attack；新兵下回合可用 | Codex/Gemini | TESTED_PASS；新兵種PROPOSED |
+| F04 Combat | GAME-RULEBOOK | game.ts:applyCommand Attack | core/ai-siege；真Gameplay | 攻擊預覽/血量/事件 | 合法射程/視野 | Demo | 真Attack→Move→Capture且合法傷害 | Codex/Gemini | TESTED_PASS旅程；全局平衡UNVERIFIED |
+| F05 Cities | CCTS D1–D3 | capital/village占領與政治中心 | 流亡重建/session；Gameplay | 據點檢視/招募 | 佔位/持有時點 | Demo | 移出駐軍→招募→下己回合使用 | Codex/Gemini | TESTED_PASS；人口/成長NOT_IMPLEMENTED |
+| F06 Economy | G1金幣規則 | 金幣收入/招募/研究/遺跡金 | core固定費用/收入測試 | HUD收入/金幣 | 據點/回合 | Demo | 成本由core拒絕/扣款，首回合收入正確 | Codex | TESTED_PASS；多資源代謝NOT_IMPLEMENTED |
+| F07 Technologies | TECH_STATS | farm/archery/pathfinding三種 | core；Gameplay Research | 科技手機分頁 | 金幣/科技union | Demo/後審新支線 | Research真改state/解鎖/收入或視野 | Codex/Gemini | TESTED_PASS；新支線NOT_IMPLEMENTED |
+| F08 Ruins | R01/R03新裁決；G1舊規則 | pendingRelic gold/intel；取得權衝突仍在 | core少於3/0格；Demo真intel | 立即選擇dialog | Knowledge/pending | Demo舊規則/新版後審 | 真ResolveRelic；最多實數未知地形，不洩敵軍 | Codex | G1 TESTED_PASS；新取得權NOT_IMPLEMENTED |
+| F09 Civilization | CCTS-SPEC | identity/lineage/流亡/建中心 | 流亡重建/SaveReplay | 身份/新中心名稱 | U或S續玩 | Demo/長期 | U=S=0才淘汰；不假造勝者 | Codex | 簡化流亡TESTED_PASS；轉型外交文化NOT_IMPLEMENTED |
+| F10 Exploration | 未知與發現主創方向 | Observation frontier；Demo Move揭露目標 | ai-frontier/D02/demo-journal | 地圖/探索手札 | Move/知識 | Demo | 真新地形才計探索，保持Fog | Codex/Gemini | TESTED_PASS合成及旅程 |
+| F11 Fog | Frontend-Core v1 | game.ts:observe；session/events actor-scoped | core/session/presentation/Fog twins | 未知/中立/敵方合法分類 | Canonical→Observation | Demo | 同Observation隱藏truth差異不影響AI/UI輸入 | Codex | TESTED_PASS有限差分；非網路多人安全審計 |
+| F12 AI | Observation-only及C5約束 | E policy ai.ts未修改 | 全unit/prefix/D02 fresh；R5及E seed歷史 | AI狀態/安全暫停 | legalActions/session driver | Demo/C5獨立研究 | 無非法命令/人造winner；長局失敗明示 | Codex | 局部TESTED_PASS；全局收斂TESTED_FAIL/UNVERIFIED新版Full100 |
+| F13 Save/Replay | save1/replay1 | persistence/session未改；Demo本機sidecar綁bytes | session/core/Gameplay；demo-local-progress | 本機槽位/檔案匯出匯入/驗證 | 可信LocalPersistencePort | Demo | 先驗後換局；load失敗保局；重播一致 | Codex | TESTED_PASS；sidecar不隨外部save檔匯出 |
+| F14 Settings | 現有設定source | 沒有音效設定；縮放LOCAL_HOME | Browser camera/input | 航行紀錄/相機 | Native DOM/Canvas | Demo/後續 | 現有controls可用；無假音效設定 | Gemini/Codex | 部分IMPLEMENTED；音量/語言切換NOT_IMPLEMENTED |
+| F15 Mobile Interaction | 主創正式電腦/手機並重 | touch/pointer/分頁/響應式 | Browser真CDP雙指；Demo tap；Gameplay | D3保留手機分頁 | viewport/touch | Demo/真機驗收 | 移動/研究/遺跡/存檔可完成 | Gemini/Codex | 模擬TESTED_PASS；實體手機UNVERIFIED |
+| F16 Story Events | 既有規則Demo最新授權 | demo/content+progress：發現/解讀/決策/結果/線索 | demo-journal及Demo真DOM | 手札/完成記錄，無軍事勝利冒稱 | actor合法命令/Observation | Demo | gold/intel真後果，三目標完成winner仍null | Codex | TESTED_PASS；起源正史未揭露 |
+| F17 Content Packs | 擴充候選 | 內建narrative-pack-1 parser/版本白名單 | demo-journal負例/pack版本綁定 | 內建繁中文字 | g1-ccts-1/素材來源 | Demo/後審 | 拒未知effect/ruleset；不載入任意code | Codex | narrative IMPLEMENTED/TESTED_PASS；Gameplay pack NOT_IMPLEMENTED |
+| F18 Visual Assets | D Hybrid沿用 | Canvas程序美術；原創ICO/PNG/SVG | 資產SHA/decode；Browser screenshot | 微縮地形；兵模仍抽象 | D3/map/assets registry | Demo/後續美術 | 真畫面與概念圖分開，素材授權可追溯 | Gemini/Codex發行資產 | IMPLEMENTED；完整寫實兵模NOT_IMPLEMENTED |
+| F19 Accessibility | Native DOM基本操作 | dialog/labels/buttons/reduced motion/keyboard | Browser實際選取/快捷鍵/對話操作 | 可讀文案/焦點 | 語意DOM/Canvas替代清單 | Demo/完整審計 | 鍵盤可完成主要命令；不能只靠地圖色彩 | Gemini/Codex | 部分TESTED_PASS；完整WCAG/讀屏/axe UNVERIFIED |
+| F20 Deployment | Web/PWA候選 | Vite dist＋本機Node server＋SW靜態白名單 | pwa-build/PWA根與subpath/offline/update | 主選單/192及512圖示 | HTTPS或loopback secure context | Demo | 可解壓啟動，下載物hash/CRC/還原一致 | Codex | PWA本機TESTED_PASS；公開HTTPS NOT_IMPLEMENTED；APK BLOCKED |
+| F21 Menu/Onboarding | 既有規則Demo授權 | demo/shell；main composition | Demo intro/save繞過及load競態RED/GREEN | 主選單/指南/種子/續玩 | GameplayPort/可信load callback | Demo | 初始選擇前不可操作；晚到load不能改新意圖 | Codex/Gemini方向 | TESTED_PASS桌面/手機模擬 |
+| F22 Victory/Completion | CCTS；最新Demo分離授權 | 原winner僅core；完成紀錄獨立sidecar | core/流亡/獨立Demo completion測試 | 終局/探索完成不同文案 | U/S/Observation | Demo/Alpha後續 | 探索完成後可繼續；不合成軍事winner | Codex | TESTED_PASS有限旅程；完整Alpha PARTIAL |
+
+> 後續內容完整欄位與版本策略見 [CONTENT-EXTENSION-PROPOSAL](../product/CONTENT-EXTENSION-PROPOSAL.md)。以下是原歷史矩陣，不能拿其中舊數量／舊Gate覆寫本段。
+
+---
+
 # 實作與證據矩陣
+
+> 2026-10-20 CURRENT C5-R4：Observation-only frontier／已知地形再偵察 IMPLEMENTED；123 tests/check/build、prefix1100/0loop、原D02 673commands真揭露／winner0、seed010 winner0／534EndTurn／15418commands／終局SaveReplay true，TESTED_PASS。qa:browser11與獨立review通過。追加完整qa:gameplay因download.delete canceled及ENOSPC維持BLOCKED；本輪整體PARTIAL。full100/T3/T6 UNVERIFIED，Alpha PARTIAL；唯一續作NEXT-ACTION，詳細docs/verification/C5-R4/C5-R4-TEST-RESULTS.json；沒有push。
+
+> 2026-10-19 歷史C5-R3：兩項Observation-only無記憶策略修正 IMPLEMENTED；113 tests/check/build、1100-command prefix0loop、11 browser／12真玩法 TESTED_PASS。seed010 SINGLE-SEED TESTED_PASS：winner0、534EndTurn／15418commands，終局Save/Replay true。中央D-02 fresh TESTED_FAIL（1000commands／seen=false）；新版full100/T3/T6 UNVERIFIED，整體Alpha PARTIAL。唯一續作NEXT-ACTION；詳細C5-R3-TEST-RESULTS；不push main。
+
+> 下方有日期的舊狀態保留決策沿革；當前狀態由本段及NEXT-ACTION局部覆寫，不將歷史FAIL刪除。
+
+> 2026-10-19 歷史C5-R2快照：三項無記憶AI局部修補 IMPLEMENTED，110 tests/check/build、1100-command prefix0loop、11 browser與12真玩法情境 TESTED_PASS。最新seed010仍 TESTED_FAIL：800 EndTurn／19813 commands／winner=null；中央搜尋合成反例1000commands仍FAIL。新版full100未跑，Alpha仍PARTIAL。權威續作見NEXT-ACTION與C5-R2-TEST-RESULTS；不push main。
+
+> 2026-10-18 歷史R1快照：C2/C3/C4工程candidate已通過。C5最小無記憶policy修補IMPLEMENTED；生成prefix三段振盪→0、104 tests/check/build/11 browser/12玩法情境TESTED_PASS。完整seed010仍TESTED_FAIL：800 EndTurn/17937 commands/winner=null；新版full100/T3/T6未完整重跑，不能沿用舊62/38當新終局率。主創確認保留D3分頁。詳C5-AI-DIAGNOSIS與NEXT-ACTION。
+
+
+
+> 2026-10-18 C3 CHECKPOINT（4cddfb3）：2026-10-18 C3局部覆寫：GameSession/7種安全events維持IMPLEMENTED與fresh runtime測試；D3 renderer/HUD已整合、unknown/neutral/enemy/own與新政治中心名稱有直接Canvas反例，TESTED_PASS。103 tests、11 browser包含真CDP雙指與新兵下一回合Move；未涵蓋完整單局可玩性。下方44test表與C0/C1是歷史，不能代替本次結果。
+
+
+## 2026-10-17 C2 現況
+
+C2 新增 session／事件與回歸測試，八個 Action、核心數值、AI policy 與存檔版號不變。正式方法與七事件已 IMPLEMENTED；測試映射見 [C2-IMPLEMENTATION-STATUS](C2-IMPLEMENTATION-STATUS.md)。真 browser 已驗新兵下一己回合移動、三模擬尺寸 CDP 多點 pan/pinch；不代表真機／完整手機UX。以下 C0/C1 列點與44測試索引保留為歷史，不當成本次最新狀態。
+
+## C0/C1 歷史現況
+
+- core/policy/既有 tests 在 main 與 D2 完全相同；本輪分別 44 pass/0 fail/0 skip，check/build/browser 7 scenarios 通過。
+- C1 Frontend-Core Contract、Module Ownership 與 PresentationEvent 是 PROPOSED 規格；GameSession／事件 runtime／新 contract tests 都 NOT_IMPLEMENTED，不能標成功能完成。
+- D2 新增 UI、garrison 引導與手機分頁有實際 source、dist 與新截圖；touch pinch、完整 UI fog 非干擾、下一回合使用新兵、真機／真人仍 UNVERIFIED。
+- full100/seed010/T3/T6 沿用同版歷史 TESTED_FAIL，本輪未重跑長局。遺跡新取得權 NOT_IMPLEMENTED；完整城市成長／新科技兵種未新增。
+- 權威狀態：[INTEGRATION-STATUS](INTEGRATION-STATUS.md)；來源與風險：[C0-SOURCE-AUDIT](C0-SOURCE-AUDIT.md)。以下矩陣與 test IDs 保留原歷史，單項測試不冒稱全場景覆蓋。
 
 本表將指定20類規則、核心風險、實際code與所有44個既有具名test串連。**IMPLEMENTED表示源碼存在；不等於本輪TESTED_PASS。** 本輪統一執行證據由root填入 [IMPLEMENTATION-STATUS](IMPLEMENTATION-STATUS.md)；本審查沒有重跑整套／100長局。測試名稱照錄source原字串，不改測試。
 
@@ -104,3 +164,14 @@
 ## 根代理本輪整合（2026-10-14）
 
 T01–T44本輪隔離source npm test實際44pass／0fail／0skip；乾淨離線npm ci還原後亦44pass。不存在以文件替測試。G13仍TESTED_FAIL（fresh010、same-source historical full100）；G11的必答/情報有TESTED_PASS，但最新取得權機制NOT_IMPLEMENTED。前端、桌面/模擬touch與storage flows由root真Chromium7情境確認；完整drag/pinch/真人/真機仍UNVERIFIED。個別claim只涵蓋所映射test，整體gate失敗。
+
+## 2026-10-20 R4需求→程式→測試
+
+| 需求 | 實作 | 證據／狀態 |
+|---|---|---|
+| 合法unknown幾何frontier及真sight fallback | src/core/ai.ts | tests/ai-frontier.test.ts 10項；TESTED_PASS |
+| 全已知地形內部再偵察 | 同檔uniform-grid patrol | 原D02 673commands真揭露；TESTED_PASS |
+| Fog／確定性／合法Move | 相同Observation與legalActions | 新Fog twins、clone/freeze/interleave；獨立oracle；TESTED_PASS，有限fixtures |
+| 既有終局Save/Replay | 未改core/persistence | seed010終局true；TESTED_PASS，單seed |
+| 連續真DOM Attack後Capture | 未改scripts/browser-check.mjs | 本輪環境BLOCKED，不能沿用R3旅程PASS |
+| 全100終局與一般可玩性 | 未擴規則 | full100 UNVERIFIED／Alpha PARTIAL |

@@ -1,0 +1,18 @@
+{
+  "label": "C5-R2-delivery-build",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "startedAt": "2026-10-18T17:51:45.414767+00:00",
+  "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T17:51:46.573702+00:00",
+  "durationSeconds": 1.159,
+  "log": "C5-R2-delivery-build.log"
+}

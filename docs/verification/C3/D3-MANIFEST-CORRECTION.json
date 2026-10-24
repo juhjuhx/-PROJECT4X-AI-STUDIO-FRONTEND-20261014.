@@ -1,0 +1,288 @@
+{
+  "result": "TESTED_PASS",
+  "checked": 40,
+  "matched": 40,
+  "priorReportCorrection": "39/40是假陰性：根LICENSE曾與第三方basename歧義匹配，現在精確根優先。原包不改。",
+  "entries": [
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "src/core/game.ts",
+      "entry": "src/core/game.ts",
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "src/core/ai.ts",
+      "entry": "src/core/ai.ts",
+      "sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "src/core/persistence.ts",
+      "entry": "src/core/persistence.ts",
+      "sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "src/core/types.ts",
+      "entry": "src/core/types.ts",
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "src/ui/assets.d.ts",
+      "entry": "src/ui/assets.d.ts",
+      "sha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "tests/core.test.ts",
+      "entry": "tests/core.test.ts",
+      "sha256": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "tests/review.test.ts",
+      "entry": "tests/review.test.ts",
+      "sha256": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "tests/流亡重建.test.ts",
+      "entry": "tests/流亡重建.test.ts",
+      "sha256": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "tests/artifact-proof.test.mjs",
+      "entry": "tests/artifact-proof.test.mjs",
+      "sha256": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/headless.ts",
+      "entry": "scripts/headless.ts",
+      "sha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/verify.mjs",
+      "entry": "scripts/verify.mjs",
+      "sha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/serve.mjs",
+      "entry": "scripts/serve.mjs",
+      "sha256": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/browser-check.mjs",
+      "entry": "scripts/browser-check.mjs",
+      "sha256": "13e515cc603332b8b8a2cb1cabbdacc73eccf743c334a1c76fa2404b4b76c1f3",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/context-init.mjs",
+      "entry": "scripts/context-init.mjs",
+      "sha256": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "scripts/artifact-proof.mjs",
+      "entry": "scripts/artifact-proof.mjs",
+      "sha256": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "package-lock.json",
+      "entry": "package-lock.json",
+      "sha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "matches": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "path": "LICENSE",
+      "entry": "LICENSE",
+      "sha256": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "src/main.ts",
+      "entry": "src/main.ts",
+      "sha256": "068810134d1e483384bd9037e8da87096c551f2bb0c3740d62f497e86418e2fd",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "src/styles.css",
+      "entry": "src/styles.css",
+      "sha256": "0ee4bf7de9f3f0d60251ca592ac3020781273c7b7cfdd06f5ca668c86bd2c2f0",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "src/ui/map.ts",
+      "entry": "src/ui/map.ts",
+      "sha256": "323d7dfee8b586b34ff6d7f8096338d31c95ce095eb721a9dfd27fb93a09995c",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "index.html",
+      "entry": "index.html",
+      "sha256": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "package.json",
+      "entry": "package.json",
+      "sha256": "6a5a066a7383c2009010d3cd24f2cebc069b192b6e4936b58a51ea5aeb88c2b9",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "vite.config.ts",
+      "entry": "vite.config.ts",
+      "sha256": "26609df8aa3e224a2907501fd71f295cfc0ff83ac24647cc52953946273e0b5c",
+      "matches": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "path": "LICENSE-STATUS.md",
+      "entry": "LICENSE-STATUS.md",
+      "sha256": "8efb582295e339028f3b0cc7e1ed00421d32b171d5c6791083a7a220f76881ab",
+      "matches": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "path": "docs/art/ART-DIRECTION.md",
+      "entry": "docs/art/ART-DIRECTION.md",
+      "sha256": "491bb6dfde5eecb1bd43143402858ac9f18d6a5f776793fae3a6d3108b909d77",
+      "matches": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "path": "docs/art/STYLE-BIBLE.md",
+      "entry": "docs/art/STYLE-BIBLE.md",
+      "sha256": "8ddca346de3bc4c5f90a555439214b71d7d266e0b39080103152d3ac40d34d18",
+      "matches": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "path": "docs/art/DESIGN-TOKENS.md",
+      "entry": "docs/art/DESIGN-TOKENS.md",
+      "sha256": "d7d8503ee41b024d6b19c27966c3a89b24d89dfb2791d4ac02abf309fb48dd99",
+      "matches": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "path": "docs/art/ASSET-GUIDE.md",
+      "entry": "docs/art/ASSET-GUIDE.md",
+      "sha256": "697839370744cfa74e41ecc5f293a31f775adfd7e530bd2b1a8dfc2c6b14b149",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "Desktop-1440x900.png",
+      "entry": "證據/Desktop-1440x900.png",
+      "sha256": "3f595dc1f5933b0aff30f6954cd65d4c69a063d9cf327567f3933a17241bc00e",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "Desktop-1920x1080.png",
+      "entry": "證據/Desktop-1920x1080.png",
+      "sha256": "1f4775f283c45da7f46581c420f448ab78fb85865e03222cb3e11784ae3d337b",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "browser.json",
+      "entry": "證據/browser.json",
+      "sha256": "138a48cabc341d79d046c023d8c3ec952672a7bfcacc5d2e39f1b4990bac9dbf",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "iPad-768x1024.png",
+      "entry": "證據/iPad-768x1024.png",
+      "sha256": "47778acc1b3f966e82cd5abdb95f0138b366105b04dd217ad7fc28bf334f53a8",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "iPhone-14-390x844.png",
+      "entry": "證據/iPhone-14-390x844.png",
+      "sha256": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "iPhone-14-Pro-Max-430x932.png",
+      "entry": "證據/iPhone-14-Pro-Max-430x932.png",
+      "sha256": "dc50dd788a40247eb4790818d2eaef04441e19b663051191e4ee01746724ce17",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "stage2-qa-report.json",
+      "entry": "證據/stage2-qa-report.json",
+      "sha256": "809f4a3106eed2e823b32ca0755f18a7956081e41efd65a0af8ec841ab1d7161",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "手機橫式.png",
+      "entry": "證據/手機橫式.png",
+      "sha256": "1c68fb96d0adf2d3eac4a9db8243ed663f4066f25c1654b6d8fc35b66ea601bd",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "手機直式.png",
+      "entry": "證據/手機直式.png",
+      "sha256": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "桌面初局.png",
+      "entry": "證據/桌面初局.png",
+      "sha256": "8f6a315fa57a9a1ce0b00cb21c01a869a20fb106d6f51fcdf40cf8ed76e916c9",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "窄手機.png",
+      "entry": "證據/窄手機.png",
+      "sha256": "3e15b66b1b369e9ef8ad2d7250f912a36c70505128654b4fdae99a8b88ca53d6",
+      "matches": true
+    },
+    {
+      "group": "evidenceAssets",
+      "path": "遺跡選擇.png",
+      "entry": "證據/遺跡選擇.png",
+      "sha256": "99fd81ff16bc1cb031ea3ebd7300efa6d966899650fe1d3e3efd32f7ee7cffe8",
+      "matches": true
+    }
+  ]
+}

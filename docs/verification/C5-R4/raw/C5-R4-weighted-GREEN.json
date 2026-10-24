@@ -1,0 +1,22 @@
+{
+  "label": "C5-R4-weighted-GREEN",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-frontier.test.ts",
+    "tests/ai-stalemate.test.ts",
+    "tests/core.test.ts"
+  ],
+  "startedAt": "2026-10-19T13:19:29.438089+00:00",
+  "snapshotSha256": "6652dc392f948c9881eb476be80f6f4dbc2462bd08f7017b53c21a7bfee9fea8",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-19T13:19:30.302165+00:00",
+  "durationSeconds": 0.864,
+  "log": "C5-R4-weighted-GREEN.log"
+}

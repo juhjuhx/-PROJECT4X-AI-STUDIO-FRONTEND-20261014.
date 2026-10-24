@@ -1,0 +1,72 @@
+{
+  "branch": "integration/project4x-c3",
+  "HEAD": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "tree": "5161ca39a9236f9bbb66a0401cf85d5fd50d5668",
+  "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "statusPorcelainV2": "",
+  "clean": true,
+  "lastTestedCodeCommit": "c564904a8029fda57837a80abaaa0a2ded55b815",
+  "currentHeadProductEquivalentToTestedSource": true,
+  "sourceSnapshotSha256": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+  "sourceManifest": "project/C5-SOURCE-MANIFEST.json",
+  "manifestSha256": "1542d370b32f8483379248b5f0c45d8b00efc1e8bb2858aad9ce4ba40d50525f",
+  "C3Checkpoint": "4cddfb3c9b50b80b45f85c1c4749e9f41ae392c9",
+  "C5DiagnosticCheckpoint": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+  "sourceD3Hash": "9959a72a39c163a93c611651d8b761eff9d72193c21214d4fdbd898ecd3cb451",
+  "currentDownloadsD3Hash": "9959a72a39c163a93c611651d8b761eff9d72193c21214d4fdbd898ecd3cb451",
+  "noPushOrMerge": true,
+  "integrationStatus": "C2/C3/C4 preserved; C5-R2 local fixes/prefix/gates TESTED_PASS, seed01019813 and central-search TESTED_FAIL; Alpha PARTIAL",
+  "nextTask": "C5-R2 next minimal target/path/siege counterexample from existing2331 private decision trace, no weights without root cause",
+  "nextCommand": "python3 -c \"import json; from pathlib import Path; print(json.loads(Path('../evidence/C5-R2-private/reinforcement-prefix/summary.json').read_text()))\"",
+  "rawEvidence": "evidence/",
+  "fullWorldPrivate": "evidence/C5-R2-private/ (0700/0600, never committed or UI)",
+  "externalSupervisor": "NOT_CONFIGURED_BY_THIS_TASK",
+  "REMOTE_HEAD": "c21b16cd75572d069369f41426f7323c63c05083",
+  "worktrees": [
+    {
+      "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C0-C1-20261017-002046/github-baseline",
+      "HEAD": "c21b16cd75572d069369f41426f7323c63c05083",
+      "branch": "refs/heads/main",
+      "dirtyEntryCount": 0,
+      "statusExitCode": 0
+    },
+    {
+      "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C0-C1-20261017-002046/c1-contract-worktree",
+      "HEAD": "c21b16cd75572d069369f41426f7323c63c05083",
+      "branch": "refs/heads/integration/project4x-c1",
+      "dirtyEntryCount": 22,
+      "statusExitCode": 0
+    },
+    {
+      "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C0-C1-20261017-002046/gemini-review-worktree",
+      "HEAD": "c21b16cd75572d069369f41426f7323c63c05083",
+      "detached": "",
+      "dirtyEntryCount": 45,
+      "statusExitCode": 0
+    },
+    {
+      "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C2-20261017-134627/project",
+      "HEAD": "e5bc16fedde9245e29284a4ec954299212089139",
+      "branch": "refs/heads/integration/project4x-c2",
+      "dirtyEntryCount": 0,
+      "statusExitCode": 0
+    },
+    {
+      "worktree": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "HEAD": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "branch": "refs/heads/integration/project4x-c3",
+      "dirtyEntryCount": 0,
+      "statusExitCode": 0
+    }
+  ],
+  "preservedParallelWorkAudit": "evidence/PRESERVED-PARALLEL-WORK.json",
+  "C5R2Base": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "C5R2CodeCheckpoint": "c564904a8029fda57837a80abaaa0a2ded55b815",
+  "C5R2EvidenceCheckpoint": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "R2Results": "project/docs/verification/C5-R2/C5-R2-TEST-RESULTS.json",
+  "R2RootCause": "project/docs/handoff/C5-R2-STALMATE-ROOT-CAUSE.md",
+  "remoteChecked": "Fresh GitHub connector fetch_commit(main) in this C5-R2 session; no remote writes",
+  "sourceFileCount": 69,
+  "trackedRawR2Logs": 40,
+  "historicalRemoteCheckedAt": "2026-10-18T12:54:36.583972+00:00"
+}

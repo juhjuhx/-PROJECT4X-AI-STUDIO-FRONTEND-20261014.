@@ -1,0 +1,20 @@
+{
+  "label": "C5-R3-approach-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-stalemate.test.ts"
+  ],
+  "startedAt": "2026-10-19T03:46:50.483756+00:00",
+  "snapshotSha256": "5002c15431dc7b9c8f7535ef2f21cda7ab2a509983bd7dcd8328720d8dec5387",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-19T03:46:50.814255+00:00",
+  "durationSeconds": 0.33,
+  "log": "C5-R3-approach-RED.log"
+}

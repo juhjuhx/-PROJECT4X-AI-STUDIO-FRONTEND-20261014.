@@ -1,0 +1,67 @@
+START 2026-10-18T04:38:43.424096+00:00
+COMMAND node --input-type=module - <<STDIN
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const source=fs.readFileSync('src/main.ts','utf8');
+const snippet=source.slice(source.indexOf('function clickTile('),source.indexOf('function actionLabel(')).replace('point: Point', 'point').replace('): void',')');
+const results=[];
+for (const initialTab of ['tech','journey']) {
+ const context={HUMAN:0,view:{pendingRelic:null,units:[],legalActions:[]},selection:null,activeTab:initialTab,renderCalls:0,selectedUnit:()=>null,canAct:()=>true,dispatch:()=>{throw new Error('unexpected command')},selectUnit:()=>{throw new Error('unexpected own-unit select')}};
+ context.render=()=>context.renderCalls++;context.switchTab=tab=>context.activeTab=tab;
+ vm.runInNewContext(snippet+'\nclickTile({x:8,y:4});',context);
+ results.push({initialTab,afterTab:context.activeTab,selection:context.selection,renderCalls:context.renderCalls,inspectionWouldBeHidden:context.activeTab!=='inspect'});
+}
+console.log(JSON.stringify({source:'current main.clickTile exact snippet',results},null,2));
+assert.ok(results.every(r=>r.afterTab==='inspect'),'selected map cell must reveal inspection on compact tabs');
+
+STDIN
+EXIT 1
+STDOUT
+{
+  "source": "current main.clickTile exact snippet",
+  "results": [
+    {
+      "initialTab": "tech",
+      "afterTab": "tech",
+      "selection": {
+        "x": 8,
+        "y": 4
+      },
+      "renderCalls": 1,
+      "inspectionWouldBeHidden": true
+    },
+    {
+      "initialTab": "journey",
+      "afterTab": "journey",
+      "selection": {
+        "x": 8,
+        "y": 4
+      },
+      "renderCalls": 1,
+      "inspectionWouldBeHidden": true
+    }
+  ]
+}
+
+STDERR
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: selected map cell must reveal inspection on compact tabs
+    at file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/[eval1]:12:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async node:internal/modules/esm/loader:226:26
+    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:223:20)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.10.0
+
+END 2026-10-18T04:38:43.499038+00:00

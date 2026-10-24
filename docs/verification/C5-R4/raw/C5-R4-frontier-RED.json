@@ -1,0 +1,20 @@
+{
+  "label": "C5-R4-frontier-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-frontier.test.ts"
+  ],
+  "startedAt": "2026-10-19T13:08:24.562852+00:00",
+  "snapshotSha256": "8561561551bee6719c729d7c9a393db54fb0d24371f1180f5755813d2671ce12",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-19T13:08:25.518795+00:00",
+  "durationSeconds": 0.956,
+  "log": "C5-R4-frontier-RED.log"
+}

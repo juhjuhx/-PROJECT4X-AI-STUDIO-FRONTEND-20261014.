@@ -1,0 +1,572 @@
+{
+  "schema": "project4x-c3-verification-1",
+  "status": "TESTED_PASS",
+  "scope": "C2-C3 integration candidate + existing gameplay E2E; not complete Playable Alpha",
+  "sourceParent": "e5bc16fedde9245e29284a4ec954299212089139",
+  "sourceSnapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+  "remoteMain": "c21b16cd75572d069369f41426f7323c63c05083",
+  "environment": {
+    "node": "v26.10.0",
+    "npm": "11.19.1",
+    "os": "15.8.1",
+    "arch": "arm64"
+  },
+  "unitCounts": {
+    "passed": 103,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browserScenarios": 11,
+  "gameplayScenarios": 12,
+  "orderedGameplay": {
+    "policySteps": 208,
+    "additionalHumanCommands": 209,
+    "turn": 37,
+    "captureAfterAttack": true,
+    "replayVerified": true
+  },
+  "independentReview": "docs/verification/C3/independent-C3-review.md",
+  "independentQAReview": "docs/verification/C3/independent-gameplay-review.md",
+  "ci": "UNVERIFIED (no push)",
+  "physicalMobile": "UNVERIFIED",
+  "humanFullMatch": "UNVERIFIED",
+  "full100": "historical TESTED_FAIL 62 COMPLETE/38 TURN_LIMIT; not rerun",
+  "T3": "historical TESTED_FAIL; not rerun",
+  "T6": "historical TESTED_FAIL; not rerun",
+  "seed010": "fresh TESTED_FAIL 800 EndTurn/19696 commands/winner null; separate C5 private diagnosis",
+  "gates": [
+    {
+      "label": "C2-fresh-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-17T23:47:45.675038+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:47:47.116196+00:00",
+      "durationSeconds": 1.441,
+      "log": "C2-fresh-check.log",
+      "evidence": "docs/verification/C3/C2-fresh-check.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C2-fresh-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-17T23:47:47.183939+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:47:48.566812+00:00",
+      "durationSeconds": 1.383,
+      "log": "C2-fresh-test.log",
+      "evidence": "docs/verification/C3/C2-fresh-test.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": 99,
+        "pass": 99,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C2-fresh-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-17T23:47:48.638574+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:47:50.027462+00:00",
+      "durationSeconds": 1.389,
+      "log": "C2-fresh-build.log",
+      "evidence": "docs/verification/C3/C2-fresh-build.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C2-fresh-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-17T23:48:04.858579+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:48:09.710550+00:00",
+      "durationSeconds": 4.852,
+      "log": "C2-fresh-browser.log",
+      "evidence": "docs/verification/C3/C2-fresh-browser.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C3-release-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T04:47:47.823326+00:00",
+      "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:47:48.473166+00:00",
+      "durationSeconds": 0.65,
+      "log": "C3-release-check.log",
+      "evidence": "docs/verification/C3/C3-release-check.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C3-release-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T04:47:47.823326+00:00",
+      "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:47:49.014091+00:00",
+      "durationSeconds": 1.191,
+      "log": "C3-release-test.log",
+      "evidence": "docs/verification/C3/C3-release-test.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "counts": {
+        "tests": 103,
+        "pass": 103,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C3-release-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T04:47:48.969719+00:00",
+      "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:47:49.537388+00:00",
+      "durationSeconds": 0.568,
+      "log": "C3-release-build.log",
+      "evidence": "docs/verification/C3/C3-release-build.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C3-release-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T04:47:58.111632+00:00",
+      "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:48:03.734727+00:00",
+      "durationSeconds": 5.623,
+      "log": "C3-release-browser.log",
+      "evidence": "docs/verification/C3/C3-release-browser.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C3-gameplay-ordered",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "startedAt": "2026-10-18T04:46:14.237854+00:00",
+      "snapshotSha256": "9099ffbdd2f346d2ce2f94fb44097e90dc6148e340989f373e3a129f86bedce6",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:47:25.532561+00:00",
+      "durationSeconds": 71.286,
+      "log": "C3-gameplay-ordered.log",
+      "evidence": "docs/verification/C3/C3-gameplay-ordered.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C3-map-red",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ui-map.test.ts"
+      ],
+      "startedAt": "2026-10-17T23:49:09.580942+00:00",
+      "snapshotSha256": "7814b7eb69419f8c29a745b8bf98e49f003338baff293e0349068dfb7b29a83a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-17T23:49:09.940072+00:00",
+      "durationSeconds": 0.359,
+      "log": "C3-map-red.log",
+      "evidence": "docs/verification/C3/C3-map-red.log",
+      "status": "TESTED_FAIL",
+      "blockingGate": false,
+      "counts": {
+        "tests": 3,
+        "pass": 1,
+        "fail": 2,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C3-map-green",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ui-map.test.ts"
+      ],
+      "startedAt": "2026-10-17T23:49:40.348544+00:00",
+      "snapshotSha256": "d1d32bab3eb60cc0be851a0c24f94df9583066c2a96b2a4166ff74071b562c09",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:49:40.663986+00:00",
+      "durationSeconds": 0.315,
+      "log": "C3-map-green.log",
+      "evidence": "docs/verification/C3/C3-map-green.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C3-recruit-red",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/recruit-presentation.test.ts"
+      ],
+      "startedAt": "2026-10-17T23:49:40.763034+00:00",
+      "snapshotSha256": "099016ffcd6d459337598db086754f1207ae7aa158a12307e4691ab29b183a98",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-17T23:49:41.008483+00:00",
+      "durationSeconds": 0.245,
+      "log": "C3-recruit-red.log",
+      "evidence": "docs/verification/C3/C3-recruit-red.log",
+      "status": "TESTED_FAIL",
+      "blockingGate": false,
+      "counts": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C3-recruit-green",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/recruit-presentation.test.ts"
+      ],
+      "startedAt": "2026-10-17T23:50:07.699259+00:00",
+      "snapshotSha256": "36d8d051df3ae19855b7e5c23cc910b296c7e749b8a52c529d04ee4eedf1c050",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T23:50:07.967302+00:00",
+      "durationSeconds": 0.268,
+      "log": "C3-recruit-green.log",
+      "evidence": "docs/verification/C3/C3-recruit-green.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C3-tab-red",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T04:38:37.105349+00:00",
+      "snapshotSha256": "ab256bc8992a62fd14aacca497661a1c75a2d8c5cf7148aefb94d34251db9ed1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "e5bc16fedde9245e29284a4ec954299212089139",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T04:38:40.767690+00:00",
+      "durationSeconds": 3.662,
+      "log": "C3-tab-red.log",
+      "evidence": "docs/verification/C3/C3-tab-red.log",
+      "status": "TESTED_FAIL",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "D3-fresh-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T04:37:16.820371+00:00",
+      "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:37:18.089556+00:00",
+      "durationSeconds": 1.269,
+      "log": "D3-fresh-check.log",
+      "evidence": "docs/verification/C3/D3-fresh-check.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "D3-fresh-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T04:37:16.820371+00:00",
+      "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:37:18.390723+00:00",
+      "durationSeconds": 1.57,
+      "log": "D3-fresh-test.log",
+      "evidence": "docs/verification/C3/D3-fresh-test.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": 44,
+        "pass": 44,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "D3-fresh-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T04:37:34.942209+00:00",
+      "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:37:36.363263+00:00",
+      "durationSeconds": 1.421,
+      "log": "D3-fresh-build.log",
+      "evidence": "docs/verification/C3/D3-fresh-build.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "D3-fresh-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/d3-runtime-audit",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T04:38:02.537741+00:00",
+      "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:38:06.529148+00:00",
+      "durationSeconds": 3.991,
+      "log": "D3-fresh-browser.log",
+      "evidence": "docs/verification/C3/D3-fresh-browser.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "D3-fresh-stage2",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/d3-runtime-audit",
+      "command": [
+        "npm",
+        "run",
+        "qa:stage2"
+      ],
+      "startedAt": "2026-10-18T04:38:40.795361+00:00",
+      "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T04:38:46.207873+00:00",
+      "durationSeconds": 5.412,
+      "log": "D3-fresh-stage2.log",
+      "evidence": "docs/verification/C3/D3-fresh-stage2.log",
+      "status": "TESTED_PASS",
+      "blockingGate": false,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    }
+  ],
+  "notes": [
+    "Stage2 original script exit0 is weak evidence, not trusted full PASS",
+    "RED logs expected failures, never reclassified as final PASS",
+    "lsp_diagnostics unavailable; strict TypeScript compiler executed",
+    "No new framework/dependency/core rule changes; no push/merge"
+  ],
+  "lastTestedCommit": "Uncommitted candidate on recorded sourceParent; runtime bound to sourceSnapshotSha256, final checkpoint commit recorded outside self-referential JSON",
+  "gitDiffWhitespace": {
+    "allStagedExitCode": 2,
+    "status": "TESTED_FAIL",
+    "cause": "only immutable raw evidence log whitespace and original docs/art/DESIGN-TOKENS.md trailing whitespace",
+    "productAndAuthoredDocsExitCode": 0,
+    "rawLog": "../evidence/C3-git-diff-check-raw.log",
+    "note": "not a semantic/product failure; original evidence is not normalized to manufacture green"
+  }
+}

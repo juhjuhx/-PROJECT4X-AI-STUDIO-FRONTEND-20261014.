@@ -1,0 +1,3 @@
+PASS legal moves exist but none reveal unknown -> Attack
+PASS pathfinding=false sight boundary -> Attack
+PASS pathfinding=true sight boundary -> Move

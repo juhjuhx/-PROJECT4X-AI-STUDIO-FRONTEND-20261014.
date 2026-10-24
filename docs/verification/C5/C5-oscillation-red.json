@@ -1,0 +1,18 @@
+{
+  "label": "C5-oscillation-red",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "qa:ai:oscillation"
+  ],
+  "startedAt": "2026-10-18T04:51:14.114636+00:00",
+  "snapshotSha256": "b597fa309c84dcd6e5a38d44ee8d0dc2cfc555a7c675b68e71b53f9ef84751a7",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "4cddfb3c9b50b80b45f85c1c4749e9f41ae392c9",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T04:51:17.288276+00:00",
+  "durationSeconds": 3.173,
+  "log": "C5-oscillation-red.log"
+}

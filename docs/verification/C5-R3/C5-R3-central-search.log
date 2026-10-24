@@ -1,0 +1,14 @@
+{"label": "C5-R3-central-search", "cwd": ".", "command": ["node", "--import", "tsx", "scripts/ai-endgame-search-check.ts"], "startedAt": "2026-10-19T11:57:42.178126+00:00", "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+{
+  "schema": "project4x-central-search-counterexample-1",
+  "source": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "status": "TESTED_FAIL",
+  "commands": 1000,
+  "maxCommands": 1000,
+  "seen": false,
+  "turn": 871,
+  "winner": null,
+  "milliseconds": 726,
+  "inputBoundary": "AI receives only same actor Observation; fixture truth never supplied",
+  "scope": "RECONSTRUCTED_BY_CODEX synthetic patrol counterexample; does not explain seed010 active-front stalemate"
+}

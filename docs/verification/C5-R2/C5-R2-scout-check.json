@@ -1,0 +1,18 @@
+{
+  "label": "C5-R2-scout-check",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "startedAt": "2026-10-18T17:34:44.204632+00:00",
+  "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T17:34:45.277981+00:00",
+  "durationSeconds": 1.073,
+  "log": "C5-R2-scout-check.log"
+}

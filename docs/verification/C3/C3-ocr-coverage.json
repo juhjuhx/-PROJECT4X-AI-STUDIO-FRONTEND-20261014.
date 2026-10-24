@@ -1,0 +1,250 @@
+{
+  "tool": "OCR delegate (local v1.13.0; no external LLM)",
+  "total_files": 40,
+  "reviewed_files": 31,
+  "skipped_files": 9,
+  "coverage_rate": 0.775,
+  "generatedEvidenceExcluded": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/contracts/FRONTEND-CORE-CONTRACT.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/contracts/MODULE-OWNERSHIP.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/roadmap/PLAYABLE-ALPHA.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "index.html",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "memory/session-handoff-LATEST.md",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "package.json",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "scripts/browser-check.mjs",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "src/main.ts",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "src/styles.css",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "src/ui/map.ts",
+      "status": "modified",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "C3-SOURCE-MANIFEST.json",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "D3-CHANGELOG.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "D3-MODIFIED-FILES.json",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "FRONTEND-NEEDS.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/art/ART-DIRECTION.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/ASSET-GUIDE.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/D2-ART-DIRECTION.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/D2-ASSET-MATRIX.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/D2-MOTION-SPEC.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/D2-STYLE-BIBLE.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/D2-VISUAL-AUDIT.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/DESIGN-TOKENS.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/art/STYLE-BIBLE.md",
+      "status": "added",
+      "review": "skipped",
+      "reason": "原D3歷史art來源保留、hash核對；不是本次產品驗收"
+    },
+    {
+      "path": "docs/handoff/C3-DEEP-UNDERSTANDING.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/C3-IMPLEMENTATION-STATUS.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/C3-VERIFICATION.json",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/research/C3-OPEN-SOURCE-CANDIDATES.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "docs/roadmap/C3-EXECUTION-PLAN.md",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "src/ui/recruitment.ts",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "tests/recruit-presentation.test.ts",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    },
+    {
+      "path": "tests/ui-map.test.ts",
+      "status": "added",
+      "review": "reviewed",
+      "reason": "root核對來源/規格/更新內容；程式另有獨立審查與fresh gate"
+    }
+  ]
+}

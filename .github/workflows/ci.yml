@@ -1,27 +1,32 @@
-name: Core checks (not product acceptance)
+name: Demo02 engineering (not full100 or human acceptance)
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: demo02-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  core-checks:
+  engineering:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '26'
           cache: npm
-      - name: Restore exact lockfile
+      - name: Restore exact lockfile without install hooks
         run: npm ci --ignore-scripts
-      - name: Typecheck
-        run: npm run check
-      - name: Existing unit and review tests
-        run: npm test
-      - name: Build
-        run: npm run build
-# This workflow intentionally does not call full100 PASS. The recorded headless
-# result is 62/100 complete, 38 turn limits; product engineering gate FAIL.
+      - name: Install existing Playwright Chromium on CI only
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Publication, types, tests, build and real Browser/Gameplay/Demo/PWA
+        run: node scripts/verify-demo02.mjs
+# No raw private world/trace/browser artifact upload. The verifier publishes only
+# a safe result/hash summary. Full100, human and physical mobile are separate gates.

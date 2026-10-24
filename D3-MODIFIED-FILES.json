@@ -1,0 +1,134 @@
+{
+  "provenance": "RECONSTRUCTED_BY_CODEX",
+  "zipSha256": "9959a72a39c163a93c611651d8b761eff9d72193c21214d4fdbd898ecd3cb451",
+  "coreOwner": "Codex",
+  "files": {
+    "docs/art/ART-DIRECTION.md": {
+      "originalGeminiSha256": "491bb6dfde5eecb1bd43143402858ac9f18d6a5f776793fae3a6d3108b909d77",
+      "integratedSha256": "491bb6dfde5eecb1bd43143402858ac9f18d6a5f776793fae3a6d3108b909d77",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/ASSET-GUIDE.md": {
+      "originalGeminiSha256": "697839370744cfa74e41ecc5f293a31f775adfd7e530bd2b1a8dfc2c6b14b149",
+      "integratedSha256": "697839370744cfa74e41ecc5f293a31f775adfd7e530bd2b1a8dfc2c6b14b149",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/D2-ART-DIRECTION.md": {
+      "originalGeminiSha256": "9b29dc7cf0ed8e31eb1a1e12a9687795267e61e8bd618f82337b407c8c05be3b",
+      "integratedSha256": "9b29dc7cf0ed8e31eb1a1e12a9687795267e61e8bd618f82337b407c8c05be3b",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/D2-ASSET-MATRIX.md": {
+      "originalGeminiSha256": "94f6ea64e8ac4223b00dc574f88276b47d6f2a141429b59336045593465ef739",
+      "integratedSha256": "94f6ea64e8ac4223b00dc574f88276b47d6f2a141429b59336045593465ef739",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/D2-MOTION-SPEC.md": {
+      "originalGeminiSha256": "0e970fff7245c49b617ae60392600bb35f5663e6376aa46fd1a4009a7154d22e",
+      "integratedSha256": "0e970fff7245c49b617ae60392600bb35f5663e6376aa46fd1a4009a7154d22e",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/D2-STYLE-BIBLE.md": {
+      "originalGeminiSha256": "416dcf8c824be97653f79e20290a902ba59f94a4a41e5a58bfbc04bd17e06c94",
+      "integratedSha256": "416dcf8c824be97653f79e20290a902ba59f94a4a41e5a58bfbc04bd17e06c94",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/D2-VISUAL-AUDIT.md": {
+      "originalGeminiSha256": "4372562bc326ede034f14c739613ea593756d4233241643e494511c42044280c",
+      "integratedSha256": "4372562bc326ede034f14c739613ea593756d4233241643e494511c42044280c",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/DESIGN-TOKENS.md": {
+      "originalGeminiSha256": "d7d8503ee41b024d6b19c27966c3a89b24d89dfb2791d4ac02abf309fb48dd99",
+      "integratedSha256": "d7d8503ee41b024d6b19c27966c3a89b24d89dfb2791d4ac02abf309fb48dd99",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "docs/art/STYLE-BIBLE.md": {
+      "originalGeminiSha256": "8ddca346de3bc4c5f90a555439214b71d7d266e0b39080103152d3ac40d34d18",
+      "integratedSha256": "8ddca346de3bc4c5f90a555439214b71d7d266e0b39080103152d3ac40d34d18",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "index.html": {
+      "originalGeminiSha256": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "integratedSha256": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "adopted": true,
+      "note": "保留原D3 bytes；art文件屬來源設計/歷史，不能當整合版實測",
+      "status": "ADOPTED_EXACT"
+    },
+    "src/core/ai.ts": {
+      "originalGeminiSha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "integratedSha256": "06402a6394082b71a12a3aa50fef270f0895cd9839c0b047185920747237ea40",
+      "adopted": false,
+      "note": "D3 core未採；C3保留C2後，C5依主創無記憶最小修補裁決更新policy，非Gemini交付",
+      "status": "CODEX_C5_POLICY_FIX"
+    },
+    "src/core/game.ts": {
+      "originalGeminiSha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "integratedSha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "adopted": false,
+      "note": "保留C2 bytes；與D3相同不表示從D3覆寫",
+      "status": "RETAINED_C2"
+    },
+    "src/core/persistence.ts": {
+      "originalGeminiSha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "integratedSha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "adopted": false,
+      "note": "保留C2 bytes；與D3相同不表示從D3覆寫",
+      "status": "RETAINED_C2"
+    },
+    "src/core/types.ts": {
+      "originalGeminiSha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "integratedSha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "adopted": false,
+      "note": "保留C2 bytes；與D3相同不表示從D3覆寫",
+      "status": "RETAINED_C2"
+    },
+    "src/main.ts": {
+      "originalGeminiSha256": "068810134d1e483384bd9037e8da87096c551f2bb0c3740d62f497e86418e2fd",
+      "integratedSha256": "02b2f8da137c70f193cc3fc8ab057f26a19a9fe96722b428825e9f4cc3fbd117",
+      "adopted": true,
+      "note": "只採DOM/render片段，交易與檔案函式保留C2；guard拒絕採納",
+      "status": "PARTIAL_ADOPTION"
+    },
+    "src/styles.css": {
+      "originalGeminiSha256": "0ee4bf7de9f3f0d60251ca592ac3020781273c7b7cfdd06f5ca668c86bd2c2f0",
+      "integratedSha256": "ba57e96af49d9970d40acb694bcc315491bfdffa6a4e29d3c2b55f6ea208b7b2",
+      "adopted": true,
+      "note": "D3原樣式只清兩行trailing whitespace，無語意變更",
+      "status": "ADOPTED_WITH_FIXES"
+    },
+    "src/ui/assets.d.ts": {
+      "originalGeminiSha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "integratedSha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "adopted": false,
+      "note": "保留C2 bytes；與D3相同不表示從D3覆寫",
+      "status": "RETAINED_C2"
+    },
+    "src/ui/map.ts": {
+      "originalGeminiSha256": "323d7dfee8b586b34ff6d7f8096338d31c95ce095eb721a9dfd27fb93a09995c",
+      "integratedSha256": "11312217cb0ff52adc559e5c16a130489ebfbc1d7e66c8279700029643b9857f",
+      "adopted": true,
+      "note": "D3視覺＋readonly Observation＋未知owner/中心名稱修正",
+      "status": "ADOPTED_WITH_FIXES"
+    }
+  },
+  "note": "原ZIP的STAGE2/STAGE3/PUBLISH manifest只作歷史來源；本版以最後C3-SOURCE-MANIFEST為準"
+}

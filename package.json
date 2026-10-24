@@ -5,14 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/build-pwa.mjs",
     "test": "node --import tsx --test tests/*.test.ts tests/*.test.mjs",
     "check": "tsc --noEmit",
     "start": "node scripts/serve.mjs",
     "context:init": "node scripts/context-init.mjs",
     "qa:headless": "node --import tsx scripts/headless.ts",
     "qa:browser": "node scripts/browser-check.mjs",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "qa:gameplay": "node --import tsx scripts/browser-check.mjs --gameplay",
+    "qa:ai:oscillation": "node --import tsx scripts/ai-oscillation-check.ts",
+    "qa:demo": "node --import tsx scripts/demo-check.mjs",
+    "qa:pwa": "node --import tsx scripts/pwa-check.mjs"
   },
   "devDependencies": {
     "vite": "8.3.4",

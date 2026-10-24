@@ -1,0 +1,33 @@
+{
+  "schema": "c5-r4-performance-command-1",
+  "startedAt": "2026-10-20T05:12:24.266870+00:00",
+  "command": [
+    "node",
+    "--import",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/tsx/dist/loader.mjs",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-performance/最終候選8261/有界性能.ts",
+    "baseline",
+    "candidate"
+  ],
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-performance/最終候選8261",
+  "exitCode": 0,
+  "durationSeconds": 2.1792397499084473,
+  "nodeVersion": "v26.10.0",
+  "platform": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "dependencyInstall": "Not performed; existing project node_modules tsx loader reused.",
+  "processInventory": "ps and CPU-brand sysctl are sandbox-denied. No performance process was spawned concurrently by this runner; coordinator schedules final timing separately from headless.",
+  "sourceSha256": {
+    "baseline/src/core/ai.ts": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+    "baseline/src/core/measured-ai.ts": "aa17c48a38a80e849fa9dd3c55f1d19d173f54cf9c6088eaf2ac01ffcc5bf77a",
+    "baseline/src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "baseline/src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "candidate/src/core/ai.ts": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+    "candidate/src/core/measured-ai.ts": "9dc8e5be1a0227c0176725fd3c146b1df49353cdbb7c2c2089b45f43e48185e7",
+    "candidate/src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "candidate/src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd"
+  },
+  "harnessSha256": "fd875aadc5c050b7b416a0e6281c6dc755a04c9b20d9334f4194f22136a996b8",
+  "stdoutSha256": "9c606506b3cbdf95990bac15a7e9899896bf3afb93e34915dcd76e16d004e713",
+  "stderrBytes": 0
+}

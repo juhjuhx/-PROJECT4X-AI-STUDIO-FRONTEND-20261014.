@@ -1,0 +1,102 @@
+{
+  "testedAt": "2026-10-18T04:38:41.262Z",
+  "target": "http://127.0.0.1:58718",
+  "viewports": {
+    "iPhone-14-390x844": {
+      "deckNavDisplay": "flex",
+      "sidebarDataTab": "inspect",
+      "factionDisplay": "none",
+      "inspectDisplay": "block",
+      "unitDisplay": "block",
+      "techDisplay": "none",
+      "journeyDisplay": "none",
+      "domOrder": [
+        "deck-nav",
+        "panel-section inspect-panel",
+        "panel-section unit-panel",
+        "panel-section tech-panel",
+        "panel-section faction-panel",
+        "panel-section journey-panel"
+      ]
+    },
+    "窄手機-320x640": {
+      "deckNavDisplay": "flex",
+      "sidebarDataTab": "inspect",
+      "factionDisplay": "none",
+      "inspectDisplay": "block",
+      "unitDisplay": "block",
+      "techDisplay": "none",
+      "journeyDisplay": "none",
+      "domOrder": [
+        "deck-nav",
+        "panel-section inspect-panel",
+        "panel-section unit-panel",
+        "panel-section tech-panel",
+        "panel-section faction-panel",
+        "panel-section journey-panel"
+      ]
+    },
+    "手機橫式-812x375": {
+      "deckNavDisplay": "flex",
+      "sidebarDataTab": "inspect",
+      "factionDisplay": "none",
+      "inspectDisplay": "block",
+      "unitDisplay": "block",
+      "techDisplay": "none",
+      "journeyDisplay": "none",
+      "domOrder": [
+        "deck-nav",
+        "panel-section inspect-panel",
+        "panel-section unit-panel",
+        "panel-section tech-panel",
+        "panel-section faction-panel",
+        "panel-section journey-panel"
+      ]
+    },
+    "Desktop-1440x900": {
+      "deckNavDisplay": "none",
+      "sidebarDataTab": "inspect",
+      "factionDisplay": "block",
+      "inspectDisplay": "block",
+      "unitDisplay": "block",
+      "techDisplay": "block",
+      "journeyDisplay": "block",
+      "domOrder": [
+        "deck-nav",
+        "panel-section inspect-panel",
+        "panel-section unit-panel",
+        "panel-section tech-panel",
+        "panel-section faction-panel",
+        "panel-section journey-panel"
+      ]
+    }
+  },
+  "results": {
+    "mobileTabs": "PASS",
+    "mapGestures": "PASS",
+    "zoomCenter": "PASS",
+    "fogIsolation": "PASS",
+    "gameplayCore": "PASS",
+    "accessibility": "PASS",
+    "mobileMetrics": {
+      "viewportHeight": 844,
+      "canvasHeight": 388.234375,
+      "sidebarHeight": 619.203125,
+      "turnBarHeight": 69,
+      "canvasRatio": 0.45999333530805686
+    }
+  },
+  "zoomInvariance": {
+    "center": {
+      "ok": true,
+      "diffIn": 0,
+      "diffOut": 0
+    },
+    "anchor": {
+      "ok": true,
+      "diffIn": 2.0097183471152322e-14,
+      "diffOut": 0
+    }
+  },
+  "status": "ALL_PASS"
+}

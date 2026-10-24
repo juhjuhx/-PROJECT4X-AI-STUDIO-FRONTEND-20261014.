@@ -1,0 +1,227 @@
+START 2026-10-17T23:50:19.972523+00:00
+COMMAND node --input-type=module - <<STDIN
+
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const root='LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653';
+const require=createRequire(root+'/project/package.json');
+const esbuild=require('esbuild');
+const main=fs.readFileSync(root+'/gemini-d3-quarantine/src/main.ts','utf8');
+const mapFile=root+'/gemini-d3-quarantine/src/ui/map.ts';
+const result={scope:'D3 original source snippets, no browser and no source edits',node:process.version,cases:[]};
+function bundle(file){const contents=esbuild.buildSync({entryPoints:[file],bundle:true,write:false,format:'cjs',platform:'node',logLevel:'silent'}).outputFiles[0].text;const module={exports:{}};vm.runInNewContext(contents,{module,exports:module.exports,require,console,structuredClone,TextEncoder,TextDecoder,setTimeout,clearTimeout});return module.exports;}
+class NativeElement {
+ querySelector(s){if(['','#','.',':'].includes(s.trim()))throw new SyntaxError('Invalid selector '+JSON.stringify(s));return {selector:s};}
+ querySelectorAll(s){if(['','#','.',':'].includes(s.trim()))throw new SyntaxError('Invalid selector '+JSON.stringify(s));return s==='none'?[]:[{selector:s}];}
+}
+class NativeDocument extends NativeElement {createDocumentFragment(){return new NativeFragment();}}
+class NativeFragment extends NativeElement {}
+const document=new NativeDocument();
+const selectorInputs=['','#','.',':'];
+const before=selectorInputs.map(selector=>{try{document.querySelector(selector);return {selector,threw:false};}catch(e){return {selector,threw:e.name};}});
+const window=new EventTarget();
+const guard=main.slice(main.indexOf('// Defensive guard'),main.indexOf("import { createGame"));
+vm.runInNewContext(esbuild.transformSync(guard,{loader:'ts',format:'cjs'}).code,{window,document,Element:NativeElement,Document:NativeDocument,DocumentFragment:NativeFragment});
+let observerCalls=0;
+window.addEventListener('error',()=>observerCalls++);
+const errorEvent=new Event('error',{cancelable:true});
+Object.assign(errorEvent,{message:'TypeError: querySelectorAll failed in first-party HUD',filename:'http://127.0.0.1:5173/src/main.ts',error:new TypeError('querySelectorAll failed in first-party HUD')});
+const dispatched=window.dispatchEvent(errorEvent);
+assert.equal(errorEvent.defaultPrevented,true);assert.equal(observerCalls,0);assert.equal(dispatched,false);
+result.cases.push({id:'GLOBAL_ERROR_FIRST_PARTY',message:errorEvent.message,filename:errorEvent.filename,defaultPrevented:errorEvent.defaultPrevented,laterListenerCalls:observerCalls,expected:'first-party error should remain observable',counterexample:true});
+let rejectionObserverCalls=0;
+window.addEventListener('unhandledrejection',()=>rejectionObserverCalls++);
+const rejectionEvent=new Event('unhandledrejection',{cancelable:true});
+Object.assign(rejectionEvent,{reason:{message:'Game UI failed',stack:'TypeError: Game UI failed\n at <anonymous> (http://127.0.0.1:5173/src/main.ts:1:1)'}});
+window.dispatchEvent(rejectionEvent);
+assert.equal(rejectionEvent.defaultPrevented,true);assert.equal(rejectionObserverCalls,0);
+result.cases.push({id:'GLOBAL_REJECTION_ANONYMOUS',reason:rejectionEvent.reason,defaultPrevented:rejectionEvent.defaultPrevented,laterListenerCalls:rejectionObserverCalls,counterexample:true});
+const after=selectorInputs.map(selector=>({selector,querySelector:document.querySelector(selector),querySelectorAllLength:document.querySelectorAll(selector).length}));
+assert.ok(before.every(x=>x.threw==='SyntaxError'));assert.ok(after.every(x=>x.querySelector===null&&x.querySelectorAllLength===0));
+// Mock DOM models native invalid-selector SyntaxError; the D3 guard is executed unmodified after TypeScript transpile.
+result.cases.push({id:'SELECTOR_NATIVE_CONTRACT_CHANGED',before,after,validSelectorPreserved:document.querySelector('#app').selector==='#app',counterexample:true});
+const {WorldMap}=bundle(mapFile);
+function renderSite(site){const labels=[],polygonFills=[];const ctx=new Proxy({fillText(text){labels.push(text);}}, {get(t,k){if(k in t)return t[k];return ()=>{};},set(t,k,v){t[k]=v;return true;}});const map=Object.create(WorldMap.prototype);Object.assign(map,{ctx,view:{actor:0},camera:{zoom:1},polygon(points,fill){polygonFills.push(fill);},circle(){}});map.drawSite({x:8,y:4,visibility:'explored',site},{x:0,y:0});return {labels,roofFill:polygonFills[3],flagFill:polygonFills[4]};}
+const ownershipCases=[{kind:'own',owner:0},{kind:'known-enemy',owner:1},{kind:'neutral',owner:null},{kind:'unknown'}].map(({kind,...owner})=>({kind,...renderSite({id:'village',kind:'village',name:'聚落1',...owner})}));
+assert.equal(ownershipCases.find(x=>x.kind==='unknown').labels[0],'敵方據點');assert.equal(ownershipCases.find(x=>x.kind==='unknown').roofFill,ownershipCases.find(x=>x.kind==='known-enemy').roofFill);
+result.cases.push({id:'UNKNOWN_OWNER_ENEMY_PRESENTATION',ownershipCases,counterexample:true,expected:'own / known-enemy / neutral / unknown must branch independently'});
+const relocated=renderSite({id:'村莊-0',kind:'village',name:'聚落1',owner:0,centerOf:0});
+assert.equal(relocated.labels[0],'曙光城 · 首都');
+const capturedEnemyCapital=renderSite({id:'首都-1',kind:'capital',name:'暮星城',owner:0,centerOf:0});
+result.cases.push({id:'POLITICAL_CENTER_HARDCODED_NAME',observedName:'聚落1',relocated,capturedEnemyCapital,counterexample:true,expected:'use observed site.name, political center suffix only when centerOf is known'});
+const {createGame,applyCommand,observe}=bundle(root+'/project/src/core/game.ts');
+let state=createGame('independent-d3-recruit');
+const move=observe(state,0).legalActions.find(a=>a.type==='Move'&&a.unitId==='兵-0');
+assert.ok(move);let applied=applyCommand(state,{actor:0,requestId:'review-move',expectedVersion:state.version,action:move});assert.ok(applied.ok);state=applied.state;
+applied=applyCommand(state,{actor:0,requestId:'review-end',expectedVersion:state.version,action:{type:'EndTurn'}});assert.ok(applied.ok);state=applied.state;
+const view=observe(state,0),tile=view.tiles.find(t=>t.site?.id===view.faction.centerId),site=tile.site;
+const inferenceSource=main.match(/const occupyingUnit = view\.units\.find[^\n]+\n\s+const canRecruitAny =[^\n]+\n\s+const siteRecruited =[^\n]+/)[0];
+const {occupyingUnit,canRecruitAny,siteRecruited}=vm.runInNewContext(inferenceSource+'\n({occupyingUnit: !!occupyingUnit,canRecruitAny,siteRecruited})',{view,tile,site});
+assert.equal(state.sites.find(s=>s.id===site.id).recruited,false);assert.equal(siteRecruited,true);
+result.cases.push({id:'RECRUIT_REASON_FALSE_DURING_OPPONENT_TURN',executedD3Source:inferenceSource,usedRealCommands:[move,{type:'EndTurn'}],active:view.active,gold:view.faction.gold,ownSiteRecruitedCanonical:false,occupyingUnit:!!occupyingUnit,canRecruitAny,D3SiteRecruitedInference:siteRecruited,D3Label:'本回合已徵召',counterexample:true,expected:'action absence does not prove recruitment already happened'});
+console.log(JSON.stringify(result,null,2));
+
+STDIN
+EXIT 0
+STDOUT
+{
+  "scope": "D3 original source snippets, no browser and no source edits",
+  "node": "v26.10.0",
+  "cases": [
+    {
+      "id": "GLOBAL_ERROR_FIRST_PARTY",
+      "message": "TypeError: querySelectorAll failed in first-party HUD",
+      "filename": "http://127.0.0.1:5173/src/main.ts",
+      "defaultPrevented": true,
+      "laterListenerCalls": 0,
+      "expected": "first-party error should remain observable",
+      "counterexample": true
+    },
+    {
+      "id": "GLOBAL_REJECTION_ANONYMOUS",
+      "reason": {
+        "message": "Game UI failed",
+        "stack": "TypeError: Game UI failed\n at <anonymous> (http://127.0.0.1:5173/src/main.ts:1:1)"
+      },
+      "defaultPrevented": true,
+      "laterListenerCalls": 0,
+      "counterexample": true
+    },
+    {
+      "id": "SELECTOR_NATIVE_CONTRACT_CHANGED",
+      "before": [
+        {
+          "selector": "",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": "#",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": ".",
+          "threw": "SyntaxError"
+        },
+        {
+          "selector": ":",
+          "threw": "SyntaxError"
+        }
+      ],
+      "after": [
+        {
+          "selector": "",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": "#",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": ".",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        },
+        {
+          "selector": ":",
+          "querySelector": null,
+          "querySelectorAllLength": 0
+        }
+      ],
+      "validSelectorPreserved": true,
+      "counterexample": true
+    },
+    {
+      "id": "UNKNOWN_OWNER_ENEMY_PRESENTATION",
+      "ownershipCases": [
+        {
+          "kind": "own",
+          "labels": [
+            "城邦據點"
+          ],
+          "roofFill": "#4a6d59",
+          "flagFill": "#f3ce6d"
+        },
+        {
+          "kind": "known-enemy",
+          "labels": [
+            "敵方據點"
+          ],
+          "roofFill": "#8f4a3e",
+          "flagFill": "#d96c55"
+        },
+        {
+          "kind": "neutral",
+          "labels": [
+            "荒野村落"
+          ],
+          "roofFill": "#9c7b5d",
+          "flagFill": "#e6e3c8"
+        },
+        {
+          "kind": "unknown",
+          "labels": [
+            "敵方據點"
+          ],
+          "roofFill": "#8f4a3e",
+          "flagFill": "#e6e3c8"
+        }
+      ],
+      "counterexample": true,
+      "expected": "own / known-enemy / neutral / unknown must branch independently"
+    },
+    {
+      "id": "POLITICAL_CENTER_HARDCODED_NAME",
+      "observedName": "聚落1",
+      "relocated": {
+        "labels": [
+          "曙光城 · 首都"
+        ],
+        "roofFill": "#3a5f4c",
+        "flagFill": "#4b755e"
+      },
+      "capturedEnemyCapital": {
+        "labels": [
+          "曙光城 · 首都"
+        ],
+        "roofFill": "#3a5f4c",
+        "flagFill": "#4b755e"
+      },
+      "counterexample": true,
+      "expected": "use observed site.name, political center suffix only when centerOf is known"
+    },
+    {
+      "id": "RECRUIT_REASON_FALSE_DURING_OPPONENT_TURN",
+      "executedD3Source": "const occupyingUnit = view.units.find((u) => u.x === tile.x && u.y === tile.y);\n        const canRecruitAny = view.legalActions.some((a) => a.type === 'Recruit' && a.siteId === site.id);\n        const siteRecruited = !occupyingUnit && !canRecruitAny && view.faction.gold >= 4;",
+      "usedRealCommands": [
+        {
+          "type": "Move",
+          "unitId": "兵-0",
+          "to": {
+            "x": 3,
+            "y": 2
+          }
+        },
+        {
+          "type": "EndTurn"
+        }
+      ],
+      "active": 1,
+      "gold": 8,
+      "ownSiteRecruitedCanonical": false,
+      "occupyingUnit": false,
+      "canRecruitAny": false,
+      "D3SiteRecruitedInference": true,
+      "D3Label": "本回合已徵召",
+      "counterexample": true,
+      "expected": "action absence does not prove recruitment already happened"
+    }
+  ]
+}
+
+STDERR
+
+END 2026-10-17T23:50:20.125507+00:00

@@ -1,0 +1,62 @@
+{
+  "status": "TESTED_PASS",
+  "scope": "本任務owned context／browser／downloads／server／coordinator生命週期；不是全機任意程序掃描",
+  "activeRunnerReceipts": [],
+  "coordinatorRemaining": false,
+  "recoveryGuardRemaining": false,
+  "browserRuns": [
+    {
+      "run": "browser-final",
+      "assertionResult": "NOT_RUN",
+      "cleanup": "PASS",
+      "remaining": 0,
+      "browserDisconnected": true,
+      "contextReceipts": 4,
+      "serverPortClosed": true
+    },
+    {
+      "run": "gameplay-unpaced",
+      "assertionResult": "PASS",
+      "cleanup": "PASS",
+      "remaining": 0,
+      "browserDisconnected": true,
+      "contextReceipts": 4,
+      "serverPortClosed": true
+    },
+    {
+      "run": "gameplay-final",
+      "assertionResult": "PASS",
+      "cleanup": "PASS",
+      "remaining": 0,
+      "browserDisconnected": true,
+      "contextReceipts": 4,
+      "serverPortClosed": true
+    },
+    {
+      "run": "gameplay-after100",
+      "assertionResult": "PASS",
+      "cleanup": "PASS",
+      "remaining": 0,
+      "browserDisconnected": true,
+      "contextReceipts": 4,
+      "serverPortClosed": true
+    },
+    {
+      "run": "browser-after100",
+      "assertionResult": "NOT_RUN",
+      "cleanup": "PASS",
+      "remaining": 0,
+      "browserDisconnected": true,
+      "contextReceipts": 4,
+      "serverPortClosed": true
+    }
+  ],
+  "diskFreeBytes": 22860275712,
+  "additionalUserFileDeletions": 0,
+  "historicalCleanupAllocatedGiB": 14.2,
+  "historicalCleanupReports": [
+    "Desktop/清理紀錄-20261021-063235.json",
+    "Desktop/深入清理紀錄-20261021-065425/README.md"
+  ],
+  "protected": "ZIP／source／歷史evidence／canonical／.git／其他worktree保留"
+}

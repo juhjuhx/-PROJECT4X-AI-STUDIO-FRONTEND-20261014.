@@ -1,0 +1,15 @@
+{"label": "C5-R2-recruit-block-GREEN", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-18T17:43:51.664966+00:00", "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.672791ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.199875ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (4.105875ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.145542ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (5.088708ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (0.912708ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 195.115917

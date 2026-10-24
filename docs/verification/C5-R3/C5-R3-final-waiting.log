@@ -1,0 +1,18 @@
+{"label": "C5-R3-final-waiting", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-19T03:51:27.161218+00:00", "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.48225ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.075084ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (5.798208ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.095958ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (3.136542ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (1.216333ms)
+✔ C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點 (6.252542ms)
+✔ C5-R3：友軍阻斷完整路線時，增援仍走到合法接近格而不提前EndTurn (2.931167ms)
+✔ C5-R3：地形真正隔絕時不把不可通過地形當作暫時友軍佔位 (0.838458ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 224.286542

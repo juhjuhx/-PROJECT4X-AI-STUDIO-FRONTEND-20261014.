@@ -1,0 +1,315 @@
+{
+  "runs": [
+    {
+      "label": "C5-R3-approach-GREEN",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-approach-RED",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 1
+    },
+    {
+      "label": "C5-R3-approach-build",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-approach-check",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-approach-prefix",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-approach-test",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-approach-trace",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-browser",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-central-search",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 1
+    },
+    {
+      "label": "C5-R3-final-build",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-final-check",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-final-prefix",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-final-test",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-final-waiting",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-gameplay",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-GREEN",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-RED",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 1
+    },
+    {
+      "label": "C5-R3-pruning-build",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-check",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-prefix",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-test",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-pruning-trace",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-seed010-approach",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 0
+    },
+    {
+      "label": "C5-R3-seed010-pruning",
+      "sourceHashMatches": true,
+      "logExists": true,
+      "exitCode": 1
+    }
+  ],
+  "rawFinalSnapshot": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+  "portableFinalSnapshot": "8f18bd6e9a17f4c35707c2d864fc185710af6078aa7c7956f6af9b1f82a2a7e5",
+  "seedSnapshot": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+  "seedVsFinalDifferences": [
+    "tests/ai-stalemate.test.ts"
+  ],
+  "portableCurrentMismatches": [],
+  "protectedMismatches": [],
+  "bundleCurrentMismatches": [],
+  "seed010-pruning.json": {
+    "privateReportHashMatches": true,
+    "privateTopKeys": [
+      "schema",
+      "generatedAt",
+      "status",
+      "ruleset",
+      "node",
+      "seedRange",
+      "requestedGames",
+      "finishedGames",
+      "completedGames",
+      "failedGames",
+      "unfinishedGames",
+      "workers",
+      "integrationOrder",
+      "milliseconds",
+      "inputBoundary",
+      "limits",
+      "methodFingerprint",
+      "methodEnd",
+      "methodUnchanged",
+      "invocation",
+      "sourceStart",
+      "sourceEnd",
+      "sourceUnchanged",
+      "metrics",
+      "fixtures",
+      "fixtureFailure",
+      "workerFailure",
+      "games",
+      "humanPlayability",
+      "physicalMobile",
+      "diagnosticsScope"
+    ],
+    "privateMode": "0o600",
+    "gameScalarMatches": {
+      "status": true,
+      "winner": true,
+      "turns": true,
+      "commands": true,
+      "hash": true,
+      "terminalSaveReplayChecked": true
+    }
+  },
+  "seed010-approach.json": {
+    "privateReportHashMatches": true,
+    "privateTopKeys": [
+      "schema",
+      "generatedAt",
+      "status",
+      "ruleset",
+      "node",
+      "seedRange",
+      "requestedGames",
+      "finishedGames",
+      "completedGames",
+      "failedGames",
+      "unfinishedGames",
+      "workers",
+      "integrationOrder",
+      "milliseconds",
+      "inputBoundary",
+      "limits",
+      "methodFingerprint",
+      "methodEnd",
+      "methodUnchanged",
+      "invocation",
+      "sourceStart",
+      "sourceEnd",
+      "sourceUnchanged",
+      "metrics",
+      "fixtures",
+      "fixtureFailure",
+      "workerFailure",
+      "games",
+      "humanPlayability",
+      "physicalMobile",
+      "diagnosticsScope"
+    ],
+    "privateMode": "0o600",
+    "gameScalarMatches": {
+      "status": true,
+      "winner": true,
+      "turns": true,
+      "commands": true,
+      "hash": true,
+      "terminalSaveReplayChecked": true
+    }
+  },
+  "publicPayloadHits": [],
+  "allRunSnapshotHashesValid": true,
+  "finalManifest": {
+    "sha256": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc",
+    "entries": 72,
+    "containsDSStore": false,
+    "containsMemory": true,
+    "selfIncluded": false,
+    "mismatches": []
+  },
+  "restoredReviewDifferences": [],
+  "reviewFileCount": 54,
+  "C5-R3-browser-report.json": {
+    "status": "PASS",
+    "scenarioCount": 11,
+    "errors": []
+  },
+  "C5-R3-gameplay-report.json": {
+    "status": "PASS",
+    "scenarioCount": 12,
+    "errors": [],
+    "traceType": "list",
+    "gameplayScenario": {
+      "id": "continuous-existing-gameplay",
+      "status": "PASS",
+      "driver": "real DOM/keyboard buttons; production opponent AI; Observation-only test policy",
+      "maxHumanCommands": 220,
+      "humanCommands": 209,
+      "policySteps": 208,
+      "turn": 37,
+      "captureAfterAttack": true,
+      "replayVerified": true,
+      "privateExportPersisted": false
+    }
+  },
+  "indexedRunCount": 24,
+  "indexedRunLabels": [
+    "C5-R3-approach-GREEN",
+    "C5-R3-approach-RED",
+    "C5-R3-approach-build",
+    "C5-R3-approach-check",
+    "C5-R3-approach-prefix",
+    "C5-R3-approach-test",
+    "C5-R3-approach-trace",
+    "C5-R3-browser",
+    "C5-R3-central-search",
+    "C5-R3-final-build",
+    "C5-R3-final-check",
+    "C5-R3-final-prefix",
+    "C5-R3-final-test",
+    "C5-R3-final-waiting",
+    "C5-R3-gameplay",
+    "C5-R3-pruning-GREEN",
+    "C5-R3-pruning-RED",
+    "C5-R3-pruning-build",
+    "C5-R3-pruning-check",
+    "C5-R3-pruning-prefix",
+    "C5-R3-pruning-test",
+    "C5-R3-pruning-trace",
+    "C5-R3-seed010-approach",
+    "C5-R3-seed010-pruning"
+  ],
+  "rootResultsManifestShaMatches": true,
+  "sourceSelfReference": {
+    "manifestExcludedFromOwnFiles": true,
+    "resultsWithManifestShaExcluded": true,
+    "commitIdentity": "tested baseline plus byte snapshot; checkpoint SHA intentionally deferred to external FINAL-GIT-STATE.json"
+  }
+}

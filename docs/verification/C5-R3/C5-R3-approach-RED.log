@@ -1,0 +1,50 @@
+{"label": "C5-R3-approach-RED", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-19T03:46:50.483756+00:00", "snapshotSha256": "5002c15431dc7b9c8f7535ef2f21cda7ab2a509983bd7dcd8328720d8dec5387", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.600125ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.24375ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (5.061625ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.143833ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (3.314792ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (1.46325ms)
+✔ C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點 (5.968292ms)
+✖ C5-R3：友軍阻斷完整路線時，增援仍走到合法接近格而不提前EndTurn (4.5095ms)
+✔ C5-R3：地形真正隔絕時不把不可通過地形當作暫時友軍佔位 (0.929ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 220.180292
+
+✖ failing tests:
+
+test at tests/ai-stalemate.test.ts:1:6339
+✖ C5-R3：友軍阻斷完整路線時，增援仍走到合法接近格而不提前EndTurn (4.5095ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   type: 'EndTurn'
+  -   to: {
+  -     x: 1,
+  -     y: 0
+  -   },
+  -   type: 'Move',
+  -   unitId: 'reinforcement'
+    }
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-stalemate.test.ts:140:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { type: 'EndTurn' },
+    expected: { type: 'Move', unitId: 'reinforcement', to: { x: 1, y: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

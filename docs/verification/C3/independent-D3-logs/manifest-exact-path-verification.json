@@ -1,0 +1,334 @@
+{
+  "timestampUTC": "2026-10-17T23:49:28.339063+00:00",
+  "command": "SHA256 of each STAGE3 manifest exact relativePath; only evidenceAssets resolves under 證據/",
+  "entryCount": 40,
+  "matches": 40,
+  "entries": [
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "src/core/game.ts",
+      "exists": true,
+      "expected": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "actual": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "src/core/ai.ts",
+      "exists": true,
+      "expected": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "actual": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "src/core/persistence.ts",
+      "exists": true,
+      "expected": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "actual": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "src/core/types.ts",
+      "exists": true,
+      "expected": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "actual": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "src/ui/assets.d.ts",
+      "exists": true,
+      "expected": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "actual": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "tests/core.test.ts",
+      "exists": true,
+      "expected": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb",
+      "actual": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "tests/review.test.ts",
+      "exists": true,
+      "expected": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab",
+      "actual": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "tests/流亡重建.test.ts",
+      "exists": true,
+      "expected": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394",
+      "actual": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "tests/artifact-proof.test.mjs",
+      "exists": true,
+      "expected": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6",
+      "actual": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/headless.ts",
+      "exists": true,
+      "expected": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "actual": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/verify.mjs",
+      "exists": true,
+      "expected": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "actual": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/serve.mjs",
+      "exists": true,
+      "expected": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "actual": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/browser-check.mjs",
+      "exists": true,
+      "expected": "13e515cc603332b8b8a2cb1cabbdacc73eccf743c334a1c76fa2404b4b76c1f3",
+      "actual": "13e515cc603332b8b8a2cb1cabbdacc73eccf743c334a1c76fa2404b4b76c1f3",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/context-init.mjs",
+      "exists": true,
+      "expected": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "actual": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "scripts/artifact-proof.mjs",
+      "exists": true,
+      "expected": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "actual": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "package-lock.json",
+      "exists": true,
+      "expected": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "actual": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "match": true
+    },
+    {
+      "group": "unmodifiedCoreFiles",
+      "relativePath": "LICENSE",
+      "exists": true,
+      "expected": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+      "actual": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "src/main.ts",
+      "exists": true,
+      "expected": "068810134d1e483384bd9037e8da87096c551f2bb0c3740d62f497e86418e2fd",
+      "actual": "068810134d1e483384bd9037e8da87096c551f2bb0c3740d62f497e86418e2fd",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "src/styles.css",
+      "exists": true,
+      "expected": "0ee4bf7de9f3f0d60251ca592ac3020781273c7b7cfdd06f5ca668c86bd2c2f0",
+      "actual": "0ee4bf7de9f3f0d60251ca592ac3020781273c7b7cfdd06f5ca668c86bd2c2f0",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "src/ui/map.ts",
+      "exists": true,
+      "expected": "323d7dfee8b586b34ff6d7f8096338d31c95ce095eb721a9dfd27fb93a09995c",
+      "actual": "323d7dfee8b586b34ff6d7f8096338d31c95ce095eb721a9dfd27fb93a09995c",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "index.html",
+      "exists": true,
+      "expected": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "actual": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "package.json",
+      "exists": true,
+      "expected": "6a5a066a7383c2009010d3cd24f2cebc069b192b6e4936b58a51ea5aeb88c2b9",
+      "actual": "6a5a066a7383c2009010d3cd24f2cebc069b192b6e4936b58a51ea5aeb88c2b9",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "vite.config.ts",
+      "exists": true,
+      "expected": "26609df8aa3e224a2907501fd71f295cfc0ff83ac24647cc52953946273e0b5c",
+      "actual": "26609df8aa3e224a2907501fd71f295cfc0ff83ac24647cc52953946273e0b5c",
+      "match": true
+    },
+    {
+      "group": "modifiedUIAndConfigFiles",
+      "relativePath": "LICENSE-STATUS.md",
+      "exists": true,
+      "expected": "8efb582295e339028f3b0cc7e1ed00421d32b171d5c6791083a7a220f76881ab",
+      "actual": "8efb582295e339028f3b0cc7e1ed00421d32b171d5c6791083a7a220f76881ab",
+      "match": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "relativePath": "docs/art/ART-DIRECTION.md",
+      "exists": true,
+      "expected": "491bb6dfde5eecb1bd43143402858ac9f18d6a5f776793fae3a6d3108b909d77",
+      "actual": "491bb6dfde5eecb1bd43143402858ac9f18d6a5f776793fae3a6d3108b909d77",
+      "match": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "relativePath": "docs/art/STYLE-BIBLE.md",
+      "exists": true,
+      "expected": "8ddca346de3bc4c5f90a555439214b71d7d266e0b39080103152d3ac40d34d18",
+      "actual": "8ddca346de3bc4c5f90a555439214b71d7d266e0b39080103152d3ac40d34d18",
+      "match": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "relativePath": "docs/art/DESIGN-TOKENS.md",
+      "exists": true,
+      "expected": "d7d8503ee41b024d6b19c27966c3a89b24d89dfb2791d4ac02abf309fb48dd99",
+      "actual": "d7d8503ee41b024d6b19c27966c3a89b24d89dfb2791d4ac02abf309fb48dd99",
+      "match": true
+    },
+    {
+      "group": "artSystemDocumentation",
+      "relativePath": "docs/art/ASSET-GUIDE.md",
+      "exists": true,
+      "expected": "697839370744cfa74e41ecc5f293a31f775adfd7e530bd2b1a8dfc2c6b14b149",
+      "actual": "697839370744cfa74e41ecc5f293a31f775adfd7e530bd2b1a8dfc2c6b14b149",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/Desktop-1440x900.png",
+      "exists": true,
+      "expected": "3f595dc1f5933b0aff30f6954cd65d4c69a063d9cf327567f3933a17241bc00e",
+      "actual": "3f595dc1f5933b0aff30f6954cd65d4c69a063d9cf327567f3933a17241bc00e",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/Desktop-1920x1080.png",
+      "exists": true,
+      "expected": "1f4775f283c45da7f46581c420f448ab78fb85865e03222cb3e11784ae3d337b",
+      "actual": "1f4775f283c45da7f46581c420f448ab78fb85865e03222cb3e11784ae3d337b",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/browser.json",
+      "exists": true,
+      "expected": "138a48cabc341d79d046c023d8c3ec952672a7bfcacc5d2e39f1b4990bac9dbf",
+      "actual": "138a48cabc341d79d046c023d8c3ec952672a7bfcacc5d2e39f1b4990bac9dbf",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/iPad-768x1024.png",
+      "exists": true,
+      "expected": "47778acc1b3f966e82cd5abdb95f0138b366105b04dd217ad7fc28bf334f53a8",
+      "actual": "47778acc1b3f966e82cd5abdb95f0138b366105b04dd217ad7fc28bf334f53a8",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/iPhone-14-390x844.png",
+      "exists": true,
+      "expected": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "actual": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/iPhone-14-Pro-Max-430x932.png",
+      "exists": true,
+      "expected": "dc50dd788a40247eb4790818d2eaef04441e19b663051191e4ee01746724ce17",
+      "actual": "dc50dd788a40247eb4790818d2eaef04441e19b663051191e4ee01746724ce17",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/stage2-qa-report.json",
+      "exists": true,
+      "expected": "809f4a3106eed2e823b32ca0755f18a7956081e41efd65a0af8ec841ab1d7161",
+      "actual": "809f4a3106eed2e823b32ca0755f18a7956081e41efd65a0af8ec841ab1d7161",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/手機橫式.png",
+      "exists": true,
+      "expected": "1c68fb96d0adf2d3eac4a9db8243ed663f4066f25c1654b6d8fc35b66ea601bd",
+      "actual": "1c68fb96d0adf2d3eac4a9db8243ed663f4066f25c1654b6d8fc35b66ea601bd",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/手機直式.png",
+      "exists": true,
+      "expected": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "actual": "8ed0739d824d29a3498e2b350315ba2c72268c092f4b48021c84065e3a333710",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/桌面初局.png",
+      "exists": true,
+      "expected": "8f6a315fa57a9a1ce0b00cb21c01a869a20fb106d6f51fcdf40cf8ed76e916c9",
+      "actual": "8f6a315fa57a9a1ce0b00cb21c01a869a20fb106d6f51fcdf40cf8ed76e916c9",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/窄手機.png",
+      "exists": true,
+      "expected": "3e15b66b1b369e9ef8ad2d7250f912a36c70505128654b4fdae99a8b88ca53d6",
+      "actual": "3e15b66b1b369e9ef8ad2d7250f912a36c70505128654b4fdae99a8b88ca53d6",
+      "match": true
+    },
+    {
+      "group": "evidenceAssets",
+      "relativePath": "證據/遺跡選擇.png",
+      "exists": true,
+      "expected": "99fd81ff16bc1cb031ea3ebd7300efa6d966899650fe1d3e3efd32f7ee7cffe8",
+      "actual": "99fd81ff16bc1cb031ea3ebd7300efa6d966899650fe1d3e3efd32f7ee7cffe8",
+      "match": true
+    }
+  ],
+  "license": {
+    "projectRoot": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+    "d3Root": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+    "C2Commit": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+    "manifest": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e"
+  }
+}

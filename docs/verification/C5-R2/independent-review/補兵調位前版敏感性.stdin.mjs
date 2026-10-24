@@ -1,0 +1,18 @@
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+import { transform } from 'esbuild';
+const url=p=>pathToFileURL(resolve(p)).href;
+const moduleURL=async source=>'data:text/javascript;base64,'+Buffer.from((await transform(source,{loader:'ts',format:'esm'})).code).toString('base64');
+const source=readFileSync('src/core/ai.ts','utf8');
+const start=source.indexOf('    if (score(attacks[0]) >= 0) {');
+const end=source.indexOf('\n  }\n\n  const research',start);
+assert.ok(start>=0&&end>start);
+const predecessor=source.slice(0,start)+'    if (score(attacks[0]) >= 0) return copyAction(attacks[0]);'+source.slice(end);
+assert.equal(createHash('sha256').update(predecessor).digest('hex'),'4490459c2b690dacddf8a0a780cba42b76871ff945d5cfd9486d29ee3545e655');
+const predecessorURL=await moduleURL(predecessor.replaceAll("from './types'",`from '${url('src/core/types.ts')}'`));
+const tests=readFileSync('tests/ai-stalemate.test.ts','utf8').replaceAll("from '../src/core/game'",`from '${url('src/core/game.ts')}'`).replaceAll("from '../src/core/ai'",`from '${predecessorURL}'`);
+await import(await moduleURL(tests));

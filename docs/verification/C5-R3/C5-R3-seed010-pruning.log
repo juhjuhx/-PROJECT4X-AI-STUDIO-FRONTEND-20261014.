@@ -1,0 +1,7 @@
+{"label": "C5-R3-seed010-pruning", "cwd": ".", "command": ["env", "PROJECT4X_QA_START_SEED=10", "PROJECT4X_QA_GAMES=1", "PROJECT4X_QA_WORKERS=1", "PROJECT4X_QA_MAX_TURNS=800", "PROJECT4X_QA_MAX_COMMANDS=40000", "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/seed010-pruning.json", "npm", "run", "qa:headless"], "startedAt": "2026-10-19T03:43:58.242306+00:00", "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 qa:headless
+> node --import tsx scripts/headless.ts
+
+1/1 獨立QA-010 FAIL turns=801 commands=19898 winner=null 89520ms
+{"status":"FAIL","completedGames":0,"failedGames":1,"milliseconds":89583,"metrics":{"actions":{"Move":15187,"Attack":3013,"Capture":8,"Recruit":880,"Research":6,"ResolveRelic":4,"EstablishCapital":0,"EndTurn":800},"relicGold":2,"relicIntel":2,"exileEntries":0,"centersEstablished":0,"eliminations":0,"maxUnits":61}}

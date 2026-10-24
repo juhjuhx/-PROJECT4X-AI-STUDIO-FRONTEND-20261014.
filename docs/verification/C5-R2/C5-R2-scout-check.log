@@ -1,0 +1,9 @@
+{"label": "C5-R2-scout-check", "cwd": ".", "command": ["npm", "run", "check"], "startedAt": "2026-10-18T17:34:44.204632+00:00", "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 check
+> tsc --noEmit
+
+tests/ai-stalemate.test.ts(21,28): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+      Type 'undefined' is not assignable to type 'string'.

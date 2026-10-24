@@ -1,0 +1,1059 @@
+{
+  "schema": "project4x-public-projection-1",
+  "originalSnapshotCommit": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+  "scope": "只修改公開副本；原完整Git及原Doc bytes/歷史FAIL留於原工作樹與本機封存，不直接推本地祖先歷史",
+  "originalRecords": "歷史sourceFingerprint/logSha仍表示原私人原件，不代表已去識別的公開文件bytes；每份公開投影在本表有獨立SHA",
+  "files": [
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "originalSha256": "c0a6291c514f0020c0cfbb2b89e2f2ad3c23a23249c0e39ba5f6c13651abf13f",
+      "publicSha256": "fc2440fee0f725825394490d6a4cf94546b03d18934ec3d2a15b1dad01c49a5c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/handoff/C3-VERIFICATION.json",
+      "originalSha256": "6f6bdea27becf33468fba67b03b70dc4e58d0ceed5e375103617ae8aa4a2dd20",
+      "publicSha256": "d43243a676e5f438ebd4bab9cd2571f40eec14149d52888e1883102ce7ca132d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/handoff/C5-AI-DIAGNOSIS.md",
+      "originalSha256": "de192983f9d90ef378486b1960608165e761db5332843ad93e9bad9a10474608",
+      "publicSha256": "7fb7ec4d66e7865650e9cff42c44a8754efeb029650e09eaab250619eee62e87",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "originalSha256": "e6e44eccf9b7fe6da1d7f48ce62deb61c2a8ae1441a60a9eb39d6235f9b20f7d",
+      "publicSha256": "ab49d2fc4c56b0223e14581e649eb784b7ecd605ffbdeefb81436f30f1209c29",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "originalSha256": "7f3d1a04b809eadb511019e03a923919b8858c20358af77fa15635027788dd69",
+      "publicSha256": "66f063a88ea6fdd2aaa86633f654d608c55e3aeee1454e4116dc199a64423831",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "originalSha256": "ef1e64d6619abf77463acca4a1b85914f8c9b4600cb463c5456684d18756e512",
+      "publicSha256": "a2070eb202fc1983f035ed80d1040f58ab032e628cc796e90a2686d523039e19",
+      "kind": "PUBLIC_AUTHORITY_UPDATE",
+      "change": "去識別後按本輪授權更新當前入口；原文件版本留原完整Git，非原始raw receipt"
+    },
+    {
+      "path": "docs/qa/REPRODUCE.md",
+      "originalSha256": "25f71aef41cd9f34c709bdd90eb20cffa57d0e843448b10465622ac6ac859e5c",
+      "publicSha256": "262e02321444a13fb970543a553d28335dac55724776c3791fe649ae1d7ca5d2",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-browser.json",
+      "originalSha256": "6481aac1bfb76677a262687fdb9d6d400c6a38107cb49a97bda677f9468ae3f7",
+      "publicSha256": "f9baa840a454d17961371223a10c3bc144b0a74581ae463ae9ec258acc6f1f07",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-browser.log",
+      "originalSha256": "5225885d1cd153c66a6f1164f9dce10e7149492da5a49413dc5992a070b0f6b4",
+      "publicSha256": "dd99fbe94787ad0b27aca3a5a516d44d1552a2cf0427826284ea2daafdacb9e8",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered.json",
+      "originalSha256": "313d64fba621e09bc1c994ede027b26e676051cfc52511f7fbbf03cb86cc76da",
+      "publicSha256": "67109945efad61ce8af687fc5b5b8f848abf23d3cef6317413d31a94c3ae2f37",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered.log",
+      "originalSha256": "2a884e6339fe1311e4a4034c8c1f5d4436712f756cef59710890cc0f1c6fc508",
+      "publicSha256": "5cfd14f899b670e09e772b3c07b946d60685f643f14760e8c484aaf20ae13c79",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-map-red.log",
+      "originalSha256": "8c24e8c935a15df292865ae08badee4653e46dfca7131fa3597cae3824ad116c",
+      "publicSha256": "efb19a5eb738a6d378f2134d8fabb13efbb3b948a231e32e00a2890e5dd9b910",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-ocr-final-preview.json",
+      "originalSha256": "35388927a27e35dbdb8ae6ecd888c48f40c34e775767695ea4c737fc494e9d29",
+      "publicSha256": "505cc4a623e8be8aec325ed066603e65d9107c784d336aa21914c555173ad5d9",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-recruit-red.log",
+      "originalSha256": "74baf7e63aafd0017d2545cb74dab16268fe10dd3093466805432b8fdd08b98f",
+      "publicSha256": "fdd028b62861240b398f64e35d99aab31e743751e1a9a0db83e5aafa655b425e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser.json",
+      "originalSha256": "d977d9132a45ac8afe9cdb3a2b6431df0fb242cb5fe4f2b6d7aab1a43a3a141b",
+      "publicSha256": "e550f51cce03d7f987f747e5ebd787267ccd8c4bfa7a2729b92dfe40d5775985",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser.log",
+      "originalSha256": "27934e11e83b166de89f3df90edc1a0fd977edc02c8f6bc172f8855c5c4de9ce",
+      "publicSha256": "cb798a517d73c7634d8f061585dbe2edafb88adaeb6a7e0a16dfd39e48bc8332",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-tab-red.json",
+      "originalSha256": "3acc37e78f2b12fe8d5757fcfe454f08e38e997a25b5ece9732d7e21ed55a6a3",
+      "publicSha256": "5e2ce548a4b8a237f5e12b7c0872d1b530b58842c34ab5e607146a8f122c6cb1",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/C3-tab-red.log",
+      "originalSha256": "550df3a2eb2764f00531b9bb7be9bd12a6533344b89e1c1282cf7119bbddcfb2",
+      "publicSha256": "b967536b47f61f0b475b4666cc7ca739d164f640e8cf01ca421e26efdfc797c4",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-browser.json",
+      "originalSha256": "13b60c74543757f21685ff7a3cd6a0f02890559883dc8a8273c0c6463be9ad39",
+      "publicSha256": "7d0797c918ae735639661fca4ab3c289c50ade0900525871f26e4a6763b91199",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-browser.log",
+      "originalSha256": "17fbd7a707229c7e46f9e29c9feb4e22b7185c80a772bc090f662b99878e1aad",
+      "publicSha256": "3d87ede4b13f96a0dc648974dbecf1e953cd43508b854c0d8d13aa6d5c337fd7",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-stage2.json",
+      "originalSha256": "475ebf3c16555b55084b13d9956656582eddb58c4ecbabffd5f8ee9d2664082c",
+      "publicSha256": "dbe9473a2bccd98ae08c91b8f46d71aca680737c1257f4dc2871047001a6d92d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-stage2.log",
+      "originalSha256": "770220d7e62e3a3a365764019150f1fcafc2267e28ab1756ba0a1bfa03f288f8",
+      "publicSha256": "293fc480a0c1782ce2e4f90c00048a4f598c3889d9df933f3d7a5dc4ade6c936",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-C2-review.md",
+      "originalSha256": "45248f38716cacfcf8af5ee270d331d45af9fabbfaec866b62731cc8322a5bfd",
+      "publicSha256": "d06baa0022a154dbb6cb6de381e85b4ec6af2f9666a68ad8125db341c4673160",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/map-to-inspection-attempt1-harness-error.log",
+      "originalSha256": "7317e535e8f12128b1d6b1913067b8aebf186ff07055f13229c717716db6ba35",
+      "publicSha256": "a1266b18af4bea3d174e47b9d1ab52a1b4ac5f79593a95f4f2a59ec1440632eb",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/map-to-inspection-counterexample.log",
+      "originalSha256": "40dee19b352259e36fcae1d7ed378152f7c13c792888faf9ff16f6a14537f84d",
+      "publicSha256": "2e151ca424989759e9914a4a0e239565053c2593fdd693edd9930d82bf7e752a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-logs/counterexamples.log",
+      "originalSha256": "5f195da92c07ddc567c92258f23567899e05cb1f4e7aab3fd64c1d856bb97669",
+      "publicSha256": "d8ba84bcf9ecd14d3708a739024ef97157b9297df35a8d1daac243a00a7820bd",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/ordered-cleanup-attempt1-mock-label-harness-error.log",
+      "originalSha256": "43a20c70bd0b30a0a547031bea6f41170aea3e9472a653cbc3ba5b6e771d89f5",
+      "publicSha256": "b22893b4936b7b97a9b96f4ee396452723e416702fde36b91fcdbc12f68767ed",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/ordered-final-verification.json",
+      "originalSha256": "eb6a786b02a9174694a0a176b64fc184cc7f69f5160d662c58216047d64edc83",
+      "publicSha256": "fdaed42371eb74afcb65aad6d040bbfc24b113845117639162774fd71d22e305",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/strengthened-attempt1-realm-harness-error.log",
+      "originalSha256": "609482c1e4047f07be124398589bc8cde24203cf11150bd459ac5f3242e78586",
+      "publicSha256": "48c07b58a9ef8a7fbee9a526703a99d4e55fd568f0499620be208471d90d7702",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-TEST-RESULTS.json",
+      "originalSha256": "87c83503d3f9368b6e8342cced823f3f0fd9a5e8d6ce48dfb0a7604d1468c613",
+      "publicSha256": "d4da482beb46652b6ab23eb471a1a54c6045ba84aadb5415e90efb5f59982c47",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-server.log",
+      "originalSha256": "cbf5fa0ba97b64fae6fda1c031980a1f16916725a0baf47bddf81ec55bcb974c",
+      "publicSha256": "af06660bec047d5a630e92e2585022b0c5e349e723804a2ea236eb32da538cee",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.json",
+      "originalSha256": "f1e01e6861a6eaa10a2fc98073b9ed3b1296cbccc18ee1818433f9147549bbc2",
+      "publicSha256": "c1e1074c02d5e3a5d910c353f376826d88ea2d5cd9416703d36fc7bd7db0703e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.log",
+      "originalSha256": "2787041585782d8be7db7f3d98fbf390ed0101109b39ca194d3767158eb30340",
+      "publicSha256": "32efb5c7339133913dd6e29490bbcf438fe40790a33344cfa04f8c4ece375a22",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.json",
+      "originalSha256": "24aef82ac51376715162ad04359f9bc62f5fc233c87bce473ac6526f0dea879e",
+      "publicSha256": "a0bfb591a1296f734ec3840243b1f369517a0315e27ccb41efb66ab70e0fcfc6",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.log",
+      "originalSha256": "f9228e0280e272aef74cc62e8086d3aa618869fbbc713a9e7faba21e2e2a47bf",
+      "publicSha256": "b8bdb76ef86331e8a09398b2d220c949cda2ac4a7beb2d63057e98d321188e7c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.json",
+      "originalSha256": "ed607947fabdf2ed38805e214fd9526610727fd6e09e5d9d42a5790957cd4a50",
+      "publicSha256": "fd3ccb34bd2021368706915b9bad3b0ce35346ff40c240d2f99c2b1555a90ae9",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.log",
+      "originalSha256": "96850a5fadb2c1d3bc1d7fdd9c5be4f958bf98c7a968f90cf754b986f2dc39ec",
+      "publicSha256": "82267802c185b4a805cef0ea450f352481ec9abf2b64995149405a1d7ec1f32c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-RED.log",
+      "originalSha256": "e2fccf2a64a0a687302be621b3a6cc151d5ab44e772404653c5cb10ba6c94481",
+      "publicSha256": "16fe80f7ddcea02f7e667e1100464713bcb9a192444ab13c151aeed49d7262f6",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.json",
+      "originalSha256": "0f25df8a248746c1e6cd4bff2d8c7624db9d0b452bbc46555dfd4a459b351d99",
+      "publicSha256": "b472f6198c591f796cbd4f1f1e40348fd2e9ed90c8d5419e47e2ce02b0990d90",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.log",
+      "originalSha256": "825566561f7484872f805443418806848afe2f8a5f28d5db72c3fee6a831620e",
+      "publicSha256": "9a5a5ff59b728754c975d56b7238e49b3ffa8d9337f319852e2ec384493c934e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.json",
+      "originalSha256": "4d5bdf461a55237c19164bf7ce0558dd4b6d4e120a0c49c8fb3eb72b87564ac8",
+      "publicSha256": "9e4b0963f55fe1411e5aab2642e2102e1a13d478789235e932630f22427c677e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.log",
+      "originalSha256": "778bfbc68f425aebf02a7cd9d25c8fa1eafc3813f63b0071782bb7b830b8f75a",
+      "publicSha256": "2ec205cadd289a0650879a6d2f36af177cb0ad781689f141602b71d325dc09f9",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.json",
+      "originalSha256": "71c922b98ceb308163bbe451be7ad6401e22b0fcbd97af34abfc28343a44df2e",
+      "publicSha256": "cbb3c47436d8bf8749670b87983b825553bd8dc63516a600588cfae4d1acc3c4",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.log",
+      "originalSha256": "1e00039387440c6ac47aecbc1e2a0c1133b79d0f1f8d5e0cab4b2c53dd83d18f",
+      "publicSha256": "063e1f8145c4ffa99fcf834daa99f7352b4f68044d408b1930682586bb962dde",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-RED.log",
+      "originalSha256": "2bc13413f2a1631ffc9caf4f465e05d0f6a1a0874a9b9f118cb504124451fbdb",
+      "publicSha256": "35ceb24eacab79462337c1d01177f87d2e87c8d92c7398a3d22812b198897b0a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.log",
+      "originalSha256": "def189e0561ae8ebd4fe6f9f9972ef6a7a354ca5b2395a1e0596cace4dc44b3f",
+      "publicSha256": "6e7b2477093d5e47b2a61067c44b728b161b952b74a0d41ff64795044b27f740",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-valid.log",
+      "originalSha256": "f657065dc8c1a7dfd2c3afa23ea22277157328417cda673dde56ca6252aa5125",
+      "publicSha256": "f378857a6ab1f792b45ea041f4d0c408fdc74c38ad93fd0e09d8f7f5b32586bf",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED.log",
+      "originalSha256": "6bf1f5fa8dacd9b6d33ac5532384549d12ce1974a5d14ea8c35ca4cd0a3c2fa2",
+      "publicSha256": "758fdf563538a51a3d0e497e4ed5cd36ae8a8eca25c006668475e0d1ddb2db2a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-prefix.log",
+      "originalSha256": "dc7baefe94f3c7e941707a25bd9fc3650030d269c460dc63fd21ac3cc9dac950",
+      "publicSha256": "0a5f5dbb026781ce14d2c0c8e8d3035ea0ebde1089554637b8f45fa4cbf25289",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-test.log",
+      "originalSha256": "29dd147aac208baf88f9500646305d83449439aae57bcb7c879f25c2928e692d",
+      "publicSha256": "b35d8ef28f3d6b16d06970d5c8bb5ab90f91dff53512d7e6c8b6b891ccc51e7c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.json",
+      "originalSha256": "419d96e0a38148e539a6c5181c3bbab96ebfbe49f81eb66d46434899f8320244",
+      "publicSha256": "856abe79d622662bcea5cf52b2a4ff34d650d8fcbf75d31cf20587fe9091100d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.log",
+      "originalSha256": "a558e72acdea2bf7d3c51b0c7c3e3c71bdc1d561896a75297edd5c5c684678a7",
+      "publicSha256": "6322db2b544b7d875b6ce5e96f7c6f6a76be042648a2477038c34e9234e87242",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.json",
+      "originalSha256": "c2b02f5a0aefda545052e036a4e21b3a5a5f48b43cfbe65ee96057263fdbc620",
+      "publicSha256": "214732ec051139e97c292b758100b9fe21584322b8b7bcd5cbe8a7a35294459d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.log",
+      "originalSha256": "f7f86e8924f8c826a0c109603f140fbd28a9b175cbb03f1d7afaa0e1385fde63",
+      "publicSha256": "d52ba66bccca1c3c188983b5eda7e1334b1073189fe50bac34aa85bf5763bd6a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/OCR-preview.json",
+      "originalSha256": "b9843d803b33997a5f5c1a873b889bcb697d40e77a1a0402bcf291a42f59b358",
+      "publicSha256": "41836043571a1abb4fb54602a801f5ede445672765f125857f9519b9b4c29c9e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/R1-C5-VERIFICATION.json",
+      "originalSha256": "11554aa00d51bfba9f4d6b3cfaeaa01f146777fb3c496bc53f2fa69180c52693",
+      "publicSha256": "96e7166f639968b17a06b4603bfddbf3b2137b153a4d90856549213a3e2e0315",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位驗證紀錄.json",
+      "originalSha256": "4e0a18e972d5e65a2df2eacb234cc9f884a328a4736f3623de51befc7a789072",
+      "publicSha256": "2831af7c69c3d355450bdf6e0e4e3428ea494e60ea12014900989234564527c0",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核紀錄.json",
+      "originalSha256": "97240cb4af97a147eca3843714afdcb82cc09b58bc66bb6193daea2a4c34a45f",
+      "publicSha256": "d644bf78ff9130ffd3832ee2146bc4a18586f3750c334a0ac724b0c9c85568cc",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本驗證紀錄.json",
+      "originalSha256": "330e7343a3f911d722b82814da74d6d5c8351bd90d73f9c6b0b8f855d89b947f",
+      "publicSha256": "7491d590d81d08e2638e50118ff97ed7afec52953902ff209f8176288597b8ac",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/驗證紀錄.json",
+      "originalSha256": "2d08dc47fd02529ed3d5ed945bdb59ce8b13bc648af8d488ae27e46c69977254",
+      "publicSha256": "3d060e8ac6a4d8726bc843b451faaf48b4cd2c733f78a57bf7667e7bb765d3bb",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-GIT-SOURCE.json",
+      "originalSha256": "4ef8edf9b921afff8607275c5fda063abe2ccb86c2155ec602691f1ffc964a51",
+      "publicSha256": "4f5c7b8e0a99e3bdd249cd38a2738fb3db4718e8da803755950167d66fd3427d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "originalSha256": "04278a5e9170bbb21ca561fb7e76f0382b94991c90cf259785deec3def7cc3c9",
+      "publicSha256": "87e5d2f2c1af04851d51c45c8fe69336a66aa67df5b8eef7c006a0e82b5b86fe",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.log",
+      "originalSha256": "7594c70e5f2527577b18a5f6ae1bb0d4c2a9b6e6f558f8f2d03aff2d1f18f608",
+      "publicSha256": "2cddc389a0103c1adc6472dc4a55019f8f22a2157d8b9b943211e5fc2e937bfe",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.json",
+      "originalSha256": "b6737c77fac5ec1df34b5454ba026bc7d8a19234c71c9f8f62f392d4ef04c166",
+      "publicSha256": "349abceb692780679802051c0f78890f3d3134d3d8247939d316707035d87670",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.log",
+      "originalSha256": "aaa75b620b645094691e29187eac79a6fe1299eadb10202bcb33baba22fb191f",
+      "publicSha256": "b9568a28d77d42f1d75b79ac9de7e4a62b48d6f57bc1d9fbb5cbf6a2464672f8",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-base-FINAL-GIT-STATE.json",
+      "originalSha256": "2aca88b698d2553aa538d3c7f66f93ce887fed60fe821f43bad91b9286f4908b",
+      "publicSha256": "ce9bf817c606f03b98e8656582080289031e52812a09ea914b1983b9fa29117d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.json",
+      "originalSha256": "6864da8694b321c22684c199e27b8fa330ae0f9bed87909e33466433c1d0fa75",
+      "publicSha256": "1a260a9d9e36933fa83ddeeee1fbf856e4ae00b0b64c18e4cd92d891c2a7ee6c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.log",
+      "originalSha256": "b5e92a1bf01a7bdc9db83d823866db4a194dd3b241b64333b156acc89aa95f01",
+      "publicSha256": "dd9695367ed94b9dfc71123c2485896b979d7ecdb0003aabb8cf7a5dbb9a2d1d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.json",
+      "originalSha256": "fb1da7185d4b1132bf0ab644639d338b0c84f118c4ae7b4bd059daeb638b7c9c",
+      "publicSha256": "9e3508cffbd1b6ce577071f36cfec46610c210bae712704dba73eb3899366b69",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.log",
+      "originalSha256": "2ead7c9736aefe94c96843f4fff0c78ef6bb1b60f09eecf5b3f1b79393d95999",
+      "publicSha256": "5aff8f4cf451739e39f8a985fc27b90e28f138eb123eff9ea895bd5f25afea74",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.log",
+      "originalSha256": "440815232c9d701dd811db9a4b10a8a056e653733c9e9459464ec03a1e5fc81f",
+      "publicSha256": "81b34cf1a0b1367cc69f7283b3eecca84de389594ace66a1b97ba1fe0906b455",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.json",
+      "originalSha256": "25de1cad93cc8281365dddb3bd9a774e9a39269fa1158c9e9ff1b5668fd31b51",
+      "publicSha256": "3f694b156437b6b35ba3222dc88f91c7b0f244489712c1e0a8edf7812f3d543e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.log",
+      "originalSha256": "95f030c8e5e19b7a8bc8fd0562d478ff2fcd58fd09f320d62e527fe94824e1b8",
+      "publicSha256": "808a4b97c0898d3eb1d07e217c6130a1fc54667db5627ef3aebf9e9c170abc09",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.json",
+      "originalSha256": "b79bf339d193d28acd71d65500567b7ec6cf16783c64a15a9934960aecd65b51",
+      "publicSha256": "a1cf04927ab09c55eea8da32fff4e5d5b0ac5394bdbf60ba91ff84227ee6995b",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.log",
+      "originalSha256": "c1a28786df5d50de12a1b97a222b3cf171cb2ed6866dd7107e082ee6c46b6b41",
+      "publicSha256": "3ad1ae9352c60bc5338c390117cce8b4a0cca0c7ffe4753edefb49061aefe11c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.json",
+      "originalSha256": "1b0ed71e11c5d311eff700b7792bc61f20c3879ee58a2fca6b94dbc5407293a4",
+      "publicSha256": "38cb5065eb803dd6ae516edcc7d37d4b6c6874a36615cc0d15bfee7e2cba0a8a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.log",
+      "originalSha256": "f5c0903f660393d36f3950ff28125c616cf068cb22608055dd4315a131d11527",
+      "publicSha256": "322665ae83539f51351543e6968541d3f1979e3f00885adc517edb2526c8b818",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-checkpoint-preview.stdout.json",
+      "originalSha256": "b010038b257308277991e8333ae1b29815d2438754741887ba2ac7b32fc22665",
+      "publicSha256": "f0a107202e2ffd316e032b592380ce2bf33ca7688ec31b9778a11f2f8c564120",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview.stdout.json",
+      "originalSha256": "02a1b2481cb039bae9ffe4ead230aa74324a9bacddf11b5b5f394c77441bbfe2",
+      "publicSha256": "1cc27e23e077353bb9baff61bc78f5d91d0f58ab4c8be3742bd3c74bafee5f0a",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview.stdout.json",
+      "originalSha256": "313b26993c7a3b79efb6e6408263160fc04b81a26aff27c8af89481806407477",
+      "publicSha256": "8cdddb8a397cd9dd1de7c6264b42c7b592e90d7a329ea78d4c96c09a631ee18d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "originalSha256": "04278a5e9170bbb21ca561fb7e76f0382b94991c90cf259785deec3def7cc3c9",
+      "publicSha256": "87e5d2f2c1af04851d51c45c8fe69336a66aa67df5b8eef7c006a0e82b5b86fe",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/focused-command.json",
+      "originalSha256": "291db00fc32a566ae8d8b720f6da4c1be8b1a6399d058c817ccca84852a10f39",
+      "publicSha256": "f43490e9cc92ee9dff0ca5d7b0c6dc446d98c455d5c29cb38cc4c57efbd5197f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/typecheck-command.json",
+      "originalSha256": "6187146f9aaa53d8edd5a87c37443abd7a44c5114b4e4e63d8881837482fafe4",
+      "publicSha256": "32da12aaf0c0aba2a8b175f7d34dd334d5040b62905c2c9b01f752ffc664405f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/focused-command.json",
+      "originalSha256": "de5150994e169f5b9cb06bb3ceca185152eb18292c4d587305e893ef0eca9800",
+      "publicSha256": "df29544b751e96f33eb30cc32ef474b611373b85ba29c237df47f6dcbe2da430",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/performance-command.json",
+      "originalSha256": "c9db399b5131ee440a40d240db550bd7d8c07022a014c3650680c072678897c8",
+      "publicSha256": "9eb83144f726e3af9c58b445e9e56cf0f20796bf71038989a95ee2ede2b4c678",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/typecheck-command.json",
+      "originalSha256": "5cb0167a5b0f116609f2c77f3cade48cadcd66c73cd2712ce00c4c7f3004c9af",
+      "publicSha256": "3bc0e6ae45d0a4ba9b00bfe155f264e8c7c04ae52b61826235cfd2ba929cd143",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/C5-R4-TEST-RESULTS.json",
+      "originalSha256": "e4d8c6f88d06ad9173a338cda1cbc68784fd80db97974521b7c35b3364efc407",
+      "publicSha256": "afc117f785b740e6dec007f905a2590376544948c02ffd3de1bd84045590ec8c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/independent-review/Focused實測.json",
+      "originalSha256": "a8477e366e6edc9482f3656f6b6f230dcfd51b0677eb4e87dcf320f766d11656",
+      "publicSha256": "3370779e14a153bb88d2e7baa9c3d5f35208499133f056119105241336d3d25d",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/independent-review/凍結來源清單.json",
+      "originalSha256": "46d4cd7b3b8eea3a5fec821bfaef2838e4528f226ed7ccf03ba50406aef87c6a",
+      "publicSha256": "9908596dd9c3eefcee0cea3d762f4e99762b9d586876d3ff2ddb84948d6c5ed4",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/independent-review/初次Focused缺ESM環境.json",
+      "originalSha256": "9d9cde03cdecdef05c6c402f6de45e62a8c28dc61492d6e099367e0677e1fe47",
+      "publicSha256": "be0decb4347b15f6fb5c29857f1ae3030124893bc3c3025093e20b5a1770a302",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/independent-review/初次Focused缺ESM環境.log",
+      "originalSha256": "b4fbe99892df963bf9c3f4066a30887ddf5a33f6d3abcb6302d59418bd19bfc5",
+      "publicSha256": "c232a6dfc24ba814565c6246ae2ca60b2c6225603e43432350ffd860b24cf0fd",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/independent-review/獨立反例與距離oracle.json",
+      "originalSha256": "779ec289fbf64ea941dce38833c48aac966b43f6f5f88da6e9de355b5e347689",
+      "publicSha256": "afc5f48705c2e7a6538799e727f1fdd3cf11c2dc3803cc3565e7fc7aaac740be",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/performance/final-comparison.command.json",
+      "originalSha256": "c1e14026752476c923f209e1fbef61417e0498d02b93be36b76d4afb5084ab48",
+      "publicSha256": "dfdafe9e9654d460e5592ccbe80922dc7145dc51adfe91fda4ad776050ff5469",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/performance/harness-typecheck.command.json",
+      "originalSha256": "8abdd1380e20187a0ff7c54992447a318a1320f752a44bb3c69f2127818874cb",
+      "publicSha256": "19520b6437c80991a8f7c6dec36cd53323ea5a04afbda3c022e87507a004b680",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/performance/preparation-error-final-comparison.stderr.log",
+      "originalSha256": "8b54becb79bde1500c9dc9720aabb1d5311b4774d59b03e4efcc342f447851b0",
+      "publicSha256": "bdb9eee228b56b96ef092e08536aab6cf35152867c57e30a54da5c72901a843e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-browser.json",
+      "originalSha256": "878ca0ef363e7a65b04e6ab9a2b418623b47cc43648b06a10b2dbf48999fdef2",
+      "publicSha256": "cf3375ef20c7491e4f152f0ab1dedbb28f13773a12ba488be6db5b95af2320af",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-browser.log",
+      "originalSha256": "a75da03448f8637cc85f11fc56b26526db2590142be1896447bcaf645780eaa0",
+      "publicSha256": "ba6f9569c458ceaf5d6b3d413da7c3036a270d11cd62097defd1898083149d95",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-final-prefix.log",
+      "originalSha256": "ee09daa84d15b8b6ef4bd60ac71b7915a531e64958bdf414f5cf46d29a0baaec",
+      "publicSha256": "d9ff051f44bbab1e0380bcfdfb5d73b4f2f610d8e5fecac9216430c08ba709e4",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-final-test.log",
+      "originalSha256": "5679be0db50b1a2c6c5a6f5b2942016d9bbf28ffebb249eb7d275b4291552754",
+      "publicSha256": "a44cc3fb85ff76eee34f1dd8a40d04426366c5f79213fd1ce3b5e569d5fcdf8f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-frontier-RED.log",
+      "originalSha256": "1dd5f511b612b95f0a19767237543d3b3f2a6740e3575a24a25285e44de6f1ea",
+      "publicSha256": "1eb61aa77db20110292acb8d367072cf42fcc74fe5c6845428463c59a8f7bd94",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-gameplay-recheck.log",
+      "originalSha256": "01de743f60e08c66a516541140dbb89219b870d821cc346e2b31c060ecbd5cf9",
+      "publicSha256": "686964668cde306b24d696bc118c3c0381f9ecb655b646de4c4f88185dfd21d9",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-gameplay.json",
+      "originalSha256": "81830adc9f9857d0708bb134798beeca0d34d9e21a364a82d32070f5c83fa517",
+      "publicSha256": "8a778f3f5bb54496532540be6e48e72750a7f68119a9710c158849e35d979180",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-gameplay.log",
+      "originalSha256": "7167a718e809226545937576daf626826d51349ccabbda89966c827031f56b5b",
+      "publicSha256": "c97d525ae642f8bc79bce308421aece09317f4d50264c6d47a0c6f4e8dc7ac96",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-occupied-vantage-RED.log",
+      "originalSha256": "ece1835f3b320cd8b80402c1385af912705738f6bf03bca154c3cbec8bdce93d",
+      "publicSha256": "d074ca829edfbbebf7fe79eb586d0350cedd59a2aa0cdcee77c54e01bd2d89e6",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-seed010-extended.json",
+      "originalSha256": "40c879a4c352c77bb92d772d54beb41c6535e24082b325a5caad1246aa235a02",
+      "publicSha256": "5b1f789037a05b5db3e8ac5b9d6d5a78f3c96fb78e61558cd4d52c9d023b3356",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-seed010-extended.log",
+      "originalSha256": "14bcf80c088a53a5a6d8d2d45cf6f7d56aea6552010b557ff5f2cae81b0776be",
+      "publicSha256": "e48dfc97da5649ff19cd20b85267d0fce7d9b3c068f0c90e0b4cdbc26e7cc87b",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-seed010.json",
+      "originalSha256": "6436185f2713aa73075f4bf89eea7f52873df028a985256fa6595832c2734068",
+      "publicSha256": "dfcc96d02358f88b217c0464aa0e61c05816477325944d7d841a85bdf346bdea",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-seed010.log",
+      "originalSha256": "9aea9907a846625f9096a932944130beb59943a976f5fcf07d48d5eda32c192a",
+      "publicSha256": "76bed49db9f7a4cf443efbf30ae1303325d289cf7f000c3c9133ed329752fef1",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-test-candidate1.log",
+      "originalSha256": "f0e4d655fcc05e4cfa09b7e8184176379d57bfa5654d226344e5e5d797cb594b",
+      "publicSha256": "df72ff6f073f5ef373c9d4651e510b425b41dfb2d80a3df72da229e73ebbcf0e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-vantage-focused.log",
+      "originalSha256": "d792d406e5b5184b3907462ab9b4861de608bdd4546a2798a503ca5426c24f1c",
+      "publicSha256": "1d17a0421748079bf901e254ec1da53f95e7380a5fdb3f96b8e6208bda2ea5e6",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-weighted-prefix-trace.json",
+      "originalSha256": "a3288d81d7d6dd751c29e84a81c1a51f9f97229d455a2f34d8da33f4aa25bfad",
+      "publicSha256": "b7ed5c1945b89a5e6e0cd5d78cbe8b841b450f58697e72228c244b72b183c737",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/raw/C5-R4-weighted-prefix-trace.log",
+      "originalSha256": "caddadb9c59e7599cc6c69b94c1161a0d4301b0c047639c52cd20728e06f3a44",
+      "publicSha256": "802b4ded99637b1542e97c8b90c606a34c16f64bdaf2317ceb2cefd539b2bbb0",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/root-analysis/執行紀錄.json",
+      "originalSha256": "f725ec97e9a69eb182116af33fe85381b8a4555e0f3f6421f92fff7ddbf3b7b0",
+      "publicSha256": "8e40d2eaeaf07dab103a70cd7575a0f7a31d4b1468ed27b2549a65439b53a488",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R4/root-analysis/診斷工具先行斷言失敗.stderr.log",
+      "originalSha256": "f91a09a360ced279e3998c156a4bd992ba750d54eb7573be9616bd5786387cc2",
+      "publicSha256": "2a045e76c8fb8799724c39fb29f04a249d7c7dea28857d9547dc577bcb5d07c8",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R5/C5-R5-VERIFICATION.md",
+      "originalSha256": "9e7c2d9bc41036a01abbc68b357ed4f277ec8ec1e6c8f8f58872ac08949475f6",
+      "publicSha256": "173089431c7d744b0cd129bc3f5752762a5a59f28b1390dc54b09cbfc258f277",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R5/EVIDENCE-INDEX.json",
+      "originalSha256": "5e3aba4dd61166027ca561aa882a15edc57976412beaccf3093307292119512a",
+      "publicSha256": "733dc02c8c6a86b98048897e9738d26ca6288bbb95a29a1e2070f86875dca73e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R5/R0-RECOVERY.json",
+      "originalSha256": "93fe47849f98285d50534432ebd38616f9a4253717abf515ed76269790bf2a48",
+      "publicSha256": "4c9d1fa3129cf3cf587935bb508a210d12481cdff3d692c30bfaf15235aa0c88",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R5/R1-DISK-PREFLIGHT.json",
+      "originalSha256": "154e4d8f7dfb5e7ccc6421d07375d96b6d1d5212f6632548a5e1bf187b9edeb9",
+      "publicSha256": "0aaf9f4e3ec4455c8c5f89f0431d5fff07af1a39697e7fa3e17cf7f60e515b89",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R5/SKILLS-ROUTE.json",
+      "originalSha256": "5f30f9bcc5cf6e3bf725d38ba4ba107e5d40dc7d74529b7e4f2cbf99c3d0669a",
+      "publicSha256": "ce4a1e6a2f8ca34a1948c7e7e5a41e3bb4d4121e64d1d147a759e5da0ce756a3",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-02/C5-R6-02-COUNTERFACTUAL-RESULTS.json",
+      "originalSha256": "77d2342f398153ac4a5037b927e4045e0bd45c2fed3c79463ad06eb807ebb5f7",
+      "publicSha256": "e6e1617a0146bab61fb09c1af7a34304fd538486be03a5562a537c19dfda36ae",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-02/C5-R6-02-INDEPENDENT-REVIEW.md",
+      "originalSha256": "03fcd82ae4e5e7a5f0bc1b6a6ddf6b95ccd93341ebf92ea696f056a51e78a1dc",
+      "publicSha256": "6489d793d4bc4962f565dafebc99e9d297b1a953ccca8f425385196f3e2fad4b",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-02/C5-R6-02-SOURCE-MANIFEST.json",
+      "originalSha256": "7fdaecc4075e2703516eb8feaf2e093489f54aa1939dde0b0cde8e1fbb8c3d49",
+      "publicSha256": "4ae4a8e7feb640f3a8328a0663fff41e6aaad3acf04013e03f7a2b7b6b375fc0",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-02/C5-R6-02-TEST-RESULTS.json",
+      "originalSha256": "f26248a88433974895488e4f7f8483a74d544d78c18e1700a809108a615a6cd6",
+      "publicSha256": "87abf8e1d91d5addddb4b01ac2792a21cbc04446399262ecb38ce638d98d3a25",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-03/C5-R6-03-CAUSAL-ANALYSIS.md",
+      "originalSha256": "a81fc72748027797b1fdcceda1cbdd4d50a4ecce95f73c5c5dbf4b12d7fbb2ff",
+      "publicSha256": "afa7ce73ae1c8ab9e6b53a05cd95661cbbba293f8140f0b7c5b7b50d85d7e4a8",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-03/C5-R6-03-COUNTERFACTUAL-RESULTS.json",
+      "originalSha256": "8ab1dc8672039b6f3fe7c634a3843f2ccb120bbbc18274a5be621026ac0f175d",
+      "publicSha256": "4fb0591d37b6583ea846913b0366c0b1c0fcc23dabc85b8f3c264209560cc941",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-03/C5-R6-03-TEST-RESULTS.json",
+      "originalSha256": "a8c116e83aad753685a4957884603e349ce9a145d3ac767a55e827b269915d85",
+      "publicSha256": "89dd90141de84cee1b006951499f274f8eb9453b082bc27e8b11b6d7ab8fe70e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-04/C5-R6-04-SOURCE-MANIFEST.json",
+      "originalSha256": "b2785d610eebf7d803b37a795c20e7f5d0adad7d5a523576c2ec15bc860e0a3a",
+      "publicSha256": "d819778487ed8c2656826d7969f3cdf6c34048a07ee50e54c5d549642270fa6e",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6-04/C5-R6-04-TEST-RESULTS.json",
+      "originalSha256": "9a5b47d1a5f40cd03abfa0c169cb4aaab65897050c2c1f0c1331dd715b139c5f",
+      "publicSha256": "d11057cc6beeadafc567bbebfe2bd68f85a02e085a4fe320edbafe17c1d6f9f2",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5-R6/C5-R6-TEST-RESULTS.json",
+      "originalSha256": "80ba58c6f8cb27eb0b72f421b355f2f18a92b9d94617369e005c28b433c39039",
+      "publicSha256": "c9d04628b43d61cdf0c6a95131f412fe4c78b14831394076a8bf109ace4ce24b",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-friendly-traffic-test.log",
+      "originalSha256": "cb6f9de507baf3be5159f1d18a84f34373725f8261ae09fd6648e41c1669d2d5",
+      "publicSha256": "f720ae2e0196010567c72b37077b6411ad6de23575f436a35c79ced34a3c3d1f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-mobile-traffic-prefix.log",
+      "originalSha256": "48754ed7fd934945ba71842ed915284f336eddbd6f2d845b1a6653d3440491a1",
+      "publicSha256": "a7cf34b2693d7c64f59a450e5ea35db4e63aa90eec97b04dff2790315e1aea01",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-ocr-preview.json",
+      "originalSha256": "6d64b88a13aa7f7042e7b1d34351c2fae3d21fd84c6d2e84da79a99ca9fb7724",
+      "publicSha256": "b132a2df0584d3f8a8c84f663eefa783973d127ab854e720dc2914e1abc77257",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-oscillation-confirmed.log",
+      "originalSha256": "541b50c563b6fbc07b6c39b19ffc167acacd33662ab4fc6ea5ebb11c62566ec7",
+      "publicSha256": "f7e313eb8f2976ad373ad9b6df162255db967eded5afd1d2da57d673ad5c46da",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-oscillation-red.log",
+      "originalSha256": "e2133f5afed1acfa97249ae708e89f1a5c78b68e8e755e2dc3ee48c33e483ee7",
+      "publicSha256": "92ca3a9006c34149c7734c2d9d9199ac08f61c269d518dcd24f919a956451094",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser.json",
+      "originalSha256": "9367af00f4e0a1c0e7288d6aff5b28b836a8432fe78e660c6ca0944fe1bccc01",
+      "publicSha256": "3276544b16c7bc75b10d44a607498c04562e4b6eaa62f8ad92e121c27d57064c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser.log",
+      "originalSha256": "56d62550deed3a3f8f782c532bb431e4db21cd540f393bc85b71fa3f483ed19a",
+      "publicSha256": "2b2587fc49753008c779abe38da400c1023c63651bc611c9c426ab5e99a93a93",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay.json",
+      "originalSha256": "6347b5e079873d82e821eefba1b562776e73849fe5f0ceed6d8404c34299c279",
+      "publicSha256": "02ea1ec59362ba1bb28af57475c9f4b4b83c1f3204efe8bc1a473c9cb18c629f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay.log",
+      "originalSha256": "8920d9521cba2947aac8baa94371cdc3c7a1c48f1ab84c686067d9b4363c075a",
+      "publicSha256": "3420c0e77a560c3765a20e61875de1f0eb3e6ec864fe55d01df110812098fd81",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-seed010-paired.json",
+      "originalSha256": "1158ca100ae43e797aeae269d3e8cccc99d5cc6e96da5b70070598275abf5b16",
+      "publicSha256": "d26a37d57d448d557c79f9adb703c57e1b686da0ce2f6e711888a26de86f84d9",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/C5-seed010-paired.log",
+      "originalSha256": "54bf52f2d5d55312368842051f44c0cfb32d575416d94f0dfc26acf2da6cdb2e",
+      "publicSha256": "b1b1bacc7713e93892cfaefe37a7dd1141c2a732763ca71b18238e99cc9dd350",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/forward-detour-attempt1-blocked-fixture.log",
+      "originalSha256": "a14b3e20d253c90ad8938b5c1ebad791e9df7f823f68acd61fb44d4746f7ea14",
+      "publicSha256": "8bab293bb4a1ea719a89293eb6c25108dbd52ebaf81b6b19c09fd4565c1c959b",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-regression-review.md",
+      "originalSha256": "867ccd7a5ebba39a2205aef7c988ef5fc24b5801dc10ddc18b1f475409d8fd91",
+      "publicSha256": "75dc9a69e385e9fbc95eaaa843426603367c2f661f76e81ef4ee7af7011f2e5f",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/TEST-RESULTS.json",
+      "originalSha256": "a7619773f2ba9acf8a6d370ea7afe7c1433efe7bc85c1ca012f805e5abd0928d",
+      "publicSha256": "4bc5b2f96dc0470fcc224069728f760bb88ea7fb534397271db2252906ea5989",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/CLEAN-INSTALL.txt",
+      "originalSha256": "bd497a6cdcadbc8f5d1116ddb48d32002a1c86c9b7c050a3e76fa187a520e80d",
+      "publicSha256": "3da26f35859df3300072a6cf2046b94d835fa3d1791088edb780cb7fcb090bc3",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/DEMO-JOURNAL-RED.txt",
+      "originalSha256": "8826a74bf6b9530999fdf227ecb75567407ca88981d1cb8d0ef53b9e35f559bf",
+      "publicSha256": "a5d05c14b283ab8b2dd8d9a9d89200a2dcd1ecba1d22c169f4de93945158bc97",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/DEMO-LONG-SEED-RED.txt",
+      "originalSha256": "87ab37bfd2b5761cadfae592883ef040c5a4d93e217b7e5d007f1c211e962ef4",
+      "publicSha256": "4618d80630c122a11c58d134a9c179d9b7ab122729f1046969e0bc588b338f19",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/DEMO-PACK-BINDING-RED.txt",
+      "originalSha256": "8641fbaa103aaa05343634efb1bf6a6dcc59017138624406d8232084f21255c3",
+      "publicSha256": "729b3d270add345facb1e751445951a3283c767e28f53ea591e08da1e1342b46",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/DEMO-PERSISTENCE-RED.txt",
+      "originalSha256": "edebda5068fda1bbedecabd362327e805e62c1fe77ec9a4021da699f6539c049",
+      "publicSha256": "e57778a7c4df75eb0374f2d75892b08b67795778483125fb01936ef6d1758343",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/PWA-BUILD-RED.txt",
+      "originalSha256": "d45b7fd2f3977852d2b45059c22932f444ab161579e9a6bec08a0fd3a0ee095b",
+      "publicSha256": "bfe0047c7a27fe15cdc4ee7d957e941a6ff77a8a575f02b3107d013c4c805d9c",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    },
+    {
+      "path": "docs/verification/DEMO02/logs/STATIC-MIME-RED.txt",
+      "originalSha256": "6654cf3042cda813ec2c5640610bb66018021aad1ce29f369bebba68ff187ea3",
+      "publicSha256": "cf0872c460462801da008af42ca4fc6355c129d064569082998b1b017f971157",
+      "kind": "PUBLIC_PROJECTION",
+      "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
+    }
+  ],
+  "count": 150
+}

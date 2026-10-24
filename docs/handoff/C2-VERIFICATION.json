@@ -1,0 +1,291 @@
+{
+  "schema": "project4x-c2-verification-1",
+  "generatedOn": "2026-10-17",
+  "runtimeStatus": "IMPLEMENTED",
+  "c2EngineeringGate": "TESTED_PASS",
+  "overallPlayableAlpha": "NOT_PASS",
+  "branch": "integration/project4x-c2",
+  "testedParentHead": "f884de635b22d1b82b0848bddbad14b66d479552",
+  "testedWorkingSourceSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+  "workingSourceUnchangedAcrossFinalGates": true,
+  "finalCommitReference": "git HEAD；外層FINAL-GIT-STATE.json記完成後commit，避免自引用commit循環",
+  "remoteMain": {
+    "checkedOn": "2026-10-17",
+    "sha": "c21b16cd75572d069369f41426f7323c63c05083",
+    "method": "GitHub connector fetch_commit(main)",
+    "unchanged": true
+  },
+  "gitHubCIForC2": "UNVERIFIED：未push，此分支沒有新遠端CI run",
+  "environment": {
+    "node": "v26.10.0",
+    "npm": "11.19.1",
+    "os": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
+    "macOS": "15.8.1",
+    "architecture": "arm64",
+    "browser": "156.0.8078.4",
+    "timezone": "Asia/Taipei；run timestamps UTC"
+  },
+  "checks": [
+    {
+      "label": "final-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-17T10:38:04.420646+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f884de635b22d1b82b0848bddbad14b66d479552",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T10:38:04.891614+00:00",
+      "durationSeconds": 0.471,
+      "log": "final-check.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "logSha256": "5afe8e619a2b5af7d9fff5cd70f0515d2995448bd70bb26063ae15cd8f9076a8",
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "countNote": "非案例測試命令，不虛構passed count"
+    },
+    {
+      "label": "final-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-17T10:38:04.951873+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f884de635b22d1b82b0848bddbad14b66d479552",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T10:38:06.065180+00:00",
+      "durationSeconds": 1.113,
+      "log": "final-test.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "logSha256": "e7854ed0330af6ea4badfa0e78fd1168c5ebd53bcf184c8b139033aa69ef5c23",
+      "passed": 99,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "label": "final-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-17T10:38:06.181440+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f884de635b22d1b82b0848bddbad14b66d479552",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T10:38:06.764169+00:00",
+      "durationSeconds": 0.583,
+      "log": "final-build.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "logSha256": "f1a04730bc0441cc0acf00722bdcc273d58a13434726096235cf201ff73d3d71",
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "countNote": "非案例測試命令，不虛構passed count"
+    },
+    {
+      "label": "final-browser",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-17T10:38:13.959321+00:00",
+      "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f884de635b22d1b82b0848bddbad14b66d479552",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T10:38:19.031626+00:00",
+      "durationSeconds": 5.072,
+      "log": "final-browser.log",
+      "status": "TESTED_PASS",
+      "blockingGate": true,
+      "logSha256": "9d71be7435249c91a6bdadb8565869c25bf48ae920d2353b3677959d4eba1df5",
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "capabilities": {
+    "gameplayMethods": 6,
+    "localPersistenceMethods": 6,
+    "disposeMethods": 1,
+    "canonicalStateSetter": false,
+    "newReducer": false,
+    "contractSignaturesChanged": false
+  },
+  "sourceManifest": {
+    "path": "docs/handoff/C2-SOURCE-MANIFEST.json",
+    "sha256": "6f4503da153909718ef1f56bae933e2d9fa9e597f1b72646da5dfe593c091fe0",
+    "fileCount": 38
+  },
+  "protectedSources": {
+    "status": "TESTED_PASS",
+    "c1SignatureUnchanged": true,
+    "files": {
+      "src/core/game.ts": {
+        "unchanged": true,
+        "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7"
+      },
+      "src/core/ai.ts": {
+        "unchanged": true,
+        "sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a"
+      },
+      "src/core/types.ts": {
+        "unchanged": true,
+        "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd"
+      },
+      "src/core/persistence.ts": {
+        "unchanged": true,
+        "sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8"
+      },
+      "package.json": {
+        "unchanged": true,
+        "sha256": "4afefded4d0f407d5cb31329a92a9ed92f98ff57b2f2761762db7dd932dd2406"
+      },
+      "package-lock.json": {
+        "unchanged": true,
+        "sha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+      },
+      "tests/core.test.ts": {
+        "unchanged": true,
+        "sha256": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb"
+      },
+      "tests/review.test.ts": {
+        "unchanged": true,
+        "sha256": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab"
+      },
+      "tests/流亡重建.test.ts": {
+        "unchanged": true,
+        "sha256": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394"
+      },
+      "tests/artifact-proof.test.mjs": {
+        "unchanged": true,
+        "sha256": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6"
+      },
+      "src/styles.css": {
+        "unchanged": true,
+        "sha256": "1a7b061e780823db8a11ce6dd0fbfee2e617c368cb1fa7bc05c3f6039ab4615c"
+      },
+      "index.html": {
+        "unchanged": true,
+        "sha256": "a992106a222555a62c6effb2e698815ff900eac8ae0c018d3335e8abd936345d"
+      },
+      "scripts/headless.ts": {
+        "unchanged": true,
+        "sha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d"
+      },
+      "scripts/verify.mjs": {
+        "unchanged": true,
+        "sha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553"
+      }
+    }
+  },
+  "evidence": {
+    "location": "隔離交付根/evidence；不納入公開Git",
+    "sourceSnapshots": "每個final-*.source.json為當時完整執行來源清單；涵蓋src/tests/scripts及執行設定，契約另以C2-SOURCE-MANIFEST核對",
+    "reviewFiles": {
+      "independent-F-review.md": "a2d5aeb61f7900955ccabc948688eb4ce004bcf1c8bb4fa26db6b4c76f5583be",
+      "F-R1-結論.md": "f7fbb70bd74026ecc6bc651691cf864a9d3d77c54397ae285a3db8a9001e8ac3",
+      "independent-C2-runtime-review.md": "145e59f59d633c6b9a347bb24946793efa574a0de23b600a4eb09c3e99210b60",
+      "D-edge-driver-review.md": "8995e0fc03745c04cc5faf6676103090a295534b4e77f3200edd69c63399a926",
+      "D-terminal-fixture.log": "6a80237eba26da453931bceb91bd80b896e304922da5f6f7f6f530d96e5c27d1",
+      "desktop-visual-regression.json": "df6f7f6851803d9f404ff212947800b371ff717260a6f04df9bbe9a6a8bef89f",
+      "independent-C2-doc-review.md": "ee5b34f68c96859cbb88c8aabbb06dd3f127cbe610475bc1de0a72c149a3badc"
+    },
+    "browserArtifactJson": "final-browser-artifacts/browser.json",
+    "browserArtifactSha256": "42daadb2aae5f37d948ffff79fcddd3c3c04a86c3e4dc4f99761a2b97c12ec8f",
+    "cleanup": {
+      "serverPID": 11443,
+      "port": 56024,
+      "terminated": true
+    },
+    "initialBrowserFailurePreserved": "G-browser.json/.log/-artifacts，TESTED_FAIL；橫式測試觸點被footer遮蔽，後續修軌跡hit-test保留強斷言",
+    "openCodeReview": {
+      "mode": "delegate preview/rule +宿主審查",
+      "cli": "1.13.0",
+      "changedFiles": 37,
+      "reviewedFiles": 37,
+      "skippedFiles": 0,
+      "excludedFiles": 0,
+      "scope": "相對C1 parent的本次diff，非全repository歷史審查",
+      "coverageReport": "ocr-C2-final-coverage.json"
+    }
+  },
+  "visualRegression": {
+    "schema": "project4x-visual-regression-1",
+    "comparison": "C0 main screenshot vs C2 final same1440x960 initialScout",
+    "baselineSha256": "62c11311db0ea4206a909c4a148a8a01598ec82ab21bf37da51ddefafdb66801",
+    "currentSha256": "62c11311db0ea4206a909c4a148a8a01598ec82ab21bf37da51ddefafdb66801",
+    "baselineSize": [
+      1440,
+      960
+    ],
+    "currentSize": [
+      1440,
+      960
+    ],
+    "sameDimensions": true,
+    "differentPixels": 0,
+    "differenceBounds": null,
+    "status": "TESTED_PASS"
+  },
+  "limits": {
+    "fog": "局部合法同觀測/不同hidden-world fixture已測；非全輸入或聯網秘密邊界保證",
+    "physicalMobile": "UNVERIFIED",
+    "humanFullGame": "UNVERIFIED",
+    "otherVisualGoldenStates": "UNVERIFIED",
+    "lspDiagnostics": "BLOCKED：無可呼叫工具；以strict check驗型別",
+    "lint": "NOT_IMPLEMENTED：package無lint script",
+    "D3": "BLOCKED：缺可辨識交付",
+    "full100": "歷史TESTED_FAIL：62 completed /38 turn limit；本輪不重跑",
+    "seed010": "歷史TESTED_FAIL：800 EndTurn、19696 commands、winner=null；未改策略",
+    "T3_T6": "歷史TESTED_FAIL，未以C2工程回歸冒稱修復",
+    "landscapeUI": "PARTIAL：812x375可視畫布有限／footer交疊，交C3 UX修正；觸控軌跡已實測"
+  },
+  "mutations": {
+    "F_R1_ownerFilter": "TESTED_PASS：23案中唯一新增回歸抓到mutant，22pass/1fail符合預期；非產品回歸失敗"
+  },
+  "notPerformed": [
+    "push",
+    "main merge",
+    "D3 integration",
+    "core gameplay changes",
+    "new dependencies",
+    "full100 rerun"
+  ],
+  "strictContractCheck": {
+    "label": "final-strict-contract",
+    "command": [
+      "./node_modules/.bin/tsc",
+      "--noEmit",
+      "--skipLibCheck",
+      "false"
+    ],
+    "startedAt": "2026-10-17T10:42:58.003908+00:00",
+    "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+    "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+    "head": "f884de635b22d1b82b0848bddbad14b66d479552",
+    "timeoutSeconds": 240,
+    "exitCode": 0,
+    "endedAt": "2026-10-17T10:42:58.555182+00:00",
+    "durationSeconds": 0.551,
+    "log": "final-strict-contract.log",
+    "status": "TESTED_PASS",
+    "logSha256": "90f642e900b496f412f9988733d218f146e88d92bb0635e604475c1bc850ea6d"
+  }
+}

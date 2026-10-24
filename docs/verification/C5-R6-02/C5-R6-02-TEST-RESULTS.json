@@ -1,0 +1,2864 @@
+{
+  "schema": "project4x-c5-r602-verification-1",
+  "generatedAt": "2026-10-23T09:11:55.967653+08:00",
+  "status": "PARTIAL",
+  "baselineCommit": "d8138de003e558d6387da5b4c273ece289759557",
+  "testedCodeCheckpoint": "4b5e50aadd464c00746e4299391f59f18814d4a1",
+  "productSha256": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+  "aiSha256": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "gates": {
+    "localCounterexamples": "TESTED_PASS",
+    "unit": {
+      "status": "TESTED_PASS",
+      "passed": 195,
+      "failed": 0,
+      "skipped": 0,
+      "newCount": 7,
+      "reason": "188舊測試不變，新增7個最小策略／風險／邊界反例"
+    },
+    "check": "TESTED_PASS",
+    "build": "TESTED_PASS",
+    "prefix": {
+      "status": "TESTED_PASS",
+      "commands": 1100,
+      "loops": 0,
+      "scope": "有限seed010 prefix"
+    },
+    "D02": {
+      "status": "TESTED_PASS",
+      "commands": 673,
+      "seen": true,
+      "winner": 0
+    },
+    "browser": "TESTED_FAIL",
+    "gameplayCommand": "TESTED_FAIL",
+    "gameplayJourney": "TESTED_PASS",
+    "browserCleanup": "TESTED_PASS",
+    "seed008": "TESTED_FAIL",
+    "seed010": "TESTED_PASS",
+    "independentLocalCodeReview": "TESTED_PASS",
+    "newFull100": "UNVERIFIED",
+    "newT3": "UNVERIFIED",
+    "newT6": "UNVERIFIED",
+    "playableAlpha": "PARTIAL"
+  },
+  "receipts": [
+    {
+      "phase": "B_AND_TDD",
+      "label": "baseline-build",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:31:34.754272+08:00",
+      "endedAt": "2026-10-22T14:31:35.966229+08:00",
+      "durationSeconds": 1.023,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-build-20261022-143134-476104de219e489c88590222ed6ebc19/receipt.finished.json",
+      "receiptSha256": "8853ed3093e4a870d04c9c3def48565b5ba42ee922b851b4ef097a5c90e36ea4",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-build-20261022-143134-476104de219e489c88590222ed6ebc19/command.log",
+      "logSha256": "2051a995cfa34aabfded1a44b9610ca3b719e5b6ef525172cde65757d869c157",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "baseline-check",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:58:09.088291+08:00",
+      "endedAt": "2026-10-22T13:58:27.316422+08:00",
+      "durationSeconds": 17.035,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-check-20261022-135808-f0d59807e8e6456da5b6d8e8473c0071/receipt.finished.json",
+      "receiptSha256": "54331addd15f0707dad97443e59f36ba12ea9a3c5b07e64ce8875c9d4057a5ae",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-check-20261022-135808-f0d59807e8e6456da5b6d8e8473c0071/command.log",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "baseline-unit",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:58:09.653461+08:00",
+      "endedAt": "2026-10-22T14:00:19.651951+08:00",
+      "durationSeconds": 128.299,
+      "exitCode": 1,
+      "counts": {
+        "tests": 188,
+        "pass": 184,
+        "fail": 4,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-unit-20261022-135809-21144e03676249f1887feed0f4439c76/receipt.finished.json",
+      "receiptSha256": "38078e61673759cb3f1a82145fcfa587418e609c584e6d217315fc1b888e7db6",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-unit-20261022-135809-21144e03676249f1887feed0f4439c76/command.log",
+      "logSha256": "937664f502c0ca456086b22cbfd62ff4952c78585d50bf2973a0eceb5f70c10f",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "baseline-unit-stable",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:29:56.246725+08:00",
+      "endedAt": "2026-10-22T14:30:25.343313+08:00",
+      "durationSeconds": 28.346,
+      "exitCode": 0,
+      "counts": {
+        "tests": 188,
+        "pass": 188,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-unit-stable-20261022-142956-2aa3fb91c2234c4bb190916b96f96e32/receipt.finished.json",
+      "receiptSha256": "ba3625aa15c5601f8ff46aa54ecd1468895686e64cd78436045ce916db2d1ae7",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/baseline-unit-stable-20261022-142956-2aa3fb91c2234c4bb190916b96f96e32/command.log",
+      "logSha256": "f185ea198a0d9acd713ae12411a704e7d6ad52c42ef229bb9ae87dcd0f10c661",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "cf-resume-one",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/private/cf-db4846c8-ea39-4ce9-bd36-62cf6063fd18/PREDECLARED-PLANS.json",
+        "1"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:26:25.429849+08:00",
+      "endedAt": "2026-10-22T14:26:43.397980+08:00",
+      "durationSeconds": 16.719,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-resume-one-20261022-142625-6be26554b94c4af490ddbdd3461d11e7/receipt.finished.json",
+      "receiptSha256": "4e1ccb2d0bd0440fbe6fcebe5217d476e2d25a90a5ba01c02f3ea679ab513630",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-resume-one-20261022-142625-6be26554b94c4af490ddbdd3461d11e7/command.log",
+      "logSha256": "291cbfecb554bee1c217f3eb2881f88d9271a3477865e7c5a3ecd536dc5e1f30",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "cf-resume-remaining",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/private/cf-db4846c8-ea39-4ce9-bd36-62cf6063fd18/PREDECLARED-PLANS.json",
+        "10"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:27:42.893640+08:00",
+      "endedAt": "2026-10-22T14:28:54.312951+08:00",
+      "durationSeconds": 70.813,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-resume-remaining-20261022-142742-fcee83c290fe40b1bb5ad0dd8c1ce979/receipt.finished.json",
+      "receiptSha256": "965c25bf8e40f4035c35af3bf9d25b88c7407185099ea0a5fb6a3dbf866053e9",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-resume-remaining-20261022-142742-fcee83c290fe40b1bb5ad0dd8c1ce979/command.log",
+      "logSha256": "47aa1ec38c1e08ef7c94456735244e16051d10cd583f9c64dd41823b59def5fe",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "cf-turn248",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/counterfactual.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/private/reconstructed-5504a048-7725-489b-bc3c-c9bc7812cb78-index.json",
+        "6058"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:57:34.879259+08:00",
+      "endedAt": "2026-10-22T14:07:39.888651+08:00",
+      "durationSeconds": 603.297,
+      "exitCode": 124,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-turn248-20261022-135734-0d2d8953785346f5b537506c5d0a52c2/receipt.finished.json",
+      "receiptSha256": "d138ef30565afeb014a5afb02c73679ac246d2d2a9641408572795a1da72cef0",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/cf-turn248-20261022-135734-0d2d8953785346f5b537506c5d0a52c2/command.log",
+      "logSha256": "bd3ed1e2db664e2ac780267e9ff67618ec6d12d2dc07189dc5b81ac2c5e280b5",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "decision-model",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/models.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/private/reconstructed-5504a048-7725-489b-bc3c-c9bc7812cb78-index.json"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:49:53.135986+08:00",
+      "endedAt": "2026-10-22T13:50:11.397863+08:00",
+      "durationSeconds": 12.214,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/decision-model-20261022-134949-5b5d2e73abee4e49908c5158d36e176d/receipt.finished.json",
+      "receiptSha256": "42e893cb78beb5ae1b8eda9ea2bbb2dbaf4d14f3ca6a93b48550d0eb42e68c2a",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/decision-model-20261022-134949-5b5d2e73abee4e49908c5158d36e176d/command.log",
+      "logSha256": "80f169610b2dabad21a0c219da49fead6395f23644fdfe045080c87f81610179",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "final-harness",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/harness.test.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-plan.test.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-cli.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:24:50.523480+08:00",
+      "endedAt": "2026-10-22T14:24:54.785404+08:00",
+      "durationSeconds": 3.682,
+      "exitCode": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/final-harness-20261022-142450-43a0e008a25e4664b8e63e2062db3526/receipt.finished.json",
+      "receiptSha256": "b97ef7dd7af46f3b6fb589a0b20970c62ad67e4bac2eebb06e8ad0c7f718b840",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/final-harness-20261022-142450-43a0e008a25e4664b8e63e2062db3526/command.log",
+      "logSha256": "3ae618a3b347c06a4115824377738f05b21d349b4309b10bf8da14292dab33a7",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "harness-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/harness.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:40:21.264152+08:00",
+      "endedAt": "2026-10-22T13:40:30.429389+08:00",
+      "durationSeconds": 7.181,
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/harness-green-20261022-134020-8f6d0b4649554be1ba3ac8a1194a9a35/receipt.finished.json",
+      "receiptSha256": "dd7ab97610e1d8a72080ff923d7587a14f2a24adcbbe65a6922fdd035f6e0f11",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/harness-green-20261022-134020-8f6d0b4649554be1ba3ac8a1194a9a35/command.log",
+      "logSha256": "0467a16f1611cdbec0b732c3692ec57019165b120fde2c88950041111b16c567",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "harness-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/harness.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:35:49.286954+08:00",
+      "endedAt": "2026-10-22T13:35:49.852553+08:00",
+      "durationSeconds": 0.461,
+      "exitCode": 1,
+      "counts": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/harness-red-20261022-133549-7bca6787980c47ebacb2570a622f4658/receipt.finished.json",
+      "receiptSha256": "9d7925fbf7035aa95d98534ab1378611a0400ac741490d0d3bd8667a532aa01c",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/harness-red-20261022-133549-7bca6787980c47ebacb2570a622f4658/command.log",
+      "logSha256": "5d61ed5e00463502f5cae331c06293fd471fe9aa8b0237d040e0c92d1e3f7349",
+      "blockingGate": false,
+      "validBehavioralRed": false
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "reconstruct",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/reconstruct.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:41:48.754222+08:00",
+      "endedAt": "2026-10-22T13:43:59.923070+08:00",
+      "durationSeconds": 122.935,
+      "exitCode": 124,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/reconstruct-20261022-134146-1e265550f9ee4ae8b316c422a3ac6ee4/receipt.finished.json",
+      "receiptSha256": "6960cfa6d11b9092be8a35d1051aeb29c27d49fc3f21aeb1e5d0b44298d2817c",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/reconstruct-20261022-134146-1e265550f9ee4ae8b316c422a3ac6ee4/command.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "reconstruct-fast",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/reconstruct-fast.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T13:48:00.604268+08:00",
+      "endedAt": "2026-10-22T13:48:29.103650+08:00",
+      "durationSeconds": 27.251,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/reconstruct-fast-20261022-134759-2f813a08aecb45249a13842613a7265e/receipt.finished.json",
+      "receiptSha256": "56908c2da4c53b09b2f34759b66e5899e9c45f27b7defd8d0cb501864b9d7b38",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/reconstruct-fast-20261022-134759-2f813a08aecb45249a13842613a7265e/command.log",
+      "logSha256": "ef1d95b0aea7286887188c044349fcccb3793c882c0009a21209964424bf7052",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "resume-cli-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-cli.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:22:13.802911+08:00",
+      "endedAt": "2026-10-22T14:22:42.232267+08:00",
+      "durationSeconds": 26.998,
+      "exitCode": 0,
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-green-20261022-142213-26302564f0fd4f3a9cc2304aaeece863/receipt.finished.json",
+      "receiptSha256": "301b85f58e0714dd17a0357d1b1216f768ed843660bce03531a523c27b6e34c5",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-green-20261022-142213-26302564f0fd4f3a9cc2304aaeece863/command.log",
+      "logSha256": "86a1f425eac54dfdcda5282f8c7d40979f1a1192448aef05cd564935d08b00ca",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "resume-cli-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-cli.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:17:26.294668+08:00",
+      "endedAt": "2026-10-22T14:18:13.336036+08:00",
+      "durationSeconds": 33.039,
+      "exitCode": 1,
+      "counts": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-red-20261022-141724-0f7d1ca5e6164c6d820a4b44165411b1/receipt.finished.json",
+      "receiptSha256": "c2c94d78539025b69b23195de112d22b46e70853f32fe14b6f581cb9a1e2192d",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-red-20261022-141724-0f7d1ca5e6164c6d820a4b44165411b1/command.log",
+      "logSha256": "d5449d7765d6ada7ef9aa5b5166437fd9306c72938f7c455894ffa52c219131d",
+      "blockingGate": false,
+      "validBehavioralRed": false
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "resume-cli-red-valid-path",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-cli.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:19:16.001996+08:00",
+      "endedAt": "2026-10-22T14:19:44.876350+08:00",
+      "durationSeconds": 20.557,
+      "exitCode": 1,
+      "counts": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-red-valid-path-20261022-141907-40d24e20d87b4398854534c266de65a6/receipt.finished.json",
+      "receiptSha256": "c042258286803afd6fce1defd04bfa23f57053f705915abe0abf98fec2860381",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-cli-red-valid-path-20261022-141907-40d24e20d87b4398854534c266de65a6/command.log",
+      "logSha256": "2ceba2078f88b884297da146e94249234c9e6e202c935e10a4e717deff8ee084",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "resume-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-plan.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:12:43.326165+08:00",
+      "endedAt": "2026-10-22T14:12:54.382705+08:00",
+      "durationSeconds": 5.914,
+      "exitCode": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-green-20261022-141242-cde3b3b335304cceb60e32c043104956/receipt.finished.json",
+      "receiptSha256": "65e55e5e863fc5c188cd7b9f242847d2c0aba2cca32700a9fe35266ee0ed6c95",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-green-20261022-141242-cde3b3b335304cceb60e32c043104956/command.log",
+      "logSha256": "fb409e081ba1c2f4a7b65a5676eb983e2ebf8bff406d7331085192b65f6d769a",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "resume-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-plan.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:10:56.835657+08:00",
+      "endedAt": "2026-10-22T14:11:16.318238+08:00",
+      "durationSeconds": 14.331,
+      "exitCode": 1,
+      "counts": {
+        "tests": 3,
+        "pass": 0,
+        "fail": 3,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-red-20261022-141055-8ef2490ac803458085a6d4c7206323a7/receipt.finished.json",
+      "receiptSha256": "870942cb3c2f4ea0804c7f0659c417408a1ed691a8542061498f4d61786cb9d1",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/resume-red-20261022-141055-8ef2490ac803458085a6d4c7206323a7/command.log",
+      "logSha256": "99205123aa3806e19207b791f6e39fd28027f18e073052ab948f0d22681c5968",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "tactical-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-23T01:36:08.548522+08:00",
+      "endedAt": "2026-10-23T01:36:08.980772+08:00",
+      "durationSeconds": 0.364,
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-green-20261023-013608-dd752f19f673490cbd8008ce2ae509c4/receipt.finished.json",
+      "receiptSha256": "8fea905936634eb25798d1c65b3afff6af4e45bd2aaadb39b21abca345b3986f",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-green-20261023-013608-dd752f19f673490cbd8008ce2ae509c4/command.log",
+      "logSha256": "e63ba75529311a14aa656d7ef7ebf50182e84d474f5d26eb6b47a2324207930c",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "tactical-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-23T01:33:54.658104+08:00",
+      "endedAt": "2026-10-23T01:33:55.189292+08:00",
+      "durationSeconds": 0.366,
+      "exitCode": 1,
+      "counts": {
+        "tests": 5,
+        "pass": 3,
+        "fail": 2,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-red-20261023-013354-f92892b7cb6e44469d354675c6a67841/receipt.finished.json",
+      "receiptSha256": "1e8b93900726c5a8f81258779faab5e56cb8e0fa8c3eea4396a5d1047ceebd0b",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-red-20261023-013354-f92892b7cb6e44469d354675c6a67841/command.log",
+      "logSha256": "89699ff6d74e3619a2ba513828202b1fe4e8036251051bf57b17650ce32aae8b",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "tactical-review-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-23T01:42:18.929048+08:00",
+      "endedAt": "2026-10-23T01:42:19.288834+08:00",
+      "durationSeconds": 0.311,
+      "exitCode": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-review-green-20261023-014218-02214fbcb14e4f28af83a91ae8809aa6/receipt.finished.json",
+      "receiptSha256": "7ccb8943e7f80fe3ff7f7042f858f69797c1480a3546819359d001b59e7f4229",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-review-green-20261023-014218-02214fbcb14e4f28af83a91ae8809aa6/command.log",
+      "logSha256": "b070e8d9727c57c2e2a80cdfc1da8ca2c7f83e1f7a2e565f90a873109769e309",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "tactical-review-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-23T01:42:00.272405+08:00",
+      "endedAt": "2026-10-23T01:42:00.621974+08:00",
+      "durationSeconds": 0.3,
+      "exitCode": 1,
+      "counts": {
+        "tests": 6,
+        "pass": 5,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-review-red-20261023-014200-c5b72fd892ae4b009855cd7bfcd50b1e/receipt.finished.json",
+      "receiptSha256": "f8ea4da854dc81b481292afd53827150b5146669175fd24f6816ff47ab41091d",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/tactical-review-red-20261023-014200-c5b72fd892ae4b009855cd7bfcd50b1e/command.log",
+      "logSha256": "a2bf527c39ea84ecc85caedb9d836a63fe4c80f61eda836558e402151c2ac9eb",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "B_AND_TDD",
+      "label": "terminal-classification-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/resume-plan.test.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": null,
+      "startedAt": "2026-10-22T14:23:30.585954+08:00",
+      "endedAt": "2026-10-22T14:23:33.594617+08:00",
+      "durationSeconds": 2.34,
+      "exitCode": 1,
+      "counts": {
+        "tests": 4,
+        "pass": 3,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/terminal-classification-red-20261022-142330-5db2a14afe5240f1a1c6710b89b1ca0b/receipt.finished.json",
+      "receiptSha256": "faf3c054c02d56a5e9a8e17c352432ccb226fc357f8879a5a60b3e7a9e59caaa",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/runs/terminal-classification-red-20261022-142330-5db2a14afe5240f1a1c6710b89b1ca0b/command.log",
+      "logSha256": "8171b03ddec6a2f9ad03047c913d84751bd168df949b92107dfcd81245ec28eb",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "C",
+      "label": "check-complete-snapshot",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:39:58.901212+08:00",
+      "endedAt": "2026-10-23T01:39:59.559008+08:00",
+      "durationSeconds": 0.594,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/check-complete-snapshot-20261023-013958-3cad4dece98c498da1e28fd2e574c70d/receipt.finished.json",
+      "receiptSha256": "ff97a945917c21c3a0fb1f91b3ba51e62b31c72c51736c24e569c6f8206679ad",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/check-complete-snapshot-20261023-013958-3cad4dece98c498da1e28fd2e574c70d/command.log",
+      "logSha256": "e34618e8961b298a9d6795f1d1b43ef1e2f7b8583daa8591500efa66bcb85ee8",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "C",
+      "label": "check-v2",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:38:36.510803+08:00",
+      "endedAt": "2026-10-23T01:38:37.434319+08:00",
+      "durationSeconds": 0.853,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/check-v2-20261023-013836-4d7cacaec6f540daaf75e2dddbead2be/receipt.finished.json",
+      "receiptSha256": "43498c6893bb56820edfad4d613fa82ea54e65e8cc5ed80bf488b56cc0555f03",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/check-v2-20261023-013836-4d7cacaec6f540daaf75e2dddbead2be/command.log",
+      "logSha256": "8ba657775fbc19293334115b3120df7e3acf8a5864c9cf55e314d5fb9f4eab4b",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "C",
+      "label": "d02",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:39:58.901201+08:00",
+      "endedAt": "2026-10-23T01:39:59.775035+08:00",
+      "durationSeconds": 0.81,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/d02-20261023-013958-15d82e7411274a14ad0755c7d648fc67/receipt.finished.json",
+      "receiptSha256": "d2b66d4d32bee7291822776b774b2ec5211f8237ee5d1010019ad44221943625",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/d02-20261023-013958-15d82e7411274a14ad0755c7d648fc67/command.log",
+      "logSha256": "81f9359b5caed9fa845f87181f0c635634615d057c666ca0fa58797ee0cf6b47",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "C",
+      "label": "prefix",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:39:58.901192+08:00",
+      "endedAt": "2026-10-23T01:40:01.724717+08:00",
+      "durationSeconds": 2.76,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/prefix-20261023-013958-c44dbc5739f24efa8803da6c09a32e4f/receipt.finished.json",
+      "receiptSha256": "8903e32cc97311a2e775a7f7710030db0c3b9e79e9d50cb4d5d20f163bfde2cc",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/prefix-20261023-013958-c44dbc5739f24efa8803da6c09a32e4f/command.log",
+      "logSha256": "e618c35b66689497dce3edf29e24ef62e1efd3134897d5b46478055a709b0249",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "C",
+      "label": "unit-v2",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "188c6ccf8d4e1559d36c1b29d3c093da92dcdbed39e7cca27792f7a02663f4a8",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:38:36.510812+08:00",
+      "endedAt": "2026-10-23T01:38:40.826277+08:00",
+      "durationSeconds": 4.245,
+      "exitCode": 0,
+      "counts": {
+        "tests": 193,
+        "pass": 193,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/unit-v2-20261023-013836-c58d85c8c24d431ba4c63c0daac7254c/receipt.finished.json",
+      "receiptSha256": "d98abc16fd7089ed92e7bee1acf92dd701917c9078e6414fb582a0343717e5aa",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-c-20261023-013713-38da1a77/runs/unit-v2-20261023-013836-c58d85c8c24d431ba4c63c0daac7254c/command.log",
+      "logSha256": "641f18c79e51d4d5eef933a5d55e1e6d92eebad731f3ffa076a507a4ea8785ba",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "browser",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48623",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/browser",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:52:41.344851+08:00",
+      "endedAt": "2026-10-23T01:52:48.889909+08:00",
+      "durationSeconds": 7.483,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/browser-20261023-015241-3e17a7362c284c99b73485bc5b9a42f5/receipt.finished.json",
+      "receiptSha256": "8ac57c5abd8798b0814218e3abf561f7786e889f484605e9ac29ef98174031b1",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/browser-20261023-015241-3e17a7362c284c99b73485bc5b9a42f5/command.log",
+      "logSha256": "a3d5a9f48f2a891299bc226a61fd3db8294cf4d64d7873c6374f127b5d7502eb",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "build",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:44:29.835489+08:00",
+      "endedAt": "2026-10-23T01:44:30.670200+08:00",
+      "durationSeconds": 0.766,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/build-20261023-014429-2f4a3b0f6f5a4493ba571e1c12236f37/receipt.finished.json",
+      "receiptSha256": "1f895c70087a4193ebb37247a2c770fbadf166ae45ad2dead425edbbaa9c993a",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/build-20261023-014429-2f4a3b0f6f5a4493ba571e1c12236f37/command.log",
+      "logSha256": "eacbdded4380f9149aa7ac503f5ac19e6b3f8ec5a3e32394a8af8db50473c96a",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "check",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:43:37.164956+08:00",
+      "endedAt": "2026-10-23T01:43:38.092048+08:00",
+      "durationSeconds": 0.861,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/check-20261023-014337-06f2d167136349d7a7645269486b4ea3/receipt.finished.json",
+      "receiptSha256": "c70ecf77b9c2f57a30f8df25b779b2205c1a7e1b1398ff3eeb88ef2b4c7c903b",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/check-20261023-014337-06f2d167136349d7a7645269486b4ea3/command.log",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "d02",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:43:37.164959+08:00",
+      "endedAt": "2026-10-23T01:43:39.225068+08:00",
+      "durationSeconds": 1.994,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/d02-20261023-014337-ff15d93740cc40ebaa0e66650f1440ad/receipt.finished.json",
+      "receiptSha256": "74cae5aa24f894c21910b06a661c2197035c809d37174fb3f690cc433b673b8a",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/d02-20261023-014337-ff15d93740cc40ebaa0e66650f1440ad/command.log",
+      "logSha256": "c8a1cfce55aaeee574a31bb8a7563a125972b8c4fc341683d2383c3959b92f38",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "first-divergence-cf",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/first-divergence-counterfactual.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T02:08:07.756812+08:00",
+      "endedAt": "2026-10-23T02:08:10.259118+08:00",
+      "durationSeconds": 2.32,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/first-divergence-cf-20261023-020807-555786a1598c4753b681d97a765ad47d/receipt.finished.json",
+      "receiptSha256": "d01a1c4bf82950e8541b71e78d5858a3c906400d1f8f0756eb203ddde074e7cc",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/first-divergence-cf-20261023-020807-555786a1598c4753b681d97a765ad47d/command.log",
+      "logSha256": "2f811210e21991c69d7720ed60d76c0d214e60d7347a00c5385577b1a5353557",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "gameplay",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T02:04:08.893338+08:00",
+      "endedAt": "2026-10-23T02:05:13.905198+08:00",
+      "durationSeconds": 64.827,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/gameplay-20261023-020408-9e48288bdbcb4c5fb40936aa23d00912/receipt.finished.json",
+      "receiptSha256": "ea04b462e2a25a6059d9a1dee681449de9e28720f75092cc13d6ca98eb22c6de",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/gameplay-20261023-020408-9e48288bdbcb4c5fb40936aa23d00912/command.log",
+      "logSha256": "8338cae7c354c75bfc69126cf0431732367991f7131a9d6ae7db090ecc31f9f9",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "prefix",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:44:30.753641+08:00",
+      "endedAt": "2026-10-23T01:44:33.358962+08:00",
+      "durationSeconds": 2.557,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/prefix-20261023-014430-f45b47ab5940489baff55b829ceb120a/receipt.finished.json",
+      "receiptSha256": "0c80767593022ed92a9a182535611f41475c7ef536b94a9aa0b9d09d3e289863",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/prefix-20261023-014430-f45b47ab5940489baff55b829ceb120a/command.log",
+      "logSha256": "9e3443dfdcf67d21013479af3d4ae2e292423c00422863690b0cfa18965d78cd",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "retaliation-red",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:01:00.858018+08:00",
+      "endedAt": "2026-10-23T09:01:01.269279+08:00",
+      "durationSeconds": 0.344,
+      "exitCode": 1,
+      "counts": {
+        "tests": 7,
+        "pass": 6,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/retaliation-red-20261023-090100-a0db174ee614468e905c3c42c7de458b/receipt.finished.json",
+      "receiptSha256": "ad3040954737057bd603e728e6151f47d9ca73fcbcad936769c92d5703a40c40",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/retaliation-red-20261023-090100-a0db174ee614468e905c3c42c7de458b/command.log",
+      "logSha256": "b61b7bfad1c4181cd0c4e2af9d9ccc16fe4cc287a815dd3c662446178c2b552a",
+      "blockingGate": false,
+      "validBehavioralRed": true
+    },
+    {
+      "phase": "D",
+      "label": "seed008",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=8",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed008/report.json",
+        "PROJECT4X_QA_LEDGER=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed008/ledger",
+        "PROJECT4X_QA_PRIVATE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed008/private",
+        "PROJECT4X_QA_ORIGINAL_ROOT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+        "PROJECT4X_QA_SHADOW_PATH=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/shadow/core/measured-ai.ts",
+        "node",
+        "--import",
+        "tsx",
+        "scripts/headless.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:45:30.585292+08:00",
+      "endedAt": "2026-10-23T01:50:08.444073+08:00",
+      "durationSeconds": 277.79,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/seed008-20261023-014530-b3db4f08ac8943aeb34f100d17fd5076/receipt.finished.json",
+      "receiptSha256": "cd2e5c5ca0ba91b6b9473f78e2378b2d61863e770463895a6d09cdf5db381397",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/seed008-20261023-014530-b3db4f08ac8943aeb34f100d17fd5076/command.log",
+      "logSha256": "cf5a64425c6552ef1e81d3ed8b88d2ab9d9fb49485c1c48c5185be002c950e00",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "seed010",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed010/report.json",
+        "PROJECT4X_QA_LEDGER=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed010/ledger",
+        "PROJECT4X_QA_PRIVATE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed010/private",
+        "PROJECT4X_QA_ORIGINAL_ROOT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+        "PROJECT4X_QA_SHADOW_PATH=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/shadow/core/measured-ai.ts",
+        "node",
+        "--import",
+        "tsx",
+        "scripts/headless.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:45:31.740062+08:00",
+      "endedAt": "2026-10-23T01:46:37.671951+08:00",
+      "durationSeconds": 65.881,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/seed010-20261023-014531-ab293e106b26455c89dc9851baf2b6c7/receipt.finished.json",
+      "receiptSha256": "7535557e55d442abcaa518fb6275bc91b0164dd58709d8841fa5c2a8d554dd13",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/seed010-20261023-014531-ab293e106b26455c89dc9851baf2b6c7/command.log",
+      "logSha256": "015460ed89d780f11d5f1157e0f22ba1cca17cf9c90fb31cc82e79803465e8d3",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "six-and-benchmark",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/verify-six-and-benchmark.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:54:20.621062+08:00",
+      "endedAt": "2026-10-23T01:54:21.443674+08:00",
+      "durationSeconds": 0.753,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/six-and-benchmark-20261023-015420-c54102c411184a68ad125e6545e96e74/receipt.finished.json",
+      "receiptSha256": "65574fb74e9b991ed4081d03f0e987c9e6fc46c0d52772b22f3622b5be4ef23e",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/six-and-benchmark-20261023-015420-c54102c411184a68ad125e6545e96e74/command.log",
+      "logSha256": "a412f305f512f09b292339f8e94bc3f17eccfd9da22a0cf605fa8eb119ade99c",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "D",
+      "label": "unit",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T01:43:37.164918+08:00",
+      "endedAt": "2026-10-23T01:43:41.678086+08:00",
+      "durationSeconds": 4.447,
+      "exitCode": 0,
+      "counts": {
+        "tests": 194,
+        "pass": 194,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/unit-20261023-014337-114ad1a8a1374b308d93900a1df2d0aa/receipt.finished.json",
+      "receiptSha256": "9b12b1800e1a192832972359d48b87f40eaa69cb07a59c324214d00cf44fcc48",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/runs/unit-20261023-014337-114ad1a8a1374b308d93900a1df2d0aa/command.log",
+      "logSha256": "904e5dbc6f57b9c75216faa0c60ceb6b653e177edc01068a6fec7db4b4078ee1",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "browser",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48625",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/browser",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:05:12.020996+08:00",
+      "endedAt": "2026-10-23T09:05:16.824398+08:00",
+      "durationSeconds": 4.745,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/browser-20261023-090511-4059bca121be4e9d8973a7ad29ff089d/receipt.finished.json",
+      "receiptSha256": "4a939cbbb1cf9b975d09149e1a8ca35b63cadcb5fd74718d89992aa034ad9890",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/browser-20261023-090511-4059bca121be4e9d8973a7ad29ff089d/command.log",
+      "logSha256": "f4425536a63f3d0650f4ced25c035536a29a1bf3f8c416e66145dbb6ea760da3",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "build",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:02:53.061323+08:00",
+      "endedAt": "2026-10-23T09:02:54.176135+08:00",
+      "durationSeconds": 1.039,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/build-20261023-090253-9990ed6e70e246acb92634b87ae6c6f8/receipt.finished.json",
+      "receiptSha256": "38ae26cf2fdbeb0f496d1ac6a513eb552254bd5cb05ebd9407af65bca9337ca0",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/build-20261023-090253-9990ed6e70e246acb92634b87ae6c6f8/command.log",
+      "logSha256": "ed131ac9dee5000cd617475edef05c5afdb23193ef7a3f064da8b4e92fba2a3b",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "check",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:01:52.008095+08:00",
+      "endedAt": "2026-10-23T09:01:53.400448+08:00",
+      "durationSeconds": 1.278,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/check-20261023-090151-b10188657d6e407d935710a4e2f3c161/receipt.finished.json",
+      "receiptSha256": "02953100b14ffb0eeb4d911fbd80b698c476a596f54c0caaf65fea6c49828815",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/check-20261023-090151-b10188657d6e407d935710a4e2f3c161/command.log",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "d02",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:02:53.061321+08:00",
+      "endedAt": "2026-10-23T09:02:54.074520+08:00",
+      "durationSeconds": 0.937,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/d02-20261023-090253-24c9d48e233b420abe964fef781fab9e/receipt.finished.json",
+      "receiptSha256": "c5a0ee96a83dfbfd04e00d321153f77581cb1b3a097d71cbf5f0f8a3b23ce085",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/d02-20261023-090253-24c9d48e233b420abe964fef781fab9e/command.log",
+      "logSha256": "0e8bca96de0dbe23008dbd93e00823c27e85ab0cc252806ffb56dd1e68305072",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "gameplay",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48625",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/gameplay",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:06:17.879005+08:00",
+      "endedAt": "2026-10-23T09:07:26.307837+08:00",
+      "durationSeconds": 68.359,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/gameplay-20261023-090617-6a147c62489a430c9e63a77355934a0a/receipt.finished.json",
+      "receiptSha256": "9bd2f9e0714c0b629e36468fcfb0053b0bc633a9002fabc56b71dba2dcd570d9",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/gameplay-20261023-090617-6a147c62489a430c9e63a77355934a0a/command.log",
+      "logSha256": "89bf779b89f215a24652a626ecc56a915d39e8dc646113f161322e9073cbdaae",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "idle-benchmark",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/idle-benchmark.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:09:11.510720+08:00",
+      "endedAt": "2026-10-23T09:09:13.112482+08:00",
+      "durationSeconds": 1.449,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/idle-benchmark-20261023-090911-0bc7f3daaab8491f8c8bf96d1c73e0ca/receipt.finished.json",
+      "receiptSha256": "73a5e37ca34fa7ba50efeb677fc5845f2580ab735d2530c60a42299f06e38752",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/idle-benchmark-20261023-090911-0bc7f3daaab8491f8c8bf96d1c73e0ca/command.log",
+      "logSha256": "e3fffeb006cac590212aea42f1402d1cc51cf5a09e5462acc737b5c07074d02b",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "next-window-reconstruction",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/reconstruct-next-window.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:10:02.449857+08:00",
+      "endedAt": "2026-10-23T09:10:04.774691+08:00",
+      "durationSeconds": 2.256,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/next-window-reconstruction-20261023-091002-54b0b1556c154c04a4bb7b5630101791/receipt.finished.json",
+      "receiptSha256": "73b652b69ad4f9ea7e632fd5ce0875fcb8722f97e163e50dd7489dffb9abc609",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/next-window-reconstruction-20261023-091002-54b0b1556c154c04a4bb7b5630101791/command.log",
+      "logSha256": "defc883b512f7e0f99a5b4c08d7eceda491baabb6f6caad9254647569898330f",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "prefix",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:02:53.061325+08:00",
+      "endedAt": "2026-10-23T09:02:56.099317+08:00",
+      "durationSeconds": 2.962,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/prefix-20261023-090253-ff32f6aeaf7c4668b62d0f8777091a5a/receipt.finished.json",
+      "receiptSha256": "2b6242487cf43aac0f0c9bd189cbd64c4bb059e2e424eafa3acb7ed8f0511a13",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/prefix-20261023-090253-ff32f6aeaf7c4668b62d0f8777091a5a/command.log",
+      "logSha256": "7822c7110511b2cbaad475adc9a9dd37444951e5662150d0c04488c80e4471bb",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "seed008",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=8",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed008/report.json",
+        "PROJECT4X_QA_LEDGER=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed008/ledger",
+        "PROJECT4X_QA_PRIVATE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed008/private",
+        "PROJECT4X_QA_ORIGINAL_ROOT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+        "PROJECT4X_QA_SHADOW_PATH=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/shadow/core/measured-ai.ts",
+        "node",
+        "--import",
+        "tsx",
+        "scripts/headless.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:03:21.186164+08:00",
+      "endedAt": "2026-10-23T09:08:11.722675+08:00",
+      "durationSeconds": 290.476,
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/seed008-20261023-090321-61fa87325ce540b8bddb3be502fd5e9c/receipt.finished.json",
+      "receiptSha256": "f18400b8fcaf0b29e561756212e27dc0eecac4a7660942cac483364c82837b7c",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/seed008-20261023-090321-61fa87325ce540b8bddb3be502fd5e9c/command.log",
+      "logSha256": "4dd989a671d7b1fcfc38da6f21b6fa20f81f5c4e132082f5043424c49becab25",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "seed010",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed010/report.json",
+        "PROJECT4X_QA_LEDGER=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed010/ledger",
+        "PROJECT4X_QA_PRIVATE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed010/private",
+        "PROJECT4X_QA_ORIGINAL_ROOT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+        "PROJECT4X_QA_SHADOW_PATH=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/shadow/core/measured-ai.ts",
+        "node",
+        "--import",
+        "tsx",
+        "scripts/headless.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:03:21.186164+08:00",
+      "endedAt": "2026-10-23T09:04:15.668139+08:00",
+      "durationSeconds": 54.421,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/seed010-20261023-090321-19723b98090c42c0b964b9045a9c25f1/receipt.finished.json",
+      "receiptSha256": "3ad3b0b4b0733e2c9e74628d43ab68671f5009c6afa6c1c0f88d56e69d62934d",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/seed010-20261023-090321-19723b98090c42c0b964b9045a9c25f1/command.log",
+      "logSha256": "68979ae00883177e015faddc470eac0904e8387ee3b0d29fad54e75918919833",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "six-and-benchmark",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/verify-six-and-benchmark.mjs"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:02:53.061325+08:00",
+      "endedAt": "2026-10-23T09:02:54.231093+08:00",
+      "durationSeconds": 1.094,
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/six-and-benchmark-20261023-090253-e0ad65e3b12f4c92bbb84ee4dd51e9c9/receipt.finished.json",
+      "receiptSha256": "3a148215c8fd5b9e8ab03e5c5461bb47eb62201e07bc6d24c20e27957de7a13f",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/six-and-benchmark-20261023-090253-e0ad65e3b12f4c92bbb84ee4dd51e9c9/command.log",
+      "logSha256": "9a7ff5154d6debb877f596d415e08191b1723d987e2550e25021c00a795df714",
+      "blockingGate": false,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "tactical-green",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-tactical-advance.test.ts"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:01:52.007902+08:00",
+      "endedAt": "2026-10-23T09:01:52.813917+08:00",
+      "durationSeconds": 0.691,
+      "exitCode": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/tactical-green-20261023-090151-4c60337606804fed8fe713a39d88005e/receipt.finished.json",
+      "receiptSha256": "e985223218d2952695bfbbc8d11776e26a91728465c90bfdddff286d69b1d6ff",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/tactical-green-20261023-090151-4c60337606804fed8fe713a39d88005e/command.log",
+      "logSha256": "88b68b956e962434d3e0fe8516a845cc190a9914c956c34a443d3c489eed0ae2",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    },
+    {
+      "phase": "E",
+      "label": "unit",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "environment": {
+        "node": "v26.10.0",
+        "platform": "darwin arm64",
+        "timezone": "Asia/Taipei"
+      },
+      "gitHeadDuringExecution": "d8138de003e558d6387da5b4c273ece289759557",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "qaMethodUnchanged": true,
+      "startedAt": "2026-10-23T09:01:52.008217+08:00",
+      "endedAt": "2026-10-23T09:01:56.736658+08:00",
+      "durationSeconds": 4.614,
+      "exitCode": 0,
+      "counts": {
+        "tests": 195,
+        "pass": 195,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/unit-20261023-090151-e3d15256f3bf4fd6b8ab1593d862c2b3/receipt.finished.json",
+      "receiptSha256": "9c25b7dc89dc0dff739b437ef56c2bf5b241beff7c0abdf2026231cfcd25b07c",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/runs/unit-20261023-090151-e3d15256f3bf4fd6b8ab1593d862c2b3/command.log",
+      "logSha256": "a799ac75b74e5632dd3484381d09b9708d4dd43e2f52ae373df4fe291708ba6f",
+      "blockingGate": true,
+      "validBehavioralRed": null
+    }
+  ],
+  "targetedGames": {
+    "D": [
+      {
+        "seed": "獨立QA-008",
+        "seedNumber": 8,
+        "status": "TURN_LIMIT",
+        "winner": null,
+        "endTurn": 800,
+        "commands": 20703,
+        "duration": 277.31009458399996,
+        "milliseconds": 277310.09458399995,
+        "failureReason": "HARNESS_TURN_LIMIT_NOT_A_DRAW_OR_VICTORY",
+        "terminalSaveReplayChecked": false,
+        "terminalSaveVerified": false,
+        "terminalReplayVerified": false,
+        "partialReplayVerified": true,
+        "partialSaveVerified": true,
+        "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+        "methodFingerprint": "0dedee054509992c7086a3227fb8ed02b54cd5508f08b70c74bff1b2b5bc0cc2",
+        "decisionMetrics": {
+          "count": 20703,
+          "totalMs": 27118.42051700007,
+          "medianMs": 1.1797090000036405,
+          "p95Ms": 3.2455409999965923,
+          "maxMs": 31.419332999998005,
+          "percentileDefinition": "nearest-rank: sorted[ceil(p*n)-1]"
+        },
+        "pathWorkload": {
+          "status": "MEASURED",
+          "decisionsCompared": 20703,
+          "counters": {
+            "bfsCalls": 614007,
+            "bfsNodeExpansions": 260689492,
+            "bfsSourceSeeds": 614007,
+            "searchCalls": 641679,
+            "searchNodePops": 269466373,
+            "searchNodeExpansions": 269466373,
+            "sourceCandidates": 1141476,
+            "sourceSeedsAccepted": 1140876,
+            "sourceSeedsRejectedBlocked": 600,
+            "weightedDijkstraCalls": 27672,
+            "weightedBucketPops": 8776881,
+            "weightedNodeExpansions": 8776881,
+            "weightedStalePops": 0,
+            "legalMoveCandidates": 489268,
+            "movementGoals": 115390,
+            "routeGoalCandidatesExamined": 526289,
+            "routeGoalCandidatesRetained": 377757,
+            "fallbackUnits": 8450,
+            "frontierSightClasses": 30282,
+            "frontierGeometryCellUpdates": 73984633,
+            "frontierVantageCandidateOccurrences": 1761647,
+            "frontierUniqueVantages": 1180681,
+            "frontierGoalSources": 286326,
+            "frontierNodeExpansions": 8776881,
+            "patrolComponentBfsCalls": 0,
+            "patrolComponentNodeExpansions": 0,
+            "patrolWaypointCandidates": 0,
+            "patrolWaypointBfsCalls": 0,
+            "patrolWaypointNodeExpansions": 0,
+            "reconComponentCacheLookups": 0,
+            "reconComponentCacheHits": 0,
+            "reconComponentCacheMisses": 0,
+            "patrolFieldCacheLookups": 0,
+            "patrolFieldCacheHits": 0,
+            "patrolFieldCacheMisses": 0,
+            "primaryExploreGoalCount": 15161,
+            "primaryExploreSources": 286326,
+            "primaryWeightedCalls": 27672,
+            "primaryWeightedExpansions": 8776881,
+            "fallbackExploreGoalCount": 0,
+            "fallbackExploreSources": 0,
+            "fallbackWeightedCalls": 0,
+            "fallbackWeightedExpansions": 0,
+            "clearanceGuardCandidates": 340,
+            "clearanceEntryCandidates": 10,
+            "clearanceMoveCandidates": 697
+          }
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed008/ledger/results/008.json",
+        "evidenceSha256": "a7062f5331898871153e5f0f994a0b96353b0690ca649ded465f820673b56a4c"
+      },
+      {
+        "seed": "獨立QA-010",
+        "seedNumber": 10,
+        "status": "COMPLETE",
+        "winner": 0,
+        "endTurn": 258,
+        "commands": 7269,
+        "duration": 65.549098916,
+        "milliseconds": 65549.098916,
+        "failureReason": null,
+        "terminalSaveReplayChecked": true,
+        "terminalSaveVerified": true,
+        "terminalReplayVerified": true,
+        "partialReplayVerified": false,
+        "partialSaveVerified": false,
+        "sourceHash": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+        "methodFingerprint": "0dedee054509992c7086a3227fb8ed02b54cd5508f08b70c74bff1b2b5bc0cc2",
+        "decisionMetrics": {
+          "count": 7269,
+          "totalMs": 9812.743423999953,
+          "medianMs": 1.1989579999990383,
+          "p95Ms": 3.452499999999418,
+          "maxMs": 32.0023340000007,
+          "percentileDefinition": "nearest-rank: sorted[ceil(p*n)-1]"
+        },
+        "pathWorkload": {
+          "status": "MEASURED",
+          "decisionsCompared": 7269,
+          "counters": {
+            "bfsCalls": 233451,
+            "bfsNodeExpansions": 88240766,
+            "bfsSourceSeeds": 233451,
+            "searchCalls": 251481,
+            "searchNodePops": 93173545,
+            "searchNodeExpansions": 93173545,
+            "sourceCandidates": 488352,
+            "sourceSeedsAccepted": 482403,
+            "sourceSeedsRejectedBlocked": 5949,
+            "weightedDijkstraCalls": 18030,
+            "weightedBucketPops": 4932779,
+            "weightedNodeExpansions": 4932779,
+            "weightedStalePops": 0,
+            "legalMoveCandidates": 224590,
+            "movementGoals": 43600,
+            "routeGoalCandidatesExamined": 207881,
+            "routeGoalCandidatesRetained": 147946,
+            "fallbackUnits": 6062,
+            "frontierSightClasses": 10583,
+            "frontierGeometryCellUpdates": 28262886,
+            "frontierVantageCandidateOccurrences": 636599,
+            "frontierUniqueVantages": 424315,
+            "frontierGoalSources": 104514,
+            "frontierNodeExpansions": 4932779,
+            "patrolComponentBfsCalls": 0,
+            "patrolComponentNodeExpansions": 0,
+            "patrolWaypointCandidates": 0,
+            "patrolWaypointBfsCalls": 0,
+            "patrolWaypointNodeExpansions": 0,
+            "reconComponentCacheLookups": 0,
+            "reconComponentCacheHits": 0,
+            "reconComponentCacheMisses": 0,
+            "patrolFieldCacheLookups": 0,
+            "patrolFieldCacheHits": 0,
+            "patrolFieldCacheMisses": 0,
+            "primaryExploreGoalCount": 5316,
+            "primaryExploreSources": 104514,
+            "primaryWeightedCalls": 18030,
+            "primaryWeightedExpansions": 4932779,
+            "fallbackExploreGoalCount": 0,
+            "fallbackExploreSources": 0,
+            "fallbackWeightedCalls": 0,
+            "fallbackWeightedExpansions": 0,
+            "clearanceGuardCandidates": 660,
+            "clearanceEntryCandidates": 267,
+            "clearanceMoveCandidates": 15683
+          }
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/targeted/seed010/ledger/results/010.json",
+        "evidenceSha256": "a979ca8f7d0aaa77366461195d707eaec331ffc5f93649b45fbe8ce1e34557ae"
+      }
+    ],
+    "E": [
+      {
+        "seed": "獨立QA-008",
+        "seedNumber": 8,
+        "status": "TURN_LIMIT",
+        "winner": null,
+        "endTurn": 800,
+        "commands": 20682,
+        "duration": 289.946213416,
+        "milliseconds": 289946.21341599996,
+        "failureReason": "HARNESS_TURN_LIMIT_NOT_A_DRAW_OR_VICTORY",
+        "terminalSaveReplayChecked": false,
+        "terminalSaveVerified": false,
+        "terminalReplayVerified": false,
+        "partialReplayVerified": true,
+        "partialSaveVerified": true,
+        "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+        "methodFingerprint": "602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01",
+        "decisionMetrics": {
+          "count": 20682,
+          "totalMs": 27470.21819000045,
+          "medianMs": 1.2037909999999101,
+          "p95Ms": 3.286000000007334,
+          "maxMs": 46.8255419999914,
+          "percentileDefinition": "nearest-rank: sorted[ceil(p*n)-1]"
+        },
+        "pathWorkload": {
+          "status": "MEASURED",
+          "decisionsCompared": 20682,
+          "counters": {
+            "bfsCalls": 619577,
+            "bfsNodeExpansions": 263377669,
+            "bfsSourceSeeds": 619577,
+            "searchCalls": 648826,
+            "searchNodePops": 272670222,
+            "searchNodeExpansions": 272670222,
+            "sourceCandidates": 1172464,
+            "sourceSeedsAccepted": 1171616,
+            "sourceSeedsRejectedBlocked": 848,
+            "weightedDijkstraCalls": 29249,
+            "weightedBucketPops": 9292553,
+            "weightedNodeExpansions": 9292553,
+            "weightedStalePops": 0,
+            "legalMoveCandidates": 495108,
+            "movementGoals": 114267,
+            "routeGoalCandidatesExamined": 534559,
+            "routeGoalCandidatesRetained": 388936,
+            "fallbackUnits": 8929,
+            "frontierSightClasses": 30648,
+            "frontierGeometryCellUpdates": 73593679,
+            "frontierVantageCandidateOccurrences": 1668920,
+            "frontierUniqueVantages": 1113583,
+            "frontierGoalSources": 272300,
+            "frontierNodeExpansions": 9292553,
+            "patrolComponentBfsCalls": 0,
+            "patrolComponentNodeExpansions": 0,
+            "patrolWaypointCandidates": 0,
+            "patrolWaypointBfsCalls": 0,
+            "patrolWaypointNodeExpansions": 0,
+            "reconComponentCacheLookups": 0,
+            "reconComponentCacheHits": 0,
+            "reconComponentCacheMisses": 0,
+            "patrolFieldCacheLookups": 0,
+            "patrolFieldCacheHits": 0,
+            "patrolFieldCacheMisses": 0,
+            "primaryExploreGoalCount": 15337,
+            "primaryExploreSources": 272300,
+            "primaryWeightedCalls": 29249,
+            "primaryWeightedExpansions": 9292553,
+            "fallbackExploreGoalCount": 0,
+            "fallbackExploreSources": 0,
+            "fallbackWeightedCalls": 0,
+            "fallbackWeightedExpansions": 0,
+            "clearanceGuardCandidates": 154,
+            "clearanceEntryCandidates": 0,
+            "clearanceMoveCandidates": 0
+          }
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed008/ledger/results/008.json",
+        "evidenceSha256": "5d2965520b738da2252f96a2523aa72e57867c2fd7921ba7efbdca3b7f39956c"
+      },
+      {
+        "seed": "獨立QA-010",
+        "seedNumber": 10,
+        "status": "COMPLETE",
+        "winner": 1,
+        "endTurn": 247,
+        "commands": 6705,
+        "duration": 54.022838833,
+        "milliseconds": 54022.838833,
+        "failureReason": null,
+        "terminalSaveReplayChecked": true,
+        "terminalSaveVerified": true,
+        "terminalReplayVerified": true,
+        "partialReplayVerified": false,
+        "partialSaveVerified": false,
+        "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+        "methodFingerprint": "602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01",
+        "decisionMetrics": {
+          "count": 6705,
+          "totalMs": 8973.375857000055,
+          "medianMs": 1.1853339999997843,
+          "p95Ms": 3.4137919999993755,
+          "maxMs": 15.269458000002487,
+          "percentileDefinition": "nearest-rank: sorted[ceil(p*n)-1]"
+        },
+        "pathWorkload": {
+          "status": "MEASURED",
+          "decisionsCompared": 6705,
+          "counters": {
+            "bfsCalls": 304881,
+            "bfsNodeExpansions": 101972064,
+            "bfsSourceSeeds": 304881,
+            "searchCalls": 329550,
+            "searchNodePops": 106088848,
+            "searchNodeExpansions": 106088848,
+            "sourceCandidates": 697547,
+            "sourceSeedsAccepted": 689554,
+            "sourceSeedsRejectedBlocked": 7993,
+            "weightedDijkstraCalls": 24669,
+            "weightedBucketPops": 4116784,
+            "weightedNodeExpansions": 4116784,
+            "weightedStalePops": 0,
+            "legalMoveCandidates": 207485,
+            "movementGoals": 39400,
+            "routeGoalCandidatesExamined": 290150,
+            "routeGoalCandidatesRetained": 155102,
+            "fallbackUnits": 17178,
+            "frontierSightClasses": 10206,
+            "frontierGeometryCellUpdates": 31585105,
+            "frontierVantageCandidateOccurrences": 611730,
+            "frontierUniqueVantages": 403483,
+            "frontierGoalSources": 104310,
+            "frontierNodeExpansions": 4116784,
+            "patrolComponentBfsCalls": 0,
+            "patrolComponentNodeExpansions": 0,
+            "patrolWaypointCandidates": 0,
+            "patrolWaypointBfsCalls": 0,
+            "patrolWaypointNodeExpansions": 0,
+            "reconComponentCacheLookups": 0,
+            "reconComponentCacheHits": 0,
+            "reconComponentCacheMisses": 0,
+            "patrolFieldCacheLookups": 0,
+            "patrolFieldCacheHits": 0,
+            "patrolFieldCacheMisses": 0,
+            "primaryExploreGoalCount": 5106,
+            "primaryExploreSources": 104310,
+            "primaryWeightedCalls": 24669,
+            "primaryWeightedExpansions": 4116784,
+            "fallbackExploreGoalCount": 0,
+            "fallbackExploreSources": 0,
+            "fallbackWeightedCalls": 0,
+            "fallbackWeightedExpansions": 0,
+            "clearanceGuardCandidates": 503,
+            "clearanceEntryCandidates": 214,
+            "clearanceMoveCandidates": 10567
+          }
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/targeted/seed010/ledger/results/010.json",
+        "evidenceSha256": "b3583eea74c8ee5c28b8cbb5f751b1b76256d99bd9de712972dc5744cabdccb5"
+      }
+    ]
+  },
+  "targetedLimits": {
+    "maxEndTurn": 800,
+    "maxCommands": 40000,
+    "noSyntheticWinner": true
+  },
+  "browsers": {
+    "D": {
+      "browser": {
+        "status": "TESTED_FAIL",
+        "scenarioResults": [
+          {
+            "id": "first-party-error-observable-native-selectors",
+            "status": "PASS"
+          },
+          {
+            "id": "desktop-load",
+            "status": "PASS"
+          },
+          {
+            "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+            "status": "PASS"
+          },
+          {
+            "id": "storage-failure-export-do-not-ack",
+            "status": "PASS"
+          },
+          {
+            "id": "recruited-unit-next-own-turn-real-move",
+            "status": "PASS"
+          },
+          {
+            "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+            "status": "PASS"
+          },
+          {
+            "id": "keyboard-selection-navigation",
+            "status": "PASS"
+          }
+        ],
+        "gameplayAssertionResult": "NOT_RUN",
+        "artifactCleanupResult": "PASS",
+        "browserDisconnected": true,
+        "privateArtifactsRemaining": 0,
+        "firstPartyError": "favicon.ico HTTP404，舊B相同artifact也重現",
+        "failureKinds": [
+          "PRIMARY_TEST_FAILURE"
+        ],
+        "mobileScenarios": "UNVERIFIED，本次於手機迴圈前失敗",
+        "artifactHashes": {
+          "assets/index-CZ57SpAF.js": "eabf686443a819da4ec8067b8d3dc3de4cb27030a2b2109d6e56eda50a8a0075",
+          "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+          "index.html": "5d2b3a1807d734c6eb53097411191670998c97627f4849eeccec1f486bd85867"
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/browser/browser.json",
+        "evidenceSha256": "78d3bdeef5f4cfc339c807e57384b54ef35faabaa2bc20300c7ec806947b9ada"
+      },
+      "gameplay": {
+        "status": "TESTED_FAIL",
+        "scenarioResults": [
+          {
+            "id": "first-party-error-observable-native-selectors",
+            "status": "PASS"
+          },
+          {
+            "id": "desktop-load",
+            "status": "PASS"
+          },
+          {
+            "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+            "status": "PASS"
+          },
+          {
+            "id": "storage-failure-export-do-not-ack",
+            "status": "PASS"
+          },
+          {
+            "id": "recruited-unit-next-own-turn-real-move",
+            "status": "PASS"
+          },
+          {
+            "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+            "status": "PASS"
+          },
+          {
+            "id": "continuous-existing-gameplay",
+            "status": "PASS"
+          },
+          {
+            "id": "keyboard-selection-navigation",
+            "status": "PASS"
+          }
+        ],
+        "gameplayAssertionResult": "PASS",
+        "artifactCleanupResult": "PASS",
+        "browserDisconnected": true,
+        "privateArtifactsRemaining": 0,
+        "firstPartyError": "favicon.ico HTTP404，舊B相同artifact也重現",
+        "failureKinds": [
+          "PRIMARY_TEST_FAILURE"
+        ],
+        "mobileScenarios": "UNVERIFIED，本次於手機迴圈前失敗",
+        "artifactHashes": {
+          "assets/index-CZ57SpAF.js": "eabf686443a819da4ec8067b8d3dc3de4cb27030a2b2109d6e56eda50a8a0075",
+          "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+          "index.html": "5d2b3a1807d734c6eb53097411191670998c97627f4849eeccec1f486bd85867"
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/evidence/browser-1792692249795/browser.json",
+        "evidenceSha256": "9fee735c131cf69548413951650f1e7345b331f85db8564fb1896d194c6ce8e6",
+        "journey": {
+          "status": "PASS",
+          "humanCommands": 209,
+          "maxHumanCommands": 220,
+          "actions": [
+            "Attack",
+            "Capture",
+            "EndTurn",
+            "Move",
+            "Recruit",
+            "Research",
+            "ResolveRelic"
+          ],
+          "captureAfterAttack": true,
+          "replayVerified": true
+        }
+      }
+    },
+    "E": {
+      "browser": {
+        "status": "TESTED_FAIL",
+        "scenarioResults": [
+          {
+            "id": "first-party-error-observable-native-selectors",
+            "status": "PASS"
+          },
+          {
+            "id": "desktop-load",
+            "status": "PASS"
+          },
+          {
+            "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+            "status": "PASS"
+          },
+          {
+            "id": "storage-failure-export-do-not-ack",
+            "status": "PASS"
+          },
+          {
+            "id": "recruited-unit-next-own-turn-real-move",
+            "status": "PASS"
+          },
+          {
+            "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+            "status": "PASS"
+          },
+          {
+            "id": "keyboard-selection-navigation",
+            "status": "PASS"
+          }
+        ],
+        "gameplayAssertionResult": "NOT_RUN",
+        "artifactCleanupResult": "PASS",
+        "browserDisconnected": true,
+        "privateArtifactsRemaining": 0,
+        "firstPartyError": "favicon.ico HTTP404，舊B相同artifact也重現",
+        "failureKinds": [
+          "PRIMARY_TEST_FAILURE"
+        ],
+        "mobileScenarios": "UNVERIFIED，本次於手機迴圈前失敗",
+        "artifactHashes": {
+          "assets/index-XheqdjvP.js": "9545fcdf0080e9883ee35f8929b6f7bc582cef787592f401e4a67c8ed81c0ae1",
+          "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+          "index.html": "67daa858c2465b5a5f9c1d8e0f198977c24d57035a3571e6acd8f23b8a0b6f29"
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/browser/browser.json",
+        "evidenceSha256": "78d1a20e020376f59707fbfc77c85ea509526737750fbb9b1aa5812e3556ab6c"
+      },
+      "gameplay": {
+        "status": "TESTED_FAIL",
+        "scenarioResults": [
+          {
+            "id": "first-party-error-observable-native-selectors",
+            "status": "PASS"
+          },
+          {
+            "id": "desktop-load",
+            "status": "PASS"
+          },
+          {
+            "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+            "status": "PASS"
+          },
+          {
+            "id": "storage-failure-export-do-not-ack",
+            "status": "PASS"
+          },
+          {
+            "id": "recruited-unit-next-own-turn-real-move",
+            "status": "PASS"
+          },
+          {
+            "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+            "status": "PASS"
+          },
+          {
+            "id": "continuous-existing-gameplay",
+            "status": "PASS"
+          },
+          {
+            "id": "keyboard-selection-navigation",
+            "status": "PASS"
+          }
+        ],
+        "gameplayAssertionResult": "PASS",
+        "artifactCleanupResult": "PASS",
+        "browserDisconnected": true,
+        "privateArtifactsRemaining": 0,
+        "firstPartyError": "favicon.ico HTTP404，舊B相同artifact也重現",
+        "failureKinds": [
+          "PRIMARY_TEST_FAILURE"
+        ],
+        "mobileScenarios": "UNVERIFIED，本次於手機迴圈前失敗",
+        "artifactHashes": {
+          "assets/index-XheqdjvP.js": "9545fcdf0080e9883ee35f8929b6f7bc582cef787592f401e4a67c8ed81c0ae1",
+          "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+          "index.html": "67daa858c2465b5a5f9c1d8e0f198977c24d57035a3571e6acd8f23b8a0b6f29"
+        },
+        "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/gameplay/browser.json",
+        "evidenceSha256": "951bf931ed264b652e8b76f4c68cd3394f29956d1697a541af0c4f1ca78732d4",
+        "journey": {
+          "status": "PASS",
+          "humanCommands": 209,
+          "maxHumanCommands": 220,
+          "actions": [
+            "Attack",
+            "Capture",
+            "EndTurn",
+            "Move",
+            "Recruit",
+            "Research",
+            "ResolveRelic"
+          ],
+          "captureAfterAttack": true,
+          "replayVerified": true
+        }
+      }
+    }
+  },
+  "counterfactual16": "C5-R6-02-COUNTERFACTUAL-RESULTS.json",
+  "firstDivergenceBoundedTradeoff": {
+    "turn": 47,
+    "index": 726,
+    "source": {
+      "sourceHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+      "aiSha": "939d641f000035489def1df7e3cdde040c35b31c58f5fcfd05b75e455a36fecc",
+      "ruleset": "g1-ccts-1",
+      "interventionSource": "bd0a54ef11babb4e183117b964d32bac5140ce316053adfaf090ed26c4affaec",
+      "interventionAiSha": "10e8347c5143c74a77067c88bf6228e10ab85c29a9114d647b14da21705e452d"
+    },
+    "horizons": [
+      2,
+      4,
+      8
+    ],
+    "summaries": [
+      {
+        "id": "B-control",
+        "status": "FINISHED",
+        "checkpoints": [
+          {
+            "endTurns": 2,
+            "ownUnitCount": 22,
+            "ownHp": 183,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 2,
+              "damageDealt": 2,
+              "observedKills": 0,
+              "captures": 0,
+              "recruits": 0,
+              "recruitCost": 0,
+              "newKnownTiles": 3
+            }
+          },
+          {
+            "endTurns": 4,
+            "ownUnitCount": 24,
+            "ownHp": 192,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 6,
+              "damageDealt": 6,
+              "observedKills": 3,
+              "captures": 0,
+              "recruits": 2,
+              "recruitCost": 10,
+              "newKnownTiles": 9
+            }
+          },
+          {
+            "endTurns": 8,
+            "ownUnitCount": 22,
+            "ownHp": 176,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 16,
+              "damageDealt": 34,
+              "observedKills": 4,
+              "captures": 0,
+              "recruits": 3,
+              "recruitCost": 16,
+              "newKnownTiles": 17
+            }
+          }
+        ]
+      },
+      {
+        "id": "D-first-move-then-B",
+        "status": "FINISHED",
+        "checkpoints": [
+          {
+            "endTurns": 2,
+            "ownUnitCount": 21,
+            "ownHp": 176,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 2,
+              "damageDealt": 2,
+              "observedKills": 1,
+              "captures": 0,
+              "recruits": 0,
+              "recruitCost": 0,
+              "newKnownTiles": 3
+            }
+          },
+          {
+            "endTurns": 4,
+            "ownUnitCount": 24,
+            "ownHp": 194,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 4,
+              "damageDealt": 4,
+              "observedKills": 2,
+              "captures": 0,
+              "recruits": 3,
+              "recruitCost": 16,
+              "newKnownTiles": 9
+            }
+          },
+          {
+            "endTurns": 8,
+            "ownUnitCount": 22,
+            "ownHp": 178,
+            "ownSiteCount": 3,
+            "outcomes": {
+              "attacks": 13,
+              "damageDealt": 30,
+              "observedKills": 4,
+              "captures": 0,
+              "recruits": 4,
+              "recruitCost": 22,
+              "newKnownTiles": 17
+            }
+          }
+        ]
+      }
+    ],
+    "scope": "D首步／雙方之後B，沒有冒充E整局結果"
+  },
+  "microbenchmark": {
+    "scope": "Six lawful B observations only; synthetic replayed microbenchmark, not full match performance",
+    "warmCycles": 20,
+    "cycles": 80,
+    "interleavedOrder": "AB/BA",
+    "B": {
+      "count": 480,
+      "medianMs": 0.8219169999999849,
+      "p95Ms": 1.3347499999999854,
+      "maxMs": 3.7707080000000133
+    },
+    "E": {
+      "count": 480,
+      "medianMs": 0.8043340000000399,
+      "p95Ms": 1.4281670000000304,
+      "maxMs": 3.9114580000000387
+    }
+  },
+  "microbenchmarkLimit": "同主機六個B合法觀測、AB/BA交錯480樣本；不等同Full100效能，初次與其他QA並行的噪聲樣本也保留。",
+  "originalEvidencePreservation": {
+    "checkedAt": "2026-10-23T09:09:11.388146+08:00",
+    "rows": [
+      {
+        "seal": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/ORIGINAL-EVIDENCE-SEAL.json",
+        "root": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-20261021-212438",
+        "count": 371,
+        "changed": []
+      },
+      {
+        "seal": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-20261021-212438/R5-PRESERVATION-SEAL.json",
+        "root": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R5-20261021-120235",
+        "count": 591,
+        "changed": []
+      }
+    ],
+    "status": "TESTED_PASS"
+  },
+  "failureHistoryNotes": [
+    "B首次184/188，明確timeout與CLI null保留，同bytes後188/188；不將四個失敗全推論為同因。",
+    "初始harness missing module及CLI錯誤fixture不算有效AI RED。",
+    "C型別檢查snapshot缺contract及test assert型別失敗保留；C不是最終候選。",
+    "D新增射手暴露反例真6/7 RED後，E7/7 GREEN；D歷史正式局及browser FAIL不覆寫。",
+    "E context初步method欄位的鍵名不符正式hash算法；正式TARGETED-SOURCE-FREEZE與ledger由原qa-source.methodHash產生，權威method602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01。"
+  ],
+  "lspDiagnostics": "UNVERIFIED，本工作階段沒有暴露lsp_diagnostics工具；實際tsc/typecheck通過，不冒稱LSP。",
+  "historicalR5": {
+    "executed": 100,
+    "complete": 87,
+    "turnLimit": 13,
+    "T3": "TESTED_FAIL",
+    "T6": "TESTED_FAIL",
+    "unchanged": true
+  },
+  "remainingRepresentativeSeeds": [
+    21,
+    64,
+    51
+  ],
+  "remainingRepresentativeStatus": "UNVERIFIED_E，008未終局，未達擴跑條件；B版本首次失敗保留。",
+  "privateDataExcluded": true,
+  "firstPartyNetworkProbe": {
+    "path": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/FIRSTPARTY-NETWORK-PROBE.json",
+    "baselineBPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-d-20261023-014328-2b12b1f0/BASELINE-FIRSTPARTY-NETWORK-PROBE.json",
+    "scope": "獨立probe確認E與相同舊B artifact均為favicon.ico404；QA FAIL原樣保留。"
+  }
+}

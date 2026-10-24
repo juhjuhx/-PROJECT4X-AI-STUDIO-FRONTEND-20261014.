@@ -1,0 +1,25 @@
+{
+  "label": "C5-R2-seed010-reinforce",
+  "cwd": ".",
+  "command": [
+    "env",
+    "PROJECT4X_QA_START_SEED=10",
+    "PROJECT4X_QA_GAMES=1",
+    "PROJECT4X_QA_WORKERS=1",
+    "PROJECT4X_QA_MAX_TURNS=800",
+    "PROJECT4X_QA_MAX_COMMANDS=40000",
+    "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R2-private/seed010-reinforce.json",
+    "npm",
+    "run",
+    "qa:headless"
+  ],
+  "startedAt": "2026-10-18T17:44:23.936470+00:00",
+  "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T17:46:13.212832+00:00",
+  "durationSeconds": 109.278,
+  "log": "C5-R2-seed010-reinforce.log"
+}

@@ -1,0 +1,17 @@
+{
+  "label": "C2-fresh-test",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "startedAt": "2026-10-17T23:47:47.183939+00:00",
+  "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "e5bc16fedde9245e29284a4ec954299212089139",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-17T23:47:48.566812+00:00",
+  "durationSeconds": 1.383,
+  "log": "C2-fresh-test.log"
+}

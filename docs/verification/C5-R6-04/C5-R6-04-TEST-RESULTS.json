@@ -1,0 +1,377 @@
+{
+  "schema": "project4x-r604-test-results-1",
+  "baselineCommit": "479d327fd7dca7024aa747aa4a4bb96df7652a3b",
+  "testedProductSource": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+  "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "productChanged": false,
+  "fresh": {
+    "check": "TESTED_PASS",
+    "unitTests": {
+      "status": "TESTED_PASS",
+      "passed": 195,
+      "failed": 0,
+      "skipped": 0,
+      "newProductTests": 0
+    },
+    "build": "TESTED_PASS",
+    "prefix": {
+      "status": "TESTED_PASS",
+      "commands": 1100,
+      "loops": 0
+    },
+    "D02": {
+      "status": "TESTED_PASS",
+      "commands": 673,
+      "winner": 0,
+      "seen": true
+    },
+    "privateHarnessTests": {
+      "status": "TESTED_PASS",
+      "passed": 5
+    },
+    "boundedTrials": {
+      "status": "TESTED_PASS",
+      "pairs": 8,
+      "arms": 16,
+      "endTurnCheckpoints": 48,
+      "scope": "方法與執行通過，不等於策略修補通過"
+    },
+    "coreRecheck": {
+      "status": "TESTED_PASS",
+      "commands": 12566
+    },
+    "fogDeterminism": "TESTED_PASS"
+  },
+  "productRed": "NOT_IMPLEMENTED",
+  "productGreen": "NOT_IMPLEMENTED",
+  "seed008": {
+    "status": "TESTED_FAIL",
+    "fresh": false,
+    "endTurns": 800,
+    "commands": 20682,
+    "winner": null,
+    "partialSaveReplay": true
+  },
+  "seed010": {
+    "status": "TESTED_PASS",
+    "fresh": false,
+    "winner": 1,
+    "endTurns": 247,
+    "commands": 6705,
+    "terminalSaveReplay": true
+  },
+  "browser": {
+    "status": "TESTED_FAIL",
+    "fresh": false,
+    "reason": "R603 favicon404 remains unresolved; R604 did not run browser"
+  },
+  "gameplay": {
+    "status": "TESTED_FAIL",
+    "fresh": false,
+    "journey": "last R603 209/220 TESTED_PASS",
+    "cleanup": "last R603 TESTED_PASS",
+    "overall": "favicon404"
+  },
+  "mobile": "UNVERIFIED",
+  "full100R6": "UNVERIFIED",
+  "T3R6": "UNVERIFIED",
+  "T6R6": "UNVERIFIED",
+  "alpha": "PARTIAL",
+  "historicalR5": "87 COMPLETE /13 TURN_LIMIT, T3/T6 TESTED_FAIL; original untouched",
+  "receipts": [
+    {
+      "runId": "05-delete-11-191829-aef1555b",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/05-delete-11/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:18:29.239626+00:00",
+      "finishedAt": "2026-10-23T11:18:35.378725+00:00",
+      "exitCode": 0,
+      "logSha": "5f7412cc84a1b36a4606802a7eefad04db429e013b3c5404631b814e9ae24afc",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/05-delete-11-191829-aef1555b/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "12-delete-6-191835-4d634313",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/12-delete-6/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:18:35.416872+00:00",
+      "finishedAt": "2026-10-23T11:18:43.875303+00:00",
+      "exitCode": 0,
+      "logSha": "1f7c2621cc957c76550a4321e7b722a648ba2dc9d5b9b5df69186a40fe1c887d",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/12-delete-6-191835-4d634313/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "18-delete-3-191843-9f8cd5cb",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/18-delete-3/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:18:43.926773+00:00",
+      "finishedAt": "2026-10-23T11:18:52.332368+00:00",
+      "exitCode": 0,
+      "logSha": "a272cdf9b56b8bb5bbcbb17dae9c94e403fec990772d929e42260f6266827916",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/18-delete-3-191843-9f8cd5cb/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "23-delete-3-191852-4f72f008",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/23-delete-3/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:18:52.386230+00:00",
+      "finishedAt": "2026-10-23T11:18:59.808725+00:00",
+      "exitCode": 0,
+      "logSha": "37d4bcea010f20d9186ff114bf1c28ef547b634b21a4e04fb1d2feed7ec7c71b",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/23-delete-3-191852-4f72f008/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "28-delete-3-191859-e55fd4d3",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/28-delete-3/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:18:59.849191+00:00",
+      "finishedAt": "2026-10-23T11:19:05.416426+00:00",
+      "exitCode": 0,
+      "logSha": "503d4730b5f74fc9e1800615f365f655649e9d4e59cc709782862652e88db06f",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/28-delete-3-191859-e55fd4d3/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "35-delete-2-191905-8b2d5da9",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "reduce.mjs",
+        "pair",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2/private/mechanical-729fe516-15fb-4b31-9885-882cea1b2331/35-delete-2/STATE.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:19:05.453945+00:00",
+      "finishedAt": "2026-10-23T11:19:10.905056+00:00",
+      "exitCode": 0,
+      "logSha": "e02db5159bc519b40b81f7119027abb282b5e1e3bebbeaf7b474c2ea3fd58593",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/35-delete-2-191905-8b2d5da9/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "boundaries-192223-d3300f07",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "boundaries.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:22:23.493040+00:00",
+      "finishedAt": "2026-10-23T11:22:24.175284+00:00",
+      "exitCode": 0,
+      "logSha": "3ab1c421a6dff9630077e74b89c4e30e67a62f2a6724057763bc705fb10a13df",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/boundaries-192223-d3300f07/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "build-192239-a6a9b6f1",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "startedAt": "2026-10-23T11:22:39.551246+00:00",
+      "finishedAt": "2026-10-23T11:22:40.154370+00:00",
+      "exitCode": 0,
+      "logSha": "c96c2b9c703fe848e7f8a421c1ed6e852f4790d8f7d705d758339d1615d91595",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/build-192239-a6a9b6f1/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "check-192238-e9d0c96a",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "startedAt": "2026-10-23T11:22:38.939084+00:00",
+      "finishedAt": "2026-10-23T11:22:39.479177+00:00",
+      "exitCode": 0,
+      "logSha": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/check-192238-e9d0c96a/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "d02-192308-ecff2092",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "startedAt": "2026-10-23T11:23:08.229542+00:00",
+      "finishedAt": "2026-10-23T11:23:08.829550+00:00",
+      "exitCode": 0,
+      "logSha": "a01166531fd16cdea49c816f3622abdb0b84aaa7fa121a9faaae97d854897d1e",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/d02-192308-ecff2092/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "harness-tests-192308-b134923b",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "harness.test.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:23:08.911085+00:00",
+      "finishedAt": "2026-10-23T11:23:09.228792+00:00",
+      "exitCode": 0,
+      "logSha": "1421b00d4aa755508121ff83eef20f98662c7cc5fc69c6e8ea4e849b41cd6932",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/harness-tests-192308-b134923b/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "integrity-192351-ff505dc2",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "integrity.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:23:51.971048+00:00",
+      "finishedAt": "2026-10-23T11:24:17.827089+00:00",
+      "exitCode": 0,
+      "logSha": "ed9fcf5dfb1e6ababc302b8ab2dce1b1370058c3c03008f4c340e4c91985880b",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/integrity-192351-ff505dc2/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "prefix-192307-b218b19c",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "startedAt": "2026-10-23T11:23:07.095618+00:00",
+      "finishedAt": "2026-10-23T11:23:09.849717+00:00",
+      "exitCode": 0,
+      "logSha": "a27aa4751d147c8932521a93176e24918223cb3206454fcb36543cb754d6d499",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/prefix-192307-b218b19c/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "role-chain-192537-c681b51b",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "role-chain.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:25:37.056231+00:00",
+      "finishedAt": "2026-10-23T11:25:43.341628+00:00",
+      "exitCode": 0,
+      "logSha": "05f8bf60890342a4777fe3600c3736ebda226c545450c5f159a323ee16a57516",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/role-chain-192537-c681b51b/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "unit-regression-191840-c92cf474",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "startedAt": "2026-10-23T11:18:40.042758+00:00",
+      "finishedAt": "2026-10-23T11:18:46.112219+00:00",
+      "exitCode": 0,
+      "logSha": "84abfec52a9d510aa5eeba00cdee48e000e186f3322576991b1b7750f03d3fe4",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/unit-regression-191840-c92cf474/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    },
+    {
+      "runId": "preservation-193241-16cd16ff",
+      "command": [
+        "python3",
+        "preserve-check.py"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-04-20261023-191459-512b87a2",
+      "startedAt": "2026-10-23T11:32:41.866676+00:00",
+      "finishedAt": "2026-10-23T11:32:42.684785+00:00",
+      "exitCode": 0,
+      "logSha": "66315694f9f4c6c405fbe135377cd5871644bcc2eb74ea2adce1716b3b76b26d",
+      "logPath": "evidence/C5-R6-04-20261023-191459-512b87a2/runs/preservation-193241-16cd16ff/output.log",
+      "testedSourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "testedAiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67"
+    }
+  ],
+  "wrapperIncident": {
+    "error": "ENOENT from percent-encoded CJK diagnostic path",
+    "classification": "QA_WRAPPER_FAILURE_NOT_AI_RED",
+    "evidence": "evidence/C5-R6-04-20261023-191459-512b87a2/DIAGNOSTIC-ATTEMPT1.json"
+  },
+  "limitations": [
+    "前兩pair與48機制搜尋在run-phase前執行，保留原log；之後完整稽核input SHA與12566步core重播。",
+    "run-phase v1排除source.json，v2已納入；完整integrity稽核補齊全部pair來源鏈，舊receipt不覆寫。",
+    "lsp_diagnostics工具不可用；實際執行tsc，不宣稱LSP通過。"
+  ],
+  "preservation": {
+    "status": "TESTED_PASS",
+    "sealedFiles": 1738,
+    "changed": 0,
+    "publicR5Sha": "aba1a667a40ba1d5ce2ceb168fb34b462f2f64570a0d6b4c4c4bbbab12225cb2"
+  }
+}

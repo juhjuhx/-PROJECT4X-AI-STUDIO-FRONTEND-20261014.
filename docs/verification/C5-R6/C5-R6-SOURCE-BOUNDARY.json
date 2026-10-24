@@ -1,0 +1,25 @@
+{
+  "schema": "project4x-c5-r6-source-boundary-1",
+  "baselineCommit": "5bd059b91a818f3f84c892df94cd57d8a3a66bdf",
+  "candidate": "B",
+  "productHash": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+  "aiSha256": "939d641f000035489def1df7e3cdde040c35b31c58f5fcfd05b75e455a36fecc",
+  "changedProductFiles": [
+    "src/core/ai.ts"
+  ],
+  "productFileCount": 21,
+  "methodFingerprint": "aa2df7b9b853ad87091bd39319a6b32e876764931ca5bf7232fc954cca1e957f",
+  "shadowSha": "c9393b695946cf06e8cf4cc65db9d3594deb22fbdb67955bf052e4f94170afe6",
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "coreRulesUnchanged": true,
+  "sessionUiMainUnchanged": true,
+  "privateTraceOutsideGit": true,
+  "baselineManifest": "C5-SOURCE-MANIFEST.json retained as R5 historical",
+  "candidateAMethod": "498cb1cca7aab512387596d4f64738d63bb26f30c6aa6bb52db9f96105c9b380",
+  "candidateAProduct": "6bdedcc762261118c1b131890f540d4fe1a22658f0805aa2299a100fb15cc6ec",
+  "candidateARootWrapperNote": "Some A wrappers observe original project moving from A to B while executed frozen-candidateA remains unchanged. Use headless sourceStart/sourceEnd/method identity of the actual frozen runtime; do not conceal wrapper productUnchanged=false.",
+  "R5SealRecheck": "TESTED_PASS: 591 files / zero mismatches; public R5 results unchanged",
+  "codeCheckpoint": "894e8f97f966635378c950f38945606575d27847"
+}

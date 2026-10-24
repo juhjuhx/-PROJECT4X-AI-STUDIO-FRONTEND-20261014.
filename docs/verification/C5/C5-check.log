@@ -1,0 +1,9 @@
+{"label": "C5-check", "cwd": ".", "command": ["npm", "run", "check"], "startedAt": "2026-10-18T04:51:37.537732+00:00", "snapshotSha256": "b597fa309c84dcd6e5a38d44ee8d0dc2cfc555a7c675b68e71b53f9ef84751a7", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "4cddfb3c9b50b80b45f85c1c4749e9f41ae392c9", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 check
+> tsc --noEmit
+
+scripts/ai-oscillation-check.ts(34,24): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+      Type 'undefined' is not assignable to type 'string'.

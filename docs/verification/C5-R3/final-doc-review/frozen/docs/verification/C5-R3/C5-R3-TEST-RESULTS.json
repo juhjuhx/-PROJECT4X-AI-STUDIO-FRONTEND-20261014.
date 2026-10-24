@@ -1,0 +1,948 @@
+{
+  "schema": "project4x-c5-r3-verification-1",
+  "phase": "C5-R3",
+  "status": "PARTIAL",
+  "baselineCommit": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "testedCommit": "8acc526... plus candidate; checkpoint commit tree mapped through SOURCE-BOUNDARY and delivery FINAL-GIT-STATE.json, not pretending tests ran on a future SHA",
+  "sourceSnapshot": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+  "AI_SHA256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "environment": {
+    "platform": "macOS Darwin24.6.0 arm64 Apple M1",
+    "node": "v26.10.0",
+    "npm": "11.19.1",
+    "typescript": "7.0.2",
+    "tsx": "4.23.15",
+    "browser": "156.0.8078.4",
+    "lsp_diagnostics": "UNAVAILABLE; real strict tsc used; no fake LSP PASS"
+  },
+  "scopes": {
+    "PREFIX": "TESTED_PASS 1100commands/0six-move loops",
+    "SINGLE_SEED": "TESTED_PASS seed010 COMPLETE winner0 EndTurn534 commands15418; terminalSaveReplayChecked=true",
+    "FULL100": "UNVERIFIED; not run, historical62/38 belongs to older policy",
+    "PLAYABILITY": "PARTIAL; finite real UI journey passed, physical phone/human full match/45–90minutes not verified"
+  },
+  "finalGates": {
+    "check": "C5-R3-final-check",
+    "test": "C5-R3-final-test",
+    "build": "C5-R3-final-build",
+    "prefix": "C5-R3-final-prefix",
+    "browser": "C5-R3-browser",
+    "gameplay": "C5-R3-gameplay",
+    "focused": "C5-R3-final-waiting",
+    "singleSeed": "C5-R3-seed010-approach"
+  },
+  "tests": {
+    "total": 113,
+    "passed": 113,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "scenarios": 11,
+    "errors": [],
+    "realCDPTouchMaxPointers": 2,
+    "physicalMobile": "UNVERIFIED"
+  },
+  "gameplay": {
+    "id": "continuous-existing-gameplay",
+    "status": "PASS",
+    "driver": "real DOM/keyboard buttons; production opponent AI; Observation-only test policy",
+    "maxHumanCommands": 220,
+    "humanCommands": 209,
+    "policySteps": 208,
+    "turn": 37,
+    "actions": [
+      "Attack",
+      "Capture",
+      "EndTurn",
+      "Move",
+      "Recruit",
+      "Research",
+      "ResolveRelic"
+    ],
+    "captureAfterAttack": true,
+    "replayVerified": true,
+    "privateExportPersisted": false
+  },
+  "seed010Candidates": [
+    {
+      "seed": "獨立QA-010",
+      "status": "FAIL",
+      "winner": null,
+      "turns": 801,
+      "fullRounds": 400,
+      "commands": 19898,
+      "hash": "4fc70b7327d45bcb",
+      "milliseconds": 89520,
+      "metrics": {
+        "actions": {
+          "Move": 15187,
+          "Attack": 3013,
+          "Capture": 8,
+          "Recruit": 880,
+          "Research": 6,
+          "ResolveRelic": 4,
+          "EstablishCapital": 0,
+          "EndTurn": 800
+        },
+        "relicGold": 2,
+        "relicIntel": 2,
+        "exileEntries": 0,
+        "centersEstablished": 0,
+        "eliminations": 0,
+        "maxUnits": 61
+      },
+      "timing": {
+        "observeMs": 11157,
+        "aiMs": 25894,
+        "applyMs": 52431
+      },
+      "terminalSaveReplayChecked": false,
+      "finalLife": [
+        "active",
+        "active"
+      ],
+      "failureCategory": null,
+      "candidate": "pruning",
+      "harnessStatus": "FAIL",
+      "limits": {
+        "maxTurns": 800,
+        "maxCommands": 40000,
+        "harnessOnly": true,
+        "noGameClockOrSyntheticWinner": true
+      },
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "aiSha256": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "privateReportSha256": "3e7b6b7a0f8fbe12b35bcea7db47c351070830a4d1ca201906d146c3bcb3915a",
+      "exitCode": 1
+    },
+    {
+      "seed": "獨立QA-010",
+      "status": "COMPLETE",
+      "winner": 0,
+      "turns": 535,
+      "fullRounds": 267,
+      "commands": 15418,
+      "hash": "3fb38074947af907",
+      "milliseconds": 132858,
+      "metrics": {
+        "actions": {
+          "Move": 11386,
+          "Attack": 2703,
+          "Capture": 19,
+          "Recruit": 763,
+          "Research": 6,
+          "ResolveRelic": 4,
+          "EstablishCapital": 3,
+          "EndTurn": 534
+        },
+        "relicGold": 2,
+        "relicIntel": 2,
+        "exileEntries": 4,
+        "centersEstablished": 3,
+        "eliminations": 1,
+        "maxUnits": 66
+      },
+      "timing": {
+        "observeMs": 10228,
+        "aiMs": 20052,
+        "applyMs": 33696
+      },
+      "terminalSaveReplayChecked": true,
+      "finalLife": [
+        "active",
+        "eliminated"
+      ],
+      "failureCategory": null,
+      "candidate": "approach",
+      "harnessStatus": "PARTIAL",
+      "limits": {
+        "maxTurns": 800,
+        "maxCommands": 40000,
+        "harnessOnly": true,
+        "noGameClockOrSyntheticWinner": true
+      },
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "aiSha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "privateReportSha256": "376a4ea8d934edaaae509ee43ffb094f1034139d6f8307372610aaa2d88cfc71",
+      "exitCode": 0
+    }
+  ],
+  "centralSearch": {
+    "status": "TESTED_FAIL",
+    "commands": 1000,
+    "seen": false,
+    "winner": null,
+    "turn": 871,
+    "log": "C5-R3-central-search.log",
+    "scope": "separate synthetic D-02; not a generated seed010 root-cause claim"
+  },
+  "review": {
+    "reviewer": "Codex /root/r3_independent_review (clean-context, read-only)",
+    "verdict": "TESTED_PASS for frozen AI bytes; no blocker",
+    "slice1": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "AI": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "report": "review-slice1/REVIEW.md"
+    },
+    "slice2": {
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "AI": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "report": "review-slice2/REVIEW.md"
+    },
+    "performance": "bounded synthetic64units/10goals/30calls: slice1 median6.47ms p957.09ms; slice2 median7.91ms p959.30ms; not full-match benchmark",
+    "retainedFeedback": "已把fresh、合法退路後仍EndTurn的較強等待斷言加入project，fresh9/9與113/113。",
+    "artifactRestoration": {
+      "label": "C5-R3-review-restoration",
+      "exitCode": 0,
+      "counts": {
+        "tests": 20,
+        "passed": 20,
+        "failed": 0,
+        "skipped": 0
+      },
+      "sourceSnapshot": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "docs/verification/C5-R3/review-slice2/tests/ai-stalemate.test.ts",
+        "docs/verification/C5-R3/review-slice2/獨立審查.test.ts",
+        "docs/verification/C5-R3/review-slice2/第二片獨立審查.test.ts"
+      ],
+      "startedAt": "2026-10-19T12:02:42.847263+00:00",
+      "endedAt": "2026-10-19T12:02:43.997623+00:00",
+      "durationSeconds": 1.15,
+      "log": "docs/verification/C5-R3/C5-R3-review-restoration.log",
+      "purpose": "review凍結檔移入Git證據後，可直接在專案重跑，避免依賴外部私人路徑。"
+    }
+  },
+  "runs": [
+    {
+      "label": "C5-R3-approach-GREEN",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-19T03:47:30.110810+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:47:30.619120+00:00",
+      "durationSeconds": 0.508,
+      "log": "docs/verification/C5-R3/C5-R3-approach-GREEN.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "total": 9
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-GREEN.source.json"
+    },
+    {
+      "label": "C5-R3-approach-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-19T03:46:50.483756+00:00",
+      "snapshotSha256": "5002c15431dc7b9c8f7535ef2f21cda7ab2a509983bd7dcd8328720d8dec5387",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-19T03:46:50.814255+00:00",
+      "durationSeconds": 0.33,
+      "log": "docs/verification/C5-R3/C5-R3-approach-RED.log",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "blockingScope": "expected regression RED",
+      "counts": {
+        "passed": 8,
+        "failed": 1,
+        "skipped": 0,
+        "total": 9
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-RED.source.json"
+    },
+    {
+      "label": "C5-R3-approach-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-19T03:47:43.695722+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:47:44.749312+00:00",
+      "durationSeconds": 1.054,
+      "log": "docs/verification/C5-R3/C5-R3-approach-build.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-build.source.json"
+    },
+    {
+      "label": "C5-R3-approach-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-19T03:47:30.110810+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:47:30.785538+00:00",
+      "durationSeconds": 0.675,
+      "log": "docs/verification/C5-R3/C5-R3-approach-check.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-check.source.json"
+    },
+    {
+      "label": "C5-R3-approach-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-19T03:47:30.110811+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:47:32.886859+00:00",
+      "durationSeconds": 2.776,
+      "log": "docs/verification/C5-R3/C5-R3-approach-prefix.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-prefix.source.json"
+    },
+    {
+      "label": "C5-R3-approach-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-19T03:47:43.695722+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:47:47.015334+00:00",
+      "durationSeconds": 3.32,
+      "log": "docs/verification/C5-R3/C5-R3-approach-test.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 113,
+        "failed": 0,
+        "skipped": 0,
+        "total": 113
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-test.source.json"
+    },
+    {
+      "label": "C5-R3-approach-trace",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-decision-trace.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/approach-prefix"
+      ],
+      "startedAt": "2026-10-19T03:47:56.784834+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:48:07.071610+00:00",
+      "durationSeconds": 10.287,
+      "log": "docs/verification/C5-R3/C5-R3-approach-trace.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-approach-trace.source.json",
+      "claimScope": "diagnostics/parity only; NOT gameplay or terminal pass"
+    },
+    {
+      "label": "C5-R3-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-19T03:51:31.511983+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:51:37.562318+00:00",
+      "durationSeconds": 6.05,
+      "log": "docs/verification/C5-R3/C5-R3-browser.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-browser.source.json"
+    },
+    {
+      "label": "C5-R3-central-search",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "startedAt": "2026-10-19T11:57:42.178126+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-19T11:57:43.214786+00:00",
+      "durationSeconds": 1.036,
+      "log": "docs/verification/C5-R3/C5-R3-central-search.log",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "blockingScope": "separate D-02 defect",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-central-search.source.json"
+    },
+    {
+      "label": "C5-R3-final-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-19T03:54:07.424452+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:54:08.057871+00:00",
+      "durationSeconds": 0.633,
+      "log": "docs/verification/C5-R3/C5-R3-final-build.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-final-build.source.json"
+    },
+    {
+      "label": "C5-R3-final-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-19T03:53:57.917622+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:53:59.112528+00:00",
+      "durationSeconds": 1.194,
+      "log": "docs/verification/C5-R3/C5-R3-final-check.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-final-check.source.json"
+    },
+    {
+      "label": "C5-R3-final-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-19T11:57:42.178127+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T11:57:44.957281+00:00",
+      "durationSeconds": 2.779,
+      "log": "docs/verification/C5-R3/C5-R3-final-prefix.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-final-prefix.source.json"
+    },
+    {
+      "label": "C5-R3-final-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-19T03:53:57.917622+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:54:02.635803+00:00",
+      "durationSeconds": 4.718,
+      "log": "docs/verification/C5-R3/C5-R3-final-test.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 113,
+        "failed": 0,
+        "skipped": 0,
+        "total": 113
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-final-test.source.json"
+    },
+    {
+      "label": "C5-R3-final-waiting",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-19T03:51:27.161218+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:51:27.545544+00:00",
+      "durationSeconds": 0.384,
+      "log": "docs/verification/C5-R3/C5-R3-final-waiting.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "total": 9
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-final-waiting.source.json"
+    },
+    {
+      "label": "C5-R3-gameplay",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "startedAt": "2026-10-19T03:51:35.344789+00:00",
+      "snapshotSha256": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:52:48.474780+00:00",
+      "durationSeconds": 73.131,
+      "log": "docs/verification/C5-R3/C5-R3-gameplay.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-gameplay.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-GREEN",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-19T03:42:51.176318+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:42:51.521114+00:00",
+      "durationSeconds": 0.345,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-GREEN.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "total": 7
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-GREEN.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-19T03:42:19.148119+00:00",
+      "snapshotSha256": "3b6e5b2899f4c0e7b240bbfde0577f4b7271f4978c6a5ff39219aad928c6c6e8",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-19T03:42:19.678919+00:00",
+      "durationSeconds": 0.53,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-RED.log",
+      "status": "TESTED_FAIL",
+      "expectedRed": true,
+      "blockingScope": "expected regression RED",
+      "counts": {
+        "passed": 6,
+        "failed": 1,
+        "skipped": 0,
+        "total": 7
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-RED.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-19T03:43:14.475818+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:43:15.530711+00:00",
+      "durationSeconds": 1.055,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-build.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-build.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-19T03:42:51.176352+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:42:51.692338+00:00",
+      "durationSeconds": 0.516,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-check.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-check.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-19T03:42:51.176281+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:42:53.588652+00:00",
+      "durationSeconds": 2.412,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-prefix.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-prefix.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-19T03:43:14.475874+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:43:17.557867+00:00",
+      "durationSeconds": 3.082,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-test.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": 111,
+        "failed": 0,
+        "skipped": 0,
+        "total": 111
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-test.source.json"
+    },
+    {
+      "label": "C5-R3-pruning-trace",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-decision-trace.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/pruning-prefix"
+      ],
+      "startedAt": "2026-10-19T03:43:59.385144+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:44:09.626047+00:00",
+      "durationSeconds": 10.241,
+      "log": "docs/verification/C5-R3/C5-R3-pruning-trace.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-pruning-trace.source.json",
+      "claimScope": "diagnostics/parity only; NOT gameplay or terminal pass"
+    },
+    {
+      "label": "C5-R3-seed010-approach",
+      "cwd": ".",
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/seed010-approach.json",
+        "npm",
+        "run",
+        "qa:headless"
+      ],
+      "startedAt": "2026-10-19T03:47:55.618003+00:00",
+      "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-19T03:50:08.777191+00:00",
+      "durationSeconds": 133.161,
+      "log": "docs/verification/C5-R3/C5-R3-seed010-approach.log",
+      "status": "TESTED_PASS",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-seed010-approach.source.json"
+    },
+    {
+      "label": "C5-R3-seed010-pruning",
+      "cwd": ".",
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/seed010-pruning.json",
+        "npm",
+        "run",
+        "qa:headless"
+      ],
+      "startedAt": "2026-10-19T03:43:58.242306+00:00",
+      "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-19T03:45:28.137629+00:00",
+      "durationSeconds": 89.896,
+      "log": "docs/verification/C5-R3/C5-R3-seed010-pruning.log",
+      "status": "TESTED_FAIL",
+      "expectedRed": false,
+      "blockingScope": "candidate-specific; final gates explicitly selected",
+      "counts": {
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "total": null
+      },
+      "sourceMap": "docs/verification/C5-R3/C5-R3-seed010-pruning.source.json"
+    }
+  ],
+  "sourceManifest": "C5-SOURCE-MANIFEST.json",
+  "sourceBoundary": "docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+  "remainingFailures": [
+    "D-02 central search synthetic fixture",
+    "current full100/T3/T6 UNVERIFIED; historical FAIL preserved",
+    "global friendly-traffic oscillation prevention not established",
+    "human full match/physical phone/45–90minute acceptance UNVERIFIED"
+  ],
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "thresholdsChanged": false,
+  "winnerSynthesized": false,
+  "publicTraceExported": false,
+  "pushed": false,
+  "CI": "UNVERIFIED; no push",
+  "manifestSha256": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "TESTED_PASS",
+  "C5ports": [
+    {
+      "file": "C5-paired-browser-cleanup.json",
+      "launcherTerminated": true,
+      "port": 59344,
+      "portAcceptsConnections": false
+    },
+    {
+      "file": "C5-paired-gameplay-cleanup.json",
+      "launcherTerminated": true,
+      "port": 59360,
+      "portAcceptsConnections": false
+    }
+  ],
+  "temporaryD3RuntimeDependenciesAndDistRemoved": true,
+  "originalD3ZipHash": "9959a72a39c163a93c611651d8b761eff9d72193c21214d4fdbd898ecd3cb451",
+  "originalZipAndQuarantinePreserved": true,
+  "projectNodeModulesRetainedForUse": true
+}

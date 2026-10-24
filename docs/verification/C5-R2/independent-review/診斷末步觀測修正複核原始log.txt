@@ -1,0 +1,6 @@
+PASS trace guard rejects missing output
+PASS trace guard rejects relative output
+PASS trace guard rejects project output before mkdir
+PASS trace guard realpaths existing parent before rejecting project output
+PASS trace guard accepts external output without creating it
+PASS corrected final-command telemetry: commands=1 seen=true finalObservationHasEnemy=true; winner=null

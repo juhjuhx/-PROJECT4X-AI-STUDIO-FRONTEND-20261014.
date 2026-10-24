@@ -1,0 +1,16 @@
+{
+  "status": "TESTED_PASS",
+  "runtimeSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+  "latestTestSnapshot": "647933bf67bc45dcd4820a9dfd06b1fc20b5ad78464158baddc8258b2575da19",
+  "changedPaths": [
+    "scripts/ai-oscillation-check.ts",
+    "tests/ai-oscillation.test.ts"
+  ],
+  "allProductionBytesUnchanged": true,
+  "distBytesMatchPriorBrowser": true,
+  "distSha256": {
+    "index.html": "c423175d3dff5fc7a4c956f7fb12c29f3813cc1f2a7e910d87f532923e2f663e",
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+    "assets/index-BVeJnuve.js": "9296aa84d0d8f643c56919a354f9de7b13c01cff4f43de7308a74ce216dd31ca"
+  }
+}

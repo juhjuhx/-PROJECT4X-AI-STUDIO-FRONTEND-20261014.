@@ -1,0 +1,60 @@
+✔ C5-R4：中央未知格沒有可進入鄰格時，仍走向合法已知視野vantage (6.252916ms)
+✔ C5-R4：少量真命令可揭露山圈中的未知區域，而非只有方向斷言 (41.267542ms)
+✔ C5-R4：已知七格廊道仍有不可見情報時，不停在原四角目標 (3.545542ms)
+✔ C5-R4：目前可達地形全可見時，不為不可達偵巡目標反覆移動 (1.24625ms)
+✔ C5-R4 Fog：不同隱藏地形與敵兵位置，完全相同Observation產生相同行動 (3.299375ms)
+✔ C5-R4：山脈隔絕所有資訊vantage時，只能選合法動作並合理等待 (1.022833ms)
+✔ C5-R4：友軍暫時截斷已知探索路線時，仍合法接近而不穿兵 (2.206834ms)
+✔ C5-R4：新探索不無條件壓過合法攻擊與佔領 (1.790542ms)
+✔ C5-R4：低視野友軍佔據vantage時，保留可繞行並真揭露的路線 (6.057042ms)
+✔ C5-R4：deepfreeze／clone／重複／穿插決策／回傳修改均不影響確定性 (22.815625ms)
+✔ 相同 seed 初始地圖、合法四出生點與 hash 完全確定 (7.356708ms)
+✔ 非法與過期命令保持同一引用及所有資料 (1.022625ms)
+✔ 首己方回合無收入、下一己方回合各據點2金且重設一次 (1.377584ms)
+✔ observation 是副本、未知格與不可見敵兵不外洩 (1.41975ms)
+✔ 成功request同payload重送無副作用，不同payload与stale拒絕 (1.146167ms)
+✔ 斥候移動發現遺跡立即必答；情報依distance/y/x探索最多3地形格 (4.478625ms)
+✔ Move一次但可接Attack；不可穿人、擊殺不自動進格，攻擊結束兵行動 (1.947083ms)
+✔ 中心失守仍流亡；持續據點跨完整敵方EndTurn才可免費建都，不重設兵旗標 (2.511167ms)
+✔ 正常保存與重播完整資料相同，保存拒絕格式、佔位、ledger與未經歷史的竄改 (9.562083ms)
+✔ 遺跡情報不暴露未曾正常看見的據點與遺跡，已探索格不帶敵方owner (2.2555ms)
+✔ 100種seed：四spawn、全部據點與早期遺跡同連通；雙方初始視野無必答 (138.699834ms)
+✔ 尋路不穿越友軍或不可通行地形；完整非法拒絕不留request (0.431958ms)
+✔ 守方己有據點cover1與terraincover1不疊加；敵方據點不給掩護 (1.879167ms)
+✔ 據點招募需空格、每回合一次；新兵不能行動；科技費用精確且Farm下次收入 (3.27775ms)
+✔ 收回歷史首都仍流亡、不可自動復辟；新中心須主動且不resetrecruited (1.099875ms)
+✔ hash包含未來規則旗標與兩方知識，明確排除protocolledger (4.928416ms)
+✔ AI僅接Observation，全部決策出自合法候選且不修改view (117.28775ms)
+✔ AI能靠觀測移向敵都、攻擊守軍、占領並在流亡後主動建中心 (3.417292ms)
+✔ 非active與terminalObservation的AI停止返回null (1.961167ms)
+✖ 接受的history entry/action/to深凍結，舊snapshot與原usercommand不能污染新snapshot (4.374541ms)
+✔ AI尋目標時不把友軍占位當可穿越，選擇可達繞路而不反覆折返 (1.371541ms)
+✔ AI用遠射完成攻城，保留fresh城旁兵同turn入空城，避免殺守軍→招募永久循環 (4.043833ms)
+✔ 斥候不被補兵戰線吸住，未發現敵都時主動擴大未知觀測 (5.7445ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 32
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 584.413209
+
+✖ failing tests:
+
+test at ../evidence/C5-R4-final-review/凍結來源/tests/core.test.ts:2:18204
+✖ 接受的history entry/action/to深凍結，舊snapshot與原usercommand不能污染新snapshot (4.374541ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (TypeError).
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-final-review/凍結來源/tests/core.test.ts:275:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

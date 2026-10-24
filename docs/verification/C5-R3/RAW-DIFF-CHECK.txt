@@ -1,0 +1,11 @@
+docs/verification/C5-R3/C5-R3-approach-RED.log:26: trailing whitespace.
++  
+docs/verification/C5-R3/C5-R3-approach-RED.log:36: trailing whitespace.
++  
+docs/verification/C5-R3/C5-R3-approach-check.log:5: new blank line at EOF.
+docs/verification/C5-R3/C5-R3-final-check.log:5: new blank line at EOF.
+docs/verification/C5-R3/C5-R3-pruning-RED.log:24: trailing whitespace.
++  
+docs/verification/C5-R3/C5-R3-pruning-RED.log:34: trailing whitespace.
++  
+docs/verification/C5-R3/C5-R3-pruning-check.log:5: new blank line at EOF.

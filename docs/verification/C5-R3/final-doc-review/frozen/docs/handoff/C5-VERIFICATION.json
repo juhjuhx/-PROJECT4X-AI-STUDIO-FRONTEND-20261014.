@@ -1,0 +1,135 @@
+{
+  "phase": "C5-R3",
+  "status": "PARTIAL",
+  "AI_SHA256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "sourceSnapshot": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+  "baselineCommit": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "tests": {
+    "total": 113,
+    "passed": 113,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "scenarios": 11,
+    "errors": [],
+    "realCDPTouchMaxPointers": 2,
+    "physicalMobile": "UNVERIFIED"
+  },
+  "gameplay": {
+    "id": "continuous-existing-gameplay",
+    "status": "PASS",
+    "driver": "real DOM/keyboard buttons; production opponent AI; Observation-only test policy",
+    "maxHumanCommands": 220,
+    "humanCommands": 209,
+    "policySteps": 208,
+    "turn": 37,
+    "actions": [
+      "Attack",
+      "Capture",
+      "EndTurn",
+      "Move",
+      "Recruit",
+      "Research",
+      "ResolveRelic"
+    ],
+    "captureAfterAttack": true,
+    "replayVerified": true,
+    "privateExportPersisted": false
+  },
+  "centralSearch": {
+    "status": "TESTED_FAIL",
+    "commands": 1000,
+    "seen": false,
+    "winner": null,
+    "turn": 871,
+    "log": "C5-R3-central-search.log",
+    "scope": "separate synthetic D-02; not a generated seed010 root-cause claim"
+  },
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "CI": "UNVERIFIED; no push",
+  "schema": "project4x-c5-verification-3",
+  "fullSeed010": {
+    "seed": "獨立QA-010",
+    "status": "COMPLETE",
+    "winner": 0,
+    "turns": 535,
+    "fullRounds": 267,
+    "commands": 15418,
+    "hash": "3fb38074947af907",
+    "milliseconds": 132858,
+    "metrics": {
+      "actions": {
+        "Move": 11386,
+        "Attack": 2703,
+        "Capture": 19,
+        "Recruit": 763,
+        "Research": 6,
+        "ResolveRelic": 4,
+        "EstablishCapital": 3,
+        "EndTurn": 534
+      },
+      "relicGold": 2,
+      "relicIntel": 2,
+      "exileEntries": 4,
+      "centersEstablished": 3,
+      "eliminations": 1,
+      "maxUnits": 66
+    },
+    "timing": {
+      "observeMs": 10228,
+      "aiMs": 20052,
+      "applyMs": 33696
+    },
+    "terminalSaveReplayChecked": true,
+    "finalLife": [
+      "active",
+      "eliminated"
+    ],
+    "failureCategory": null,
+    "candidate": "approach",
+    "harnessStatus": "PARTIAL",
+    "limits": {
+      "maxTurns": 800,
+      "maxCommands": 40000,
+      "harnessOnly": true,
+      "noGameClockOrSyntheticWinner": true
+    },
+    "sourceUnchanged": true,
+    "methodUnchanged": true,
+    "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+    "aiSha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+    "privateReportSha256": "376a4ea8d934edaaae509ee43ffb094f1034139d6f8307372610aaa2d88cfc71",
+    "exitCode": 0
+  },
+  "full100": "UNVERIFIED for current policy; not run",
+  "T3_T6": "historical FAIL; current complete rerun not performed",
+  "review": {
+    "reviewer": "Codex /root/r3_independent_review (clean-context, read-only)",
+    "verdict": "TESTED_PASS for frozen AI bytes; no blocker",
+    "slice1": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "AI": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "report": "review-slice1/REVIEW.md"
+    },
+    "slice2": {
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "AI": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "report": "review-slice2/REVIEW.md"
+    },
+    "performance": "bounded synthetic64units/10goals/30calls: slice1 median6.47ms p957.09ms; slice2 median7.91ms p959.30ms; not full-match benchmark",
+    "retainedFeedback": "已把fresh、合法退路後仍EndTurn的較強等待斷言加入project，fresh9/9與113/113。"
+  },
+  "detailedResults": "docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+  "sourceManifest": "C5-SOURCE-MANIFEST.json",
+  "boundary": "docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+  "R2History": "docs/verification/C5-R3/R2-C5-VERIFICATION.json",
+  "gameplayRulesChanged": false,
+  "pushed": false
+}

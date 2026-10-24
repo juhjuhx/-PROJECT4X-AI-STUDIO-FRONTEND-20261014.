@@ -1,0 +1,18 @@
+{
+  "label": "C5-R2-recruit-check",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "startedAt": "2026-10-18T17:43:51.664968+00:00",
+  "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T17:43:52.178096+00:00",
+  "durationSeconds": 0.513,
+  "log": "C5-R2-recruit-check.log"
+}

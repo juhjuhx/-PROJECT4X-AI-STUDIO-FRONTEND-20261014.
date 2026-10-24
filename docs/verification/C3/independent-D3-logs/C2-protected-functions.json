@@ -1,0 +1,71 @@
+{
+  "commit": "e5bc16fedde9245e29284a4ec954299212089139",
+  "functions": {
+    "canAct": {
+      "startLine": 244,
+      "endLine": 247,
+      "sha256": "72ce78b93c1809c5cebca4d5a698bada5de2b4497c2ad661cec304c6fa47abba",
+      "source": "function canAct(): boolean {\n  return view.active === HUMAN && view.winner === null && view.pendingRelic === null && gameplay.getSnapshot().ai.phase !== 'running';\n}\n\n"
+    },
+    "dispatch": {
+      "startLine": 324,
+      "endLine": 343,
+      "sha256": "4db68eda70b107aad6448c86e0f2185cf05241d2647354f2c7d16ccd2cd427a0",
+      "source": "function dispatch(action: Action): void {\n  const { sessionId, generation, version } = gameplay.getSnapshot().stamp;\n  const result = gameplay.submitAction({ sessionId, generation, requestId: `ui-${requestSession}-${generation}-${++requestNumber}`, expectedVersion: version, action });\n  if (!result.ok) {\n    notify(result.error.message, true);\n    if (relicDialog.open) relicError.textContent = result.error.message;\n    return;\n  }\n  if (result.disposition === 'duplicate') return;\n  view = result.snapshot.observation;\n  if (action.type === 'Move') selection = action.to;\n  if (action.type === 'Recruit') {\n    const site = view.tiles.find((t) => t.site?.id === action.siteId);\n    const unit = site && view.units.find((u) => u.owner === HUMAN && u.x === site.x && u.y === site.y);\n    if (unit) { selectedUnitId = unit.id; selection = { x: unit.x, y: unit.y }; }\n  }\n  notify(actionLabel(action));\n  render();\n}\n\n"
+    },
+    "render": {
+      "startLine": 344,
+      "endLine": 375,
+      "sha256": "e212fa3b40a3811c702badf9dc671297a9f9fa45f49341195595f07a77ffd424",
+      "source": "function render(): void {\n  view = gameplay.getObservation();\n  const aiPaused = gameplay.getSnapshot().ai.phase === 'paused';\n  if (selectedUnitId && !selectedUnit()) selectedUnitId = null;\n  goldValue.textContent = String(view.faction.gold);\n  const ownSites = view.tiles.filter((t) => t.site?.owner === HUMAN);\n  const ownUnits = view.units.filter((u) => u.owner === HUMAN);\n  const income = ownSites.length * (2 + (view.faction.techs.includes('farm') ? 1 : 0));\n  incomeValue.textContent = `+${income}`;\n  turnValue.textContent = String(view.turn);\n  exploredLabel.textContent = `${view.tiles.filter((t) => t.visibility !== 'unknown').length} / ${view.width * view.height} 格已知`;\n  factionLife.textContent = view.faction.life === 'exiled' ? '流亡中' : view.faction.life === 'eliminated' ? '已淘汰' : '中心安定';\n  factionLife.classList.toggle('exiled', view.faction.life === 'exiled');\n  const center = ownSites.find((t) => t.site?.id === view.faction.centerId);\n  factionDescription.textContent = center ? `政治中心 · ${center.site!.name}` : view.faction.life === 'exiled' ? '旗幟仍在。守住據點跨過完整對手回合，就能主動重建中心。' : '你的航程已告一段落。';\n  factionNumbers.replaceChildren(el('span', '', `${ownSites.length} 據點`), el('span', '', `${ownUnits.length} 部隊`));\n  coordinates.textContent = selection ? `座標 ${selection.x + 1} · ${selection.y + 1}` : '尚未選格';\n  canvas.setAttribute('aria-description', `${exploredLabel.textContent}。${coordinates.textContent}。${selectedUnit() ? `已選取${UNIT_STATS[selectedUnit()!.kind].name}` : '未選取部隊'}。`);\n  activeLabel.textContent = view.winner !== null ? '此局已結束' : aiPaused ? '對手已暫停' : view.active === HUMAN ? '輪到你了' : '對手行動中';\n  continueAI.hidden = !aiPaused;\n  endTurnButton.disabled = !canAct() || !isLegal({ type: 'EndTurn' });\n  endTurnButton.firstChild!.textContent = view.active === HUMAN ? '結束回合' : '對手行動中';\n  winnerBanner.hidden = view.winner === null;\n  if (view.winner !== null) {\n    winnerBanner.replaceChildren(el('span', '', view.winner === HUMAN ? '征服完成' : '此局落幕'), el('strong', '', view.winner === HUMAN ? '霧境，留下你的旗幟。' : '另一支旗幟留在霧境。'), el('p', '', '開啟「航行紀錄」保存回放，或用新種子再次出航。'));\n  }\n  renderInspection(); renderUnits(); renderTech(); renderJourney();\n  map.update(view, { tile: selection, unitId: selectedUnitId });\n  updateRelic();\n  if (recordDialog.open) updateSaveNotice();\n}\n\n"
+    },
+    "updateSaveNotice": {
+      "startLine": 494,
+      "endLine": 499,
+      "sha256": "6021751376fd2d8448ef1783ff1f83300b4e685e0a909804c42f01cfe90e170a",
+      "source": "function updateSaveNotice(): void {\n  try {\n    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(SAVE_KEY) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;\n  } catch (error) { saveNotice.textContent = `本機保存無法存取：${errorText(error)}。仍可匯出檔案。`; }\n}\n\n"
+    },
+    "saveLocal": {
+      "startLine": 500,
+      "endLine": 511,
+      "sha256": "12b3968bc35a04ae781eedaa6a43323f8425f926564c41387e659caab28bbfc4",
+      "source": "function saveLocal(): void {\n  const result = files.save();\n  if (!result.ok) { notify(result.error.message, true); return; }\n  try {\n    localStorage.setItem(SAVE_KEY, result.file.text);\n    const acknowledged = files.acknowledgeSave(result.file.stamp);\n    if (!acknowledged.ok) { notify(acknowledged.error.message, true); return; }\n    notify('進度已保存在此瀏覽器。也可匯出檔案備份。');\n    updateSaveNotice();\n  } catch (error) { notify(`保存失敗：${errorText(error)}。請使用匯出保存。`, true); updateSaveNotice(); }\n}\n\n"
+    },
+    "confirmReplacement": {
+      "startLine": 512,
+      "endLine": 515,
+      "sha256": "3a0343bc03e418655cb80d8a2a4b2acfc26886f7e385798608051c1adbb61a01",
+      "source": "function confirmReplacement(): boolean {\n  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm('目前有未保存的進度。是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。');\n}\n\n"
+    },
+    "showReplacement": {
+      "startLine": 516,
+      "endLine": 523,
+      "sha256": "b27a552e6b6d4b7c7a84129d38ebd71c01fb84c105f2618ec004078e9bb5dc4f",
+      "source": "function showReplacement(message: string): void {\n  selectedUnitId = null; selection = null;\n  journey.length = 0;\n  notify(message);\n  render(); map.home(); selectNextUnit();\n  if (recordDialog.open) closeDialog(recordDialog);\n}\n\n"
+    },
+    "newGame": {
+      "startLine": 524,
+      "endLine": 532,
+      "sha256": "91cd62403f5698d245c8a10199f92f384be9f71a8e8289924fab1d4514712cc6",
+      "source": "function newGame(): void {\n  const seed = seedInput.value.trim();\n  if (!seed) { notify('請輸入世界種子。', true); seedInput.focus(); return; }\n  if (!window.confirm('重新開局會結束目前航程。請確認需要的進度已保存或匯出。')) return;\n  const result = files.newGame(seed, gameplay.getSnapshot().stamp);\n  if (result.ok) showReplacement(`以「${seed}」展開新的航程。`);\n  else notify(`建立世界失敗：${result.error.message}`, true);\n}\n\n"
+    },
+    "loadLocal": {
+      "startLine": 533,
+      "endLine": 544,
+      "sha256": "f30520bddb069c3c1533cd49971f896bfc1947c46fff72554d9273caabb4aeae",
+      "source": "function loadLocal(): void {\n  const expected = gameplay.getSnapshot().stamp;\n  try {\n    const text = localStorage.getItem(SAVE_KEY);\n    if (!text) { notify('此瀏覽器尚無保存。可選擇匯入保存檔。', true); return; }\n    if (!confirmReplacement()) return;\n    const result = files.load(text, expected);\n    if (result.ok) showReplacement('已讀取本機保存。');\n    else notify(`讀取失敗：${result.error.message}`, true);\n  } catch (error) { notify(`讀取失敗：${errorText(error)}`, true); }\n}\n\n"
+    },
+    "download": {
+      "startLine": 545,
+      "endLine": 556,
+      "sha256": "77322928187b79bb494de1d7a7218f40533a9a3a2486c4db5f0973b3f86b31d7",
+      "source": "function download(kind: 'save' | 'replay'): void {\n  const result = kind === 'save' ? files.save() : files.exportReplay();\n  if (!result.ok) { notify(result.error.message, true); return; }\n  const blob = new Blob([result.file.text], { type: 'application/json;charset=utf-8' });\n  const url = URL.createObjectURL(blob);\n  const a = el('a'); a.href = url; a.download = result.file.suggestedFilename;\n  try { a.click(); } finally { setTimeout(() => URL.revokeObjectURL(url), 1000); }\n  // 瀏覽器下載沒有可靠的落盤回執，只有 localStorage 成功才能 acknowledgeSave。\n  notify(`${kind === 'save' ? '保存' : '回放'}已發起匯出。`);\n  updateSaveNotice();\n}\n\n"
+    },
+    "importFile": {
+      "startLine": 557,
+      "endLine": 582,
+      "sha256": "28f15540c3609a0e1a23962f5252eeb139fb63e35a52cda12299fda558ff6e35",
+      "source": "async function importFile(input: HTMLInputElement, replay: boolean): Promise<void> {\n  const file = input.files?.[0];\n  const expected = gameplay.getSnapshot().stamp;\n  input.value = '';\n  if (!file) return;\n  try {\n    if (file.size > MAX_IMPORT_BYTES) throw new Error('檔案超過 10 MB，請選擇本遊戲的保存或回放檔。');\n    const text = await file.text();\n    if (replay) {\n      const result = files.verifyReplay(text, expected);\n      if (!result.ok) throw new Error(result.error.message);\n      replayResult.textContent = `驗證通過 · ${result.schema} · ${result.ruleset}`;\n      replayResult.classList.remove('is-error');\n    } else {\n      if (!confirmReplacement()) return;\n      const result = files.load(text, expected);\n      if (!result.ok) throw new Error(result.error.message);\n      showReplacement('已匯入保存，航程接續。');\n    }\n  } catch (error) {\n    const message = `${replay ? '回放驗證' : '匯入'}失敗：${errorText(error)}`;\n    if (replay) { replayResult.textContent = message; replayResult.classList.add('is-error'); }\n    notify(message, true);\n  }\n}\n\n"
+    }
+  }
+}

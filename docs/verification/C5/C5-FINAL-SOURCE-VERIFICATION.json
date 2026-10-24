@@ -1,0 +1,18 @@
+{
+  "status": "TESTED_PASS",
+  "sourceManifestFiles": 56,
+  "protectedEngineAndContractDiffEmpty": true,
+  "protectedPaths": [
+    "src/core/game.ts",
+    "src/core/types.ts",
+    "src/core/persistence.ts",
+    "src/session",
+    "src/presentation",
+    "package-lock.json",
+    "docs/contracts/frontend-core-v1.d.ts"
+  ],
+  "originalTestsUnchanged": true,
+  "publicEvidenceBoundedSecretHits": 0,
+  "AIsha256": "06402a6394082b71a12a3aa50fef270f0895cd9839c0b047185920747237ea40",
+  "manifestSha256": "5ae945ebbef656c36ab46f1ee7096395850fa1eff4040576afa22dafecb0a77e"
+}

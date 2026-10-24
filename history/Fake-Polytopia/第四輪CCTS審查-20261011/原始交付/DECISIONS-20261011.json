@@ -1,0 +1,83 @@
+{
+  "artifact": "PROJECT4X-CCTS-DECISION-ADDENDUM-20261011",
+  "date": "2026-10-11",
+  "authority": "direct-user-confirmed",
+  "baseline": "PROJECT4X v0.4",
+  "status": {
+    "ccts": "NOT_IMPLEMENTED",
+    "g1_prototype": "IMPLEMENTATION_IN_PROGRESS",
+    "playability": "NOT_ACCEPTED",
+    "product_repo": "NOT_CREATED_PER_LAST_PROTOTYPE_QA"
+  },
+  "grill_me_15": {
+    "1": "C",
+    "2": "A",
+    "3": "A",
+    "4": "C",
+    "5": "C",
+    "6": "B",
+    "7": "C",
+    "8": "C",
+    "9": "A",
+    "10": "A",
+    "11": [
+      "B",
+      "C"
+    ],
+    "12": "C",
+    "13": "C",
+    "14": "B",
+    "15": "B"
+  },
+  "grill_me_details": {
+    "duration_goal_minutes": [
+      45,
+      90
+    ],
+    "g1_relic_choice_immediate": true,
+    "g1_decode_remaining_unknown_up_to": 3,
+    "early_game_tone": "mystery_first_conquest_spine_comeback_later",
+    "desktop_mobile_first_release_equal_priority": true
+  },
+  "followup_decisions": [
+    {
+      "id": "EXILE-01",
+      "choice": "B",
+      "fact": "G1 simplified exile playable if qualifying survivors remain"
+    },
+    {
+      "id": "EXILE-02",
+      "choice": "C_PLUS",
+      "fact": "recover old capital or establish elsewhere; may choose non-restoration, political takeover or alternative polity"
+    },
+    {
+      "id": "POLITY-01",
+      "choice": "C",
+      "fact": "political sovereignty and cultural influence distinct and can operate concurrently"
+    }
+  ],
+  "pending_spec": [
+    "exile_survival_criteria",
+    "establish_new_capital_cost_and_cooldown",
+    "elimination_criteria",
+    "max_exile_loops",
+    "g1_political_seizure_boundary",
+    "future_cultural_influence_grain"
+  ],
+  "supersedes": [
+    {
+      "target": "G1 original capital capture instant terminal",
+      "new": "conditional exile continuation"
+    },
+    {
+      "target": "G1 relic pending inbox",
+      "new": "immediate selection at acquisition"
+    },
+    {
+      "target": "G1 exactly 3 unknown reveal",
+      "new": "reveal up to 3 remaining unknown; disclose count"
+    }
+  ],
+  "protected_invariants": "AGENTS.md 1-10 unchanged",
+  "note": "Design addendum only. Not a game code update."
+}

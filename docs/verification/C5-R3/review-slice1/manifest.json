@@ -1,0 +1,9 @@
+{
+  "reviewer": "Codex /root/r3_independent_review",
+  "baseline": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "frozen_at": "2026-10-19T03:44:11.866573+00:00",
+  "files": {
+    "src/core/ai.ts": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+    "tests/ai-stalemate.test.ts": "297f8a93753baa080cf6bd0c46e44891d7e8aac13c2852f0596592e64cc088ef"
+  }
+}

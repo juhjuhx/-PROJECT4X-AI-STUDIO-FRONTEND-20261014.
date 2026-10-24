@@ -1,0 +1,44 @@
+--- slice1/src/core/ai.ts
++++ slice2/src/core/ai.ts
+@@ -146,19 +146,29 @@
+       // Compare reachable objectives by value and route length. A historical
+       // capital must not redirect the entire front past nearby enemy supplies.
+       const promising = roles.filter(g => Number.isFinite(g.distances[i])).sort((a, b) => b.weight / (b.distances[i] + 4) - a.weight / (a.distances[i] + 4) || a.tile.y - b.tile.y || a.tile.x - b.tile.x);
+-      const candidates: typeof goals = [];
+-      let bestValue = 0;
+-      for (const g of promising) {
+-        // Terrain distance is an optimistic bound, not a fixed top-four cutoff:
+-        // friendly traffic can make a lower-ranked objective the better route.
+-        // Occupied graphs only remove edges, so later bounds cannot beat this
+-        // value. Keep equal bounds for the deterministic coordinate tie-break.
+-        if (g.weight / (g.distances[i] + 4) < bestValue) break;
+-        const d = distances(g.sources, blocked);
+-        if (Number.isFinite(d[i])) {
+-          candidates.push({ ...g, distances: d });
+-          bestValue = Math.max(bestValue, g.weight / (d[i] + 4));
++      const routesThrough = (obstacles: Set<number>): typeof goals => {
++        const candidates: typeof goals = [];
++        let bestValue = 0;
++        for (const g of promising) {
++          // Terrain distance is an optimistic bound, not a fixed top-four cutoff:
++          // friendly traffic can make a lower-ranked objective the better route.
++          // Occupied graphs only remove edges, so later bounds cannot beat this
++          // value. Keep equal bounds for the deterministic coordinate tie-break.
++          if (g.weight / (g.distances[i] + 4) < bestValue) break;
++          const d = distances(g.sources, obstacles);
++          if (Number.isFinite(d[i])) {
++            candidates.push({ ...g, distances: d });
++            bestValue = Math.max(bestValue, g.weight / (d[i] + 4));
++          }
+         }
++        return candidates;
++      };
++      let candidates = routesThrough(blocked);
++      if (!candidates.length) {
++        // A friendly bottleneck may close every complete route this turn.
++        // Still approach through legal empty cells using the enemy-blocked
++        // potential; legalActions remains the only source of actual movement.
++        candidates = routesThrough(new Set(enemies.map(u => u.y * view.width + u.x)));
+       }
+       candidates.sort((a, b) => b.weight / (b.distances[i] + 4) - a.weight / (a.distances[i] + 4) || a.tile.y - b.tile.y || a.tile.x - b.tile.x);
+       if (candidates[0]) unitGoals.set(unit.id, candidates[0]);

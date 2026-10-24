@@ -1,0 +1,62 @@
+START 2026-10-18T04:44:56.088851+00:00
+COMMAND node --import tsx --input-type=module - <<STDIN
+
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+import {createGame,applyCommand,observe} from './src/core/game.ts';
+const source=fs.readFileSync('../evidence/independent-gameplay-logs/reviewed-strengthened-source.log','utf8');
+const start=source.indexOf('    assert.ok(appended.length >= 1);');
+const end=source.indexOf("    if (action.type === 'Attack')",start);
+const block=source.slice(start,end);
+const apply=(s,actor,action,id)=>{const r=applyCommand(s,{actor,action,requestId:id,expectedVersion:s.version});assert.ok(r.ok,r.error);return r.state;};
+const results=[];
+function verify(id,context,shouldReject){let rejected=false,reason=null;try{vm.runInNewContext(block,{assert,...context});}catch(e){rejected=true;reason=e.message.split('\n')[0];}assert.equal(rejected,shouldReject);results.push({id,rejected,expectedRejected:shouldReject,reason});}
+{
+ const before=createGame('霧境初航-01'),action={type:'Move',unitId:'兵-1',to:{x:5,y:3}};
+ let moved=apply(before,0,action,'review-move');assert.ok(observe(moved,0).legalActions.some(a=>a.type==='ResolveRelic'&&a.choice==='intel'));
+ const wrong=apply(moved,0,{type:'ResolveRelic',choice:'gold'},'review-wrong-choice');
+ verify('WRONG_RELIC_CHOICE_REJECTED',{appended:wrong.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:0},true);
+ const correct=apply(moved,0,{type:'ResolveRelic',choice:'intel'},'review-right-choice');
+ verify('CORRECT_RELIC_CHOICE_ACCEPTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:0},false);
+ verify('FORCED_RELIC_OVER_220_REJECTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:219},true);
+ verify('EXACTLY_220_HUMAN_COMMANDS_ACCEPTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:218},false);
+}
+{
+ const before=createGame('霧境初航-01'),action={type:'EndTurn'};
+ let normal=apply(before,0,action,'review-end-human');normal=apply(normal,1,{type:'EndTurn'},'review-end-ai');
+ verify('NORMAL_ENDTURN_AND_AI_ACCEPTED',{appended:normal.history.slice(before.history.length),action,relicChoice:null,humanCommands:0},false);
+ const wrong=apply(normal,0,{type:'Research',tech:'farm'},'review-unexpected-human');
+ verify('EXTRA_HUMAN_AFTER_ENDTURN_REJECTED',{appended:wrong.history.slice(before.history.length),action,relicChoice:null,humanCommands:0},true);
+}
+console.log(JSON.stringify({sourceSha256:(await import('node:crypto')).createHash('sha256').update(source).digest('hex'),executedAssertionBlock:block,results},null,2));
+
+STDIN
+EXIT 1
+STDOUT
+
+STDERR
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+true !== false
+
+    at verify (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/[eval1]:10:187)
+    at file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/[eval1]:17:2
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async node:internal/modules/esm/loader:226:26
+    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:223:20)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.10.0
+
+END 2026-10-18T04:44:56.237406+00:00

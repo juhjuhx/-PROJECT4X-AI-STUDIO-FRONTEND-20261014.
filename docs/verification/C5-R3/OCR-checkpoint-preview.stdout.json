@@ -1,0 +1,980 @@
+{
+  "schema_version": "1",
+  "mode": "workspace",
+  "repository": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "total_files": 157,
+  "reviewable_count": 133,
+  "excluded_count": 24,
+  "total_insertions": 19093,
+  "total_deletions": 85,
+  "reviewable_files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "insertions": 6,
+      "deletions": 2
+    },
+    {
+      "path": "C5-SOURCE-MANIFEST.json",
+      "status": "modified",
+      "insertions": 20,
+      "deletions": 17
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "insertions": 6,
+      "deletions": 2
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "modified",
+      "insertions": 113,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/C5-VERIFICATION.json",
+      "status": "modified",
+      "insertions": 118,
+      "deletions": 27
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "insertions": 5,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "insertions": 9,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "insertions": 6,
+      "deletions": 2
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "insertions": 17,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "modified",
+      "insertions": 22,
+      "deletions": 19
+    },
+    {
+      "path": "docs/roadmap/PLAYABLE-ALPHA.md",
+      "status": "modified",
+      "insertions": 14,
+      "deletions": 7
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-GIT-SOURCE.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md",
+      "status": "added",
+      "insertions": 71,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-SEED010-SUMMARIES.json",
+      "status": "added",
+      "insertions": 112,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "insertions": 76,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "status": "added",
+      "insertions": 948,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-GREEN.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-prefix.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-base-FINAL-GIT-STATE.json",
+      "status": "added",
+      "insertions": 72,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser-report.json",
+      "status": "added",
+      "insertions": 300,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-central-search.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-central-search.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-prefix.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-waiting.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-waiting.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay-report.json",
+      "status": "added",
+      "insertions": 6667,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-GREEN.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-prefix.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-review-restoration.json",
+      "status": "added",
+      "insertions": 22,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-review-restoration.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/DIFF-CHECK-RESULTS.json",
+      "status": "added",
+      "insertions": 30,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/FINAL-REVIEW-RECEIPT.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "insertions": 80,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-C5-VERIFICATION.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-NEXT-ACTION.md",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/README.md",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/REVIEW.md",
+      "status": "added",
+      "insertions": 39,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/evidence-checks.json",
+      "status": "added",
+      "insertions": 315,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/AGENTS.md",
+      "status": "added",
+      "insertions": 51,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "insertions": 83,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/README.md",
+      "status": "added",
+      "insertions": 66,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/PROJECT-STATUS.md",
+      "status": "added",
+      "insertions": 35,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/C5-VERIFICATION.json",
+      "status": "added",
+      "insertions": 135,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/INTEGRATION-STATUS.md",
+      "status": "added",
+      "insertions": 30,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/NEXT-ACTION.md",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md",
+      "status": "added",
+      "insertions": 71,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "insertions": 76,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "status": "added",
+      "insertions": 948,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/memory/session-handoff-LATEST.md",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/manifest.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/REVIEW.md",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/baseline-ai.ts",
+      "status": "added",
+      "insertions": 188,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/focused-command.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/manifest.json",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/package.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/protected-surface.json",
+      "status": "added",
+      "insertions": 133,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/source-manifest.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/source-surface.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/ai.ts",
+      "status": "added",
+      "insertions": 200,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/baseline-ai.ts",
+      "status": "added",
+      "insertions": 188,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/equality-mutant-ai.ts",
+      "status": "added",
+      "insertions": 200,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/exhaustive-ai.ts",
+      "status": "added",
+      "insertions": 200,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/game.ts",
+      "status": "added",
+      "insertions": 274,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/types.ts",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/tests/ai-stalemate.test.ts",
+      "status": "added",
+      "insertions": 124,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/typecheck-command.json",
+      "status": "added",
+      "insertions": 28,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/獨立審查.test.ts",
+      "status": "added",
+      "insertions": 110,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/REVIEW.md",
+      "status": "added",
+      "insertions": 60,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/focused-command.json",
+      "status": "added",
+      "insertions": 14,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/manifest.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/package.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/performance-command.json",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/source-manifest.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/source-surface.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/ai.ts",
+      "status": "added",
+      "insertions": 210,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/baseline-ai.ts",
+      "status": "added",
+      "insertions": 188,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/equality-mutant-ai.ts",
+      "status": "added",
+      "insertions": 210,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/exhaustive-ai.ts",
+      "status": "added",
+      "insertions": 210,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/game.ts",
+      "status": "added",
+      "insertions": 274,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/measured-ai.ts",
+      "status": "added",
+      "insertions": 213,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/measured-slice1-ai.ts",
+      "status": "added",
+      "insertions": 202,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/slice1-ai.ts",
+      "status": "added",
+      "insertions": 200,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/types.ts",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/tests/ai-stalemate.test.ts",
+      "status": "added",
+      "insertions": 162,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/typecheck-command.json",
+      "status": "added",
+      "insertions": 30,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/有界性能.ts",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/獨立審查.test.ts",
+      "status": "added",
+      "insertions": 110,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/第二片獨立審查.test.ts",
+      "status": "added",
+      "insertions": 60,
+      "deletions": 0
+    },
+    {
+      "path": "memory/session-handoff-LATEST.md",
+      "status": "modified",
+      "insertions": 10,
+      "deletions": 4
+    },
+    {
+      "path": "src/core/ai.ts",
+      "status": "modified",
+      "insertions": 24,
+      "deletions": 2
+    },
+    {
+      "path": "tests/ai-stalemate.test.ts",
+      "status": "modified",
+      "insertions": 64,
+      "deletions": 0
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "docs/verification/C5-R3/AI-CODE-DIFF.patch",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview-command.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview.stdout.json",
+      "status": "added",
+      "insertions": 823,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules-command.json",
+      "status": "added",
+      "insertions": 126,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules.stdout.json",
+      "status": "added",
+      "insertions": 136,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview-command.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview.stdout.json",
+      "status": "added",
+      "insertions": 757,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules-command.json",
+      "status": "added",
+      "insertions": 122,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules.stdout.json",
+      "status": "added",
+      "insertions": 132,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version-command.json",
+      "status": "added",
+      "insertions": 8,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version.stderr.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R3/RAW-DIFF-CHECK.txt",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/initial-diff.patch",
+      "status": "added",
+      "insertions": 56,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/initial-status.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/initial-diff.patch",
+      "status": "added",
+      "insertions": 104,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/initial-status.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/slice2-ai-stalemate.test.ts.diff",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/slice2-ai.ts.diff",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R3/真實戰鬥佔領旅程.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    }
+  ]
+}

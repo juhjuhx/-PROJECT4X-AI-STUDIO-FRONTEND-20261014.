@@ -1,0 +1,274 @@
+{
+  "schema": "project4x-selected-history-1",
+  "scope": "Demo世界／裁決來源精選；不是完整歷史封存",
+  "files": [
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/README.md",
+      "sha256": "35b6bf0e07641a3ca7991a04e0cc77825edc4c81f2f85cdb5d870d314c737bd6",
+      "bytes": 3004,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/README.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/CHANGELOG.md",
+      "sha256": "3ddd7b5fc997fc232c3546998f4164196bc94e86e5aa43e3608bf51a1ab68b31",
+      "bytes": 862,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/CHANGELOG.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/DESIGN-BASELINE.json",
+      "sha256": "84a29ea3294f00d36d77d4e22fb43d0e49952ae4e6093f4edbb5fb1156cb1f15",
+      "bytes": 1756,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/DESIGN-BASELINE.json"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/docs/15-world-bible-nonlinear.md",
+      "sha256": "b032c556af425839c522463de2949cd8a81cfeb5bfda088406e021c80cbd8589",
+      "bytes": 4678,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/docs/15-world-bible-nonlinear.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/docs/16-survival-and-discovery.md",
+      "sha256": "3451a2ed2587d40bd9a958e67191b1c4e63a22c8cd1f6b94f933ac5f1224a11b",
+      "bytes": 3209,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/docs/16-survival-and-discovery.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/docs/17-first-playable-spec.md",
+      "sha256": "a66200efd7a53ad55fb4bc98fbf1634763d5f74ffbca3b522e7fe55991b2198d",
+      "bytes": 4067,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/docs/17-first-playable-spec.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V03/docs/23-v03-design-decisions-and-questions.md",
+      "sha256": "7f388622ad87e8fc07e9ef0599a2fabf549b886509ffb10f3c20f41bfabb206e",
+      "bytes": 2511,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V03/docs/23-v03-design-decisions-and-questions.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/README.md",
+      "sha256": "cca71116aa6d74175dcb467a012ec0e436c8395a0fef2869e1aff84c8269396a",
+      "bytes": 3052,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/README.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/CHANGELOG.md",
+      "sha256": "96ef0d7287b731b9271705e6410b29bcef4b1a1797a563f7a4348f4e5f604840",
+      "bytes": 1211,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/CHANGELOG.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/DESIGN-BASELINE.json",
+      "sha256": "1a6e091076bb24886700e4fdb55b839a6ed7489c48e669c2a3e05ab158a2877b",
+      "bytes": 2930,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/DESIGN-BASELINE.json"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/01-game-design.md",
+      "sha256": "0a24f34e013f4d958a2d51153c11a4aac1876116acd2ffeda61c78bfbf8be397",
+      "bytes": 4342,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/01-game-design.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/02-rules-and-economy.md",
+      "sha256": "575df730d0dbe654cf594ea2582173114c1c3fb3946e6719242e73f2a9dda2cc",
+      "bytes": 4987,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/02-rules-and-economy.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/24-energy-metaphysics.md",
+      "sha256": "a06bfe7f56815430688dde64f7e437c20f2f92be8c8cad5aee1883ac995e1baa",
+      "bytes": 3979,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/24-energy-metaphysics.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/25-civilization-metabolism-resource-contract.md",
+      "sha256": "02f9cdfcbb3780b4d6e9e12dbb1df49d2ea537b5e577f0141be5326037e00cd5",
+      "bytes": 4841,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/25-civilization-metabolism-resource-contract.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/26-asymmetry-comeback-and-artifacts.md",
+      "sha256": "e7edcd165dd893c45df52ac5ffb76154aa085e19c61cbbc86bf8eadb6e9d466d",
+      "bytes": 3601,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/26-asymmetry-comeback-and-artifacts.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/27-asymmetric-mapgen-and-fairness.md",
+      "sha256": "e54257f449986abc342d4308dadf39f8dba29c597c2881dbb3bd68dcc1086523",
+      "bytes": 3597,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/27-asymmetric-mapgen-and-fairness.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/28-civilization-transformation.md",
+      "sha256": "187b3d8481993479faed7607b508cc3b2845327bb787634f0e3e050a707a511e",
+      "bytes": 2882,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/28-civilization-transformation.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/29-contact-diplomacy-unions.md",
+      "sha256": "7ee0686fdac1851d14611799cbff2347bff509d347422347f12d5b9bd5ce1876",
+      "bytes": 2333,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/29-contact-diplomacy-unions.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/30-diaspora-culture-and-insurgency.md",
+      "sha256": "945ff2c3ad209668da30874e3e17b69407bdd466847a3603f621b0e493094964",
+      "bytes": 3292,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/30-diaspora-culture-and-insurgency.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/31-ecology-scarcity-and-path-dependence.md",
+      "sha256": "5b3bbe161ce6468f46d7084a43fc04badb444a1319b4c2cdb4030bb1797cbda8",
+      "bytes": 1792,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/31-ecology-scarcity-and-path-dependence.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/32-origin-truth-and-discovery-arc.md",
+      "sha256": "175935e98375b496a93fe80167e48c2525e8cededdfde63d1a6780bfcb5e0d28",
+      "bytes": 3701,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/32-origin-truth-and-discovery-arc.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/33-surreal-tone-meme-civilizations.md",
+      "sha256": "e23cb74d0c2f70f5fd4f8f818f34ea9ea21fb24c9cd322096ff65bbbca1ed5d2",
+      "bytes": 2154,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/33-surreal-tone-meme-civilizations.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/34-worldlayers-and-endgame.md",
+      "sha256": "1b61e914ec6109ea957df58054dca3aea076a14db3a23364e7689d6812c8bd94",
+      "bytes": 1712,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/34-worldlayers-and-endgame.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/35-g1-g15-experiment-and-gameplay.md",
+      "sha256": "793c0eab7109047e46f524067851e8ebdaa24831489d366f3b4b4a458facad82",
+      "bytes": 3415,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/35-g1-g15-experiment-and-gameplay.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/docs/38-user-decisions-and-open-questions-v04.md",
+      "sha256": "1a0b572ae8f6ba0535312aebb8c3adddbaf606129ab8592e3725435931996b8a",
+      "bytes": 2954,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/docs/38-user-decisions-and-open-questions-v04.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/world/origin-wish-loom.md",
+      "sha256": "46e839e1bfa10dd69c198c56bb247adbdb08e5a78cc64a3a936bbc18c4e906c4",
+      "bytes": 1782,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/world/origin-wish-loom.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT4X-V04/world/field-crystal.md",
+      "sha256": "0bd3c160c556e43e7e298140ac9bdd01636e41146a09e6465e8cc70b25412216",
+      "bytes": 1382,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/PROJECT4X-V04/world/field-crystal.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/第四輪CCTS審查-20261011/原始交付/README.md",
+      "sha256": "573dcb8bf66e82d4e2e7812daaf3a9ee7c64764ff381dfba88bab150db394a1a",
+      "bytes": 1129,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/第四輪CCTS審查-20261011/原始交付/README.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/第四輪CCTS審查-20261011/原始交付/DECISIONS-20261011.json",
+      "sha256": "28f2b50e9f96c00843bacb1f35933d81c2507598c66b84d6cb705a0bfef30011",
+      "bytes": 2138,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/第四輪CCTS審查-20261011/原始交付/DECISIONS-20261011.json"
+    },
+    {
+      "path": "history/Fake-Polytopia/第四輪CCTS審查-20261011/原始交付/PROJECT4X-CCTS-DECISION-ADDENDUM.md",
+      "sha256": "436bb70d887e3ecbb8280e729dcd2e7c50698b5f76c8c9cbfd7e183d60e96770",
+      "bytes": 20370,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/第四輪CCTS審查-20261011/原始交付/PROJECT4X-CCTS-DECISION-ADDENDUM.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/第四輪CCTS審查-20261011/G1-裁決整合稿.md",
+      "sha256": "9142cb1ddc5dedef6915357a0bd5f5df625c7340a4a7558fe5998e51a66b8b67",
+      "bytes": 6799,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/第四輪CCTS審查-20261011/G1-裁決整合稿.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/第四輪CCTS審查-20261011/CCTS-審查與衝突整理.md",
+      "sha256": "e7084ee252b3f217ffc78d8e3a704a43e352c6ff90fb6618c26e1bf97ae542e4",
+      "bytes": 5281,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/歷史設計/第四輪CCTS審查-20261011/CCTS-審查與衝突整理.md"
+    },
+    {
+      "path": "history/Fake-Polytopia/PROJECT-4X.md",
+      "sha256": "094d5eb4cfc552776a076e177a6a325cbec09badcbe9fd6d4ce694d4527816be",
+      "bytes": 6601,
+      "provenance": "原件逐位元複本 ORIGINAL_COPY",
+      "readBy": "demo_world_audit 全文；root採納索引，不宣稱讀完其他歷史",
+      "source": "外部Fake-Polytopia/PROJECT-4X.md"
+    }
+  ],
+  "count": 33,
+  "bytes": 122344,
+  "historicalAuthority": "保留原文；現行DECISION-REGISTER與USER-REQUEST-DECISIONS局部覆寫，不執行舊文件施工命令",
+  "securityScan": "僅33份靜態常見密鑰/私有save形狀檢查；非全部歷史掃描"
+}

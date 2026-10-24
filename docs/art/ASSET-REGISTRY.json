@@ -1,0 +1,31 @@
+{
+  "schema": "project4x-asset-registry-1",
+  "style": "既有D3 D Hybrid松綠／羊皮紙／青銅與等角地圖方向；非遊戲場景新美術",
+  "author": "PROJECT-4X contributors / Codex geometric drawing",
+  "license": "MIT; project LICENSE applies to original geometry",
+  "sources": [
+    "docs/art/DESIGN-TOKENS.md",
+    "tools/generate-demo-icons.py"
+  ],
+  "tool": "Pillow 12.2.0 (authoring only, not runtime)",
+  "files": {
+    "public/favicon.ico": {
+      "bytes": 5155,
+      "sha256": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2"
+    },
+    "public/icon.svg": {
+      "bytes": 432,
+      "sha256": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f"
+    },
+    "public/icons/icon-192.png": {
+      "bytes": 8622,
+      "sha256": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f"
+    },
+    "public/icons/icon-512.png": {
+      "bytes": 21434,
+      "sha256": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c"
+    }
+  },
+  "thirdPartyArtUsed": false,
+  "screenshot": false
+}

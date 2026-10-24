@@ -1,0 +1,795 @@
+{
+  "schema": "project4x-r603-verification-1",
+  "status": "PARTIAL",
+  "generatedAt": "2026-10-23T14:50:30.796659+08:00",
+  "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+  "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "testedCodeCheckpoint": "58dcaffdb8d740edb4786781c817470f8a199856",
+  "gates": {
+    "check": "TESTED_PASS",
+    "unit": {
+      "status": "TESTED_PASS",
+      "passed": 195,
+      "failed": 0,
+      "skipped": 0,
+      "newUnitTests": 0,
+      "newStandaloneQaRegression": 1
+    },
+    "build": "TESTED_PASS",
+    "qaErrorReceiptRedGreen": "TESTED_PASS",
+    "browserOverall": "TESTED_FAIL",
+    "gameplayCommand": "TESTED_FAIL",
+    "gameplayJourney": "TESTED_PASS",
+    "artifactCleanup": "TESTED_PASS",
+    "mobile": "UNVERIFIED",
+    "newAiFixture": "NOT_IMPLEMENTED",
+    "newAiRedGreen": "NOT_IMPLEMENTED",
+    "full100": "UNVERIFIED",
+    "newT3": "UNVERIFIED",
+    "newT6": "UNVERIFIED",
+    "alpha": "PARTIAL"
+  },
+  "receipts": [
+    {
+      "label": "baseline-build",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:36:23.904946+08:00",
+      "endedAt": "2026-10-23T09:36:24.735312+08:00",
+      "durationSeconds": 0.777,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/baseline-build-20261023-093623-feb1950479f4419492e6f73a314c2e78/receipt.finished.json",
+      "receiptSha256": "ff0afc228d41d30afaaef1731a540c93ffbe3387ab75f854721168579ed86a59",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/baseline-build-20261023-093623-feb1950479f4419492e6f73a314c2e78/command.log",
+      "logSha256": "8c188aed373fe22ff7fd82f8302cb9212e0a2d02f7195a959a60b27ed2fa1552",
+      "blockingGate": false
+    },
+    {
+      "label": "browser-error-green",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48631",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/browser-error-green",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "node",
+        "scripts/qa-browser-error-evidence-check.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:38:18.976667+08:00",
+      "endedAt": "2026-10-23T09:38:22.732830+08:00",
+      "durationSeconds": 3.704,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/browser-error-green-20261023-093818-825c58a077d64654ae3fc3b3023b29e1/receipt.finished.json",
+      "receiptSha256": "89c8d35c2793163eabee4020fc0c0cffecc62d7c1272069d43b7c846bd5faba7",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/browser-error-green-20261023-093818-825c58a077d64654ae3fc3b3023b29e1/command.log",
+      "logSha256": "7cc2b26ea9a1c8a818f5a1e94150e839204069f83ce4f50a22e62b7a13649ca2",
+      "blockingGate": false
+    },
+    {
+      "label": "browser-error-red",
+      "status": "TESTED_FAIL",
+      "expectedBehavioralRed": true,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48631",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/browser-error-red",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "node",
+        "scripts/qa-browser-error-evidence-check.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:37:01.927735+08:00",
+      "endedAt": "2026-10-23T09:37:07.477089+08:00",
+      "durationSeconds": 5.491,
+      "node": "v26.10.0",
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/browser-error-red-20261023-093701-0164960d63e444c5975e788b04a35470/receipt.finished.json",
+      "receiptSha256": "8704343fb93345f995128d323554008588e2e428bfa4394ae56766f0f30c1664",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/browser-error-red-20261023-093701-0164960d63e444c5975e788b04a35470/command.log",
+      "logSha256": "1efdbb76781a70f79ab5eabe5d1c4fed9d2dd6a462ee4c83ee025fdbda3828ab",
+      "blockingGate": false
+    },
+    {
+      "label": "causal-transition",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/verify-causal-transition.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T14:34:59.128395+08:00",
+      "endedAt": "2026-10-23T14:34:59.397733+08:00",
+      "durationSeconds": 0.198,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/causal-transition-20261023-143459-5a9d7c6242a2454999e26b753877eff3/receipt.finished.json",
+      "receiptSha256": "25b89d43a937ff580851ce088dafe596c66fc49d8938cf487eb2a97ca5575bb9",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/causal-transition-20261023-143459-5a9d7c6242a2454999e26b753877eff3/command.log",
+      "logSha256": "fcf89293898063ac78368c1970e4253635e54eddef8530289b64f1f23d84a1e1",
+      "blockingGate": false
+    },
+    {
+      "label": "cf-prepare",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/coordinated-cf.mjs",
+        "prepare"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:34:50.509070+08:00",
+      "endedAt": "2026-10-23T09:34:50.985482+08:00",
+      "durationSeconds": 0.408,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/cf-prepare-20261023-093450-35383dcccf784d3ebcf573d9d11c3199/receipt.finished.json",
+      "receiptSha256": "f743d16b765186d1334573655f41a5038b570c03c69eb78ccb4f3c659b01877b",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/cf-prepare-20261023-093450-35383dcccf784d3ebcf573d9d11c3199/command.log",
+      "logSha256": "1ddd9e515e4fab121e6a690473b0579531dd20031cdad8ced037d062690d2d77",
+      "blockingGate": false
+    },
+    {
+      "label": "check",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/METHOD-LOCK-QA-003.json",
+      "methodLockSha256": "ccfbeb215bbd6aef50f55c2a410447142e53864a9e878e586d1367a93b1ad396",
+      "startedAt": "2026-10-23T09:42:20.102081+08:00",
+      "endedAt": "2026-10-23T09:42:20.869575+08:00",
+      "durationSeconds": 0.695,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/check-20261023-094220-02261dd0c2214df3899cab2bfa4ebdd4/receipt.finished.json",
+      "receiptSha256": "e87a06fe7132544647de13ac8fa2371b1c09e3946d49248baf3db041755a31ee",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/check-20261023-094220-02261dd0c2214df3899cab2bfa4ebdd4/command.log",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "blockingGate": true
+    },
+    {
+      "label": "coordinated-cf",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/coordinated-cf.mjs",
+        "run",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/coordinated-1b0147fd-9c76-4444-a646-cf828c6c0a62/PREDECLARED.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:37:58.041949+08:00",
+      "endedAt": "2026-10-23T09:38:10.808026+08:00",
+      "durationSeconds": 12.701,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/coordinated-cf-20261023-093758-3dbadb4a2dd64e3b9b4e4e2e3b562d06/receipt.finished.json",
+      "receiptSha256": "78d93ddf1794e9c9881e22e7a2b96ff105d7e5f0673d33c7bab916a00add76f1",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/coordinated-cf-20261023-093758-3dbadb4a2dd64e3b9b4e4e2e3b562d06/command.log",
+      "logSha256": "7557a6888ce1cd652c7bfa483bc29383e9ae5e79913ad055b513b525074e98c6",
+      "blockingGate": false
+    },
+    {
+      "label": "decision-model",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/models.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/candidate-e-20261023-090143-7b0c6164/next-window-private/reconstructed-cc2a2db7-4868-4f2b-9d17-92625523a207/index.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:33:31.128923+08:00",
+      "endedAt": "2026-10-23T09:33:31.603300+08:00",
+      "durationSeconds": 0.424,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/decision-model-20261023-093331-39143212ff114dca8930d6308095a948/receipt.finished.json",
+      "receiptSha256": "969120a29e33365303dc6e7395311ae4df42f9b467f6f9abc5e2d9ece8fcace2",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/decision-model-20261023-093331-39143212ff114dca8930d6308095a948/command.log",
+      "logSha256": "2dc65bde6bdb21430d589c3a319c6c2c6eadf734ff54148f44ff7ca757535e0d",
+      "blockingGate": false
+    },
+    {
+      "label": "earlier-cf",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/earlier-cf.mjs",
+        "run",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/earlier-cf-3b0e01c0-a00f-4f4c-bfae-ddaebacfb634/PREDECLARED.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T14:33:42.755835+08:00",
+      "endedAt": "2026-10-23T14:33:57.189404+08:00",
+      "durationSeconds": 14.376,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/earlier-cf-20261023-143342-36a4ad86b4924abe8ccb3db992e18ed5/receipt.finished.json",
+      "receiptSha256": "8555fcf5d36b37b0d5630b4c7bb5a896acd9cf3aeca4278fc21f467ae1439c3b",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/earlier-cf-20261023-143342-36a4ad86b4924abe8ccb3db992e18ed5/command.log",
+      "logSha256": "f381b360165f99c5bd307d21bc53b69415b90bc3275a0b0dcc665512af3d8f46",
+      "blockingGate": false
+    },
+    {
+      "label": "earlier-prepare",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/earlier-cf.mjs",
+        "prepare"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T14:31:41.876819+08:00",
+      "endedAt": "2026-10-23T14:31:42.498843+08:00",
+      "durationSeconds": 0.466,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/earlier-prepare-20261023-143141-398c926c1f5d43ebb434e0e824289c88/receipt.finished.json",
+      "receiptSha256": "60a331dc84a76d740faec4e8fe9cd6ac0b02aacd2fdd0807a84f36f50656abd6",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/earlier-prepare-20261023-143141-398c926c1f5d43ebb434e0e824289c88/command.log",
+      "logSha256": "1bfa358699f36ddbc11aab6367994e7c45057d24959d8e8d199a8781a7bb0b24",
+      "blockingGate": false
+    },
+    {
+      "label": "extended-cf",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/earlier-cf.mjs",
+        "run",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/extended-af19e209759744af9bfa42fe0c31f88f/PREDECLARED.json"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T14:40:11.990342+08:00",
+      "endedAt": "2026-10-23T14:40:24.808629+08:00",
+      "durationSeconds": 12.769,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/extended-cf-20261023-144011-d19c123d380a435391cec9e2fdeed596/receipt.finished.json",
+      "receiptSha256": "8065806c56d0a7336e6fc6317f0ac5441f630dc3a992c3fb54a0c59d5f806753",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/extended-cf-20261023-144011-d19c123d380a435391cec9e2fdeed596/command.log",
+      "logSha256": "9021549080c91dbba4cd24023f0067def5cc59e3e1eea52dc246b8affd972c17",
+      "blockingGate": false
+    },
+    {
+      "label": "final-build",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/METHOD-LOCK-QA-003.json",
+      "methodLockSha256": "ccfbeb215bbd6aef50f55c2a410447142e53864a9e878e586d1367a93b1ad396",
+      "startedAt": "2026-10-23T14:40:01.527065+08:00",
+      "endedAt": "2026-10-23T14:40:02.408114+08:00",
+      "durationSeconds": 0.811,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/final-build-20261023-144001-82b47c4b0c634fbfaee4a83184a468a0/receipt.finished.json",
+      "receiptSha256": "43dc4d3e673aaae608647ec9a6863c05585e900fe0b698d46443d0c7174ed04d",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/final-build-20261023-144001-82b47c4b0c634fbfaee4a83184a468a0/command.log",
+      "logSha256": "bf5a69cbf1da325dfceb2fc6791299cb813bc5e89e32a538d778e1c690b8ba18",
+      "blockingGate": true
+    },
+    {
+      "label": "gameplay",
+      "status": "TESTED_FAIL",
+      "expectedBehavioralRed": false,
+      "command": [
+        "env",
+        "PROJECT4X_URL=http://127.0.0.1:48631",
+        "PROJECT4X_EVIDENCE_DIR=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/gameplay",
+        "PROJECT4X_CHROMIUM_PATH=LOCAL_HOME/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/METHOD-LOCK-QA-003.json",
+      "methodLockSha256": "ccfbeb215bbd6aef50f55c2a410447142e53864a9e878e586d1367a93b1ad396",
+      "startedAt": "2026-10-23T09:42:23.890009+08:00",
+      "endedAt": "2026-10-23T09:43:28.131190+08:00",
+      "durationSeconds": 64.189,
+      "node": "v26.10.0",
+      "exitCode": 1,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/gameplay-20261023-094223-ea6a1f74ef514ed9939927bdb85eb7fe/receipt.finished.json",
+      "receiptSha256": "73710f9a33966b9283e3602376207b0c4bc09c633057921b8f13c8c8f521e4b6",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/gameplay-20261023-094223-ea6a1f74ef514ed9939927bdb85eb7fe/command.log",
+      "logSha256": "b8ab80fb528cb17bd6f87ad99171174321d2fb032eb66c77731843669a62c636",
+      "blockingGate": true
+    },
+    {
+      "label": "harness",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/harness.test.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:33:30.613846+08:00",
+      "endedAt": "2026-10-23T09:33:31.042930+08:00",
+      "durationSeconds": 0.366,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/harness-20261023-093330-b9bcbf2a238b4beb990573b8d3ee501e/receipt.finished.json",
+      "receiptSha256": "f9ea690eee2feabbf2b2f3f6570e23fddfa4a13ae2d581e1c58dbc6cf783ae68",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/harness-20261023-093330-b9bcbf2a238b4beb990573b8d3ee501e/command.log",
+      "logSha256": "6873a02d32bee94950c7b7b0ec46a2f91e74c0fdb8e577c42111b2e914fbf181",
+      "blockingGate": false
+    },
+    {
+      "label": "reconstruct-earlier",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/reconstruct-earlier.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": null,
+      "methodLockSha256": null,
+      "startedAt": "2026-10-23T09:43:48.906738+08:00",
+      "endedAt": "2026-10-23T09:43:49.787159+08:00",
+      "durationSeconds": 0.831,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/reconstruct-earlier-20261023-094348-d5969733734846a9b999ae4b96e96d23/receipt.finished.json",
+      "receiptSha256": "c7d71457ace59713be7a98c236816397a26abe9dd578bcab7c7f3aff7cf54ffe",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/reconstruct-earlier-20261023-094348-d5969733734846a9b999ae4b96e96d23/command.log",
+      "logSha256": "b2f3d098f6957007e9b6991603b528e4345ce7440fe88f0ed547297f416b2c33",
+      "blockingGate": false
+    },
+    {
+      "label": "unit",
+      "status": "TESTED_PASS",
+      "expectedBehavioralRed": false,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "headDuringExecution": "605d6c09818c180def6fbaf3f54786efa19d4fca",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodLockPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/METHOD-LOCK-QA-003.json",
+      "methodLockSha256": "ccfbeb215bbd6aef50f55c2a410447142e53864a9e878e586d1367a93b1ad396",
+      "startedAt": "2026-10-23T09:42:20.102082+08:00",
+      "endedAt": "2026-10-23T09:42:24.152772+08:00",
+      "durationSeconds": 3.978,
+      "node": "v26.10.0",
+      "exitCode": 0,
+      "counts": {
+        "tests": 195,
+        "pass": 195,
+        "fail": 0,
+        "skipped": 0
+      },
+      "receiptPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/unit-20261023-094220-8119eba04ba94d07989911056529f40e/receipt.finished.json",
+      "receiptSha256": "9e4d5deda228f77c8fd4b7193d29d7221df85416891cebf280002d5ae408c053",
+      "logPath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/runs/unit-20261023-094220-8119eba04ba94d07989911056529f40e/command.log",
+      "logSha256": "f9f0345d6816044aabba55047e0c4c1761a467a0fd3f3d7f56e89403919a6e90",
+      "blockingGate": true
+    }
+  ],
+  "browser": {
+    "red": {
+      "browserOverall": "FAIL",
+      "errors": [],
+      "scenarios": [
+        {
+          "id": "first-party-error-observable-native-selectors",
+          "status": "PASS"
+        },
+        {
+          "id": "desktop-load",
+          "status": "PASS"
+        },
+        {
+          "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+          "status": "PASS"
+        },
+        {
+          "id": "storage-failure-export-do-not-ack",
+          "status": "PASS"
+        },
+        {
+          "id": "recruited-unit-next-own-turn-real-move",
+          "status": "PASS"
+        },
+        {
+          "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+          "status": "PASS"
+        },
+        {
+          "id": "keyboard-selection-navigation",
+          "status": "PASS"
+        }
+      ],
+      "gameplayAssertionResult": "NOT_RUN",
+      "artifactCleanupResult": "PASS",
+      "privateArtifactsRemaining": 0,
+      "browserDisconnected": true,
+      "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/browser-error-red/driver/browser.json",
+      "evidenceSha256": "9c14fc35947bfdeca693902c86071bffe763960ed18a1cf36667dcba39d7c33d"
+    },
+    "green": {
+      "browserOverall": "FAIL",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "scenarios": [
+        {
+          "id": "first-party-error-observable-native-selectors",
+          "status": "PASS"
+        },
+        {
+          "id": "desktop-load",
+          "status": "PASS"
+        },
+        {
+          "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+          "status": "PASS"
+        },
+        {
+          "id": "storage-failure-export-do-not-ack",
+          "status": "PASS"
+        },
+        {
+          "id": "recruited-unit-next-own-turn-real-move",
+          "status": "PASS"
+        },
+        {
+          "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+          "status": "PASS"
+        },
+        {
+          "id": "keyboard-selection-navigation",
+          "status": "PASS"
+        }
+      ],
+      "gameplayAssertionResult": "NOT_RUN",
+      "artifactCleanupResult": "PASS",
+      "privateArtifactsRemaining": 0,
+      "browserDisconnected": true,
+      "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/browser-error-green/driver/browser.json",
+      "evidenceSha256": "7eb3e9505d4a677396cab945d4dbfcb8c676767d698927e0ded5458eacb1ed9b"
+    },
+    "gameplay": {
+      "browserOverall": "FAIL",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "scenarios": [
+        {
+          "id": "first-party-error-observable-native-selectors",
+          "status": "PASS"
+        },
+        {
+          "id": "desktop-load",
+          "status": "PASS"
+        },
+        {
+          "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+          "status": "PASS"
+        },
+        {
+          "id": "storage-failure-export-do-not-ack",
+          "status": "PASS"
+        },
+        {
+          "id": "recruited-unit-next-own-turn-real-move",
+          "status": "PASS"
+        },
+        {
+          "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+          "status": "PASS"
+        },
+        {
+          "id": "continuous-existing-gameplay",
+          "status": "PASS"
+        },
+        {
+          "id": "keyboard-selection-navigation",
+          "status": "PASS"
+        }
+      ],
+      "gameplayAssertionResult": "PASS",
+      "artifactCleanupResult": "PASS",
+      "privateArtifactsRemaining": 0,
+      "browserDisconnected": true,
+      "evidencePath": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/gameplay/browser.json",
+      "evidenceSha256": "03cbd762b8a34ee2dbaede11831da3a1845220010cd7d2ba299ea3b3d781f3fb",
+      "journey": {
+        "status": "PASS",
+        "maxHumanCommands": 220,
+        "humanCommands": 209,
+        "actions": [
+          "Attack",
+          "Capture",
+          "EndTurn",
+          "Move",
+          "Recruit",
+          "Research",
+          "ResolveRelic"
+        ],
+        "captureAfterAttack": true,
+        "replayVerified": true
+      }
+    }
+  },
+  "aiPolicyUnchanged": true,
+  "samePolicyHistoricalGames": {
+    "freshThisStage": false,
+    "reason": "本輪未改AI/產品，沒有重跑800/40000整局，不將32ET診斷充當單局結果。",
+    "evidence": "../C5-R6-02/C5-R6-02-TEST-RESULTS.json",
+    "008": {
+      "status": "TURN_LIMIT",
+      "endTurn": 800,
+      "commands": 20682,
+      "winner": null,
+      "partialSaveReplayVerified": true
+    },
+    "010": {
+      "status": "COMPLETE",
+      "endTurn": 247,
+      "commands": 6705,
+      "winner": 1,
+      "terminalSaveReplayVerified": true
+    }
+  },
+  "historicalSamePolicyPrefixAndD02": {
+    "freshThisStage": false,
+    "prefix": {
+      "commands": 1100,
+      "loops": 0
+    },
+    "D02": {
+      "commands": 673,
+      "seen": true,
+      "winner": 0
+    },
+    "reason": "AI未變；原E證據保留，本輪未重複執行。"
+  },
+  "manualQaRegressionScope": "真404錯誤進入errors，child仍FAIL；依賴已明示404 fixture，非通用健康檢查，未獨立覆蓋pageerror/warning。",
+  "staticAssetProbe": {
+    "path": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/STATIC-ASSET-PROBE.json",
+    "sha256": "3c0028d313d149551dc2447d19eb5ed908e715e6221b5085f66f4f5ff6fe2245",
+    "faviconGet": 404,
+    "faviconHead": 404,
+    "jsCss": 200,
+    "sameAsFrozenE": true
+  },
+  "otherFailures": [
+    {
+      "path": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/STATIC-ASSET-PROBE-ATTEMPT1.json",
+      "kind": "舊本機服務恢復時connection refused，非玩法斷言，後續one-shot成功，首次紀錄保留。"
+    },
+    {
+      "path": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/IDENTITY-ATTEMPT1.json",
+      "kind": "metadata script EISDIR，修正遞迴檔案盤點；非AI/test RED。"
+    }
+  ],
+  "lspDiagnostics": "UNVERIFIED，沒有暴露該tool；實際tsc通過，不冒稱LSP。",
+  "privateWorldExcluded": true,
+  "additionalFinalDocumentReview": {
+    "status": "UNVERIFIED",
+    "reason": "Selected model is at capacity",
+    "earlierIndependentMethodAndQaReviews": "TESTED_PASS"
+  }
+}

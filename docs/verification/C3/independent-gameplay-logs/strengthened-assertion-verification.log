@@ -1,0 +1,80 @@
+START 2026-10-18T04:45:05.250950+00:00
+COMMAND node --import tsx --input-type=module - <<STDIN
+
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+import {createGame,applyCommand,observe} from './src/core/game.ts';
+const source=fs.readFileSync('../evidence/independent-gameplay-logs/reviewed-strengthened-source.log','utf8');
+const start=source.indexOf('    assert.ok(appended.length >= 1);');
+const end=source.indexOf("    if (action.type === 'Attack')",start);
+const block=source.slice(start,end);
+const apply=(s,actor,action,id)=>{const r=applyCommand(s,{actor,action,requestId:id,expectedVersion:s.version});assert.ok(r.ok,r.error);return r.state;};
+const results=[];
+function verify(id,context,shouldReject){let rejected=false,reason=null;try{Function('assert','appended','action','relicChoice','humanCommands',block)(assert,context.appended,context.action,context.relicChoice,context.humanCommands);}catch(e){rejected=true;reason=e.message.split('\n')[0];}assert.equal(rejected,shouldReject);results.push({id,rejected,expectedRejected:shouldReject,reason});}
+{
+ const before=createGame('霧境初航-01'),action={type:'Move',unitId:'兵-1',to:{x:5,y:3}};
+ let moved=apply(before,0,action,'review-move');assert.ok(observe(moved,0).legalActions.some(a=>a.type==='ResolveRelic'&&a.choice==='intel'));
+ const wrong=apply(moved,0,{type:'ResolveRelic',choice:'gold'},'review-wrong-choice');
+ verify('WRONG_RELIC_CHOICE_REJECTED',{appended:wrong.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:0},true);
+ const correct=apply(moved,0,{type:'ResolveRelic',choice:'intel'},'review-right-choice');
+ verify('CORRECT_RELIC_CHOICE_ACCEPTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:0},false);
+ verify('FORCED_RELIC_OVER_220_REJECTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:219},true);
+ verify('EXACTLY_220_HUMAN_COMMANDS_ACCEPTED',{appended:correct.history.slice(before.history.length),action,relicChoice:'intel',humanCommands:218},false);
+}
+{
+ const before=createGame('霧境初航-01'),action={type:'EndTurn'};
+ let normal=apply(before,0,action,'review-end-human');normal=apply(normal,1,{type:'EndTurn'},'review-end-ai');
+ verify('NORMAL_ENDTURN_AND_AI_ACCEPTED',{appended:normal.history.slice(before.history.length),action,relicChoice:null,humanCommands:0},false);
+ const wrong=apply(normal,0,{type:'Research',tech:'farm'},'review-unexpected-human');
+ verify('EXTRA_HUMAN_AFTER_ENDTURN_REJECTED',{appended:wrong.history.slice(before.history.length),action,relicChoice:null,humanCommands:0},true);
+}
+console.log(JSON.stringify({sourceSha256:(await import('node:crypto')).createHash('sha256').update(source).digest('hex'),executedAssertionBlock:block,results},null,2));
+
+STDIN
+EXIT 0
+STDOUT
+{
+  "sourceSha256": "e7c50d0cf771f68560e39e47eb2d87a718281d498b72dca1234292ea3f3effd3",
+  "executedAssertionBlock": "    assert.ok(appended.length >= 1);\n    assert.equal(appended[0].actor, 0);\n    assert.deepEqual(appended[0].action, action, '真UI必須提交所選完整合法Action');\n    const ownCommands = appended.filter(c=>c.actor===0);\n    const expectedActions = relicChoice ? [action,{type:'ResolveRelic',choice:relicChoice}] : [action];\n    assert.deepEqual(ownCommands.map(c=>c.action),expectedActions,'包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command');\n    if (action.type !== 'EndTurn') assert.equal(appended.length, expectedActions.length);\n    humanCommands += ownCommands.length;\n    assert.ok(humanCommands<=220,'強制遺跡command也必須計入220上限');\n",
+  "results": [
+    {
+      "id": "WRONG_RELIC_CHOICE_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command"
+    },
+    {
+      "id": "CORRECT_RELIC_CHOICE_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "FORCED_RELIC_OVER_220_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "強制遺跡command也必須計入220上限"
+    },
+    {
+      "id": "EXACTLY_220_HUMAN_COMMANDS_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "NORMAL_ENDTURN_AND_AI_ACCEPTED",
+      "rejected": false,
+      "expectedRejected": false,
+      "reason": null
+    },
+    {
+      "id": "EXTRA_HUMAN_AFTER_ENDTURN_REJECTED",
+      "rejected": true,
+      "expectedRejected": true,
+      "reason": "包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command"
+    }
+  ]
+}
+
+STDERR
+
+END 2026-10-18T04:45:05.367939+00:00

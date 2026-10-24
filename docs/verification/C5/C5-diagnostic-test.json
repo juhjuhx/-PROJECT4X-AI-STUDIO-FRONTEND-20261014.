@@ -1,0 +1,17 @@
+{
+  "label": "C5-diagnostic-test",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "startedAt": "2026-10-18T12:27:06.660981+00:00",
+  "snapshotSha256": "131873e72a0d464704d359543a9356016889bf7be04e689968647a92f675d989",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "4cddfb3c9b50b80b45f85c1c4749e9f41ae392c9",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T12:27:08.471970+00:00",
+  "durationSeconds": 1.811,
+  "log": "C5-diagnostic-test.log"
+}

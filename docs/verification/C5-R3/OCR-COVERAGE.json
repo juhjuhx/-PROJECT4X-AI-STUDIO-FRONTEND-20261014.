@@ -1,0 +1,1291 @@
+{
+  "schema": "project4x-ocr-host-review-1",
+  "tool": "open-code-review v1.13.1",
+  "mode": "local delegation preview/rule + host review; no external OCR LLM",
+  "rulesEvidence": "OCR-checkpoint-rules.stdout.json",
+  "previewEvidence": "OCR-checkpoint-preview.stdout.json",
+  "total_files": 133,
+  "reviewed_files": 133,
+  "skipped_files": 0,
+  "coverage_rate": 1.0,
+  "ledger": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "ef0e1579fea0a4e9f2be4bd55a94b8af36783b52c03368ffb2a560d2940b8a18",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "C5-SOURCE-MANIFEST.json",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "97dd5c73922c46cadbd6080fd5ce90f6d23ca518e7ed3c622e93b01fe290776b",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "3f50afc2207e4fc62f610963c2ef428d1995acc080c214b024b4c611189643b5",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "abbb68e64a75ad3e1a009b9859943039e37ef79722b5005f600c597814a1acd0",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/handoff/C5-VERIFICATION.json",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "1713a203cc14991aa23991da22a50ef64e276fdd6effdeb0f42f32588cdb05bb",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "60cc0e70d57a0e75c93b59b8028a56f8690b7f6f1d1b72fbab960f463bcb01f5",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "739a75ed0a99c24739f78d37d4cbee110b0939d7b64830b431d066b39eddaf37",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "f097e01b4a0e70ee7644bd405160b65e47326d6c54219408fbcb2c624cf7447b",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "c786136d5b525540e43ae9192192a7da75a500c83fe3a8d3f178eb82743eb19b",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "9a97aa42bb87bd6b60030e0500cddea1277ff6b20e5f612f5ebbe01f62bf2518",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/roadmap/PLAYABLE-ALPHA.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "aa3de6d1f93af1e2d25ddb9d07ba33a57d5755c52eb78454ca13c211ed949fb9",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-GIT-SOURCE.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "4ef8edf9b921afff8607275c5fda063abe2ccb86c2155ec602691f1ffc964a51",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "940f87d5734936dd1d7dd8972a51ee04743f127177d4587f083924943e40a7b4",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-SEED010-SUMMARIES.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "6cc3b315af2a43ee17ad29fd97445364ae1f47f18846a39b8c87b36333d88e4a",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "a809cb78f487093cf0bfcb7316c4b1e98f3d7cd514310c3d7ec4331b5ab4cea6",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "04278a5e9170bbb21ca561fb7e76f0382b94991c90cf259785deec3def7cc3c9",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-GREEN.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "897286dc55810f5c406eec6092a21d60834a420edcc1f25ee85d07f2462963a1",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-GREEN.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "c575f9239c80234997c17cec027e6024c8e5aa3b14aaa5c092bf5e657f1a7fd3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "02d7d5da454e8837181ec01d56eef9bc0e761542984d0fe1a2de889ed5d726f7",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-build.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2f8c904daa6827b3aa41ddaa583f9a561fd9300bb621792c2aa868c9e6b35c12",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-build.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-check.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "5a6be1efe31afbebed32c2f8c58691d1272d3bbda6fe034cc1253278bac10ca6",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-check.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-prefix.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "6438117504ca1e708b2aa666a606a51c92c822474a457e9d006372d2e32e3903",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-prefix.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-test.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2a0695c6f7d74eea10291b7d64973b8d1deef46eee1b1dacc0fd709e098c60c7",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-test.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "b6737c77fac5ec1df34b5454ba026bc7d8a19234c71c9f8f62f392d4ef04c166",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-base-FINAL-GIT-STATE.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2aca88b698d2553aa538d3c7f66f93ce887fed60fe821f43bad91b9286f4908b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser-cleanup.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "99999a7227fa5ca67638dba6a25e71afb357191e47ba0b46d59b1fc1873947ff",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser-report.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "952acb95f622b7ca35587ff301d07c377d0b2836a18ea02a341657f23f9921d2",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "6864da8694b321c22684c199e27b8fa330ae0f9bed87909e33466433c1d0fa75",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-central-search.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b02c6ccc323ec9b728b0a6b1849912d8c3c9e13b4b6d1d0a3b424c16b8fa9ec",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-central-search.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-build.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "153b3bb925156836d73f46efa44221282ec2e5b74e6cb1cb6875c1b2a210cc87",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-build.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-check.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "ce1e8423340f231daf95c7637d2570796748e7db15cc7d711c72ae4a1c212e26",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-check.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-prefix.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "73065c2334edb24cec85e4bcf04c178e4e39f10dd41fba99702c578a5e2588c4",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-prefix.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-test.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "f63d1973e902a65a63c61ec3bdc9a1798c7044facdb9d179e6f180cf9dc16928",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-test.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-waiting.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "de0f5f6675113cc1cf7b5c77d7bd3ae86eba5e890d5a8af2c3add495c75a39e2",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-waiting.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay-cleanup.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "fa0268d712b01d0000d4a8879e3012d487721062a7c9172023fbe793bfc301c8",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay-report.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "0df4c28d41edd9477e0a2a56622d81b988e70fdea0714eb20f49a181e2734c32",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "fb1da7185d4b1132bf0ab644639d338b0c84f118c4ae7b4bd059daeb638b7c9c",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-GREEN.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "ac86fdd6d022698d1261eff7ad0113cd53304cdff127b8e346d7c39468eccb39",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-GREEN.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "c4d451fdea3d50b87814e1ea2cc2567dc1fcc8169e42cbeef5ef115c83cc54db",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "d62f6bc036653bd8ba61970baeb09075e2ca2b2e83bdcaa565dfcd8532864fea",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-build.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "4583dacf76761101964e858179922c6ffbfb020e05ac3e742a5c17d9f8649a84",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-build.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-check.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1a18a51d8b2ab2d9b4c6bde4f5789c3c02732eb7e30850a36d4c3836cba025b4",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-check.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-prefix.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "da3b146b0fd265610d3b15875015ff5a57276f9506374185d23c20587c87f8f0",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-prefix.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-test.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "25a63c0417e9adc1303c56bd60d1908c01bff08d09625692ceee239532afdd30",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-test.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "25de1cad93cc8281365dddb3bd9a774e9a39269fa1158c9e9ff1b5668fd31b51",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-review-restoration.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "f50fa56b2cd5708efec57424710db87a213e8ff64413fbc5d5d8627884e1da89",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-review-restoration.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9b34ead9bf5538f12015dc3140b9abec5cf95754528985553589f9b4c703b69b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "b79bf339d193d28acd71d65500567b7ec6cf16783c64a15a9934960aecd65b51",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "aec2d6144453b332ea3202fd66f96b186efada05717226a7980e7e3aad02572d",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1b0ed71e11c5d311eff700b7792bc61f20c3879ee58a2fca6b94dbc5407293a4",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.source.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "7a185ef4eafdc46f3e48a5938aa1f0d4fcedf20a3db6ac7255d70519c39626f3",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/DIFF-CHECK-RESULTS.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "d9f92427a0dc705afc5b3da5c6afa52bfd9de2a949424bcad80d1b4bae9ea17b",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/FINAL-REVIEW-RECEIPT.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "5b2c7d5269fdaa75b8d029edc36590bb9fe5e70b7306afe580dba9b110b6d7bc",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1542d370b32f8483379248b5f0c45d8b00efc1e8bb2858aad9ce4ba40d50525f",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-C5-VERIFICATION.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "918882101f1762a2865b3e5bf526d21128cb3a10380b464e9c8aa4097d49417a",
+      "evidence": "JSON parse, source/metadata/log consistency and final independent provenance review; no private world payload"
+    },
+    {
+      "path": "docs/verification/C5-R3/R2-NEXT-ACTION.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "4263197250bc898e3138ccb25ffef5c9241dbc40acd3e835cdd49855efed697d",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/verification/C5-R3/README.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "5658eda33e2502024d70852d58ae114c14a57b9e6bed8ec630e9dcc21dfb9e15",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/REVIEW.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "496f3b8392ed487ef840242667094acd5ee0035de9b2a77515a701275bf80d7e",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/evidence-checks.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "a137ec65619e8c2c3168b4b38a0fbf275c69898006b5b2ec39fc7e8a1f594f85",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/AGENTS.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "ef0e1579fea0a4e9f2be4bd55a94b8af36783b52c03368ffb2a560d2940b8a18",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/README.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "97dd5c73922c46cadbd6080fd5ce90f6d23ca518e7ed3c622e93b01fe290776b",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/PROJECT-STATUS.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "3f50afc2207e4fc62f610963c2ef428d1995acc080c214b024b4c611189643b5",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/C5-VERIFICATION.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1713a203cc14991aa23991da22a50ef64e276fdd6effdeb0f42f32588cdb05bb",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/INTEGRATION-STATUS.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "f097e01b4a0e70ee7644bd405160b65e47326d6c54219408fbcb2c624cf7447b",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/handoff/NEXT-ACTION.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9a97aa42bb87bd6b60030e0500cddea1277ff6b20e5f612f5ebbe01f62bf2518",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "940f87d5734936dd1d7dd8972a51ee04743f127177d4587f083924943e40a7b4",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "a809cb78f487093cf0bfcb7316c4b1e98f3d7cd514310c3d7ec4331b5ab4cea6",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/docs/verification/C5-R3/C5-R3-TEST-RESULTS.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "04278a5e9170bbb21ca561fb7e76f0382b94991c90cf259785deec3def7cc3c9",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/frozen/memory/session-handoff-LATEST.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "a42d33495f8f9cea616d678dddab4c6eaedfaf7e3c9f237d98a8b49cf414442c",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/final-doc-review/manifest.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "3be6ba9e53c1c8dba7ea754cfe53f29bf531a829cc98e7f3def623348332f046",
+      "evidence": "final independent docs/provenance review; frozen authority bytes and evidence-checks.json"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/REVIEW.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "45eb9287672265da80cb1cda73c7a7fa4f80e385d5488c119e5999267a157b9b",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/baseline-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/focused-command.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "291db00fc32a566ae8d8b720f6da4c1be8b1a6399d058c817ccca84852a10f39",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/manifest.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "cd4dc7b6a441386b2e398e8e8b3d118d3c1fa3959e2a6b3b96441c59b542d384",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/package.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/protected-surface.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "36073bc55a1167c3248f01ceb5ee6e7eec62585c507c4124b51614bf439f7878",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/source-manifest.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "369d65d2b96b05ca50db8acb91f0f839404cb7d2428bad0ce8a086d664d0f898",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/source-surface.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1849d976629a72b7a8c79b194a0107c4203af2b76d014f233c9451c204fe0526",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/baseline-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/equality-mutant-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "ad03b4256fec338df55967b3fd42bfaf7296f274e8b5f3c14f9997bfdfde9920",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/exhaustive-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2af815ef8f0e0f13e637855aafc58853d1839c52324d51b561c9447fa592dbce",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/game.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/src/core/types.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/tests/ai-stalemate.test.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "297f8a93753baa080cf6bd0c46e44891d7e8aac13c2852f0596592e64cc088ef",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/typecheck-command.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "6187146f9aaa53d8edd5a87c37443abd7a44c5114b4e4e63d8881837482fafe4",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/獨立審查.test.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "bd37294007c0bece759ebab8d8761eb378a148e37184fb896a649863f7c6d055",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/REVIEW.md",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "9c162ec2636d7f29128e9c33bf90eddd76a4efadd0823eb9c77976078d9188d3",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/focused-command.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "de5150994e169f5b9cb06bb3ceca185152eb18292c4d587305e893ef0eca9800",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/manifest.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "06e2d804b20380b4a0863c4907d27e2788e59a2981d59857d2039c0718c17ae2",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/package.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/performance-command.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "c9db399b5131ee440a40d240db550bd7d8c07022a014c3650680c072678897c8",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/source-manifest.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "725df509787bc42fb31970e75f92be66a0ccb99c3c67cfd68c88bcbfe35ba1a5",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/source-surface.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2dcebedaa07130e5ee64992ac299846a7470ec68d8c90118702efa7688c6ee48",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/baseline-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/equality-mutant-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "bd8c08eb190ead94cd952e94593d5619b1f6dffe3821f8db65caeb44c3b20ae1",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/exhaustive-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "2fb8081646c4cd2fc5f1458966450edfce6a6819f66f562235deca9dcf2b0096",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/game.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/measured-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "63462997f641ef60181f60ced0c17ca69bf467e8d4ba31f59fdcebf0ea760aed",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/measured-slice1-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "37fdc15c9cc3104906e940e8ef83bd1129d6030f9f700261ed42bf4180ab0f81",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/slice1-ai.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/src/core/types.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/tests/ai-stalemate.test.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "e014f1c07f8c101d66aa03cf6c40cd8d041343dc54f85ae42dc05a205e47a7fe",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/typecheck-command.json",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "5cb0167a5b0f116609f2c77f3cade48cadcd66c73cd2712ce00c4c7f3004c9af",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/有界性能.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "e32d6028e5da5096861b27b85d9ce1cafa41f68debe202dda1e72d93ada8f342",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/獨立審查.test.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "bd37294007c0bece759ebab8d8761eb378a148e37184fb896a649863f7c6d055",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/第二片獨立審查.test.ts",
+      "status": "added",
+      "result": "reviewed",
+      "sha256": "6632b66202a7e676940719ea7d5c7ae7bd393a23b41628dd2b8fb749ca898e36",
+      "evidence": "byte-match to independently reviewed synthetic frozen artifacts; artifact restoration20/20"
+    },
+    {
+      "path": "memory/session-handoff-LATEST.md",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "a42d33495f8f9cea616d678dddab4c6eaedfaf7e3c9f237d98a8b49cf414442c",
+      "evidence": "authored diff/status reconciliation + final independent document review; archive history retained"
+    },
+    {
+      "path": "src/core/ai.ts",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "evidence": "two frozen independent reviews + fresh113-suite + RED/GREEN; final stronger waiting assertion"
+    },
+    {
+      "path": "tests/ai-stalemate.test.ts",
+      "status": "modified",
+      "result": "reviewed",
+      "sha256": "4b6de8cc2308896e20b97f6e770141f8663d4bef5b5d2358920307eadc774f63",
+      "evidence": "two frozen independent reviews + fresh113-suite + RED/GREEN; final stronger waiting assertion"
+    }
+  ],
+  "ocrExcluded": [
+    {
+      "path": "docs/verification/C5-R3/AI-CODE-DIFF.patch",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview-command.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-preview.stdout.json",
+      "status": "added",
+      "insertions": 823,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules-command.json",
+      "status": "added",
+      "insertions": 126,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-final-rules.stdout.json",
+      "status": "added",
+      "insertions": 136,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview-command.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-preview.stdout.json",
+      "status": "added",
+      "insertions": 757,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules-command.json",
+      "status": "added",
+      "insertions": 122,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules.stderr.txt",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-rules.stdout.json",
+      "status": "added",
+      "insertions": 132,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version-command.json",
+      "status": "added",
+      "insertions": 8,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version.stderr.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/OCR-version.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "user_exclude",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/RAW-DIFF-CHECK.txt",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/initial-diff.patch",
+      "status": "added",
+      "insertions": 56,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/initial-status.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/initial-diff.patch",
+      "status": "added",
+      "insertions": 104,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/initial-status.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/slice2-ai-stalemate.test.ts.diff",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/slice2-ai.ts.diff",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    },
+    {
+      "path": "docs/verification/C5-R3/真實戰鬥佔領旅程.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary",
+      "disposition": "skipped by OCR, retained and separately byte-verified; binary screenshot is genuine browser artifact"
+    }
+  ],
+  "outsideOCRCensus": [
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-GREEN.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-RED.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-build.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-check.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-prefix.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-test.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-approach-trace.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser-server.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-browser.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-central-search.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-build.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-check.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-prefix.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-test.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-final-waiting.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay-server.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-gameplay.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-GREEN.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-RED.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-build.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-check.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-prefix.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-test.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-pruning-trace.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-review-restoration.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-approach.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/C5-R3-seed010-pruning.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/focused-review.stderr.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/focused-review.stdout.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/frozen-typecheck.stderr.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice1/frozen-typecheck.stdout.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/focused-review.stderr.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/focused-review.stdout.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/frozen-typecheck.stderr.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/frozen-typecheck.stdout.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/performance-review.stderr.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    },
+    {
+      "path": "docs/verification/C5-R3/review-slice2/performance-review.stdout.log",
+      "reason": "ignored *.log even when explicitly staged; raw evidence byte/hash verification, not omitted from Git"
+    }
+  ],
+  "findings": [],
+  "warning": "Git2.39.5 below OCR recommended2.41; commands exit0, environment unchanged",
+  "verdict": "no unresolved blocker within reviewed scope; not overall Alpha PASS"
+}

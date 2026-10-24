@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-19T12:04:51.482070+00:00",
+  "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "files": {
+    "README.md": "97dd5c73922c46cadbd6080fd5ce90f6d23ca518e7ed3c622e93b01fe290776b",
+    "C5-SOURCE-MANIFEST.json": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc",
+    "AGENTS.md": "ef0e1579fea0a4e9f2be4bd55a94b8af36783b52c03368ffb2a560d2940b8a18",
+    "memory/session-handoff-LATEST.md": "a42d33495f8f9cea616d678dddab4c6eaedfaf7e3c9f237d98a8b49cf414442c",
+    "docs/PROJECT-STATUS.md": "3f50afc2207e4fc62f610963c2ef428d1995acc080c214b024b4c611189643b5",
+    "docs/handoff/NEXT-ACTION.md": "9a97aa42bb87bd6b60030e0500cddea1277ff6b20e5f612f5ebbe01f62bf2518",
+    "docs/handoff/INTEGRATION-STATUS.md": "f097e01b4a0e70ee7644bd405160b65e47326d6c54219408fbcb2c624cf7447b",
+    "docs/handoff/C5-VERIFICATION.json": "1713a203cc14991aa23991da22a50ef64e276fdd6effdeb0f42f32588cdb05bb",
+    "docs/verification/C5-R3/C5-R3-SOURCE-BOUNDARY.json": "a809cb78f487093cf0bfcb7316c4b1e98f3d7cd514310c3d7ec4331b5ab4cea6",
+    "docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md": "940f87d5734936dd1d7dd8972a51ee04743f127177d4587f083924943e40a7b4",
+    "docs/verification/C5-R3/C5-R3-TEST-RESULTS.json": "04278a5e9170bbb21ca561fb7e76f0382b94991c90cf259785deec3def7cc3c9"
+  }
+}

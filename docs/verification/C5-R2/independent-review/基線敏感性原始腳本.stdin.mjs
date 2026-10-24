@@ -1,0 +1,11 @@
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { transform } from 'esbuild';
+const url = p => pathToFileURL(resolve(p)).href;
+const moduleURL = async source => 'data:text/javascript;base64,' + Buffer.from((await transform(source,{loader:'ts',format:'esm'})).code).toString('base64');
+const baseline = execFileSync('git',['show','5b0483ec9431958d1852866368f2775557ab98f8:src/core/ai.ts'],{encoding:'utf8'}).replaceAll("from './types'", `from '${url('src/core/types.ts')}'`);
+const baselineURL = await moduleURL(baseline);
+const tests = readFileSync('tests/ai-stalemate.test.ts','utf8').replaceAll("from '../src/core/game'",`from '${url('src/core/game.ts')}'`).replaceAll("from '../src/core/ai'", `from '${baselineURL}'`);
+await import(await moduleURL(tests));

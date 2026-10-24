@@ -1,0 +1,558 @@
+{
+  "schema": "project4x-c3-skills-1",
+  "activeRoute": [
+    {
+      "SKILL": "using-superpowers",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "恢復/路由",
+      "PURPOSE": "15項矩陣與host tools",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/using-superpowers/SKILL.md",
+      "skillSha256": "fa0fa16abfaf17198e5b60145a656b55b907f9160b5d378d4d207ab2287a72e7"
+    },
+    {
+      "SKILL": "deep-understanding",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "R0/R3",
+      "PURPOSE": "C3-DEEP-UNDERSTANDING.md",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/deep-understanding/SKILL.md",
+      "skillSha256": "a83d28eb0274847dc6c3cd4f849f5aaf5bc01ce1ebfa885f9aa91834f37340b6"
+    },
+    {
+      "SKILL": "grill-me",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "排版裁決",
+      "PURPOSE": "主創已答：保留D3分頁；先修現有無記憶policy最小反例。兩項記入DECISION-REGISTER",
+      "EVIDENCE": "LOCAL_HOME/.codex/skills/grill-me/SKILL.md",
+      "skillSha256": "74147eb6010a65957efef2b9e0f0b3ff935c1def7fc117697151b1d0f3610556"
+    },
+    {
+      "SKILL": "writing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "計畫",
+      "PURPOSE": "C3-EXECUTION-PLAN.md",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/writing-plans/SKILL.md",
+      "skillSha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+    },
+    {
+      "SKILL": "using-git-worktrees",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "隔離",
+      "PURPOSE": "integration/project4x-c3；明確主創授權另建，保留C2",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/using-git-worktrees/SKILL.md",
+      "skillSha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd"
+    },
+    {
+      "SKILL": "systematic-debugging",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "修正",
+      "PURPOSE": "C3-check失敗定位殘留identifier；map屋頂/label反例",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/systematic-debugging/SKILL.md",
+      "skillSha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+    },
+    {
+      "SKILL": "test-driven-development",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "修正",
+      "PURPOSE": "map/recruit RED→GREEN",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/test-driven-development/SKILL.md",
+      "skillSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+    },
+    {
+      "SKILL": "verification-before-completion",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "Gate",
+      "PURPOSE": "fresh C2與C3實跑",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/verification-before-completion/SKILL.md",
+      "skillSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    },
+    {
+      "SKILL": "requesting-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "獨立審查",
+      "PURPOSE": "independent-C2-review.md；C3待審",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/requesting-code-review/SKILL.md",
+      "skillSha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a"
+    },
+    {
+      "SKILL": "dispatching-parallel-agents",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "審查/研究",
+      "PURPOSE": "3個只讀worker、root單一writer",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/dispatching-parallel-agents/SKILL.md",
+      "skillSha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c"
+    },
+    {
+      "SKILL": "executing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "切片",
+      "PURPOSE": "按既有主創master harness，不新增計畫批准流程",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/executing-plans/SKILL.md",
+      "skillSha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71"
+    },
+    {
+      "SKILL": "code-review-excellence",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "品質",
+      "PURPOSE": "具體反例/回歸/獨立scope",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/code-review-excellence/SKILL.md",
+      "skillSha256": "68df968e01fc7cc234f68ac9439a64e2f70b6c2dc02ad7bdb2928a61058ed8e8"
+    },
+    {
+      "SKILL": "codex-engineering-guardrails:code-work",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "整合",
+      "PURPOSE": "保核心/函式級採納；本會話先前已讀",
+      "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-work/SKILL.md",
+      "skillSha256": "a3727efa825ff26a2ce67ff60379ad0e3a4bfcfc498c3632514fd662e7a0f3a6"
+    },
+    {
+      "SKILL": "open-code-review-delegate",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "最終審查",
+      "PURPOSE": "已讀；C3 preview/rule待執行",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/open-code-review-delegate/SKILL.md",
+      "skillSha256": "0c504bed0bc09cca30963d660ca8a1833dcba34f8e54671e42a7ac44e6b4ad5d"
+    },
+    {
+      "SKILL": "visual-atelier v2",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "Diagram/視覺品質",
+      "PURPOSE": "內文明確v2；TUI工程roadmap與已批准DHybrid，不新裝3D",
+      "EVIDENCE": "LOCAL_HOME/.codex/skills/visual-atelier/SKILL.md",
+      "skillSha256": "d9ffe1f0cf933b960d63105ccd5201edd2f37d87b59bdb0596948260b4f34a12"
+    }
+  ],
+  "additionalLoaded": [
+    {
+      "SKILL": "official-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "PR審查候選",
+      "PURPOSE": "無PR，未執行PR流程；不發GitHub評論"
+    },
+    {
+      "SKILL": "complexity-cuts",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "效能評估",
+      "PURPOSE": "未量測瓶頸前不改演算法、不宣稱加速"
+    },
+    {
+      "SKILL": "addyosmani-documentation-and-adrs",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "C3/C4",
+      "PURPOSE": "更新權威入口、保留歷史及來源理由",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/addyosmani-documentation-and-adrs/SKILL.md",
+      "skillSha256": "3e161ec612a3f216ff3c5cfd498779ab23bb0d760150c8105f018c3ed63a4552"
+    },
+    {
+      "SKILL": "addyosmani-incremental-implementation",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "C3/C4",
+      "PURPOSE": "C3 checkpoint後才C4，不混核心玩法",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/addyosmani-incremental-implementation/SKILL.md",
+      "skillSha256": "f3287012314c8867908690a58c9a290083c5eea55aff74ff48c48b3fc5481dca"
+    },
+    {
+      "SKILL": "addyosmani-browser-testing-with-devtools",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "C3/C4",
+      "PURPOSE": "已讀；MCP本輪未提供，實際用既有Playwright/CDP等價檢查，不聲稱呼叫該MCP",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/addyosmani-browser-testing-with-devtools/SKILL.md",
+      "skillSha256": "5c5a98ff9c509539f7de2ca7638587a48d4678c0396a45371dddf9c77a30a4e5"
+    },
+    {
+      "SKILL": "addyosmani-debugging-and-error-recovery",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "C5",
+      "PURPOSE": "原生成prefix RED、候選A繞路回歸/B未解除振盪，逐假說保留證據；不降門檻",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/addyosmani-debugging-and-error-recovery/SKILL.md",
+      "skillSha256": "3908746ea39a4c23f3df27a7faa04540ad7834332e0f534922fbfffec630ec54"
+    }
+  ],
+  "missingExactNames": [
+    "plan-interrogate",
+    "plantain-code-quality",
+    "industrial-brutalist-ui"
+  ],
+  "aliasesFound": {
+    "pro-workflow": "pro-pro-workflow（尚未載入）",
+    "visual-atelie v2": "visual-atelier / 內文v2"
+  },
+  "notLoadedIrrelevant": [
+    "taiwan-job-search",
+    "taiwan-marketplace",
+    "fb-marketplace",
+    "Three.js runtime",
+    "web-video-presentation export"
+  ],
+  "note": "LOADED只表示正文已讀，不代表已執行每個workflow或安裝runtime依賴。",
+  "C5_R2": {
+    "route": [
+      {
+        "SKILL": "using-superpowers",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "恢復與路由",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/using-superpowers/SKILL.md",
+        "sha256": "fa0fa16abfaf17198e5b60145a656b55b907f9160b5d378d4d207ab2287a72e7"
+      },
+      {
+        "SKILL": "systematic-debugging",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "觀測→反例→根因，三個分立缺陷",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/systematic-debugging/SKILL.md",
+        "sha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+      },
+      {
+        "SKILL": "test-driven-development",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "三切片RED→GREEN，保留舊FAIL",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/test-driven-development/SKILL.md",
+        "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+      },
+      {
+        "SKILL": "writing-plans",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "最小計畫寫入C5-R2根因報告",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/writing-plans/SKILL.md",
+        "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+      },
+      {
+        "SKILL": "executing-plans",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "root單一writer持續執行，專案ledger",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/executing-plans/SKILL.md",
+        "sha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71"
+      },
+      {
+        "SKILL": "verification-before-completion",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "fresh gates與source binding",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/verification-before-completion/SKILL.md",
+        "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+      },
+      {
+        "SKILL": "requesting-code-review",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "獨立短Route Packet，不含完整舊對話",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/requesting-code-review/SKILL.md",
+        "sha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a"
+      },
+      {
+        "SKILL": "receiving-code-review",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "核對不可知recruited與診斷seen邊界",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/receiving-code-review/SKILL.md",
+        "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+      },
+      {
+        "SKILL": "dispatching-parallel-agents",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "唯讀獨立審查，不並行修改core",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/dispatching-parallel-agents/SKILL.md",
+        "sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c"
+      },
+      {
+        "SKILL": "open-code-review-delegate",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "OCR本機清單/rule，非外部LLM",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/open-code-review-delegate/SKILL.md",
+        "sha256": "0c504bed0bc09cca30963d660ca8a1833dcba34f8e54671e42a7ac44e6b4ad5d"
+      },
+      {
+        "SKILL": "codex-engineering-guardrails:code-work",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "最小範圍／不變量／真實驗證",
+        "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-work/SKILL.md",
+        "sha256": "a3727efa825ff26a2ce67ff60379ad0e3a4bfcfc498c3632514fd662e7a0f3a6"
+      },
+      {
+        "SKILL": "codex-engineering-guardrails:code-verification",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R2",
+        "PURPOSE": "最小範圍／不變量／真實驗證",
+        "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-verification/SKILL.md",
+        "sha256": "4aab85003f547ac6e1ee12e3ceb3f89d5744af56f3b22a3643e545007474fc87"
+      }
+    ],
+    "independentAgent": "r2_observation_audit; first attempt failed quota, later fresh review successful",
+    "OCR": "v1.13.1 delegation only; no external LLM",
+    "lsp_diagnostics": "NOT_AVAILABLE; strict tsc used",
+    "newPackages": false,
+    "scope": "不為數量載入視覺或其他無關skills"
+  },
+  "C5_R3": {
+    "route": [
+      {
+        "SKILL": "using-superpowers",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 恢復／路由",
+        "PURPOSE": "先讀可用skill與工具映射",
+        "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/superpowers/6.4.2/skills/using-superpowers/SKILL.md",
+        "skillSha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba"
+      },
+      {
+        "SKILL": "systematic-debugging",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 根因",
+        "PURPOSE": "2331既有Observation→兩個可重現選擇斷點",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/systematic-debugging/SKILL.md",
+        "skillSha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+      },
+      {
+        "SKILL": "test-driven-development",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 兩片修補",
+        "PURPOSE": "兩次RED/GREEN＋原反例保留",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/test-driven-development/SKILL.md",
+        "skillSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+      },
+      {
+        "SKILL": "writing-plans",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 計畫",
+        "PURPOSE": "本輪ROOT-CAUSE中的唯一ledger",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/writing-plans/SKILL.md",
+        "skillSha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+      },
+      {
+        "SKILL": "executing-plans",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 執行",
+        "PURPOSE": "每片診斷／修正／驗證／review",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/executing-plans/SKILL.md",
+        "skillSha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71"
+      },
+      {
+        "SKILL": "requesting-code-review",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 獨立審查",
+        "PURPOSE": "兩片frozen source 14/14與20/20",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/requesting-code-review/SKILL.md",
+        "skillSha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a"
+      },
+      {
+        "SKILL": "receiving-code-review",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 採納",
+        "PURPOSE": "fresh合法退路後等待斷言納入",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/receiving-code-review/SKILL.md",
+        "skillSha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+      },
+      {
+        "SKILL": "dispatching-parallel-agents",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 唯讀分工",
+        "PURPOSE": "path/siege/reviewer獨立讀取；root唯一writer",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/dispatching-parallel-agents/SKILL.md",
+        "skillSha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c"
+      },
+      {
+        "SKILL": "verification-before-completion",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 交付",
+        "PURPOSE": "fresh113tests/真瀏覽器/單seed/來源邊界",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/verification-before-completion/SKILL.md",
+        "skillSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+      },
+      {
+        "SKILL": "code-work",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 工程範圍",
+        "PURPOSE": "僅AI產品檔；保護規則及schema",
+        "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-work/SKILL.md",
+        "skillSha256": "a3727efa825ff26a2ce67ff60379ad0e3a4bfcfc498c3632514fd662e7a0f3a6"
+      },
+      {
+        "SKILL": "code-verification",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 Gate",
+        "PURPOSE": "命令/UTC/HEAD/source/exit/rawlogs",
+        "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-verification/SKILL.md",
+        "skillSha256": "4aab85003f547ac6e1ee12e3ceb3f89d5744af56f3b22a3643e545007474fc87"
+      },
+      {
+        "SKILL": "open-code-review-delegate",
+        "AVAILABLE": true,
+        "LOADED": true,
+        "PHASE": "C5-R3 檔案與規則稽核",
+        "PURPOSE": "本機preview/rule＋host審查，無外部OCR模型",
+        "EVIDENCE": "LOCAL_HOME/.agents/skills/open-code-review-delegate/SKILL.md",
+        "skillSha256": "0c504bed0bc09cca30963d660ca8a1833dcba34f8e54671e42a7ac44e6b4ad5d"
+      }
+    ],
+    "note": "只記實際使用的相關skills；獨立review另讀code-review-excellence，詳review報告。不為湊15項載入UI/art/不相關技能。"
+  },
+  "C5_R4_actualRoute": [
+    {
+      "SKILL": "using-superpowers",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "恢復/路由",
+      "PURPOSE": "canonical catalog與真Git／來源恢復",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/using-superpowers/SKILL.md",
+      "skillSha256": "fa0fa16abfaf17198e5b60145a656b55b907f9160b5d378d4d207ab2287a72e7",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "systematic-debugging",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "根因",
+      "PURPOSE": "D02全已知分支與400-command四角coverage反例",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/systematic-debugging/SKILL.md",
+      "skillSha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "test-driven-development",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "RED/GREEN",
+      "PURPOSE": "新frontier3 RED與occupied-vantage RED→GREEN",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/test-driven-development/SKILL.md",
+      "skillSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "writing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "計畫",
+      "PURPOSE": "R4 ROOT-CAUSE ledger，使用者明定scope／checkpoint",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/writing-plans/SKILL.md",
+      "skillSha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "executing-plans",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "執行",
+      "PURPOSE": "依原計畫小切片、候選FAIL不跳過",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/executing-plans/SKILL.md",
+      "skillSha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "requesting-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "獨立審查",
+      "PURPOSE": "只讀clean-context root/r4_final_review",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/requesting-code-review/SKILL.md",
+      "skillSha256": "cfcee1b06774e7c0517f1e09be1a11f2d5680257072723e709ddbcf7e08b795a",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "receiving-code-review",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "修正反例",
+      "PURPOSE": "occupied-vantage與scout flank先RED；保留失敗",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/receiving-code-review/SKILL.md",
+      "skillSha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "verification-before-completion",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "Gate",
+      "PURPOSE": "fresh123/check/build/prefix/D02/seed/browser；gameplay BLOCKED",
+      "EVIDENCE": "LOCAL_HOME/.agents/skills/verification-before-completion/SKILL.md",
+      "skillSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "codex-engineering-guardrails:code-work",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "實作",
+      "PURPOSE": "只改ai.ts產品；舊tests/schema/core保全",
+      "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-work/SKILL.md",
+      "skillSha256": "a3727efa825ff26a2ce67ff60379ad0e3a4bfcfc498c3632514fd662e7a0f3a6",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "codex-engineering-guardrails:code-verification",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "驗證",
+      "PURPOSE": "來源快照與真實exit/log，不假PASS",
+      "EVIDENCE": "LOCAL_HOME/.codex/plugins/cache/openai-curated-remote/codex-engineering-guardrails/1.1.1/skills/code-verification/SKILL.md",
+      "skillSha256": "4aab85003f547ac6e1ee12e3ceb3f89d5744af56f3b22a3643e545007474fc87",
+      "executionEvidence": "docs/verification/C5-R4/C5-R4-ROOT-CAUSE.md and raw logs"
+    },
+    {
+      "SKILL": "code-review-excellence",
+      "AVAILABLE": true,
+      "LOADED": true,
+      "PHASE": "獨立審查",
+      "PURPOSE": "由root/r4_final_review實際載入並執行",
+      "EVIDENCE": "docs/verification/C5-R4/independent-review/最終獨立審查.md",
+      "source": "LOCAL_HOME/.agents/skills/code-review-excellence/SKILL.md"
+    },
+    {
+      "SKILL": "OpenCodeReview",
+      "AVAILABLE": "本輪未重新探測CLI",
+      "LOADED": false,
+      "PHASE": "可選",
+      "PURPOSE": "本輪使用宿主clean-context獨立review，沒有外部OCR LLM呼叫",
+      "EVIDENCE": "不得沿用R3探測當R4執行證據"
+    }
+  ]
+}

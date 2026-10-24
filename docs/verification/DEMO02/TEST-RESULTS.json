@@ -1,0 +1,452 @@
+{
+  "schema": "project4x-demo-verification-1",
+  "productSourceHash": "8ad7d798b910e774c929a277787f2f7c7e4c20d9f4583c4e586200e1d37dedb5",
+  "aiSha256": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "unit": {
+    "passed": 203,
+    "failed": 0,
+    "skipped": 0,
+    "baselineTests": 195,
+    "newTests": 8
+  },
+  "browser": {
+    "passedScenarios": 11,
+    "status": "TESTED_PASS"
+  },
+  "gameplay": {
+    "passedScenarios": 12,
+    "maxHumanCommands": 220,
+    "humanCommands": 209,
+    "gameplayAssertions": "TESTED_PASS",
+    "artifactCleanup": "TESTED_PASS"
+  },
+  "demo": {
+    "passedScenarios": 4,
+    "desktop": true,
+    "simulatedPhone": true,
+    "physicalPhone": "UNVERIFIED",
+    "winnerRemainsNull": true
+  },
+  "pwa": {
+    "root": "TESTED_PASS",
+    "subpath": "TESTED_PASS",
+    "offlineSaveLoad": "TESTED_PASS",
+    "waitingUpdate": "TESTED_PASS",
+    "physicalInstall": "UNVERIFIED",
+    "publicHTTPS": "NOT_IMPLEMENTED"
+  },
+  "cleanRestore": {
+    "status": "TESTED_PASS",
+    "node": "v26.10.0",
+    "install": "原lockfile npm ci --ignore-scripts --no-audit --no-fund；離線快取不足首次ENOTCACHED保留",
+    "results": [
+      {
+        "name": "check",
+        "command": [
+          "npm",
+          "run",
+          "check"
+        ],
+        "exitCode": 0,
+        "startedAt": "2026-10-23T17:38:20.279487+00:00",
+        "finishedAt": "2026-10-23T17:38:21.409356+00:00",
+        "log": "CLEAN-CHECK.log",
+        "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627"
+      },
+      {
+        "name": "test",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 0,
+        "startedAt": "2026-10-23T17:38:21.409537+00:00",
+        "finishedAt": "2026-10-23T17:38:25.475604+00:00",
+        "log": "CLEAN-TEST.log",
+        "logSha256": "7c2828d7a02dc2b44c271784e072e8b8e4eb7fd49a9f3c050f4e5f3f03628262"
+      },
+      {
+        "name": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0,
+        "startedAt": "2026-10-23T17:38:25.475780+00:00",
+        "finishedAt": "2026-10-23T17:38:26.950197+00:00",
+        "log": "CLEAN-BUILD.log",
+        "logSha256": "700837b543f56371572561b1031fb39830175fb3a7a2ecd18ed2389bca6fcc31"
+      }
+    ]
+  },
+  "historicalPreservation": {
+    "status": "TESTED_PASS",
+    "count": 1982,
+    "checks": [
+      {
+        "seal": "C5-R6-20261021-212438/R5-PRESERVATION-SEAL.json",
+        "count": 591,
+        "mismatchCount": 0,
+        "status": "TESTED_PASS"
+      },
+      {
+        "seal": "C5-R6-02-20261022-133143-828d4da7/ORIGINAL-EVIDENCE-SEAL.json",
+        "count": 371,
+        "mismatchCount": 0,
+        "status": "TESTED_PASS"
+      },
+      {
+        "seal": "C5-R6-02-20261022-133143-828d4da7/PRIVATE-EVIDENCE-MANIFEST.json",
+        "count": 545,
+        "mismatchCount": 0,
+        "status": "TESTED_PASS"
+      },
+      {
+        "seal": "C5-R6-03-20261023-092731-fb2e9b4e/PRIVATE-EVIDENCE-MANIFEST.json",
+        "count": 231,
+        "mismatchCount": 0,
+        "status": "TESTED_PASS"
+      },
+      {
+        "seal": "C5-R6-04-20261023-191459-512b87a2/PRIVATE-EVIDENCE-MANIFEST.json",
+        "count": 244,
+        "mismatchCount": 0,
+        "status": "TESTED_PASS"
+      }
+    ],
+    "publicR5Sha": "aba1a667a40ba1d5ce2ceb168fb34b462f2f64570a0d6b4c4c4bbbab12225cb2",
+    "checkedAt": "2026-10-23T17:35:37.195645+00:00",
+    "scope": "僅封條列出的1982檔，既有排除/symlink規則不變",
+    "initialDiscovery": "初次未找到不同命名的兩封條、第二次遇originalRoot欄名差異；完成真實schema核對後重驗，非歷史檔案損毀。"
+  },
+  "checks": [
+    {
+      "id": "demo-final-unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:26:21.913785+00:00",
+      "finishedAt": "2026-10-23T17:26:25.889642+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-unit-20261024-012621-804bab0c/output.log",
+      "logSha256": "32a4ccad0b8c125e7961564825b69987f6c6ead6fff8c9d9331e46bae0f681ca",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:26:25.175639+00:00",
+      "finishedAt": "2026-10-23T17:26:25.632256+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-check-20261024-012625-e55fa58b/output.log",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:27:01.915137+00:00",
+      "finishedAt": "2026-10-23T17:27:02.750538+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-build-20261024-012701-0c24c1e0/output.log",
+      "logSha256": "74005f1dc26c4df3085c483b03cff7358fa5581db7fdf045592771c1042aaf04",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-prefix",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:26:27.385481+00:00",
+      "finishedAt": "2026-10-23T17:26:30.008271+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-prefix-20261024-012627-04e3f255/output.log",
+      "logSha256": "6dc306333dc4f5253765d4e6180c2d41be63648fb34ea430618a6c015954a511",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-d02",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:26:30.971281+00:00",
+      "finishedAt": "2026-10-23T17:26:31.530089+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-d02-20261024-012630-4ed5deb2/output.log",
+      "logSha256": "8f5cc62835ffc31a69e751f23db7d359dd36dbde3c119c7ea53172c9a2b25fc2",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-release-browser",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:27:31.491607+00:00",
+      "finishedAt": "2026-10-23T17:27:38.878630+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-release-browser-20261024-012731-0b7e5bcd/output.log",
+      "logSha256": "3b96927da4d6766ce6c6a966fdc78587cab6404cd81f2779f7873a24ec61604b",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-release-journey",
+      "command": [
+        "npm",
+        "run",
+        "qa:demo"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:27:34.462614+00:00",
+      "finishedAt": "2026-10-23T17:27:40.061372+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-release-journey-20261024-012734-11982840/output.log",
+      "logSha256": "d9debd538f9e95fbb1f30391bbf927d28e2a3bf4d6022358dabb8679bf230dc3",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-gameplay-stable",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:34:11.041514+00:00",
+      "finishedAt": "2026-10-23T17:35:19.133714+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-gameplay-stable-20261024-013411-b13b8bc5/output.log",
+      "logSha256": "266fa7d2d7f113db8fc779829e0fb023d952b782d4431bfd627631657d259018",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-pwa-stable",
+      "command": [
+        "npm",
+        "run",
+        "qa:pwa"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:34:14.987570+00:00",
+      "finishedAt": "2026-10-23T17:34:18.880477+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-pwa-stable-20261024-013414-87e1b85f/output.log",
+      "logSha256": "68706ac28a0369f36ab3a8762bbf9048694afa0784a20716219fdb99211f9f87",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "pwa-subpath",
+      "command": [
+        "npm",
+        "run",
+        "qa:pwa"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:23:04.553645+00:00",
+      "finishedAt": "2026-10-23T17:23:07.600809+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/pwa-subpath-20261024-012304-c136f035/output.log",
+      "logSha256": "8c67145fc5345918befde01ca58715ee35fb1c594be25c9a0753e7b793c3951e",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "pwa-update-waiting-2",
+      "command": [
+        "node",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/DEMO02-20261024-002013-6a9691d4/pwa-update-check-v2.mjs"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "6c11a4c0523266e74bdf108534cf9de497c331dec11365f6b4d429d1b26f27ae",
+      "startedAt": "2026-10-23T17:24:27.658041+00:00",
+      "finishedAt": "2026-10-23T17:24:32.201677+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/pwa-update-waiting-2-20261024-012427-e96ec4fb/output.log",
+      "logSha256": "ad877c968261a26218679bd1fb473b69322cb02c5a5e166894780cbc9e74cbc8",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-clean-restored-pwa",
+      "command": [
+        "npm",
+        "--prefix",
+        "LOCAL_HOME/Desktop/PROJECT4X-Demo-20261024-013644-923efd/source-validation",
+        "run",
+        "qa:pwa"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:39:20.401690+00:00",
+      "finishedAt": "2026-10-23T17:39:24.158883+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-clean-restored-pwa-20261024-013920-ca602204/output.log",
+      "logSha256": "68706ac28a0369f36ab3a8762bbf9048694afa0784a20716219fdb99211f9f87",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-dependency-audit",
+      "command": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "headAtExecution": "61f27e099cf5d02b46e155df94d4d4057d6f1663",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:34:19.437674+00:00",
+      "finishedAt": "2026-10-23T17:34:20.510111+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-dependency-audit-20261024-013419-6a76fbb8/output.log",
+      "logSha256": "2c05ee6453cc2123a736354e9ddfdc031b0eb8532b13df03ce1451be16b59330",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-zip-pwa",
+      "command": [
+        "npm",
+        "run",
+        "qa:pwa"
+      ],
+      "headAtExecution": "6bfbb98b5c0e5136f1fe3807ba0f7cbb01933729",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:47:23.735698+00:00",
+      "finishedAt": "2026-10-23T17:47:27.148541+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-zip-pwa-20261024-014723-0cdf2f67/output.log",
+      "logSha256": "68706ac28a0369f36ab3a8762bbf9048694afa0784a20716219fdb99211f9f87",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-zip-journey",
+      "command": [
+        "npm",
+        "run",
+        "qa:demo"
+      ],
+      "headAtExecution": "6bfbb98b5c0e5136f1fe3807ba0f7cbb01933729",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:47:27.718974+00:00",
+      "finishedAt": "2026-10-23T17:47:32.281544+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-zip-journey-20261024-014727-90be668b/output.log",
+      "logSha256": "d9debd538f9e95fbb1f30391bbf927d28e2a3bf4d6022358dabb8679bf230dc3",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    },
+    {
+      "id": "demo-final-r2-launcher",
+      "command": [
+        "npm",
+        "run",
+        "qa:demo"
+      ],
+      "headAtExecution": "4f3042b58b51e1568c36a967b428de22d35b3c98",
+      "sourceFingerprint": "10e2b763be01b65835d8794dd9fa2ba29ab9d54a0de74d218c9f4e3b5f90ad09",
+      "startedAt": "2026-10-23T17:53:00.310030+00:00",
+      "finishedAt": "2026-10-23T17:53:05.888171+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "sourceChangedDuringRun": [],
+      "log": "外部DEMO02/runs/demo-final-r2-launcher-20261024-015300-0effea03/output.log",
+      "logSha256": "d9debd538f9e95fbb1f30391bbf927d28e2a3bf4d6022358dabb8679bf230dc3",
+      "runnerSha256": "ecfe18b0516a6f6c10872c0d388d7ef181a736bbccae5b1c83cb18a59195e729"
+    }
+  ],
+  "C5": {
+    "policyChanged": false,
+    "R5Full100": "歷史87 COMPLETE/13 TURN_LIMIT，未覆寫",
+    "currentEFull100": "UNVERIFIED",
+    "T3T6": "R5 TESTED_FAIL；新版UNVERIFIED",
+    "R605": "UNVERIFIED_EXPERIMENT"
+  },
+  "android": "BLOCKED：沒有JRE及完整SDK/gradle/adb",
+  "playableAlpha": "PARTIAL",
+  "knownFailedAttemptsRetained": "詳VERIFICATION.md；source mismatch與首次FAIL不作同來源PASS",
+  "webZipRuntime": {
+    "PWA": "TESTED_PASS",
+    "desktopPhoneDemo": "TESTED_PASS",
+    "scope": "真正ZIP解壓後的loopback server；不是原工作樹server"
+  },
+  "webFirstLicensedArchive": {
+    "file": "PROJECT4X-DEMO02-WEB-20261024-r2.zip",
+    "sha256": "fc74aa2f07f1f8e81aa1b8e4a81937cccdfdcc34617d727417233858742be5db",
+    "files": 19,
+    "bytes": 91207,
+    "crc": "TESTED_PASS",
+    "manifest": "TESTED_PASS",
+    "macOSUnzipLauncherMode": "0755 TESTED_PASS",
+    "launcherRuntimeDemo": "TESTED_PASS",
+    "reasonForR2": "僅補Vite MIT授權告知，runtime全部bytes等同已驗首版；原ZIP保留"
+  },
+  "webFinalArchive": {
+    "status": "TESTED_PASS",
+    "archive": "LOCAL_HOME/Desktop/PROJECT4X-Demo-20261024-013644-923efd/PROJECT4X-DEMO02-WEB-20261024-r3.zip",
+    "sha256": "6b7d54df848887cd1c487742f7dbcebedfe4b0ee90bf39830a23cf25410af8f3",
+    "bytes": 91350,
+    "files": 19,
+    "crc": "TESTED_PASS",
+    "manifest": "TESTED_PASS",
+    "runtimeAndLauncherIdenticalToVerifiedR2": true,
+    "change": "僅更正SOURCE-IDENTITY排除Finder metadata；runtime全部bytes不變",
+    "productSourceHash": "8ad7d798b910e774c929a277787f2f7c7e4c20d9f4583c4e586200e1d37dedb5"
+  }
+}

@@ -1,0 +1,31 @@
+✖ production server serves ICO and web manifest with explicit browser MIME, HEAD and 404 remain strict (142.458542ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 256.6275
+
+✖ failing tests:
+
+test at tests/static-release.test.mjs:9:1
+✖ production server serves ICO and web manifest with explicit browser MIME, HEAD and 404 remain strict (142.458542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'application/octet-stream'
+  - 'image/vnd.microsoft.icon'
+  
+      at TestContext.<anonymous> (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/tests/static-release.test.mjs:24:87)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'application/octet-stream',
+    expected: 'image/vnd.microsoft.icon',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

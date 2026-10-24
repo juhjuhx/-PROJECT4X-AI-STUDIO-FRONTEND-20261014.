@@ -1,0 +1,85 @@
+{
+  "build": "PWA revision 2ea4d10eb5b2463a400439237daf4b2c826340d422b205b77be1ccf7a0d28aa3",
+  "screenshots": [
+    {
+      "file": "desktop-menu.png",
+      "sha256": "755dc1d2ca498582112fff0bbf293f41fa01a53fd59b0dc22c128b3981ac8a84",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 991
+      },
+      "capture": "真Chromium fullPage；不是概念圖",
+      "device": "桌面Chromium",
+      "state": "主選單，尚未開始",
+      "sourceReceipt": "demo-release-001/demo.json"
+    },
+    {
+      "file": "desktop-journal.png",
+      "sha256": "a62e0ff80e149beb7ede652908175f2cfb10afa9ddcc9f8d48a2c3a10ecbe0bc",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 991
+      },
+      "capture": "真Chromium fullPage；不是概念圖",
+      "device": "桌面Chromium",
+      "state": "真Move/Relic/Research後的探索紀錄完成，winner=null",
+      "sourceReceipt": "demo-release-001/demo.json"
+    },
+    {
+      "file": "phone-menu.png",
+      "sha256": "19e0f0ce14dd679b2b51436f5905ad8a31236648e79715161aa4d91dee3062cf",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "imagePixels": {
+        "width": 375,
+        "height": 1361
+      },
+      "capture": "真Chromium fullPage；不是概念圖",
+      "device": "手機模擬，非真機",
+      "state": "主選單，手機模擬",
+      "sourceReceipt": "demo-release-001/demo.json"
+    },
+    {
+      "file": "phone-journal.png",
+      "sha256": "aded7e84c743f8ef9c1aa6d22d9ff6719bcf287c9efc28c7bf67cb754613ff4f",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "imagePixels": {
+        "width": 375,
+        "height": 1439
+      },
+      "capture": "真Chromium fullPage；不是概念圖",
+      "device": "手機模擬，非真機",
+      "state": "手機tap完成觀測",
+      "sourceReceipt": "demo-release-001/demo.json"
+    },
+    {
+      "file": "真實戰鬥佔領旅程.png",
+      "sha256": "7436b480ffaac05f47d57a4197962f922665950275d8e9a0f9973a678031c9bf",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 960
+      },
+      "capture": "真Chromium fullPage；不是概念圖",
+      "device": "桌面Chromium",
+      "state": "原220門檻內真戰鬥佔領旅程",
+      "sourceReceipt": "gameplay-stable-001/browser.json"
+    }
+  ]
+}

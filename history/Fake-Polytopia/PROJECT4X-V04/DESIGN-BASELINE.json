@@ -1,0 +1,105 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-11",
+  "status": "PROPOSED_USER_REVIEW_WITH_CONFIRMED_CREATIVE_DECISIONS",
+  "implementation": "NOT_STARTED",
+  "gitRepository": "NOT_CREATED_IN_THIS_PACKAGE",
+  "confirmedRequirements": [
+    "original_turn_based_4x",
+    "early_exploration_conquest",
+    "nonlinear_coexisting_civilizations",
+    "survival_world_motive",
+    "discover_hidden_world",
+    "low_micro_late_game",
+    "2d_2_5d_oblique",
+    "cross_platform_open_source_priority",
+    "authoritative_deterministic_core",
+    "fog_redaction",
+    "agent_independent_review",
+    "physics_local_plus_external_energy",
+    "asymmetric_comeback_with_counterplay",
+    "radical_civilization_transformation",
+    "nonuniversal_communication",
+    "viability_based_map_fairness",
+    "diaspora_after_polity_death",
+    "irreversible_ecology",
+    "single_revealable_world_origin",
+    "surreal_rules_first_tone",
+    "persistent_multi_scale_worldlayers"
+  ],
+  "firstPlayable": {
+    "map": [
+      24,
+      24
+    ],
+    "majorFactions": 2,
+    "humanPlayers": 1,
+    "aiPlayers": 1,
+    "units": [
+      "infantry",
+      "scout",
+      "archer"
+    ],
+    "techs": [
+      "farming",
+      "archery",
+      "pathfinding"
+    ],
+    "economy": [
+      "gold"
+    ],
+    "victory": [
+      "capital_conquest"
+    ],
+    "worldSurprise": "anomaly_event_two_choices",
+    "renderer": "2d_2_5d_oblique_placeholder",
+    "playabilityGate": "USER_COMPLETES_ONE_MATCH_AND_REVIEWS",
+    "economyClarification": "gold_is_G1_gameplay_abstraction_not_universal_energy"
+  },
+  "futureNotMvp": [
+    "full_diplomacy",
+    "religions",
+    "political_institutions",
+    "advanced_resources",
+    "true_high_tech_factions",
+    "multi_world_orbit",
+    "multiplayer",
+    "complex_army_frontlines"
+  ],
+  "technology": {
+    "core": "headless_typescript_proposed",
+    "rendererCandidates": [
+      "pixijs8",
+      "phaser4"
+    ],
+    "rust": "benchmark_gated_optional",
+    "sharedArrayBuffer": "OPTIONAL_AFTER_COMPATIBILITY",
+    "transferable": "DEFAULT_FOR_BULK_WORKER_PAYLOADS_WITH_OWNERSHIP_CHECK"
+  },
+  "evidence": {
+    "openCodeR0": "USER_QUOTED_ONLY",
+    "functionalTests": 0,
+    "performanceBenchmarks": 0,
+    "licenseFullAudit": false,
+    "humanPlaytests": 0,
+    "newReviewStatus": "AWAITING_INDEPENDENT_AGENT_REVIEW"
+  },
+  "confirmedCreativeDecisionsFile": "docs/38-user-decisions-and-open-questions-v04.md",
+  "newProbe": {
+    "gate": "G1.5_HEADLESS_ASYMMETRY",
+    "blockingFor": "asymmetry expansion after G1, NOT G1 itself",
+    "fixtures": [
+      "metabolism_three_civs",
+      "atomic_recipe",
+      "artifact_counterplay",
+      "mapgen_spawn_viability",
+      "civilization_identity_survives_polity_loss",
+      "no_fog_leak"
+    ]
+  },
+  "worldOrigin": {
+    "singleOrigin": "USER_CONFIRMED",
+    "designer_wish_accumulation": "USER_CREATIVE_INTENT",
+    "wish_loom_story_names": "PROPOSED_NOT_LOCKED"
+  }
+}

@@ -1,5 +1,12 @@
 # 核心 API 契約
 
+## 2026-10-17 C2 現行邊界
+
+GameSession 現在獨占 canonical GameState，唯一 reducer 仍 src/core/game.ts:applyCommand。main 為 composition root，只保留 UI view cache／selection，透過 GameplayPort 提意圖；檔案 controls 另取 LocalPersistencePort。session/ai-driver 只收 actor1 Observation，presentation/events 只讀 actor0 前後 Observation 及合法 own receipt，UI/map 只收凍結的可見資料。load 先 core 完整驗證再 replace，Save/Replay 不交 HUD。正式 runtime API、模組與證據見 [FRONTEND-CORE-CONTRACT](../contracts/FRONTEND-CORE-CONTRACT.md) 和 [C2-IMPLEMENTATION-STATUS](../handoff/C2-IMPLEMENTATION-STATUS.md)。以下為原封存架構與 source 行號，凡提 main 持 state／driver 者皆屬 C2 前歷史。
+
+
+2026-10-17：本檔維持現有 core API 說明。新的 session/UI 接口權威移至 [FRONTEND-CORE-CONTRACT](../contracts/FRONTEND-CORE-CONTRACT.md)；C1 僅規格，runtime 尚未實作，不可把其方法當本檔已有 export。
+
 本版是 TypeScript 函式 API，沒有 HTTP、WebSocket 或網路服務端點。相依的資料格式在 `src/core/types.ts`，唯一合法規則寫入路徑是 `applyCommand`。表中的行號對應封存src；測試結果由root在交接狀態檔統一記錄。
 
 ## 公開函式

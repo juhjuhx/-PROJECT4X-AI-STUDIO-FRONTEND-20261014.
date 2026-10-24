@@ -1,0 +1,30 @@
+{
+  "authoredCommand": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    "AGENTS.md",
+    "README.md",
+    "C5-SOURCE-MANIFEST.json",
+    "src/core/ai.ts",
+    "tests/ai-stalemate.test.ts",
+    "memory/session-handoff-LATEST.md",
+    "docs/PROJECT-STATUS.md",
+    "docs/agent/C3-SKILL-MATRIX.json",
+    "docs/handoff",
+    "docs/roadmap/PLAYABLE-ALPHA.md",
+    "docs/verification/C5-R3/C5-R3-ROOT-CAUSE.md"
+  ],
+  "authoredExitCode": 0,
+  "wholeArchiveCommand": [
+    "git",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "wholeArchiveExitCode": 2,
+  "rawOutput": "RAW-DIFF-CHECK.txt",
+  "reason": "raw logs／patch保持原始bytes，不為消除日誌空白而重寫證據。"
+}

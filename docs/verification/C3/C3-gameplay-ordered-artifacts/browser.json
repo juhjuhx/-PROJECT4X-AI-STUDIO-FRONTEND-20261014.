@@ -1,0 +1,6667 @@
+{
+  "url": "http://127.0.0.1:58965",
+  "generatedAt": "2026-10-18T04:46:14.756Z",
+  "browser": "156.0.8078.4",
+  "artifactHashes": {
+    "assets/index-BRJcKIV7.js": "c676877f05ba3147c7f4978ae73cfd63fa8861709d056ac5bb20920384ff588b",
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+    "index.html": "e56df62a422cee01affedf2f1512f2591f8054f419d6716bf0242a744fdd5393"
+  },
+  "servedAssets": {
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+    "assets/index-BRJcKIV7.js": "c676877f05ba3147c7f4978ae73cfd63fa8861709d056ac5bb20920384ff588b"
+  },
+  "device": {
+    "platform": "darwin",
+    "release": "24.6.0",
+    "arch": "arm64",
+    "cpu": "Apple M1"
+  },
+  "scenarios": [
+    {
+      "id": "first-party-error-observable-native-selectors",
+      "status": "PASS",
+      "nativeSafety": {
+        "invalidSelectorsThrow": 6,
+        "observedError": true,
+        "observedRejection": true,
+        "errorCanceled": false,
+        "rejectionCanceled": false
+      }
+    },
+    {
+      "id": "desktop-load",
+      "milliseconds": 401,
+      "status": "PASS"
+    },
+    {
+      "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+      "status": "PASS"
+    },
+    {
+      "id": "storage-failure-export-do-not-ack",
+      "status": "PASS",
+      "exportPreservesDirty": true,
+      "storageFailurePreservesDirty": true,
+      "restoredStorageClearsDirty": true
+    },
+    {
+      "id": "recruited-unit-next-own-turn-real-move",
+      "status": "PASS",
+      "unitId": "兵-5"
+    },
+    {
+      "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+      "status": "PASS",
+      "saveBytes": 23860
+    },
+    {
+      "id": "continuous-existing-gameplay",
+      "status": "PASS",
+      "driver": "real DOM/keyboard buttons; production opponent AI; Observation-only test policy",
+      "maxHumanCommands": 220,
+      "humanCommands": 209,
+      "policySteps": 208,
+      "turn": 37,
+      "actions": [
+        "Attack",
+        "Capture",
+        "EndTurn",
+        "Move",
+        "Recruit",
+        "Research",
+        "ResolveRelic"
+      ],
+      "captureAfterAttack": true,
+      "trace": [
+        {
+          "step": 0,
+          "humanCommands": 1,
+          "turn": 7,
+          "versionBefore": 26,
+          "versionAfter": 27,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 1,
+          "humanCommands": 2,
+          "turn": 7,
+          "versionBefore": 27,
+          "versionAfter": 28,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 7,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 2,
+          "humanCommands": 3,
+          "turn": 7,
+          "versionBefore": 28,
+          "versionAfter": 29,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 5,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 3,
+          "humanCommands": 4,
+          "turn": 7,
+          "versionBefore": 29,
+          "versionAfter": 30,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 4,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 4,
+          "humanCommands": 5,
+          "turn": 7,
+          "versionBefore": 30,
+          "versionAfter": 38,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 5,
+          "humanCommands": 6,
+          "turn": 9,
+          "versionBefore": 38,
+          "versionAfter": 39,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 8,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 6,
+          "humanCommands": 7,
+          "turn": 9,
+          "versionBefore": 39,
+          "versionAfter": 40,
+          "action": {
+            "type": "Capture",
+            "unitId": "兵-1"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 7,
+          "humanCommands": 8,
+          "turn": 9,
+          "versionBefore": 40,
+          "versionAfter": 41,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 3,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 8,
+          "humanCommands": 9,
+          "turn": 9,
+          "versionBefore": 41,
+          "versionAfter": 42,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 9,
+          "humanCommands": 10,
+          "turn": 9,
+          "versionBefore": 42,
+          "versionAfter": 43,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 4,
+              "y": 1
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 10,
+          "humanCommands": 11,
+          "turn": 9,
+          "versionBefore": 43,
+          "versionAfter": 44,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 5,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 11,
+          "humanCommands": 12,
+          "turn": 9,
+          "versionBefore": 44,
+          "versionAfter": 53,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 12,
+          "humanCommands": 13,
+          "turn": 11,
+          "versionBefore": 53,
+          "versionAfter": 54,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 10,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 13,
+          "humanCommands": 14,
+          "turn": 11,
+          "versionBefore": 54,
+          "versionAfter": 55,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 14,
+          "humanCommands": 15,
+          "turn": 11,
+          "versionBefore": 55,
+          "versionAfter": 56,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 2,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 15,
+          "humanCommands": 16,
+          "turn": 11,
+          "versionBefore": 56,
+          "versionAfter": 57,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 3,
+              "y": 1
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 16,
+          "humanCommands": 17,
+          "turn": 11,
+          "versionBefore": 57,
+          "versionAfter": 58,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 17,
+          "humanCommands": 18,
+          "turn": 11,
+          "versionBefore": 58,
+          "versionAfter": 59,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 18,
+          "humanCommands": 19,
+          "turn": 11,
+          "versionBefore": 59,
+          "versionAfter": 60,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 6,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 19,
+          "humanCommands": 20,
+          "turn": 11,
+          "versionBefore": 60,
+          "versionAfter": 70,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 20,
+          "humanCommands": 21,
+          "turn": 13,
+          "versionBefore": 70,
+          "versionAfter": 71,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 10,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 21,
+          "humanCommands": 22,
+          "turn": 13,
+          "versionBefore": 71,
+          "versionAfter": 72,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 22,
+          "humanCommands": 23,
+          "turn": 13,
+          "versionBefore": 72,
+          "versionAfter": 73,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 23,
+          "humanCommands": 24,
+          "turn": 13,
+          "versionBefore": 73,
+          "versionAfter": 74,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 7,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 24,
+          "humanCommands": 25,
+          "turn": 13,
+          "versionBefore": 74,
+          "versionAfter": 75,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 25,
+          "humanCommands": 26,
+          "turn": 13,
+          "versionBefore": 75,
+          "versionAfter": 76,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 26,
+          "humanCommands": 27,
+          "turn": 13,
+          "versionBefore": 76,
+          "versionAfter": 77,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 7,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 27,
+          "humanCommands": 28,
+          "turn": 13,
+          "versionBefore": 77,
+          "versionAfter": 78,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 4,
+              "y": 1
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 28,
+          "humanCommands": 29,
+          "turn": 13,
+          "versionBefore": 78,
+          "versionAfter": 91,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 29,
+          "humanCommands": 30,
+          "turn": 15,
+          "versionBefore": 91,
+          "versionAfter": 92,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "scout"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 30,
+          "humanCommands": 31,
+          "turn": 15,
+          "versionBefore": 92,
+          "versionAfter": 93,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 11,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 31,
+          "humanCommands": 32,
+          "turn": 15,
+          "versionBefore": 93,
+          "versionAfter": 94,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 2,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 32,
+          "humanCommands": 33,
+          "turn": 15,
+          "versionBefore": 94,
+          "versionAfter": 95,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 1,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 33,
+          "humanCommands": 34,
+          "turn": 15,
+          "versionBefore": 95,
+          "versionAfter": 96,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 7,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 34,
+          "humanCommands": 35,
+          "turn": 15,
+          "versionBefore": 96,
+          "versionAfter": 97,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 7,
+              "y": 1
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 35,
+          "humanCommands": 36,
+          "turn": 15,
+          "versionBefore": 97,
+          "versionAfter": 98,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 9,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 36,
+          "humanCommands": 37,
+          "turn": 15,
+          "versionBefore": 98,
+          "versionAfter": 99,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 37,
+          "humanCommands": 38,
+          "turn": 15,
+          "versionBefore": 99,
+          "versionAfter": 100,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 38,
+          "humanCommands": 39,
+          "turn": 15,
+          "versionBefore": 100,
+          "versionAfter": 101,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 4,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 39,
+          "humanCommands": 40,
+          "turn": 15,
+          "versionBefore": 101,
+          "versionAfter": 114,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 40,
+          "humanCommands": 41,
+          "turn": 17,
+          "versionBefore": 114,
+          "versionAfter": 115,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 13,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 41,
+          "humanCommands": 42,
+          "turn": 17,
+          "versionBefore": 115,
+          "versionAfter": 116,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 2,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 42,
+          "humanCommands": 43,
+          "turn": 17,
+          "versionBefore": 116,
+          "versionAfter": 117,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 43,
+          "humanCommands": 44,
+          "turn": 17,
+          "versionBefore": 117,
+          "versionAfter": 118,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 7,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 44,
+          "humanCommands": 45,
+          "turn": 17,
+          "versionBefore": 118,
+          "versionAfter": 119,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 45,
+          "humanCommands": 46,
+          "turn": 17,
+          "versionBefore": 119,
+          "versionAfter": 120,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 46,
+          "humanCommands": 47,
+          "turn": 17,
+          "versionBefore": 120,
+          "versionAfter": 121,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 0,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 47,
+          "humanCommands": 48,
+          "turn": 17,
+          "versionBefore": 121,
+          "versionAfter": 122,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 9,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 48,
+          "humanCommands": 49,
+          "turn": 17,
+          "versionBefore": 122,
+          "versionAfter": 123,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 49,
+          "humanCommands": 50,
+          "turn": 17,
+          "versionBefore": 123,
+          "versionAfter": 124,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 7,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 50,
+          "humanCommands": 51,
+          "turn": 17,
+          "versionBefore": 124,
+          "versionAfter": 125,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 5,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 51,
+          "humanCommands": 52,
+          "turn": 17,
+          "versionBefore": 125,
+          "versionAfter": 139,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 52,
+          "humanCommands": 53,
+          "turn": 19,
+          "versionBefore": 139,
+          "versionAfter": 140,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 53,
+          "humanCommands": 54,
+          "turn": 19,
+          "versionBefore": 140,
+          "versionAfter": 141,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 15,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 54,
+          "humanCommands": 55,
+          "turn": 19,
+          "versionBefore": 141,
+          "versionAfter": 142,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 7,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 55,
+          "humanCommands": 56,
+          "turn": 19,
+          "versionBefore": 142,
+          "versionAfter": 143,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 56,
+          "humanCommands": 57,
+          "turn": 19,
+          "versionBefore": 143,
+          "versionAfter": 144,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 57,
+          "humanCommands": 58,
+          "turn": 19,
+          "versionBefore": 144,
+          "versionAfter": 145,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 9,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 58,
+          "humanCommands": 59,
+          "turn": 19,
+          "versionBefore": 145,
+          "versionAfter": 146,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 59,
+          "humanCommands": 60,
+          "turn": 19,
+          "versionBefore": 146,
+          "versionAfter": 147,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 4,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 60,
+          "humanCommands": 61,
+          "turn": 19,
+          "versionBefore": 147,
+          "versionAfter": 148,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 61,
+          "humanCommands": 62,
+          "turn": 19,
+          "versionBefore": 148,
+          "versionAfter": 149,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 7,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 62,
+          "humanCommands": 63,
+          "turn": 19,
+          "versionBefore": 149,
+          "versionAfter": 150,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 6,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 63,
+          "humanCommands": 64,
+          "turn": 19,
+          "versionBefore": 150,
+          "versionAfter": 151,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 1,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 64,
+          "humanCommands": 65,
+          "turn": 19,
+          "versionBefore": 151,
+          "versionAfter": 152,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 2,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 65,
+          "humanCommands": 66,
+          "turn": 19,
+          "versionBefore": 152,
+          "versionAfter": 167,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 66,
+          "humanCommands": 67,
+          "turn": 21,
+          "versionBefore": 167,
+          "versionAfter": 168,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 17,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 67,
+          "humanCommands": 68,
+          "turn": 21,
+          "versionBefore": 168,
+          "versionAfter": 169,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 68,
+          "humanCommands": 69,
+          "turn": 21,
+          "versionBefore": 169,
+          "versionAfter": 170,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 3,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 69,
+          "humanCommands": 70,
+          "turn": 21,
+          "versionBefore": 170,
+          "versionAfter": 171,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 9,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 70,
+          "humanCommands": 71,
+          "turn": 21,
+          "versionBefore": 171,
+          "versionAfter": 172,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 71,
+          "humanCommands": 72,
+          "turn": 21,
+          "versionBefore": 172,
+          "versionAfter": 173,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 72,
+          "humanCommands": 73,
+          "turn": 21,
+          "versionBefore": 173,
+          "versionAfter": 174,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 73,
+          "humanCommands": 74,
+          "turn": 21,
+          "versionBefore": 174,
+          "versionAfter": 175,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 74,
+          "humanCommands": 75,
+          "turn": 21,
+          "versionBefore": 175,
+          "versionAfter": 176,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 75,
+          "humanCommands": 76,
+          "turn": 21,
+          "versionBefore": 176,
+          "versionAfter": 177,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 3,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 76,
+          "humanCommands": 77,
+          "turn": 21,
+          "versionBefore": 177,
+          "versionAfter": 178,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 8,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 77,
+          "humanCommands": 78,
+          "turn": 21,
+          "versionBefore": 178,
+          "versionAfter": 179,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 7,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 78,
+          "humanCommands": 79,
+          "turn": 21,
+          "versionBefore": 179,
+          "versionAfter": 180,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 5,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 79,
+          "humanCommands": 80,
+          "turn": 21,
+          "versionBefore": 180,
+          "versionAfter": 181,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 2,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 80,
+          "humanCommands": 81,
+          "turn": 21,
+          "versionBefore": 181,
+          "versionAfter": 197,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 81,
+          "humanCommands": 82,
+          "turn": 23,
+          "versionBefore": 197,
+          "versionAfter": 198,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 82,
+          "humanCommands": 83,
+          "turn": 23,
+          "versionBefore": 198,
+          "versionAfter": 199,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 19,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 83,
+          "humanCommands": 84,
+          "turn": 23,
+          "versionBefore": 199,
+          "versionAfter": 200,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 2,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 84,
+          "humanCommands": 85,
+          "turn": 23,
+          "versionBefore": 200,
+          "versionAfter": 201,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 85,
+          "humanCommands": 87,
+          "turn": 23,
+          "versionBefore": 201,
+          "versionAfter": 203,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 10,
+              "y": 7
+            }
+          },
+          "relicChoice": "intel"
+        },
+        {
+          "step": 86,
+          "humanCommands": 88,
+          "turn": 23,
+          "versionBefore": 203,
+          "versionAfter": 204,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 87,
+          "humanCommands": 89,
+          "turn": 23,
+          "versionBefore": 204,
+          "versionAfter": 205,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 88,
+          "humanCommands": 90,
+          "turn": 23,
+          "versionBefore": 205,
+          "versionAfter": 206,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 89,
+          "humanCommands": 91,
+          "turn": 23,
+          "versionBefore": 206,
+          "versionAfter": 207,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 90,
+          "humanCommands": 92,
+          "turn": 23,
+          "versionBefore": 207,
+          "versionAfter": 208,
+          "action": {
+            "type": "Recruit",
+            "siteId": "村莊-0",
+            "kind": "infantry"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 91,
+          "humanCommands": 93,
+          "turn": 23,
+          "versionBefore": 208,
+          "versionAfter": 209,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 92,
+          "humanCommands": 94,
+          "turn": 23,
+          "versionBefore": 209,
+          "versionAfter": 210,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 9,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 93,
+          "humanCommands": 95,
+          "turn": 23,
+          "versionBefore": 210,
+          "versionAfter": 211,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 94,
+          "humanCommands": 96,
+          "turn": 23,
+          "versionBefore": 211,
+          "versionAfter": 212,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 2,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 95,
+          "humanCommands": 97,
+          "turn": 23,
+          "versionBefore": 212,
+          "versionAfter": 213,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 96,
+          "humanCommands": 98,
+          "turn": 23,
+          "versionBefore": 213,
+          "versionAfter": 214,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 97,
+          "humanCommands": 99,
+          "turn": 23,
+          "versionBefore": 214,
+          "versionAfter": 231,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 98,
+          "humanCommands": 100,
+          "turn": 25,
+          "versionBefore": 231,
+          "versionAfter": 232,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 20,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 99,
+          "humanCommands": 101,
+          "turn": 25,
+          "versionBefore": 232,
+          "versionAfter": 233,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 1,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 100,
+          "humanCommands": 102,
+          "turn": 25,
+          "versionBefore": 233,
+          "versionAfter": 234,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 3,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 101,
+          "humanCommands": 103,
+          "turn": 25,
+          "versionBefore": 234,
+          "versionAfter": 235,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 102,
+          "humanCommands": 104,
+          "turn": 25,
+          "versionBefore": 235,
+          "versionAfter": 236,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 10,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 103,
+          "humanCommands": 105,
+          "turn": 25,
+          "versionBefore": 236,
+          "versionAfter": 237,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 104,
+          "humanCommands": 106,
+          "turn": 25,
+          "versionBefore": 237,
+          "versionAfter": 238,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 105,
+          "humanCommands": 107,
+          "turn": 25,
+          "versionBefore": 238,
+          "versionAfter": 239,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 10,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 106,
+          "humanCommands": 108,
+          "turn": 25,
+          "versionBefore": 239,
+          "versionAfter": 240,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 107,
+          "humanCommands": 109,
+          "turn": 25,
+          "versionBefore": 240,
+          "versionAfter": 241,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 7,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 108,
+          "humanCommands": 110,
+          "turn": 25,
+          "versionBefore": 241,
+          "versionAfter": 242,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 109,
+          "humanCommands": 111,
+          "turn": 25,
+          "versionBefore": 242,
+          "versionAfter": 243,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 3,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 110,
+          "humanCommands": 112,
+          "turn": 25,
+          "versionBefore": 243,
+          "versionAfter": 244,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 111,
+          "humanCommands": 113,
+          "turn": 25,
+          "versionBefore": 244,
+          "versionAfter": 245,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 112,
+          "humanCommands": 114,
+          "turn": 25,
+          "versionBefore": 245,
+          "versionAfter": 246,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 6,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 113,
+          "humanCommands": 115,
+          "turn": 25,
+          "versionBefore": 246,
+          "versionAfter": 247,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 4,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 114,
+          "humanCommands": 116,
+          "turn": 25,
+          "versionBefore": 247,
+          "versionAfter": 265,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 115,
+          "humanCommands": 117,
+          "turn": 27,
+          "versionBefore": 265,
+          "versionAfter": 266,
+          "action": {
+            "type": "Research",
+            "tech": "pathfinding"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 116,
+          "humanCommands": 118,
+          "turn": 27,
+          "versionBefore": 266,
+          "versionAfter": 267,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 21,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 117,
+          "humanCommands": 119,
+          "turn": 27,
+          "versionBefore": 267,
+          "versionAfter": 268,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 0,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 118,
+          "humanCommands": 120,
+          "turn": 27,
+          "versionBefore": 268,
+          "versionAfter": 269,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 119,
+          "humanCommands": 121,
+          "turn": 27,
+          "versionBefore": 269,
+          "versionAfter": 270,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 11,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 120,
+          "humanCommands": 122,
+          "turn": 27,
+          "versionBefore": 270,
+          "versionAfter": 271,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 121,
+          "humanCommands": 123,
+          "turn": 27,
+          "versionBefore": 271,
+          "versionAfter": 272,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 11
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 122,
+          "humanCommands": 124,
+          "turn": 27,
+          "versionBefore": 272,
+          "versionAfter": 273,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 4,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 123,
+          "humanCommands": 125,
+          "turn": 27,
+          "versionBefore": 273,
+          "versionAfter": 274,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 11,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 124,
+          "humanCommands": 126,
+          "turn": 27,
+          "versionBefore": 274,
+          "versionAfter": 275,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 125,
+          "humanCommands": 127,
+          "turn": 27,
+          "versionBefore": 275,
+          "versionAfter": 276,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 1,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 126,
+          "humanCommands": 128,
+          "turn": 27,
+          "versionBefore": 276,
+          "versionAfter": 277,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 7,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 127,
+          "humanCommands": 129,
+          "turn": 27,
+          "versionBefore": 277,
+          "versionAfter": 278,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 128,
+          "humanCommands": 130,
+          "turn": 27,
+          "versionBefore": 278,
+          "versionAfter": 279,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 2,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 129,
+          "humanCommands": 131,
+          "turn": 27,
+          "versionBefore": 279,
+          "versionAfter": 280,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 130,
+          "humanCommands": 132,
+          "turn": 27,
+          "versionBefore": 280,
+          "versionAfter": 281,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 131,
+          "humanCommands": 133,
+          "turn": 27,
+          "versionBefore": 281,
+          "versionAfter": 282,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 5,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 132,
+          "humanCommands": 134,
+          "turn": 27,
+          "versionBefore": 282,
+          "versionAfter": 302,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 133,
+          "humanCommands": 135,
+          "turn": 29,
+          "versionBefore": 302,
+          "versionAfter": 303,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 21,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 134,
+          "humanCommands": 136,
+          "turn": 29,
+          "versionBefore": 303,
+          "versionAfter": 304,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 0,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 135,
+          "humanCommands": 137,
+          "turn": 29,
+          "versionBefore": 304,
+          "versionAfter": 305,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 11
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 136,
+          "humanCommands": 138,
+          "turn": 29,
+          "versionBefore": 305,
+          "versionAfter": 306,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 12,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 137,
+          "humanCommands": 139,
+          "turn": 29,
+          "versionBefore": 306,
+          "versionAfter": 307,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 11
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 138,
+          "humanCommands": 140,
+          "turn": 29,
+          "versionBefore": 307,
+          "versionAfter": 308,
+          "action": {
+            "type": "Research",
+            "tech": "archery"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 139,
+          "humanCommands": 141,
+          "turn": 29,
+          "versionBefore": 308,
+          "versionAfter": 309,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 4,
+              "y": 11
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 140,
+          "humanCommands": 142,
+          "turn": 29,
+          "versionBefore": 309,
+          "versionAfter": 310,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 12
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 141,
+          "humanCommands": 143,
+          "turn": 29,
+          "versionBefore": 310,
+          "versionAfter": 311,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 142,
+          "humanCommands": 144,
+          "turn": 29,
+          "versionBefore": 311,
+          "versionAfter": 312,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 143,
+          "humanCommands": 145,
+          "turn": 29,
+          "versionBefore": 312,
+          "versionAfter": 313,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 7,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 144,
+          "humanCommands": 146,
+          "turn": 29,
+          "versionBefore": 313,
+          "versionAfter": 314,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 145,
+          "humanCommands": 147,
+          "turn": 29,
+          "versionBefore": 314,
+          "versionAfter": 315,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 1,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 146,
+          "humanCommands": 148,
+          "turn": 29,
+          "versionBefore": 315,
+          "versionAfter": 316,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 3,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 147,
+          "humanCommands": 149,
+          "turn": 29,
+          "versionBefore": 316,
+          "versionAfter": 317,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 10,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 148,
+          "humanCommands": 150,
+          "turn": 29,
+          "versionBefore": 317,
+          "versionAfter": 318,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 6,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 149,
+          "humanCommands": 151,
+          "turn": 29,
+          "versionBefore": 318,
+          "versionAfter": 319,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 4,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 150,
+          "humanCommands": 152,
+          "turn": 29,
+          "versionBefore": 319,
+          "versionAfter": 339,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 151,
+          "humanCommands": 153,
+          "turn": 31,
+          "versionBefore": 339,
+          "versionAfter": 340,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-12",
+            "to": {
+              "x": 6,
+              "y": 12
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 152,
+          "humanCommands": 154,
+          "turn": 31,
+          "versionBefore": 340,
+          "versionAfter": 341,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-12",
+            "targetId": "兵-3"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 153,
+          "humanCommands": 155,
+          "turn": 31,
+          "versionBefore": 341,
+          "versionAfter": 342,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 20,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 154,
+          "humanCommands": 156,
+          "turn": 31,
+          "versionBefore": 342,
+          "versionAfter": 343,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 4,
+              "y": 12
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 155,
+          "humanCommands": 157,
+          "turn": 31,
+          "versionBefore": 343,
+          "versionAfter": 344,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 0,
+              "y": 12
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 156,
+          "humanCommands": 158,
+          "turn": 31,
+          "versionBefore": 344,
+          "versionAfter": 345,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-19",
+            "to": {
+              "x": 8,
+              "y": 12
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 157,
+          "humanCommands": 159,
+          "turn": 31,
+          "versionBefore": 345,
+          "versionAfter": 346,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-19",
+            "targetId": "兵-3"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 158,
+          "humanCommands": 160,
+          "turn": 31,
+          "versionBefore": 346,
+          "versionAfter": 347,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 13
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 159,
+          "humanCommands": 161,
+          "turn": 31,
+          "versionBefore": 347,
+          "versionAfter": 348,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 160,
+          "humanCommands": 162,
+          "turn": 31,
+          "versionBefore": 348,
+          "versionAfter": 349,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 6,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 161,
+          "humanCommands": 163,
+          "turn": 31,
+          "versionBefore": 349,
+          "versionAfter": 350,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 162,
+          "humanCommands": 164,
+          "turn": 31,
+          "versionBefore": 350,
+          "versionAfter": 351,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 2,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 163,
+          "humanCommands": 165,
+          "turn": 31,
+          "versionBefore": 351,
+          "versionAfter": 352,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 3,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 164,
+          "humanCommands": 166,
+          "turn": 31,
+          "versionBefore": 352,
+          "versionAfter": 353,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 7,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 165,
+          "humanCommands": 167,
+          "turn": 31,
+          "versionBefore": 353,
+          "versionAfter": 354,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 12,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 166,
+          "humanCommands": 168,
+          "turn": 31,
+          "versionBefore": 354,
+          "versionAfter": 355,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 9,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 167,
+          "humanCommands": 169,
+          "turn": 31,
+          "versionBefore": 355,
+          "versionAfter": 356,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 7,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 168,
+          "humanCommands": 170,
+          "turn": 31,
+          "versionBefore": 356,
+          "versionAfter": 357,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 169,
+          "humanCommands": 171,
+          "turn": 31,
+          "versionBefore": 357,
+          "versionAfter": 378,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 170,
+          "humanCommands": 172,
+          "turn": 33,
+          "versionBefore": 378,
+          "versionAfter": 379,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-19",
+            "targetId": "兵-3"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 171,
+          "humanCommands": 173,
+          "turn": 33,
+          "versionBefore": 379,
+          "versionAfter": 380,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-12",
+            "targetId": "兵-33"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 172,
+          "humanCommands": 174,
+          "turn": 33,
+          "versionBefore": 380,
+          "versionAfter": 381,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 4,
+              "y": 13
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 173,
+          "humanCommands": 175,
+          "turn": 33,
+          "versionBefore": 381,
+          "versionAfter": 382,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 20,
+              "y": 8
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 174,
+          "humanCommands": 176,
+          "turn": 33,
+          "versionBefore": 382,
+          "versionAfter": 383,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 0,
+              "y": 14
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 175,
+          "humanCommands": 177,
+          "turn": 33,
+          "versionBefore": 383,
+          "versionAfter": 384,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 7,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 176,
+          "humanCommands": 178,
+          "turn": 33,
+          "versionBefore": 384,
+          "versionAfter": 385,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 177,
+          "humanCommands": 179,
+          "turn": 33,
+          "versionBefore": 385,
+          "versionAfter": 386,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 6,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 178,
+          "humanCommands": 180,
+          "turn": 33,
+          "versionBefore": 386,
+          "versionAfter": 387,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 1,
+              "y": 14
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 179,
+          "humanCommands": 181,
+          "turn": 33,
+          "versionBefore": 387,
+          "versionAfter": 388,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-15",
+            "to": {
+              "x": 12,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 180,
+          "humanCommands": 182,
+          "turn": 33,
+          "versionBefore": 388,
+          "versionAfter": 389,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 3,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 181,
+          "humanCommands": 183,
+          "turn": 33,
+          "versionBefore": 389,
+          "versionAfter": 390,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 182,
+          "humanCommands": 184,
+          "turn": 33,
+          "versionBefore": 390,
+          "versionAfter": 391,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 9,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 183,
+          "humanCommands": 185,
+          "turn": 33,
+          "versionBefore": 391,
+          "versionAfter": 392,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 2,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 184,
+          "humanCommands": 186,
+          "turn": 33,
+          "versionBefore": 392,
+          "versionAfter": 393,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 7,
+              "y": 3
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 185,
+          "humanCommands": 187,
+          "turn": 33,
+          "versionBefore": 393,
+          "versionAfter": 394,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 4,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 186,
+          "humanCommands": 188,
+          "turn": 33,
+          "versionBefore": 394,
+          "versionAfter": 418,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 187,
+          "humanCommands": 189,
+          "turn": 35,
+          "versionBefore": 418,
+          "versionAfter": 419,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-12",
+            "targetId": "兵-33"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 188,
+          "humanCommands": 190,
+          "turn": 35,
+          "versionBefore": 419,
+          "versionAfter": 420,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-15",
+            "targetId": "兵-2"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 189,
+          "humanCommands": 191,
+          "turn": 35,
+          "versionBefore": 420,
+          "versionAfter": 421,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-19",
+            "targetId": "兵-9"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 190,
+          "humanCommands": 192,
+          "turn": 35,
+          "versionBefore": 421,
+          "versionAfter": 422,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-13",
+            "to": {
+              "x": 5,
+              "y": 13
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 191,
+          "humanCommands": 193,
+          "turn": 35,
+          "versionBefore": 422,
+          "versionAfter": 423,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-13",
+            "targetId": "兵-33"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 192,
+          "humanCommands": 194,
+          "turn": 35,
+          "versionBefore": 423,
+          "versionAfter": 424,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-23",
+            "to": {
+              "x": 9,
+              "y": 11
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 193,
+          "humanCommands": 195,
+          "turn": 35,
+          "versionBefore": 424,
+          "versionAfter": 425,
+          "action": {
+            "type": "Attack",
+            "unitId": "兵-23",
+            "targetId": "兵-9"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 194,
+          "humanCommands": 196,
+          "turn": 35,
+          "versionBefore": 425,
+          "versionAfter": 426,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 19,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 195,
+          "humanCommands": 197,
+          "turn": 35,
+          "versionBefore": 426,
+          "versionAfter": 427,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-18",
+            "to": {
+              "x": 0,
+              "y": 16
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 196,
+          "humanCommands": 198,
+          "turn": 35,
+          "versionBefore": 427,
+          "versionAfter": 428,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-26",
+            "to": {
+              "x": 8,
+              "y": 9
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 197,
+          "humanCommands": 199,
+          "turn": 35,
+          "versionBefore": 428,
+          "versionAfter": 429,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-8",
+            "to": {
+              "x": 2,
+              "y": 14
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 198,
+          "humanCommands": 200,
+          "turn": 35,
+          "versionBefore": 429,
+          "versionAfter": 430,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-29",
+            "to": {
+              "x": 7,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 199,
+          "humanCommands": 201,
+          "turn": 35,
+          "versionBefore": 430,
+          "versionAfter": 431,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-5",
+            "to": {
+              "x": 8,
+              "y": 6
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 200,
+          "humanCommands": 202,
+          "turn": 35,
+          "versionBefore": 431,
+          "versionAfter": 432,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 9,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 201,
+          "humanCommands": 203,
+          "turn": 35,
+          "versionBefore": 432,
+          "versionAfter": 433,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-24",
+            "to": {
+              "x": 3,
+              "y": 7
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 202,
+          "humanCommands": 204,
+          "turn": 35,
+          "versionBefore": 433,
+          "versionAfter": 434,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-21",
+            "to": {
+              "x": 7,
+              "y": 4
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 203,
+          "humanCommands": 205,
+          "turn": 35,
+          "versionBefore": 434,
+          "versionAfter": 435,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-28",
+            "to": {
+              "x": 1,
+              "y": 5
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 204,
+          "humanCommands": 206,
+          "turn": 35,
+          "versionBefore": 435,
+          "versionAfter": 436,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-10",
+            "to": {
+              "x": 5,
+              "y": 2
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 205,
+          "humanCommands": 207,
+          "turn": 35,
+          "versionBefore": 436,
+          "versionAfter": 459,
+          "action": {
+            "type": "EndTurn"
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 206,
+          "humanCommands": 208,
+          "turn": 37,
+          "versionBefore": 459,
+          "versionAfter": 460,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 18,
+              "y": 10
+            }
+          },
+          "relicChoice": null
+        },
+        {
+          "step": 207,
+          "humanCommands": 209,
+          "turn": 37,
+          "versionBefore": 460,
+          "versionAfter": 461,
+          "action": {
+            "type": "Capture",
+            "unitId": "兵-1"
+          },
+          "relicChoice": null
+        }
+      ],
+      "replayVerified": true,
+      "privateExportPersisted": false
+    },
+    {
+      "id": "keyboard-selection-navigation",
+      "status": "PASS"
+    },
+    {
+      "id": "mobile-map-selection-opens-inspection",
+      "status": "PASS",
+      "point": {
+        "x": 154.81999945640564,
+        "y": 440.3178128004074
+      },
+      "privateSaveUnchanged": true
+    },
+    {
+      "id": "手機直式",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "gestures": {
+        "input": "CDP Input.dispatchTouchEvent",
+        "anchor": {
+          "x": 187.5,
+          "y": 412.2578125,
+          "bounds": {
+            "x": 16,
+            "y": 235.5,
+            "width": 343,
+            "height": 373.515625
+          },
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "boundingCenterHit": {
+            "tag": "CANVAS",
+            "className": "world-canvas"
+          },
+          "allGesturePointsHitCanvas": true
+        },
+        "before": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 171.5,
+            "f": 78.39781069755554
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "panned": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 207.50000136175822,
+            "f": 98.39781072505684
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "pinched": {
+          "zoom": 1.5049999999999994,
+          "zoomY": 1.5049999999999994,
+          "transform": {
+            "a": 1.5049999952316284,
+            "d": 1.5049999952316284,
+            "e": 233.29260354491134,
+            "f": 39.62781559830091
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  150%"
+        },
+        "maxTouchPointers": 2,
+        "trustedTouchEvents": 22,
+        "privateSaveUnchanged": true
+      },
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 754,
+          "bottom": 800,
+          "viewport": 812
+        }
+      }
+    },
+    {
+      "id": "手機橫式",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "gestures": {
+        "input": "CDP Input.dispatchTouchEvent",
+        "anchor": {
+          "x": 247,
+          "y": 270.5,
+          "bounds": {
+            "x": 22,
+            "y": 186,
+            "width": 450,
+            "height": 500
+          },
+          "viewport": {
+            "width": 812,
+            "height": 375
+          },
+          "boundingCenterHit": null,
+          "allGesturePointsHitCanvas": true
+        },
+        "before": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 225,
+            "f": 141.63999819755554
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "panned": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 261.0000013617582,
+            "f": 161.63999822505684
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "pinched": {
+          "zoom": 1.5049999999999994,
+          "zoomY": 1.5049999999999994,
+          "transform": {
+            "a": 1.5049999952316284,
+            "d": 1.5049999952316284,
+            "e": 286.79260354491134,
+            "f": 219.4950014413314
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  150%"
+        },
+        "maxTouchPointers": 2,
+        "trustedTouchEvents": 20,
+        "privateSaveUnchanged": true
+      },
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 313,
+          "bottom": 361,
+          "viewport": 375
+        }
+      }
+    },
+    {
+      "id": "窄手機",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "status": "PASS",
+      "simulatedTouch": true,
+      "gestures": {
+        "input": "CDP Input.dispatchTouchEvent",
+        "anchor": {
+          "x": 160,
+          "y": 385.5,
+          "bounds": {
+            "x": 12,
+            "y": 225.5,
+            "width": 296,
+            "height": 340
+          },
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "boundingCenterHit": {
+            "tag": "CANVAS",
+            "className": "world-canvas"
+          },
+          "allGesturePointsHitCanvas": true
+        },
+        "before": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 148,
+            "f": 61.63999819755554
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "panned": {
+          "zoom": 0.86,
+          "zoomY": 0.86,
+          "transform": {
+            "a": 0.8600000143051147,
+            "d": 0.8600000143051147,
+            "e": 184.00000136175822,
+            "f": 81.63999822505684
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  86%"
+        },
+        "pinched": {
+          "zoom": 1.5049999999999994,
+          "zoomY": 1.5049999999999994,
+          "transform": {
+            "a": 1.5049999952316284,
+            "d": 1.5049999952316284,
+            "e": 209.79260354491134,
+            "f": 22.870003098300913
+          },
+          "label": "24 × 24  ·  等角沙盤  ·  150%"
+        },
+        "maxTouchPointers": 2,
+        "trustedTouchEvents": 20,
+        "privateSaveUnchanged": true
+      },
+      "layout": {
+        "overflow": false,
+        "badTargets": [],
+        "end": {
+          "top": 582,
+          "bottom": 628,
+          "viewport": 640
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "servedIndexSha256": "e56df62a422cee01affedf2f1512f2591f8054f419d6716bf0242a744fdd5393",
+  "gameplayTrace": [
+    {
+      "step": 0,
+      "humanCommands": 1,
+      "turn": 7,
+      "versionBefore": 26,
+      "versionAfter": 27,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 1,
+      "humanCommands": 2,
+      "turn": 7,
+      "versionBefore": 27,
+      "versionAfter": 28,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 2,
+      "humanCommands": 3,
+      "turn": 7,
+      "versionBefore": 28,
+      "versionAfter": 29,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 5,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 3,
+      "humanCommands": 4,
+      "turn": 7,
+      "versionBefore": 29,
+      "versionAfter": 30,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 4,
+      "humanCommands": 5,
+      "turn": 7,
+      "versionBefore": 30,
+      "versionAfter": 38,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 5,
+      "humanCommands": 6,
+      "turn": 9,
+      "versionBefore": 38,
+      "versionAfter": 39,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 8,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 6,
+      "humanCommands": 7,
+      "turn": 9,
+      "versionBefore": 39,
+      "versionAfter": 40,
+      "action": {
+        "type": "Capture",
+        "unitId": "兵-1"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 7,
+      "humanCommands": 8,
+      "turn": 9,
+      "versionBefore": 40,
+      "versionAfter": 41,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 8,
+      "humanCommands": 9,
+      "turn": 9,
+      "versionBefore": 41,
+      "versionAfter": 42,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 9,
+      "humanCommands": 10,
+      "turn": 9,
+      "versionBefore": 42,
+      "versionAfter": 43,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 10,
+      "humanCommands": 11,
+      "turn": 9,
+      "versionBefore": 43,
+      "versionAfter": 44,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 11,
+      "humanCommands": 12,
+      "turn": 9,
+      "versionBefore": 44,
+      "versionAfter": 53,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 12,
+      "humanCommands": 13,
+      "turn": 11,
+      "versionBefore": 53,
+      "versionAfter": 54,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 10,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 13,
+      "humanCommands": 14,
+      "turn": 11,
+      "versionBefore": 54,
+      "versionAfter": 55,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 14,
+      "humanCommands": 15,
+      "turn": 11,
+      "versionBefore": 55,
+      "versionAfter": 56,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 15,
+      "humanCommands": 16,
+      "turn": 11,
+      "versionBefore": 56,
+      "versionAfter": 57,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 16,
+      "humanCommands": 17,
+      "turn": 11,
+      "versionBefore": 57,
+      "versionAfter": 58,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 17,
+      "humanCommands": 18,
+      "turn": 11,
+      "versionBefore": 58,
+      "versionAfter": 59,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 18,
+      "humanCommands": 19,
+      "turn": 11,
+      "versionBefore": 59,
+      "versionAfter": 60,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 19,
+      "humanCommands": 20,
+      "turn": 11,
+      "versionBefore": 60,
+      "versionAfter": 70,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 20,
+      "humanCommands": 21,
+      "turn": 13,
+      "versionBefore": 70,
+      "versionAfter": 71,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 10,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 21,
+      "humanCommands": 22,
+      "turn": 13,
+      "versionBefore": 71,
+      "versionAfter": 72,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 22,
+      "humanCommands": 23,
+      "turn": 13,
+      "versionBefore": 72,
+      "versionAfter": 73,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 23,
+      "humanCommands": 24,
+      "turn": 13,
+      "versionBefore": 73,
+      "versionAfter": 74,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 24,
+      "humanCommands": 25,
+      "turn": 13,
+      "versionBefore": 74,
+      "versionAfter": 75,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 25,
+      "humanCommands": 26,
+      "turn": 13,
+      "versionBefore": 75,
+      "versionAfter": 76,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 26,
+      "humanCommands": 27,
+      "turn": 13,
+      "versionBefore": 76,
+      "versionAfter": 77,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 27,
+      "humanCommands": 28,
+      "turn": 13,
+      "versionBefore": 77,
+      "versionAfter": 78,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 28,
+      "humanCommands": 29,
+      "turn": 13,
+      "versionBefore": 78,
+      "versionAfter": 91,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 29,
+      "humanCommands": 30,
+      "turn": 15,
+      "versionBefore": 91,
+      "versionAfter": 92,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "scout"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 30,
+      "humanCommands": 31,
+      "turn": 15,
+      "versionBefore": 92,
+      "versionAfter": 93,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 11,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 31,
+      "humanCommands": 32,
+      "turn": 15,
+      "versionBefore": 93,
+      "versionAfter": 94,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 32,
+      "humanCommands": 33,
+      "turn": 15,
+      "versionBefore": 94,
+      "versionAfter": 95,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 33,
+      "humanCommands": 34,
+      "turn": 15,
+      "versionBefore": 95,
+      "versionAfter": 96,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 34,
+      "humanCommands": 35,
+      "turn": 15,
+      "versionBefore": 96,
+      "versionAfter": 97,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 7,
+          "y": 1
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 35,
+      "humanCommands": 36,
+      "turn": 15,
+      "versionBefore": 97,
+      "versionAfter": 98,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 36,
+      "humanCommands": 37,
+      "turn": 15,
+      "versionBefore": 98,
+      "versionAfter": 99,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 37,
+      "humanCommands": 38,
+      "turn": 15,
+      "versionBefore": 99,
+      "versionAfter": 100,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 38,
+      "humanCommands": 39,
+      "turn": 15,
+      "versionBefore": 100,
+      "versionAfter": 101,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 39,
+      "humanCommands": 40,
+      "turn": 15,
+      "versionBefore": 101,
+      "versionAfter": 114,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 40,
+      "humanCommands": 41,
+      "turn": 17,
+      "versionBefore": 114,
+      "versionAfter": 115,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 13,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 41,
+      "humanCommands": 42,
+      "turn": 17,
+      "versionBefore": 115,
+      "versionAfter": 116,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 42,
+      "humanCommands": 43,
+      "turn": 17,
+      "versionBefore": 116,
+      "versionAfter": 117,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 43,
+      "humanCommands": 44,
+      "turn": 17,
+      "versionBefore": 117,
+      "versionAfter": 118,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 44,
+      "humanCommands": 45,
+      "turn": 17,
+      "versionBefore": 118,
+      "versionAfter": 119,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 45,
+      "humanCommands": 46,
+      "turn": 17,
+      "versionBefore": 119,
+      "versionAfter": 120,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 46,
+      "humanCommands": 47,
+      "turn": 17,
+      "versionBefore": 120,
+      "versionAfter": 121,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 0,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 47,
+      "humanCommands": 48,
+      "turn": 17,
+      "versionBefore": 121,
+      "versionAfter": 122,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 9,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 48,
+      "humanCommands": 49,
+      "turn": 17,
+      "versionBefore": 122,
+      "versionAfter": 123,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 49,
+      "humanCommands": 50,
+      "turn": 17,
+      "versionBefore": 123,
+      "versionAfter": 124,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 50,
+      "humanCommands": 51,
+      "turn": 17,
+      "versionBefore": 124,
+      "versionAfter": 125,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 51,
+      "humanCommands": 52,
+      "turn": 17,
+      "versionBefore": 125,
+      "versionAfter": 139,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 52,
+      "humanCommands": 53,
+      "turn": 19,
+      "versionBefore": 139,
+      "versionAfter": 140,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 53,
+      "humanCommands": 54,
+      "turn": 19,
+      "versionBefore": 140,
+      "versionAfter": 141,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 15,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 54,
+      "humanCommands": 55,
+      "turn": 19,
+      "versionBefore": 141,
+      "versionAfter": 142,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 7,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 55,
+      "humanCommands": 56,
+      "turn": 19,
+      "versionBefore": 142,
+      "versionAfter": 143,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 56,
+      "humanCommands": 57,
+      "turn": 19,
+      "versionBefore": 143,
+      "versionAfter": 144,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 57,
+      "humanCommands": 58,
+      "turn": 19,
+      "versionBefore": 144,
+      "versionAfter": 145,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 58,
+      "humanCommands": 59,
+      "turn": 19,
+      "versionBefore": 145,
+      "versionAfter": 146,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 59,
+      "humanCommands": 60,
+      "turn": 19,
+      "versionBefore": 146,
+      "versionAfter": 147,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 60,
+      "humanCommands": 61,
+      "turn": 19,
+      "versionBefore": 147,
+      "versionAfter": 148,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 61,
+      "humanCommands": 62,
+      "turn": 19,
+      "versionBefore": 148,
+      "versionAfter": 149,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 62,
+      "humanCommands": 63,
+      "turn": 19,
+      "versionBefore": 149,
+      "versionAfter": 150,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 63,
+      "humanCommands": 64,
+      "turn": 19,
+      "versionBefore": 150,
+      "versionAfter": 151,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 64,
+      "humanCommands": 65,
+      "turn": 19,
+      "versionBefore": 151,
+      "versionAfter": 152,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 65,
+      "humanCommands": 66,
+      "turn": 19,
+      "versionBefore": 152,
+      "versionAfter": 167,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 66,
+      "humanCommands": 67,
+      "turn": 21,
+      "versionBefore": 167,
+      "versionAfter": 168,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 17,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 67,
+      "humanCommands": 68,
+      "turn": 21,
+      "versionBefore": 168,
+      "versionAfter": 169,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 68,
+      "humanCommands": 69,
+      "turn": 21,
+      "versionBefore": 169,
+      "versionAfter": 170,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 69,
+      "humanCommands": 70,
+      "turn": 21,
+      "versionBefore": 170,
+      "versionAfter": 171,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 9,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 70,
+      "humanCommands": 71,
+      "turn": 21,
+      "versionBefore": 171,
+      "versionAfter": 172,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 71,
+      "humanCommands": 72,
+      "turn": 21,
+      "versionBefore": 172,
+      "versionAfter": 173,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 72,
+      "humanCommands": 73,
+      "turn": 21,
+      "versionBefore": 173,
+      "versionAfter": 174,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 73,
+      "humanCommands": 74,
+      "turn": 21,
+      "versionBefore": 174,
+      "versionAfter": 175,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 74,
+      "humanCommands": 75,
+      "turn": 21,
+      "versionBefore": 175,
+      "versionAfter": 176,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 75,
+      "humanCommands": 76,
+      "turn": 21,
+      "versionBefore": 176,
+      "versionAfter": 177,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 76,
+      "humanCommands": 77,
+      "turn": 21,
+      "versionBefore": 177,
+      "versionAfter": 178,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 77,
+      "humanCommands": 78,
+      "turn": 21,
+      "versionBefore": 178,
+      "versionAfter": 179,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 78,
+      "humanCommands": 79,
+      "turn": 21,
+      "versionBefore": 179,
+      "versionAfter": 180,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 5,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 79,
+      "humanCommands": 80,
+      "turn": 21,
+      "versionBefore": 180,
+      "versionAfter": 181,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 80,
+      "humanCommands": 81,
+      "turn": 21,
+      "versionBefore": 181,
+      "versionAfter": 197,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 81,
+      "humanCommands": 82,
+      "turn": 23,
+      "versionBefore": 197,
+      "versionAfter": 198,
+      "action": {
+        "type": "Recruit",
+        "siteId": "首都-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 82,
+      "humanCommands": 83,
+      "turn": 23,
+      "versionBefore": 198,
+      "versionAfter": 199,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 19,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 83,
+      "humanCommands": 84,
+      "turn": 23,
+      "versionBefore": 199,
+      "versionAfter": 200,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 84,
+      "humanCommands": 85,
+      "turn": 23,
+      "versionBefore": 200,
+      "versionAfter": 201,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 85,
+      "humanCommands": 87,
+      "turn": 23,
+      "versionBefore": 201,
+      "versionAfter": 203,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 10,
+          "y": 7
+        }
+      },
+      "relicChoice": "intel"
+    },
+    {
+      "step": 86,
+      "humanCommands": 88,
+      "turn": 23,
+      "versionBefore": 203,
+      "versionAfter": 204,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 87,
+      "humanCommands": 89,
+      "turn": 23,
+      "versionBefore": 204,
+      "versionAfter": 205,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 88,
+      "humanCommands": 90,
+      "turn": 23,
+      "versionBefore": 205,
+      "versionAfter": 206,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 89,
+      "humanCommands": 91,
+      "turn": 23,
+      "versionBefore": 206,
+      "versionAfter": 207,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 90,
+      "humanCommands": 92,
+      "turn": 23,
+      "versionBefore": 207,
+      "versionAfter": 208,
+      "action": {
+        "type": "Recruit",
+        "siteId": "村莊-0",
+        "kind": "infantry"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 91,
+      "humanCommands": 93,
+      "turn": 23,
+      "versionBefore": 208,
+      "versionAfter": 209,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 92,
+      "humanCommands": 94,
+      "turn": 23,
+      "versionBefore": 209,
+      "versionAfter": 210,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 9,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 93,
+      "humanCommands": 95,
+      "turn": 23,
+      "versionBefore": 210,
+      "versionAfter": 211,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 94,
+      "humanCommands": 96,
+      "turn": 23,
+      "versionBefore": 211,
+      "versionAfter": 212,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 95,
+      "humanCommands": 97,
+      "turn": 23,
+      "versionBefore": 212,
+      "versionAfter": 213,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 96,
+      "humanCommands": 98,
+      "turn": 23,
+      "versionBefore": 213,
+      "versionAfter": 214,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 97,
+      "humanCommands": 99,
+      "turn": 23,
+      "versionBefore": 214,
+      "versionAfter": 231,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 98,
+      "humanCommands": 100,
+      "turn": 25,
+      "versionBefore": 231,
+      "versionAfter": 232,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 20,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 99,
+      "humanCommands": 101,
+      "turn": 25,
+      "versionBefore": 232,
+      "versionAfter": 233,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 100,
+      "humanCommands": 102,
+      "turn": 25,
+      "versionBefore": 233,
+      "versionAfter": 234,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 101,
+      "humanCommands": 103,
+      "turn": 25,
+      "versionBefore": 234,
+      "versionAfter": 235,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 102,
+      "humanCommands": 104,
+      "turn": 25,
+      "versionBefore": 235,
+      "versionAfter": 236,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 10,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 103,
+      "humanCommands": 105,
+      "turn": 25,
+      "versionBefore": 236,
+      "versionAfter": 237,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 104,
+      "humanCommands": 106,
+      "turn": 25,
+      "versionBefore": 237,
+      "versionAfter": 238,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 105,
+      "humanCommands": 107,
+      "turn": 25,
+      "versionBefore": 238,
+      "versionAfter": 239,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 10,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 106,
+      "humanCommands": 108,
+      "turn": 25,
+      "versionBefore": 239,
+      "versionAfter": 240,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 107,
+      "humanCommands": 109,
+      "turn": 25,
+      "versionBefore": 240,
+      "versionAfter": 241,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 108,
+      "humanCommands": 110,
+      "turn": 25,
+      "versionBefore": 241,
+      "versionAfter": 242,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 109,
+      "humanCommands": 111,
+      "turn": 25,
+      "versionBefore": 242,
+      "versionAfter": 243,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 110,
+      "humanCommands": 112,
+      "turn": 25,
+      "versionBefore": 243,
+      "versionAfter": 244,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 111,
+      "humanCommands": 113,
+      "turn": 25,
+      "versionBefore": 244,
+      "versionAfter": 245,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 112,
+      "humanCommands": 114,
+      "turn": 25,
+      "versionBefore": 245,
+      "versionAfter": 246,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 113,
+      "humanCommands": 115,
+      "turn": 25,
+      "versionBefore": 246,
+      "versionAfter": 247,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 114,
+      "humanCommands": 116,
+      "turn": 25,
+      "versionBefore": 247,
+      "versionAfter": 265,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 115,
+      "humanCommands": 117,
+      "turn": 27,
+      "versionBefore": 265,
+      "versionAfter": 266,
+      "action": {
+        "type": "Research",
+        "tech": "pathfinding"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 116,
+      "humanCommands": 118,
+      "turn": 27,
+      "versionBefore": 266,
+      "versionAfter": 267,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 21,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 117,
+      "humanCommands": 119,
+      "turn": 27,
+      "versionBefore": 267,
+      "versionAfter": 268,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 0,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 118,
+      "humanCommands": 120,
+      "turn": 27,
+      "versionBefore": 268,
+      "versionAfter": 269,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 119,
+      "humanCommands": 121,
+      "turn": 27,
+      "versionBefore": 269,
+      "versionAfter": 270,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 11,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 120,
+      "humanCommands": 122,
+      "turn": 27,
+      "versionBefore": 270,
+      "versionAfter": 271,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 121,
+      "humanCommands": 123,
+      "turn": 27,
+      "versionBefore": 271,
+      "versionAfter": 272,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 11
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 122,
+      "humanCommands": 124,
+      "turn": 27,
+      "versionBefore": 272,
+      "versionAfter": 273,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 123,
+      "humanCommands": 125,
+      "turn": 27,
+      "versionBefore": 273,
+      "versionAfter": 274,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 11,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 124,
+      "humanCommands": 126,
+      "turn": 27,
+      "versionBefore": 274,
+      "versionAfter": 275,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 125,
+      "humanCommands": 127,
+      "turn": 27,
+      "versionBefore": 275,
+      "versionAfter": 276,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 1,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 126,
+      "humanCommands": 128,
+      "turn": 27,
+      "versionBefore": 276,
+      "versionAfter": 277,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 127,
+      "humanCommands": 129,
+      "turn": 27,
+      "versionBefore": 277,
+      "versionAfter": 278,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 128,
+      "humanCommands": 130,
+      "turn": 27,
+      "versionBefore": 278,
+      "versionAfter": 279,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 129,
+      "humanCommands": 131,
+      "turn": 27,
+      "versionBefore": 279,
+      "versionAfter": 280,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 130,
+      "humanCommands": 132,
+      "turn": 27,
+      "versionBefore": 280,
+      "versionAfter": 281,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 131,
+      "humanCommands": 133,
+      "turn": 27,
+      "versionBefore": 281,
+      "versionAfter": 282,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 132,
+      "humanCommands": 134,
+      "turn": 27,
+      "versionBefore": 282,
+      "versionAfter": 302,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 133,
+      "humanCommands": 135,
+      "turn": 29,
+      "versionBefore": 302,
+      "versionAfter": 303,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 21,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 134,
+      "humanCommands": 136,
+      "turn": 29,
+      "versionBefore": 303,
+      "versionAfter": 304,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 0,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 135,
+      "humanCommands": 137,
+      "turn": 29,
+      "versionBefore": 304,
+      "versionAfter": 305,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 11
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 136,
+      "humanCommands": 138,
+      "turn": 29,
+      "versionBefore": 305,
+      "versionAfter": 306,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 12,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 137,
+      "humanCommands": 139,
+      "turn": 29,
+      "versionBefore": 306,
+      "versionAfter": 307,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 11
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 138,
+      "humanCommands": 140,
+      "turn": 29,
+      "versionBefore": 307,
+      "versionAfter": 308,
+      "action": {
+        "type": "Research",
+        "tech": "archery"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 139,
+      "humanCommands": 141,
+      "turn": 29,
+      "versionBefore": 308,
+      "versionAfter": 309,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 4,
+          "y": 11
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 140,
+      "humanCommands": 142,
+      "turn": 29,
+      "versionBefore": 309,
+      "versionAfter": 310,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 12
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 141,
+      "humanCommands": 143,
+      "turn": 29,
+      "versionBefore": 310,
+      "versionAfter": 311,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 142,
+      "humanCommands": 144,
+      "turn": 29,
+      "versionBefore": 311,
+      "versionAfter": 312,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 143,
+      "humanCommands": 145,
+      "turn": 29,
+      "versionBefore": 312,
+      "versionAfter": 313,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 144,
+      "humanCommands": 146,
+      "turn": 29,
+      "versionBefore": 313,
+      "versionAfter": 314,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 145,
+      "humanCommands": 147,
+      "turn": 29,
+      "versionBefore": 314,
+      "versionAfter": 315,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 146,
+      "humanCommands": 148,
+      "turn": 29,
+      "versionBefore": 315,
+      "versionAfter": 316,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 147,
+      "humanCommands": 149,
+      "turn": 29,
+      "versionBefore": 316,
+      "versionAfter": 317,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 10,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 148,
+      "humanCommands": 150,
+      "turn": 29,
+      "versionBefore": 317,
+      "versionAfter": 318,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 149,
+      "humanCommands": 151,
+      "turn": 29,
+      "versionBefore": 318,
+      "versionAfter": 319,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 150,
+      "humanCommands": 152,
+      "turn": 29,
+      "versionBefore": 319,
+      "versionAfter": 339,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 151,
+      "humanCommands": 153,
+      "turn": 31,
+      "versionBefore": 339,
+      "versionAfter": 340,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-12",
+        "to": {
+          "x": 6,
+          "y": 12
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 152,
+      "humanCommands": 154,
+      "turn": 31,
+      "versionBefore": 340,
+      "versionAfter": 341,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-12",
+        "targetId": "兵-3"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 153,
+      "humanCommands": 155,
+      "turn": 31,
+      "versionBefore": 341,
+      "versionAfter": 342,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 20,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 154,
+      "humanCommands": 156,
+      "turn": 31,
+      "versionBefore": 342,
+      "versionAfter": 343,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 4,
+          "y": 12
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 155,
+      "humanCommands": 157,
+      "turn": 31,
+      "versionBefore": 343,
+      "versionAfter": 344,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 0,
+          "y": 12
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 156,
+      "humanCommands": 158,
+      "turn": 31,
+      "versionBefore": 344,
+      "versionAfter": 345,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-19",
+        "to": {
+          "x": 8,
+          "y": 12
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 157,
+      "humanCommands": 159,
+      "turn": 31,
+      "versionBefore": 345,
+      "versionAfter": 346,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-19",
+        "targetId": "兵-3"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 158,
+      "humanCommands": 160,
+      "turn": 31,
+      "versionBefore": 346,
+      "versionAfter": 347,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 13
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 159,
+      "humanCommands": 161,
+      "turn": 31,
+      "versionBefore": 347,
+      "versionAfter": 348,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 160,
+      "humanCommands": 162,
+      "turn": 31,
+      "versionBefore": 348,
+      "versionAfter": 349,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 161,
+      "humanCommands": 163,
+      "turn": 31,
+      "versionBefore": 349,
+      "versionAfter": 350,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 162,
+      "humanCommands": 164,
+      "turn": 31,
+      "versionBefore": 350,
+      "versionAfter": 351,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 163,
+      "humanCommands": 165,
+      "turn": 31,
+      "versionBefore": 351,
+      "versionAfter": 352,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 164,
+      "humanCommands": 166,
+      "turn": 31,
+      "versionBefore": 352,
+      "versionAfter": 353,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 165,
+      "humanCommands": 167,
+      "turn": 31,
+      "versionBefore": 353,
+      "versionAfter": 354,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 12,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 166,
+      "humanCommands": 168,
+      "turn": 31,
+      "versionBefore": 354,
+      "versionAfter": 355,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 9,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 167,
+      "humanCommands": 169,
+      "turn": 31,
+      "versionBefore": 355,
+      "versionAfter": 356,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 168,
+      "humanCommands": 170,
+      "turn": 31,
+      "versionBefore": 356,
+      "versionAfter": 357,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 169,
+      "humanCommands": 171,
+      "turn": 31,
+      "versionBefore": 357,
+      "versionAfter": 378,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 170,
+      "humanCommands": 172,
+      "turn": 33,
+      "versionBefore": 378,
+      "versionAfter": 379,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-19",
+        "targetId": "兵-3"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 171,
+      "humanCommands": 173,
+      "turn": 33,
+      "versionBefore": 379,
+      "versionAfter": 380,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-12",
+        "targetId": "兵-33"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 172,
+      "humanCommands": 174,
+      "turn": 33,
+      "versionBefore": 380,
+      "versionAfter": 381,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 4,
+          "y": 13
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 173,
+      "humanCommands": 175,
+      "turn": 33,
+      "versionBefore": 381,
+      "versionAfter": 382,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 20,
+          "y": 8
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 174,
+      "humanCommands": 176,
+      "turn": 33,
+      "versionBefore": 382,
+      "versionAfter": 383,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 0,
+          "y": 14
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 175,
+      "humanCommands": 177,
+      "turn": 33,
+      "versionBefore": 383,
+      "versionAfter": 384,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 7,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 176,
+      "humanCommands": 178,
+      "turn": 33,
+      "versionBefore": 384,
+      "versionAfter": 385,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 177,
+      "humanCommands": 179,
+      "turn": 33,
+      "versionBefore": 385,
+      "versionAfter": 386,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 178,
+      "humanCommands": 180,
+      "turn": 33,
+      "versionBefore": 386,
+      "versionAfter": 387,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 1,
+          "y": 14
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 179,
+      "humanCommands": 181,
+      "turn": 33,
+      "versionBefore": 387,
+      "versionAfter": 388,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-15",
+        "to": {
+          "x": 12,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 180,
+      "humanCommands": 182,
+      "turn": 33,
+      "versionBefore": 388,
+      "versionAfter": 389,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 181,
+      "humanCommands": 183,
+      "turn": 33,
+      "versionBefore": 389,
+      "versionAfter": 390,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 182,
+      "humanCommands": 184,
+      "turn": 33,
+      "versionBefore": 390,
+      "versionAfter": 391,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 183,
+      "humanCommands": 185,
+      "turn": 33,
+      "versionBefore": 391,
+      "versionAfter": 392,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 184,
+      "humanCommands": 186,
+      "turn": 33,
+      "versionBefore": 392,
+      "versionAfter": 393,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 185,
+      "humanCommands": 187,
+      "turn": 33,
+      "versionBefore": 393,
+      "versionAfter": 394,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 186,
+      "humanCommands": 188,
+      "turn": 33,
+      "versionBefore": 394,
+      "versionAfter": 418,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 187,
+      "humanCommands": 189,
+      "turn": 35,
+      "versionBefore": 418,
+      "versionAfter": 419,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-12",
+        "targetId": "兵-33"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 188,
+      "humanCommands": 190,
+      "turn": 35,
+      "versionBefore": 419,
+      "versionAfter": 420,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-15",
+        "targetId": "兵-2"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 189,
+      "humanCommands": 191,
+      "turn": 35,
+      "versionBefore": 420,
+      "versionAfter": 421,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-19",
+        "targetId": "兵-9"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 190,
+      "humanCommands": 192,
+      "turn": 35,
+      "versionBefore": 421,
+      "versionAfter": 422,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-13",
+        "to": {
+          "x": 5,
+          "y": 13
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 191,
+      "humanCommands": 193,
+      "turn": 35,
+      "versionBefore": 422,
+      "versionAfter": 423,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-13",
+        "targetId": "兵-33"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 192,
+      "humanCommands": 194,
+      "turn": 35,
+      "versionBefore": 423,
+      "versionAfter": 424,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-23",
+        "to": {
+          "x": 9,
+          "y": 11
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 193,
+      "humanCommands": 195,
+      "turn": 35,
+      "versionBefore": 424,
+      "versionAfter": 425,
+      "action": {
+        "type": "Attack",
+        "unitId": "兵-23",
+        "targetId": "兵-9"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 194,
+      "humanCommands": 196,
+      "turn": 35,
+      "versionBefore": 425,
+      "versionAfter": 426,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 19,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 195,
+      "humanCommands": 197,
+      "turn": 35,
+      "versionBefore": 426,
+      "versionAfter": 427,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-18",
+        "to": {
+          "x": 0,
+          "y": 16
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 196,
+      "humanCommands": 198,
+      "turn": 35,
+      "versionBefore": 427,
+      "versionAfter": 428,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-26",
+        "to": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 197,
+      "humanCommands": 199,
+      "turn": 35,
+      "versionBefore": 428,
+      "versionAfter": 429,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-8",
+        "to": {
+          "x": 2,
+          "y": 14
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 198,
+      "humanCommands": 200,
+      "turn": 35,
+      "versionBefore": 429,
+      "versionAfter": 430,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-29",
+        "to": {
+          "x": 7,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 199,
+      "humanCommands": 201,
+      "turn": 35,
+      "versionBefore": 430,
+      "versionAfter": 431,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-5",
+        "to": {
+          "x": 8,
+          "y": 6
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 200,
+      "humanCommands": 202,
+      "turn": 35,
+      "versionBefore": 431,
+      "versionAfter": 432,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 9,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 201,
+      "humanCommands": 203,
+      "turn": 35,
+      "versionBefore": 432,
+      "versionAfter": 433,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-24",
+        "to": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 202,
+      "humanCommands": 204,
+      "turn": 35,
+      "versionBefore": 433,
+      "versionAfter": 434,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-21",
+        "to": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 203,
+      "humanCommands": 205,
+      "turn": 35,
+      "versionBefore": 434,
+      "versionAfter": 435,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-28",
+        "to": {
+          "x": 1,
+          "y": 5
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 204,
+      "humanCommands": 206,
+      "turn": 35,
+      "versionBefore": 435,
+      "versionAfter": 436,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-10",
+        "to": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 205,
+      "humanCommands": 207,
+      "turn": 35,
+      "versionBefore": 436,
+      "versionAfter": 459,
+      "action": {
+        "type": "EndTurn"
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 206,
+      "humanCommands": 208,
+      "turn": 37,
+      "versionBefore": 459,
+      "versionAfter": 460,
+      "action": {
+        "type": "Move",
+        "unitId": "兵-1",
+        "to": {
+          "x": 18,
+          "y": 10
+        }
+      },
+      "relicChoice": null
+    },
+    {
+      "step": 207,
+      "humanCommands": 209,
+      "turn": 37,
+      "versionBefore": 460,
+      "versionAfter": 461,
+      "action": {
+        "type": "Capture",
+        "unitId": "兵-1"
+      },
+      "relicChoice": null
+    }
+  ]
+}

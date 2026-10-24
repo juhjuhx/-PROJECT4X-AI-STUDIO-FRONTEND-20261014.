@@ -1,0 +1,17 @@
+{
+  "label": "D3-fresh-test",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "startedAt": "2026-10-18T04:37:16.820371+00:00",
+  "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": null,
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T04:37:18.390723+00:00",
+  "durationSeconds": 1.57,
+  "log": "D3-fresh-test.log"
+}

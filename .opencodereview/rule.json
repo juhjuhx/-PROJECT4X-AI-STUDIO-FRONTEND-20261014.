@@ -22,7 +22,7 @@
     },
     {
       "path": "src/**",
-      "rule": "檢查AI與地圖渲染只收Observation；main可持GameState協調回合與完整本機保存，但顯示不得读取隱藏資料、不直接改規則；匯入失敗不替換現局；非同步AI generation取消；mouse/touch/keyboard可操作，禁未信任innerHTML/eval，Responsive無遮擋、無consoleerror、尊重reducedmotion。"
+      "rule": "檢查AI與地圖渲染只收Observation；C2 GameSession獨占GameState與applyCommand，main只用GameplayPort／LocalPersistencePort接線。顯示不得讀隱藏資料或完整Save/Replay。保護requestId去重、expectedVersion、generation與publication重入；匯入先完整驗證再取消AI與替換；保存只有IO成功且同stamp才ack；非同步AI取消；mouse/touch/keyboard可操作，禁未信任innerHTML/eval、全域吞錯與DOM selector patch，Responsive無遮擋、無consoleerror、尊重reducedmotion。"
     },
     {
       "path": "**/*",
