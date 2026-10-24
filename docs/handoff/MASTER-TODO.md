@@ -13,12 +13,12 @@
 | R02-007 | Codex | P0 | R02-006 | DONE | cd59f348；verification見RELEASE02 | 安全merge、merged CI、正式Release/WebZIP下載SHA一致 | RELEASE-STATUS/PUBLISHED.json | 已驗匿名下載 |
 | R02-008 | Codex | P1 | R02-007 | DONE | cd59f348；verification見RELEASE02 | Desktop相關資料唯讀inventory/worktree/風險/分類 | WORKSPACE-INVENTORY/WORKSPACE-SUMMARY | 已保留全部worktree |
 | R02-009 | Codex | P1 | R02-008 | DONE | cd59f348；verification見RELEASE02 | 七分區索引/安全可回退歸檔；來源目的SHA | 本機Archive Manifest＋53檔SHA/mode＋3回退fixture測試 | 舊路徑捷徑相容 |
-| R02-010 | Codex | P0 | R02-007/R02-009 | IN_PROGRESS | 4448ade基線／本branch差異 | URLs/final Git/恢復入口/精確下一步一致 | NEXT-ACTION/RELEASE-STATUS | 交接後續已授權切片 |
-| D03-V01 | Codex呈現/Gemini可接手 | P1 | R02-007 | TODO | 4448ade基線／本branch差異 | 獨立branch實際menu/兵模/地形/遺跡/手機diff與比較 | 待新visual diff與實跑screens | 先registry/tokens，保留已定風格 |
+| R02-010 | Codex | P0 | R02-007/R02-009 | DONE | 4448ade基線／本branch差異 | URLs/final Git/恢復入口/精確下一步一致 | PR2 eedc6ea4/main CI40064775568 PASS，本機舊worktree轉接checkpoint | 續Demo03獨立branch |
+| D03-V01 | Codex呈現/Gemini可接手 | P1 | R02-007 | IN_PROGRESS | 4448ade基線／本branch差異 | 獨立branch實際menu/兵模/地形/遺跡/手機diff與比較 | DEMO03-V01 231tests/4真互動/8截圖 | 獨立review及PR |
 | D03-001 | Codex | P1 | R02-007 | TODO | 4448ade基線／本branch差異 | 版本registry/合法引用/依賴/fallback且可玩閉環 | 待source/tests | 先已批准內容接點 |
-| D03-002 | Codex | P1 | D03-001＋數值裁決 | TODO | 4448ade基線／本branch差異 | 盾衛真招募/防禦/AI/存檔旅程 | 候選已詢問；未批准 | 只隔離實驗 |
-| D03-003 | Codex | P1 | D03-001＋數值裁決 | TODO | 4448ade基線／本branch差異 | 機動偵察真招募/機動/AI/存檔旅程 | 候選已詢問；未批准 | 只隔離實驗 |
-| D03-004 | Codex | P1 | D03-002/D03-003＋科技裁決 | TODO | 4448ade基線／本branch差異 | 新科技分支，舊三科技行為保留 | CONTENT-EXTENSION-PROPOSAL | 資料模型→合法Action |
+| D03-002 | Codex | P1 | D03-001＋數值裁決 | BLOCKED | 4448ade基線／本branch差異 | 盾衛真招募/防禦/AI/存檔旅程 | 候選已詢問；未批准 | 只隔離實驗 |
+| D03-003 | Codex | P1 | D03-001＋數值裁決 | BLOCKED | 4448ade基線／本branch差異 | 機動偵察真招募/機動/AI/存檔旅程 | 候選已詢問；未批准 | 只隔離實驗 |
+| D03-004 | Codex | P1 | D03-002/D03-003＋科技裁決 | BLOCKED | 4448ade基線／本branch差異 | 新科技分支，舊三科技行為保留 | CONTENT-EXTENSION-PROPOSAL | 資料模型→合法Action |
 | D03-005 | Codex | P1 | 城市裁決 | TODO | 4448ade基線／本branch差異 | 一完整簡化投資/成長循環 | 目前僅候選 | 提出精確最小規則 |
 | D03-006 | Codex | P1 | 地形/遺跡裁決 | TODO | 4448ade基線／本branch差異 | 新互動及獨立ruleset migration，不改G1 | Relic proposal | 先舊版兼容/正負例 |
 | D03-007 | Codex | P0 | 已實作片段 | TODO | 4448ade基線／本branch差異 | AI/Fog/確定性/不變性/SaveReplay/真Gameplay | 待新反例與實跑 | 逐slice RED→GREEN |

@@ -1,3 +1,5 @@
+> Demo03-V01：站立頭部選到後方地格、QA局部transform探針、未登錄SVG與QA手機觸點被header遮擋等歷次FAIL保留於DEMO03-V01；目前231tests/4真互動PASS，未降低門檻。真人/真機未驗，歷史AI僵局不因此關閉。
+
 # 2026-10-24 Demo更新
 
 - Q-ICON：原缺favicon造成Browser/Gameplay FAIL，已用原創靜態ICO及MIME修正，fresh兩Gate及cleanup TESTED_PASS；不忽略404，歷史FAIL保留。

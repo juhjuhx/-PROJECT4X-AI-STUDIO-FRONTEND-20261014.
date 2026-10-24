@@ -1,0 +1,393 @@
+{
+  "status": "TESTED_PASS",
+  "scope": "Demo03-V01呈現候選＋既有玩法回歸，不代表完整Demo03/Alpha",
+  "baselineCommit": "eedc6ea4c3b77968b414aedd0ee26a5c6280db40",
+  "branch": "feature/demo03-mistbound-visuals",
+  "existingGate": {
+    "status": "PASS",
+    "gate": "Demo02 engineering; not full100 or Playable Alpha",
+    "checks": [
+      {
+        "label": "publication",
+        "command": [
+          "node",
+          "scripts/check-publication.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 131,
+        "logSha256": "b71f3f1cea3d599b24bd7eec875626a5552e989af51836c98cae9e8d300070b9"
+      },
+      {
+        "label": "check",
+        "command": [
+          "npm",
+          "run",
+          "check"
+        ],
+        "exitCode": 0,
+        "milliseconds": 486,
+        "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627"
+      },
+      {
+        "label": "tests",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 0,
+        "milliseconds": 7820,
+        "logSha256": "dd695f713e7d40440e2c83c143fadeff0cea509cefe994204bc528c2873a7e62",
+        "testCounts": {
+          "tests": 231,
+          "pass": 231,
+          "fail": 0,
+          "skipped": 0
+        }
+      },
+      {
+        "label": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0,
+        "milliseconds": 970,
+        "logSha256": "0ed375ceb499a1617deea301b02eb8749a1e326f62482d850d487c1736842020"
+      },
+      {
+        "label": "browser",
+        "command": [
+          "node",
+          "scripts/browser-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 13990,
+        "logSha256": "428a4040ce3893a9438f569f27a3be8f5eb0f388482a30ceae24762e4c05a2b8"
+      },
+      {
+        "label": "gameplay",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/browser-check.mjs",
+          "--gameplay"
+        ],
+        "exitCode": 0,
+        "milliseconds": 72246,
+        "logSha256": "1813182bd41af07e5fa4a8efe20266d8464f6ca74b33b20f854af5d6915dfbb5"
+      },
+      {
+        "label": "demo",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/demo-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 5338,
+        "logSha256": "604363a274e163d825d32cd1d8523b47d96c8acca8e3735b30e8a20b16b42339"
+      },
+      {
+        "label": "pwa",
+        "command": [
+          "node",
+          "--import",
+          "tsx",
+          "scripts/pwa-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 2565,
+        "logSha256": "ee64bc9e610160fbe4ec200b74d4b01f8dbf4d1e4db47a109c2d503ba272f2dc"
+      },
+      {
+        "label": "pwa-update",
+        "command": [
+          "node",
+          "scripts/pwa-update-check.mjs"
+        ],
+        "exitCode": 0,
+        "milliseconds": 4116,
+        "logSha256": "ff982d7e1a7a845de13c905f93c42f924d442548c2f0f506420f5447ae4f31c9"
+      }
+    ],
+    "proofs": [
+      {
+        "kind": "browser",
+        "status": "PASS",
+        "scenarioCount": 11,
+        "receiptSha256": "e4340d146cb70bc315a1830d78a53fdc991c0d7a34a42e7d748ea10244d41227"
+      },
+      {
+        "kind": "gameplay",
+        "status": "PASS",
+        "scenarioCount": 12,
+        "receiptSha256": "d11169b0e94865caa5c162eab612e5f0152a1e1dfecf09b59fc48208b9e5871d"
+      },
+      {
+        "kind": "demo",
+        "status": "PASS",
+        "scenarioCount": 4,
+        "scenarios": [
+          {
+            "id": "desktop-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "desktop-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-load-prevalidation-and-intent-cancellation",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "phone-real-exploration-journal-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+          "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+          "assets/index-DyQ56BDs.js": "442071119d1a499169c5f6195b09829d4b88ff9954f143dc8d47d0a3a755f869",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "3be1fe0496c418064a4bf21820e4703fa1e7d4941ea1300ea95adc48a102d305",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "8684f2a772c5c890c51813efac83a7abed837986e616db1dbabe367454713842",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "602dff25c62f9323842538fb2a0719af486137b6d61915baa1bab0f12fef74ca"
+        },
+        "receiptSha256": "c136674301dbf681e49e898ac20a29cfb1ec2e41a5eda2eaa4a3e8b7e7010604"
+      },
+      {
+        "kind": "pwa",
+        "status": "PASS",
+        "scenarioCount": 2,
+        "scenarios": [
+          {
+            "id": "manifest-installability-static-only-cache",
+            "status": "TESTED_PASS"
+          },
+          {
+            "id": "offline-reload-real-world-local-save-load",
+            "status": "TESTED_PASS"
+          }
+        ],
+        "artifacts": {
+          "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+          "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+          "assets/index-DyQ56BDs.js": "442071119d1a499169c5f6195b09829d4b88ff9954f143dc8d47d0a3a755f869",
+          "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+          "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+          "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+          "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+          "index.html": "3be1fe0496c418064a4bf21820e4703fa1e7d4941ea1300ea95adc48a102d305",
+          "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+          "pwa-assets.json": "8684f2a772c5c890c51813efac83a7abed837986e616db1dbabe367454713842",
+          "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+          "service-worker.js": "602dff25c62f9323842538fb2a0719af486137b6d61915baa1bab0f12fef74ca"
+        },
+        "receiptSha256": "809c264ada95510c3226ec55989a19517cc1b77302941ee819a565e78684cd15"
+      },
+      {
+        "kind": "pwa-update",
+        "status": "PASS",
+        "waitingWithOldClient": "TESTED_PASS",
+        "activationAfterOldClientsClosed": "TESTED_PASS",
+        "receiptSha256": "239125707f6f4e67b282df7c89133ed8dfc90edea894cf9225ed7b5815a752b7"
+      }
+    ],
+    "sourceUnchanged": true,
+    "sourceFingerprint": "4ca5665fea9026fd5e1253b5cfbbd6222db755717087f7bbdfe29f66e1397e68",
+    "artifacts": {
+      "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+      "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+      "assets/index-DyQ56BDs.js": "442071119d1a499169c5f6195b09829d4b88ff9954f143dc8d47d0a3a755f869",
+      "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+      "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+      "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+      "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+      "index.html": "3be1fe0496c418064a4bf21820e4703fa1e7d4941ea1300ea95adc48a102d305",
+      "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+      "pwa-assets.json": "8684f2a772c5c890c51813efac83a7abed837986e616db1dbabe367454713842",
+      "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+      "service-worker.js": "602dff25c62f9323842538fb2a0719af486137b6d61915baa1bab0f12fef74ca"
+    },
+    "human": "UNVERIFIED",
+    "physicalPhone": "UNVERIFIED",
+    "cleanup": [
+      {
+        "stage": "owned-server",
+        "status": "PASS"
+      }
+    ],
+    "primaryFailure": null
+  },
+  "realVisualInteractions": {
+    "status": "PASS",
+    "scenarios": [
+      {
+        "id": "desktop-real-miniature-head-selection",
+        "status": "TESTED_PASS",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "simulatedTouch": false,
+        "canonicalSaveUnchanged": true
+      },
+      {
+        "id": "desktop-real-relic-no-preference",
+        "status": "TESTED_PASS",
+        "animation": {
+          "name": "d03-relic-reveal",
+          "duration": 440,
+          "animationPresent": true
+        },
+        "realMoveAndResolve": true
+      },
+      {
+        "id": "phone-real-miniature-head-selection",
+        "status": "TESTED_PASS",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "simulatedTouch": true,
+        "canonicalSaveUnchanged": true
+      },
+      {
+        "id": "phone-real-relic-reduce",
+        "status": "TESTED_PASS",
+        "animation": {
+          "name": "none",
+          "duration": null,
+          "animationPresent": false
+        },
+        "realMoveAndResolve": true
+      }
+    ],
+    "cleanup": [
+      {
+        "stage": "desktop.close",
+        "status": "PASS"
+      },
+      {
+        "stage": "phone.close",
+        "status": "PASS"
+      },
+      {
+        "stage": "browser.close",
+        "status": "PASS"
+      },
+      {
+        "stage": "private-artifacts",
+        "remainingBefore": 0,
+        "rootAbsent": true,
+        "status": "PASS"
+      }
+    ]
+  },
+  "tests": {
+    "baseline": 223,
+    "newRegistry": 5,
+    "newPwa": 1,
+    "newProbe": 1,
+    "newHitTest": 1,
+    "total": 231,
+    "pass": 231,
+    "fail": 0,
+    "skip": 0
+  },
+  "priorFailuresPreserved": [
+    {
+      "runId": "miniature-selection-red-20261024-132222-e29b4dfd",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:22:22.963327+00:00",
+      "logSha": "faab53715763d3178f7cd1fec20ded725a82542e28a8ebf4c4e7ccd5ddae8f25",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "nested-paint-probe-red-20261024-132049-3a56ef47",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:20:50.624059+00:00",
+      "logSha": "4f12c0fa513d94eb43c30cdddd0b6a01793612580c519a328519a6e8f0820079",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "real-visual-interactions-20261024-134430-4690571c",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:44:35.575045+00:00",
+      "logSha": "ac2fc7c47e18679aa83527393a3f3d7915812e39c1a4d03d00f4d866b1b7d4a1",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "registered-art-red-20261024-131659-39a8509a",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:17:00.071603+00:00",
+      "logSha": "b99443955667e7e17a32d0768f4fcfc512dcfd9459e224954247ca83d840067e",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "visual-existing-gameplay-regression-20261024-131441-bd4abf06",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:14:42.073183+00:00",
+      "logSha": "044b23b8f9e6899305992e44a8992946e71b8c6c558261063ecd645e83224327",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "visual-phone-hit-diagnosis-20261024-134813-87a43903",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:48:18.836955+00:00",
+      "logSha": "ac2fc7c47e18679aa83527393a3f3d7915812e39c1a4d03d00f4d866b1b7d4a1",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "visual-registry-red-20261024-130833-cbbdb08e",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:08:34.118495+00:00",
+      "logSha": "b61161c9c9d5afe143fa6f4f9a4cddb4dd8df7af4670a2d13aa841d4a8cbecf9",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "visual-regression-002-20261024-131459-8d16f43c",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:15:06.113271+00:00",
+      "logSha": "987d56b5ae1f1bee53809ab564e0bd73abfe512bf758d1797183d7ca69e65400",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "visual-regression-003-20261024-131711-45ad4266",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T05:17:24.834958+00:00",
+      "logSha": "e3888dbcba2550051cd0700331846738669cbae9e9a1cf5150d7d2025ce27b8f",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    }
+  ],
+  "limits": {
+    "maxHumanCommands": 220,
+    "humanCommands": 209,
+    "ruleset": "g1-ccts-1",
+    "save": "project4x-save-1",
+    "replay": "project4x-replay-1",
+    "human": "UNVERIFIED",
+    "physicalPhone": "UNVERIFIED",
+    "alpha": "PARTIAL",
+    "newGameplay": "NOT_IMPLEMENTED",
+    "full100": "UNVERIFIED"
+  }
+}

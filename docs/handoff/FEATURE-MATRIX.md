@@ -1,3 +1,5 @@
+> Demo03-V01候選：三兵站立視覺、五地形visual registry、主選單/手札/遺跡/手機已實作並有231tests/4真互動證據，review/PR待完成。不是新兵種或Gameplay registry。
+
 # Demo02 當前功能矩陣（2026-10-24）
 
 本段局部覆寫下方歷史工程狀態，不刪舊FAIL。主要證據入口：[DEMO02驗證](../verification/DEMO02/VERIFICATION.md)；原始收據位於專案外DEMO02 evidence，完整私人save/world不公開。既有規則可玩Demo與完整Playable Alpha分列；新規則遵主創最新決定另審。

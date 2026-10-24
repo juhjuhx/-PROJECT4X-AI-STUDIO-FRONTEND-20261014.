@@ -64,3 +64,7 @@
 * **實體按鈕點擊感 (Physical Tactile Buttons)**：
   - 未按下：`transform: translateY(0); box-shadow: 0 3px 0 var(--color-bronze-dark);`
   - 按下（Active）：`transform: translateY(2px); box-shadow: 0 1px 0 var(--color-bronze-dark);`
+
+## Demo03-V01 呈現增量
+
+IMPLEMENTED。DOM primitive：--d03-vellum/#f5efde、--d03-brass/#ad844b、--d03-pine/#193e33、--d03-ink/#203b30；semantic：--d03-panel-surface/--d03-border-accent；component：demo-menu/journal。標題沿用本機Songti/Noto Serif fallback，無外部字體。Canvas地形/兵種metadata在visual-registry.ts，畫筆miniatures.ts，不包含玩法數值。調控variance5/motion2/density5，遺跡一次性440ms，reduce停用；沒有完整WCAG宣稱。來源、真圖與QA見DEMO03-VISUAL-HANDOFF。

@@ -11,7 +11,7 @@ export async function buildPwa(directory){
   if(st.isDirectory())out.push(...await walk(path,rel+'/'));else out.push(rel);
  }return out;}
  const existing=(await walk(root)).filter(f=>!generated.has(f));
- const allowed=f=>['index.html','manifest.webmanifest','favicon.ico','icon.svg','icons/icon-192.png','icons/icon-512.png'].includes(f)||/^assets\/[A-Za-z0-9_-]+\.(js|css)$/.test(f);
+ const allowed=f=>['index.html','manifest.webmanifest','favicon.ico','icon.svg','icons/icon-192.png','icons/icon-512.png','art/menu-diorama.svg'].includes(f)||/^assets\/[A-Za-z0-9_-]+\.(js|css)$/.test(f);
  for(const file of existing)if(!allowed(file))throw new Error('不允許PWA產物：'+file);
  if(!existing.includes('index.html')||!existing.includes('manifest.webmanifest'))throw new Error('PWA缺少入口或manifest');
  const marker='<script type="module" src="./register-sw.js"></script>';

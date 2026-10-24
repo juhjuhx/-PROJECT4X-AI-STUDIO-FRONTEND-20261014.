@@ -1,3 +1,4 @@
+import { monitorMapPaint } from './qa-map-probe.mjs';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { writeFile, mkdir, readFile, mkdtemp, readdir, rm } from 'node:fs/promises';
@@ -121,49 +122,6 @@ async function verifyGameplayJourney(page) {
 }
 
 // 測試端量測真實 Canvas 繪製與瀏覽器 PointerEvents；不存取 WorldMap 私有 state。
-function monitorMapPaint() {
-  const metrics = window.__qaMapMetrics = { paint: null, active: [], maxTouchPointers: 0, events: [] };
-  const active = new Set();
-  for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
-    window.addEventListener(type, event => {
-      if (!(event.target instanceof HTMLCanvasElement)) return;
-      if (event.pointerType === 'touch') {
-        if (type === 'pointerdown') active.add(event.pointerId);
-        if (type === 'pointerup' || type === 'pointercancel') active.delete(event.pointerId);
-        metrics.active = [...active];
-        metrics.maxTouchPointers = Math.max(metrics.maxTouchPointers, active.size);
-      }
-      metrics.events.push({ type, pointerType: event.pointerType, pointerId: event.pointerId, trusted: event.isTrusted });
-    }, true);
-  }
-  const prototype = CanvasRenderingContext2D.prototype;
-  const originalScale = prototype.scale, originalTranslate = prototype.translate, originalFillText = prototype.fillText;
-  const frames = new WeakMap();
-  prototype.scale = function(x, y) {
-    const result = originalScale.call(this, x, y);
-    frames.set(this, { zoom: x, zoomY: y, transform: null });
-    return result;
-  };
-  prototype.translate = function(x, y) {
-    const result = originalTranslate.call(this, x, y), frame = frames.get(this);
-    if (frame) {
-      const m = this.getTransform();
-      frame.transform = { a: m.a, d: m.d, e: m.e, f: m.f };
-      // 直接量測世界scale/translate，不依賴會隨視覺版本變動的角落文案。
-      metrics.paint = { ...frame };
-    }
-    return result;
-  };
-  prototype.fillText = function(text, ...args) {
-    const result = originalFillText.call(this, text, ...args);
-    if (/^24 × 24.*\d+%$/.test(String(text))) {
-      const frame = frames.get(this);
-      if (frame?.transform) metrics.paint = { ...frame, label: String(text) };
-    }
-    return result;
-  };
-}
-
 async function verifyTouchGestures(page, context) {
   const beforeSave = await privateSave(page);
   await page.waitForFunction(() => window.__qaMapMetrics?.paint !== null);

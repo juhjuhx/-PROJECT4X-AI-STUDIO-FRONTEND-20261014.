@@ -1,6 +1,8 @@
 import type { KnownTile, Observation, Point, Unit } from '../core/types';
 import type { DeepReadonly } from '../session/contracts';
 import { UNIT_STATS } from '../core/types';
+import { getTerrainVisual } from './visual-registry';
+import { paintMiniature } from './miniatures';
 
 type MapSelection = { tile: Point | null; unitId: string | null };
 type Pointer = { x: number; y: number };
@@ -113,6 +115,17 @@ export class WorldMap {
   private pointAt(p: Pointer): Point | null {
     const wx = (p.x - this.width / 2) / this.camera.zoom + this.camera.x;
     const wy = (p.y - this.height / 2) / this.camera.zoom + this.camera.y;
+    // Match the visible upright figure before the ground behind its head.
+    // Last-painted/frontmost units win; unknown tiles never create hit targets.
+    if (this.view) {
+      const visible = new Set(this.view.tiles.filter(tile => tile.visibility !== 'unknown').map(tile => `${tile.x},${tile.y}`));
+      const units = [...this.view.units].sort((a,b) => (b.x+b.y)-(a.x+a.y) || b.x-a.x);
+      for (const unit of units) {
+        if (!visible.has(`${unit.x},${unit.y}`)) continue;
+        const foot = this.project(unit);
+        if (wx >= foot.x-15 && wx <= foot.x+24 && wy >= foot.y-40 && wy <= foot.y+7) return {x:unit.x,y:unit.y};
+      }
+    }
     const x = Math.floor((wx / (this.tileW / 2) + wy / (this.tileH / 2)) / 2 + 0.5);
     const y = Math.floor((wy / (this.tileH / 2) - wx / (this.tileW / 2)) / 2 + 0.5);
     return this.view && x >= 0 && y >= 0 && x < this.view.width && y < this.view.height ? { x, y } : null;
@@ -344,15 +357,7 @@ export class WorldMap {
 
     // Known Visible/Explored Terrain (Grounded Diorama Palette)
     const terrain = tile.terrain ?? 'plain';
-    const slabColors: Record<string, [string, string, string]> = {
-      plain: ['#9db07e', '#6d7f55', '#556641'],
-      forest: ['#6a8d76', '#496653', '#395343'],
-      hill: ['#a6ad8f', '#788162', '#5e674b'],
-      mountain: ['#88988e', '#5e6f66', '#495850'],
-      water: ['#598a96', '#3b6672', '#2c515c'],
-    };
-
-    const [topFill, leftSide, rightSide] = slabColors[terrain] ?? slabColors.plain;
+    const [topFill, leftSide, rightSide] = getTerrainVisual(tile).slab;
 
     // Front-left facet (Lit morning sun facet)
     this.polygon([[p.x - 38, p.y], [p.x, p.y + 21], [p.x, p.y + 31], [p.x - 38, p.y + 10]], leftSide);
@@ -367,12 +372,12 @@ export class WorldMap {
     c.stroke();
 
     // Top Diamond Slab Face
-    this.diamond(p.x, p.y, topFill, 'rgba(240, 245, 225, 0.52)', 1);
+    this.diamond(p.x, p.y, topFill, 'rgba(240, 245, 225, 0.25)', 1);
 
     // Decorative procedural ground details
     if (terrain === 'water') {
       // Shoreline gentle foam ripples and surface depth
-      c.strokeStyle = 'rgba(215, 242, 246, 0.6)';
+      c.strokeStyle = 'rgba(215, 242, 246, 0.52)';
       c.lineWidth = 1.3;
       c.lineCap = 'round';
       for (let i = -1; i <= 1; i++) {
@@ -406,7 +411,9 @@ export class WorldMap {
         { dx: 4, dy: -6, h: 29, r: 10.5 },
         { dx: 17, dy: 4, h: 22, r: 7.5 },
       ];
-      for (const t of trees) {
+      const variation = (tile.x * 17 + tile.y * 11) % 3;
+      for (const original of trees) {
+        const t = { ...original, h: original.h + variation * 2, dx: original.dx + (variation - 1) * 2 };
         const tx = p.x + t.dx;
         const ty = p.y + t.dy;
         // Shadow puddle
@@ -440,10 +447,12 @@ export class WorldMap {
       this.polygon([[p.x + 2, p.y + 6], [p.x + 19, p.y - 22], [p.x + 31, p.y + 7]], '#85968c');
       this.polygon([[p.x + 19, p.y - 22], [p.x + 13, p.y - 12], [p.x + 24, p.y - 10]], '#eaf0e6');
     } else if (tile.terrain === 'hill') {
-      // Terraced tiered hill plateau
+      // Terraced tiered hill plateau with a readable pale upper contour
       this.polygon([[p.x - 26, p.y + 3], [p.x - 3, p.y - 18], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#abb391');
       this.polygon([[p.x - 3, p.y - 18], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#889472');
-      this.polygon([[p.x - 16, p.y], [p.x - 2, p.y - 12], [p.x + 13, p.y + 1], [p.x, p.y + 7]], '#c0c9a7');
+      this.polygon([[p.x - 16, p.y], [p.x - 2, p.y - 12], [p.x + 13, p.y + 1], [p.x, p.y + 7]], '#d1c6a0');
+      c.strokeStyle = 'rgba(245, 236, 203, 0.5)'; c.lineWidth = 0.8;
+      c.beginPath(); c.moveTo(p.x - 16, p.y); c.lineTo(p.x - 2, p.y - 12); c.lineTo(p.x + 13, p.y + 1); c.stroke();
     }
   }
 
@@ -565,86 +574,7 @@ export class WorldMap {
       this.circle(x, y - 2, 23, 'transparent', 'rgba(255, 235, 175, 0.45)', 1);
     }
 
-    // Heavy Miniature Figurine Base (Turned metal plinth)
-    const rimFill = own ? '#244538' : '#7a3e35';
-    const faceFill = own ? '#1a3429' : '#5e2e26';
-    const borderFill = own ? '#f1dca1' : '#f0b098';
-
-    this.circle(x, y - 1, 14, rimFill, borderFill, 2);
-    this.circle(x, y - 2, 12, faceFill);
-
-    // Unit Micro-Model Figurine Details
-    if (unit.kind === 'infantry') {
-      // --- 步兵：重甲頭盔、旭日巨盾與短劍 ---
-      // 盾牌（左側持有）
-      this.polygon([[x - 11, y - 9], [x - 3, y - 11], [x - 2, y + 3], [x - 7, y + 8], [x - 12, y + 3]], own ? '#d8b762' : '#c9644f', '#192b23', 1);
-      // 盾徽（旭日符號）
-      c.fillStyle = own ? '#fff2c6' : '#ffd3c7';
-      c.beginPath();
-      c.arc(x - 7, y - 3, 2.5, 0, Math.PI * 2);
-      c.fill();
-      // 士兵頭盔與紅纓
-      this.circle(x + 2, y - 7, 4.5, own ? '#4f695a' : '#884c42', '#1a2e26', 1);
-      // 頭盔頂飾
-      c.strokeStyle = own ? '#ffd269' : '#ff7a6b';
-      c.lineWidth = 2;
-      c.beginPath();
-      c.moveTo(x + 2, y - 12); c.lineTo(x + 2, y - 8);
-      c.stroke();
-      // 右手佩劍短刃
-      c.strokeStyle = '#eef3eb';
-      c.lineWidth = 2;
-      c.beginPath();
-      c.moveTo(x + 7, y - 6); c.lineTo(x + 11, y + 2);
-      c.stroke();
-    } else if (unit.kind === 'scout') {
-      // --- 斥候：兜帽、探險長杖與雙刃、飄逸斗篷 ---
-      // 斗篷披肩
-      this.polygon([[x - 8, y - 4], [x + 8, y - 4], [x + 6, y + 7], [x - 6, y + 7]], own ? '#3a614d' : '#6b3e36', '#14261f', 1);
-      // 兜帽頭部
-      this.circle(x, y - 6, 4.2, own ? '#547d67' : '#8c5249', '#1a2b23', 1);
-      // 羽毛帽飾
-      c.strokeStyle = '#ffd978';
-      c.lineWidth = 1.8;
-      c.beginPath();
-      c.moveTo(x + 2, y - 10); c.lineTo(x + 6, y - 13);
-      c.stroke();
-      // 探險家長杖 / 雙持短匕
-      c.strokeStyle = '#d7c49e';
-      c.lineWidth = 1.8;
-      c.beginPath();
-      c.moveTo(x + 7, y - 11); c.lineTo(x + 7, y + 8);
-      c.stroke();
-      // 杖頂寶石
-      this.circle(x + 7, y - 12, 1.8, '#ffe58f', '#a8812c', 1);
-    } else {
-      // --- 弓兵：長弓、背負箭袋與瞄準姿態 ---
-      // 軀幹皮革胸甲
-      this.polygon([[x - 5, y - 4], [x + 5, y - 4], [x + 4, y + 6], [x - 4, y + 6]], own ? '#3d5246' : '#69413a', '#172922', 1);
-      // 弓手皮帽
-      this.circle(x, y - 6, 4, own ? '#5a7364' : '#87564d', '#1a2c24', 1);
-      // 背後箭袋與白羽
-      c.strokeStyle = '#e8eee6';
-      c.lineWidth = 1.5;
-      c.beginPath();
-      c.moveTo(x - 6, y - 10); c.lineTo(x - 3, y - 4);
-      c.moveTo(x - 8, y - 9); c.lineTo(x - 5, y - 3);
-      c.stroke();
-      // 弧形複合反曲長弓
-      c.strokeStyle = '#d9b26e';
-      c.lineWidth = 2.2;
-      c.beginPath();
-      c.arc(x + 5, y - 1, 9, -Math.PI * 0.45, Math.PI * 0.45);
-      c.stroke();
-      // 弓弦與拉箭
-      c.strokeStyle = 'rgba(255,255,255,0.7)';
-      c.lineWidth = 0.9;
-      c.beginPath();
-      c.moveTo(x + 5 + 9 * Math.cos(-Math.PI * 0.45), y - 1 + 9 * Math.sin(-Math.PI * 0.45));
-      c.lineTo(x + 2, y - 1);
-      c.lineTo(x + 5 + 9 * Math.cos(Math.PI * 0.45), y - 1 + 9 * Math.sin(Math.PI * 0.45));
-      c.stroke();
-    }
+    paintMiniature(c, x, p.y, unit.kind, own);
 
     // Chiseled Stone HP Bar (Zero-pill flat slate)
     const barW = 26;

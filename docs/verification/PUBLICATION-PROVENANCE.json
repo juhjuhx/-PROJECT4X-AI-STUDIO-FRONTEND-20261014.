@@ -28,21 +28,21 @@
     {
       "path": "docs/handoff/FEATURE-MATRIX.md",
       "originalSha256": "e6e44eccf9b7fe6da1d7f48ce62deb61c2a8ae1441a60a9eb39d6235f9b20f7d",
-      "publicSha256": "ab49d2fc4c56b0223e14581e649eb784b7ecd605ffbdeefb81436f30f1209c29",
+      "publicSha256": "1591f6a39b0a919e915fc5c14066a58cecff1e5891157c373254e6c2f38c2cb8",
       "kind": "PUBLIC_PROJECTION",
       "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
     },
     {
       "path": "docs/handoff/KNOWN-DEFECTS.md",
       "originalSha256": "7f3d1a04b809eadb511019e03a923919b8858c20358af77fa15635027788dd69",
-      "publicSha256": "66f063a88ea6fdd2aaa86633f654d608c55e3aeee1454e4116dc199a64423831",
+      "publicSha256": "ea723927c447a50ddd64a38aae2006c6b1ebbdaee33559b4c4351833961304e6",
       "kind": "PUBLIC_PROJECTION",
       "change": "本機個人home/暫存根改為portable標記；數值、test結果與原始receipt hash語意不重算"
     },
     {
       "path": "docs/handoff/NEXT-ACTION.md",
       "originalSha256": "ef1e64d6619abf77463acca4a1b85914f8c9b4600cb463c5456684d18756e512",
-      "publicSha256": "2ec454bf2775a277d3f0a52677175438d3a57c90650d73d23f2174d1a71a7f2d",
+      "publicSha256": "935a4bca4620a5020c41dc8f914dac0961893456df7410e34174119197972af1",
       "kind": "PUBLIC_AUTHORITY_UPDATE",
       "change": "去識別後按本輪授權更新當前入口；原文件版本留原完整Git，非原始raw receipt"
     },

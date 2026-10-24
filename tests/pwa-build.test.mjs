@@ -16,3 +16,12 @@ test('PWA build emits deterministic relative shell with byte hashes and isolated
  await writeFile(join(d,'assets/app.js'),'export const value=2');await buildPwa(d);assert.notEqual(JSON.parse(await readFile(join(d,'pwa-assets.json'),'utf8')).revision,manifest.revision);
  }finally{await rm(d,{recursive:true});}});
 test('PWA build refuses unexpected data files and symlinks rather than precaching private data',async()=>{const d=await fixture();try{await writeFile(join(d,'private-save.json'),'{"secret":true}');await assert.rejects(buildPwa(d),/不允許/);await unlink(join(d,'private-save.json'));await symlink(join(d,'index.html'),join(d,'bad-link'));await assert.rejects(buildPwa(d),/符號連結/);}finally{await rm(d,{recursive:true});}});
+test('PWA includes the registered Demo03 illustration by hash while rejecting other art files',async()=>{
+ const d=await fixture();try{
+  await mkdir(join(d,'art'));const svg='<svg xmlns="http://www.w3.org/2000/svg"/>';
+  await writeFile(join(d,'art/menu-diorama.svg'),svg);const result=await buildPwa(d);
+  assert.equal(result.files['art/menu-diorama.svg'],hash(svg));
+  await writeFile(join(d,'art/private-save.json'),'{}');await assert.rejects(buildPwa(d),/不允許/);
+  await unlink(join(d,'art/private-save.json'));await writeFile(join(d,'art/unregistered.svg'),svg);await assert.rejects(buildPwa(d),/不允許/);
+ }finally{await rm(d,{recursive:true});}
+});
