@@ -1,0 +1,21 @@
+{
+  "status": "TESTED_PASS",
+  "at": "2026-10-24T12:49:49.606242+08:00",
+  "anonymousHttpsDownload": true,
+  "tlsVerification": true,
+  "tool": "system curl",
+  "url": "https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./releases/download/demo02-web-20261024-r3/PROJECT4X-DEMO02-WEB-20261024-r3.zip",
+  "sha256": "6b7d54df848887cd1c487742f7dbcebedfe4b0ee90bf39830a23cf25410af8f3",
+  "bytes": 91350,
+  "zipCRC": "PASS",
+  "members": 19,
+  "releaseTag": "demo02-web-20261024-r3",
+  "mergeCommit": "cd59f348116ec47e3e3b88475ec12a8c2f5eb2d5",
+  "prCI": 40063343855,
+  "mainCI": 40063634958,
+  "priorAttempt": {
+    "tool": "Python urllib",
+    "status": "BLOCKED",
+    "reason": "local issuer certificate unavailable; no TLS bypass"
+  }
+}
