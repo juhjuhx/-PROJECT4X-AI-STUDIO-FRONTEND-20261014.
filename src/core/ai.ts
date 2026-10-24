@@ -1,4 +1,4 @@
-import { UNIT_STATS } from './types';
+import { unitDefinition } from './rulesets';
 import type { Action, KnownTile, Observation, Point, Unit } from './types';
 
 const distance = (a: Point, b: Point): number => Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
@@ -32,7 +32,7 @@ export function chooseAction(view: Observation): Action | null {
   const damageBetween = (unit: Unit, target: Unit): number => {
     const tile = view.tiles[target.y * view.width + target.x];
     const cover = tile.terrain === 'forest' || tile.terrain === 'hill' || tile.site?.owner === target.owner ? 1 : 0;
-    return Math.max(1, UNIT_STATS[unit.kind].attack - UNIT_STATS[target.kind].defense - cover);
+    return Math.max(1, unitDefinition(view.ruleset,unit.kind).attack - unitDefinition(view.ruleset,target.kind).defense - cover);
   };
   const attacks = legal.filter((a): a is Extract<Action, { type: 'Attack' }> => a.type === 'Attack');
   if (attacks.length) {
@@ -41,10 +41,10 @@ export function chooseAction(view: Observation): Action | null {
     // available after moving its shooter off a friendly holding.
     const firingMoveFor = (shot: typeof attacks[number]): Action | undefined => {
       const unit = owned.find(u => u.id === shot.unitId)!, target = enemies.find(u => u.id === shot.targetId)!;
-      if (ownSites.some(t => same(t, unit)) && view.faction.gold >= UNIT_STATS.infantry.cost
+      if (ownSites.some(t => same(t, unit)) && view.faction.gold >= unitDefinition(view.ruleset,'infantry').cost
         && owned.length < Math.max(6, ownSites.length * 8) && damageFor(shot) >= target.hp) {
         return legal.find(a => a.type === 'Move' && a.unitId === unit.id
-          && distance(a.to, target) <= UNIT_STATS[unit.kind].range && !ownSites.some(t => same(t, a.to)));
+          && distance(a.to, target) <= unitDefinition(view.ruleset,unit.kind).range && !ownSites.some(t => same(t, a.to)));
       }
       return undefined;
     };
@@ -62,7 +62,7 @@ export function chooseAction(view: Observation): Action | null {
         && preservesEntry(attack.unitId) && damageFor(attack) >= target.hp) clearances.push(attack);
       for (const move of legal) if (move.type === 'Move' && preservesEntry(move.unitId)) {
         const support = owned.find(u => u.id === move.unitId)!;
-        if (distance(move.to, target) <= UNIT_STATS[support.kind].range
+        if (distance(move.to, target) <= unitDefinition(view.ruleset,support.kind).range
           && damageFor({ type: 'Attack', unitId: support.id, targetId: target.id }) >= target.hp) clearances.push(move);
       }
     }
@@ -82,7 +82,7 @@ export function chooseAction(view: Observation): Action | null {
       for (const candidate of candidates) {
         // Include support that already fired this turn. Otherwise the final
         // fresh occupier kills the weakened garrison and leaves a refill window.
-        const supportDamage = owned.filter(u => u.id !== candidate.id && distance(u, target) <= UNIT_STATS[u.kind].range)
+        const supportDamage = owned.filter(u => u.id !== candidate.id && distance(u, target) <= unitDefinition(view.ruleset,u.kind).range)
           .reduce((sum, u) => sum + damageFor({ type: 'Attack', unitId: u.id, targetId: target.id }), 0);
         const candidateDamage = damageFor({ type: 'Attack', unitId: candidate.id, targetId: target.id });
         if (supportDamage > 0 && supportDamage + candidateDamage >= target.hp) { reserved.add(candidate.id); siegeTargets.add(target.id); break; }
@@ -91,7 +91,7 @@ export function chooseAction(view: Observation): Action | null {
     // Reserve a scout for exploration only while a legal move can reveal new
     // terrain this turn. A spent or blocked scout loses nothing by attacking.
     const exploringScouts = new Set(owned.filter(u => u.kind === 'scout' && !u.moved && !u.acted && legal.some(a =>
-      a.type === 'Move' && a.unitId === u.id && unknownTiles.some(t => distance(a.to, t) <= UNIT_STATS.scout.sight + (view.faction.techs.includes('pathfinding') ? 1 : 0))
+      a.type === 'Move' && a.unitId === u.id && unknownTiles.some(t => distance(a.to, t) <= unitDefinition(view.ruleset,'scout').sight + (view.faction.techs.includes('pathfinding') ? 1 : 0))
     )).map(u => u.id));
     const score = (a: typeof attacks[number]): number => {
       const unit = owned.find(u => u.id === a.unitId)!, target = enemies.find(u => u.id === a.targetId)!;
@@ -114,15 +114,15 @@ export function chooseAction(view: Observation): Action | null {
   if (!attacks.length) {
     const counterstrikes: { move: Extract<Action, { type: 'Move' }>; targetId: string }[] = [];
     for (const target of enemies) {
-      if (!owned.some(u => u.acted && distance(u, target) <= UNIT_STATS[target.kind].range)) continue;
+      if (!owned.some(u => u.acted && distance(u, target) <= unitDefinition(view.ruleset,target.kind).range)) continue;
       for (const move of legal) if (move.type === 'Move') {
         const unit = owned.find(u => u.id === move.unitId)!;
-        if (distance(move.to, target) <= UNIT_STATS[unit.kind].range && damageBetween(unit, target) >= target.hp) {
+        if (distance(move.to, target) <= unitDefinition(view.ruleset,unit.kind).range && damageBetween(unit, target) >= target.hp) {
           // A conservative visible-geometry bound, not an enemy legal-action
           // oracle. Decline this shortcut if another enemy could reach firing
           // range next turn; ordinary routing still decides any necessary risk.
           const exposed = enemies.some(enemy => enemy.id !== target.id
-            && distance(enemy, move.to) <= UNIT_STATS[enemy.kind].move + UNIT_STATS[enemy.kind].range);
+            && distance(enemy, move.to) <= unitDefinition(view.ruleset,enemy.kind).move + unitDefinition(view.ruleset,enemy.kind).range);
           if (!exposed) counterstrikes.push({ move, targetId: target.id });
         }
       }
@@ -189,7 +189,7 @@ export function chooseAction(view: Observation): Action | null {
       else if (tile.relic?.resolved === false) goals.push({ tile, sources: [tile], purpose: 'relic', weight: 160, distances: distances([tile]) });
     }
     for (const enemy of enemies) goals.push({ tile: enemy, sources: [enemy], purpose: 'enemy', weight: 650, distances: distances([enemy]) });
-    const sightFor = (unit: Unit): number => UNIT_STATS[unit.kind].sight + (unit.kind === 'scout' && view.faction.techs.includes('pathfinding') ? 1 : 0);
+    const sightFor = (unit: Unit): number => unitDefinition(view.ruleset,unit.kind).sight + (unit.kind === 'scout' && view.faction.techs.includes('pathfinding') ? 1 : 0);
     const boundary = unknownTiles.filter(t => neighbors(t).some(i => view.tiles[i].terrain !== null && validTerrain(view.tiles[i])));
     const adjacent = view.tiles.filter(t => t.terrain !== null && validTerrain(t) && neighbors(t).some(i => view.tiles[i].visibility === 'unknown'));
     let primaryExplore: typeof goals[number] | undefined;
@@ -303,7 +303,7 @@ export function chooseAction(view: Observation): Action | null {
       const discovery = informationBySight.get(sightFor(unit))![i];
       const crowd = owned.filter(u => u.id !== unit.id && distance(a.to, u) <= 1).length;
       const freesSite = ownSites.some(t => same(t, unit)) ? 4 : 0;
-      const adjacentEnemy = enemies.some(e => distance(a.to, e) <= UNIT_STATS[unit.kind].range) ? 15 : 0;
+      const adjacentEnemy = enemies.some(e => distance(a.to, e) <= unitDefinition(view.ruleset,unit.kind).range) ? 15 : 0;
       if (progress <= 0 && discovery === 0 && freesSite === 0) return -Infinity;
       return progress * 25 + goalScore + discovery * 1.5 - crowd * 3 + freesSite + adjacentEnemy;
     };

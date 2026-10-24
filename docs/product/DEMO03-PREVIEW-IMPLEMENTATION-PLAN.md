@@ -34,11 +34,11 @@
 
 **Interfaces:** `getRuleset(id: string): RulesetDefinition`；`validateRuleset(value: unknown): asserts value is RulesetDefinition`。定義包含 namespace/id/version/generatorVersion、unit/tech 有序陣列、素材 fallback、科技先決與白名單效果；內建內容唯讀。先保留 G1 原 UNIT_STATS/TECH_STATS，不接 runtime。
 
-- [ ] Step 1: 由發布版本 core（獨立來源）產生合法指令 recipe 與 Save/Replay SHA golden；公開只放 recipe/hash，不放完整 world。
-- [ ] Step 2: 測重複 ID、缺 fallback、未知引用、循環科技、非法效果/數值、未知 ruleset、輸入/回傳不變性。新介面缺失時先觀測 RED；不得把 fixture/import typo 當有效 RED。
-- [ ] Step 3: 最小兩內建 registry；保留 G1 3/3，預覽5/5。runtime 驗證形狀/DAG；固定 content hash 由 Node crypto 測試驗證，瀏覽器不新增 crypto/遠端依賴。
-- [ ] Step 4: node --import tsx --test tests/rulesets.test.ts tests/legacy-compatibility.test.ts；npm test；npm run check；npm run build，預期全通過。
-- [ ] Step 5: 檢查 diff/來源摘要、獨立審查、提交第一片 checkpoint。D03-001 整體可玩閉環仍 IN_PROGRESS。
+- [x] Step 1: 由發布版本 core（獨立來源）產生合法指令 recipe 與 Save/Replay SHA golden；公開只放 recipe/hash，不放完整 world。
+- [x] Step 2: 測重複 ID、缺 fallback、未知引用、循環科技、非法效果/數值、未知 ruleset、輸入/回傳不變性。新介面缺失時先觀測 RED；不得把 fixture/import typo 當有效 RED。
+- [x] Step 3: 最小兩內建 registry；保留 G1 3/3，預覽5/5。runtime 驗證形狀/DAG；固定 content hash 由 Node crypto 測試驗證，瀏覽器不新增 crypto/遠端依賴。
+- [x] Step 4: node --import tsx --test tests/rulesets.test.ts tests/legacy-compatibility.test.ts；npm test；npm run check；npm run build，預期全通過。
+- [x] Step 5: 檢查 diff/來源摘要、獨立審查、提交第一片 checkpoint。D03-001 整體可玩閉環仍 IN_PROGRESS。
 
 ## Task 2: 唯一 Core 的版本化研究／招募／戰鬥／移動
 

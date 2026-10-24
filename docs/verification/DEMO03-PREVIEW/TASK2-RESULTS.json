@@ -1,0 +1,110 @@
+{
+  "schema": "project4x-preview-task2-verification-1",
+  "status": "TESTED_PASS",
+  "tests": 244,
+  "fail": 0,
+  "skip": 0,
+  "runtimeScope": "預覽兩兵/科技在唯一 core 已實作；尚無Session/UI入口、Save2/Replay2未實作",
+  "baseCommit": "62e210b5eb6ccedc9497a17e3871a68cec4348aa",
+  "results": [
+    {
+      "runId": "preview-core-red-20261024-224741-ebebbb1c",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-gameplay.test.ts"
+      ],
+      "sourceFingerprint": "66a5d74b20fcab1e07078d543404d673a6fbd0b760dfc55dc419bb69c7dbe443",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T14:47:42.737016+00:00",
+      "logSha": "9cfb973fb5acc60b5ec37c594950dafea63e453b385022f866c1518b363fe523",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-core-first-green-20261024-225142-7110a277",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-gameplay.test.ts",
+        "tests/legacy-compatibility.test.ts"
+      ],
+      "sourceFingerprint": "ae8c6a3d231b6dc5553ee1f45250d61ad272518697b75094b9859db955b56cd0",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T14:51:43.018283+00:00",
+      "logSha": "3b3e87bcc121456fbc4872c7b75eed18e5d118dab4b33283cab602ad7416ef17",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-core-green-20261024-225215-c3cdcdd5",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-gameplay.test.ts",
+        "tests/legacy-compatibility.test.ts"
+      ],
+      "sourceFingerprint": "d87620db10c142f60b90158fb02b4db60742a80aa4c2508f796dabcf4859d457",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:52:15.952957+00:00",
+      "logSha": "ef8caf173500be18b31e4f56023959c9c465800bd5815b15d1664e9c6cce39e1",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-core-check-20261024-225216-f8fb624e",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "sourceFingerprint": "d87620db10c142f60b90158fb02b4db60742a80aa4c2508f796dabcf4859d457",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:52:16.953542+00:00",
+      "logSha": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-core-suite-20261024-225314-da3bf38d",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "sourceFingerprint": "d87620db10c142f60b90158fb02b4db60742a80aa4c2508f796dabcf4859d457",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:53:25.136552+00:00",
+      "logSha": "cbed109b0e0acb4a722e6d1c77f629890c668fdbaeaf3be55ef91069a31a5405",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-core-build-20261024-225325-d8df77b4",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "sourceFingerprint": "d87620db10c142f60b90158fb02b4db60742a80aa4c2508f796dabcf4859d457",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:53:26.656796+00:00",
+      "logSha": "c54302c3696e4af944c0d28aeba876781f07261633b6c1470a74642e1c7af3b4",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    }
+  ],
+  "redReason": "舊createGame忽略ruleset、新研究不合法、new stats不存在；4個真行為反例",
+  "intermediateFailure": "加入validCommand第二參數後，舊history.every(validCommand)錯把陣列index當ruleset；G1 golden檢出3 FAIL，改為明確lambda後全相符。",
+  "scopeRuling": "為擴展union後仍可編譯，AI/main/map提前只做按Observation.ruleset讀數值的機械接線；未增加預覽選單/AI策略偏好。",
+  "limitations": [
+    "本片unit測試可用人工縮減state檢查防禦/障礙，不冒充合法Save fixture",
+    "Save2/Replay2、事件與新種AI policy、玩家DOM旅程尚未驗收",
+    "獨立whole-branch review在正式PR前；Task1已獨立審查APPROVE"
+  ]
+}

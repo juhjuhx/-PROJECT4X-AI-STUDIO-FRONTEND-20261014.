@@ -70,7 +70,7 @@ function validateState(value: unknown): asserts value is GameState {
     exact(value.pendingRelic, ['actor', 'relicId'], '必答選擇');
     requireThat(value.pendingRelic.actor === value.active && unresolved.length === 1 && unresolved[0].claimedBy === value.active && unresolved[0].id === value.pendingRelic.relicId && value.winner === null, '遺跡選擇參照');
   } else requireThat(unresolved.length === 0, '遺失遺跡選擇');
-  requireThat(Array.isArray(value.history) && value.history.length === value.version && value.history.every(validCommand) && isRecord(value.requests) && Object.keys(value.requests).length === value.version && Object.values(value.requests).every(v => typeof v === 'string'), '指令歷史與請求紀錄');
+  requireThat(Array.isArray(value.history) && value.history.length === value.version && value.history.every(command => validCommand(command)) && isRecord(value.requests) && Object.keys(value.requests).length === value.version && Object.values(value.requests).every(v => typeof v === 'string'), '指令歷史與請求紀錄');
 }
 
 function rebuild(seed: string, commands: Command[]): GameState {
@@ -101,7 +101,7 @@ export function exportReplay(state: GameState): string {
 export function replayGame(text: string): GameState {
   const replay: unknown = JSON.parse(text);
   exact(replay, ['schema', 'ruleset', 'seed', 'commands', 'hash'], '重播');
-  requireThat(replay.schema === 'project4x-replay-1' && replay.ruleset === 'g1-ccts-1' && string(replay.seed) && Array.isArray(replay.commands) && replay.commands.every(validCommand) && typeof replay.hash === 'string' && /^[0-9a-f]{16}$/.test(replay.hash), '重播版本與格式');
+  requireThat(replay.schema === 'project4x-replay-1' && replay.ruleset === 'g1-ccts-1' && string(replay.seed) && Array.isArray(replay.commands) && replay.commands.every(command => validCommand(command)) && typeof replay.hash === 'string' && /^[0-9a-f]{16}$/.test(replay.hash), '重播版本與格式');
   const state = rebuild(replay.seed, replay.commands);
   requireThat(canonicalHash(state) === replay.hash, '重播結果hash不一致');
   return state;

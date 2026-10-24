@@ -106,3 +106,15 @@ export function getRuleset(id: string): RulesetDefinition {
   if (!Object.hasOwn(bundles,id)) throw new Error('不支援的 ruleset');
   return bundles[id as RulesetId];
 }
+
+export function unitDefinition(ruleset: string, kind: ContentUnitId): UnitDefinition {
+  const definition = getRuleset(ruleset).units.find(u => u.id === kind);
+  if (!definition) throw new Error('此 ruleset 不支援的兵種');
+  return definition;
+}
+
+export function technologyDefinition(ruleset: string, id: ContentTechId): TechnologyDefinition {
+  const definition = getRuleset(ruleset).technologies.find(t => t.id === id);
+  if (!definition) throw new Error('此 ruleset 不支援的科技');
+  return definition;
+}

@@ -1,7 +1,7 @@
 import './styles.css';
 import { createGameSession } from './session/game-session';
 import type { DeepReadonly } from './session/contracts';
-import { TECH_STATS, UNIT_STATS } from './core/types';
+import { technologyDefinition, unitDefinition } from './core/rulesets';
 import type { Action, KnownTile, Point, Tech, UnitKind } from './core/types';
 import { WorldMap } from './ui/map';
 import { recruitmentStatus } from './ui/recruitment';
@@ -361,8 +361,8 @@ function actionLabel(action: Action): string {
     case 'Move': return `探險隊移至 ${action.to.x + 1} · ${action.to.y + 1}。`;
     case 'Attack': return '部隊已交戰。傷亡與可用行動已更新。';
     case 'Capture': return '旗幟已升起，據點加入你的城邦。';
-    case 'Recruit': return `${UNIT_STATS[action.kind].name}加入探險隊。`;
-    case 'Research': return `已習得「${TECH_STATS[action.tech].name}」。`;
+    case 'Recruit': return `${unitDefinition(view.ruleset,action.kind).name}加入探險隊。`;
+    case 'Research': return `已習得「${technologyDefinition(view.ruleset,action.tech).name}」。`;
     case 'ResolveRelic': return action.choice === 'gold' ? '遺跡帶來 4 金幣。' : '古老的紋路揭開了更多地形。';
     case 'EstablishCapital': return '新中心已建立，城邦結束流亡。';
     case 'EndTurn': return '對手行動中。';
@@ -408,7 +408,7 @@ function render(): void {
   factionDescription.textContent = center ? `政治中心 · ${center.site!.name}` : view.faction.life === 'exiled' ? '旗幟仍在。守住據點跨過完整對手回合，就能主動重建中心。' : '你的航程已告一段落。';
   factionNumbers.replaceChildren(el('span', '', `${ownSites.length} 據點`), el('span', '', `${ownUnits.length} 部隊`));
   coordinates.textContent = selection ? `座標 ${selection.x + 1} · ${selection.y + 1}` : '尚未選格';
-  canvas.setAttribute('aria-description', `${exploredLabel.textContent}。${coordinates.textContent}。${selectedUnit() ? `已選取${UNIT_STATS[selectedUnit()!.kind].name}` : '未選取部隊'}。`);
+  canvas.setAttribute('aria-description', `${exploredLabel.textContent}。${coordinates.textContent}。${selectedUnit() ? `已選取${unitDefinition(view.ruleset,selectedUnit()!.kind).name}` : '未選取部隊'}。`);
   activeLabel.textContent = view.winner !== null ? '此局已結束' : aiPaused ? '對手已暫停' : view.active === HUMAN ? '輪到你了' : '對手行動中';
   continueAI.hidden = !aiPaused;
   endTurnButton.disabled = !canAct() || !isLegal({ type: 'EndTurn' });
@@ -431,8 +431,8 @@ function renderInspection(): void {
   const tile = tileAt(selection);
   const title = inspectPanel.node.querySelector('h2')!;
   if (unit) {
-    title.textContent = UNIT_STATS[unit.kind].name;
-    const stats = UNIT_STATS[unit.kind];
+    title.textContent = unitDefinition(view.ruleset,unit.kind).name;
+    const stats = unitDefinition(view.ruleset,unit.kind);
     const status = el('div', 'unit-status');
     status.append(el('span', unit.moved ? 'spent' : '', unit.moved ? '已移動' : '可移動'), el('span', unit.acted ? 'spent' : '', unit.acted ? '已攻擊' : '可攻擊'));
     const hp = el('div', 'hp-display');
@@ -452,7 +452,7 @@ function renderInspection(): void {
     legal.forEach((a) => {
       if (a.type === 'Attack') {
         const enemy = view.units.find((u) => u.id === a.targetId);
-        attackActions.append(makeActionButton(enemy ? `攻擊${UNIT_STATS[enemy.kind].name} (${enemy.hp} HP)` : '攻擊目標', a, 'attack-button'));
+        attackActions.append(makeActionButton(enemy ? `攻擊${unitDefinition(view.ruleset,enemy.kind).name} (${enemy.hp} HP)` : '攻擊目標', a, 'attack-button'));
       }
       if (a.type === 'Capture') attackActions.append(makeActionButton('占領據點', a, 'primary-button'));
     });
@@ -488,9 +488,9 @@ function renderInspection(): void {
         if (occupyingUnit) {
           const alert = el('div', 'garrison-alert');
           const badge = el('div', 'garrison-badge', '⚠️ 城內已有部隊駐防');
-          const desc = el('p', 'garrison-text', `駐軍：${UNIT_STATS[occupyingUnit.kind].name} (${occupyingUnit.hp} HP)。`);
+          const desc = el('p', 'garrison-text', `駐軍：${unitDefinition(view.ruleset,occupyingUnit.kind).name} (${occupyingUnit.hp} HP)。`);
           const caution = el('p', 'garrison-warn', '請先移開駐軍，才能在此招募。');
-          const moveOutBtn = button(`選取${UNIT_STATS[occupyingUnit.kind].name}並指揮移出`, () => selectUnit(occupyingUnit.id), 'secondary-button full-width');
+          const moveOutBtn = button(`選取${unitDefinition(view.ruleset,occupyingUnit.kind).name}並指揮移出`, () => selectUnit(occupyingUnit.id), 'secondary-button full-width');
           alert.append(badge, desc);
           if (occupyingUnit.owner === HUMAN) alert.append(caution, moveOutBtn);
           else { badge.textContent = '敵方部隊佔據據點'; alert.append(el('p', 'garrison-warn', '需先排除敵軍才能徵召。')); }
@@ -507,7 +507,7 @@ function renderInspection(): void {
 
         const recruits = el('div', 'recruit-list');
         (['infantry', 'scout', 'archer'] as UnitKind[]).forEach((kind) => {
-          const stat = UNIT_STATS[kind];
+          const stat = unitDefinition(view.ruleset,kind);
           const action: Action = { type: 'Recruit', siteId: site.id, kind };
           const legal = isLegal(action);
           const item = el('div', 'recruit-card');
@@ -564,7 +564,7 @@ function renderUnits(): void {
     const node = button('', () => selectUnit(unit.id), unit.id === selectedUnitId ? 'unit-row selected' : 'unit-row');
     const glyph = el('span', `unit-glyph ${unit.kind}`, unit.kind === 'infantry' ? '步' : unit.kind === 'scout' ? '斥' : '弓'); glyph.setAttribute('aria-hidden', 'true');
     const copy = el('span', 'unit-copy');
-    copy.append(el('strong', '', UNIT_STATS[unit.kind].name), el('span', '', `${unit.x + 1} · ${unit.y + 1} / ${unit.hp} HP`));
+    copy.append(el('strong', '', unitDefinition(view.ruleset,unit.kind).name), el('span', '', `${unit.x + 1} · ${unit.y + 1} / ${unit.hp} HP`));
     node.append(glyph, copy, el('span', 'unit-ready', unit.moved && unit.acted ? '已行動' : '待命'));
     node.setAttribute('aria-pressed', String(unit.id === selectedUnitId));
     list.append(node);
@@ -584,7 +584,7 @@ function renderTech(): void {
 
   currentTechs.forEach((tech, index) => {
     const known = view.faction.techs.includes(tech);
-    const stat = TECH_STATS[tech];
+    const stat = technologyDefinition(view.ruleset,tech);
     const canAfford = view.faction.gold >= stat.cost;
     const row = el('div', known ? 'tech-row researched' : 'tech-row');
     const copy = el('div', 'tech-copy');
