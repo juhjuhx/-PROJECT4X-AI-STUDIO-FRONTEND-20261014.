@@ -169,5 +169,23 @@
     "routing": "清楚user spec；TDD以已載入規則與新反例執行；Addy規劃/增量方法按本次實作使用，沒有重新安裝另一個router",
     "authorization": "本輪明確授權PR/merge/Release，取代Demo02舊本地-only限制；不重問已指定執行方式",
     "shippingApplication": "僅適用本次靜態下載候選：PR/CI/review/附件HTTP與SHA/回退PR；公開網站、真人、真機、無障礙與效能尚未驗，不宣稱全表綠燈"
+  },
+  "demo03Routing": {
+    "phase": "D03-V01",
+    "method": "沿主創既定方向，Canvas/DOM小切片，先反例/最小修正/真Browser，不換框架或安裝新技能",
+    "loaded": [
+      "using-superpowers (canonical Personal Tool Master V3)",
+      "test-driven-development",
+      "brainstorming",
+      "visual-atelier v2",
+      "frontend-design",
+      "addyosmani-frontend-ui-engineering",
+      "fixing-motion-performance",
+      "fixing-accessibility",
+      "requesting-code-review",
+      "codex-engineering-guardrails:code-verification"
+    ],
+    "evidence": "本輪實際SKILL.md讀取及DEMO03-V01，融合清單不等於逐一啟用",
+    "limits": "OpenCodeReview本機憑證不可用，不重試；無LSP/axe/真機，不宣稱執行"
   }
 }

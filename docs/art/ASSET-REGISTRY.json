@@ -1,13 +1,15 @@
 {
   "schema": "project4x-asset-registry-1",
-  "style": "既有D3 D Hybrid松綠／羊皮紙／青銅與等角地圖方向；非遊戲場景新美術",
+  "style": "Demo02圖示保留；Demo03原創微縮兵模與裝飾地景增量；插畫不是遊戲世界真相或UI截圖",
   "author": "PROJECT-4X contributors / Codex geometric drawing",
   "license": "MIT; project LICENSE applies to original geometry",
   "sources": [
     "docs/art/DESIGN-TOKENS.md",
-    "tools/generate-demo-icons.py"
+    "tools/generate-demo-icons.py",
+    "src/ui/visual-registry.ts",
+    "src/ui/miniatures.ts"
   ],
-  "tool": "Pillow 12.2.0 (authoring only, not runtime)",
+  "tool": "原圖示Pillow 12.2.0（authoring only）；新插畫手寫SVG、兵模Canvas2D原創幾何，無runtime美術套件",
   "files": {
     "public/favicon.ico": {
       "bytes": 5155,
@@ -24,6 +26,14 @@
     "public/icons/icon-512.png": {
       "bytes": 21434,
       "sha256": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c"
+    },
+    "public/art/menu-diorama.svg": {
+      "bytes": 3839,
+      "sha256": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+      "method": "原創手寫SVG幾何，無外部素材",
+      "license": "MIT",
+      "usage": "主選單裝飾背景，不提供地圖或玩法資訊",
+      "screenshot": false
     }
   },
   "thirdPartyArtUsed": false,

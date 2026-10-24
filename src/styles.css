@@ -1808,3 +1808,83 @@
 .demo-status { color:var(--color-ink-muted,#4f6158); }
 .demo-story p { line-height:1.8; }
 .demo-completion { border-left:3px solid #b88c4a; padding-left:12px; }
+
+/* Demo03 presentation slice: vellum chart table, restrained brass, standing figures. */
+@layer base {
+  :root {
+    --d03-vellum: #f5efde;
+    --d03-brass: #ad844b;
+    --d03-pine: #193e33;
+    --d03-ink: #203b30;
+    --d03-border-accent: var(--d03-brass);
+    --d03-panel-surface: var(--d03-vellum);
+    --d03-title-face: "Songti TC", "Noto Serif TC", Georgia, serif;
+  }
+}
+@layer components {
+  .demo-menu {
+    width: min(920px, calc(100vw - 48px));
+    padding: 40px;
+    border: 1px solid var(--d03-border-accent);
+    border-radius: 6px;
+    background: var(--d03-panel-surface);
+    color: var(--d03-ink);
+    box-shadow: inset 0 0 0 5px #f5efde, inset 0 0 0 6px #d3c5a0, 0 24px 80px #122b2540;
+  }
+  .demo-menu::before {
+    content: "";
+    position: absolute;
+    inset: 8px 8px 8px 59%;
+    background: #193e33 url('/art/menu-diorama.svg') center / cover no-repeat;
+    border-left: 1px solid #b59b65;
+    pointer-events: none;
+  }
+  .demo-menu > * { position: relative; max-width: 54%; }
+  .demo-menu h2 {
+    font: 600 clamp(24px, 2.4vw, 34px)/1.4 var(--d03-title-face);
+    letter-spacing: .08em;
+    margin: 0 0 16px;
+  }
+  .demo-menu > p { line-height: 1.75; margin: 16px 0; }
+  .demo-menu > label { display: block; margin-top: 24px; font-size: 12px; letter-spacing: .16em; }
+  .demo-menu .seed-input { border-radius: 3px; background: #fffcf2; }
+  .demo-menu .demo-choices { margin: 8px 0 16px; gap: 8px; }
+  .demo-menu button { border-radius: 4px; }
+  .demo-menu .primary-button { background: var(--d03-pine); border-color: var(--d03-pine); }
+  .demo-menu > .muted:last-child { border-top: 1px solid #cfcaaf; padding-top: 16px; font-size: 12px; }
+  .demo-journal { border-radius: 5px; border-color: var(--d03-brass); background: var(--d03-panel-surface); }
+  .demo-journal h2 { font-family: var(--d03-title-face); font-size: 28px; }
+  .demo-journal .demo-story { border-block: 1px solid #d5c7a7; margin: 24px 0; padding: 8px 0; }
+  .demo-progress { border-left: 3px solid var(--d03-brass); }
+  .demo-objectives { font-size: 13px; }
+  .demo-objectives li { padding-block: 2px; }
+  .relic-art {
+    width: 72px; height: 104px;
+    border: 0;
+    background: linear-gradient(105deg, #e0d6b6 0 38%, #b4bf9e 38% 66%, #6f8e78 66%);
+    clip-path: polygon(14% 10%, 69% 0, 93% 86%, 36% 100%, 0 87%);
+    transform: skewY(-6deg);
+  }
+  .relic-art::before { left: 27px; top: 29px; width: 3px; height: 31px; background: #f8df94; }
+  .relic-dialog[open] .relic-art { animation: d03-relic-reveal 440ms cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes d03-relic-reveal {
+    from { opacity: 0; transform: translateY(12px) skewY(-6deg); }
+    to { opacity: 1; transform: translateY(0) skewY(-6deg); }
+  }
+}
+@layer responsive {
+  @media (max-width: 700px) {
+    .demo-menu { width: calc(100vw - 24px); padding: 24px; }
+    .demo-menu::before { inset: 8px; opacity: .11; background-position: 70% 50%; border: 0; }
+    .demo-menu > * { max-width: 100%; }
+    .demo-menu h2 { font-size: 25px; max-width: 290px; }
+    .demo-menu .demo-choices { display: grid; grid-template-columns: 1fr; }
+    .demo-menu .demo-choices button { width: 100%; }
+    .demo-menu > p { margin-block: 12px; }
+    .demo-menu > label { margin-top: 16px; }
+    .demo-journal { padding: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .relic-dialog[open] .relic-art { animation: none; }
+  }
+}

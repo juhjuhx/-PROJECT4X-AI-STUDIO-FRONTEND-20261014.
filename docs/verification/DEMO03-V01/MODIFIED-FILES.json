@@ -1,0 +1,172 @@
+{
+  "base": "eedc6ea4c3b77968b414aedd0ee26a5c6280db40",
+  "codeCheckpoint": "8f01017be4dea915e810b4057c3e99650dfbd967",
+  "scope": "此code checkpoint變更清單；後續review/狀態文件以實際Git diff為準，避免自我hash循環",
+  "files": [
+    {
+      "path": "docs/agent/SKILL-REGISTRY.json",
+      "sha256": "7d7997a941069aaa2cef33d8bbac9a7462a0d1e1350eaca0a33e79263549aaf4",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/art/ASSET-REGISTRY.json",
+      "sha256": "3abd71b8552d074aabf9d37248c80320017ff764fe910c3d7fd610fc1bbe67d6",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/art/DEMO03-VISUAL-HANDOFF.md",
+      "sha256": "37454e2cc9dc26662505f3666b61949bd06e8374badaf6eda8ec77acebef8b99",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/art/DESIGN-TOKENS.md",
+      "sha256": "aa0260a37bba8f5c2e7081bdc694a8d575a7fda9ddd6b57c4fd0a9c60e998205",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "sha256": "1591f6a39b0a919e915fc5c14066a58cecff1e5891157c373254e6c2f38c2cb8",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "sha256": "ea723927c447a50ddd64a38aae2006c6b1ebbdaee33559b4c4351833961304e6",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/handoff/MASTER-TODO.md",
+      "sha256": "6abf8c7243df63a063c94b6592fe249f0a82eee45d9cb900842b548f8a76b313",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "sha256": "935a4bca4620a5020c41dc8f914dac0961893456df7410e34174119197972af1",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/SOURCE-BOUNDARY.json",
+      "sha256": "088afbf507165aa7a4aef8dcc30dfbaf5208e912752dcf67921c36a568e84f6e",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/TEST-RESULTS.json",
+      "sha256": "2ec2c02a1870f1d3bdc2997e0fe2bf60d548d92f8426418479b0ad2cd152a316",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/SCREENSHOTS.json",
+      "sha256": "a4de725bcc969d488be85a892a3995dd29d7c8d64f06435f4e19e1610800b55c",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/desktop-menu.png",
+      "sha256": "e46fb9da8f9a97aeed62eef73c8d07ce3a977f955c671ab187fd4006c438cf4b",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/desktop-unit-selection.png",
+      "sha256": "0737035d907926b6067ccf0b8abae00a5568902af0ddd8757fe33e0c34673a30",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/gameplay-after.png",
+      "sha256": "a3152678d75c78445c8358269ae11adc1e4b747046cd324b50551bf345d908f0",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/phone-journal.png",
+      "sha256": "4b25c6483e79f72e2a2201fbe4def85aa5e2337a4d3c271e37f94d4cfcaf2613",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/phone-landscape.png",
+      "sha256": "b88d4aaac7cb533f484c913694401bb8cc834bde615d1a13a4cddd3e686bdbc8",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/phone-menu.png",
+      "sha256": "09d4bcd6dd814ee80d3502730eafba689ad14bc2ba4742bb7457236982683d9d",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/phone-unit-selection.png",
+      "sha256": "94ab5eb334d0dbbb5e954d97d80bdf26b87c1a0134467bf19e489df6e4f7d800",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/DEMO03-V01/screenshots/relic.png",
+      "sha256": "e13bd40f872d0962dac4f05b2f1f2b89acfe44f6aa70ea78773f6607c30daaee",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "docs/verification/PUBLICATION-PROVENANCE.json",
+      "sha256": "a2389113aa619c13c8c7eb14b80be5fd95fd3aa7005ec9754d3b08e9e372e710",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "public/art/menu-diorama.svg",
+      "sha256": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+      "owner": "presentation"
+    },
+    {
+      "path": "scripts/browser-check.mjs",
+      "sha256": "4e7fafba7c2eb465710a8e0f0287a42e2cdbe21f65e0147ed799603c4306ba4d",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "scripts/build-pwa.mjs",
+      "sha256": "8061e4855e045b9dd1af9bd957afb364b146c8fbe8208e934e09e6e0933ab6e5",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "scripts/qa-map-probe.mjs",
+      "sha256": "44f629d866be41ef2f27cf07a5eee29c8d0cc4933967f421719f1de8ea4331f4",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "scripts/visual-check.mjs",
+      "sha256": "03ffa2ee2e75563bb4a5a387bc5e23fc90866e6e91d82e794f453854a97c7c02",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "a7c03edb4d738e7e04d2f104dd6307776e8d32fd2a2afcf5f35fa19c11e81ba2",
+      "owner": "presentation"
+    },
+    {
+      "path": "src/ui/map.ts",
+      "sha256": "4bfb5f8170dd27bdde41a80b8f5543e703de4eae184873a4d1cac020e849e8c9",
+      "owner": "presentation"
+    },
+    {
+      "path": "src/ui/miniatures.ts",
+      "sha256": "2d846936f4fcd601e846ac3999331c6d712e2cd639f43a6d4590638b47ff4069",
+      "owner": "presentation"
+    },
+    {
+      "path": "src/ui/visual-registry.ts",
+      "sha256": "6a8c65c42dc6e465c7fde654286f3931697518c12e50ff34df12ca45bdea47a6",
+      "owner": "presentation"
+    },
+    {
+      "path": "tests/miniature-selection.test.ts",
+      "sha256": "6a3a50cf9fc88e873185377649aae25fa4333db32bb8d9e15249be196d13dca9",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "tests/pwa-build.test.mjs",
+      "sha256": "2ab2ec56d6891abdd8f84379d62700772c2782554f4a4b795a00b8857bdcf419",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "tests/qa-map-probe.test.mjs",
+      "sha256": "d8a8a897bec57b878305bd3b0d9789d6a6e300ea2b6eb00ad393abe3310e4560",
+      "owner": "Codex QA/docs"
+    },
+    {
+      "path": "tests/visual-registry.test.ts",
+      "sha256": "6eb22e8aba8de386f6bde1e5c7457bf9d4b193ceef610a0ef47619d85ef929bb",
+      "owner": "Codex QA/docs"
+    }
+  ]
+}
