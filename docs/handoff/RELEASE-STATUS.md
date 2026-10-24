@@ -10,13 +10,13 @@
 | AI SHA | 972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67 |
 | Remote main at recovery | c21b16cd75572d069369f41426f7323c63c05083 |
 | Release branch | release/demo02-playable-web |
-| PR | TODO |
+| PR | https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./pull/1 |
 | Merge commit | TODO |
 | GitHub Release | TODO |
 | Target asset | PROJECT4X-DEMO02-WEB-20261024-r3.zip |
 | Asset SHA256 | 6b7d54df848887cd1c487742f7dbcebedfe4b0ee90bf39830a23cf25410af8f3 |
 | Asset size | 91350 bytes／19files |
-| CI | 本機一鍵驗證PASS；新PR觸發已建立，遠端未執行 |
+| CI | PR run 40063200214 已觸發，尚待結果；以最新PR SHA為準 |
 | Unit baseline | 203原測試＋4 publication＋4 release-proof＋5 worker HTTP/contract＋7審查隱私/生命週期＝223/223 fresh PASS |
 | Human/physical phone | UNVERIFIED |
 | Playable Alpha | PARTIAL |
@@ -24,3 +24,5 @@
 原28段本地history與150份原文件保留本機；公開branch以main為parent匯入完整正式source及去識別副本。PUBLICATION-PROVENANCE記原/公開hash；不是改寫或刪除原FAIL。
 
 發布步驟按MASTER-TODO；如403或branch保護阻擋，不關規則、不暴露憑證、不force push，保留BLOCKED及下一條可執行命令。GitHub connector無Release附件API，使用本機已授權gh CLI補足。
+
+獨立review：d6caa389c3c8387e648434170f2805eb60722083 APPROVE（詳RELEASE02/INDEPENDENT-REVIEW）。GitHub connector寫PR回403，已核對juhjuhx CLI身分後建立PR1；不是繞過權限。兩次Git HTTP408保留，單次32MiB POST transport重試才成功，不改全域Git配置。

@@ -161,10 +161,13 @@
       "using-git-worktrees",
       "requesting-code-review",
       "finishing-a-development-branch",
-      "codex-engineering-guardrails:code-verification"
+      "codex-engineering-guardrails:code-verification",
+      "test-driven-development",
+      "addyosmani-shipping-and-launch"
     ],
     "constraintSource": "tools/agent-skills/0.6.13-aeac41d4/skills/constraint-driven-development/SKILL.md（本機同名addon未安裝，使用已固定專案副本及既有CONSTRAINTS）",
     "routing": "清楚user spec；TDD以已載入規則與新反例執行；Addy規劃/增量方法按本次實作使用，沒有重新安裝另一個router",
-    "authorization": "本輪明確授權PR/merge/Release，取代Demo02舊本地-only限制；不重問已指定執行方式"
+    "authorization": "本輪明確授權PR/merge/Release，取代Demo02舊本地-only限制；不重問已指定執行方式",
+    "shippingApplication": "僅適用本次靜態下載候選：PR/CI/review/附件HTTP與SHA/回退PR；公開網站、真人、真機、無障礙與效能尚未驗，不宣稱全表綠燈"
   }
 }

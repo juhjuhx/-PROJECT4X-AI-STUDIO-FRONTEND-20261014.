@@ -7,9 +7,9 @@
 | R02-001 | Codex | P0 | — | DONE | 4448ade基線／本branch差異 | 恢復Git/來源/權限/ZIP CRC | RECOVERY與32檔/兩ZIP核對 | 續Fresh QA |
 | R02-002 | Codex | P0 | R02-001 | TESTED_PASS | 4448ade基線／本branch差異 | fresh原203/check/build/Browser/Gameplay/Demo/PWA/更新/launcher | 本輪安全baseline摘要；私人raw receipts保留 | release整合後再驗 |
 | R02-003 | Codex | P0 | R02-002 | TESTED_PASS | 4448ade基線／本branch差異 | 完整source snapshot與32檔原bytes不變；歷史path不公開 | PUBLICATION-PROVENANCE／4項RED→GREEN／public-tree gate | review及CI |
-| R02-004 | Codex | P1 | R02-003 | IN_PROGRESS | 4448ade基線／本branch差異 | 正式README/狀態/任務/文件與規則索引 | 本檔、INDEX、AGENTS | 完成跨上下文複核 |
-| R02-005 | Codex | P0 | R02-003 | IN_PROGRESS | 4448ade基線／本branch差異 | 一鍵Demo Gate及PR/main CI；223tests無skip/降門檻 | verify-demo02與收據4項RED→GREEN | 本機整合PASS；獨立review/遠端CI |
-| R02-006 | Codex＋獨立review | P0 | R02-004/R02-005 | TODO | 4448ade基線／本branch差異 | 新branch push/PR URL、無重要blocker、CI對相同SHA | 尚無遠端結果 | review→PR→查CI |
+| R02-004 | Codex | P1 | R02-003 | DONE | 4448ade基線／本branch差異 | 正式README/狀態/任務/文件與規則索引 | 本檔、INDEX、AGENTS | 完成跨上下文複核 |
+| R02-005 | Codex | P0 | R02-003 | TESTED_PASS | 4448ade基線／本branch差異 | 一鍵Demo Gate及PR/main CI；223tests無skip/降門檻 | verify-demo02與收據4項RED→GREEN | 本機整合PASS；獨立review/遠端CI |
+| R02-006 | Codex＋獨立review | P0 | R02-004/R02-005 | IN_PROGRESS | 4448ade基線／本branch差異 | 新branch push/PR URL、無重要blocker、CI對相同SHA | PR1＋review APPROVE；CI執行中 | 查最新SHA CI |
 | R02-007 | Codex | P0 | R02-006 | TODO | 4448ade基線／本branch差異 | 安全merge、merged CI、正式Release/WebZIP下載SHA一致 | RELEASE-STATUS | 全部Gate成立再publish |
 | R02-008 | Codex | P1 | R02-007 | TODO | 4448ade基線／本branch差異 | Desktop相關資料唯讀inventory/worktree/風險/分類 | WORKSPACE-INVENTORY | 先盤點不搬active |
 | R02-009 | Codex | P1 | R02-008 | TODO | 4448ade基線／本branch差異 | 七分區索引/安全可回退歸檔；來源目的SHA | Archive Manifest待產生 | 僅move已證無路徑風險者 |

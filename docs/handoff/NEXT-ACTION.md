@@ -1,6 +1,6 @@
 # NEXT-ACTION
 
-目前：R02-004/005 IN_PROGRESS。下一項執行：release/demo02-playable-web本機一鍵Gate已PASS（223tests/11 Browser/12 Gameplay/4 Demo/PWA離線與更新）。保留完整原歷史追蹤清單後，做獨立review、PR/CI→merge→Release。發布未完成前不能把計畫URL當真發布。
+目前：R02-004 DONE／005 TESTED_PASS／006 IN_PROGRESS。下一項執行：release/demo02-playable-web本機一鍵Gate已PASS（223tests/11 Browser/12 Gameplay/4 Demo/PWA離線與更新）。完整1069原tracked已保留，d6caa389獨立review APPROVE；PR1已建立。核對最新PR SHA的CI→安全merge→merged CI→Release。發布未完成前不能把計畫URL當真發布。
 
 Task權威MASTER-TODO；遠端事實RELEASE-STATUS；產品狀態PROJECT-STATUS入口；文件權威docs/INDEX。先git status/rev-parse及核遠端main，不用舊聊天猜HEAD。
 
