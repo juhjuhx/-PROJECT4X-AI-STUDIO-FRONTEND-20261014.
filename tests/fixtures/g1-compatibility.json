@@ -1,0 +1,162 @@
+{
+  "schema": "g1-compatibility-hashes-1",
+  "origin": "Published Demo02 source cd59f348; core bytes match source manifest",
+  "method": "Real applyCommand sequence; only deterministic synthetic recipes/hashes published, no canonical world stored",
+  "checkpoints": [
+    {
+      "label": "initial",
+      "commands": [],
+      "saveSha256": "925c6a1e2b3cb2e6db1d6f53693aa6f96d132355be729ca053524f668e279471",
+      "replaySha256": "f839c371350e9fb847d4f0b31668b06ab9758ca02a769fa9060a854468285668",
+      "canonicalHash": "783869ac1741e893",
+      "pendingRelic": false
+    },
+    {
+      "label": "pending-relic",
+      "commands": [
+        {
+          "actor": 0,
+          "requestId": "golden-0",
+          "expectedVersion": 0,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-1",
+          "expectedVersion": 1,
+          "action": {
+            "type": "Research",
+            "tech": "pathfinding"
+          }
+        }
+      ],
+      "saveSha256": "06627871a166e28021eacf9d8eb384d912a556b507e468649b264299d20e9fa4",
+      "replaySha256": "2d1942069bc3940291565495e7dd68455319ba67672aeb0d520177ba2c033d34",
+      "canonicalHash": "5ba44208db81641a",
+      "pendingRelic": true
+    },
+    {
+      "label": "researched-and-recruited",
+      "commands": [
+        {
+          "actor": 0,
+          "requestId": "golden-0",
+          "expectedVersion": 0,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-1",
+          "expectedVersion": 1,
+          "action": {
+            "type": "Research",
+            "tech": "pathfinding"
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-2",
+          "expectedVersion": 2,
+          "action": {
+            "type": "ResolveRelic",
+            "choice": "intel"
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-3",
+          "expectedVersion": 3,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          }
+        }
+      ],
+      "saveSha256": "8c3608be31965440697736b97d7b82e4b0741953d09bb009a2a416f008b561ef",
+      "replaySha256": "30d09e3bf9c8982716a9c105063a2668dbffba7ec28c97d84750f902121ea0f6",
+      "canonicalHash": "4bddd5ac4518911d",
+      "pendingRelic": false
+    },
+    {
+      "label": "continued-after-relic",
+      "commands": [
+        {
+          "actor": 0,
+          "requestId": "golden-0",
+          "expectedVersion": 0,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-0",
+            "to": {
+              "x": 3,
+              "y": 2
+            }
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-1",
+          "expectedVersion": 1,
+          "action": {
+            "type": "Research",
+            "tech": "pathfinding"
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-2",
+          "expectedVersion": 2,
+          "action": {
+            "type": "ResolveRelic",
+            "choice": "intel"
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-3",
+          "expectedVersion": 3,
+          "action": {
+            "type": "Recruit",
+            "siteId": "首都-0",
+            "kind": "infantry"
+          }
+        },
+        {
+          "actor": 0,
+          "requestId": "golden-4",
+          "expectedVersion": 4,
+          "action": {
+            "type": "EndTurn"
+          }
+        },
+        {
+          "actor": 1,
+          "requestId": "golden-5",
+          "expectedVersion": 5,
+          "action": {
+            "type": "EndTurn"
+          }
+        }
+      ],
+      "saveSha256": "3a56d692de2811fee4793dc4be6b7fec5014157e87a570ca796a7a78d601e025",
+      "replaySha256": "318801abf5781ca33b2b769836905b4161761f55e1657ca736c44c23a1475f18",
+      "canonicalHash": "141237e629293ec3",
+      "pendingRelic": false
+    }
+  ]
+}

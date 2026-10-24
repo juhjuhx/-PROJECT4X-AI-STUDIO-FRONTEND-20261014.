@@ -1,0 +1,129 @@
+{
+  "schema": "project4x-preview-task1-verification-1",
+  "baseCommit": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+  "status": "TESTED_PASS",
+  "scope": "固定內容定義與發布 G1 相容基準；沒有接入 Core/Session/UI，新玩法尚不可玩",
+  "tests": {
+    "original": 233,
+    "legacyGoldenAdded": 4,
+    "registryAdded": 3,
+    "suite": 240,
+    "failed": 0,
+    "skipped": 0
+  },
+  "results": [
+    {
+      "label": "g1-golden-baseline",
+      "runId": "g1-golden-baseline-20261024-224330-67287481",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "a63644c2a48668170a81d61c6a7a85ef962fb1a93783d06f79c64bbc649e0b2f",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:43:35.373156+00:00",
+      "logSha": "17b81e473edd6d1a10f344bc91fee8e38e6bd329755fde10b02a1a897c5779dd",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "label": "registry-red",
+      "runId": "registry-red-20261024-224425-ddee8a72",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/rulesets.test.ts"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "4f3f923b246d5dcc48169c36827c915af51e536f281a331fee14fc78349948ca",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T14:44:26.464315+00:00",
+      "logSha": "1eb2e17e04a76b2d0d149c902fc24093299a7a66ff3ea71cc289f41d01d3b1e7",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "label": "registry-green",
+      "runId": "registry-green-20261024-224506-b9104a1b",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/rulesets.test.ts",
+        "tests/legacy-compatibility.test.ts"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "c11704c13e87eb2e751184f5aa69f4c301309a7b38381dff4e8fd07e38dcf296",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:45:07.523384+00:00",
+      "logSha": "43c3723732a70ded5654b95b39c226ffcb414f0a0a4d5e15102d55f0cabd22f8",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "label": "registry-unit-suite",
+      "runId": "registry-unit-suite-20261024-224522-80448fb5",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "c11704c13e87eb2e751184f5aa69f4c301309a7b38381dff4e8fd07e38dcf296",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:45:29.562826+00:00",
+      "logSha": "2f66414609610c46faf56d920fd813eade94e99620d7ad714b54f07a63025f25",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "label": "registry-check-fixed",
+      "runId": "registry-check-fixed-20261024-224551-13599e27",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "49d4ef3758fb2280a74374c9c96941ddca290fd57a720f6a2f77dbdc3d620fff",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:45:52.528331+00:00",
+      "logSha": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "label": "registry-build-fixed",
+      "runId": "registry-build-fixed-20261024-224552-4bf5e77f",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "headAtExecution": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
+      "sourceSha256": "49d4ef3758fb2280a74374c9c96941ddca290fd57a720f6a2f77dbdc3d620fff",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:45:54.265207+00:00",
+      "logSha": "6cb30d570182759569be15731dee81b78585506695f55ff2bdd1e3f2dc59498a",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    }
+  ],
+  "manifest": {
+    "src/core/rulesets.ts": "375ac7bb5c2e8a32bd3fb77295e0e31df2b9ae792d02200baaf192636f469bd3",
+    "tests/rulesets.test.ts": "b3cb0d302299444ae20601bc132dfda4e8d9c646aa1593f75acf90957b18cad8",
+    "tests/legacy-compatibility.test.ts": "d28c9e33b06818abb32f8c9ae191f0293b22655cdeddeb7b3b8251ab96e2a9b1",
+    "tests/fixtures/g1-compatibility.json": "8848f65eebb4baabbc3729d04c84c3177a00f412ecf124ee6098c9ac11824f2a"
+  },
+  "limitations": [
+    "Registry RED 是新模組不存在，不是功能性策略反例；Core 四項行為 RED 另屬 Task2",
+    "baseline sandbox EPERM 與一次測試中新增fixture造成source changed保留，未算PASS；凍結重跑通過",
+    "golden僅儲存合成命令recipe與舊版bytes SHA，不公開canonical world；未保存原始world bytes",
+    "數值僅D03-PREVIEW-001隔離批准，不是正式平衡或新Canon",
+    "真人/真機/Alpha維持未驗/PARTIAL",
+    "240 suite 在 legacy test 的診斷 message 從 optional error 改為明確字串前；後續 focused7/check/build 對當前 Task1 bytes 通過，未把兩個 snapshot 宣稱相同。Task2 deliberate RED 尚未納入本 Task1 checkpoint。"
+  ]
+}

@@ -187,5 +187,25 @@
     ],
     "evidence": "本輪實際SKILL.md讀取及DEMO03-V01，融合清單不等於逐一啟用",
     "limits": "OpenCodeReview本機憑證不可用，不重試；無LSP/axe/真機，不宣稱執行"
-  }
+  },
+  "stageRoutes": [
+    {
+      "phase": "Demo03 preview Task1",
+      "skills": [
+        "using-superpowers (canonical Personal Tool Master V3)",
+        "writing-plans",
+        "executing-plans",
+        "test-driven-development",
+        "verification-before-completion",
+        "requesting-code-review",
+        "using-git-worktrees",
+        "codex-engineering-guardrails:code-work",
+        "addyosmani-incremental-implementation",
+        "addyosmani-constraint-driven-development"
+      ],
+      "loaded": true,
+      "workflow": "source→approved spec→isolated plan→G1 golden→registry RED/GREEN→suite/check/build→read-only review",
+      "limitations": "Native worktree tool failed at home cwd; Git fallback. No external hooks/new dependencies installed. No LSP tool available."
+    }
+  ]
 }
