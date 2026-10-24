@@ -1,3 +1,9 @@
+## Demo03 預覽新增配對（舊 G1 不遷移）
+
+目前 core 可重建新局 `demo03-preview-1`，新 Save2 為原世界欄位加 contentHash/generatorVersion；Replay2 為 schema/ruleset/contentHash/generatorVersion/seed/commands/hash。只接受固定 bundle SHA 與 g1-mapgen-1；exact keys、每筆版本/去重/合法性、整局重建和最終 hash 照舊。G1 save1/replay1 禁止額外 metadata 或新兵/新研究，4 個發布版 golden bytes 相同。沒有局中 migration、任意外部包載入或 generator 重新隨機抽樣。
+
+`tests/helpers/preview-journey.ts` 的兩新兵由真 research/recruit/endTurn 命令取得，可 Save/Load/Replay；人工縮減戰鬥 fixture 不冒充合法存檔。格式語意已聚焦驗證，玩家 UI 旅程及平衡仍待 Task5。本節為明確新增版本，以下原格式規格限 G1/歷史。
+
 # 保存、重播、schema與隨機數契約
 
 ## 2026-10-17 Session 邊界補充

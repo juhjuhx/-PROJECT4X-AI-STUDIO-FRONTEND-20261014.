@@ -97,6 +97,7 @@ export type ExportResult =
 
 export type ReplayVerificationResult =
   | { readonly ok: true; readonly verified: true; readonly ruleset: 'g1-ccts-1'; readonly schema: 'project4x-replay-1' }
+  | { readonly ok: true; readonly verified: true; readonly ruleset: 'demo03-preview-1'; readonly schema: 'project4x-replay-2' }
   | { readonly ok: false; readonly error: SessionError };
 
 export type Unsubscribe = () => void;

@@ -1,0 +1,93 @@
+{
+  "schema": "project4x-preview-task3-verification-1",
+  "baseCommit": "6d91550281073d56c573bafb9dc91ab84718fafb",
+  "status": "TESTED_PASS",
+  "tests": 248,
+  "fail": 0,
+  "skip": 0,
+  "results": [
+    {
+      "runId": "preview-persistence-session-red-20261024-225544-ffe817c8",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-persistence.test.ts",
+        "tests/preview-session.test.ts"
+      ],
+      "sourceFingerprint": "e9f14cd9fb550b91c99956ef1b72a9a8e534127ca103c59073a8b4473667fe33",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T14:55:46.275371+00:00",
+      "logSha": "cb78331e14cbc785d3f3f3d5a843e8f729f8273d0f3086c188b5e5ef25a07c05",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-persistence-session-green-20261024-225629-009a4c22",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-persistence.test.ts",
+        "tests/preview-session.test.ts",
+        "tests/legacy-compatibility.test.ts"
+      ],
+      "sourceFingerprint": "ed072779746d3008e1e77b51ba370bbf3a809b33c37ff64c4f02b686d16e196e",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:56:30.459883+00:00",
+      "logSha": "34d66078bd8f5a299592f35fd730985ecfaeefa76ae22fdc4db4472822ce9cbc",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-persistence-session-check-20261024-225630-e6713dac",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "sourceFingerprint": "ed072779746d3008e1e77b51ba370bbf3a809b33c37ff64c4f02b686d16e196e",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:56:32.046387+00:00",
+      "logSha": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-session-suite-20261024-225732-90bcad3e",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "sourceFingerprint": "ed072779746d3008e1e77b51ba370bbf3a809b33c37ff64c4f02b686d16e196e",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:57:44.374570+00:00",
+      "logSha": "66ee29acadb3a8d3a0c45597efb1ca4ef648aed04dd713718a05e9ba724b10e4",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-session-build-20261024-225743-1f364af2",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "sourceFingerprint": "ed072779746d3008e1e77b51ba370bbf3a809b33c37ff64c4f02b686d16e196e",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T14:57:45.083206+00:00",
+      "logSha": "58a7a78d1dca7e310968e73d13d5390efdf11cc9468f50979dea80164d52f6e4",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    }
+  ],
+  "red": "3行為FAIL：Replay仍寫1、Session忽略preview options、import拒絕Save2；負面拒絕原本PASS，未冒充其已證實新版本parser正確。",
+  "scope": "core Save2/Replay2 + Session已實作，UI預覽/新AI偏好/事件仍未接；不宣稱整體Demo03通過。",
+  "limitations": [
+    "沒有任意外掛包或局中遷移",
+    "平衡/真人/真機/現行Full100 UNVERIFIED",
+    "完整分支獨立review仍待後續"
+  ]
+}

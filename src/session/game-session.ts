@@ -1,5 +1,6 @@
 import { applyCommand, createGame, observe, validCommand } from '../core/game';
 import type { Command, GameState } from '../core/types';
+import type { RulesetId } from '../core/rulesets';
 import { serializeGame, exportReplay as serializeReplay } from '../core/persistence';
 import type { AIStatus, ActionRequest, ActionResult, DeepReadonly, GameSessionPort, GameplayPort, LocalPersistencePort, PresentationEvent, SessionErrorCode, SessionSnapshot, SessionStamp, SessionUpdate } from './contracts';
 import { freezePublic } from './immutable';
@@ -10,11 +11,12 @@ import { validateImport } from './persistence';
 import { projectPresentationEvents } from '../presentation/events';
 
 export interface SessionDiagnostic { readonly code: 'LISTENER_EXCEPTION' | 'AI_DECISION_ERROR' | 'AI_COMMAND_REJECTED'; readonly message: string }
-export interface SessionOptions { seed: string; onDiagnostic?: (diagnostic: SessionDiagnostic) => void; scheduler?: Scheduler; aiPolicy?: AIPolicy; reducedMotion?: boolean }
+export interface SessionOptions { seed: string; ruleset?: RulesetId; onDiagnostic?: (diagnostic: SessionDiagnostic) => void; scheduler?: Scheduler; aiPolicy?: AIPolicy; reducedMotion?: boolean }
 export interface SessionPorts { readonly gameplay: GameplayPort; readonly files: LocalPersistencePort; readonly dispose: () => void }
 
 export function createGameSession(options: SessionOptions): SessionPorts {
-  let state = createGame(options.seed);
+  const newGameRuleset = options.ruleset ?? 'g1-ccts-1';
+  let state = createGame(options.seed, newGameRuleset);
   const sessionId = crypto.randomUUID();
   let generation = 0, dirty = false;
   let disposed = false, publishing = false;
@@ -101,7 +103,7 @@ export function createGameSession(options: SessionOptions): SessionPorts {
       typeof request.sessionId !== 'string' || !request.sessionId.length || request.sessionId.length > 256 ||
       !Number.isSafeInteger(request.generation) || request.generation < 0) return fail('INVALID_REQUEST');
     const command: Command = { actor: 0, requestId: request.requestId, expectedVersion: request.expectedVersion, action: request.action };
-    if (!validCommand(command)) return fail('INVALID_REQUEST');
+    if (!validCommand(command, state.ruleset)) return fail('INVALID_REQUEST');
     if (request.sessionId !== sessionId) return fail('SESSION_MISMATCH');
     if (request.generation !== generation) return fail('STALE_GENERATION');
     const result = applyCommand(state, command);
@@ -138,7 +140,7 @@ export function createGameSession(options: SessionOptions): SessionPorts {
   const newGame: GameSessionPort['newGame'] = (seed, expected) => {
     const error = guardStamp(expected); if (error) return fail(error);
     let candidate: GameState;
-    try { candidate = createGame(seed); } catch { return fail('INVALID_REQUEST'); }
+    try { candidate = createGame(seed, newGameRuleset); } catch { return fail('INVALID_REQUEST'); }
     replace(candidate, false); return { ok: true, snapshot };
   };
   function exportFile(kind: 'save' | 'replay'): ReturnType<GameSessionPort['save']> {
@@ -156,7 +158,9 @@ export function createGameSession(options: SessionOptions): SessionPorts {
     const error = guardStamp(expected, false); if (error) return { ok: false, error: sessionError(error) };
     const candidate = validateImport(text, 'replay');
     if (!candidate.ok) return { ok: false, error: sessionError(candidate.code) };
-    return { ok: true, verified: true, ruleset: 'g1-ccts-1', schema: 'project4x-replay-1' };
+    return candidate.state.ruleset === 'g1-ccts-1'
+      ? { ok:true, verified:true, ruleset:'g1-ccts-1', schema:'project4x-replay-1' }
+      : { ok:true, verified:true, ruleset:'demo03-preview-1', schema:'project4x-replay-2' };
   };
   const port: GameSessionPort = {
     getObservation: () => snapshot.observation,
