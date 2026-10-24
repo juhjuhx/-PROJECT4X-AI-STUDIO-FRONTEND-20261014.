@@ -1,0 +1,54 @@
+{"label": "C3-map-red", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ui-map.test.ts"], "startedAt": "2026-10-17T23:49:09.580942+00:00", "snapshotSha256": "7814b7eb69419f8c29a745b8bf98e49f003338baff293e0349068dfb7b29a83a", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "e5bc16fedde9245e29284a4ec954299212089139", "timeoutSeconds": 240}
+✖ C3 地圖：未知owner不畫敵方屋頂或標籤；中立／敵方／己方明確區分 (9.056875ms)
+✖ C3 地圖：異地政治中心用Observation真實名稱，不硬編原首都 (1.749791ms)
+✔ C3 Fog 非干擾：同Observation不同隱藏世界產生完全相同Canvas draw calls (12.405917ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 229.436708
+
+✖ failing tests:
+
+test at tests/ui-map.test.ts:1:1734
+✖ C3 地圖：未知owner不畫敵方屋頂或標籤；中立／敵方／己方明確區分 (9.056875ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(texts(scenes[0]).some(t=>String(t).includes('所有權未知')))
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ui-map.test.ts:36:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/ui-map.test.ts:1:2610
+✖ C3 地圖：異地政治中心用Observation真實名稱，不硬編原首都 (1.749791ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(texts(r.calls).some(t=>String(t).includes('遠岬新城')&&String(t).includes('政治中心')))
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ui-map.test.ts:45:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

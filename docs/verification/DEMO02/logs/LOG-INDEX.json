@@ -1,0 +1,90 @@
+{
+  "scope": "白名單安全raw logs；Browser完整含私人資料的收據/trace留外部，公開只給安全投影與hash",
+  "files": [
+    {
+      "file": "demo-final-unit.txt",
+      "sha256": "32a4ccad0b8c125e7961564825b69987f6c6ead6fff8c9d9331e46bae0f681ca",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "demo-final-check.txt",
+      "sha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "demo-final-build.txt",
+      "sha256": "74005f1dc26c4df3085c483b03cff7358fa5581db7fdf045592771c1042aaf04",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "demo-final-prefix.txt",
+      "sha256": "6dc306333dc4f5253765d4e6180c2d41be63648fb34ea430618a6c015954a511",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "demo-final-d02.txt",
+      "sha256": "8f5cc62835ffc31a69e751f23db7d359dd36dbde3c119c7ea53172c9a2b25fc2",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "demo-dependency-audit.txt",
+      "sha256": "2c05ee6453cc2123a736354e9ddfdc031b0eb8532b13df03ce1451be16b59330",
+      "kind": "原始安全stdout/stderr，內容未改"
+    },
+    {
+      "file": "STATIC-MIME-RED.txt",
+      "sha256": "6654cf3042cda813ec2c5640610bb66018021aad1ce29f369bebba68ff187ea3",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "DEMO-JOURNAL-RED.txt",
+      "sha256": "8826a74bf6b9530999fdf227ecb75567407ca88981d1cb8d0ef53b9e35f559bf",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "DEMO-PERSISTENCE-RED.txt",
+      "sha256": "edebda5068fda1bbedecabd362327e805e62c1fe77ec9a4021da699f6539c049",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "DEMO-PACK-BINDING-RED.txt",
+      "sha256": "8641fbaa103aaa05343634efb1bf6a6dcc59017138624406d8232084f21255c3",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "DEMO-LONG-SEED-RED.txt",
+      "sha256": "87ab37bfd2b5761cadfae592883ef040c5a4d93e217b7e5d007f1c211e962ef4",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "PWA-BUILD-RED.txt",
+      "sha256": "d45b7fd2f3977852d2b45059c22932f444ab161579e9a6bec08a0fd3a0ee095b",
+      "kind": "原始RED證據；不當成PASS"
+    },
+    {
+      "file": "CLEAN-CHECK.txt",
+      "sha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "kind": "原始乾淨還原log；第一次離線ENOTCACHED保留"
+    },
+    {
+      "file": "CLEAN-TEST.txt",
+      "sha256": "7c2828d7a02dc2b44c271784e072e8b8e4eb7fd49a9f3c050f4e5f3f03628262",
+      "kind": "原始乾淨還原log；第一次離線ENOTCACHED保留"
+    },
+    {
+      "file": "CLEAN-BUILD.txt",
+      "sha256": "700837b543f56371572561b1031fb39830175fb3a7a2ecd18ed2389bca6fcc31",
+      "kind": "原始乾淨還原log；第一次離線ENOTCACHED保留"
+    },
+    {
+      "file": "CLEAN-INSTALL.txt",
+      "sha256": "bd497a6cdcadbc8f5d1116ddb48d32002a1c86c9b7c050a3e76fa187a520e80d",
+      "kind": "原始乾淨還原log；第一次離線ENOTCACHED保留"
+    },
+    {
+      "file": "CLEAN-INSTALL-ONLINE.txt",
+      "sha256": "df1f14b1d68ec4da559095ef0060560f0be3bffc4aa7f85a7089f3b6cd022498",
+      "kind": "原始乾淨還原log；第一次離線ENOTCACHED保留"
+    }
+  ]
+}

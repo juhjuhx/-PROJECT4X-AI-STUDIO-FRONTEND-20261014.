@@ -1,0 +1,13 @@
+{
+  "phase": "C5-R4",
+  "baselineCommit": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "AI_SHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+  "portableSnapshot": "e45f3cda4a0ba008a57262f9549cd857cee83cec9189dfb7a5a68773b2fdc196",
+  "status": "PARTIAL",
+  "D02": "TESTED_PASS",
+  "seed010": "TESTED_PASS",
+  "review": "TESTED_PASS",
+  "browserGameplay": "BLOCKED",
+  "details": "C5-R4-TEST-RESULTS.json",
+  "next": "restore enough local QA disk capacity, rerun unchanged qa:gameplay; then C5-R5 controlled full100 planning"
+}

@@ -1,0 +1,57 @@
+{"label": "D3-fresh-test", "cwd": ".", "command": ["npm", "test"], "startedAt": "2026-10-18T04:37:16.820371+00:00", "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": null, "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 test
+> node --import tsx --test tests/*.test.ts tests/*.test.mjs
+
+✔ 產物證據：入口HTML不變但bundle改寫或新增，完整雜湊必須拒絕沿用 (5.30275ms)
+✔ 相同 seed 初始地圖、合法四出生點與 hash 完全確定 (10.237416ms)
+✔ 非法與過期命令保持同一引用及所有資料 (3.083208ms)
+✔ 首己方回合無收入、下一己方回合各據點2金且重設一次 (4.609541ms)
+✔ observation 是副本、未知格與不可見敵兵不外洩 (3.696875ms)
+✔ 成功request同payload重送無副作用，不同payload与stale拒絕 (1.638875ms)
+✔ 斥候移動發現遺跡立即必答；情報依distance/y/x探索最多3地形格 (6.121208ms)
+✔ Move一次但可接Attack；不可穿人、擊殺不自動進格，攻擊結束兵行動 (4.547417ms)
+✔ 中心失守仍流亡；持續據點跨完整敵方EndTurn才可免費建都，不重設兵旗標 (5.014166ms)
+✔ 正常保存與重播完整資料相同，保存拒絕格式、佔位、ledger與未經歷史的竄改 (18.054958ms)
+✔ 遺跡情報不暴露未曾正常看見的據點與遺跡，已探索格不帶敵方owner (3.9825ms)
+✔ 100種seed：四spawn、全部據點與早期遺跡同連通；雙方初始視野無必答 (193.114833ms)
+✔ 尋路不穿越友軍或不可通行地形；完整非法拒絕不留request (0.521584ms)
+✔ 守方己有據點cover1與terraincover1不疊加；敵方據點不給掩護 (1.48ms)
+✔ 據點招募需空格、每回合一次；新兵不能行動；科技費用精確且Farm下次收入 (3.075291ms)
+✔ 收回歷史首都仍流亡、不可自動復辟；新中心須主動且不resetrecruited (0.975708ms)
+✔ hash包含未來規則旗標與兩方知識，明確排除protocolledger (3.190416ms)
+✔ AI僅接Observation，全部決策出自合法候選且不修改view (146.362125ms)
+✔ AI能靠觀測移向敵都、攻擊守軍、占領並在流亡後主動建中心 (3.045166ms)
+✔ 非active與terminalObservation的AI停止返回null (1.228416ms)
+✔ 接受的history entry/action/to深凍結，舊snapshot與原usercommand不能污染新snapshot (3.568ms)
+✔ AI尋目標時不把友軍占位當可穿越，選擇可達繞路而不反覆折返 (0.975209ms)
+✔ AI用遠射完成攻城，保留fresh城旁兵同turn入空城，避免殺守軍→招募永久循環 (3.115167ms)
+✔ 斥候不被補兵戰線吸住，未發現敵都時主動擴大未知觀測 (1.193916ms)
+✔ 獨立協定：格式／權限／版本／越界拒絕，含完整ledger而非只比hash (12.94625ms)
+✔ 獨立fog：遠方敵軍移位／科技／金幣改變不影響玩家payload；observations無可寫共享引用 (11.259166ms)
+✔ 獨立情報：0格只能選金幣；1/2/3格情報不增加surveyed或附敵軍／據點 (29.831375ms)
+✔ 獨立流亡：零單位但仍有據點不淘汰、零金仍續玩且可招募 (3.821167ms)
+✔ 獨立重建：跨完整敵方回合才能免費主動建中心，不復辟／重置旗標或招募 (6.613375ms)
+✔ 獨立淘汰：單位和據點都零才terminal；全玩法命令拒絕 (6.681334ms)
+✔ 獨立保存：拒絕語意錯誤、版本錯誤、snapshot/log錯配，保留原輸入局 (10.486792ms)
+✔ 獨立續局：移動／必答遺跡保存後相同後綴，request重送與replay一致 (40.374542ms)
+✔ 獨立動態fog：最後視野來源死亡後只留靜態記憶，不跟蹤敵軍 (2.556625ms)
+✔ 獨立hash：合法移動旗標／玩家知識／政治中心差異必須改變遊戲hash (4.975459ms)
+✔ 獨立replay：拒絕錯actor、重複request、snapshot/log不一致，proto請求正常roundtrip (9.958ms)
+✔ 獨立AI整合：射手清空守軍後，保留鄰城新鮮步兵同回合進格佔領 (5.711166ms)
+✔ 獨立harness：一個worker錯誤仍收齊其他worker，最後報告保持FAIL (298.277917ms)
+✔ 獨立AI補給：富有的四據點方不因16兵舊上限停止補充遠距戰線 (1.63175ms)
+✔ 獨立AI補給：前沿空據點優先於陣列中第一座後方首都 (1.161875ms)
+✔ 獨立AI戰線：近距離敵方補給據點不能被遠方歷史首都蓋過 (4.392583ms)
+✔ 獨立AI攻城：合擊剛好擊殺時先磨低守軍，保留下一回合的占領者 (6.567625ms)
+✔ 獨立AI追捕：地形全知仍巡查視野外存活者，不提前宣告終局 (255.717583ms)
+✔ 獨立AI遺跡：視野外未確認的舊標記不覆蓋存活者搜尋 (2.233375ms)
+✔ G1實際命令旅程：流亡可選異地建國或故土復國，兩條分支均可保存重播 (259.222333ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1274.9815

@@ -1,0 +1,31 @@
+{
+  "schema": "c5-r4-performance-final-candidate-source-1",
+  "capturedAt": "2026-10-20T05:11:25.912235+00:00",
+  "files": {
+    "frozen/baseline/src/core/ai.ts": {
+      "sha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "bytes": 16025
+    },
+    "frozen/baseline/src/core/game.ts": {
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "bytes": 18193
+    },
+    "frozen/baseline/src/core/types.ts": {
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "bytes": 3393
+    },
+    "frozen/candidate/src/core/ai.ts": {
+      "sha256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+      "bytes": 20762
+    },
+    "frozen/candidate/src/core/game.ts": {
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "bytes": 18193
+    },
+    "frozen/candidate/src/core/types.ts": {
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "bytes": 3393
+    }
+  },
+  "previousRound": "All older evidence preserved without modification."
+}

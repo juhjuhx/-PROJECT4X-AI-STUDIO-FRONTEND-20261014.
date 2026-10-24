@@ -1,0 +1,888 @@
+{
+  "schema_version": "1",
+  "mode": "workspace",
+  "repository": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "total_files": 143,
+  "reviewable_count": 127,
+  "excluded_count": 16,
+  "total_insertions": 14644,
+  "total_deletions": 259,
+  "reviewable_files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1
+    },
+    {
+      "path": "C5-SOURCE-MANIFEST.json",
+      "status": "modified",
+      "insertions": 23,
+      "deletions": 8
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "modified",
+      "insertions": 118,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/C5-VERIFICATION.json",
+      "status": "modified",
+      "insertions": 29,
+      "deletions": 223
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 2
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "insertions": 14,
+      "deletions": 2
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "modified",
+      "insertions": 17,
+      "deletions": 16
+    },
+    {
+      "path": "src/core/ai.ts",
+      "status": "modified",
+      "insertions": 26,
+      "deletions": 3
+    },
+    {
+      "path": "docs/handoff/C5-R2-STALMATE-ROOT-CAUSE.md",
+      "status": "added",
+      "insertions": 58,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-MINIMAL-COUNTEREXAMPLE.json",
+      "status": "added",
+      "insertions": 34,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-TEST-RESULTS.json",
+      "status": "added",
+      "insertions": 1169,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-RED.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-RED.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-final.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-final.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-build.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-check.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-test.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-GREEN.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-RED.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser-report.json",
+      "status": "added",
+      "insertions": 300,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-build.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-check.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay-report.json",
+      "status": "added",
+      "insertions": 6635,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-prefix.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-test.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-build.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-check.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-prefix.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-test.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-GREEN.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-RED.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-GREEN.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-valid.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-valid.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-build.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-check.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-prefix.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-test.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/R1-C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "insertions": 65,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/R1-C5-VERIFICATION.json",
+      "status": "added",
+      "insertions": 238,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/final-prefix-summary.json",
+      "status": "added",
+      "insertions": 80,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/基線敏感性原始腳本.stdin.mjs",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/探索邊界窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 27,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/獨立審查報告.md",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位前版敏感性.stdin.mjs",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位增補審查報告.md",
+      "status": "added",
+      "insertions": 57,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位證據SHA256.json",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位邊界窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 48,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位驗證紀錄.json",
+      "status": "added",
+      "insertions": 97,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷公開證據結構掃描.py",
+      "status": "added",
+      "insertions": 12,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷公開證據結構掃描摘要.json",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核.stdin.mjs",
+      "status": "added",
+      "insertions": 35,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核紀錄.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本獨立審查報告.md",
+      "status": "added",
+      "insertions": 52,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本證據SHA256.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本護欄與末步觀測窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 35,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本驗證紀錄.json",
+      "status": "added",
+      "insertions": 57,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/證據檔案SHA256.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/驗證紀錄.json",
+      "status": "added",
+      "insertions": 96,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/reinforcement-prefix-summary.json",
+      "status": "added",
+      "insertions": 67,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/remaining-failure-analysis.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/seed010-reinforcement-summary.json",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0
+    },
+    {
+      "path": "docs/verification/C5-R2/seed010-two-fix-summary.json",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0
+    },
+    {
+      "path": "scripts/ai-decision-trace.mjs",
+      "status": "added",
+      "insertions": 97,
+      "deletions": 0
+    },
+    {
+      "path": "scripts/ai-endgame-search-check.ts",
+      "status": "added",
+      "insertions": 43,
+      "deletions": 0
+    },
+    {
+      "path": "tests/ai-stalemate.test.ts",
+      "status": "added",
+      "insertions": 103,
+      "deletions": 0
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "docs/verification/C5-R2/OCR-HOST-REVIEW.json",
+      "status": "added",
+      "insertions": 977,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/OCR-preview.json",
+      "status": "added",
+      "insertions": 843,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/OCR-rules.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/基線敏感性原始log.txt",
+      "status": "added",
+      "insertions": 100,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/探索邊界窄驗原始log.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/新增四項回歸原始log.txt",
+      "status": "added",
+      "insertions": 12,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/既有十五項聚焦原始log.txt",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位六項回歸原始log.txt",
+      "status": "added",
+      "insertions": 14,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位前版敏感性原始log.txt",
+      "status": "added",
+      "insertions": 38,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位差異.patch",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位既有聚焦原始log.txt",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位邊界窄驗原始log.txt",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核原始log.txt",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷終盤腳本語法原始log.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷護欄與末步觀測窄驗原始log.txt",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷追蹤腳本語法原始log.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    }
+  ]
+}

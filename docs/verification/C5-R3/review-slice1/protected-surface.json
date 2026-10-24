@@ -1,0 +1,133 @@
+{
+  "baseline": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "trackedSourceFileCount": 42,
+  "manifestSha256": "49e3f40d4c2d6c267334e43f8bb1d1ae1bc1c2c712827bfcc5517a07a70a77c3",
+  "protected": [
+    {
+      "path": "package-lock.json",
+      "baselineSha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "frozenSha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "unchanged": true
+    },
+    {
+      "path": "package.json",
+      "baselineSha256": "7af4232abcd0f27a6bbbb45f3bfcb1296f8274ae1808dca4b135c9466a38b83f",
+      "frozenSha256": "7af4232abcd0f27a6bbbb45f3bfcb1296f8274ae1808dca4b135c9466a38b83f",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/ai-decision-trace.mjs",
+      "baselineSha256": "bfd04bf8a065a233cb90958bf8f2d45838af1381143367f240c79b362836c38d",
+      "frozenSha256": "bfd04bf8a065a233cb90958bf8f2d45838af1381143367f240c79b362836c38d",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/ai-endgame-search-check.ts",
+      "baselineSha256": "913a727ee95e2d2d0d968228907064dfcdccf997263af4e782739ad52d0dc60e",
+      "frozenSha256": "913a727ee95e2d2d0d968228907064dfcdccf997263af4e782739ad52d0dc60e",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/ai-oscillation-check.ts",
+      "baselineSha256": "331dfe16683fe9e57ce432708cdfd03a836148e8e1bb0635e95c96fd52d8b105",
+      "frozenSha256": "331dfe16683fe9e57ce432708cdfd03a836148e8e1bb0635e95c96fd52d8b105",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/artifact-proof.mjs",
+      "baselineSha256": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "frozenSha256": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/browser-check.mjs",
+      "baselineSha256": "426d731d039ed28bb64532785fb30a9a4ad2b3db664eaaabf97019b06b0fae27",
+      "frozenSha256": "426d731d039ed28bb64532785fb30a9a4ad2b3db664eaaabf97019b06b0fae27",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/context-init.mjs",
+      "baselineSha256": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "frozenSha256": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/headless.ts",
+      "baselineSha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "frozenSha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "baselineSha256": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "frozenSha256": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/verify.mjs",
+      "baselineSha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "frozenSha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "unchanged": true
+    },
+    {
+      "path": "src/core/game.ts",
+      "baselineSha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "frozenSha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "unchanged": true
+    },
+    {
+      "path": "src/core/types.ts",
+      "baselineSha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "frozenSha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/ai-driver.ts",
+      "baselineSha256": "b19f1a17372e93640ac7ca7f08a3b65e04f5e2eaf122c4ae2bc1af0858b8740d",
+      "frozenSha256": "b19f1a17372e93640ac7ca7f08a3b65e04f5e2eaf122c4ae2bc1af0858b8740d",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/contracts.ts",
+      "baselineSha256": "c8751a8a43ca2cc8d2a2cbd1f0a8bfd18ac2eac9794d4e093c53e0bed094ae8b",
+      "frozenSha256": "c8751a8a43ca2cc8d2a2cbd1f0a8bfd18ac2eac9794d4e093c53e0bed094ae8b",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/errors.ts",
+      "baselineSha256": "ef689209695a54169fbd6f6c87458b146ba46ef76900c3e6a5bf6cd2a14fdbf5",
+      "frozenSha256": "ef689209695a54169fbd6f6c87458b146ba46ef76900c3e6a5bf6cd2a14fdbf5",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/game-session.ts",
+      "baselineSha256": "a28986cf385b2e7b35a81b9be17e8bfeb83091ed79e6e581666a153c4d6a13d4",
+      "frozenSha256": "a28986cf385b2e7b35a81b9be17e8bfeb83091ed79e6e581666a153c4d6a13d4",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/immutable.ts",
+      "baselineSha256": "82f684610efe4422b2b6e33e13eb443c0b17fa08baebe25ef05da44bca559269",
+      "frozenSha256": "82f684610efe4422b2b6e33e13eb443c0b17fa08baebe25ef05da44bca559269",
+      "unchanged": true
+    },
+    {
+      "path": "src/session/persistence.ts",
+      "baselineSha256": "905f933b124baf1b2e83fac621b6ab3ed2be2246c9e02f44e172e4d239192eaf",
+      "frozenSha256": "905f933b124baf1b2e83fac621b6ab3ed2be2246c9e02f44e172e4d239192eaf",
+      "unchanged": true
+    },
+    {
+      "path": "tsconfig.json",
+      "baselineSha256": "25a9a8b3805cb40bead5e4956a3075224e7c418fc5a98dedba326f8d1996d645",
+      "frozenSha256": "25a9a8b3805cb40bead5e4956a3075224e7c418fc5a98dedba326f8d1996d645",
+      "unchanged": true
+    },
+    {
+      "path": "vite.config.ts",
+      "baselineSha256": "c6c788976ebe37ef8daaebd8cf130c7faea96a80dd1ae1a3641e0a86a61a213b",
+      "frozenSha256": "c6c788976ebe37ef8daaebd8cf130c7faea96a80dd1ae1a3641e0a86a61a213b",
+      "unchanged": true
+    }
+  ]
+}

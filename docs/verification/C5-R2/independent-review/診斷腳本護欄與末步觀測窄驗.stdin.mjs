@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import { readFileSync, realpathSync } from 'node:fs';
+import { resolve, relative, isAbsolute, dirname, basename } from 'node:path';
+import { transform } from 'esbuild';
+import { createGame, observe, applyCommand } from './src/core/game.ts';
+import { chooseAction } from './src/core/ai.ts';
+const root=process.cwd();
+const trace=readFileSync('scripts/ai-decision-trace.mjs','utf8');
+const guardStart=trace.indexOf('const output = process.argv[2];');
+const guardEnd=trace.indexOf('mkdirSync(output',guardStart);
+assert.ok(guardStart>=0&&guardEnd>guardStart);
+const guard=Function('root','process','assert','isAbsolute','relative','realpathSync','resolve','dirname','basename',trace.slice(guardStart,guardEnd)+'return true;');
+const probe=path=>guard(root,{argv:['node','trace',path]},assert,isAbsolute,relative,realpathSync,resolve,dirname,basename);
+assert.throws(()=>probe(undefined));console.log('PASS trace guard rejects missing output');
+assert.throws(()=>probe('relative-output'));console.log('PASS trace guard rejects relative output');
+assert.throws(()=>probe(resolve(root,'private-output-never-created')));console.log('PASS trace guard rejects project output before mkdir');
+assert.throws(()=>probe(resolve(root,'node_modules/.bin/private-output-never-created')));console.log('PASS trace guard realpaths existing parent before rejecting project output');
+assert.equal(probe(resolve(root,'../evidence/C5-R2-independent-review/guard-probe-never-created')),true);console.log('PASS trace guard accepts external output without creating it');
+const original=readFileSync('scripts/ai-endgame-search-check.ts','utf8');
+const start=original.indexOf('let seen = false, commands = 0;');
+const end=original.indexOf('assert.equal(policyHash(), source);',start);
+assert.ok(start>=0&&end>start);
+const loop=original.slice(start,end).replace('commands < 1000','commands < 1');
+const js=(await transform(loop+'\nreturn {state,seen,commands};',{loader:'ts',format:'cjs'})).code;
+// Only a one-command visibility-boundary fixture. Not the central-search run.
+let state=createGame('review-final-observation-boundary');state.terrain.fill('plain');state.sites=[];state.relics=[];state.pendingRelic=null;
+state.units=[{id:'patrol-0',owner:0,kind:'scout',x:2,y:2,hp:7,moved:false,acted:false},{id:'survivor-1',owner:1,kind:'infantry',x:7,y:2,hp:10,moved:false,acted:false}];
+for(const f of state.factions){f.gold=0;f.centerId=null;f.life='exiled';}
+state.explored[0].fill(true);state.surveyed[0].fill(true);state.factions[0].techs=['farm','archery','pathfinding'];state.factions[0].ownTurns=33;
+assert.equal(observe(state,0).units.some(u=>u.owner===1),false);
+const run=Function('state','observe','chooseAction','applyCommand','assert','started',js);
+const result=run(state,observe,chooseAction,applyCommand,assert,performance.now());
+const finalVisible=observe(result.state,0).units.some(u=>u.owner===1);
+assert.equal(result.commands,1);assert.equal(finalVisible,true);assert.equal(result.seen,false);
+console.log('CONFIRMED final-command telemetry gap: commands=1 seen=false finalObservationHasEnemy=true; winner='+result.state.winner);

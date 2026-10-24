@@ -1,0 +1,36 @@
+{
+  "schema": "independent-bounded-performance-1",
+  "units": 64,
+  "movableFresh": 40,
+  "goals": 10,
+  "iterations": 30,
+  "results": [
+    {
+      "slice": "first",
+      "medianMs": 6.474917000000005,
+      "p95Ms": 7.089708000000002,
+      "minMs": 5.9855420000000095,
+      "bfsPerCall": 410,
+      "fallbackUnitsPerCall": 0,
+      "action": {
+        "type": "EndTurn"
+      }
+    },
+    {
+      "slice": "second",
+      "medianMs": 7.90870799999999,
+      "p95Ms": 9.302250000000015,
+      "minMs": 7.51641699999999,
+      "bfsPerCall": 450,
+      "fallbackUnitsPerCall": 40,
+      "action": {
+        "type": "Move",
+        "unitId": "fresh-11",
+        "to": {
+          "x": 11,
+          "y": 2
+        }
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = await realpath(resolve(dirname(fileURLToPath(import.meta.url)), '../dist'));
 const port = Number(process.env.PROJECT4X_PORT || 4173);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('PROJECT4X_PORT 必須介於 1024–65535');
-const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json; charset=utf-8' };
+const mime = { '.ico': 'image/vnd.microsoft.icon', '.webmanifest': 'application/manifest+json', '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json; charset=utf-8' };
 const server = createServer(async (req, res) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Referrer-Policy', 'no-referrer');

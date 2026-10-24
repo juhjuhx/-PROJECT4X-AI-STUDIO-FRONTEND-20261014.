@@ -1,0 +1,18 @@
+{
+  "label": "C5-R4-final-check",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "startedAt": "2026-10-19T13:20:02.228358+00:00",
+  "snapshotSha256": "4bb7291301c46962acf78659ffa2bdbe372a07ff9988620fd9a4195c774ae890",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-19T13:20:03.860903+00:00",
+  "durationSeconds": 1.633,
+  "log": "C5-R4-final-check.log"
+}

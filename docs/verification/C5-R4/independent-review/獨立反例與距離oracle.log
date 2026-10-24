@@ -1,0 +1,29 @@
+{
+  "status": "TESTED_PASS",
+  "maps": 16,
+  "primaryFields": 48,
+  "comparedKnown": 21549,
+  "primaryActionParity": 16,
+  "weightedFields": 16,
+  "blockedSources": 16,
+  "determinismCases": 16,
+  "qaActionParityCases": 17,
+  "crossComponent": {
+    "initialAction": {
+      "type": "Move",
+      "unitId": "left-0",
+      "to": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    "fallbackIds": [
+      "left-0"
+    ],
+    "commandsToReveal": 5,
+    "visibility": "visible"
+  },
+  "fogTwinObservationEquality": true,
+  "seedReadGuard": true,
+  "note": "Small synthetic real-projector cases only; no complete game, benchmark, or full100 claim."
+}

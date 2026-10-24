@@ -102,7 +102,7 @@ site每回合一次；進入下一己回合重設recruited=false。Capture設rec
 
 ## 11. 遺跡
 
-**USER_CONFIRMED＋IMPLEMENTED**：首次在自己的回合可見者取得唯一處置權，AI同樣適用；開局雙方同時可見時依先手。不是抵達格才搶奪。領權後進入canonical pendingRelic，only ResolveRelic合法，不能EndTurn繞過。`game.ts:97–107,132,249–254`；T06/T26/T31。
+**IMPLEMENTED（歷史 RELIC-D1，已被新主創裁決局部覆寫）**：現行 g1-ccts-1 仍以首次己方回合可見者取得唯一處置權，AI同樣適用；開局雙方同時可見時依先手。這是現況，不是最新應實作規則。**USER_CONFIRMED／NOT_IMPLEMENTED**：發現與取得分離、先發現有情報優勢、實際抵達者優先處置；詳 DECISION-REGISTER R01–R03 與 CCTS-SPEC。領權後立即 canonical pendingRelic、only ResolveRelic合法且不能EndTurn繞過的要求繼續有效。`game.ts:97–107,132,249–254`；T06/T26/T31。2026-10-17 C1 只釐清此衝突，沒有改規則。
 
 目前4個安全遺跡固定坐標為第2類工程預設；無危險遺跡。一個pending一次，多處同時可見按relics順序逐個解答。resolved後永久領過，無再生、敵方二次領取或可延後inbox。
 

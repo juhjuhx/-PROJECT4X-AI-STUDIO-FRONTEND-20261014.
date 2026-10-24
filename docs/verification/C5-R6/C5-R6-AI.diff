@@ -1,0 +1,56 @@
+diff --git a/src/core/ai.ts b/src/core/ai.ts
+index 3ea7f3e..4bfbf45 100644
+--- a/src/core/ai.ts
++++ b/src/core/ai.ts
+@@ -39,0 +40,37 @@ export function chooseAction(view: Observation): Action | null {
++    // Preserve the existing recruitment window when a lethal shot remains
++    // available after moving its shooter off a friendly holding.
++    const firingMoveFor = (shot: typeof attacks[number]): Action | undefined => {
++      const unit = owned.find(u => u.id === shot.unitId)!, target = enemies.find(u => u.id === shot.targetId)!;
++      if (ownSites.some(t => same(t, unit)) && view.faction.gold >= UNIT_STATS.infantry.cost
++        && owned.length < Math.max(6, ownSites.length * 8) && damageFor(shot) >= target.hp) {
++        return legal.find(a => a.type === 'Move' && a.unitId === unit.id
++          && distance(a.to, target) <= UNIT_STATS[unit.kind].range && !ownSites.some(t => same(t, a.to)));
++      }
++      return undefined;
++    };
++    // A one-shot support strike can secure a holding only if another fresh
++    // adjacent unit keeps its entry action. Include legal move-then-fire support
++    // before spending that entrant on an otherwise attractive nonlethal shot.
++    const clearances: Action[] = [];
++    for (const target of enemies) {
++      const tile = view.tiles[target.y * view.width + target.x];
++      if (!tile.site || tile.site.owner === view.actor || tile.site.owner === undefined
++        || tile.terrain === null || tile.terrain === 'water' || tile.terrain === 'mountain') continue;
++      const entry = owned.filter(u => !u.moved && !u.acted && distance(u, target) === 1);
++      const preservesEntry = (id: string) => entry.some(u => u.id !== id);
++      for (const attack of attacks) if (attack.targetId === target.id
++        && preservesEntry(attack.unitId) && damageFor(attack) >= target.hp) clearances.push(attack);
++      for (const move of legal) if (move.type === 'Move' && preservesEntry(move.unitId)) {
++        const support = owned.find(u => u.id === move.unitId)!;
++        if (distance(move.to, target) <= UNIT_STATS[support.kind].range
++          && damageFor({ type: 'Attack', unitId: support.id, targetId: target.id }) >= target.hp) clearances.push(move);
++      }
++    }
++    clearances.sort((a, b) => Number(a.type === 'Move') - Number(b.type === 'Move')
++      || compareIds('unitId' in a ? a.unitId : '', 'unitId' in b ? b.unitId : '')
++      || (a.type === 'Move' && b.type === 'Move' ? a.to.y - b.to.y || a.to.x - b.to.x : 0)
++      || (a.type === 'Attack' && b.type === 'Attack' ? compareIds(a.targetId, b.targetId) : 0));
++    if (clearances[0]) {
++      const clearance = clearances[0];
++      return copyAction(clearance.type === 'Attack' ? firingMoveFor(clearance) ?? clearance : clearance);
++    }
+@@ -68,11 +105,2 @@ export function chooseAction(view: Observation): Action | null {
+-      const shot = attacks[0], unit = owned.find(u => u.id === shot.unitId)!, target = enemies.find(u => u.id === shot.targetId)!;
+-      // Shooting in place consumes movement and blocks reinforcement. When the
+-      // same kill remains legal after moving off a holding, free its spawn cell
+-      // first. No new rule, cost, memory, or guessed hidden movement is needed.
+-      if (ownSites.some(t => same(t, unit)) && view.faction.gold >= UNIT_STATS.infantry.cost
+-        && owned.length < Math.max(6, ownSites.length * 8) && damageFor(shot) >= target.hp) {
+-        const firingMove = legal.find(a => a.type === 'Move' && a.unitId === unit.id
+-          && distance(a.to, target) <= UNIT_STATS[unit.kind].range && !ownSites.some(t => same(t, a.to)));
+-        if (firingMove) return copyAction(firingMove);
+-      }
+-      return copyAction(shot);
++      const shot = attacks[0];
++      return copyAction(firingMoveFor(shot) ?? shot);

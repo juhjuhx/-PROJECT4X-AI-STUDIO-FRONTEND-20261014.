@@ -1,0 +1,54 @@
+{
+  "seed": "獨立QA-010",
+  "status": "COMPLETE",
+  "winner": 0,
+  "turns": 535,
+  "fullRounds": 267,
+  "commands": 15418,
+  "hash": "3fb38074947af907",
+  "milliseconds": 142676,
+  "metrics": {
+    "actions": {
+      "Move": 11386,
+      "Attack": 2703,
+      "Capture": 19,
+      "Recruit": 763,
+      "Research": 6,
+      "ResolveRelic": 4,
+      "EstablishCapital": 3,
+      "EndTurn": 534
+    },
+    "relicGold": 2,
+    "relicIntel": 2,
+    "exileEntries": 4,
+    "centersEstablished": 3,
+    "eliminations": 1,
+    "maxUnits": 66
+  },
+  "timing": {
+    "observeMs": 10998,
+    "aiMs": 23051,
+    "applyMs": 36668
+  },
+  "terminalSaveReplayChecked": true,
+  "finalLife": [
+    "active",
+    "eliminated"
+  ],
+  "failure": null,
+  "ruleset": "g1-ccts-1",
+  "limits": {
+    "maxTurns": 800,
+    "maxCommands": 40000,
+    "harnessOnly": true,
+    "noGameClockOrSyntheticWinner": true
+  },
+  "sourceUnchanged": true,
+  "methodUnchanged": true,
+  "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+  "privateReportSha256": "8060936601b1aeb64384f91b10f9cdf2f84d95be2943dce64169a59f3150792f",
+  "privateReport": "../evidence/C5-R4-private/seed010-extended.json; NOT committed; canonical payload prohibited",
+  "harnessAggregateStatus": "PARTIAL",
+  "explanation": "一局 COMPLETE；harness PARTIAL 是非100局彙總狀態，不是 full100 PASS。",
+  "AI_SHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e"
+}

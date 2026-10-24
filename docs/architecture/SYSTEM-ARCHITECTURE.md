@@ -1,5 +1,10 @@
 # 系統架構：霧境初航 0.1.0
 
+## 2026-10-17 C2 現行邊界
+
+GameSession 現在獨占 canonical GameState，唯一 reducer 仍 src/core/game.ts:applyCommand。main 為 composition root，只保留 UI view cache／selection，透過 GameplayPort 提意圖；檔案 controls 另取 LocalPersistencePort。session/ai-driver 只收 actor1 Observation，presentation/events 只讀 actor0 前後 Observation 及合法 own receipt，UI/map 只收凍結的可見資料。load 先 core 完整驗證再 replace，Save/Replay 不交 HUD。正式 runtime API、模組與證據見 [FRONTEND-CORE-CONTRACT](../contracts/FRONTEND-CORE-CONTRACT.md) 和 [C2-IMPLEMENTATION-STATUS](../handoff/C2-IMPLEMENTATION-STATUS.md)。以下為原封存架構與 source 行號，凡提 main 持 state／driver 者皆屬 C2 前歷史。
+
+
 本文件盤點封存來源，沒有變更產品。核心來源為 `src/core/{types,game,ai,persistence}.ts`；完整具名測試映射見 [FEATURE-MATRIX](../handoff/FEATURE-MATRIX.md)。文件中的 IMPLEMENTED 是源碼落地狀態；執行證據與真人可玩性分別見 [IMPLEMENTATION-STATUS](../handoff/IMPLEMENTATION-STATUS.md)。
 
 ## 權威與依賴

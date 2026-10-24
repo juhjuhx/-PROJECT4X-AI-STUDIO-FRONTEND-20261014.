@@ -1,0 +1,312 @@
+{"label": "C5-mobile-traffic-prefix", "cwd": ".", "command": ["npm", "run", "qa:ai:oscillation"], "startedAt": "2026-10-18T12:28:28.791267+00:00", "snapshotSha256": "e441aec7197b365eb7e0f80dfc0e210892963c0aeb0b81e4e4688212849021ca", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 qa:ai:oscillation
+> node --import tsx scripts/ai-oscillation-check.ts
+
+{
+  "schema": "project4x-ai-oscillation-1",
+  "seed": "獨立QA-010",
+  "maxCommands": 1100,
+  "commands": 1100,
+  "status": "TESTED_FAIL",
+  "scope": "six consecutive unit Moves alternating two cells, no new exploration/Attack/Capture or HP change; finite generated prefix only",
+  "policyBoundary": "chooseAction(observe(state, actor))",
+  "sourceStart": {
+    "src/core/ai.ts": "abe068dbb8bb92a26fc661006eff315bd62b5ebd098ce1a2dc9a23dbcdc455c2",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+  },
+  "milliseconds": 3290,
+  "loops": [
+    {
+      "unit": "0:兵-31",
+      "moves": [
+        {
+          "command": 459,
+          "turn": 35,
+          "from": {
+            "x": 3,
+            "y": 6
+          },
+          "to": {
+            "x": 4,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 502,
+          "turn": 37,
+          "from": {
+            "x": 4,
+            "y": 6
+          },
+          "to": {
+            "x": 3,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 552,
+          "turn": 39,
+          "from": {
+            "x": 3,
+            "y": 6
+          },
+          "to": {
+            "x": 4,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 597,
+          "turn": 41,
+          "from": {
+            "x": 4,
+            "y": 6
+          },
+          "to": {
+            "x": 3,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 648,
+          "turn": 43,
+          "from": {
+            "x": 3,
+            "y": 6
+          },
+          "to": {
+            "x": 4,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 703,
+          "turn": 45,
+          "from": {
+            "x": 4,
+            "y": 6
+          },
+          "to": {
+            "x": 3,
+            "y": 6
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        }
+      ]
+    },
+    {
+      "unit": "0:兵-0",
+      "moves": [
+        {
+          "command": 458,
+          "turn": 35,
+          "from": {
+            "x": 4,
+            "y": 7
+          },
+          "to": {
+            "x": 5,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 503,
+          "turn": 37,
+          "from": {
+            "x": 5,
+            "y": 7
+          },
+          "to": {
+            "x": 4,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 551,
+          "turn": 39,
+          "from": {
+            "x": 4,
+            "y": 7
+          },
+          "to": {
+            "x": 5,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 598,
+          "turn": 41,
+          "from": {
+            "x": 5,
+            "y": 7
+          },
+          "to": {
+            "x": 4,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 645,
+          "turn": 43,
+          "from": {
+            "x": 4,
+            "y": 7
+          },
+          "to": {
+            "x": 5,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        },
+        {
+          "command": 704,
+          "turn": 45,
+          "from": {
+            "x": 5,
+            "y": 7
+          },
+          "to": {
+            "x": 4,
+            "y": 7
+          },
+          "hp": 10,
+          "newlyKnown": 0
+        }
+      ]
+    },
+    {
+      "unit": "1:兵-34",
+      "moves": [
+        {
+          "command": 735,
+          "turn": 46,
+          "from": {
+            "x": 19,
+            "y": 16
+          },
+          "to": {
+            "x": 18,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        },
+        {
+          "command": 794,
+          "turn": 48,
+          "from": {
+            "x": 18,
+            "y": 16
+          },
+          "to": {
+            "x": 19,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        },
+        {
+          "command": 846,
+          "turn": 50,
+          "from": {
+            "x": 19,
+            "y": 16
+          },
+          "to": {
+            "x": 18,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        },
+        {
+          "command": 913,
+          "turn": 52,
+          "from": {
+            "x": 18,
+            "y": 16
+          },
+          "to": {
+            "x": 19,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        },
+        {
+          "command": 964,
+          "turn": 54,
+          "from": {
+            "x": 19,
+            "y": 16
+          },
+          "to": {
+            "x": 18,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        },
+        {
+          "command": 1022,
+          "turn": 56,
+          "from": {
+            "x": 18,
+            "y": 16
+          },
+          "to": {
+            "x": 19,
+            "y": 16
+          },
+          "hp": 7,
+          "newlyKnown": 0
+        }
+      ]
+    }
+  ],
+  "limitations": "Does not establish global causality, completion, or full100 rate. Output is QA-only; never a HUD data source."
+}
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: 固定生成prefix出現六次無探索兩格往返；AI尚未修復
+
+3 !== 0
+
+    at <anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/scripts/ai-oscillation-check.ts:69:8)
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at async node:internal/modules/esm/loader:650:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.10.0

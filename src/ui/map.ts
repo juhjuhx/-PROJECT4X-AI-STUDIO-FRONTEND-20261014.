@@ -1,13 +1,17 @@
 import type { KnownTile, Observation, Point, Unit } from '../core/types';
+import type { DeepReadonly } from '../session/contracts';
 import { UNIT_STATS } from '../core/types';
 
 type MapSelection = { tile: Point | null; unitId: string | null };
 type Pointer = { x: number; y: number };
 
-/** The atlas receives only the player's projected knowledge. It never owns game state. */
+/**
+ * WorldMap: 2.5D 等角地圖 Canvas2D 渲染器
+ * 依據專案邊界：僅接收玩家投影的 Observation，絕不存取或修改 GameState 核心真相。
+ */
 export class WorldMap {
   private readonly ctx: CanvasRenderingContext2D;
-  private view: Observation | null = null;
+  private view: DeepReadonly<Observation> | null = null;
   private selection: MapSelection = { tile: null, unitId: null };
   private width = 1;
   private height = 1;
@@ -19,6 +23,7 @@ export class WorldMap {
   private readonly tileW = 76;
   private readonly tileH = 42;
   private readonly observer: ResizeObserver;
+  private hoverPoint: Point | null = null;
 
   constructor(private readonly canvas: HTMLCanvasElement, private readonly onSelect: (point: Point) => void) {
     const ctx = canvas.getContext('2d');
@@ -31,14 +36,16 @@ export class WorldMap {
     canvas.addEventListener('pointermove', (event) => this.pointerMove(event));
     canvas.addEventListener('pointerup', (event) => this.pointerUp(event));
     canvas.addEventListener('pointercancel', (event) => this.pointerUp(event, true));
+    canvas.addEventListener('pointerleave', () => { this.hoverPoint = null; this.requestDraw(); });
     canvas.addEventListener('wheel', (event) => {
       event.preventDefault();
+      event.stopPropagation();
       const r = canvas.getBoundingClientRect();
       this.zoomBy(Math.exp(-event.deltaY * 0.0015), { x: event.clientX - r.left, y: event.clientY - r.top });
     }, { passive: false });
   }
 
-  update(view: Observation, selection: MapSelection): void {
+  update(view: DeepReadonly<Observation>, selection: MapSelection): void {
     const first = this.view === null;
     this.view = view;
     this.selection = selection;
@@ -69,12 +76,23 @@ export class WorldMap {
 
   zoomBy(factor: number, anchor?: Pointer): void {
     const before = this.camera.zoom;
-    this.camera.zoom = Math.max(0.24, Math.min(2.2, before * factor));
-    if (anchor) {
-      this.camera.x += (anchor.x - this.width / 2) * (1 / before - 1 / this.camera.zoom);
-      this.camera.y += (anchor.y - this.height / 2) * (1 / before - 1 / this.camera.zoom);
-    }
+    this.camera.zoom = Math.max(0.24, Math.min(2.4, before * factor));
+    // Maintain current focus center (screen center) when zooming with +/- buttons
+    const a = anchor ?? { x: this.width / 2, y: this.height / 2 };
+    this.camera.x += (a.x - this.width / 2) * (1 / before - 1 / this.camera.zoom);
+    this.camera.y += (a.y - this.height / 2) * (1 / before - 1 / this.camera.zoom);
     this.requestDraw();
+  }
+
+  getCamera(): { x: number; y: number; zoom: number } {
+    return { ...this.camera };
+  }
+
+  screenToWorld(p: Pointer): Pointer {
+    return {
+      x: (p.x - this.width / 2) / this.camera.zoom + this.camera.x,
+      y: (p.y - this.height / 2) / this.camera.zoom + this.camera.y,
+    };
   }
 
   private resize(): void {
@@ -120,8 +138,13 @@ export class WorldMap {
   }
 
   private pointerMove(event: PointerEvent): void {
-    if (!this.pointers.has(event.pointerId)) return;
     const p = this.pointerPosition(event);
+    const gridP = this.pointAt(p);
+    if (gridP?.x !== this.hoverPoint?.x || gridP?.y !== this.hoverPoint?.y) {
+      this.hoverPoint = gridP;
+      if (!this.gesture?.moved) this.requestDraw();
+    }
+    if (!this.pointers.has(event.pointerId)) return;
     this.pointers.set(event.pointerId, p);
     if (this.pointers.size > 1) {
       const ps = [...this.pointers.values()];
@@ -129,7 +152,7 @@ export class WorldMap {
       if (this.pinchDistance > 0) this.zoomBy(distance / this.pinchDistance, { x: (ps[0].x + ps[1].x) / 2, y: (ps[0].y + ps[1].y) / 2 });
       this.pinchDistance = distance;
     } else if (this.gesture) {
-      if (Math.hypot(p.x - this.gesture.origin.x, p.y - this.gesture.origin.y) > 7) this.gesture.moved = true;
+      if (Math.hypot(p.x - this.gesture.origin.x, p.y - this.gesture.origin.y) > 6) this.gesture.moved = true;
       if (this.gesture.moved) {
         this.camera.x -= (p.x - this.gesture.last.x) / this.camera.zoom;
         this.camera.y -= (p.y - this.gesture.last.y) / this.camera.zoom;
@@ -152,6 +175,7 @@ export class WorldMap {
       const point = [...this.pointers.values()][0];
       this.gesture = { origin: point, last: point, moved: true };
     }
+    this.requestDraw();
   }
 
   private requestDraw(): void {
@@ -175,159 +199,533 @@ export class WorldMap {
     this.polygon([[x, y - h], [x + w, y], [x, y + h], [x - w, y]], fill, stroke, lineWidth);
   }
 
-  private circle(x: number, y: number, radius: number, fill: string, stroke?: string): void {
-    this.ctx.beginPath(); this.ctx.arc(x, y, radius, 0, Math.PI * 2);
-    this.ctx.fillStyle = fill; this.ctx.fill();
-    if (stroke) { this.ctx.strokeStyle = stroke; this.ctx.lineWidth = 1.5; this.ctx.stroke(); }
+  private circle(x: number, y: number, radius: number, fill: string, stroke?: string, lineWidth = 1.5): void {
+    this.ctx.beginPath();
+    this.ctx.arc(x, y, radius, 0, Math.PI * 2);
+    this.ctx.fillStyle = fill;
+    this.ctx.fill();
+    if (stroke) {
+      this.ctx.strokeStyle = stroke;
+      this.ctx.lineWidth = lineWidth;
+      this.ctx.stroke();
+    }
   }
 
   private draw(): void {
     const c = this.ctx;
     c.clearRect(0, 0, this.width, this.height);
-    const bg = c.createRadialGradient(this.width * 0.45, this.height * 0.4, 10, this.width * 0.5, this.height * 0.5, this.width * 0.8);
-    bg.addColorStop(0, '#2e4c45'); bg.addColorStop(1, '#172e2d');
-    c.fillStyle = bg; c.fillRect(0, 0, this.width, this.height);
+
+    // Deep atmospheric celestial mist background (Diorama miniature tabletop setting)
+    const bg = c.createRadialGradient(
+      this.width * 0.48,
+      this.height * 0.42,
+      20,
+      this.width * 0.5,
+      this.height * 0.5,
+      Math.max(this.width, this.height) * 0.92
+    );
+    bg.addColorStop(0, '#1d342d');
+    bg.addColorStop(0.45, '#142520');
+    bg.addColorStop(1, '#0b1512');
+    c.fillStyle = bg;
+    c.fillRect(0, 0, this.width, this.height);
+
+    // Subtle table grain vignette lines
+    c.strokeStyle = 'rgba(215, 230, 205, 0.025)';
+    c.lineWidth = 1;
+    for (let gy = 24; gy < this.height; gy += 48) {
+      c.beginPath();
+      c.moveTo(0, gy);
+      c.lineTo(this.width, gy);
+      c.stroke();
+    }
+
     if (!this.view) return;
+
     c.save();
     c.translate(this.width / 2, this.height / 2);
     c.scale(this.camera.zoom, this.camera.zoom);
     c.translate(-this.camera.x, -this.camera.y);
+
+    // Isometric depth sorting (back to front: row + col)
     const tiles = [...this.view.tiles].sort((a, b) => (a.x + a.y) - (b.x + b.y) || a.x - b.x);
     const moveKeys = new Set(this.view.legalActions.flatMap((a) => a.type === 'Move' && a.unitId === this.selection.unitId ? [`${a.to.x},${a.to.y}`] : []));
     const targetIds = new Set(this.view.legalActions.flatMap((a) => a.type === 'Attack' && a.unitId === this.selection.unitId ? [a.targetId] : []));
     const unitMap = new Map(this.view.units.map((u) => [`${u.x},${u.y}`, u]));
+
     for (const tile of tiles) {
       const p = this.project(tile);
       const sx = (p.x - this.camera.x) * this.camera.zoom + this.width / 2;
       const sy = (p.y - this.camera.y) * this.camera.zoom + this.height / 2;
-      if (sx < -100 || sx > this.width + 100 || sy < -130 || sy > this.height + 100) continue;
+      if (sx < -120 || sx > this.width + 120 || sy < -160 || sy > this.height + 120) continue;
+
       this.drawTile(tile, p);
       const key = `${tile.x},${tile.y}`;
+
+      // Move Destination Beacon (Golden ancient compass runic glyph)
       if (moveKeys.has(key)) {
-        this.diamond(p.x, p.y, 'rgba(235,223,160,.16)', '#e4ce8d', 1.5, 4);
-        this.circle(p.x, p.y + 3, 3, '#f1dca1');
+        this.diamond(p.x, p.y, 'rgba(240, 222, 142, 0.28)', '#f2db8a', 2.2, 2);
+        this.circle(p.x, p.y, 4.5, '#fff4cc', '#c29d47', 1.6);
+        // Cardinal pointers
+        c.strokeStyle = '#f5df94';
+        c.lineWidth = 1.2;
+        c.beginPath();
+        c.moveTo(p.x - 8, p.y); c.lineTo(p.x + 8, p.y);
+        c.moveTo(p.x, p.y - 5); c.lineTo(p.x, p.y + 5);
+        c.stroke();
       }
+
+      // Hover Tile indicator (Tactical faint grid highlight)
+      if (this.hoverPoint && this.hoverPoint.x === tile.x && this.hoverPoint.y === tile.y && !moveKeys.has(key)) {
+        this.diamond(p.x, p.y, 'rgba(255, 255, 255, 0.09)', 'rgba(235, 240, 215, 0.5)', 1.2, 1);
+      }
+
+      // Selection Marker (Chiseled Golden Tactical Double Frame)
       if (this.selection.tile?.x === tile.x && this.selection.tile?.y === tile.y) {
-        this.diamond(p.x, p.y, 'rgba(228,179,92,.12)', '#f3c478', 3, 1);
+        this.diamond(p.x, p.y, 'rgba(242, 194, 98, 0.24)', '#f8ce6d', 2.8, 1);
+        this.diamond(p.x, p.y, 'transparent', '#fff2cf', 1.2, 4);
       }
+
       if (tile.visibility !== 'unknown') {
         this.drawScenery(tile, p);
         if (tile.site) this.drawSite(tile, p);
         if (tile.relic && !tile.relic.resolved) this.drawRelic(p);
         const unit = unitMap.get(key);
         if (unit) this.drawUnit(unit, p, targetIds.has(unit.id));
-        if (tile.visibility === 'explored') this.diamond(p.x, p.y, 'rgba(19,43,42,.33)');
+
+        // Explored fog veil (historical cartographic memory ink wash)
+        if (tile.visibility === 'explored') {
+          this.diamond(p.x, p.y, 'rgba(11, 23, 20, 0.46)');
+          // Fine antique hatching lines
+          c.strokeStyle = 'rgba(180, 195, 175, 0.12)';
+          c.lineWidth = 0.8;
+          c.beginPath();
+          c.moveTo(p.x - 18, p.y); c.lineTo(p.x + 18, p.y);
+          c.moveTo(p.x - 9, p.y - 4); c.lineTo(p.x + 9, p.y + 4);
+          c.stroke();
+        }
       }
     }
+
     c.restore();
+
     this.drawCompass();
-    c.font = '12px ui-monospace, monospace'; c.fillStyle = '#b7c6b3';
-    c.textAlign = 'left'; c.fillText(`24 × 24   /   ${Math.round(this.camera.zoom * 100)}%`, 20, this.height - 20);
+    this.drawMiniOverlay();
   }
 
-  private drawTile(tile: KnownTile, p: Point): void {
-    const palette: Record<string, string> = { plain: '#aab58b', forest: '#779783', hill: '#adb294', mountain: '#929d93', water: '#648f91' };
+  private drawTile(tile: DeepReadonly<KnownTile>, p: Point): void {
     const unknown = tile.visibility === 'unknown';
-    const fill = unknown ? '#2b4941' : palette[tile.terrain ?? 'plain'];
-    this.polygon([[p.x - 38, p.y], [p.x, p.y + 21], [p.x, p.y + 29], [p.x - 38, p.y + 8]], unknown ? '#233e38' : '#67735a');
-    this.polygon([[p.x, p.y + 21], [p.x + 38, p.y], [p.x + 38, p.y + 8], [p.x, p.y + 29]], unknown ? '#203b36' : '#526951');
-    this.diamond(p.x, p.y, fill, unknown ? '#38564a' : '#bac39f', 0.7);
+    const c = this.ctx;
+
     if (unknown) {
-      const n = (tile.x * 17 + tile.y * 31) % 7;
-      this.ctx.strokeStyle = 'rgba(137,158,125,.18)'; this.ctx.lineWidth = 1;
-      this.ctx.beginPath(); this.ctx.ellipse(p.x + n - 3, p.y - 3, 16, 5, 0, Math.PI, 2 * Math.PI); this.ctx.stroke();
-      this.ctx.beginPath(); this.ctx.ellipse(p.x - n + 3, p.y + 3, 11, 3, 0, 0, Math.PI); this.ctx.stroke();
-    } else if (tile.terrain === 'water') {
-      this.ctx.strokeStyle = '#abc3b3'; this.ctx.lineWidth = 1;
-      for (let i = -1; i <= 1; i++) { this.ctx.beginPath(); this.ctx.moveTo(p.x - 10 + i * 3, p.y + i * 6); this.ctx.lineTo(p.x + 11 + i * 3, p.y + i * 6 - 1); this.ctx.stroke(); }
-    } else if (tile.terrain === 'plain') {
-      this.ctx.strokeStyle = '#899c6c'; this.ctx.lineWidth = 1;
-      this.ctx.beginPath(); this.ctx.moveTo(p.x - 16, p.y + 3); this.ctx.lineTo(p.x - 17, p.y - 1); this.ctx.moveTo(p.x - 14, p.y + 3); this.ctx.lineTo(p.x - 12, p.y); this.ctx.stroke();
+      // 3D Isometric Unknown Tile Slab (Deep Obsidian Tabletop Pedestal)
+      this.polygon([[p.x - 38, p.y], [p.x, p.y + 21], [p.x, p.y + 31], [p.x - 38, p.y + 10]], '#172924');
+      this.polygon([[p.x, p.y + 21], [p.x + 38, p.y], [p.x + 38, p.y + 10], [p.x, p.y + 31]], '#111e1a');
+      this.diamond(p.x, p.y, '#1f3630', '#29453d', 1);
+
+      // Arcane Cloud Mist & Constellation Swirl
+      const seed = (tile.x * 23 + tile.y * 37) % 11;
+      c.strokeStyle = 'rgba(164, 188, 155, 0.26)';
+      c.lineWidth = 1.2;
+      c.beginPath();
+      c.arc(p.x - 4 + seed, p.y - 2, 8, 0.2 * Math.PI, 1.4 * Math.PI);
+      c.stroke();
+      c.beginPath();
+      c.arc(p.x + 5 - (seed % 5), p.y + 3, 7, 1.1 * Math.PI, 2.2 * Math.PI);
+      c.stroke();
+      if (seed % 3 === 0) {
+        c.fillStyle = 'rgba(220, 235, 200, 0.42)';
+        c.beginPath();
+        c.arc(p.x + 2, p.y - 1, 1.6, 0, Math.PI * 2);
+        c.fill();
+      }
+      return;
+    }
+
+    // Known Visible/Explored Terrain (Grounded Diorama Palette)
+    const terrain = tile.terrain ?? 'plain';
+    const slabColors: Record<string, [string, string, string]> = {
+      plain: ['#9db07e', '#6d7f55', '#556641'],
+      forest: ['#6a8d76', '#496653', '#395343'],
+      hill: ['#a6ad8f', '#788162', '#5e674b'],
+      mountain: ['#88988e', '#5e6f66', '#495850'],
+      water: ['#598a96', '#3b6672', '#2c515c'],
+    };
+
+    const [topFill, leftSide, rightSide] = slabColors[terrain] ?? slabColors.plain;
+
+    // Front-left facet (Lit morning sun facet)
+    this.polygon([[p.x - 38, p.y], [p.x, p.y + 21], [p.x, p.y + 31], [p.x - 38, p.y + 10]], leftSide);
+    // Front-right facet (Shaded bedrock facet)
+    this.polygon([[p.x, p.y + 21], [p.x + 38, p.y], [p.x + 38, p.y + 10], [p.x, p.y + 31]], rightSide);
+
+    // Bedrock strata fissure line
+    c.strokeStyle = 'rgba(0, 0, 0, 0.18)';
+    c.lineWidth = 1;
+    c.beginPath();
+    c.moveTo(p.x - 38, p.y + 5); c.lineTo(p.x, p.y + 26); c.lineTo(p.x + 38, p.y + 5);
+    c.stroke();
+
+    // Top Diamond Slab Face
+    this.diamond(p.x, p.y, topFill, 'rgba(240, 245, 225, 0.52)', 1);
+
+    // Decorative procedural ground details
+    if (terrain === 'water') {
+      // Shoreline gentle foam ripples and surface depth
+      c.strokeStyle = 'rgba(215, 242, 246, 0.6)';
+      c.lineWidth = 1.3;
+      c.lineCap = 'round';
+      for (let i = -1; i <= 1; i++) {
+        c.beginPath();
+        c.moveTo(p.x - 15 + i * 4, p.y + i * 5);
+        c.lineTo(p.x + 11 + i * 4, p.y + i * 5 - 1.5);
+        c.stroke();
+      }
+      c.lineCap = 'butt';
+    } else if (terrain === 'plain') {
+      // Stylized grass blades & clover spots
+      c.strokeStyle = '#6b8253';
+      c.lineWidth = 1.5;
+      c.beginPath();
+      c.moveTo(p.x - 12, p.y + 4); c.lineTo(p.x - 14, p.y - 2);
+      c.moveTo(p.x - 10, p.y + 4); c.lineTo(p.x - 9, p.y - 1);
+      c.stroke();
+      c.fillStyle = '#b7c79e';
+      c.beginPath();
+      c.arc(p.x + 11, p.y - 2, 1.5, 0, Math.PI * 2);
+      c.fill();
     }
   }
 
-  private drawScenery(tile: KnownTile, p: Point): void {
+  private drawScenery(tile: DeepReadonly<KnownTile>, p: Point): void {
+    const c = this.ctx;
     if (tile.terrain === 'forest') {
-      for (const [dx, dy, h] of [[-16, -1, 23], [5, -5, 31], [19, 5, 22]]) {
-        this.ctx.fillStyle = '#536f54'; this.ctx.fillRect(p.x + dx - 1.5, p.y + dy - 6, 3, 9);
-        this.polygon([[p.x + dx, p.y + dy - h], [p.x + dx + 10, p.y + dy - 5], [p.x + dx - 10, p.y + dy - 5]], '#305d4c');
-        this.polygon([[p.x + dx, p.y + dy - h], [p.x + dx - 10, p.y + dy - 5], [p.x + dx, p.y + dy - 8]], '#47775a');
+      // 3D Multi-tiered low-poly pine trees with shaded trunks & directional light
+      const trees = [
+        { dx: -15, dy: 0, h: 23, r: 8.5 },
+        { dx: 4, dy: -6, h: 29, r: 10.5 },
+        { dx: 17, dy: 4, h: 22, r: 7.5 },
+      ];
+      for (const t of trees) {
+        const tx = p.x + t.dx;
+        const ty = p.y + t.dy;
+        // Shadow puddle
+        c.fillStyle = 'rgba(18, 38, 28, 0.32)';
+        c.beginPath();
+        c.ellipse(tx, ty + 1, t.r + 2, 4, 0, 0, Math.PI * 2);
+        c.fill();
+
+        // Wood trunk
+        c.fillStyle = '#423321';
+        c.fillRect(tx - 1.5, ty - 6, 3, 9);
+
+        // Lower tier
+        this.polygon([[tx, ty - t.h * 0.65], [tx + t.r, ty - 4], [tx - t.r, ty - 4]], '#284f3f');
+        this.polygon([[tx, ty - t.h * 0.65], [tx + t.r, ty - 4], [tx, ty - 2]], '#1e3e31');
+        // Upper tier (sunlit peak)
+        this.polygon([[tx, ty - t.h], [tx + t.r * 0.8, ty - t.h * 0.45], [tx - t.r * 0.8, ty - t.h * 0.45]], '#3f6e57');
+        this.polygon([[tx, ty - t.h], [tx - t.r * 0.8, ty - t.h * 0.45], [tx, ty - t.h * 0.4]], '#52856c');
       }
     } else if (tile.terrain === 'mountain') {
-      this.polygon([[p.x - 26, p.y + 4], [p.x - 5, p.y - 39], [p.x + 19, p.y + 7]], '#6d8179');
-      this.polygon([[p.x - 5, p.y - 39], [p.x + 19, p.y + 7], [p.x + 1, p.y + 2]], '#4d6863');
-      this.polygon([[p.x - 5, p.y - 39], [p.x - 13, p.y - 22], [p.x - 5, p.y - 26], [p.x + 3, p.y - 21]], '#dee0c7');
-      this.polygon([[p.x + 3, p.y + 6], [p.x + 18, p.y - 22], [p.x + 31, p.y + 7]], '#89998a');
+      // Faceted alpine peak with snowcap (height balanced to avoid obscuring units)
+      // Base shadow / mountain footprint
+      this.polygon([[p.x - 29, p.y + 4], [p.x - 4, p.y - 41], [p.x + 23, p.y + 7]], '#62736b');
+      this.polygon([[p.x - 4, p.y - 41], [p.x + 23, p.y + 7], [p.x + 3, p.y + 3]], '#475650');
+      // Sunlit facet
+      this.polygon([[p.x - 29, p.y + 4], [p.x - 4, p.y - 41], [p.x - 8, p.y + 2]], '#7d8f86');
+      // Snowcap summit
+      this.polygon([[p.x - 4, p.y - 41], [p.x - 12, p.y - 25], [p.x - 4, p.y - 29], [p.x + 5, p.y - 24]], '#f4f8f2');
+      this.polygon([[p.x - 4, p.y - 41], [p.x + 5, p.y - 24], [p.x - 4, p.y - 29]], '#dbe4d8');
+      // Secondary crag
+      this.polygon([[p.x + 2, p.y + 6], [p.x + 19, p.y - 22], [p.x + 31, p.y + 7]], '#85968c');
+      this.polygon([[p.x + 19, p.y - 22], [p.x + 13, p.y - 12], [p.x + 24, p.y - 10]], '#eaf0e6');
     } else if (tile.terrain === 'hill') {
-      this.polygon([[p.x - 26, p.y + 3], [p.x - 3, p.y - 17], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#bdc09d');
-      this.polygon([[p.x - 3, p.y - 17], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#919d7b');
+      // Terraced tiered hill plateau
+      this.polygon([[p.x - 26, p.y + 3], [p.x - 3, p.y - 18], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#abb391');
+      this.polygon([[p.x - 3, p.y - 18], [p.x + 23, p.y + 4], [p.x, p.y + 14]], '#889472');
+      this.polygon([[p.x - 16, p.y], [p.x - 2, p.y - 12], [p.x + 13, p.y + 1], [p.x, p.y + 7]], '#c0c9a7');
     }
   }
 
-  private drawSite(tile: KnownTile, p: Point): void {
+  private drawSite(tile: DeepReadonly<KnownTile>, p: Point): void {
     const site = tile.site!;
     const own = site.owner === this.view?.actor;
     const enemy = site.owner !== undefined && site.owner !== null && !own;
-    const flag = own ? '#ebc26e' : enemy ? '#c17a63' : '#d7d4b6';
-    this.ctx.fillStyle = 'rgba(24,48,42,.18)'; this.ctx.beginPath(); this.ctx.ellipse(p.x, p.y + 6, 23, 10, 0, 0, Math.PI * 2); this.ctx.fill();
+    const flag = own ? '#f3ce6d' : enemy ? '#d96c55' : '#e6e3c8';
+    const c = this.ctx;
+
+    // Ground footprint shadow
+    c.fillStyle = 'rgba(15, 32, 28, 0.34)';
+    c.beginPath();
+    c.ellipse(p.x, p.y + 7, 26, 11, 0, 0, Math.PI * 2);
+    c.fill();
+
     const capital = site.centerOf !== undefined;
-    const h = capital ? 26 : 19;
-    this.polygon([[p.x - 14, p.y - h], [p.x, p.y - h - 7], [p.x + 14, p.y - h], [p.x, p.y - h + 7]], '#eeead0');
-    this.polygon([[p.x - 14, p.y - h], [p.x, p.y - h + 7], [p.x, p.y + 7], [p.x - 14, p.y]], '#bdbca2');
-    this.polygon([[p.x, p.y - h + 7], [p.x + 14, p.y - h], [p.x + 14, p.y], [p.x, p.y + 7]], '#9fa895');
-    this.polygon([[p.x - 17, p.y - h - 1], [p.x, p.y - h - 13], [p.x + 17, p.y - h - 1], [p.x, p.y - h + 5]], capital ? '#4d6d57' : '#92765c');
-    this.ctx.fillStyle = '#3c5547'; this.ctx.fillRect(p.x - 7, p.y - 12, 4, 8);
-    this.ctx.strokeStyle = '#d7d3aa'; this.ctx.lineWidth = 2; this.ctx.beginPath(); this.ctx.moveTo(p.x + 18, p.y + 1); this.ctx.lineTo(p.x + 18, p.y - 34); this.ctx.stroke();
-    this.polygon([[p.x + 19, p.y - 33], [p.x + 34, p.y - 28], [p.x + 19, p.y - 23]], flag);
-    if (this.camera.zoom > 0.54) {
-      this.ctx.font = 'bold 11px "PingFang TC", sans-serif'; this.ctx.textAlign = 'center';
-      const label = capital ? '中心' : site.owner === null ? '村莊' : '據點';
-      this.ctx.fillStyle = '#1d3b31'; this.ctx.fillRect(p.x - 22, p.y + 10, 44, 16);
-      this.ctx.fillStyle = '#eee5c7'; this.ctx.fillText(label, p.x, p.y + 22);
+    const h = capital ? 28 : 20;
+
+    // Fortress / Citadel structure
+    this.polygon([[p.x - 15, p.y - h], [p.x, p.y - h - 8], [p.x + 15, p.y - h], [p.x, p.y - h + 8]], '#f2eee0');
+    this.polygon([[p.x - 15, p.y - h], [p.x, p.y - h + 8], [p.x, p.y + 8], [p.x - 15, p.y]], '#c9c7ae');
+    this.polygon([[p.x, p.y - h + 8], [p.x + 15, p.y - h], [p.x + 15, p.y], [p.x, p.y + 8]], '#a8b09d');
+
+    // Roof & Turrets
+    if (capital) {
+      // Grand Center: Tiered citadel keep
+      this.polygon([[p.x - 18, p.y - h - 2], [p.x, p.y - h - 16], [p.x + 18, p.y - h - 2], [p.x, p.y - h + 6]], '#3a5f4c');
+      this.polygon([[p.x - 18, p.y - h - 2], [p.x, p.y - h - 16], [p.x, p.y - h + 6]], '#4b755e');
+      // Gilded dome spire
+      this.circle(p.x, p.y - h - 18, 3.5, '#ffd978', '#b58f3c', 1);
+    } else {
+      // Outpost / Village roof
+      const roofColor = site.owner === undefined ? '#66756a' : site.owner === null ? '#9c7b5d' : own ? '#4a6d59' : '#8f4a3e';
+      this.polygon([[p.x - 16, p.y - h - 1], [p.x, p.y - h - 12], [p.x + 16, p.y - h - 1], [p.x, p.y - h + 5]], roofColor);
+    }
+
+    // Portal door
+    c.fillStyle = '#27382f';
+    c.fillRect(p.x - 5, p.y - 10, 4.5, 9);
+
+    // Mast and Banner Flag (Long Dovetail Pennant)
+    c.strokeStyle = '#e2dfc0';
+    c.lineWidth = 2.2;
+    c.beginPath();
+    c.moveTo(p.x + 19, p.y + 2);
+    c.lineTo(p.x + 19, p.y - 36);
+    c.stroke();
+    // Pennant Flag
+    this.polygon([[p.x + 20, p.y - 35], [p.x + 36, p.y - 30], [p.x + 20, p.y - 25]], flag, '#23382c', 0.8);
+
+    // Zero-Pill Architecture Title Plinth (Carved stone label at base)
+    if (this.camera.zoom > 0.52) {
+      c.font = 'bold 11px "Songti TC", "Noto Serif TC", serif';
+      c.textAlign = 'center';
+      const label = capital ? `${site.name} · 政治中心` : site.owner === undefined ? '所有權未知' : site.owner === null ? '中立村落' : own ? '己方據點' : '敵方據點';
+      const plinthBg = capital ? '#1a3a30' : own ? '#244537' : enemy ? '#662f27' : '#33443b';
+      const plinthText = capital ? '#ffecb3' : own ? '#f4eedb' : enemy ? '#ffded4' : '#e6e6dc';
+
+      // Chiseled plaque frame
+      c.fillStyle = plinthBg;
+      c.fillRect(p.x - 30, p.y + 11, 60, 16);
+      c.strokeStyle = own ? '#d8bf79' : 'rgba(255,255,255,0.25)';
+      c.lineWidth = 1;
+      c.strokeRect(p.x - 30, p.y + 11, 60, 16);
+
+      c.fillStyle = plinthText;
+      c.fillText(label, p.x, p.y + 23);
     }
   }
 
   private drawRelic(p: Point): void {
-    this.ctx.fillStyle = 'rgba(237,211,134,.2)'; this.ctx.beginPath(); this.ctx.ellipse(p.x, p.y + 1, 17, 9, 0, 0, Math.PI * 2); this.ctx.fill();
-    this.polygon([[p.x - 6, p.y - 22], [p.x + 3, p.y - 26], [p.x + 7, p.y - 1], [p.x - 4, p.y + 3]], '#b0baa6', '#dedcbd');
-    this.polygon([[p.x + 3, p.y - 26], [p.x + 7, p.y - 1], [p.x + 1, p.y + 1]], '#82978d');
-    this.ctx.strokeStyle = '#efd391'; this.ctx.lineWidth = 2; this.ctx.beginPath(); this.ctx.moveTo(p.x - 1, p.y - 17); this.ctx.lineTo(p.x + 1, p.y - 9); this.ctx.stroke();
-    this.circle(p.x - 12, p.y - 15, 2, '#ecd390');
+    const c = this.ctx;
+    // Ambient golden aura
+    const grad = c.createRadialGradient(p.x, p.y - 12, 4, p.x, p.y - 12, 26);
+    grad.addColorStop(0, 'rgba(245, 215, 125, 0.45)');
+    grad.addColorStop(0.7, 'rgba(230, 190, 80, 0.15)');
+    grad.addColorStop(1, 'rgba(230, 190, 80, 0)');
+    c.fillStyle = grad;
+    c.beginPath();
+    c.arc(p.x, p.y - 12, 26, 0, Math.PI * 2);
+    c.fill();
+
+    // Floating Ancient Obelisk / Monolith
+    this.polygon([[p.x - 7, p.y - 24], [p.x + 3, p.y - 30], [p.x + 8, p.y - 3], [p.x - 4, p.y + 2]], '#b6c2ac', '#e8e5c8', 1.2);
+    this.polygon([[p.x + 3, p.y - 30], [p.x + 8, p.y - 3], [p.x + 2, p.y + 1]], '#879e92');
+
+    // Ancient Golden Inscription Rune
+    c.strokeStyle = '#ffd973';
+    c.lineWidth = 2.2;
+    c.lineCap = 'round';
+    c.beginPath();
+    c.moveTo(p.x - 1, p.y - 19);
+    c.lineTo(p.x + 2, p.y - 10);
+    c.stroke();
+    c.lineCap = 'butt';
+
+    // Orbiting particles
+    this.circle(p.x - 13, p.y - 16, 2.5, '#ffe58f', '#b89434', 1);
+    this.circle(p.x + 14, p.y - 8, 1.8, '#ffe58f');
   }
 
-  private drawUnit(unit: Unit, p: Point, target: boolean): void {
+  private drawUnit(unit: DeepReadonly<Unit>, p: Point, target: boolean): void {
     const own = unit.owner === this.view?.actor;
     const chosen = unit.id === this.selection.unitId;
     const c = this.ctx;
-    const x = p.x, y = p.y - 10;
-    c.fillStyle = 'rgba(23,42,32,.3)'; c.beginPath(); c.ellipse(x, y + 11, 15, 7, 0, 0, Math.PI * 2); c.fill();
-    if (chosen) this.circle(x, y - 2, 19, 'rgba(245,219,142,.16)', '#f3d898');
-    this.circle(x, y - 2, 13, own ? '#263f35' : '#754e43', own ? '#ebd491' : '#e6aa90');
-    c.strokeStyle = own ? '#f2dfad' : '#f4d7b4'; c.lineWidth = 2.3; c.lineCap = 'round';
+    const x = p.x, y = p.y - 11;
+    const maxHp = UNIT_STATS[unit.kind].hp;
+
+    // Unit shadow
+    c.fillStyle = 'rgba(12, 26, 21, 0.4)';
     c.beginPath();
-    if (unit.kind === 'infantry') {
-      c.moveTo(x - 5, y - 8); c.lineTo(x + 5, y + 3); c.moveTo(x + 5, y - 8); c.lineTo(x - 5, y + 3);
-      c.moveTo(x - 8, y + 1); c.lineTo(x - 3, y + 6); c.moveTo(x + 8, y + 1); c.lineTo(x + 3, y + 6);
-    } else if (unit.kind === 'scout') {
-      c.moveTo(x - 6, y + 4); c.lineTo(x, y - 7); c.lineTo(x + 6, y + 4); c.moveTo(x, y - 7); c.lineTo(x, y + 5);
-    } else {
-      c.arc(x - 4, y - 2, 8, -Math.PI / 2, Math.PI / 2); c.moveTo(x - 4, y - 10); c.lineTo(x - 4, y + 6); c.moveTo(x - 6, y - 2); c.lineTo(x + 8, y - 2);
+    c.ellipse(x, y + 13, 16, 7.5, 0, 0, Math.PI * 2);
+    c.fill();
+
+    // Tactical Golden selection pulse ring
+    if (chosen) {
+      this.circle(x, y - 2, 20, 'rgba(245, 218, 135, 0.24)', '#fbd77f', 2.5);
+      this.circle(x, y - 2, 23, 'transparent', 'rgba(255, 235, 175, 0.45)', 1);
     }
-    c.stroke(); c.lineCap = 'butt';
-    c.fillStyle = '#263c31'; c.fillRect(x - 12, y + 16, 24, 4);
-    c.fillStyle = own ? '#e8d699' : '#d3967e'; c.fillRect(x - 12, y + 16, 24 * unit.hp / UNIT_STATS[unit.kind].hp, 4);
-    if (unit.moved && unit.acted) this.circle(x + 12, y - 12, 4, '#a8b89c');
+
+    // Heavy Miniature Figurine Base (Turned metal plinth)
+    const rimFill = own ? '#244538' : '#7a3e35';
+    const faceFill = own ? '#1a3429' : '#5e2e26';
+    const borderFill = own ? '#f1dca1' : '#f0b098';
+
+    this.circle(x, y - 1, 14, rimFill, borderFill, 2);
+    this.circle(x, y - 2, 12, faceFill);
+
+    // Unit Micro-Model Figurine Details
+    if (unit.kind === 'infantry') {
+      // --- 步兵：重甲頭盔、旭日巨盾與短劍 ---
+      // 盾牌（左側持有）
+      this.polygon([[x - 11, y - 9], [x - 3, y - 11], [x - 2, y + 3], [x - 7, y + 8], [x - 12, y + 3]], own ? '#d8b762' : '#c9644f', '#192b23', 1);
+      // 盾徽（旭日符號）
+      c.fillStyle = own ? '#fff2c6' : '#ffd3c7';
+      c.beginPath();
+      c.arc(x - 7, y - 3, 2.5, 0, Math.PI * 2);
+      c.fill();
+      // 士兵頭盔與紅纓
+      this.circle(x + 2, y - 7, 4.5, own ? '#4f695a' : '#884c42', '#1a2e26', 1);
+      // 頭盔頂飾
+      c.strokeStyle = own ? '#ffd269' : '#ff7a6b';
+      c.lineWidth = 2;
+      c.beginPath();
+      c.moveTo(x + 2, y - 12); c.lineTo(x + 2, y - 8);
+      c.stroke();
+      // 右手佩劍短刃
+      c.strokeStyle = '#eef3eb';
+      c.lineWidth = 2;
+      c.beginPath();
+      c.moveTo(x + 7, y - 6); c.lineTo(x + 11, y + 2);
+      c.stroke();
+    } else if (unit.kind === 'scout') {
+      // --- 斥候：兜帽、探險長杖與雙刃、飄逸斗篷 ---
+      // 斗篷披肩
+      this.polygon([[x - 8, y - 4], [x + 8, y - 4], [x + 6, y + 7], [x - 6, y + 7]], own ? '#3a614d' : '#6b3e36', '#14261f', 1);
+      // 兜帽頭部
+      this.circle(x, y - 6, 4.2, own ? '#547d67' : '#8c5249', '#1a2b23', 1);
+      // 羽毛帽飾
+      c.strokeStyle = '#ffd978';
+      c.lineWidth = 1.8;
+      c.beginPath();
+      c.moveTo(x + 2, y - 10); c.lineTo(x + 6, y - 13);
+      c.stroke();
+      // 探險家長杖 / 雙持短匕
+      c.strokeStyle = '#d7c49e';
+      c.lineWidth = 1.8;
+      c.beginPath();
+      c.moveTo(x + 7, y - 11); c.lineTo(x + 7, y + 8);
+      c.stroke();
+      // 杖頂寶石
+      this.circle(x + 7, y - 12, 1.8, '#ffe58f', '#a8812c', 1);
+    } else {
+      // --- 弓兵：長弓、背負箭袋與瞄準姿態 ---
+      // 軀幹皮革胸甲
+      this.polygon([[x - 5, y - 4], [x + 5, y - 4], [x + 4, y + 6], [x - 4, y + 6]], own ? '#3d5246' : '#69413a', '#172922', 1);
+      // 弓手皮帽
+      this.circle(x, y - 6, 4, own ? '#5a7364' : '#87564d', '#1a2c24', 1);
+      // 背後箭袋與白羽
+      c.strokeStyle = '#e8eee6';
+      c.lineWidth = 1.5;
+      c.beginPath();
+      c.moveTo(x - 6, y - 10); c.lineTo(x - 3, y - 4);
+      c.moveTo(x - 8, y - 9); c.lineTo(x - 5, y - 3);
+      c.stroke();
+      // 弧形複合反曲長弓
+      c.strokeStyle = '#d9b26e';
+      c.lineWidth = 2.2;
+      c.beginPath();
+      c.arc(x + 5, y - 1, 9, -Math.PI * 0.45, Math.PI * 0.45);
+      c.stroke();
+      // 弓弦與拉箭
+      c.strokeStyle = 'rgba(255,255,255,0.7)';
+      c.lineWidth = 0.9;
+      c.beginPath();
+      c.moveTo(x + 5 + 9 * Math.cos(-Math.PI * 0.45), y - 1 + 9 * Math.sin(-Math.PI * 0.45));
+      c.lineTo(x + 2, y - 1);
+      c.lineTo(x + 5 + 9 * Math.cos(Math.PI * 0.45), y - 1 + 9 * Math.sin(Math.PI * 0.45));
+      c.stroke();
+    }
+
+    // Chiseled Stone HP Bar (Zero-pill flat slate)
+    const barW = 26;
+    const barH = 5;
+    const barX = x - barW / 2;
+    const barY = y + 15;
+    const hpRatio = Math.max(0, Math.min(1, unit.hp / maxHp));
+
+    c.fillStyle = 'rgba(18, 30, 24, 0.92)';
+    c.fillRect(barX - 1, barY - 1, barW + 2, barH + 2);
+    c.strokeStyle = 'rgba(255,255,255,0.25)';
+    c.lineWidth = 0.8;
+    c.strokeRect(barX - 1, barY - 1, barW + 2, barH + 2);
+
+    const hpColor = hpRatio > 0.6 ? (own ? '#62bd79' : '#e06f58') : hpRatio > 0.3 ? '#e3af42' : '#e8453c';
+    c.fillStyle = hpColor;
+    c.fillRect(barX, barY, Math.max(3, barW * hpRatio), barH);
+
+    // Turn Spent Badge (subtle bronze rest seal when moved and acted)
+    if (unit.moved && unit.acted) {
+      this.circle(x + 13, y - 13, 4.5, '#7b8774', '#e2e7dc', 1.2);
+    }
+
+    // Target Attack Crosshairs Bracket
     if (target) {
-      c.strokeStyle = '#f2b79b'; c.lineWidth = 2; c.strokeRect(x - 22, y - 24, 44, 46);
-      c.font = 'bold 10px "PingFang TC", sans-serif'; c.textAlign = 'center'; c.fillStyle = '#f2d0b6'; c.fillText('可攻擊', x, y - 29);
+      c.strokeStyle = '#ff6b57';
+      c.lineWidth = 2.4;
+      const r = 21;
+      const len = 7;
+      // Top-left
+      c.beginPath(); c.moveTo(x - r, y - r + len); c.lineTo(x - r, y - r); c.lineTo(x - r + len, y - r); c.stroke();
+      // Top-right
+      c.beginPath(); c.moveTo(x + r - len, y - r); c.lineTo(x + r, y - r); c.lineTo(x + r, y - r + len); c.stroke();
+      // Bottom-left
+      c.beginPath(); c.moveTo(x - r, y + r - len); c.lineTo(x - r, y + r); c.lineTo(x - r + len, y + r); c.stroke();
+      // Bottom-right
+      c.beginPath(); c.moveTo(x + r - len, y + r); c.lineTo(x + r, y + r); c.lineTo(x + r, y + r - len); c.stroke();
+
+      // "可攻擊" Tactical Plaque
+      c.fillStyle = '#b32d20';
+      c.fillRect(x - 22, y - 37, 44, 16);
+      c.strokeStyle = '#ffd8cc';
+      c.lineWidth = 1;
+      c.strokeRect(x - 22, y - 37, 44, 16);
+
+      c.font = 'bold 10px "Songti TC", "Noto Serif TC", serif';
+      c.textAlign = 'center';
+      c.fillStyle = '#fff0eb';
+      c.fillText('可攻擊', x, y - 25);
     }
   }
 
   private drawCompass(): void {
-    const c = this.ctx, x = this.width - 42, y = this.height - 48;
-    c.strokeStyle = '#a9b89a'; c.lineWidth = 1;
-    c.beginPath(); c.arc(x, y, 20, 0, Math.PI * 2); c.stroke();
-    this.polygon([[x, y - 17], [x + 5, y + 8], [x, y + 3], [x - 5, y + 8]], '#bbcea6');
-    c.font = '10px ui-monospace, monospace'; c.fillStyle = '#c5d0b5'; c.textAlign = 'center'; c.fillText('N', x, y - 27);
+    const c = this.ctx;
+    const x = this.width - 42;
+    const y = this.height - 48;
+
+    c.fillStyle = 'rgba(19, 36, 32, 0.88)';
+    c.beginPath();
+    c.arc(x, y, 22, 0, Math.PI * 2);
+    c.fill();
+    c.strokeStyle = '#b88c4a';
+    c.lineWidth = 1.6;
+    c.stroke();
+
+    // North Needle
+    this.polygon([[x, y - 17], [x + 5, y + 6], [x, y + 2], [x - 5, y + 6]], '#d6e8c0');
+    // South Needle
+    this.polygon([[x, y + 17], [x + 5, y + 6], [x, y + 2], [x - 5, y + 6]], '#45594b');
+
+    c.font = 'bold 11px ui-monospace, monospace';
+    c.fillStyle = '#f4eedb';
+    c.textAlign = 'center';
+    c.fillText('N', x, y - 26);
+  }
+
+  private drawMiniOverlay(): void {
+    const c = this.ctx;
+    c.font = '12px ui-monospace, monospace';
+    c.fillStyle = '#b7c6b3';
+    c.textAlign = 'left';
+    c.fillText(`24 × 24  ·  等角沙盤  ·  ${Math.round(this.camera.zoom * 100)}%`, 20, this.height - 20);
   }
 }

@@ -1,0 +1,47 @@
+{
+  "schema": "project4x-r5-recovery-1",
+  "UTC": "2026-10-20T13:19:19.494289+00:00",
+  "head": "7d234a4cb0eee6bf68d4e36ed76343c4bfd95486",
+  "branch": "integration/project4x-c3",
+  "initialGitStatus": "",
+  "AI_SHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+  "ioProbes": [
+    {
+      "path": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "UTC": "2026-10-20T13:19:19.494289+00:00",
+      "diskTotal": 245107195904,
+      "diskFree": 430432256,
+      "inodeFree": 4203440,
+      "writeFsync": "PASS",
+      "bytes": 4096,
+      "readBack": true
+    },
+    {
+      "path": "/private/tmp",
+      "UTC": "2026-10-20T13:19:19.494289+00:00",
+      "diskTotal": 245107195904,
+      "diskFree": 430432256,
+      "inodeFree": 4203440,
+      "writeFsync": "PASS",
+      "bytes": 4096,
+      "readBack": true
+    },
+    {
+      "path": "LOCAL_TEMP",
+      "UTC": "2026-10-20T13:19:19.494289+00:00",
+      "diskTotal": 245107195904,
+      "diskFree": 430432256,
+      "inodeFree": 4203440,
+      "writeFsync": "PASS",
+      "bytes": 4096,
+      "readBack": true
+    }
+  ],
+  "tempDirectoriesFound": "all matchedPlaywright/Chromium/project4x dirs in TMPDIR du0; not deleted",
+  "deletedOpen": "lsof+L1 no matching current QA paths; other app files preserved",
+  "volumes": [
+    "Macintosh HD only"
+  ],
+  "initialDiskGate": "BLOCKED; only about475MiB free before Chromium resource measurement",
+  "productUnchanged": true
+}

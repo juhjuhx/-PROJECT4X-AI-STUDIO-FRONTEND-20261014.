@@ -1,0 +1,44 @@
+{
+  "schema": "project4x-c5-verification-2",
+  "phase": "C5-R2",
+  "status": "PARTIAL",
+  "AI_SHA256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+  "sourceSnapshot": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+  "lastTestedCommit": "See delivery FINAL-GIT-STATE.json; source tested on base plus candidate, no self-reference",
+  "baseCommit": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "localFixes": "IMPLEMENTED; three bounded counterexamples TESTED_PASS",
+  "tests": {
+    "tests": 110,
+    "pass": 110,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browserScenarios": 11,
+  "gameplay": {
+    "scenarios": 12,
+    "additionalHumanCommands": 208,
+    "policySteps": 207,
+    "turn": 37,
+    "captureAfterAttack": true,
+    "errors": []
+  },
+  "fullSeed010": {
+    "status": "TESTED_FAIL",
+    "EndTurn": 800,
+    "commands": 19813,
+    "winner": null,
+    "exitCode": 1
+  },
+  "centralSearch": "TESTED_FAIL; reconstructed synthetic1000commands, not seed010 proof",
+  "full100": "UNVERIFIED for this policy, NOT RUN",
+  "T3_T6": "Historical FAIL; complete current rerun not performed",
+  "detailedResults": "docs/verification/C5-R2/C5-R2-TEST-RESULTS.json",
+  "sourceManifest": "C5-SOURCE-MANIFEST.json",
+  "boundary": "docs/verification/C5-R2/C5-R2-SOURCE-BOUNDARY.json",
+  "R1History": "docs/verification/C5-R2/R1-C5-VERIFICATION.json",
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "gameplayRulesChanged": false,
+  "CI": "UNVERIFIED; no push"
+}

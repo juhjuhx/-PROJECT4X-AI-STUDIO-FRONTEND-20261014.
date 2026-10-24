@@ -1,0 +1,66 @@
+{
+  "timestampUTC": "2026-10-17T23:49:50.666076+00:00",
+  "C2commit": "e5bc16fedde9245e29284a4ec954299212089139",
+  "files": [
+    {
+      "path": "src/main.ts",
+      "C2sha256": "75abbf3890d2360169b5f9cb7d68156cd80e9c9b9525b4f72b740f297f529795",
+      "D3sha256": "068810134d1e483384bd9037e8da87096c551f2bb0c3740d62f497e86418e2fd",
+      "identical": false
+    },
+    {
+      "path": "src/ui/map.ts",
+      "C2sha256": "07958f8f029e5ab3ebf3b8dd1628da040ed2a7b350ea2cfa2cd9aa2b2654cda8",
+      "D3sha256": "323d7dfee8b586b34ff6d7f8096338d31c95ce095eb721a9dfd27fb93a09995c",
+      "identical": false
+    },
+    {
+      "path": "src/styles.css",
+      "C2sha256": "1a7b061e780823db8a11ce6dd0fbfee2e617c368cb1fa7bc05c3f6039ab4615c",
+      "D3sha256": "0ee4bf7de9f3f0d60251ca592ac3020781273c7b7cfdd06f5ca668c86bd2c2f0",
+      "identical": false
+    },
+    {
+      "path": "index.html",
+      "C2sha256": "a992106a222555a62c6effb2e698815ff900eac8ae0c018d3335e8abd936345d",
+      "D3sha256": "2cba9dfddf627290207fd7411f778e1f00597c23b9f3e4bbbe89a84005f466fe",
+      "identical": false
+    },
+    {
+      "path": "src/core/game.ts",
+      "C2sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "D3sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "identical": true
+    },
+    {
+      "path": "src/core/ai.ts",
+      "C2sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "D3sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "identical": true
+    },
+    {
+      "path": "src/core/persistence.ts",
+      "C2sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "D3sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "identical": true
+    },
+    {
+      "path": "src/core/types.ts",
+      "C2sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "D3sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "identical": true
+    },
+    {
+      "path": "package-lock.json",
+      "C2sha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "D3sha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "identical": true
+    },
+    {
+      "path": "LICENSE",
+      "C2sha256": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+      "D3sha256": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e",
+      "identical": true
+    }
+  ]
+}

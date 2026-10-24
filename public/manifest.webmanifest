@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "PROJECT-4X · 霧境初航探索Demo",
+  "short_name": "霧境初航",
+  "description": "帶領城邦探索未知世界，留下第一份觀測紀錄。開發中單人策略Demo。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#172b2a",
+  "theme_color": "#172b2a",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}

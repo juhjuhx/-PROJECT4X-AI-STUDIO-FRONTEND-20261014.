@@ -1,0 +1,30 @@
+✖ PWA build emits deterministic relative shell with byte hashes and isolated cache revision (3.752291ms)
+✖ PWA build refuses unexpected data files and symlinks rather than precaching private data (2.266416ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.171084
+
+✖ failing tests:
+
+test at tests/pwa-build.test.mjs:10:1
+✖ PWA build emits deterministic relative shell with byte hashes and isolated cache revision (3.752291ms)
+  [Error: ENOENT: no such file or directory, open 'LOCAL_TEMP/project4x-pwa-ybMcOQ/pwa-assets.json'] { errno: -2, code: 'ENOENT', syscall: 'open', path: 'LOCAL_TEMP/project4x-pwa-ybMcOQ/pwa-assets.json' }
+
+test at tests/pwa-build.test.mjs:18:1
+✖ PWA build refuses unexpected data files and symlinks rather than precaching private data (2.266416ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/tests/pwa-build.test.mjs:18:198)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /不允許/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

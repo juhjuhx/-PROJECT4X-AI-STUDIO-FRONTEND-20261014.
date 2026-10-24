@@ -1,0 +1,1175 @@
+{
+  "schema": "project4x-c5-r2-results-1",
+  "status": "PARTIAL",
+  "baseCommit": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "sourceSnapshot": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+  "AI_SHA256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+  "environment": {
+    "node": "v26.10.0",
+    "npm": "11.19.1",
+    "platform": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
+    "timezone": "Asia/Taipei"
+  },
+  "currentGates": {
+    "check": "C5-R2-delivery2-check",
+    "tests": "C5-R2-delivery2-test",
+    "build": "C5-R2-delivery2-build",
+    "prefix": "C5-R2-recruit-prefix",
+    "browser": "C5-R2-recruit-browser",
+    "gameplay": "C5-R2-recruit-gameplay",
+    "singleSeed": "C5-R2-seed010-reinforce",
+    "endgame": "C5-R2-central-search-final"
+  },
+  "currentCounts": {
+    "tests": 110,
+    "pass": 110,
+    "fail": 0,
+    "skipped": 0
+  },
+  "gateDistinctions": {
+    "PREFIX": "TESTED_PASS 1100commands/0loops",
+    "SINGLE_SEED": "TESTED_FAIL 800EndTurn/19813commands/winner=null",
+    "FULL100": "UNVERIFIED for this policy; not run",
+    "PLAYABILITY": "UNVERIFIED; engineering E2E is not human full-match acceptance",
+    "ENDGAME_SEARCH": "TESTED_FAIL synthetic1000commands/seen=false/winner=null; not seed010 causality"
+  },
+  "ruleset": "g1-ccts-1",
+  "save": "project4x-save-1",
+  "replay": "project4x-replay-1",
+  "independentReview": "docs/verification/C5-R2/independent-review/補兵調位增補審查報告.md",
+  "privateEvidence": "../evidence/C5-R2-private (not committed; 0700/0600)",
+  "lspDiagnostics": "UNAVAILABLE; strict tsc used, not reported as LSP",
+  "gates": [
+    {
+      "label": "C5-R2-scout-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:34:00.750327+00:00",
+      "snapshotSha256": "91199ddbb7a114fe99dc7d95588d14e711670e17d8896095a6fea2897bb80bc7",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:34:01.263466+00:00",
+      "durationSeconds": 0.513,
+      "log": "docs/verification/C5-R2/C5-R2-scout-RED.log",
+      "counts": {
+        "tests": 3,
+        "pass": 0,
+        "fail": 3,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Initial synthetic-fixture/assertion error mixed with real RED; not the accepted RED. See scout-RED-confirmed."
+    },
+    {
+      "label": "C5-R2-scout-RED-valid",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:34:11.764835+00:00",
+      "snapshotSha256": "0bb8fe0ddbcba6dacc31668beb2f148eb9d4b9b0b818efcbb8a8a7047341009f",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:34:12.022288+00:00",
+      "durationSeconds": 0.257,
+      "log": "docs/verification/C5-R2/C5-R2-scout-RED-valid.log",
+      "counts": {
+        "tests": 3,
+        "pass": 0,
+        "fail": 3,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Initial synthetic-fixture/assertion error mixed with real RED; not the accepted RED. See scout-RED-confirmed."
+    },
+    {
+      "label": "C5-R2-scout-RED-confirmed",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:34:28.975979+00:00",
+      "snapshotSha256": "fcbd526d24c0aab9b1919fcf04407f89452eef6ab12167d08aa01c44554db810",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:34:29.917099+00:00",
+      "durationSeconds": 0.941,
+      "log": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.log",
+      "counts": {
+        "tests": 3,
+        "pass": 1,
+        "fail": 2,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Expected RED; behavior absent, see root-cause report"
+    },
+    {
+      "label": "C5-R2-scout-GREEN",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:34:43.419336+00:00",
+      "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:34:44.042624+00:00",
+      "durationSeconds": 0.623,
+      "log": "docs/verification/C5-R2/C5-R2-scout-GREEN.log",
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-scout-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:34:44.204158+00:00",
+      "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:34:49.128932+00:00",
+      "durationSeconds": 4.925,
+      "log": "docs/verification/C5-R2/C5-R2-scout-test.log",
+      "counts": {
+        "tests": 107,
+        "pass": 106,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-scout-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:34:44.204632+00:00",
+      "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:34:45.277981+00:00",
+      "durationSeconds": 1.073,
+      "log": "docs/verification/C5-R2/C5-R2-scout-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-scout-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-18T17:35:02.610023+00:00",
+      "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:35:05.595683+00:00",
+      "durationSeconds": 2.986,
+      "log": "docs/verification/C5-R2/C5-R2-scout-prefix.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-scout-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:35:03.728496+00:00",
+      "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:35:04.202467+00:00",
+      "durationSeconds": 0.474,
+      "log": "docs/verification/C5-R2/C5-R2-scout-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-route-tie-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:36:14.800597+00:00",
+      "snapshotSha256": "8f7e723dd65ed4914c88b80f6d00286cdb853607377b06653a3ae056f8945719",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:36:15.347244+00:00",
+      "durationSeconds": 0.546,
+      "log": "docs/verification/C5-R2/C5-R2-route-tie-RED.log",
+      "counts": {
+        "tests": 4,
+        "pass": 3,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Expected RED; behavior absent, see root-cause report"
+    },
+    {
+      "label": "C5-R2-route-tie-GREEN",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:36:29.136667+00:00",
+      "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:36:29.510589+00:00",
+      "durationSeconds": 0.374,
+      "log": "docs/verification/C5-R2/C5-R2-route-tie-GREEN.log",
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-route-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-18T17:36:29.136679+00:00",
+      "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:36:32.208037+00:00",
+      "durationSeconds": 3.071,
+      "log": "docs/verification/C5-R2/C5-R2-route-prefix.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-route-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:36:43.866050+00:00",
+      "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:36:48.178845+00:00",
+      "durationSeconds": 4.313,
+      "log": "docs/verification/C5-R2/C5-R2-route-test.log",
+      "counts": {
+        "tests": 108,
+        "pass": 108,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-route-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:36:43.867158+00:00",
+      "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:36:44.510444+00:00",
+      "durationSeconds": 0.643,
+      "log": "docs/verification/C5-R2/C5-R2-route-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-route-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:36:45.140204+00:00",
+      "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:36:46.091861+00:00",
+      "durationSeconds": 0.951,
+      "log": "docs/verification/C5-R2/C5-R2-route-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-current-trace",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-decision-trace.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R2-private/final-prefix"
+      ],
+      "startedAt": "2026-10-18T17:37:42.660532+00:00",
+      "snapshotSha256": "598a6da22ad92c00e5cd721aeace822f1ca38f66895359590d23769821596aa3",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:38:00.552667+00:00",
+      "durationSeconds": 17.892,
+      "log": "docs/verification/C5-R2/C5-R2-current-trace.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-seed010",
+      "cwd": ".",
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R2-private/seed010-r2.json",
+        "npm",
+        "run",
+        "qa:headless"
+      ],
+      "startedAt": "2026-10-18T17:37:52.345363+00:00",
+      "snapshotSha256": "598a6da22ad92c00e5cd721aeace822f1ca38f66895359590d23769821596aa3",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:40:02.822555+00:00",
+      "durationSeconds": 130.479,
+      "log": "docs/verification/C5-R2/C5-R2-seed010.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-browser-valid",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T17:38:47.329211+00:00",
+      "snapshotSha256": "598a6da22ad92c00e5cd721aeace822f1ca38f66895359590d23769821596aa3",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:38:54.093737+00:00",
+      "durationSeconds": 6.764,
+      "log": "docs/verification/C5-R2/C5-R2-browser-valid.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-final-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:39:36.663888+00:00",
+      "snapshotSha256": "03a72ed43b8b32054c49da4cba6ff97cb0547d754f0370565ee0ff4c793f2ebc",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:39:37.254369+00:00",
+      "durationSeconds": 0.59,
+      "log": "docs/verification/C5-R2/C5-R2-final-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-final-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:40:01.452367+00:00",
+      "snapshotSha256": "03a72ed43b8b32054c49da4cba6ff97cb0547d754f0370565ee0ff4c793f2ebc",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:40:06.195476+00:00",
+      "durationSeconds": 4.743,
+      "log": "docs/verification/C5-R2/C5-R2-final-test.log",
+      "counts": {
+        "tests": 108,
+        "pass": 108,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-final-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:40:02.672974+00:00",
+      "snapshotSha256": "03a72ed43b8b32054c49da4cba6ff97cb0547d754f0370565ee0ff4c793f2ebc",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:40:03.540501+00:00",
+      "durationSeconds": 0.867,
+      "log": "docs/verification/C5-R2/C5-R2-final-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-gameplay",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "startedAt": "2026-10-18T17:40:42.486326+00:00",
+      "snapshotSha256": "03a72ed43b8b32054c49da4cba6ff97cb0547d754f0370565ee0ff4c793f2ebc",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:41:54.375006+00:00",
+      "durationSeconds": 71.889,
+      "log": "docs/verification/C5-R2/C5-R2-gameplay.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-block-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:43:22.790178+00:00",
+      "snapshotSha256": "94bef99ba82035fd4c028770398fb20cff86f0ffd3954d222b485ac3d6742a7d",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:43:23.255213+00:00",
+      "durationSeconds": 0.465,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-block-RED.log",
+      "counts": {
+        "tests": 6,
+        "pass": 5,
+        "fail": 1,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Expected RED; behavior absent, see root-cause report"
+    },
+    {
+      "label": "C5-R2-recruit-block-GREEN",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "startedAt": "2026-10-18T17:43:51.664966+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:43:51.991092+00:00",
+      "durationSeconds": 0.326,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-block-GREEN.log",
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-18T17:43:51.664966+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:43:54.491991+00:00",
+      "durationSeconds": 2.827,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-prefix.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:43:51.664968+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:43:52.178096+00:00",
+      "durationSeconds": 0.513,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:43:58.300531+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:44:01.546090+00:00",
+      "durationSeconds": 3.246,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-test.log",
+      "counts": {
+        "tests": 110,
+        "pass": 110,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:43:59.464418+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:44:00.075882+00:00",
+      "durationSeconds": 0.611,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-trace",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-decision-trace.mjs",
+        "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R2-private/reinforcement-prefix"
+      ],
+      "startedAt": "2026-10-18T17:44:22.792040+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:44:34.882754+00:00",
+      "durationSeconds": 12.091,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-trace.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-seed010-reinforce",
+      "cwd": ".",
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R2-private/seed010-reinforce.json",
+        "npm",
+        "run",
+        "qa:headless"
+      ],
+      "startedAt": "2026-10-18T17:44:23.936470+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:46:13.212832+00:00",
+      "durationSeconds": 109.278,
+      "log": "docs/verification/C5-R2/C5-R2-seed010-reinforce.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Prior failing candidate retained; not current acceptance"
+    },
+    {
+      "label": "C5-R2-recruit-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T17:45:38.189963+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:45:44.249371+00:00",
+      "durationSeconds": 6.059,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-browser.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-recruit-gameplay",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "startedAt": "2026-10-18T17:46:38.544984+00:00",
+      "snapshotSha256": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:47:50.521707+00:00",
+      "durationSeconds": 71.977,
+      "log": "docs/verification/C5-R2/C5-R2-recruit-gameplay.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named gate is demonstrated"
+    },
+    {
+      "label": "C5-R2-central-search-RED",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "startedAt": "2026-10-18T17:51:16.745688+00:00",
+      "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:51:17.720712+00:00",
+      "durationSeconds": 0.975,
+      "log": "docs/verification/C5-R2/C5-R2-central-search-RED.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Unfixed ENDGAME_SEARCH defect; expected product FAIL, not a successful gameplay gate"
+    },
+    {
+      "label": "C5-R2-delivery-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:51:45.414767+00:00",
+      "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:51:46.573702+00:00",
+      "durationSeconds": 1.159,
+      "log": "docs/verification/C5-R2/C5-R2-delivery-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    },
+    {
+      "label": "C5-R2-delivery-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:51:45.414768+00:00",
+      "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:51:48.982447+00:00",
+      "durationSeconds": 3.568,
+      "log": "docs/verification/C5-R2/C5-R2-delivery-test.log",
+      "counts": {
+        "tests": 110,
+        "pass": 110,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    },
+    {
+      "label": "C5-R2-delivery-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:51:45.414769+00:00",
+      "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:51:46.146116+00:00",
+      "durationSeconds": 0.731,
+      "log": "docs/verification/C5-R2/C5-R2-delivery-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    },
+    {
+      "label": "C5-R2-central-search-final",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "startedAt": "2026-10-18T17:53:48.185464+00:00",
+      "snapshotSha256": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T17:53:49.104351+00:00",
+      "durationSeconds": 0.919,
+      "log": "docs/verification/C5-R2/C5-R2-central-search-final.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_FAIL",
+      "interpretation": "Unfixed endgame defect, explicit gameplay FAIL; final command visibility included"
+    },
+    {
+      "label": "C5-R2-delivery2-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T17:53:49.179555+00:00",
+      "snapshotSha256": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:53:50.313836+00:00",
+      "durationSeconds": 1.134,
+      "log": "docs/verification/C5-R2/C5-R2-delivery2-build.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    },
+    {
+      "label": "C5-R2-delivery2-check",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T17:53:49.179556+00:00",
+      "snapshotSha256": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:53:49.941272+00:00",
+      "durationSeconds": 0.762,
+      "log": "docs/verification/C5-R2/C5-R2-delivery2-check.log",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null,
+        "cancelled": null
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    },
+    {
+      "label": "C5-R2-delivery2-test",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T17:53:49.179559+00:00",
+      "snapshotSha256": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T17:53:52.715378+00:00",
+      "durationSeconds": 3.536,
+      "log": "docs/verification/C5-R2/C5-R2-delivery2-test.log",
+      "counts": {
+        "tests": 110,
+        "pass": 110,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "status": "TESTED_PASS",
+      "interpretation": "Only the named command is demonstrated"
+    }
+  ],
+  "preflightBrowserError": {
+    "status": "TESTED_FAIL",
+    "cause": "wrapper cwd pointed at delivery root; npm start missing; server exited",
+    "recovery": "C5-R2-browser-valid and latest recruit-browser ran true project and passed",
+    "raw": "docs/verification/C5-R2/C5-R2-browser-server.log"
+  },
+  "browserScenarios": 11,
+  "gameplay": {
+    "scenarios": 12,
+    "additionalHumanCommands": 208,
+    "policySteps": 207,
+    "turn": 37,
+    "captureAfterAttack": true,
+    "errors": []
+  },
+  "reviewNote": "Independent reviewer confirmed final-command seen boundary; QA-only fix applied, full synthetic check still exit1. No product bytes changed.",
+  "cleanup": [
+    {
+      "serverPID": 46832,
+      "port": 50256,
+      "terminated": true,
+      "portClosedNow": true
+    },
+    {
+      "serverPID": 48983,
+      "port": 50391,
+      "terminated": true,
+      "portClosedNow": true
+    },
+    {
+      "serverPID": 46415,
+      "port": 50187,
+      "terminated": true,
+      "portClosedNow": true
+    },
+    {
+      "serverPID": 48823,
+      "port": 50365,
+      "terminated": true,
+      "portClosedNow": true
+    }
+  ],
+  "gitWhitespace": {
+    "allStagedExitCode": 2,
+    "authoredSourceDocsExitCode": 0,
+    "reason": "Unmodified raw assertion/stack logs preserve whitespace; no test threshold changed",
+    "raw": "../evidence/C5-R2-staged-whitespace.log"
+  }
+}

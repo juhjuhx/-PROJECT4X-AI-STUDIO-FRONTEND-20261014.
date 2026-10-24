@@ -1,0 +1,19 @@
+{
+  "schema": "project4x-r3-git-source-1",
+  "UTC": "2026-10-19T12:05:28.472730+00:00",
+  "REMOTE_HEAD": "c21b16cd75572d069369f41426f7323c63c05083",
+  "remoteCommand": "git ls-remote origin refs/heads/main",
+  "remoteExitCode": 0,
+  "BASELINE_HEAD": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "BRANCH": "integration/project4x-c3",
+  "WORKTREE": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "initialState": "clean, R2 manifest69/69 byte-match (historical manifest included ignored src/.DS_Store)",
+  "currentManifestCount": 72,
+  "currentManifestAllTracked": true,
+  "manifestSha256": "9c27e8dd0ab81a15fbb20ffc0a57f1debe0272f3fd917b5c8bc0b273dd1cbfcc",
+  "runtimeTestSnapshot": "41634a1e510aa070707df358019a53c8ddb5050f2091322c8c2553b43beb3f05",
+  "portableSourceSnapshot": "8f18bd6e9a17f4c35707c2d864fc185710af6078aa7c7956f6af9b1f82a2a7e5",
+  "AI_SHA256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "testedCandidateThenCommitTreeMapping": "commit未來才建立，最終HEAD存交付根FINAL-GIT-STATE，不自含虛構SHA",
+  "pushed": false
+}

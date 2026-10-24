@@ -1,0 +1,28 @@
+{
+  "command": [
+    "node",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--target",
+    "ES2022",
+    "--module",
+    "ESNext",
+    "--moduleResolution",
+    "Bundler",
+    "--lib",
+    "ES2022,DOM,DOM.Iterable",
+    "--strict",
+    "--skipLibCheck",
+    "--typeRoots",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/@types",
+    "--types",
+    "node",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-independent-review/src/core/ai.ts",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-independent-review/src/core/game.ts",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-independent-review/tests/ai-stalemate.test.ts",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-independent-review/獨立審查.test.ts"
+  ],
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-independent-review",
+  "exitCode": 0,
+  "durationSeconds": 0.19556795805692673
+}

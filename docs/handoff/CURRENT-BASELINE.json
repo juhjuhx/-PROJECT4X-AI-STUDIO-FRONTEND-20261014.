@@ -1,0 +1,36 @@
+{
+  "schema": "project4x-c0-baseline-1",
+  "recordedAt": "2026-10-17T05:21:43.597732+00:00",
+  "CURRENT_BASELINE": {
+    "repository": "juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014.",
+    "branch": "main",
+    "sha": "c21b16cd75572d069369f41426f7323c63c05083",
+    "lastRecheckedAt": "2026-10-17T05:24:49.687760+00:00"
+  },
+  "GEMINI_SOURCE": {
+    "originalFilename": "untitled (1).zip",
+    "sha256": "bf9a2ddee457e598f85345b53456749bf603ee490d18e4c25a8f142210450a5e",
+    "delivery": "D2",
+    "d3Received": false,
+    "crc": "TESTED_PASS",
+    "files": 148,
+    "entries": 200
+  },
+  "CORE_SOURCE": {
+    "sha": "c21b16cd75572d069369f41426f7323c63c05083",
+    "allFourCoreFilesMatchGemini": true,
+    "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0"
+  },
+  "CONTRACT_STATUS": {
+    "documentation": "DELIVERED",
+    "api": "PROPOSED",
+    "runtime": "NOT_IMPLEMENTED",
+    "types": "docs/contracts/frontend-core-v1.d.ts"
+  },
+  "INTEGRATION_RISKS": {
+    "fullD2Adoption": "NOT_PASS",
+    "d3": "BLOCKED",
+    "playableAlpha": "NOT_PASS",
+    "details": "C0-SOURCE-AUDIT.md"
+  }
+}

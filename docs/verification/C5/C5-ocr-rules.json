@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "groups": [
+    {
+      "group_id": 1,
+      "source": "project",
+      "pattern": "**/*",
+      "files": [
+        "AGENTS.md",
+        "C5-SOURCE-MANIFEST.json",
+        "D3-MODIFIED-FILES.json",
+        "README.md",
+        "docs/PROJECT-STATUS.md",
+        "docs/agent/C3-SKILL-MATRIX.json",
+        "docs/handoff/C3-VERIFICATION.json",
+        "docs/handoff/C5-AI-DIAGNOSIS.md",
+        "docs/handoff/FEATURE-MATRIX.md",
+        "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+        "docs/handoff/INTEGRATION-STATUS.md",
+        "docs/handoff/KNOWN-DEFECTS.md",
+        "docs/handoff/NEXT-ACTION.md",
+        "docs/roadmap/C3-EXECUTION-PLAN.md",
+        "docs/roadmap/PLAYABLE-ALPHA.md",
+        "memory/session-handoff-LATEST.md",
+        "scripts/ai-oscillation-check.ts",
+        "docs/handoff/C5-VERIFICATION.json",
+        "tests/ai-oscillation.test.ts"
+      ],
+      "rule": "依實作契約審查高信號bug、安全、依賴鎖版本、範圍與真實證據。完整本機存檔不是公開秘密边界；AI測試不代替真人體驗。禁止把未執行檢查寫成PASS。"
+    },
+    {
+      "group_id": 2,
+      "source": "project",
+      "pattern": "src/core/**",
+      "files": [
+        "src/core/ai.ts"
+      ],
+      "rule": "檢查純確定性規則、非法命令零副作用、Fog資料隔離、遺跡立即必答、只有單位與據點皆零淘汰、歷史首都與當前中心分離、持續控制跨完整對手回合再免費主動建都、收入招募只計一次、存檔語意與replay有效指令一致。AI只能Observation。不設match回合上限。"
+    }
+  ]
+}

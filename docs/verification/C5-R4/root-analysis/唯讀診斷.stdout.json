@@ -1,0 +1,226 @@
+{
+  "schema": "project4x-c5-r4-readonly-root-analysis-1",
+  "aiSha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+  "initial": {
+    "ownTurns": 1,
+    "visibleTiles": 33,
+    "exploredButNotVisible": 543,
+    "unknownTiles": 0,
+    "visibleEnemyCount": 0,
+    "legalMoves": 12,
+    "action": {
+      "type": "EndTurn"
+    },
+    "gains": [
+      {
+        "to": {
+          "x": 2,
+          "y": 1
+        },
+        "newlyVisibleRememberedLand": 2
+      },
+      {
+        "to": {
+          "x": 1,
+          "y": 2
+        },
+        "newlyVisibleRememberedLand": 2
+      },
+      {
+        "to": {
+          "x": 3,
+          "y": 2
+        },
+        "newlyVisibleRememberedLand": 7
+      },
+      {
+        "to": {
+          "x": 2,
+          "y": 3
+        },
+        "newlyVisibleRememberedLand": 7
+      },
+      {
+        "to": {
+          "x": 2,
+          "y": 0
+        },
+        "newlyVisibleRememberedLand": 2
+      },
+      {
+        "to": {
+          "x": 1,
+          "y": 1
+        },
+        "newlyVisibleRememberedLand": 0
+      },
+      {
+        "to": {
+          "x": 3,
+          "y": 1
+        },
+        "newlyVisibleRememberedLand": 4
+      },
+      {
+        "to": {
+          "x": 0,
+          "y": 2
+        },
+        "newlyVisibleRememberedLand": 2
+      },
+      {
+        "to": {
+          "x": 1,
+          "y": 3
+        },
+        "newlyVisibleRememberedLand": 4
+      },
+      {
+        "to": {
+          "x": 4,
+          "y": 2
+        },
+        "newlyVisibleRememberedLand": 13
+      },
+      {
+        "to": {
+          "x": 3,
+          "y": 3
+        },
+        "newlyVisibleRememberedLand": 9
+      },
+      {
+        "to": {
+          "x": 2,
+          "y": 4
+        },
+        "newlyVisibleRememberedLand": 13
+      }
+    ]
+  },
+  "unknownVariant": {
+    "unknownTiles": 543,
+    "action": {
+      "type": "Move",
+      "unitId": "patrol-0",
+      "to": {
+        "x": 4,
+        "y": 2
+      }
+    }
+  },
+  "boundary": {
+    "sameObservationDifferentHiddenTruth": true,
+    "deepFreeze": true,
+    "cloneDeterminism": true,
+    "interleavingIndependence": true
+  },
+  "boundedTrace": {
+    "commands": 400,
+    "movesMade": 50,
+    "unionVisibleTiles": 456,
+    "neverVisibleTiles": 120,
+    "positionsOnFourCornerRectangle": true,
+    "seen": false,
+    "winner": null,
+    "phaseStarts": [
+      {
+        "command": 0,
+        "ownTurns": 1,
+        "phase": 0,
+        "at": {
+          "x": 2,
+          "y": 2
+        },
+        "action": {
+          "type": "EndTurn"
+        }
+      },
+      {
+        "command": 64,
+        "ownTurns": 33,
+        "phase": 1,
+        "at": {
+          "x": 2,
+          "y": 2
+        },
+        "action": {
+          "type": "Move",
+          "unitId": "patrol-0",
+          "to": {
+            "x": 4,
+            "y": 2
+          }
+        }
+      },
+      {
+        "command": 138,
+        "ownTurns": 65,
+        "phase": 2,
+        "at": {
+          "x": 21,
+          "y": 2
+        },
+        "action": {
+          "type": "Move",
+          "unitId": "patrol-0",
+          "to": {
+            "x": 21,
+            "y": 4
+          }
+        }
+      },
+      {
+        "command": 212,
+        "ownTurns": 97,
+        "phase": 3,
+        "at": {
+          "x": 21,
+          "y": 21
+        },
+        "action": {
+          "type": "Move",
+          "unitId": "patrol-0",
+          "to": {
+            "x": 19,
+            "y": 21
+          }
+        }
+      },
+      {
+        "command": 286,
+        "ownTurns": 129,
+        "phase": 0,
+        "at": {
+          "x": 2,
+          "y": 21
+        },
+        "action": {
+          "type": "Move",
+          "unitId": "patrol-0",
+          "to": {
+            "x": 2,
+            "y": 19
+          }
+        }
+      },
+      {
+        "command": 360,
+        "ownTurns": 161,
+        "phase": 1,
+        "at": {
+          "x": 2,
+          "y": 2
+        },
+        "action": {
+          "type": "Move",
+          "unitId": "patrol-0",
+          "to": {
+            "x": 4,
+            "y": 2
+          }
+        }
+      }
+    ]
+  }
+}

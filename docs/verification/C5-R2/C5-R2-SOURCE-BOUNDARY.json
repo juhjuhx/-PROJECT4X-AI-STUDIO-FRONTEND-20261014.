@@ -1,0 +1,26 @@
+{
+  "status": "TESTED_PASS",
+  "browserAndFullSeedSnapshot": "8c4679704c2ef2e06a5a81e0582d16f9f1a31fe4bab7ac38cdf4daad6cf6e7cd",
+  "deliverySnapshot": "f8ba9a7ceda513c149319044106858da1c95e2666d6127bf99fcef4bc1a24ae0",
+  "changedPaths": [
+    "scripts/ai-endgame-search-check.ts"
+  ],
+  "allProductionBytesUnchanged": true,
+  "sourceMaps": [
+    "C5-R2-recruit-browser.source.json",
+    "C5-R2-delivery2-check.source.json"
+  ],
+  "distSha256": {
+    "index.html": "6701f564379d4f3721866e76e15498a4cc2df2e9efe491e95680d473e25a0071",
+    "assets/index-DDpCNpkI.js": "a8f60dea984a9d9e4c8b980e06aa1b82a9df445292d5f29df3dec456c0cd32c7",
+    "assets/index-aLPhczff.css": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5"
+  },
+  "protectedCore": {
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/core/persistence.ts": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+    "scripts/headless.ts": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+    "scripts/verify.mjs": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553"
+  }
+}

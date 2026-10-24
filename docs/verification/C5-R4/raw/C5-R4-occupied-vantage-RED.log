@@ -1,0 +1,51 @@
+{"label": "C5-R4-occupied-vantage-RED", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-frontier.test.ts"], "startedAt": "2026-10-19T13:18:57.421106+00:00", "snapshotSha256": "0091c5d02b4696f61c83ed994327dd820a56056c1f49060041656a4bc5e656ab", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279", "timeoutSeconds": 240}
+✔ C5-R4：中央未知格沒有可進入鄰格時，仍走向合法已知視野vantage (4.937625ms)
+✔ C5-R4：少量真命令可揭露山圈中的未知區域，而非只有方向斷言 (27.571208ms)
+✔ C5-R4：已知七格廊道仍有不可見情報時，不停在原四角目標 (2.360667ms)
+✔ C5-R4：目前可達地形全可見時，不為不可達偵巡目標反覆移動 (0.914041ms)
+✔ C5-R4 Fog：不同隱藏地形與敵兵位置，完全相同Observation產生相同行動 (2.603125ms)
+✔ C5-R4：山脈隔絕所有資訊vantage時，只能選合法動作並合理等待 (0.8965ms)
+✔ C5-R4：友軍暫時截斷已知探索路線時，仍合法接近而不穿兵 (1.097291ms)
+✔ C5-R4：新探索不無條件壓過合法攻擊與佔領 (1.583417ms)
+✖ C5-R4：低視野友軍佔據vantage時，保留可繞行並真揭露的路線 (4.795708ms)
+✔ C5-R4：deepfreeze／clone／重複／穿插決策／回傳修改均不影響確定性 (13.8495ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257.671417
+
+✖ failing tests:
+
+test at tests/ai-frontier.test.ts:1:6079
+✖ C5-R4：低視野友軍佔據vantage時，保留可繞行並真揭露的路線 (4.795708ms)
+  AssertionError [ERR_ASSERTION]: 佔據的友軍格不能掩蓋可通行的觀測位置
+  + actual - expected
+  
+    {
+  +   type: 'EndTurn'
+  -   to: {
+  -     x: 6,
+  -     y: 1
+  -   },
+  -   type: 'Move',
+  -   unitId: 'patrol-0'
+    }
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-frontier.test.ts:132:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { type: 'EndTurn' },
+    expected: { type: 'Move', unitId: 'patrol-0', to: { x: 6, y: 1 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

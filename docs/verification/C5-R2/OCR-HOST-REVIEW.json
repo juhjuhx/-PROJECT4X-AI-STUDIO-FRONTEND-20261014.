@@ -1,0 +1,1278 @@
+{
+  "mode": "OCR delegation deterministic preview/rule + host review (no external OCR LLM)",
+  "OCRversion": "1.13.1",
+  "gitWarning": "warning: git 2.39.5 is older than the minimum supported version 2.41.0; consider upgrading git",
+  "preview_total_files": 143,
+  "total_files": 127,
+  "reviewed_files": 127,
+  "skipped_files": 0,
+  "coverage_rate": 1,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "bf0d3fe3dd9c5d2606f11efa37ce83675a3a00081bb0e3c4d0443ccd821cf235"
+    },
+    {
+      "path": "C5-SOURCE-MANIFEST.json",
+      "status": "modified",
+      "insertions": 23,
+      "deletions": 8,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "1542d370b32f8483379248b5f0c45d8b00efc1e8bb2858aad9ce4ba40d50525f"
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "e665524f09c79dc72a545da4f1cf28e397315a9d0b04b8e2e4755392299cd65b"
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "modified",
+      "insertions": 118,
+      "deletions": 1,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "1bf21ecd823819e282a067e571892b5b7b3fd4e5b7e5ab59facde5c322415485"
+    },
+    {
+      "path": "docs/handoff/C5-VERIFICATION.json",
+      "status": "modified",
+      "insertions": 29,
+      "deletions": 223,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "918882101f1762a2865b3e5bf526d21128cb3a10380b464e9c8aa4097d49417a"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "12744ba9d609d66ba44b2d4fdc3d9a775f5beb4182aba7215b25c16151e0712c"
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 1,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "a4f0ecc001451e7a1a3efc87437086aba8565b3098da0eb5a99f0fb38ac34442"
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 2,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "e0ac4a71a42b8e019a02a637a0c4e02fcafa735ae610e1532bbb6cffebc5b979"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "insertions": 14,
+      "deletions": 2,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "b1ccd5371b4074549d0e769bbc0343b5043bf51ec7a0f40bfe65f6cb533490d2"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "modified",
+      "insertions": 17,
+      "deletions": 16,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "4263197250bc898e3138ccb25ffef5c9241dbc40acd3e835cdd49855efed697d"
+    },
+    {
+      "path": "src/core/ai.ts",
+      "status": "modified",
+      "insertions": 26,
+      "deletions": 3,
+      "review": "reviewed",
+      "method": "source + executable behavior / independent review",
+      "sha256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595"
+    },
+    {
+      "path": "docs/handoff/C5-R2-STALMATE-ROOT-CAUSE.md",
+      "status": "added",
+      "insertions": 58,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "4230679d48dc5da80fc5d088b7f6f85d97bdd74c162bfca91134b562ef3e663e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-MINIMAL-COUNTEREXAMPLE.json",
+      "status": "added",
+      "insertions": 34,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "819aa199b7c3b1b0fba87e7465949a3b59eeaa30bf59139e570664f16bebfe45"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-SOURCE-BOUNDARY.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "caebfcdbfe902e7ea636bed434f80f76c3f010034629f2c125c2b8517ac81718"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-TEST-RESULTS.json",
+      "status": "added",
+      "insertions": 1169,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "87c83503d3f9368b6e8342cced823f3f0fd9a5e8d6ce48dfb0a7604d1468c613"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "adb22b9069dadf7c72e4a966a93de528fc95bbcb202f12307634953d083caf05"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "f1e01e6861a6eaa10a2fc98073b9ed3b1296cbccc18ee1818433f9147549bbc2"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-browser-valid.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "eff47babc0cdb3e322eb9f00638c53df7c61a1e90f0024c838ff9a382a9b9e32"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-RED.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "af76cd28450db4df32488341a6fefc9d14dde5b021aa22f605de6b7684aa71be"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-RED.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "45e743158baa65124542fbc8a813d26d4ebdc98f38fb0d7c071a0f34c90266fe"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-final.json",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c9ee0abf3aab11aec0601dce07ff7cd1755a39992bcca6db32b05eb43ac1c5f9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-central-search-final.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "386bd603d8fa6caa2dba8498d2b9585c52addf81690f96145f484e54c7b9e3cc"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "24aef82ac51376715162ad04359f9bc62f5fc233c87bce473ac6526f0dea879e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-current-trace.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "eff47babc0cdb3e322eb9f00638c53df7c61a1e90f0024c838ff9a382a9b9e32"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "ad38bfc1d3cf809f9e45b20ede7f3f3d368fb77e75a33783c6bc979a5f4b5122"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "45e743158baa65124542fbc8a813d26d4ebdc98f38fb0d7c071a0f34c90266fe"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "92bb3f4b8cb9fd16568771dea9fb3902e539bb50f10379e29ac6e95bee48de0c"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "45e743158baa65124542fbc8a813d26d4ebdc98f38fb0d7c071a0f34c90266fe"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "2249e8c67b20f1ea8c683fa824619bbb2aee163b0da92a3bd6f1ca334583091e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "45e743158baa65124542fbc8a813d26d4ebdc98f38fb0d7c071a0f34c90266fe"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "23ad8860d59b2b3563632ff67c0ba5fa53a82e4e8caac9341ba4b12bf4d80994"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-build.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "386bd603d8fa6caa2dba8498d2b9585c52addf81690f96145f484e54c7b9e3cc"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "fe04e19fe7cb95f72af5516fead176bbbf5d1427965c211cf6cb0bd99da566e0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-check.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "386bd603d8fa6caa2dba8498d2b9585c52addf81690f96145f484e54c7b9e3cc"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "93980c3dfb82be533ffa68352ff8c7188f64720d3b9c3568518a073c581959ff"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-delivery2-test.source.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "386bd603d8fa6caa2dba8498d2b9585c52addf81690f96145f484e54c7b9e3cc"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c7f3245a9e23516a73956e49e932569e0ab43975f03edec645a2308f164d44d3"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-build.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3fe5ac95b5c065c538cfbc81e09b23840188c769bd5866b9f9e02fb52535d0d0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "53dd8532fe5382104cd275e59b128d35a706bf9786d031dd8f31c8a4ddd6785f"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-check.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3fe5ac95b5c065c538cfbc81e09b23840188c769bd5866b9f9e02fb52535d0d0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3221232d63b8cd531d2d4106a046a7e3f3e08486108f7fd7220e671c2c939f11"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-final-test.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3fe5ac95b5c065c538cfbc81e09b23840188c769bd5866b9f9e02fb52535d0d0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "518c662c91dd1d94d3fa063553a485558093c6d1ea15b28110de0818d1663c4f"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "ed607947fabdf2ed38805e214fd9526610727fd6e09e5d9d42a5790957cd4a50"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-gameplay.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3fe5ac95b5c065c538cfbc81e09b23840188c769bd5866b9f9e02fb52535d0d0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "6db50d8ed9804241eb0ceda1c28f3a742339cc3d8d3933fb358c3042b1c6262f"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-GREEN.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "a6a674bdf315b154b154f4af3c261819f31ad8779aac4848a532d8c5fe006e6a"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-block-RED.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "9cb07edd614e1e64ef9878d5178e15f6439f3149d622d8fec4eec2155939e01a"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "92876590d29e73776a1027327e5ba1b5e8ebf788e2d9309d1143609d749f3012"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser-report.json",
+      "status": "added",
+      "insertions": 300,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "31502b35ce0aaecdb637dd57bef0eeae381b39e088742a1fa66009dc910ae41b"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f25df8a248746c1e6cd4bff2d8c7624db9d0b452bbc46555dfd4a459b351d99"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-browser.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "e499e33eb9fb66e31c288803699ab2869566b648941c64532ba821a6a92b9ae0"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-build.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "bdfe434460e95191d2c14c427f371bf14082e168cf1e928134d6382c0b8c5468"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-check.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay-cleanup.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "31c5a1f9904112ed506f78add136eef282863c4b452cceecd1109c2ea372047d"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay-report.json",
+      "status": "added",
+      "insertions": 6635,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "3fb478b715e47bf24637664c21b75e27284d38b72d2e81d701f789aef0fb8914"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "4d5bdf461a55237c19164bf7ce0558dd4b6d4e120a0c49c8fb3eb72b87564ac8"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-gameplay.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "9e7cfeaa7f73e50c6e98155eba3737fe2ef12423d06b1135513f52011fb166ec"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-prefix.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "828361fcc89647a0e1e8953aa55edab5847819880d2c4a163b26c8f2139e898c"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-test.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "71c922b98ceb308163bbe451be7ad6401e22b0fcbd97af34abfc28343a44df2e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-recruit-trace.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "4b8124743556be00bad359fd6b276084c67c17f76f48b75ef11cf44b1653c23a"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-build.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "95bdb98f0625bf05ff047af6234809c9335d2b5943687bf859d2246b75a667ee"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "26c061d1c41757bf73f71bd3714cc06574fd82d0e6237233b283c437fe9f86fd"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-check.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "95bdb98f0625bf05ff047af6234809c9335d2b5943687bf859d2246b75a667ee"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c4615eb6dfbde153b4e97bad4889111f8fcca9e1d3ed310ad4c72e1f69362815"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-prefix.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "95bdb98f0625bf05ff047af6234809c9335d2b5943687bf859d2246b75a667ee"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "55f78aa6525d1b1fc90f08515abf23c3ee2952670d5541a7089856345abdc86e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-test.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "95bdb98f0625bf05ff047af6234809c9335d2b5943687bf859d2246b75a667ee"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "32e0ff5e3818364e6920f5efc3c785f4a91a49cf3702967443cf68bf79834302"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-GREEN.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "95bdb98f0625bf05ff047af6234809c9335d2b5943687bf859d2246b75a667ee"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "ed78b211c17f1e4dc71f7230bbf24fdacf13ed37f86804fac4c6e3e7193a538a"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-route-tie-RED.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "7faccf969b00b14c8344b1003e8a4e20254a5bc72c728d53e445545704694de7"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-GREEN.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "a7f2633e7b475adb0733c2af26f3921376836962bb90f9496846e353d46d58fe"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-GREEN.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f9107b112088b24d8e50f8a83e37ed05fd4f65d11c76458ae104d7cea6672d9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "d0f4e92528a79d977ad9862fd877541c6de28ecfd5ce0b8a3c7e6909a980e89e"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-confirmed.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "179852e90cbb05938eafc7a7f3456c030815202870f5cb874a440b797d1d2959"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-valid.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c9c58eac0df3ee0d017c6e24f76a54326f93a45091bfc2a044d035155acfe0f6"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED-valid.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "2fef432aa49a6f8540c159525c66ad44349711b86d0699d5140288d458911ebd"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "bffe36d5653524ce0e5e6f1afa9ca26c90f2704d5e5f00e06bc692d8c74b89c3"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-RED.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "323743fd212a620106b51a516ed406769bf986a9babe5fa2320549f7ed5563a3"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "284ce2f15f1cd0a1ceadc981ebe57c11779399647a14ed6e748ea4457a71cc66"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-build.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f9107b112088b24d8e50f8a83e37ed05fd4f65d11c76458ae104d7cea6672d9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "b34f8069e119fab9c80cf8a1057c2eaa1793671d6df94e0ac417147d7b9e5332"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-check.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f9107b112088b24d8e50f8a83e37ed05fd4f65d11c76458ae104d7cea6672d9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "d3f9d02092dbbba9b2c4da5f781915dd18a6bd9b0a9c69683197680a86a17559"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-prefix.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f9107b112088b24d8e50f8a83e37ed05fd4f65d11c76458ae104d7cea6672d9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "ec389ea67b7eb97fcb33537657aa0ed98a48e0f6ff361cb848a091272af92a03"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-scout-test.source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "0f9107b112088b24d8e50f8a83e37ed05fd4f65d11c76458ae104d7cea6672d9"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "419d96e0a38148e539a6c5181c3bbab96ebfbe49f81eb66d46434899f8320244"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010-reinforce.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "69c3e828015dfdc33390df3b4fe99c93c37b2301180e63eab5c9b046f3397137"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c2b02f5a0aefda545052e036a4e21b3a5a5f48b43cfbe65ee96057263fdbc620"
+    },
+    {
+      "path": "docs/verification/C5-R2/C5-R2-seed010.source.json",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "eff47babc0cdb3e322eb9f00638c53df7c61a1e90f0024c838ff9a382a9b9e32"
+    },
+    {
+      "path": "docs/verification/C5-R2/R1-C5-SOURCE-MANIFEST.json",
+      "status": "added",
+      "insertions": 65,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "5ae945ebbef656c36ab46f1ee7096395850fa1eff4040576afa22dafecb0a77e"
+    },
+    {
+      "path": "docs/verification/C5-R2/R1-C5-VERIFICATION.json",
+      "status": "added",
+      "insertions": 238,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "11554aa00d51bfba9f4d6b3cfaeaa01f146777fb3c496bc53f2fa69180c52693"
+    },
+    {
+      "path": "docs/verification/C5-R2/final-prefix-summary.json",
+      "status": "added",
+      "insertions": 80,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "94ec6d185287d869d070b02069dee5f6c0c30767674fd6f960d43be85cda922b"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/基線敏感性原始腳本.stdin.mjs",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "601a7340498d34b7fc23d0fb7a0ade2af39687d48619dad4c6680f86853db0ef"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/探索邊界窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 27,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "6aac1df8f8c338364752d7c5bf1a40899352e678f02948bd5eb7d6f6fc420063"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/獨立審查報告.md",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "59a83e35e05e8e94bd4b39c130aa37ca176cc1e14648d5a1612279b096f61049"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位前版敏感性.stdin.mjs",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "8b436283d5591a9647f557e746563c5035f10b1b09f79231ea7a6547901e6f1f"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位增補審查報告.md",
+      "status": "added",
+      "insertions": 57,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "dec5df7ed420d99206faebd61cb5e1ee4f1cac2cfdc000de7092dbc69ad1be3e"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位證據SHA256.json",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "00c68df27bd6365ddbf568e0e5da3b88609440bb20df1a5ff9b7176cb6bcb1a3"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位邊界窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 48,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "44a5d490e4f4051169ddd7149376dc770008ecedd81811e79013ffd89368dac4"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位驗證紀錄.json",
+      "status": "added",
+      "insertions": 97,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "4e0a18e972d5e65a2df2eacb234cc9f884a328a4736f3623de51befc7a789072"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷公開證據結構掃描.py",
+      "status": "added",
+      "insertions": 12,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "f1065717be036631977593ed23a9787b1f52c91cbb161e4d2a17017cad618c45"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷公開證據結構掃描摘要.json",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "5e6f8d5962747c83403fa17d95c8b962153d9ec4f17b2a5eb813ba9e78e441c0"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核.stdin.mjs",
+      "status": "added",
+      "insertions": 35,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "1c10009446bf3e7d62d2ab68d6fb2c1434cf8bdb960f97d293e03affcff12a0b"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核紀錄.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "97240cb4af97a147eca3843714afdcb82cc09b58bc66bb6193daea2a4c34a45f"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本獨立審查報告.md",
+      "status": "added",
+      "insertions": 52,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "656434be5a9158d1c47532127f0374190d3cb7ec8db04ea6282b65686c34fb77"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本證據SHA256.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "c118db019847c0d70de8a592c96a329e1389fbb821f99542f903af4a9d24ac20"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本護欄與末步觀測窄驗.stdin.mjs",
+      "status": "added",
+      "insertions": 35,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "17dbf48b332dd2b2e0638ee6fcb6deb5c05885fe5e91f097d4396e7acf3af0c9"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷腳本驗證紀錄.json",
+      "status": "added",
+      "insertions": 57,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "330e7343a3f911d722b82814da74d6d5c8351bd90d73f9c6b0b8f855d89b947f"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/證據檔案SHA256.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "6d99eed31995906d6e5dfb961e49caf88e5066d77c00e1cba6de24c056d99fd0"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/驗證紀錄.json",
+      "status": "added",
+      "insertions": 96,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "2d08dc47fd02529ed3d5ed945bdb59ce8b13bc648af8d488ae27e46c69977254"
+    },
+    {
+      "path": "docs/verification/C5-R2/reinforcement-prefix-summary.json",
+      "status": "added",
+      "insertions": 67,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "7dbb05a9115a2927547d4d2fb3ffc5654f4845b0d761cd2ae499a7575b82d3cb"
+    },
+    {
+      "path": "docs/verification/C5-R2/remaining-failure-analysis.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "fad0fd4e58cd654587ce448ae90877fbd99bdc36c1a6bc7e74cdb1ac3980e041"
+    },
+    {
+      "path": "docs/verification/C5-R2/seed010-reinforcement-summary.json",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "d315f67c809097e365c2e739e7c7263f0ed16632e28f54ffbfc2e08d09003250"
+    },
+    {
+      "path": "docs/verification/C5-R2/seed010-two-fix-summary.json",
+      "status": "added",
+      "insertions": 109,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "documentation/evidence/provenance consistency; raw outputs kept",
+      "sha256": "300a6b930941740c488fca550a35174887f79143a63293073ae4b765fdf9106c"
+    },
+    {
+      "path": "scripts/ai-decision-trace.mjs",
+      "status": "added",
+      "insertions": 97,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "source + executable behavior / independent review",
+      "sha256": "bfd04bf8a065a233cb90958bf8f2d45838af1381143367f240c79b362836c38d"
+    },
+    {
+      "path": "scripts/ai-endgame-search-check.ts",
+      "status": "added",
+      "insertions": 43,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "source + executable behavior / independent review",
+      "sha256": "913a727ee95e2d2d0d968228907064dfcdccf997263af4e782739ad52d0dc60e"
+    },
+    {
+      "path": "tests/ai-stalemate.test.ts",
+      "status": "added",
+      "insertions": 103,
+      "deletions": 0,
+      "review": "reviewed",
+      "method": "source + executable behavior / independent review",
+      "sha256": "130b7eedacb049256fe1e30db6440a3a51530f49366d4531d687d5075f6ed908"
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "docs/verification/C5-R2/OCR-HOST-REVIEW.json",
+      "status": "added",
+      "insertions": 977,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/OCR-preview.json",
+      "status": "added",
+      "insertions": 843,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/OCR-rules.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/基線敏感性原始log.txt",
+      "status": "added",
+      "insertions": 100,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/探索邊界窄驗原始log.txt",
+      "status": "added",
+      "insertions": 3,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/新增四項回歸原始log.txt",
+      "status": "added",
+      "insertions": 12,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/既有十五項聚焦原始log.txt",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位六項回歸原始log.txt",
+      "status": "added",
+      "insertions": 14,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位前版敏感性原始log.txt",
+      "status": "added",
+      "insertions": 38,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位差異.patch",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位既有聚焦原始log.txt",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/補兵調位邊界窄驗原始log.txt",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷末步觀測修正複核原始log.txt",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷終盤腳本語法原始log.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷護欄與末步觀測窄驗原始log.txt",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    },
+    {
+      "path": "docs/verification/C5-R2/independent-review/診斷追蹤腳本語法原始log.txt",
+      "status": "added",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "unsupported_ext"
+    }
+  ],
+  "exclusionsNote": "OCR unsupported .txt/.patch remain raw evidence; OCR-* self-generated review metadata explicitly excluded to avoid self-reference",
+  "findings": [],
+  "resolvedDiagnosticFinding": "final-command seen corrected; peer one-command RED/GREEN and root1000command FAIL kept",
+  "remainingFailures": [
+    "seed010 800/19813/winner=null",
+    "central-search 1000/seen=false/winner=null"
+  ],
+  "verdict": "reviewed patch has no unresolved blocker; global gameplay NOT_PASS",
+  "finalEvidenceReconciliation": "After staging, raw-log whitespace exit2 recorded; authored files exit0; source bytes remain tested f8ba9a7c."
+}

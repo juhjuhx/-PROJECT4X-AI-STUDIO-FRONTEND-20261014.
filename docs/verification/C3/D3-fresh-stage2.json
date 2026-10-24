@@ -1,0 +1,18 @@
+{
+  "label": "D3-fresh-stage2",
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/d3-runtime-audit",
+  "command": [
+    "npm",
+    "run",
+    "qa:stage2"
+  ],
+  "startedAt": "2026-10-18T04:38:40.795361+00:00",
+  "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": null,
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T04:38:46.207873+00:00",
+  "durationSeconds": 5.412,
+  "log": "D3-fresh-stage2.log"
+}

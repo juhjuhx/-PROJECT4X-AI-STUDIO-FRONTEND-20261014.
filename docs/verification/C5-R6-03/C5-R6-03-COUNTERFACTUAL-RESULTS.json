@@ -1,0 +1,2256 @@
+{
+  "schema": "project4x-r603-counterfactual-1",
+  "executionStatus": "TESTED_PASS",
+  "rootCauseStatus": "UNVERIFIED_ROOT_CAUSE",
+  "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+  "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "executedArms": 28,
+  "checkpointCount": 84,
+  "cohorts": [
+    {
+      "name": "late12",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+      "parentFormalMethodFingerprint": "602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01",
+      "diagnosticMethodFiles": {
+        "source.json": "09438e32eda76320822eb369520f8c8a446756c576692a997f7b50ebbf50f930",
+        "trial.mjs": "f410f032dcddb0e0cd6b1a1c46fb9f8ecc2f0dcd1c7bb9c1a9f508342d4ec966",
+        "coordinated-cf.mjs": "7e6b1e8dc29b93c2d5069c8bf9a8616a5795307039cf6f79621591770789f424",
+        "runner.py": "d1af847bbcf6bc1e16caeaa3e42d8f970e0669e01794da53d208d247a4f16fda"
+      },
+      "declarationSha256": "8e9bc71be828f10d20076b0ad811a9f9a3d665fd0141590c121af04ed9979389",
+      "safeSummarySha256": "144f17230c817e275522b2d47238871ecc9cac2de3d65e5352ff07b26d8e3984",
+      "privateDirectory": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/coordinated-1b0147fd-9c76-4444-a646-cf828c6c0a62",
+      "horizons": [
+        2,
+        4,
+        8
+      ],
+      "diagnosticCommandCap": 500,
+      "arms": [
+        {
+          "armId": "late12-A01",
+          "kind": "baseline",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 1074.081625,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "f582a37b9ac67ba964d8245ffda653f4dc99c475ed45dc995251776a7c2b34c0"
+        },
+        {
+          "armId": "late12-A02",
+          "kind": "identity",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 1004.4690839999998,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "a34ed5b6eeddb1b45c076fc9ac0866930ba782b4b77c94b336eced2e59f08694"
+        },
+        {
+          "armId": "late12-A03",
+          "kind": "focal-north",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 997.1229579999999,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "d0d30a12edc310f9b5dcc5c71fc09079c5fddf189b9acc6b0e2363178e59e00a"
+        },
+        {
+          "armId": "late12-A04",
+          "kind": "focal-west",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 1021.0532090000006,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "eded3352ec647f776775f02b2b36f3f8da42411c7eb0f1cb56abd0429e9fdc6d"
+        },
+        {
+          "armId": "late12-A05",
+          "kind": "north-then-support",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 1003.167042,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "6e93a5caf70f0352cbb5485dad402147bbc84e7d231263daa7bbd8b05f725d3d"
+        },
+        {
+          "armId": "late12-A06",
+          "kind": "support-then-north",
+          "commandIndex": 6013,
+          "status": "FINISHED",
+          "durationMs": 1032.0008749999997,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 25,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 0
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 77,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 6,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 183,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 11,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "2ae85cf7eaf0a1e8247ab930f0fcfbba5d21b705349a5dd9535e38a3664b7b26"
+        },
+        {
+          "armId": "late12-A07",
+          "kind": "baseline",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1015.9917089999999,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "c5b71eb66b1a08311b780cc16b1161222416ea4a372e5e8a455cdf149f2c9a6c"
+        },
+        {
+          "armId": "late12-A08",
+          "kind": "identity",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1030.8770830000003,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "da17187cefb3c4d708b25d00d01350a4e0b03e33c1a11cd0123055b868603f7a"
+        },
+        {
+          "armId": "late12-A09",
+          "kind": "focal-north",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1007.6251669999983,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "434841cb6a4787afaca2eb27ff576376a283722e8eaef4b9c5cd0209eb3fd838"
+        },
+        {
+          "armId": "late12-A10",
+          "kind": "focal-west",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1048.411,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "0ba6899f122396a375a633b516de65e19feccdc81c52a49435811188d924cf23"
+        },
+        {
+          "armId": "late12-A11",
+          "kind": "north-then-support",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1006.6049579999999,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "77e2182e5198760383de597a56e61ccd4560e6392b3ed9c42d5a5d5ceb845ac2"
+        },
+        {
+          "armId": "late12-A12",
+          "kind": "support-then-north",
+          "commandIndex": 6114,
+          "status": "FINISHED",
+          "durationMs": 1032.0843750000004,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 30,
+              "ownCount": 23,
+              "ownHp": 191,
+              "ownGold": 394,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 0,
+                "recruitCost": 0,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 3
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 82,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 2,
+                "damageDealt": 5,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 1,
+                "recruitCost": 5,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 187,
+              "ownCount": 24,
+              "ownHp": 179,
+              "ownGold": 412,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 11,
+                "damageDealt": 22,
+                "observedKills": 1,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 9,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 10,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "37b9cd2d6a72f5a5a82cd0c092e3beb4c42ce95c476268aa8a04a1fa4a8c4a01"
+        }
+      ],
+      "allFinished": true
+    },
+    {
+      "name": "earlier13",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+      "parentFormalMethodFingerprint": "602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01",
+      "diagnosticMethodFiles": {
+        "source.json": "09438e32eda76320822eb369520f8c8a446756c576692a997f7b50ebbf50f930",
+        "trial.mjs": "f410f032dcddb0e0cd6b1a1c46fb9f8ecc2f0dcd1c7bb9c1a9f508342d4ec966",
+        "earlier-cf.mjs": "442663bc0aa03d2364e94c1a457dec69400d5d3d30d8cc72c33be854d28cf847",
+        "runner.py": "d1af847bbcf6bc1e16caeaa3e42d8f970e0669e01794da53d208d247a4f16fda",
+        "EARLIER-INDEX-POINTER.json": "52581b9444f66a434389cd16b43bbd9a8dbbbc24039c2cabeabfcf9bc37c7601",
+        "reconstruct-earlier.mjs": "3e6aef71e4f074dab54f75153b5483e94cacbe020cb991337998d66578cd4fcc"
+      },
+      "declarationSha256": "ba56aa96825e53994944b83b5075f0f295e2d10a643cecf48d2b1135f07c5e79",
+      "safeSummarySha256": "52dc1903465d5c26d5d99bdf45ff23a122cf9b25321e687fdaa93a7c9f0d47c1",
+      "privateDirectory": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/earlier-cf-3b0e01c0-a00f-4f4c-bfae-ddaebacfb634",
+      "horizons": [
+        2,
+        4,
+        8
+      ],
+      "diagnosticCommandCap": 500,
+      "arms": [
+        {
+          "armId": "earlier13-A01",
+          "kind": "baseline",
+          "commandIndex": 5991,
+          "status": "FINISHED",
+          "durationMs": 1172.663541,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 47,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 1,
+                "damageDealt": 4,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 12,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 1,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 99,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 4,
+                "damageDealt": 10,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 18,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 205,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 10,
+                "damageDealt": 27,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 5,
+                "recruitCost": 23,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "895cbd78d7d262637cf78b7205419540c87e8a5fce9069b9c36decea8cc2672d"
+        },
+        {
+          "armId": "earlier13-A02",
+          "kind": "identity",
+          "commandIndex": 5991,
+          "status": "FINISHED",
+          "durationMs": 1089.0662499999999,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 47,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 1,
+                "damageDealt": 4,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 12,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 1,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 99,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 4,
+                "damageDealt": 10,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 18,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 205,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 10,
+                "damageDealt": 27,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 5,
+                "recruitCost": 23,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "f439617d9127502fe2b8d4e57378a8a1ddb905d28ca86de3491cb91655598a2a"
+        },
+        {
+          "armId": "earlier13-A03",
+          "kind": "focal-first",
+          "commandIndex": 5991,
+          "status": "FINISHED",
+          "durationMs": 1123.635291,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 47,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 1,
+                "damageDealt": 4,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 12,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 1,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 99,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 4,
+                "damageDealt": 10,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 18,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 202,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 10,
+                "damageDealt": 27,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 5,
+                "recruitCost": 23,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "bddd803e3d589145cd94fde477ab1d3aaa32d25ad1e8e8e8326e37063e13abc1"
+        },
+        {
+          "armId": "earlier13-A04",
+          "kind": "focal-then-selected",
+          "commandIndex": 5991,
+          "status": "FINISHED",
+          "durationMs": 1093.9711669999997,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 47,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 1,
+                "damageDealt": 4,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 12,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 1,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 99,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 4,
+                "damageDealt": 10,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 18,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 202,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 10,
+                "damageDealt": 27,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 5,
+                "recruitCost": 23,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "21dd7e37bd271a40651189620bdb38797c86796ceaa29d4da8230135f177c631"
+        },
+        {
+          "armId": "earlier13-A05",
+          "kind": "selected-then-focal",
+          "commandIndex": 5991,
+          "status": "FINISHED",
+          "durationMs": 1102.9175830000004,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 47,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 1,
+                "damageDealt": 4,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 12,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 1,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 99,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 4,
+                "damageDealt": 10,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 18,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 202,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 10,
+                "damageDealt": 27,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 5,
+                "recruitCost": 23,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "92a4ebe9d507c71c812f40cf433a6c48597cb4b660a71efe6db862873b37b12d"
+        },
+        {
+          "armId": "earlier13-A06",
+          "kind": "baseline",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1080.9512080000004,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 192,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "adeb030c3775e55f9218082588c56af5438b5b3ff308745ea56e3fe91102753d"
+        },
+        {
+          "armId": "earlier13-A07",
+          "kind": "identity",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1044.2087919999994,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 192,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "8241789b6fc12d6c4d799c727238974741af8d552a6371267c1e0fac168a06fc"
+        },
+        {
+          "armId": "earlier13-A08",
+          "kind": "alternative-blocker",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 994.9594589999997,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "f97bca73003349b421b1071887449c9eae8ad710c138025997f07983ef5b5204"
+        },
+        {
+          "armId": "earlier13-A09",
+          "kind": "focal-first",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1084.5748750000002,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "92a26a8549bf5cbb99e75642155b6df4057e913486fcf70b7361784c9e0c6509"
+        },
+        {
+          "armId": "earlier13-A10",
+          "kind": "focal-then-alternative",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1013.4483749999999,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "29599df4ee014051b7c83b02fc8dccbba5dd439e79c929c643ae4880e72e86df"
+        },
+        {
+          "armId": "earlier13-A11",
+          "kind": "alternative-then-focal",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1028.7851249999985,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "cbb76c9355978ec61e0110f7073f15f125c8b7ca0aa43083a738af12e036ae7e"
+        },
+        {
+          "armId": "earlier13-A12",
+          "kind": "focal-then-selected",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1048.5281670000004,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "54f305ca9765fe89d62a014795a8a7f82dc5fbd617d45eb7e51190e1f42ee4a6"
+        },
+        {
+          "armId": "earlier13-A13",
+          "kind": "selected-then-focal",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 1029.6793749999997,
+          "checkpoints": [
+            {
+              "endTurn": 2,
+              "commands": 34,
+              "ownCount": 23,
+              "ownHp": 201,
+              "ownGold": 382,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 0,
+                "damageDealt": 0,
+                "observedKills": 0,
+                "captures": 0,
+                "recruits": 2,
+                "recruitCost": 8,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 0,
+                "capture": 0,
+                "recruit": 6
+              }
+            },
+            {
+              "endTurn": 4,
+              "commands": 86,
+              "ownCount": 24,
+              "ownHp": 200,
+              "ownGold": 385,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 3,
+                "damageDealt": 6,
+                "observedKills": 3,
+                "captures": 0,
+                "recruits": 3,
+                "recruitCost": 14,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 3,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "959d3a360940c5b7c846c1adab2b2d5148c40e99e5c07558adc3f884c1bd54f8"
+        }
+      ],
+      "allFinished": true
+    },
+    {
+      "name": "extended3",
+      "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+      "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+      "parentFormalMethodFingerprint": "602cf0843cae023fc5d175b9f39c6b729ce2baf079a429f8d67cdfab831d3b01",
+      "diagnosticMethodFiles": {
+        "source.json": "09438e32eda76320822eb369520f8c8a446756c576692a997f7b50ebbf50f930",
+        "trial.mjs": "f410f032dcddb0e0cd6b1a1c46fb9f8ecc2f0dcd1c7bb9c1a9f508342d4ec966",
+        "earlier-cf.mjs": "442663bc0aa03d2364e94c1a457dec69400d5d3d30d8cc72c33be854d28cf847",
+        "runner.py": "d1af847bbcf6bc1e16caeaa3e42d8f970e0669e01794da53d208d247a4f16fda",
+        "EARLIER-INDEX-POINTER.json": "52581b9444f66a434389cd16b43bbd9a8dbbbc24039c2cabeabfcf9bc37c7601",
+        "reconstruct-earlier.mjs": "3e6aef71e4f074dab54f75153b5483e94cacbe020cb991337998d66578cd4fcc"
+      },
+      "declarationSha256": "b596094de3894cd739c20d9ad45fb3b70f4a0f4c40d1017b0ee38217dcd2df22",
+      "safeSummarySha256": "d610e140de5cbd6cd2c2598238199ed30f51d83fec01b08d9c155c7559135e74",
+      "privateDirectory": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-03-20261023-092731-fb2e9b4e/private/extended-af19e209759744af9bfa42fe0c31f88f",
+      "horizons": [
+        8,
+        16,
+        32
+      ],
+      "diagnosticCommandCap": 1200,
+      "arms": [
+        {
+          "armId": "extended3-A01",
+          "kind": "baseline",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 4273.263458,
+          "checkpoints": [
+            {
+              "endTurn": 8,
+              "commands": 192,
+              "ownCount": 23,
+              "ownHp": 193,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 9,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 16,
+              "commands": 400,
+              "ownCount": 23,
+              "ownHp": 198,
+              "ownGold": 418,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 26,
+                "damageDealt": 58,
+                "observedKills": 8,
+                "captures": 0,
+                "recruits": 8,
+                "recruitCost": 35,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 19,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 32,
+              "commands": 827,
+              "ownCount": 22,
+              "ownHp": 182,
+              "ownGold": 458,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 64,
+                "damageDealt": 133,
+                "observedKills": 17,
+                "captures": 0,
+                "recruits": 15,
+                "recruitCost": 67,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 47,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "01fa8354cdf84b3736b94977d78353ffdce49cab9da81ff62f902cf8de8519d7"
+        },
+        {
+          "armId": "extended3-A02",
+          "kind": "alternative-blocker",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 4123.384083,
+          "checkpoints": [
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 16,
+              "commands": 402,
+              "ownCount": 24,
+              "ownHp": 194,
+              "ownGold": 418,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 28,
+                "damageDealt": 59,
+                "observedKills": 9,
+                "captures": 0,
+                "recruits": 8,
+                "recruitCost": 35,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 19,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 32,
+              "commands": 833,
+              "ownCount": 24,
+              "ownHp": 185,
+              "ownGold": 456,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 69,
+                "damageDealt": 147,
+                "observedKills": 18,
+                "captures": 0,
+                "recruits": 15,
+                "recruitCost": 69,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 45,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "a0acdc738c5f434306e27441eaeb36b56e8d1b2bf39e17c645633777cd8d7bb5"
+        },
+        {
+          "armId": "extended3-A03",
+          "kind": "focal-first",
+          "commandIndex": 6004,
+          "status": "FINISHED",
+          "durationMs": 4171.559833000001,
+          "checkpoints": [
+            {
+              "endTurn": 8,
+              "commands": 189,
+              "ownCount": 23,
+              "ownHp": 194,
+              "ownGold": 398,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 9,
+                "damageDealt": 23,
+                "observedKills": 4,
+                "captures": 0,
+                "recruits": 4,
+                "recruitCost": 19,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 8,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 16,
+              "commands": 405,
+              "ownCount": 23,
+              "ownHp": 182,
+              "ownGold": 413,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 26,
+                "damageDealt": 56,
+                "observedKills": 7,
+                "captures": 0,
+                "recruits": 9,
+                "recruitCost": 40,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 19,
+                "capture": 0,
+                "recruit": 9
+              }
+            },
+            {
+              "endTurn": 32,
+              "commands": 825,
+              "ownCount": 22,
+              "ownHp": 189,
+              "ownGold": 437,
+              "ownSiteCount": 3,
+              "outcomes": {
+                "attacks": 59,
+                "damageDealt": 120,
+                "observedKills": 15,
+                "captures": 0,
+                "recruits": 18,
+                "recruitCost": 88,
+                "newKnownTiles": 0
+              },
+              "legalOpportunityCounts": {
+                "attack": 44,
+                "capture": 0,
+                "recruit": 9
+              }
+            }
+          ],
+          "rawResultSha256": "e5523829cb1c0291b55e9ce1627029df7bf9d87f2ca78ca67347afda57d87a7c"
+        }
+      ],
+      "allFinished": true
+    }
+  ],
+  "interpretation": [
+    "六E觀測同一記憶據點，沒有site/enemy切換；owner UNKNOWN。",
+    "late12在2/4/8ET同起點所有分項結果相同，只改位置，不是收益。",
+    "earlier13在8ET出現共享單位HP+3/-2，總HP+1；新招ID也分岔，不能跨分支按新ID當傷亡。",
+    "extended3每個8ET checkpoint與earlier13完全一致；32ET alt-blocker較baseline +2兵/+3HP/+1擊殺/+2成本；focal-first HP+7但擊殺-2、成本+21，屬混合取捨。",
+    "所有extended arm據點3、Capture0、新情報0、winner=null；無自然終局證據。",
+    "存在等價控制，不把28分支當28獨立收益樣本或完成率。",
+    "通用協同規則的合法最小fixture與原E RED尚未建立，因此未改AI，不任意調權重。"
+  ],
+  "extendedTradeoffs": {
+    "alternativeBlocker": {
+      "16ET": {
+        "ownCount": 1,
+        "ownHp": -4,
+        "observedKills": 1,
+        "recruitCost": 0
+      },
+      "32ET": {
+        "ownCount": 2,
+        "ownHp": 3,
+        "observedKills": 1,
+        "recruitCost": 2
+      }
+    },
+    "focalFirst": {
+      "16ET": {
+        "ownCount": 0,
+        "ownHp": -16,
+        "observedKills": -1,
+        "recruitCost": 5
+      },
+      "32ET": {
+        "ownCount": 0,
+        "ownHp": 7,
+        "observedKills": -2,
+        "recruitCost": 21
+      }
+    }
+  },
+  "canonicalOracleExcluded": true,
+  "noFullGameOrFull100Inference": true
+}

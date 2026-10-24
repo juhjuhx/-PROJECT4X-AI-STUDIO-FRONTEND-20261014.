@@ -1,0 +1,57 @@
+{
+  "base": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "target_SHA256": {
+    "scripts/ai-endgame-search-check.ts": "ab02f43a0db2904d6085dfd70d7ddc020fbf3b00216a5430d90bc78e177aa42b",
+    "scripts/ai-decision-trace.mjs": "bfd04bf8a065a233cb90958bf8f2d45838af1381143367f240c79b362836c38d",
+    "src/core/ai.ts": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595"
+  },
+  "node": "v26.10.0",
+  "runs": [
+    {
+      "名稱": "診斷終盤腳本語法",
+      "argv": [
+        "node",
+        "--check",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": null,
+      "開始UTC": "2026-10-18T17:53:29.502817+00:00",
+      "exit": 0,
+      "log": "診斷終盤腳本語法原始log.txt"
+    },
+    {
+      "名稱": "診斷追蹤腳本語法",
+      "argv": [
+        "node",
+        "--check",
+        "scripts/ai-decision-trace.mjs"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": null,
+      "開始UTC": "2026-10-18T17:53:29.586135+00:00",
+      "exit": 0,
+      "log": "診斷追蹤腳本語法原始log.txt"
+    },
+    {
+      "名稱": "診斷護欄與末步觀測窄驗",
+      "argv": [
+        "node",
+        "--import",
+        "tsx",
+        "--input-type=module",
+        "-"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": "診斷腳本護欄與末步觀測窄驗.stdin.mjs",
+      "開始UTC": "2026-10-18T17:53:29.644691+00:00",
+      "exit": 0,
+      "log": "診斷護欄與末步觀測窄驗原始log.txt"
+    }
+  ],
+  "未執行": [
+    "原1000commands終盤重現",
+    "生成局bounded trace",
+    "整局玩法檢查"
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "schema": "project4x-c0-verification-1",
+  "generatedAt": "2026-10-17T05:21:43.612194+00:00",
+  "tests": [
+    {
+      "label": "main-install",
+      "command": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "startedAt": "2026-10-16T16:22:29.533550+00:00",
+      "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "c21b16cd75572d069369f41426f7323c63c05083",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:30.758299+00:00",
+      "durationSeconds": 1.225,
+      "log": "evidence/main-install.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "main-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-16T16:22:50.398527+00:00",
+      "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "c21b16cd75572d069369f41426f7323c63c05083",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:52.399079+00:00",
+      "durationSeconds": 2.001,
+      "log": "evidence/main-check.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "main-tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-16T16:22:50.398533+00:00",
+      "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "c21b16cd75572d069369f41426f7323c63c05083",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:52.586698+00:00",
+      "durationSeconds": 2.188,
+      "log": "evidence/main-tests.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": 44,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "main-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-16T16:23:23.867758+00:00",
+      "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "c21b16cd75572d069369f41426f7323c63c05083",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:23:26.582598+00:00",
+      "durationSeconds": 2.715,
+      "log": "evidence/main-build.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "main-browser",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-16T16:25:33.228249+00:00",
+      "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "c21b16cd75572d069369f41426f7323c63c05083",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:25:36.655907+00:00",
+      "durationSeconds": 3.427,
+      "log": "evidence/main-browser.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": 7,
+      "failedCount": 0,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-install",
+      "command": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "startedAt": "2026-10-16T16:22:29.533550+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:30.701992+00:00",
+      "durationSeconds": 1.168,
+      "log": "evidence/d2-install.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-16T16:22:50.398531+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:52.114247+00:00",
+      "durationSeconds": 1.716,
+      "log": "evidence/d2-check.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-16T16:22:50.398532+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:22:52.784174+00:00",
+      "durationSeconds": 2.386,
+      "log": "evidence/d2-tests.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": 44,
+      "failedCount": 0,
+      "skippedCount": 0,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-16T16:23:23.867829+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-16T16:23:26.835092+00:00",
+      "durationSeconds": 2.967,
+      "log": "evidence/d2-build.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-browser",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-17T05:16:12.094388+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T05:16:16.389209+00:00",
+      "durationSeconds": 4.294,
+      "log": "evidence/d2-browser.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": 7,
+      "failedCount": 0,
+      "skippedCount": null,
+      "blockingGateSatisfied": true
+    },
+    {
+      "label": "d2-stage2",
+      "command": [
+        "npm",
+        "run",
+        "qa:stage2"
+      ],
+      "startedAt": "2026-10-17T05:16:22.833045+00:00",
+      "snapshotSha256": "675c365d0291106d33aad6c58cbf97fb054a9e77aa087aa64199d7bbcef470fd",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": null,
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-17T05:16:28.204707+00:00",
+      "durationSeconds": 5.372,
+      "log": "evidence/d2-stage2.log",
+      "environment": "evidence/environment.json",
+      "result": "TESTED_PASS",
+      "passedCount": null,
+      "failedCount": null,
+      "skippedCount": null,
+      "coverageVerdict": "PARTIAL",
+      "reason": "腳本 ALL_PASS 不證明 pinch、完整 fog 隔離或實際遺跡／load 路徑",
+      "blockingGateSatisfied": false
+    }
+  ],
+  "historicalGameplayFailures": {
+    "full100": {
+      "completed": 62,
+      "turnLimit": 38,
+      "status": "TESTED_FAIL",
+      "freshRunThisPhase": false
+    },
+    "seed010": {
+      "endTurns": 800,
+      "commands": 19696,
+      "winner": null,
+      "status": "TESTED_FAIL",
+      "freshRunThisPhase": false
+    },
+    "T3": "歷史 TESTED_FAIL；本輪未重跑",
+    "T6": "歷史 TESTED_FAIL；本輪未重跑"
+  },
+  "notVerified": [
+    "D3 source",
+    "GameSession runtime",
+    "new contract behavioral tests",
+    "full multi-touch pinch and command non-interference",
+    "physical device",
+    "human complete game",
+    "automated visual golden regression"
+  ],
+  "reviewCoverage": {
+    "totalFiles": 45,
+    "reviewableFiles": 32,
+    "reviewedFiles": 15,
+    "skippedFiles": 17,
+    "coverageRate": 0.46875
+  },
+  "rawEvidenceRoot": "隔離稽核目錄的 evidence/；不包含於原始產品 source",
+  "productAcceptance": "NOT_PASS",
+  "contractTypecheck": {
+    "label": "c1-contract-types",
+    "command": [
+      "node_modules/.bin/tsc",
+      "-p",
+      "../evidence/c1-contract-tsconfig.json"
+    ],
+    "startedAt": "2026-10-17T05:22:04.327833+00:00",
+    "snapshotSha256": "f25cdc30535b79b619cd149209ccfd613522be52e5fd82d26858585bed5cd0a0",
+    "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+    "head": "c21b16cd75572d069369f41426f7323c63c05083",
+    "timeoutSeconds": 240,
+    "exitCode": 0,
+    "endedAt": "2026-10-17T05:22:05.017660+00:00",
+    "durationSeconds": 0.69,
+    "log": "c1-contract-types.log",
+    "additionalInputs": {
+      "c1-contract-worktree/docs/contracts/frontend-core-v1.d.ts": "3c344127448ae5418e07dcbf1f5e09384fab44a1c3e3411f30cb46e271b75363",
+      "evidence/c1-contract-consumer.ts": "e4a5704dab660801617c23bdcea64079b55d6667f0d6700bb324e8e92184161f",
+      "evidence/c1-contract-tsconfig.json": "c3e5f0bcd58854b76cada738e12fc32ca942d2be251450ac8783883c5c56fe11"
+    },
+    "verdict": "TESTED_PASS: 只驗宣告與負面型別案例，非 runtime contract tests"
+  },
+  "independentReview": {
+    "artifact": "evidence/independent-c0-review.md",
+    "scope": "D2 vs main C0",
+    "verdict": "REQUEST_CHANGES",
+    "findings": 6,
+    "finalMessage": "額度中斷，已寫報告保留"
+  },
+  "cleanup": {
+    "ownedServerProcessesStopped": true,
+    "threeLoopbackPortsRebindVerified": true,
+    "temporaryQACopyRemoved": true,
+    "rawEvidencePreserved": true,
+    "sourceUnchangedBeforeCleanup": true
+  },
+  "c1IndependentSpecReview": {
+    "artifact": "evidence/independent-c1-review.md",
+    "result": "PROPOSED_SPEC_DELIVERABLE",
+    "unresolvedP0P1P2": 0,
+    "resolvedFinding": "C1-01: listener publication dispose/subscribe semantics",
+    "contractSha256": "bac4afeb433838a445792b7c9cfdfce8d10212cf66f590228de41448753b18c5",
+    "runtimeAcceptance": "NOT_IMPLEMENTED"
+  }
+}

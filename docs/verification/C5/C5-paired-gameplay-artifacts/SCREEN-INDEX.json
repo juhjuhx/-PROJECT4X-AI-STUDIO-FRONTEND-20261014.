@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-10-18T12:37:36.383Z",
+  "browser": "156.0.8078.4",
+  "screenshots": [
+    {
+      "path": "手機橫式.png",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "imagePixels": {
+        "width": 812,
+        "height": 815
+      },
+      "state": "初局中心、真CDP平移/雙指縮放後",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    },
+    {
+      "path": "桌面初局.png",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 960
+      },
+      "state": "初局、斥候選取",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    },
+    {
+      "path": "手機直式.png",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "imagePixels": {
+        "width": 375,
+        "height": 1917
+      },
+      "state": "初局中心、真CDP平移/雙指縮放後",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    },
+    {
+      "path": "窄手機.png",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "imagePixels": {
+        "width": 320,
+        "height": 1884
+      },
+      "state": "初局中心、真CDP平移/雙指縮放後",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    },
+    {
+      "path": "遺跡選擇.png",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 960
+      },
+      "state": "實際Move觸發必答遺跡",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    },
+    {
+      "path": "真實戰鬥佔領旅程.png",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "imagePixels": {
+        "width": 1440,
+        "height": 960
+      },
+      "state": "同局turn37、Attack後Capture及replay驗證完成",
+      "actuallyExecuted": true,
+      "sourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "codeCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+      "artApproval": "UNVERIFIED (runtime screenshot, not a new creator art approval)"
+    }
+  ]
+}

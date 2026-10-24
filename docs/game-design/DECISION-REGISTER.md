@@ -1,4 +1,22 @@
+## 2026-10-24 Demo交付順序（USER_CONFIRMED）
+主創明確選擇：先交付既有規則＋探索敘事＋Web/PWA可玩Demo，再以獨立升版切片審查新兵種、科技與地形。新數值仍PROPOSED；不因本次產品化而自動批准。Demo完成與軍事winner分離，不改CCTS淘汰條件。
+
 # 決策登錄簿｜確認、覆寫與實作狀態
+
+## 2026-10-17 Engineering Program 補充
+
+來源為主創本次直接指令，不推翻以下歷史世界／CCTS 裁決。
+
+| ID | 決策 | 狀態與適用範圍 |
+|---|---|---|
+| E-CURRENT-01 | Codex 擁有 core/session/AI/persistence/契約與 main 最終整合；Gemini 擁有視覺 UI | USER_CONFIRMED；詳 MODULE-OWNERSHIP |
+| E-CURRENT-02 | CORE → SESSION → PRESENTATION ADAPTER → UI；單一 GameState/applyCommand，UI 與 AI 不全知 | USER_CONFIRMED 架構方向；C1 方法／事件 signature 經獨立規格審查；C2 runtime 已 IMPLEMENTED，未新增玩法裁決 |
+| E-CURRENT-03 | 「已批准的 MIT License」與 README／授權說明一致 | USER_CONFIRMED；LICENSE 本文不變，本輪修正衝突說明 |
+| E-CURRENT-04 | 先 C0/C1；D3 未交先按 D2 唯讀盤查，不用舊 main 覆寫前端 | USER_CONFIRMED；本輪沒有整合 source |
+| E-CURRENT-05 | 城市與招募先做完整合法閉環，再選最小城市成長；探索／經濟／軍事擴充需完整策略效果 | USER_CONFIRMED 工程順序；新成本、等級、人口、兵種科技數值仍 PROPOSED／未定 |
+| E-CURRENT-06 | 不全知 AI、不改測試門檻、不合成 winner、不加流亡倒數；遺跡發現與抵達取得分離 | USER_CONFIRMED 重申；seed010/full100 修復與新 ruleset migration 尚未實作 |
+
+本補充只記實際給定要求；沒有替主創核准 C1 具體型別、事件欄位、新城市／科技數值或正式發布。
 
 盤查日：2026-10-13。本簿不以檔案 mtime 排權威，不把工程預設、審查建議或文件版本號等同主創批准。完整原件見 [DOCUMENT-AUTHORITY](DOCUMENT-AUTHORITY.md)。
 
@@ -127,3 +145,11 @@ U-LATEST 的原始用戶要求由根代理保留在 [USER-REQUEST-DECISIONS](../
 | S09 | RELIC-D1先看見者唯一處置權 | U-LATEST R01/R03：發現／取得分離、實際抵達優先 | 立即必答、單次實物與持續研究方向保留；core尚未更新 |
 
 這是按條款局部覆寫，不是刪除／全量替換舊文件。當前行為、當前設計與驗收三個維度都保留；舊源碼或歷史11/11 QA不能自動成為新版證據。
+
+## 2026-10-18 工程續作與待答問題
+
+| ID | 來源／內容 | 狀態 | 範圍 |
+|---|---|---|---|
+| ENG-C3-1018 | 主創Engineering Continuation Master Harness：C2驗證→D3修復/整合→既有玩法E2E→AI診斷，隔離分支、不push main | USER_CONFIRMED | 本輪執行授權，局部取代前輪停止C2/等待D3；不變更世界觀或玩法數值 |
+| ENG-AI-QUESTION | 主創要求新架構/品質/排版取捨先grill-me；本輪詢問『現有無記憶policy最小修正』或『帶觀測記憶策略層設計』 | USER_CONFIRMED（本輪主創答覆） | 先修現有無記憶策略最小反例；不新增策略記憶層/Save schema |
+| ENG-UI-QUESTION | 詢問保留D3手機分頁先玩法驗收、或交Gemini另提新排版 | USER_CONFIRMED（本輪主創答覆） | 保留D3分頁，先完成真玩法驗收；原D Hybrid方向持續有效 |

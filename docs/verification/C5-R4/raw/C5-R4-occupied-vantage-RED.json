@@ -1,0 +1,20 @@
+{
+  "label": "C5-R4-occupied-vantage-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-frontier.test.ts"
+  ],
+  "startedAt": "2026-10-19T13:18:57.421106+00:00",
+  "snapshotSha256": "0091c5d02b4696f61c83ed994327dd820a56056c1f49060041656a4bc5e656ab",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-19T13:18:57.850325+00:00",
+  "durationSeconds": 0.429,
+  "log": "C5-R4-occupied-vantage-RED.log"
+}

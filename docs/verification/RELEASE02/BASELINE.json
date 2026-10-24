@@ -1,0 +1,165 @@
+{
+  "status": "TESTED_PASS",
+  "scope": "2026-10-24原4448ade source的fresh基線；不是新release整合Gate或真機",
+  "node": "v26.10.0",
+  "unit": {
+    "pass": 203,
+    "fail": 0,
+    "skip": 0
+  },
+  "browserScenarios": 11,
+  "gameplayScenarios": 12,
+  "maxHumanCommands": 220,
+  "humanCommands": 209,
+  "demoScenarios": 4,
+  "pwaOffline": "TESTED_PASS",
+  "pwaWaitingUpdate": "TESTED_PASS",
+  "webR3HttpManifestFiles": 11,
+  "launcherExecutable": true,
+  "checks": [
+    {
+      "runId": "baseline-browser-20261024-064615-f84f9566",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:46:15.872458+00:00",
+      "finishedAt": "2026-10-23T22:46:26.536165+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "a110b4b18a3b5559ec5ecd30001fd5a1dda3ea3e28fdf0d0ffa6a6624e8d40e2",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-build-20261024-064550-10a0e533",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:45:50.557094+00:00",
+      "finishedAt": "2026-10-23T22:45:52.180181+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "f0f5eeb503a9d96b991d3d30c0f3ee8c8a4a3e2b7440f50237348b172576b7ff",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-check-20261024-064535-6c75c7f9",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:45:35.952622+00:00",
+      "finishedAt": "2026-10-23T22:45:37.200835+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-ci-20261024-064440-45bad0a5",
+      "command": [
+        "npm",
+        "ci",
+        "--ignore-scripts"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:44:40.425037+00:00",
+      "finishedAt": "2026-10-23T22:44:42.095917+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "b18d41ceb55feb0a8efcf873a9e3a90637efee849f636b574471983fc7f8e735",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-demo-20261024-064942-3bb8e504",
+      "command": [
+        "npm",
+        "run",
+        "qa:demo"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:49:42.768423+00:00",
+      "finishedAt": "2026-10-23T22:49:48.670252+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "d9debd538f9e95fbb1f30391bbf927d28e2a3bf4d6022358dabb8679bf230dc3",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-gameplay-20261024-064619-979bc405",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:46:19.662312+00:00",
+      "finishedAt": "2026-10-23T22:47:27.928802+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "fa57c96e2fed98d8d47420ecae18019b79b763c7947d459f70b8588a1b3d20b7",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-pwa-20261024-064946-64bc0907",
+      "command": [
+        "npm",
+        "run",
+        "qa:pwa"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:49:46.115256+00:00",
+      "finishedAt": "2026-10-23T22:49:48.548349+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "68706ac28a0369f36ab3a8762bbf9048694afa0784a20716219fdb99211f9f87",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-pwa-update-20261024-065104-cd4403db",
+      "command": [
+        "node",
+        "local-only A/B PWA update experiment"
+      ],
+      "commandIsProjection": true,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:51:04.486140+00:00",
+      "finishedAt": "2026-10-23T22:51:09.377164+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "ad877c968261a26218679bd1fb473b69322cb02c5a5e166894780cbc9e74cbc8",
+      "sourceUnchanged": true
+    },
+    {
+      "runId": "baseline-tests-20261024-064540-14ef71dc",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "commandIsProjection": false,
+      "head": "4448ade8d0f07ccfc2257884e455b1b3eac6bae9",
+      "startedAt": "2026-10-23T22:45:40.389871+00:00",
+      "finishedAt": "2026-10-23T22:45:44.229884+00:00",
+      "exitCode": 0,
+      "status": "TESTED_PASS",
+      "logSha256": "c318542e47ce7250b97094c6bc76196a3b10bc726eff7159c91b71b4c1018115",
+      "sourceUnchanged": true
+    }
+  ],
+  "privacy": "完整原logs/機器路由/世界資料只保留本機；此公開摘要不含原world/trace",
+  "freshReleaseGate": "IN_PROGRESS"
+}

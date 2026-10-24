@@ -1,0 +1,37 @@
+{
+  "timestampUTC": "2026-10-18T04:40:15.802244+00:00",
+  "browserEvidence": "../C3-final-browser-artifacts/browser.json",
+  "artifacts": [
+    {
+      "path": "assets/index-BRJcKIV7.js",
+      "browserManifest": "c676877f05ba3147c7f4978ae73cfd63fa8861709d056ac5bb20920384ff588b",
+      "distActual": "c676877f05ba3147c7f4978ae73cfd63fa8861709d056ac5bb20920384ff588b",
+      "servedActual": "c676877f05ba3147c7f4978ae73cfd63fa8861709d056ac5bb20920384ff588b",
+      "match": true
+    },
+    {
+      "path": "assets/index-aLPhczff.css",
+      "browserManifest": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+      "distActual": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+      "servedActual": "cb6e3c3e1583b28158c0635a30bea8247d6135771e51787b93a6d666d947e7c5",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "browserManifest": "e56df62a422cee01affedf2f1512f2591f8054f419d6716bf0242a744fdd5393",
+      "distActual": "e56df62a422cee01affedf2f1512f2591f8054f419d6716bf0242a744fdd5393",
+      "servedActual": "e56df62a422cee01affedf2f1512f2591f8054f419d6716bf0242a744fdd5393",
+      "match": true
+    }
+  ],
+  "diffCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 2,
+    "stdout": "src/styles.css:50: trailing whitespace.\n+    background-image: \nsrc/styles.css:54: trailing whitespace.\n+    \n",
+    "stderr": ""
+  }
+}

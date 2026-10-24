@@ -1,26 +1,24 @@
 import './styles.css';
-import { createGame, applyCommand, observe, canonicalHash } from './core/game';
-import { chooseAction } from './core/ai';
-import { serializeGame, deserializeGame, exportReplay, replayGame } from './core/persistence';
+import { createGameSession } from './session/game-session';
+import type { DeepReadonly } from './session/contracts';
 import { TECH_STATS, UNIT_STATS } from './core/types';
-import type { Action, GameState, KnownTile, Observation, Point, Tech, UnitKind } from './core/types';
+import type { Action, KnownTile, Point, Tech, UnitKind } from './core/types';
 import { WorldMap } from './ui/map';
+import { recruitmentStatus } from './ui/recruitment';
+import { createDemoShell } from './demo/shell';
+import { bindProgressToSave, readBoundProgress } from './demo/local-progress';
 
 const HUMAN = 0;
 const SAVE_KEY = 'project4x-save-1';
+const DEMO_SAVE_KEY = 'project4x-demo-progress-1';
 const MAX_IMPORT_BYTES = 10 * 1024 * 1024;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const requestSession = crypto.randomUUID();
-let state: GameState = createGame('霧境初航-01');
-let view: Observation = observe(state, HUMAN);
+const { gameplay, files, dispose } = createGameSession({ seed: '霧境初航-01', reducedMotion });
+let view = gameplay.getObservation();
 let selection: Point | null = null;
 let selectedUnitId: string | null = null;
 let requestNumber = 0;
-let generation = 0;
-let aiRunning = false;
-let aiPaused = false;
-let aiTimer: ReturnType<typeof setTimeout> | undefined;
-let dirty = false;
 let lastFocus: HTMLElement | null = null;
 const journey: string[] = ['第一幅地圖已展開。選取斥候，向金色邊線的格子出發。'];
 
@@ -86,7 +84,7 @@ const turnValue = el('strong', 'resource-value');
 turnMetric.append(el('span', 'resource-label', '回合'), turnValue);
 resources.append(goldMetric, incomeMetric, turnMetric);
 const recordButton = button('航行紀錄', () => openDialog(recordDialog), 'header-button');
-const helpButton = button('玩法', () => openDialog(helpDialog), 'header-button');
+const helpButton = button('選單', () => demo.openMenu(), 'header-button');
 const headerActions = el('div', 'header-actions');
 headerActions.append(recordButton, helpButton);
 header.append(brand, resources, headerActions);
@@ -102,10 +100,14 @@ mapTitle.append(mapHeading, exploredLabel);
 const mapControls = el('div', 'map-controls');
 const zoomOut = button('−', () => map.zoomBy(1 / 1.25), 'icon-button');
 zoomOut.setAttribute('aria-label', '縮小地圖');
+zoomOut.title = '縮小地圖 (−)';
 const zoomIn = button('+', () => map.zoomBy(1.25), 'icon-button');
 zoomIn.setAttribute('aria-label', '放大地圖');
+zoomIn.title = '放大地圖 (+)';
 const homeButton = button('中心', () => inspectCenter());
+homeButton.title = '返回中心 (Home)';
 const overviewButton = button('全圖', () => map.overview());
+overviewButton.title = '全圖總覽';
 mapControls.append(zoomOut, zoomIn, homeButton, overviewButton);
 mapBar.append(mapTitle, mapControls);
 const canvasWrap = el('div', 'canvas-wrap');
@@ -124,6 +126,42 @@ board.append(mapBar, canvasWrap, mapCaption);
 
 const sidebar = el('aside', 'sidebar');
 sidebar.setAttribute('aria-label', '城邦與行動');
+sidebar.setAttribute('data-tab', 'inspect');
+
+const deckNav = el('nav', 'deck-nav');
+deckNav.setAttribute('role', 'tablist');
+deckNav.setAttribute('aria-label', '指揮面板分頁');
+
+const tabInspect = button('探險與部隊', () => switchTab('inspect'), 'deck-tab active');
+tabInspect.setAttribute('role', 'tab');
+tabInspect.setAttribute('aria-selected', 'true');
+tabInspect.id = 'tab-inspect';
+
+const tabTech = button('科技研發', () => switchTab('tech'), 'deck-tab');
+tabTech.setAttribute('role', 'tab');
+tabTech.setAttribute('aria-selected', 'false');
+tabTech.id = 'tab-tech';
+
+const tabJourney = button('城邦手札', () => switchTab('journey'), 'deck-tab');
+tabJourney.setAttribute('role', 'tab');
+tabJourney.setAttribute('aria-selected', 'false');
+tabJourney.id = 'tab-journey';
+
+deckNav.append(tabInspect, tabTech, tabJourney);
+
+let activeTab: 'inspect' | 'tech' | 'journey' = 'inspect';
+
+function switchTab(tab: 'inspect' | 'tech' | 'journey'): void {
+  activeTab = tab;
+  tabInspect.classList.toggle('active', tab === 'inspect');
+  tabInspect.setAttribute('aria-selected', String(tab === 'inspect'));
+  tabTech.classList.toggle('active', tab === 'tech');
+  tabTech.setAttribute('aria-selected', String(tab === 'tech'));
+  tabJourney.classList.toggle('active', tab === 'journey');
+  tabJourney.setAttribute('aria-selected', String(tab === 'journey'));
+  sidebar.setAttribute('data-tab', tab);
+}
+
 const factionPanel = section('曦原城邦', 'faction-panel');
 const factionLife = el('span', 'life-tag');
 const factionDescription = el('p', 'muted');
@@ -136,7 +174,7 @@ const nextUnitButton = button('下一支部隊  N', () => selectNextUnit(), 'sma
 unitHeading.append(nextUnitButton);
 const techPanel = section('知識', 'tech-panel');
 const journeyPanel = section('航行手札', 'journey-panel');
-sidebar.append(factionPanel.node, inspectPanel.node, unitPanel.node, techPanel.node, journeyPanel.node);
+sidebar.append(deckNav, inspectPanel.node, unitPanel.node, techPanel.node, factionPanel.node, journeyPanel.node);
 boardLayout.append(board, sidebar);
 
 const footer = el('footer', 'turn-bar');
@@ -146,7 +184,7 @@ const statusMessage = el('p', 'status-message', '選取斥候，踏入霧中。'
 statusMessage.setAttribute('role', 'status');
 statusMessage.setAttribute('aria-live', 'polite');
 turnStatus.append(activeLabel, statusMessage);
-const continueAI = button('繼續對手回合', () => { aiPaused = false; beginAI(); }, 'secondary-button');
+const continueAI = button('繼續對手回合', () => { const result = gameplay.resumeAI(gameplay.getSnapshot().stamp); if (!result.ok) notify(result.error.message, true); }, 'secondary-button');
 continueAI.hidden = true;
 const endTurnButton = button('結束回合', () => dispatch({ type: 'EndTurn' }), 'primary-button end-turn');
 const endShortcut = el('span', 'keycap', 'E');
@@ -155,6 +193,7 @@ footer.append(turnStatus, continueAI, endTurnButton);
 shell.append(header, boardLayout, footer);
 app.append(shell);
 const map = new WorldMap(canvas, (point) => clickTile(point));
+(window as unknown as { __map?: WorldMap }).__map = map;
 
 const recordDialog = el('dialog', 'game-dialog record-dialog');
 const recordTitle = el('h2', '', '航行紀錄');
@@ -169,7 +208,7 @@ const saveRow = el('div', 'dialog-actions');
 saveRow.append(
   button('保存進度', () => saveLocal(), 'primary-button'),
   button('讀取保存', () => loadLocal()),
-  button('匯出保存', () => download(serializeGame(state), '保存', '.json')),
+  button('匯出保存', () => download('save')),
   button('匯入保存', () => saveInput.click()),
 );
 const saveInput = el('input');
@@ -178,7 +217,7 @@ saveInput.addEventListener('change', () => importFile(saveInput, false));
 const replayBlock = el('section', 'dialog-section');
 replayBlock.append(el('h3', '', '可驗證的回放'), el('p', 'muted', '回放會重新套用命令並核對結果。驗證只檢查檔案，不會覆蓋目前遊戲。'));
 const replayRow = el('div', 'dialog-actions');
-replayRow.append(button('匯出回放', () => download(exportReplay(state), '回放', '.json')), button('驗證回放', () => replayInput.click()));
+replayRow.append(button('匯出回放', () => download('replay')), button('驗證回放', () => replayInput.click()));
 const replayResult = el('p', 'replay-result');
 replayResult.setAttribute('role', 'status');
 const replayInput = el('input');
@@ -248,7 +287,7 @@ function closeDialog(dialog: HTMLDialogElement): void {
 }
 
 function canAct(): boolean {
-  return view.active === HUMAN && view.winner === null && view.pendingRelic === null && !aiRunning;
+  return view.active === HUMAN && view.winner === null && view.pendingRelic === null && gameplay.getSnapshot().ai.phase !== 'running';
 }
 
 function sameAction(a: Action, b: Action): boolean {
@@ -273,11 +312,12 @@ function inspectCenter(): void {
   const center = view.tiles.find((tile) => tile.site?.id === view.faction.centerId);
   selectedUnitId = null;
   selection = center ? { x: center.x, y: center.y } : null;
+  switchTab('inspect');
   render();
   map.home();
 }
 
-function tileAt(point: Point | null): KnownTile | null {
+function tileAt(point: Point | null): DeepReadonly<KnownTile> | null {
   return point ? view.tiles.find((tile) => tile.x === point.x && tile.y === point.y) ?? null : null;
 }
 
@@ -286,6 +326,7 @@ function selectUnit(id: string, focus = true): void {
   if (!unit) return;
   selectedUnitId = id;
   selection = { x: unit.x, y: unit.y };
+  switchTab('inspect');
   if (focus) map.focus(unit);
   render();
 }
@@ -311,6 +352,7 @@ function clickTile(point: Point): void {
     if (move) { dispatch(move); return; }
   }
   selection = point;
+  switchTab('inspect');
   render();
 }
 
@@ -328,17 +370,17 @@ function actionLabel(action: Action): string {
 }
 
 function dispatch(action: Action): void {
-  if (view.active !== HUMAN || aiRunning || view.winner !== null) return;
-  const result = applyCommand(state, { actor: HUMAN, requestId: `ui-${requestSession}-${generation}-${++requestNumber}`, expectedVersion: view.version, action });
+  const before = view;
+  const { sessionId, generation, version } = gameplay.getSnapshot().stamp;
+  const result = gameplay.submitAction({ sessionId, generation, requestId: `ui-${requestSession}-${generation}-${++requestNumber}`, expectedVersion: version, action });
   if (!result.ok) {
-    const message = result.error ?? '此行動未通過規則驗證。';
-    notify(message, true);
-    if (relicDialog.open) relicError.textContent = message;
+    notify(result.error.message, true);
+    if (relicDialog.open) relicError.textContent = result.error.message;
     return;
   }
-  state = result.state;
-  dirty = true;
-  view = observe(state, HUMAN);
+  if (result.disposition === 'duplicate') return;
+  view = result.snapshot.observation;
+  demo.accepted(action, before, view);
   if (action.type === 'Move') selection = action.to;
   if (action.type === 'Recruit') {
     const site = view.tiles.find((t) => t.site?.id === action.siteId);
@@ -347,75 +389,11 @@ function dispatch(action: Action): void {
   }
   notify(actionLabel(action));
   render();
-  if (view.active !== HUMAN && view.winner === null) beginAI();
-}
-
-function beginAI(): void {
-  if (aiRunning || aiPaused || view.active === HUMAN || view.winner !== null) return;
-  aiRunning = true;
-  const currentGeneration = generation;
-  let actions = 0;
-  render();
-  const step = () => {
-    if (currentGeneration !== generation) return;
-    const aiView = observe(state, 1);
-    if (aiView.active === HUMAN || aiView.winner !== null) {
-      aiRunning = false;
-      view = observe(state, HUMAN);
-      notify(aiView.winner === null ? '對手完成回合。新的航程開始，收入已到帳。' : '戰局已結束。');
-      render();
-      return;
-    }
-    if (actions >= 1000) {
-      aiRunning = false; aiPaused = true;
-      notify('對手運算達到安全上限，已暫停；按「繼續對手回合」可接續。', true);
-      render();
-      return;
-    }
-    if (!aiView.legalActions.length) {
-      aiRunning = false; aiPaused = true;
-      notify('對手沒有合法候選行動，已暫停。', true); render(); return;
-    }
-    let action: Action | null;
-    try {
-      action = chooseAction(aiView);
-    } catch (error) {
-      aiRunning = false; aiPaused = true;
-      notify(`對手決策錯誤：${errorText(error)}`, true); render(); return;
-    }
-    if (!action) {
-      aiRunning = false; aiPaused = true;
-      notify('對手沒有回傳合法行動，已暫停。', true); render(); return;
-    }
-    const result = applyCommand(state, { actor: 1, requestId: `ai-${requestSession}-${generation}-${++requestNumber}`, expectedVersion: aiView.version, action });
-    if (!result.ok) {
-      aiRunning = false; aiPaused = true;
-      notify(`對手行動遭拒：${result.error ?? '未知規則錯誤'}`, true); render(); return;
-    }
-    state = result.state;
-    dirty = true;
-    view = observe(state, HUMAN);
-    actions++;
-    if (view.active === HUMAN || view.winner !== null) {
-      aiRunning = false;
-      notify(view.winner === null ? '對手完成回合。新的航程開始，收入已到帳。' : '戰局已結束。');
-      render();
-      return;
-    }
-    render();
-    aiTimer = setTimeout(step, reducedMotion ? 20 : 95);
-  };
-  aiTimer = setTimeout(step, reducedMotion ? 20 : 180);
-}
-
-function stopAI(): void {
-  generation++;
-  if (aiTimer !== undefined) clearTimeout(aiTimer);
-  aiRunning = false; aiPaused = false;
 }
 
 function render(): void {
-  view = observe(state, HUMAN);
+  view = gameplay.getObservation();
+  const aiPaused = gameplay.getSnapshot().ai.phase === 'paused';
   if (selectedUnitId && !selectedUnit()) selectedUnitId = null;
   goldValue.textContent = String(view.faction.gold);
   const ownSites = view.tiles.filter((t) => t.site?.owner === HUMAN);
@@ -443,6 +421,7 @@ function render(): void {
   map.update(view, { tile: selection, unitId: selectedUnitId });
   updateRelic();
   if (recordDialog.open) updateSaveNotice();
+  demo.render();
 }
 
 function renderInspection(): void {
@@ -489,25 +468,85 @@ function renderInspection(): void {
     if (tile.site) {
       const site = tile.site;
       const siteBlock = el('div', 'site-block');
-      siteBlock.append(el('h3', '', site.name), el('p', 'muted', site.owner === HUMAN ? '己方據點 · 每回合可招募一支部隊' : site.owner === null ? '無主村莊 · 派部隊進入並占領' : site.owner === undefined ? '據點目前在視野外，所有權未知' : '敵方據點 · 進入後可占領'));
+      const isCapital = site.centerOf !== undefined;
+      const siteTitle = el('h3', '', isCapital ? `★ ${site.name}（政治中心）` : site.name);
+      const siteStatusText = site.owner === HUMAN
+        ? '己方據點 · 可招募部隊'
+        : site.owner === null
+        ? '荒野村落 · 派遣部隊進駐即可宣布占領'
+        : site.owner === undefined
+        ? '據點目前在視野外，所有權未知'
+        : '敵方據點 · 擊敗守軍進駐後可占領';
+      siteBlock.append(siteTitle, el('p', 'muted', siteStatusText));
+
       if (site.owner === HUMAN) {
+        const occupyingUnit = view.units.find((u) => u.x === tile.x && u.y === tile.y);
+        const canRecruitAny = view.legalActions.some((a) => a.type === 'Recruit' && a.siteId === site.id);
+        const recruitment = recruitmentStatus(view, site.id);
+        const recruitLabel = {occupied:'據點佔用中','pending-relic':'先處置遺跡',waiting:'等待己方回合',available:'空防可徵召','insufficient-gold':'金幣不足',unavailable:'目前無可用徵召'}[recruitment];
+
+        if (occupyingUnit) {
+          const alert = el('div', 'garrison-alert');
+          const badge = el('div', 'garrison-badge', '⚠️ 城內已有部隊駐防');
+          const desc = el('p', 'garrison-text', `駐軍：${UNIT_STATS[occupyingUnit.kind].name} (${occupyingUnit.hp} HP)。`);
+          const caution = el('p', 'garrison-warn', '請先移開駐軍，才能在此招募。');
+          const moveOutBtn = button(`選取${UNIT_STATS[occupyingUnit.kind].name}並指揮移出`, () => selectUnit(occupyingUnit.id), 'secondary-button full-width');
+          alert.append(badge, desc);
+          if (occupyingUnit.owner === HUMAN) alert.append(caution, moveOutBtn);
+          else { badge.textContent = '敵方部隊佔據據點'; alert.append(el('p', 'garrison-warn', '需先排除敵軍才能徵召。')); }
+          siteBlock.append(alert);
+        } else if (canRecruitAny && view.turn <= 2) {
+          const guide = el('div', 'recruit-guide-banner', '💡 指揮官提示：城內空防且金幣充足，立即招募新軍！');
+          siteBlock.append(guide);
+        }
+
+        const recruitSection = el('div', 'recruit-section');
+        const recruitHeader = el('div', 'recruit-header');
+        recruitHeader.append(el('h4', '', '徵召新軍'), el('span', 'recruit-meta', recruitLabel));
+        recruitSection.append(recruitHeader);
+
         const recruits = el('div', 'recruit-list');
         (['infantry', 'scout', 'archer'] as UnitKind[]).forEach((kind) => {
+          const stat = UNIT_STATS[kind];
           const action: Action = { type: 'Recruit', siteId: site.id, kind };
-          const node = makeActionButton(`${UNIT_STATS[kind].name} · ${UNIT_STATS[kind].cost} 金`, action);
-          node.title = isLegal(action) ? `招募${UNIT_STATS[kind].name}` : kind === 'archer' && !view.faction.techs.includes('archery') ? '需要先研究弓術' : '需據點空格、足夠金幣，且本回合未招募';
-          recruits.append(node);
+          const legal = isLegal(action);
+          const item = el('div', 'recruit-card');
+          const info = el('div', 'recruit-info');
+          const nameEl = el('strong', '', stat.name);
+          const statDetail = el('span', 'recruit-stats', `生命 ${stat.hp} · 攻 ${stat.attack} · 防 ${stat.defense} · 移 ${stat.move}${stat.range > 1 ? ` · 射程 ${stat.range}` : ''}`);
+          info.append(nameEl, statDetail);
+
+          let reason = '';
+          if (legal) {
+            reason = `招募 ${stat.name} (-${stat.cost} 金)`;
+          } else if (occupyingUnit) {
+            reason = '需先移開駐軍';
+          } else if (!canAct() || recruitment === 'unavailable') {
+            reason = recruitLabel;
+          } else if (view.faction.gold < stat.cost) {
+            reason = `金幣不足 (${view.faction.gold}/${stat.cost}G)`;
+          } else if (kind === 'archer' && !view.faction.techs.includes('archery')) {
+            reason = '需先研發【弓術】';
+          } else {
+            reason = '暫不可招募';
+          }
+
+          const btn = makeActionButton(legal ? `${stat.name} · ${stat.cost} 金` : reason, action, legal ? 'primary-button' : 'secondary-button');
+          item.append(info, btn);
+          recruits.append(item);
         });
-        siteBlock.append(recruits);
+        recruitSection.append(recruits);
+        siteBlock.append(recruitSection);
+
         const establish: Action = { type: 'EstablishCapital', siteId: site.id };
         if (view.faction.life === 'exiled') {
-          siteBlock.append(makeActionButton('建立新中心 · 免費', establish, 'primary-button'));
-          if (!isLegal(establish)) siteBlock.append(el('p', 'muted', '需持續控制此據點跨過完整對手回合。'));
+          siteBlock.append(makeActionButton('建立新政治中心 · 免費', establish, 'primary-button'));
+          if (!isLegal(establish)) siteBlock.append(el('p', 'muted', '需持續控制此據點跨過完整對手回合，方能宣布新首都。'));
         }
       }
       body.append(siteBlock);
     }
-    if (tile.relic?.resolved) body.append(el('p', 'muted', '遺跡的禮物已被取用。'));
+    if (tile.relic?.resolved) body.append(el('p', 'muted', '遺跡的遠古餽贈已揭曉並融入文明。'));
   }
   if (unit && selection && (selection.x !== unit.x || selection.y !== unit.y)) {
     const destination: Action = { type: 'Move', unitId: unit.id, to: selection };
@@ -535,15 +574,33 @@ function renderUnits(): void {
 
 function renderTech(): void {
   techPanel.body.replaceChildren();
-  (['farm', 'archery', 'pathfinding'] as Tech[]).forEach((tech, index) => {
+  const currentTechs = ['farm', 'archery', 'pathfinding'] as Tech[];
+  const researchedCount = currentTechs.filter((t) => view.faction.techs.includes(t)).length;
+  const overview = el('div', 'tech-overview');
+  overview.append(
+    el('p', 'muted', `智慧典籍進度：已習得 ${researchedCount} / ${currentTechs.length} 項當代知識。`),
+  );
+  techPanel.body.append(overview);
+
+  currentTechs.forEach((tech, index) => {
     const known = view.faction.techs.includes(tech);
+    const stat = TECH_STATS[tech];
+    const canAfford = view.faction.gold >= stat.cost;
     const row = el('div', known ? 'tech-row researched' : 'tech-row');
     const copy = el('div', 'tech-copy');
-    copy.append(el('span', 'tech-number', `0${index + 1}`), el('h3', '', TECH_STATS[tech].name), el('p', '', TECH_STATS[tech].description));
-    const research = makeActionButton(known ? '已習得' : `${TECH_STATS[tech].cost} 金`, { type: 'Research', tech });
-    research.title = known ? '已完成研究' : `研究${TECH_STATS[tech].name}`;
-    row.append(copy, research); techPanel.body.append(row);
+    const titleRow = el('div', 'tech-title-row');
+    titleRow.append(el('span', 'tech-number', `0${index + 1}`), el('h3', '', stat.name));
+    if (known) titleRow.append(el('span', 'tech-researched-seal', '已習得 ✓'));
+    copy.append(titleRow, el('p', '', stat.description));
+
+    const action: Action = { type: 'Research', tech };
+    const research = makeActionButton(known ? '已習得' : `${stat.cost} 金`, action, known ? 'secondary-button' : 'primary-button');
+    research.title = known ? '已完成研究' : `研究「${stat.name}」（需 ${stat.cost} 金幣）`;
+    row.append(copy, research);
+    techPanel.body.append(row);
   });
+
+
 }
 
 function renderJourney(): void {
@@ -552,6 +609,7 @@ function renderJourney(): void {
 }
 
 function updateRelic(): void {
+  if (demo.isMenuOpen()) return;
   if (view.pendingRelic) {
     [recordDialog, helpDialog].forEach((dialog) => { if (dialog.open) dialog.close(); });
     const count = view.pendingRelic.intelCount;
@@ -565,88 +623,102 @@ function updateRelic(): void {
 
 function updateSaveNotice(): void {
   try {
-    saveNotice.textContent = `${dirty ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(SAVE_KEY) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
+    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(SAVE_KEY) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
   } catch (error) { saveNotice.textContent = `本機保存無法存取：${errorText(error)}。仍可匯出檔案。`; }
 }
 
 function saveLocal(): void {
+  const result = files.save();
+  if (!result.ok) { notify(result.error.message, true); return; }
   try {
-    localStorage.setItem(SAVE_KEY, serializeGame(state));
-    dirty = false;
+    localStorage.setItem(SAVE_KEY, result.file.text);
+    const acknowledged = files.acknowledgeSave(result.file.stamp);
+    if (!acknowledged.ok) { notify(acknowledged.error.message, true); return; }
+    const journal = demo.getProgress();
+    void bindProgressToSave(result.file.text, journal).then(sidecar => {
+      if (localStorage.getItem(SAVE_KEY) === result.file.text) localStorage.setItem(DEMO_SAVE_KEY, sidecar);
+    }).catch(error => notify(`戰局已保存，但探索手札保存失敗：${errorText(error)}`, true));
     notify('進度已保存在此瀏覽器。也可匯出檔案備份。');
     updateSaveNotice();
   } catch (error) { notify(`保存失敗：${errorText(error)}。請使用匯出保存。`, true); updateSaveNotice(); }
 }
 
 function confirmReplacement(): boolean {
-  return !dirty || window.confirm('目前有未保存的進度。是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。');
+  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm('目前有未保存的進度。是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。');
 }
 
-function replaceGame(next: GameState, message: string, saved: boolean): void {
-  stopAI();
-  state = next;
-  view = observe(state, HUMAN);
-  selectedUnitId = null; selection = null; dirty = !saved;
+function showReplacement(message: string): void {
+  demo.reset(gameplay.getObservation());
+  selectedUnitId = null; selection = null;
   journey.length = 0;
   notify(message);
-  render();
-  map.home();
-  selectNextUnit();
+  render(); map.home(); selectNextUnit();
   if (recordDialog.open) closeDialog(recordDialog);
-  if (view.active !== HUMAN && view.winner === null) beginAI();
 }
 
 function newGame(): void {
   const seed = seedInput.value.trim();
   if (!seed) { notify('請輸入世界種子。', true); seedInput.focus(); return; }
   if (!window.confirm('重新開局會結束目前航程。請確認需要的進度已保存或匯出。')) return;
-  try { replaceGame(createGame(seed), `以「${seed}」展開新的航程。`, false); }
-  catch (error) { notify(`建立世界失敗：${errorText(error)}`, true); }
+  const result = files.newGame(seed, gameplay.getSnapshot().stamp);
+  if (result.ok) showReplacement(`以「${seed}」展開新的航程。`);
+  else notify(`建立世界失敗：${result.error.message}`, true);
 }
 
-function loadLocal(): void {
+async function loadLocal(isCurrent: () => boolean = () => true): Promise<boolean> {
+  const expected = gameplay.getSnapshot().stamp;
   try {
     const text = localStorage.getItem(SAVE_KEY);
-    if (!text) { notify('此瀏覽器尚無保存。可選擇匯入保存檔。', true); return; }
-    const next = deserializeGame(text);
-    if (!confirmReplacement()) return;
-    replaceGame(next, '已讀取本機保存。', true);
-  } catch (error) { notify(`讀取失敗：${errorText(error)}`, true); }
+    if (!text) { notify('此瀏覽器尚無保存。可選擇匯入保存檔。', true); return false; }
+    if (!confirmReplacement()) return false;
+    let journal = null;
+    let journalError: unknown = null;
+    try {
+      const sidecar = localStorage.getItem(DEMO_SAVE_KEY);
+      if (sidecar) journal = await readBoundProgress(text, sidecar);
+    } catch (error) { journalError = error; }
+    const now = gameplay.getSnapshot().stamp;
+    if (!isCurrent() || now.sessionId !== expected.sessionId || now.generation !== expected.generation || now.version !== expected.version) return false;
+    const result = files.load(text, expected);
+    if (!result.ok) { notify(`讀取失敗：${result.error.message}`, true); return false; }
+    showReplacement('已讀取本機保存。');
+    // Restore synchronously after replacement, before the incoming AI timer can run.
+    if (journal) demo.restore(journal);
+    if (journalError) notify(`戰局已讀取，但探索手札未能恢復：${errorText(journalError)}`, true);
+    return true;
+  } catch (error) { notify(`讀取失敗：${errorText(error)}`, true); return false; }
 }
 
-function download(text: string, kind: string, extension: string): void {
-  const blob = new Blob([text], { type: 'application/json;charset=utf-8' });
+function download(kind: 'save' | 'replay'): void {
+  const result = kind === 'save' ? files.save() : files.exportReplay();
+  if (!result.ok) { notify(result.error.message, true); return; }
+  const blob = new Blob([result.file.text], { type: 'application/json;charset=utf-8' });
   const url = URL.createObjectURL(blob);
-  const a = el('a'); a.href = url;
-  a.download = `霧境初航_${kind}_回合${view.turn}${extension}`;
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-  if (kind === '保存') dirty = false;
-  notify(`${kind}已匯出。`);
+  const a = el('a'); a.href = url; a.download = result.file.suggestedFilename;
+  try { a.click(); } finally { setTimeout(() => URL.revokeObjectURL(url), 1000); }
+  // 瀏覽器下載沒有可靠的落盤回執，只有 localStorage 成功才能 acknowledgeSave。
+  notify(`${kind === 'save' ? '保存' : '回放'}已發起匯出。`);
   updateSaveNotice();
 }
 
 async function importFile(input: HTMLInputElement, replay: boolean): Promise<void> {
   const file = input.files?.[0];
-  const importGeneration = generation;
+  const expected = gameplay.getSnapshot().stamp;
   input.value = '';
   if (!file) return;
   try {
     if (file.size > MAX_IMPORT_BYTES) throw new Error('檔案超過 10 MB，請選擇本遊戲的保存或回放檔。');
     const text = await file.text();
-    if (generation !== importGeneration) {
-      notify('已取消舊檔案讀取；目前已開始另一段航程。');
-      return;
-    }
     if (replay) {
-      const replayed = replayGame(text);
-      const replayView = observe(replayed, HUMAN);
-      replayResult.textContent = `驗證通過 · ${replayView.turn} 回合 · 結果 ${canonicalHash(replayed)}`;
+      const result = files.verifyReplay(text, expected);
+      if (!result.ok) throw new Error(result.error.message);
+      replayResult.textContent = `驗證通過 · ${result.schema} · ${result.ruleset}`;
       replayResult.classList.remove('is-error');
     } else {
-      const next = deserializeGame(text);
       if (!confirmReplacement()) return;
-      replaceGame(next, '已匯入保存，航程接續。', true);
+      const result = files.load(text, expected);
+      if (!result.ok) throw new Error(result.error.message);
+      showReplacement('已匯入保存，航程接續。');
     }
   } catch (error) {
     const message = `${replay ? '回放驗證' : '匯入'}失敗：${errorText(error)}`;
@@ -676,7 +748,30 @@ window.addEventListener('keydown', (event) => {
   } else if (target === canvas && event.key === 'Enter' && selection) { event.preventDefault(); clickTile(selection); }
 });
 
-render();
+const demo = createDemoShell({
+  gameplay, mount: sidebar,
+  hasSave: () => { try { return Boolean(localStorage.getItem(SAVE_KEY)); } catch { return false; } },
+  start: seed => {
+    if (!confirmReplacement()) return false;
+    const result = files.newGame(seed, gameplay.getSnapshot().stamp);
+    if (!result.ok) { notify(result.error.message, true); return false; }
+    showReplacement(`以「${seed}」展開探索Demo。`); return true;
+  },
+  load: loadLocal, save: saveLocal, help: () => openDialog(helpDialog),
+  afterClose: () => { render(); canvas.focus({ preventScroll: true }); },
+});
+
+let previousAIPhase = gameplay.getSnapshot().ai.phase;
+gameplay.subscribe(update => {
+  render();
+  if (update.cause === 'ai-status') {
+    if (update.snapshot.ai.phase === 'paused') notify('對手回合已暫停；可按「繼續對手回合」接續。', true);
+    else if (previousAIPhase === 'running' && update.snapshot.ai.phase === 'idle') notify('對手完成回合。新的航程開始，收入已到帳。');
+  }
+  previousAIPhase = update.snapshot.ai.phase;
+  // PresentationEvent 的唯一播放入口；C2 供正式資料，動畫由 Gemini 後續接入。
+});
+window.addEventListener('pagehide', event => { if (!event.persisted) dispose(); });
 const initialScout = view.units.find((unit) => unit.owner === HUMAN && unit.kind === 'scout');
 if (initialScout) selectUnit(initialScout.id);
 else selectNextUnit();

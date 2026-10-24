@@ -1,0 +1,18 @@
+{
+  "label": "C2-fresh-browser",
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "command": [
+    "npm",
+    "run",
+    "qa:browser"
+  ],
+  "startedAt": "2026-10-17T23:48:04.858579+00:00",
+  "snapshotSha256": "1a7829d52951ebc6a25bf896a4fa2da775b55c03dc7e439a0984c62618ccded1",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "e5bc16fedde9245e29284a4ec954299212089139",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-17T23:48:09.710550+00:00",
+  "durationSeconds": 4.852,
+  "log": "C2-fresh-browser.log"
+}

@@ -1,0 +1,47 @@
+START 2026-10-18T04:39:24.651297+00:00
+COMMAND node --input-type=module - <<STDIN
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const source=fs.readFileSync('src/main.ts','utf8');
+const snippet=source.slice(source.indexOf('function clickTile('),source.indexOf('function actionLabel(')).replace('point: Point', 'point').replace('): void',')');
+const results=[];
+for (const initialTab of ['tech','journey']) {
+ const context={HUMAN:0,view:{pendingRelic:null,units:[],legalActions:[]},selection:null,activeTab:initialTab,renderCalls:0,selectedUnit:()=>null,canAct:()=>true,dispatch:()=>{throw new Error('unexpected command')},selectUnit:()=>{throw new Error('unexpected own-unit select')}};
+ context.render=()=>context.renderCalls++;context.switchTab=tab=>context.activeTab=tab;
+ vm.runInNewContext(snippet+'\nclickTile({x:8,y:4});',context);
+ results.push({initialTab,afterTab:context.activeTab,selection:context.selection,renderCalls:context.renderCalls,inspectionWouldBeHidden:context.activeTab!=='inspect'});
+}
+console.log(JSON.stringify({source:'current main.clickTile exact snippet',results},null,2));
+assert.ok(results.every(r=>r.afterTab==='inspect'),'selected map cell must reveal inspection on compact tabs');
+
+STDIN
+EXIT 0
+STDOUT
+{
+  "source": "current main.clickTile exact snippet",
+  "results": [
+    {
+      "initialTab": "tech",
+      "afterTab": "inspect",
+      "selection": {
+        "x": 8,
+        "y": 4
+      },
+      "renderCalls": 1,
+      "inspectionWouldBeHidden": false
+    },
+    {
+      "initialTab": "journey",
+      "afterTab": "inspect",
+      "selection": {
+        "x": 8,
+        "y": 4
+      },
+      "renderCalls": 1,
+      "inspectionWouldBeHidden": false
+    }
+  ]
+}
+
+STDERR
+
+END 2026-10-18T04:39:24.722496+00:00

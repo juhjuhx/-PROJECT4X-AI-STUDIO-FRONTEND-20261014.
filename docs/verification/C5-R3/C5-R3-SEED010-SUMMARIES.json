@@ -1,0 +1,112 @@
+{
+  "schema": "project4x-r3-safe-seed-summary-1",
+  "privacy": "完整canonical/failure payload僅專案外私有evidence；此處只含結果與彙總。",
+  "games": [
+    {
+      "seed": "獨立QA-010",
+      "status": "FAIL",
+      "winner": null,
+      "turns": 801,
+      "fullRounds": 400,
+      "commands": 19898,
+      "hash": "4fc70b7327d45bcb",
+      "milliseconds": 89520,
+      "metrics": {
+        "actions": {
+          "Move": 15187,
+          "Attack": 3013,
+          "Capture": 8,
+          "Recruit": 880,
+          "Research": 6,
+          "ResolveRelic": 4,
+          "EstablishCapital": 0,
+          "EndTurn": 800
+        },
+        "relicGold": 2,
+        "relicIntel": 2,
+        "exileEntries": 0,
+        "centersEstablished": 0,
+        "eliminations": 0,
+        "maxUnits": 61
+      },
+      "timing": {
+        "observeMs": 11157,
+        "aiMs": 25894,
+        "applyMs": 52431
+      },
+      "terminalSaveReplayChecked": false,
+      "finalLife": [
+        "active",
+        "active"
+      ],
+      "failureCategory": null,
+      "candidate": "pruning",
+      "harnessStatus": "FAIL",
+      "limits": {
+        "maxTurns": 800,
+        "maxCommands": 40000,
+        "harnessOnly": true,
+        "noGameClockOrSyntheticWinner": true
+      },
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "aiSha256": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+      "privateReportSha256": "3e7b6b7a0f8fbe12b35bcea7db47c351070830a4d1ca201906d146c3bcb3915a",
+      "exitCode": 1
+    },
+    {
+      "seed": "獨立QA-010",
+      "status": "COMPLETE",
+      "winner": 0,
+      "turns": 535,
+      "fullRounds": 267,
+      "commands": 15418,
+      "hash": "3fb38074947af907",
+      "milliseconds": 132858,
+      "metrics": {
+        "actions": {
+          "Move": 11386,
+          "Attack": 2703,
+          "Capture": 19,
+          "Recruit": 763,
+          "Research": 6,
+          "ResolveRelic": 4,
+          "EstablishCapital": 3,
+          "EndTurn": 534
+        },
+        "relicGold": 2,
+        "relicIntel": 2,
+        "exileEntries": 4,
+        "centersEstablished": 3,
+        "eliminations": 1,
+        "maxUnits": 66
+      },
+      "timing": {
+        "observeMs": 10228,
+        "aiMs": 20052,
+        "applyMs": 33696
+      },
+      "terminalSaveReplayChecked": true,
+      "finalLife": [
+        "active",
+        "eliminated"
+      ],
+      "failureCategory": null,
+      "candidate": "approach",
+      "harnessStatus": "PARTIAL",
+      "limits": {
+        "maxTurns": 800,
+        "maxCommands": 40000,
+        "harnessOnly": true,
+        "noGameClockOrSyntheticWinner": true
+      },
+      "sourceUnchanged": true,
+      "methodUnchanged": true,
+      "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "aiSha256": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd",
+      "privateReportSha256": "376a4ea8d934edaaae509ee43ffb094f1034139d6f8307372610aaa2d88cfc71",
+      "exitCode": 0
+    }
+  ]
+}

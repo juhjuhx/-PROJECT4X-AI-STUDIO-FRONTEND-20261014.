@@ -1,0 +1,12 @@
+{"label": "C5-R2-scout-GREEN", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-18T17:34:43.419336+00:00", "snapshotSha256": "eb92daab706b1c81ec5c490f90ea1abaff9ec00c8ab5ed10496927dd266e2291", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (13.071541ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (2.804417ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (11.1985ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.505458

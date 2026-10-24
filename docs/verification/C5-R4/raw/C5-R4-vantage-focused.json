@@ -1,0 +1,21 @@
+{
+  "label": "C5-R4-vantage-focused",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-frontier.test.ts",
+    "tests/ai-stalemate.test.ts"
+  ],
+  "startedAt": "2026-10-19T13:09:34.208010+00:00",
+  "snapshotSha256": "1e92eebda3d90a3057f38ed28722f2cd1e25801b52566c4adfefaa898750777a",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-19T13:09:35.552095+00:00",
+  "durationSeconds": 1.344,
+  "log": "C5-R4-vantage-focused.log"
+}

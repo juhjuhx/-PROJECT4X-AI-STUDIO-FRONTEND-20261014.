@@ -1,0 +1,751 @@
+{
+  "schema_version": "1",
+  "mode": "workspace",
+  "repository": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "total_files": 111,
+  "reviewable_count": 40,
+  "excluded_count": 71,
+  "total_insertions": 14062,
+  "total_deletions": 277,
+  "reviewable_files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/contracts/FRONTEND-CORE-CONTRACT.md",
+      "status": "modified",
+      "insertions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "docs/contracts/MODULE-OWNERSHIP.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "insertions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "docs/roadmap/PLAYABLE-ALPHA.md",
+      "status": "modified",
+      "insertions": 14,
+      "deletions": 0
+    },
+    {
+      "path": "index.html",
+      "status": "modified",
+      "insertions": 18,
+      "deletions": 1
+    },
+    {
+      "path": "memory/session-handoff-LATEST.md",
+      "status": "modified",
+      "insertions": 5,
+      "deletions": 0
+    },
+    {
+      "path": "package.json",
+      "status": "modified",
+      "insertions": 2,
+      "deletions": 1
+    },
+    {
+      "path": "scripts/browser-check.mjs",
+      "status": "modified",
+      "insertions": 145,
+      "deletions": 1
+    },
+    {
+      "path": "src/main.ts",
+      "status": "modified",
+      "insertions": 137,
+      "deletions": 14
+    },
+    {
+      "path": "src/styles.css",
+      "status": "modified",
+      "insertions": 1786,
+      "deletions": 173
+    },
+    {
+      "path": "src/ui/map.ts",
+      "status": "modified",
+      "insertions": 484,
+      "deletions": 87
+    },
+    {
+      "path": "C3-SOURCE-MANIFEST.json",
+      "status": "added",
+      "insertions": 62,
+      "deletions": 0
+    },
+    {
+      "path": "D3-CHANGELOG.md",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "D3-MODIFIED-FILES.json",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "FRONTEND-NEEDS.md",
+      "status": "added",
+      "insertions": 7,
+      "deletions": 0
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "added",
+      "insertions": 200,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/ART-DIRECTION.md",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/ASSET-GUIDE.md",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/D2-ART-DIRECTION.md",
+      "status": "added",
+      "insertions": 28,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/D2-ASSET-MATRIX.md",
+      "status": "added",
+      "insertions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/D2-MOTION-SPEC.md",
+      "status": "added",
+      "insertions": 22,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/D2-STYLE-BIBLE.md",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/D2-VISUAL-AUDIT.md",
+      "status": "added",
+      "insertions": 56,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/DESIGN-TOKENS.md",
+      "status": "added",
+      "insertions": 66,
+      "deletions": 0
+    },
+    {
+      "path": "docs/art/STYLE-BIBLE.md",
+      "status": "added",
+      "insertions": 73,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/C3-DEEP-UNDERSTANDING.md",
+      "status": "added",
+      "insertions": 30,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/C3-IMPLEMENTATION-STATUS.md",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/C3-VERIFICATION.json",
+      "status": "added",
+      "insertions": 449,
+      "deletions": 0
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "docs/research/C3-OPEN-SOURCE-CANDIDATES.md",
+      "status": "added",
+      "insertions": 203,
+      "deletions": 0
+    },
+    {
+      "path": "docs/roadmap/C3-EXECUTION-PLAN.md",
+      "status": "added",
+      "insertions": 36,
+      "deletions": 0
+    },
+    {
+      "path": "src/ui/recruitment.ts",
+      "status": "added",
+      "insertions": 16,
+      "deletions": 0
+    },
+    {
+      "path": "tests/recruit-presentation.test.ts",
+      "status": "added",
+      "insertions": 21,
+      "deletions": 0
+    },
+    {
+      "path": "tests/ui-map.test.ts",
+      "status": "added",
+      "insertions": 54,
+      "deletions": 0
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "docs/verification/C3/C2-fresh-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-browser.source.json",
+      "status": "added",
+      "insertions": 37,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-build.source.json",
+      "status": "added",
+      "insertions": 37,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-check.source.json",
+      "status": "added",
+      "insertions": 37,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C2-fresh-test.source.json",
+      "status": "added",
+      "insertions": 37,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-PROTECTED-SOURCE.json",
+      "status": "added",
+      "insertions": 12,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/browser.json",
+      "status": "added",
+      "insertions": 6667,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/手機橫式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/手機直式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/桌面初局.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/真實戰鬥佔領旅程.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/窄手機.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered-artifacts/遺跡選擇.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-gameplay-ordered.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-map-green.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-map-green.source.json",
+      "status": "added",
+      "insertions": 38,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-map-red.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-map-red.source.json",
+      "status": "added",
+      "insertions": 38,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-recruit-green.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-recruit-green.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-recruit-red.json",
+      "status": "added",
+      "insertions": 20,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-recruit-red.source.json",
+      "status": "added",
+      "insertions": 39,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/browser.json",
+      "status": "added",
+      "insertions": 300,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/手機橫式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/手機直式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/桌面初局.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/窄手機.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser-artifacts/遺跡選擇.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-browser.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-build.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-check.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-release-test.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-tab-red.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/C3-tab-red.source.json",
+      "status": "added",
+      "insertions": 40,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-MANIFEST-CORRECTION.json",
+      "status": "added",
+      "insertions": 288,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-browser.source.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-build.source.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-check.source.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-stage2.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-stage2.source.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-fresh-test.source.json",
+      "status": "added",
+      "insertions": 26,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C2-review.md",
+      "status": "added",
+      "insertions": 82,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/artifact-and-diff-verification-before-format.json",
+      "status": "added",
+      "insertions": 37,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/artifact-and-diff-verification.json",
+      "status": "added",
+      "insertions": 38,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/protected-functions-comparison-final.json",
+      "status": "added",
+      "insertions": 86,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/protected-functions-comparison.json",
+      "status": "added",
+      "insertions": 86,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/reviewed-source-tested-snapshot.json",
+      "status": "added",
+      "insertions": 46,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-logs/reviewed-source.json",
+      "status": "added",
+      "insertions": 58,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-C3-review.md",
+      "status": "added",
+      "insertions": 75,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-audit.md",
+      "status": "added",
+      "insertions": 52,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-logs/C2-protected-functions.json",
+      "status": "added",
+      "insertions": 71,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-logs/counterexamples.json",
+      "status": "added",
+      "insertions": 155,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-logs/manifest-exact-path-verification.json",
+      "status": "added",
+      "insertions": 334,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-D3-logs/source-identity.json",
+      "status": "added",
+      "insertions": 66,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/final-source-and-checks.json",
+      "status": "added",
+      "insertions": 82,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/ordered-and-private-cleanup-verification.json",
+      "status": "added",
+      "insertions": 56,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/ordered-reviewed-source.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/strengthened-assertion-verification.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/independent-gameplay-logs/weak-assertion-counterexamples.json",
+      "status": "added",
+      "insertions": 66,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    }
+  ]
+}

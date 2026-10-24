@@ -1,0 +1,38 @@
+{"label": "C5-R2-recruit-block-RED", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-18T17:43:22.790178+00:00", "snapshotSha256": "94bef99ba82035fd4c028770398fb20cff86f0ffd3954d222b485ac3d6742a7d", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.226958ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.068833ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (4.806417ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.088792ms)
+✖ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (2.87275ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (1.600917ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 203.831666
+
+✖ failing tests:
+
+test at tests/ai-stalemate.test.ts:1:3532
+✖ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (2.87275ms)
+  AssertionError [ERR_ASSERTION]: 原地 Attack 消耗 moved，封住本回合唯一補兵格
+  
+  'Attack' !== 'Move'
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-stalemate.test.ts:82:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'Attack',
+    expected: 'Move',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

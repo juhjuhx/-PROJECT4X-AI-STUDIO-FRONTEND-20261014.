@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "case": "global forward first, then required terrain-retreat detour in same turn",
+      "first": {
+        "type": "Move",
+        "unitId": "兵-4",
+        "to": {
+          "x": 9,
+          "y": 3
+        }
+      },
+      "second": {
+        "type": "Move",
+        "unitId": "兵-0",
+        "to": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      "legal": true,
+      "observationUnchanged": true
+    },
+    {
+      "case": "isolated fully-known component with unreachable enemy goal",
+      "action": {
+        "type": "EndTurn"
+      },
+      "legal": true,
+      "observationUnchanged": true
+    }
+  ]
+}

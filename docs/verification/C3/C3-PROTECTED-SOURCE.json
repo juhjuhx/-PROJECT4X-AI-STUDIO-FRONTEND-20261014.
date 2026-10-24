@@ -1,0 +1,12 @@
+{
+  "status": "TESTED_PASS",
+  "comparison": "C2 e5bc16fedde9245e29284a4ec954299212089139",
+  "protectedDiffEmpty": true,
+  "paths": [
+    "src/core/**",
+    "src/session/**",
+    "src/presentation/**",
+    "package-lock.json"
+  ],
+  "licenseSha256": "bbf159bfa50d6f1f088504e822cfe2d7964b80fd504a64386b6151e99e03ea4e"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewTime": "2026-10-20T20:47:51.692783+08:00",
+  "project": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "files": {
+    "src/core/ai.ts": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/core/persistence.ts": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+    "tests/ai-frontier.test.ts": "09384715765d0dfd3a06cccc6e6b0deb0feddad2d73b53c63e3ddca8b1abf44a",
+    "tests/core.test.ts": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb",
+    "package.json": "7af4232abcd0f27a6bbbb45f3bfcb1296f8274ae1808dca4b135c9466a38b83f"
+  },
+  "protectedChanges": [],
+  "trackedDiffNames": [
+    "src/core/ai.ts"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "baseCommit": "d8138de003e558d6387da5b4c273ece289759557",
+  "state": "CODE_CHECKPOINT_VERIFIED_BY_BYTE_IDENTITY",
+  "sourceHash": "6007de6a13ff7a8a5503a8eb2b2e864770a194f6e13d945296d101f9ff12169f",
+  "aiSha": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "productDiff": [
+    "src/core/ai.ts"
+  ],
+  "newTests": [
+    "tests/ai-tactical-advance.test.ts"
+  ],
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "sourceManifest": "C5-R6-02-SOURCE-MANIFEST.json",
+  "historicalManifestsReadOnly": true,
+  "full100": "UNVERIFIED",
+  "alpha": "PARTIAL",
+  "testedCodeCheckpoint": "4b5e50aadd464c00746e4299391f59f18814d4a1",
+  "candidate": "E",
+  "browser": "TESTED_FAIL",
+  "gameplayJourney": "TESTED_PASS",
+  "wholeSeed008": "TESTED_FAIL",
+  "review": "TESTED_PASS"
+}

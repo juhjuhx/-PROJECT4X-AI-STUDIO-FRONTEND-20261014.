@@ -1,0 +1,5 @@
+{"label": "C5-paired-check", "cwd": ".", "command": ["npm", "run", "check"], "startedAt": "2026-10-18T12:34:53.608976+00:00", "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 check
+> tsc --noEmit
+

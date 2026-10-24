@@ -1,0 +1,56 @@
+{
+  "sourceSha256": "426d731d039ed28bb64532785fb30a9a4ad2b3db664eaaabf97019b06b0fae27",
+  "orderCases": [
+    {
+      "types": [
+        "Capture",
+        "Attack"
+      ],
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "types": [
+        "Attack",
+        "Capture"
+      ],
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "types": [
+        "Capture",
+        "Attack",
+        "Capture"
+      ],
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "types": [
+        "Capture"
+      ],
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "types": [
+        "Attack"
+      ],
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "privateSaveCleanup": [
+    {
+      "readFailure": false,
+      "downloadDeleteCalls": 1,
+      "dialogCloseCalls": 1
+    },
+    {
+      "readFailure": true,
+      "downloadDeleteCalls": 1,
+      "dialogCloseCalls": 1
+    }
+  ]
+}

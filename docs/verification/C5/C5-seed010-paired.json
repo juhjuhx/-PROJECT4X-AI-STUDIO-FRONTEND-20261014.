@@ -1,0 +1,25 @@
+{
+  "label": "C5-seed010-paired",
+  "cwd": ".",
+  "command": [
+    "env",
+    "PROJECT4X_QA_START_SEED=10",
+    "PROJECT4X_QA_GAMES=1",
+    "PROJECT4X_QA_WORKERS=1",
+    "PROJECT4X_QA_MAX_TURNS=800",
+    "PROJECT4X_QA_MAX_COMMANDS=40000",
+    "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-private/seed010-paired.json",
+    "npm",
+    "run",
+    "qa:headless"
+  ],
+  "startedAt": "2026-10-18T12:35:28.559730+00:00",
+  "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T12:38:12.734351+00:00",
+  "durationSeconds": 164.178,
+  "log": "C5-seed010-paired.log"
+}

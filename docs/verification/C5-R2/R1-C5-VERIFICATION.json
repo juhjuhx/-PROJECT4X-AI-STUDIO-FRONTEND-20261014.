@@ -1,0 +1,238 @@
+{
+  "schema": "project4x-c5-verification-1",
+  "status": "PARTIAL",
+  "localOscillationFix": "IMPLEMENTED / finite-prefix TESTED_PASS",
+  "fullSeed010": "TESTED_FAIL",
+  "parentCommit": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+  "currentSourceSnapshot": "647933bf67bc45dcd4820a9dfd06b1fc20b5ad78464158baddc8258b2575da19",
+  "runtimeSourceSnapshot": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+  "boundaryProof": "docs/verification/C5/C5-FINAL-BOUNDARY.json",
+  "unitCounts": {
+    "pass": 104,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browserScenarios": 11,
+  "gameplay": {
+    "scenarios": 12,
+    "additionalHumanCommands": 207,
+    "policySteps": 206,
+    "turn": 37,
+    "captureAfterAttack": true,
+    "replayVerified": true
+  },
+  "seed010": {
+    "EndTurn": 800,
+    "commands": 17937,
+    "turn": 801,
+    "winner": null,
+    "exitCode": 1,
+    "seconds": 164.178,
+    "summary": "docs/verification/C5/seed010-paired-summary.json",
+    "fullWorld": "LOCAL_PRIVATE_NOT_COMMITTED"
+  },
+  "full100": "UNVERIFIED for this policy; original policy historical62/38FAIL not current rate",
+  "T3_T6": "historical FAIL, complete current acceptance not rerun; release blocked by fresh seed010 failure",
+  "ruleset": "g1-ccts-1 (unchanged)",
+  "saveSchema": "project4x-save-1 (unchanged)",
+  "replaySchema": "project4x-replay-1 (unchanged)",
+  "newDependencies": [],
+  "newGameplayNumbers": false,
+  "userDecisions": {
+    "mobile": "keep D3 tabs, verify gameplay first",
+    "AI": "minimum stateless Observation-only policy repair"
+  },
+  "independentReview": "docs/verification/C5/independent-C5-policy-review.md",
+  "candidateAnalysis": "docs/verification/C5/independent-C5-candidate-analysis.md",
+  "CI": "UNVERIFIED; no push",
+  "gates": [
+    {
+      "label": "C5-final-check-fixed",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-10-18T12:42:22.914271+00:00",
+      "snapshotSha256": "647933bf67bc45dcd4820a9dfd06b1fc20b5ad78464158baddc8258b2575da19",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:42:25.203819+00:00",
+      "durationSeconds": 2.289,
+      "log": "docs/verification/C5/C5-final-check-fixed.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C5-final-test-fixed",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-18T12:42:22.914283+00:00",
+      "snapshotSha256": "647933bf67bc45dcd4820a9dfd06b1fc20b5ad78464158baddc8258b2575da19",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:42:37.581206+00:00",
+      "durationSeconds": 14.667,
+      "log": "docs/verification/C5/C5-final-test-fixed.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": 104,
+        "pass": 104,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "C5-final-build",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-10-18T12:42:24.347032+00:00",
+      "snapshotSha256": "647933bf67bc45dcd4820a9dfd06b1fc20b5ad78464158baddc8258b2575da19",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:42:28.663921+00:00",
+      "durationSeconds": 4.316,
+      "log": "docs/verification/C5/C5-final-build.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C5-paired-prefix",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "startedAt": "2026-10-18T12:34:53.608977+00:00",
+      "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:34:59.187649+00:00",
+      "durationSeconds": 5.578,
+      "log": "docs/verification/C5/C5-paired-prefix.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C5-paired-browser",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:browser"
+      ],
+      "startedAt": "2026-10-18T12:37:30.315938+00:00",
+      "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:37:47.074113+00:00",
+      "durationSeconds": 16.758,
+      "log": "docs/verification/C5/C5-paired-browser.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C5-paired-gameplay",
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "command": [
+        "npm",
+        "run",
+        "qa:gameplay"
+      ],
+      "startedAt": "2026-10-18T12:37:34.024923+00:00",
+      "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 0,
+      "endedAt": "2026-10-18T12:40:39.785105+00:00",
+      "durationSeconds": 185.604,
+      "log": "docs/verification/C5/C5-paired-gameplay.log",
+      "status": "TESTED_PASS",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    },
+    {
+      "label": "C5-seed010-paired",
+      "cwd": ".",
+      "command": [
+        "env",
+        "PROJECT4X_QA_START_SEED=10",
+        "PROJECT4X_QA_GAMES=1",
+        "PROJECT4X_QA_WORKERS=1",
+        "PROJECT4X_QA_MAX_TURNS=800",
+        "PROJECT4X_QA_MAX_COMMANDS=40000",
+        "PROJECT4X_QA_OUTPUT=LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-private/seed010-paired.json",
+        "npm",
+        "run",
+        "qa:headless"
+      ],
+      "startedAt": "2026-10-18T12:35:28.559730+00:00",
+      "snapshotSha256": "6a7055ee5d4f17dd9f9ed3122d8648cce5666ab1b50ea5cf79f7cc975233b650",
+      "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+      "head": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+      "timeoutSeconds": 240,
+      "exitCode": 1,
+      "endedAt": "2026-10-18T12:38:12.734351+00:00",
+      "durationSeconds": 164.178,
+      "log": "docs/verification/C5/C5-seed010-paired.log",
+      "status": "TESTED_FAIL",
+      "counts": {
+        "tests": null,
+        "pass": null,
+        "fail": null,
+        "skipped": null
+      }
+    }
+  ],
+  "gitDiffWhitespace": {
+    "allStagedExitCode": 2,
+    "authoredProductDocsExitCode": 0,
+    "note": "raw log whitespace is preserved; full diagnostic log outside evidence/C5-git-diff-check-raw.log"
+  },
+  "lastTestedCommitEquivalent": "15fc0527b60476be122494cb08d661826715dd9e",
+  "testBinding": "Tests ran on uncommitted candidate on parentCommit; source manifest and bundle prove equivalence to this code commit. A later documentation-only commit needs no product retest."
+}

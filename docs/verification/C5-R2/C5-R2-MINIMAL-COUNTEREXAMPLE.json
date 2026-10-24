@@ -1,0 +1,34 @@
+{
+  "schema": "project4x-c5-r2-counterexamples-1",
+  "status": "IMPLEMENTED / narrow TESTED_PASS",
+  "test": "tests/ai-stalemate.test.ts",
+  "command": "node --import tsx --test tests/ai-stalemate.test.ts",
+  "dataBoundary": "synthetic test worlds, no private generated world committed",
+  "cases": [
+    {
+      "id": "R2-01",
+      "realTrace": "R1 policy cmd153 turn18 actor1",
+      "class": "TACTICAL BLOCK",
+      "expected": "spent/blocked scout Attack, preserve fresh exploration",
+      "red": "C5-R2-scout-RED-confirmed",
+      "green": "C5-R2-scout-GREEN"
+    },
+    {
+      "id": "R2-02",
+      "realTrace": "scout candidate cmd607 turn41 actor0; six alternating moves39-49",
+      "class": "PATHFINDING / tie ordering",
+      "expected": "same unit / equal score / equal route progress: approach existing single-point goal before coordinate tie; real detour retained",
+      "red": "C5-R2-route-tie-RED",
+      "green": "C5-R2-route-tie-GREEN",
+      "temporalGate": "npm run qa:ai:oscillation; single-step synthetic test alone is insufficient"
+    },
+    {
+      "id": "R2-03",
+      "realTrace": "two-fix candidate cmd246 turn25 actor0",
+      "class": "RECRUITMENT POLICY / ordering",
+      "expected": "legal relocation retaining same lethal shot -> Attack -> Recruit through real applyCommand in same turn; no money retains shot",
+      "red": "C5-R2-recruit-block-RED",
+      "green": "C5-R2-recruit-block-GREEN"
+    }
+  ]
+}

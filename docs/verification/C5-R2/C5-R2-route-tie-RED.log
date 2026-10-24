@@ -1,0 +1,46 @@
+{"label": "C5-R2-route-tie-RED", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-18T17:36:14.800597+00:00", "snapshotSha256": "8f7e723dd65ed4914c88b80f6d00286cdb853607377b06653a3ae056f8945719", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "5b0483ec9431958d1852866368f2775557ab98f8", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.650791ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.1035ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (7.761083ms)
+✖ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (2.878334ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 242.992292
+
+✖ failing tests:
+
+test at tests/ai-stalemate.test.ts:1:2923
+✖ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (2.878334ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      to: {
+  +     x: 4,
+  +     y: 4
+  -     x: 5,
+  -     y: 5
+      },
+      type: 'Move',
+      unitId: 'walker'
+    }
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/ai-stalemate.test.ts:73:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { type: 'Move', unitId: 'walker', to: { x: 4, y: 4 } },
+    expected: { type: 'Move', unitId: 'walker', to: { x: 5, y: 5 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

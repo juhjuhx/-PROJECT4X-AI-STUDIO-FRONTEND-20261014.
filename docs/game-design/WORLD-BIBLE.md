@@ -1,3 +1,5 @@
+> 2026-10-24 Demo恢復：已補回33份世界／裁決原件精選及SHA，見 [歷史索引](../../history/README.md)。下文舊「完整history」敘述是歷史封存狀態；本repo不是完整舊包，未納入的連結可能仍缺檔。現行規則與裁決權威不變。
+
 # 世界設定聖經｜設計歷史整合
 
 盤查日：2026-10-13（Asia/Taipei）。本文件整理既有設定，沒有新增文明、正史或玩法。歷史原件保留於 `history/Fake-Polytopia/`；完整索引與局部覆寫關係見 [DOCUMENT-AUTHORITY](DOCUMENT-AUTHORITY.md)。

@@ -1,0 +1,19 @@
+{
+  "label": "C5-R2-central-search-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "scripts/ai-endgame-search-check.ts"
+  ],
+  "startedAt": "2026-10-18T17:51:16.745688+00:00",
+  "snapshotSha256": "e1efaf3b48ce0d32863c7e3626bd6e809560365b8f5c632f8722a4fc5ae96c53",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T17:51:17.720712+00:00",
+  "durationSeconds": 0.975,
+  "log": "C5-R2-central-search-RED.log"
+}

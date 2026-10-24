@@ -1,0 +1,18 @@
+{
+  "label": "C5-R2-route-prefix",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "qa:ai:oscillation"
+  ],
+  "startedAt": "2026-10-18T17:36:29.136679+00:00",
+  "snapshotSha256": "eacb02a430d47cb276a17a8fe5e6337448b878a68b922acc160257aff3be882a",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T17:36:32.208037+00:00",
+  "durationSeconds": 3.071,
+  "log": "C5-R2-route-prefix.log"
+}

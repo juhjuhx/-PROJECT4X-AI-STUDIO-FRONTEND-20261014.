@@ -1,0 +1,125 @@
+{
+  "schema": "project4x-c5-verification-4",
+  "phase": "C5-R4",
+  "status": "PARTIAL",
+  "baselineCommit": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "AI_SHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e",
+  "sourceSnapshot": "b33f0d9268c250a937023b908e590492e4841f426fadb58c47202d90a20647ce",
+  "portableSnapshot": "e45f3cda4a0ba008a57262f9549cd857cee83cec9189dfb7a5a68773b2fdc196",
+  "tests": {
+    "total": 123,
+    "passed": 123,
+    "failed": 0,
+    "skipped": 0
+  },
+  "centralSearch": {
+    "status": "TESTED_PASS",
+    "commands": 673,
+    "seen": true,
+    "winner": 0,
+    "turn": 639,
+    "maxCommandsUnchanged": 1000,
+    "run": "C5-R4-primary-D02"
+  },
+  "fullSeed010": {
+    "seed": "獨立QA-010",
+    "status": "COMPLETE",
+    "winner": 0,
+    "turns": 535,
+    "fullRounds": 267,
+    "commands": 15418,
+    "hash": "3fb38074947af907",
+    "milliseconds": 142676,
+    "metrics": {
+      "actions": {
+        "Move": 11386,
+        "Attack": 2703,
+        "Capture": 19,
+        "Recruit": 763,
+        "Research": 6,
+        "ResolveRelic": 4,
+        "EstablishCapital": 3,
+        "EndTurn": 534
+      },
+      "relicGold": 2,
+      "relicIntel": 2,
+      "exileEntries": 4,
+      "centersEstablished": 3,
+      "eliminations": 1,
+      "maxUnits": 66
+    },
+    "timing": {
+      "observeMs": 10998,
+      "aiMs": 23051,
+      "applyMs": 36668
+    },
+    "terminalSaveReplayChecked": true,
+    "finalLife": [
+      "active",
+      "eliminated"
+    ],
+    "failure": null,
+    "ruleset": "g1-ccts-1",
+    "limits": {
+      "maxTurns": 800,
+      "maxCommands": 40000,
+      "harnessOnly": true,
+      "noGameClockOrSyntheticWinner": true
+    },
+    "sourceUnchanged": true,
+    "methodUnchanged": true,
+    "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+    "privateReportSha256": "8060936601b1aeb64384f91b10f9cdf2f84d95be2943dce64169a59f3150792f",
+    "privateReport": "../evidence/C5-R4-private/seed010-extended.json; NOT committed; canonical payload prohibited",
+    "harnessAggregateStatus": "PARTIAL",
+    "explanation": "一局 COMPLETE；harness PARTIAL 是非100局彙總狀態，不是 full100 PASS。",
+    "AI_SHA256": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e"
+  },
+  "browser": {
+    "status": "TESTED_PASS",
+    "scenarios": 11,
+    "maxTouchPointers": 2,
+    "run": "C5-R4-browser"
+  },
+  "gameplayBrowser": {
+    "status": "BLOCKED",
+    "rawResult": "TESTED_FAIL",
+    "attempts": [
+      "C5-R4-gameplay",
+      "C5-R4-gameplay-recheck"
+    ],
+    "failure": "download.delete: canceled; second wrapper receipts failed with confirmed ENOSPC",
+    "maxHumanCommandsUnchanged": 220,
+    "completeJourney": "UNVERIFIED on current policy",
+    "incident": "raw/C5-R4-gameplay-environment-incident.json"
+  },
+  "review": {
+    "status": "TESTED_PASS",
+    "verdict": "APPROVE scoped AI diff; no blocker",
+    "reviewer": "Codex /root/r4_final_review; clean-context, read-only",
+    "focused": {
+      "total": 33,
+      "passed": 33,
+      "failed": 0
+    },
+    "primaryFields": 48,
+    "comparedKnownCells": 21549,
+    "weightedOracleCases": 16,
+    "crossComponentCommandsToReveal": 5,
+    "report": "independent-review/最終獨立審查.md"
+  },
+  "performance": "PARTIAL; known-patrol synthetic median+71%; details in R4 results",
+  "full100": "UNVERIFIED; not run; separate C5-R5 controlled budget",
+  "T3_T6": "UNVERIFIED current; historical FAIL retained",
+  "playableAlpha": "PARTIAL",
+  "ruleset": "g1-ccts-1",
+  "saveSchema": "project4x-save-1",
+  "replaySchema": "project4x-replay-1",
+  "gameplayRulesChanged": false,
+  "detailedResults": "docs/verification/C5-R4/C5-R4-TEST-RESULTS.json",
+  "sourceManifest": "C5-SOURCE-MANIFEST.json",
+  "boundary": "docs/verification/C5-R4/C5-R4-SOURCE-BOUNDARY.json",
+  "R3History": "docs/verification/C5-R4/R3-C5-VERIFICATION.json",
+  "CI": "UNVERIFIED; no push",
+  "pushed": false
+}

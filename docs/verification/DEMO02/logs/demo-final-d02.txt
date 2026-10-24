@@ -1,0 +1,13 @@
+{
+  "schema": "project4x-central-search-counterexample-1",
+  "source": "972f564ea1bc795b269e4c5db066fe209623ffa42961d84eacc30ee374529b67",
+  "status": "TESTED_PASS",
+  "commands": 673,
+  "maxCommands": 1000,
+  "seen": true,
+  "turn": 639,
+  "winner": 0,
+  "milliseconds": 408,
+  "inputBoundary": "AI receives only same actor Observation; fixture truth never supplied",
+  "scope": "RECONSTRUCTED_BY_CODEX synthetic patrol counterexample; does not explain seed010 active-front stalemate"
+}

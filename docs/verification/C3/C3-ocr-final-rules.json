@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "groups": [
+    {
+      "group_id": 1,
+      "source": "project",
+      "pattern": "**/*",
+      "files": [
+        "AGENTS.md",
+        "README.md",
+        "docs/PROJECT-STATUS.md",
+        "docs/contracts/FRONTEND-CORE-CONTRACT.md",
+        "docs/contracts/MODULE-OWNERSHIP.md",
+        "docs/handoff/FEATURE-MATRIX.md",
+        "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+        "docs/handoff/INTEGRATION-STATUS.md",
+        "docs/handoff/KNOWN-DEFECTS.md",
+        "docs/roadmap/PLAYABLE-ALPHA.md",
+        "index.html",
+        "memory/session-handoff-LATEST.md",
+        "package.json",
+        "scripts/browser-check.mjs",
+        "C3-SOURCE-MANIFEST.json",
+        "D3-CHANGELOG.md",
+        "D3-MODIFIED-FILES.json",
+        "FRONTEND-NEEDS.md",
+        "docs/agent/C3-SKILL-MATRIX.json",
+        "docs/art/ART-DIRECTION.md",
+        "docs/art/ASSET-GUIDE.md",
+        "docs/art/D2-ART-DIRECTION.md",
+        "docs/art/D2-ASSET-MATRIX.md",
+        "docs/art/D2-MOTION-SPEC.md",
+        "docs/art/D2-STYLE-BIBLE.md",
+        "docs/art/D2-VISUAL-AUDIT.md",
+        "docs/art/DESIGN-TOKENS.md",
+        "docs/art/STYLE-BIBLE.md",
+        "docs/handoff/C3-DEEP-UNDERSTANDING.md",
+        "docs/handoff/C3-IMPLEMENTATION-STATUS.md",
+        "docs/handoff/C3-VERIFICATION.json",
+        "docs/handoff/NEXT-ACTION.md",
+        "docs/research/C3-OPEN-SOURCE-CANDIDATES.md",
+        "docs/roadmap/C3-EXECUTION-PLAN.md",
+        "tests/recruit-presentation.test.ts",
+        "tests/ui-map.test.ts"
+      ],
+      "rule": "依實作契約審查高信號bug、安全、依賴鎖版本、範圍與真實證據。完整本機存檔不是公開秘密边界；AI測試不代替真人體驗。禁止把未執行檢查寫成PASS。"
+    },
+    {
+      "group_id": 2,
+      "source": "project",
+      "pattern": "src/**",
+      "files": [
+        "src/main.ts",
+        "src/styles.css",
+        "src/ui/map.ts",
+        "src/ui/recruitment.ts"
+      ],
+      "rule": "檢查AI與地圖渲染只收Observation；C2 GameSession獨占GameState與applyCommand，main只用GameplayPort／LocalPersistencePort接線。顯示不得讀隱藏資料或完整Save/Replay。保護requestId去重、expectedVersion、generation與publication重入；匯入先完整驗證再取消AI與替換；保存只有IO成功且同stamp才ack；非同步AI取消；mouse/touch/keyboard可操作，禁未信任innerHTML/eval、全域吞錯與DOM selector patch，Responsive無遮擋、無consoleerror、尊重reducedmotion。"
+    }
+  ]
+}

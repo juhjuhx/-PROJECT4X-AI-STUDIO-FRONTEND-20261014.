@@ -1,0 +1,29 @@
+{"label": "D3-fresh-stage2", "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/d3-runtime-audit", "command": ["npm", "run", "qa:stage2"], "startedAt": "2026-10-18T04:38:40.795361+00:00", "snapshotSha256": "520b1f6ad19b5242227941b136336404c6d8feb78d82c1fd55dba191f9a830f5", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": null, "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 qa:stage2
+> node scripts/qa-stage2.mjs
+
+--- 開始 PROJECT-4X Stage 2 專項 E2E 驗證 ---
+目標 URL: http://127.0.0.1:58718
+記錄各視口 Computed Styles 與 DOM 結構...
+[iPhone-14-390x844] deckNav=flex, faction=none, dataTab=inspect
+[窄手機-320x640] deckNav=flex, faction=none, dataTab=inspect
+[手機橫式-812x375] deckNav=flex, faction=none, dataTab=inspect
+[Desktop-1440x900] deckNav=none, faction=block, dataTab=inspect
+測試 A: 手機三分頁（探險與部隊、科技研發、城邦手札）與自動切換...
+測試 B: 觸控單指平移、雙指縮放與無誤觸指令...
+測試 C: 縮放中心測試（+ / − 按鈕與游標錨點數值不變量）...
+測試 D: 迷霧情報隔離（未知格無洩漏）...
+測試 E: 原有遊戲功能（遺跡必答、Escape阻斷、Save/Load、AI回合）...
+回合數遞增切換: 回合 1 -> 回合 3
+測試 F: Tablist Accessibility 語意驗證...
+測試 G: 手機視口地圖面積與指揮板高度量測...
+手機量測數據 (390x844): {
+  viewportHeight: 844,
+  canvasHeight: 388.234375,
+  sidebarHeight: 619.203125,
+  turnBarHeight: 69,
+  canvasRatio: 0.45999333530805686
+}
+捕捉最新真機截圖 (390x844, 320x640, 812x375, 1440x900, 1920x1080, 768x1024, 桌面初局, 遺跡選擇)...
+--- PROJECT-4X Stage 2 專項 E2E 驗證全部通過！ ---

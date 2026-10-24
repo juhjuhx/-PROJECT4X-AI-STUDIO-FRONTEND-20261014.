@@ -1,0 +1,31 @@
+{"label": "C3-recruit-red", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/recruit-presentation.test.ts"], "startedAt": "2026-10-17T23:49:40.763034+00:00", "snapshotSha256": "099016ffcd6d459337598db086754f1207ae7aa158a12307e4691ab29b183a98", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "e5bc16fedde9245e29284a4ec954299212089139", "timeoutSeconds": 240}
+✖ C3 招募狀態只由觀測判定：等待／必答／駐軍／合法候選不混成已徵召 (1.733042ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.464167
+
+✖ failing tests:
+
+test at tests/recruit-presentation.test.ts:1:174
+✖ C3 招募狀態只由觀測判定：等待／必答／駐軍／合法候選不混成已徵召 (1.733042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/tests/recruit-presentation.test.ts:7:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

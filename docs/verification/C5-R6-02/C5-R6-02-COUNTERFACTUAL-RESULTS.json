@@ -1,0 +1,819 @@
+{
+  "status": "TESTED_PASS",
+  "scope": "16個預宣告合法介入均完成；只證明局部可見戰力交換，不證明佔領或全局勝負。",
+  "baselineSource": "d212303ff7006b8195b10bbc933160245c247d6997c95543b28605de1c8c2843",
+  "baselineAi": "939d641f000035489def1df7e3cdde040c35b31c58f5fcfd05b75e455a36fecc",
+  "horizons": [
+    2,
+    4,
+    8
+  ],
+  "diagnosticCommandCap": 500,
+  "arms": [
+    {
+      "armId": "A01",
+      "category": "NO_INTERVENTION",
+      "resultFileSha256": "255f1e198c129c5a5e460e90859a998487d220d44de30c6177754c1db14fd9f4",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A02",
+      "category": "IDENTITY_FIRST_ACTION",
+      "resultFileSha256": "ed8bfc9a2a5ba9a7f04273fb69ea33606c3f3359a3b565f3f349e643749942b9",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A03",
+      "category": "FOCAL_MOVE",
+      "resultFileSha256": "5c85effaef1da192e306e131e48d4a5127ca3e0554b2272243fbf0f4714dd7bd",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A04",
+      "category": "FOCAL_MOVE",
+      "resultFileSha256": "563296af6d8e0dc476ec9ae88a30b9e66c59e0a021e38123bc5e544bc76a18ec",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A05",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "59d48e63eac6d9461744f6918c4552a1f3b5f8cd00710de24741ec431d3330e3",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A06",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "e34d1ff9193a8bf76cdede4c5f7e554233428d5535f3ac713fcbf602e9d88d81",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 5,
+            "damageDealt": 10,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 14,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A07",
+      "category": "TWO_UNIT_SEQUENCE",
+      "resultFileSha256": "9dfa8e766df3eb4517bf1a5146320c6585601eca16ac905ecfb08be8d4f15fc3",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 5,
+            "damageDealt": 10,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 14,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A08",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "f2eee271873e875425bfbddb8e06815f1968791fa000bd86423fea1cedb4460d",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 5,
+            "damageDealt": 10,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A09",
+      "category": "TWO_UNIT_SEQUENCE",
+      "resultFileSha256": "21e080d97f533c7cc88d8d0e86a56e328d4a1196f860cea6bb372806b20888b5",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 5,
+            "damageDealt": 10,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A10",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "84e8dfc15e9c5e8f54d86d7e4f022275ac790e4cb9d8d1d6ec85fb14dbe36b14",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 194,
+          "outcomes": {
+            "attacks": 1,
+            "damageDealt": 1,
+            "observedKills": 1,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 23,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 17,
+            "damageDealt": 34,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A11",
+      "category": "TWO_UNIT_SEQUENCE",
+      "resultFileSha256": "98c9eb901eca1f7d2ff54530ddbdffbd57b780160b3338909273663b91c43d3b",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 194,
+          "outcomes": {
+            "attacks": 1,
+            "damageDealt": 1,
+            "observedKills": 1,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 182,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 23,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 17,
+            "damageDealt": 34,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A12",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "c40cca2ee7eacff646be02e570ac6678f3184d59008ddc885d9254d6f25cbb4f",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 16,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A13",
+      "category": "TWO_UNIT_SEQUENCE",
+      "resultFileSha256": "739d3924a3f43575fde79c071819a80e57602d6acc6164391434952b038fac8f",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 16,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A14",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "f42a730f29dbb516dc5171bf60acb072e248f994e7cf83756544edd0ab8a9416",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 16,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A15",
+      "category": "TWO_UNIT_SEQUENCE",
+      "resultFileSha256": "73e00c10f217b22d81584f43eb378035296b4906656e900e6097e8fab0dcc09e",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 178,
+          "outcomes": {
+            "attacks": 16,
+            "damageDealt": 32,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    },
+    {
+      "armId": "A16",
+      "category": "SUPPORT_MOVE",
+      "resultFileSha256": "eb9bbcf190d35a7694a63ec9c8b75212d19e713b5d5674f4ca8bec8c7d11f034",
+      "endpoints": [
+        {
+          "endTurn": 2,
+          "ownUnitCount": 24,
+          "ownHp": 191,
+          "outcomes": {
+            "attacks": 0,
+            "damageDealt": 0,
+            "observedKills": 0,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 4,
+          "ownUnitCount": 22,
+          "ownHp": 179,
+          "outcomes": {
+            "attacks": 6,
+            "damageDealt": 11,
+            "observedKills": 2,
+            "captures": 0,
+            "recruits": 0,
+            "recruitCost": 0,
+            "newKnownTiles": 0
+          }
+        },
+        {
+          "endTurn": 8,
+          "ownUnitCount": 22,
+          "ownHp": 174,
+          "outcomes": {
+            "attacks": 15,
+            "damageDealt": 30,
+            "observedKills": 4,
+            "captures": 0,
+            "recruits": 2,
+            "recruitCost": 9,
+            "newKnownTiles": 0
+          }
+        }
+      ],
+      "status": "FINISHED"
+    }
+  ],
+  "privateInputSha256": "9dbd76faa49db6067be56045aacd6d0860f55854059955c4dbaf00ec799f30eb",
+  "privateDirectory": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R6-02-20261022-133143-828d4da7/private",
+  "firstTimeoutPreserved": true,
+  "horizonsCountBothActorsEndTurn": true,
+  "canonicalOracleExcluded": true
+}

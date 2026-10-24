@@ -1,0 +1,3 @@
+ M src/core/ai.ts
+ M tests/ai-stalemate.test.ts
+?? docs/verification/C5-R3/

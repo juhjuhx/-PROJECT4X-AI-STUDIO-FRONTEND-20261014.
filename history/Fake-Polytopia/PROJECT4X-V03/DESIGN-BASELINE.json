@@ -1,0 +1,74 @@
+{
+  "version": "0.3.0",
+  "date": "2026-10-11",
+  "status": "PROPOSED_USER_REVIEW",
+  "implementation": "NOT_STARTED",
+  "gitRepository": "NOT_CREATED_IN_THIS_PACKAGE",
+  "confirmedRequirements": [
+    "original_turn_based_4x",
+    "early_exploration_conquest",
+    "nonlinear_coexisting_civilizations",
+    "survival_world_motive",
+    "discover_hidden_world",
+    "low_micro_late_game",
+    "2d_2_5d_oblique",
+    "cross_platform_open_source_priority",
+    "authoritative_deterministic_core",
+    "fog_redaction",
+    "agent_independent_review"
+  ],
+  "firstPlayable": {
+    "map": [
+      24,
+      24
+    ],
+    "majorFactions": 2,
+    "humanPlayers": 1,
+    "aiPlayers": 1,
+    "units": [
+      "infantry",
+      "scout",
+      "archer"
+    ],
+    "techs": [
+      "farming",
+      "archery",
+      "pathfinding"
+    ],
+    "economy": [
+      "gold"
+    ],
+    "victory": [
+      "capital_conquest"
+    ],
+    "worldSurprise": "anomaly_event_two_choices",
+    "renderer": "2d_2_5d_oblique_placeholder",
+    "playabilityGate": "USER_COMPLETES_ONE_MATCH_AND_REVIEWS"
+  },
+  "futureNotMvp": [
+    "full_diplomacy",
+    "religions",
+    "political_institutions",
+    "advanced_resources",
+    "true_high_tech_factions",
+    "multi_world_orbit",
+    "multiplayer",
+    "complex_army_frontlines"
+  ],
+  "technology": {
+    "core": "headless_typescript_proposed",
+    "rendererCandidates": [
+      "pixijs8",
+      "phaser4"
+    ],
+    "rust": "benchmark_gated_optional",
+    "sharedArrayBuffer": "OPTIONAL_AFTER_COMPATIBILITY",
+    "transferable": "DEFAULT_FOR_BULK_WORKER_PAYLOADS_WITH_OWNERSHIP_CHECK"
+  },
+  "evidence": {
+    "openCodeR0": "USER_QUOTED_ONLY",
+    "functionalTests": 0,
+    "performanceBenchmarks": 0,
+    "licenseFullAudit": false
+  }
+}

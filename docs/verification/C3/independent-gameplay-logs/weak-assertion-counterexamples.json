@@ -1,0 +1,66 @@
+{
+  "sourceSha256": "e52789eebb56e50773943217c18be959811152468302d547ec7ea000e8aaf999",
+  "executedAssertionBlock": "    assert.ok(appended.length >= 1);\n    assert.equal(appended[0].actor, 0);\n    assert.deepEqual(appended[0].action, action, '真UI必須提交所選完整合法Action');\n    if (action.type !== 'EndTurn') assert.equal(appended.length, resolvedRelic?2:1, '一次點擊不能重複執行或混入未預期命令');\n    if (resolvedRelic) assert.equal(appended[1].action.type,'ResolveRelic');\n",
+  "results": [
+    {
+      "id": "WRONG_RELIC_CHOICE_PASSES",
+      "expectedSelectedChoice": "intel",
+      "actualHistory": [
+        {
+          "actor": 0,
+          "action": {
+            "type": "Move",
+            "unitId": "兵-1",
+            "to": {
+              "x": 5,
+              "y": 3
+            }
+          }
+        },
+        {
+          "actor": 0,
+          "action": {
+            "type": "ResolveRelic",
+            "choice": "gold"
+          }
+        }
+      ],
+      "weakAssertions": "PASS",
+      "counterexample": true
+    },
+    {
+      "id": "EXTRA_HUMAN_AFTER_ENDTURN_PASSES",
+      "actualHistory": [
+        {
+          "actor": 0,
+          "action": {
+            "type": "EndTurn"
+          }
+        },
+        {
+          "actor": 1,
+          "action": {
+            "type": "EndTurn"
+          }
+        },
+        {
+          "actor": 0,
+          "action": {
+            "type": "Research",
+            "tech": "farm"
+          }
+        }
+      ],
+      "weakAssertions": "PASS",
+      "counterexample": true
+    },
+    {
+      "id": "COMMAND_BUDGET_UNDERCOUNTS_FORCED_RELIC",
+      "loopPolicySteps": 220,
+      "forcedRelicCommands": 1,
+      "reportedHumanCommands": 220,
+      "actualHumanCommands": 221,
+      "counterexample": true
+    }
+  ]
+}

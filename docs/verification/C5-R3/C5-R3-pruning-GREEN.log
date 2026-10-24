@@ -1,0 +1,16 @@
+{"label": "C5-R3-pruning-GREEN", "cwd": ".", "command": ["node", "--import", "tsx", "--test", "tests/ai-stalemate.test.ts"], "startedAt": "2026-10-19T03:42:51.176318+00:00", "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.867167ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.209625ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (4.066667ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.395167ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (4.196125ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (2.162792ms)
+✔ C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點 (6.640209ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 210.733417

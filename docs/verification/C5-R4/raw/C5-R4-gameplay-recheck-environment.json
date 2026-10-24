@@ -1,0 +1,10 @@
+{
+  "UTC": "2026-10-20T12:51:21.836928+00:00",
+  "diskTotal": 245107195904,
+  "diskUsed": 244868292608,
+  "diskFree": 238903296,
+  "previousFailure": "download.delete: canceled at privateSave after 30 successful UI commands",
+  "cause": "UNVERIFIED; low free disk observed, not proven causal",
+  "sameScript": true,
+  "humanCommandLimit": 220
+}

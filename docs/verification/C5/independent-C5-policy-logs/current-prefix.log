@@ -1,0 +1,30 @@
+START 2026-10-18T12:38:29.571958+00:00
+COMMAND ["npm", "run", "qa:ai:oscillation"]
+EXIT 0
+STDOUT
+
+> project-4x-mvp@0.1.0 qa:ai:oscillation
+> node --import tsx scripts/ai-oscillation-check.ts
+
+{
+  "schema": "project4x-ai-oscillation-1",
+  "seed": "獨立QA-010",
+  "maxCommands": 1100,
+  "commands": 1100,
+  "status": "TESTED_PASS",
+  "scope": "six consecutive unit Moves alternating two cells, no new exploration/Attack/Capture or HP change; finite generated prefix only",
+  "policyBoundary": "chooseAction(observe(state, actor))",
+  "sourceStart": {
+    "src/core/ai.ts": "06402a6394082b71a12a3aa50fef270f0895cd9839c0b047185920747237ea40",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+  },
+  "milliseconds": 10691,
+  "loops": [],
+  "limitations": "Does not establish global causality, completion, or full100 rate. Output is QA-only; never a HUD data source."
+}
+
+STDERR
+
+END 2026-10-18T12:38:41.183263+00:00

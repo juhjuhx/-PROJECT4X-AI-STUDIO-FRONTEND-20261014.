@@ -1,0 +1,25 @@
+{
+  "status": "PARTIAL",
+  "policySha256": "e7721d53ae68ccd163ff1096bd266c3c0dd8a012a89c7af61a66ded4e41f3595",
+  "scope": "bounded 100 turns, no claim of full-match causal proof",
+  "commands": 2331,
+  "lastCaptureTurn": 56,
+  "unusedLegalAttackAtEndTurn": [],
+  "selectedMoveGoalCounts": {
+    "explore": 254,
+    "site": 1005,
+    "enemy": 502
+  },
+  "selectedMoveWithTrafficDetourCounts": {
+    "site": 776,
+    "explore": 100,
+    "enemy": 277
+  },
+  "observedFailure": "Full seed010 remains winner=null at800EndTurn; no additional Capture afterturn56 in full action totals",
+  "nextHypotheses": [
+    "PATHFINDING: distinguish necessary terrain detour from dynamic friendly obstruction",
+    "TARGET PRIORITY: repeated skirmish objectives instead of sustained site approach",
+    "RECRUITMENT POLICY: field cap and rear transit versus useful local force"
+  ],
+  "notConfirmed": "No specific next bad choice isolated yet; do not tune weights or claim root cause."
+}

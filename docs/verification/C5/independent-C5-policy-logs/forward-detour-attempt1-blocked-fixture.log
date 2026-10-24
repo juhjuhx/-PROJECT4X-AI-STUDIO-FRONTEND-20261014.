@@ -1,0 +1,67 @@
+START 2026-10-18T12:39:39.397020+00:00
+COMMAND node --import tsx --input-type=module - <<STDIN
+
+import assert from 'node:assert/strict';
+import {createGame,applyCommand,observe} from './src/core/game.ts';
+import {chooseAction} from './src/core/ai.ts';
+const results=[];
+const state=createGame('independent-global-forward-detour');state.relics=[];state.terrain.fill('mountain');
+state.units=[{...state.units[0],x:4,y:5},{...state.units[1],x:6,y:5,moved:true,acted:true},{...state.units[0],id:'兵-4',x:8,y:2}];
+state.sites=[{...state.sites[0],recruited:true},{...state.sites[1],x:8,y:5}];
+state.factions[0].gold=0;state.explored[0].fill(true);state.surveyed[0].fill(true);
+for(let x=4;x<=8;x++){state.terrain[5*24+x]='plain';state.terrain[3*24+x]='plain';}
+state.terrain[4*24+4]='plain';state.terrain[4*24+8]='plain';state.terrain[2*24+8]='plain';
+let view=observe(state,0),before=JSON.stringify(view),first=chooseAction(view);
+assert.deepEqual(first,{type:'Move',unitId:'兵-4',to:{x:8,y:3}});assert.equal(JSON.stringify(view),before);
+let step=applyCommand(state,{actor:0,requestId:'review-forward',expectedVersion:state.version,action:first});assert.ok(step.ok);
+view=observe(step.state,0);before=JSON.stringify(view);const second=chooseAction(view);
+assert.deepEqual(second,{type:'Move',unitId:'兵-0',to:{x:4,y:4}});assert.equal(JSON.stringify(view),before);
+step=applyCommand(step.state,{actor:0,requestId:'review-detour',expectedVersion:step.state.version,action:second});assert.ok(step.ok);
+results.push({case:'global forward first, then required terrain-retreat detour in same turn',first,second,legal:true,observationUnchanged:true});
+const island=createGame('independent-unreachable-finite');island.relics=[];island.terrain.fill('mountain');island.factions[0].gold=0;
+island.units=[{...island.units[0],x:4,y:5}];island.sites=[{...island.sites[0],recruited:true},{...island.sites[1],x:20,y:20}];
+island.terrain[5*24+4]='plain';island.terrain[5*24+5]='plain';island.terrain[20*24+20]='plain';island.explored[0].fill(true);island.surveyed[0].fill(true);
+view=observe(island,0);before=JSON.stringify(view);const unreachable=chooseAction(view);
+assert.deepEqual(unreachable,{type:'EndTurn'});assert.ok(view.legalActions.some(a=>JSON.stringify(a)===JSON.stringify(unreachable)));assert.equal(JSON.stringify(view),before);
+results.push({case:'isolated fully-known component with unreachable enemy goal',action:unreachable,legal:true,observationUnchanged:true});
+console.log(JSON.stringify({results},null,2));
+
+STDIN
+EXIT 1
+STDOUT
+
+STDERR
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   type: 'EndTurn'
+-   to: {
+-     x: 4,
+-     y: 4
+-   },
+-   type: 'Move',
+-   unitId: '兵-0'
+  }
+
+    at file://LOCAL_HOME/Desktop/Fake-Polytopia/%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88/C3-20261018-074653/project/[eval1]:16:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async node:internal/modules/esm/loader:226:26
+    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:223:20)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: { type: 'EndTurn' },
+  expected: { type: 'Move', unitId: '兵-0', to: { x: 4, y: 4 } },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.10.0
+
+END 2026-10-18T12:39:39.802543+00:00

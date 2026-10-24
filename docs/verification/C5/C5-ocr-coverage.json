@@ -1,0 +1,593 @@
+{
+  "mode": "OCR delegation + host review; no external LLM",
+  "total_files": 86,
+  "reviewed_files": 20,
+  "skipped_files": 66,
+  "coverage_rate": 1.0,
+  "excluded": [
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/browser.json",
+      "status": "added",
+      "insertions": 97,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/stage2-qa-report.json",
+      "status": "added",
+      "insertions": 102,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/手機橫式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/手機直式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/桌面初局.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/窄手機.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C3/D3-original-browser-artifacts/遺跡選擇.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-FINAL-BOUNDARY.json",
+      "status": "added",
+      "insertions": 16,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-diagnostic-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-diagnostic-test.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-build.source.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-check-fixed.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-check-fixed.source.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-check.source.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-test-fixed.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-test-fixed.source.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-final-test.source.json",
+      "status": "added",
+      "insertions": 42,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-friendly-traffic-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-friendly-traffic-prefix.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-friendly-traffic-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-friendly-traffic-test.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-mobile-traffic-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-mobile-traffic-prefix.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-mobile-traffic-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-mobile-traffic-test.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/browser.json",
+      "status": "added",
+      "insertions": 300,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/手機橫式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/手機直式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/桌面初局.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/窄手機.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser-artifacts/遺跡選擇.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-browser.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-build.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-build.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-check.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-check.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/browser.json",
+      "status": "added",
+      "insertions": 6603,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/手機橫式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/手機直式.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/桌面初局.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/真實戰鬥佔領旅程.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/窄手機.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay-artifacts/遺跡選擇.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-gameplay.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-prefix.json",
+      "status": "added",
+      "insertions": 18,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-prefix.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-test.json",
+      "status": "added",
+      "insertions": 17,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-paired-test.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-policy-attempt-A.ts.txt",
+      "status": "added",
+      "insertions": 155,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-policy-attempt-B.ts.txt",
+      "status": "added",
+      "insertions": 155,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-seed010-paired.json",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/C5-seed010-paired.source.json",
+      "status": "added",
+      "insertions": 41,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-candidate-analysis.md",
+      "status": "added",
+      "insertions": 60,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/diagnostic-method-comparison.json",
+      "status": "added",
+      "insertions": 8,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/diff-check.json",
+      "status": "added",
+      "insertions": 10,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/forward-detour-and-unreachable.json",
+      "status": "added",
+      "insertions": 33,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/reviewed-final-source.json",
+      "status": "added",
+      "insertions": 47,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/reviewed-source.json",
+      "status": "added",
+      "insertions": 49,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-logs/unchanged-protected-source.json",
+      "status": "added",
+      "insertions": 95,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/independent-C5-policy-review.md",
+      "status": "added",
+      "insertions": 57,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    },
+    {
+      "path": "docs/verification/C5/seed010-paired-summary.json",
+      "status": "added",
+      "insertions": 87,
+      "deletions": 0,
+      "exclude_reason": "user_exclude"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "C5-SOURCE-MANIFEST.json",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "D3-MODIFIED-FILES.json",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/PROJECT-STATUS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/agent/C3-SKILL-MATRIX.json",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/C3-VERIFICATION.json",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/C5-AI-DIAGNOSIS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/FEATURE-MATRIX.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/GEMINI-CODEX-HANDOFF.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/INTEGRATION-STATUS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/KNOWN-DEFECTS.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/NEXT-ACTION.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/roadmap/C3-EXECUTION-PLAN.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/roadmap/PLAYABLE-ALPHA.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "memory/session-handoff-LATEST.md",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "scripts/ai-oscillation-check.ts",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "src/core/ai.ts",
+      "status": "modified",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "docs/handoff/C5-VERIFICATION.json",
+      "status": "added",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    },
+    {
+      "path": "tests/ai-oscillation.test.ts",
+      "status": "added",
+      "review": "reviewed",
+      "by": "root; AI/diagnostic/wrapper additionally reviewed by independent-C5-policy-review"
+    }
+  ]
+}

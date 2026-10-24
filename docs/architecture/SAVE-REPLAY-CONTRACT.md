@@ -1,5 +1,9 @@
 # 保存、重播、schema與隨機數契約
 
+## 2026-10-17 Session 邊界補充
+
+本輪沒有修改 core serializer、parser、replay、schema 或 ruleset。新 session 的正式 load/save/replay signature、generation/version 防護、私有 I/O capability 與保存確認見 [FRONTEND-CORE-CONTRACT](../contracts/FRONTEND-CORE-CONTRACT.md)。這些新 runtime 已 IMPLEMENTED，測試與範圍見 C2-IMPLEMENTATION-STATUS；現存 validate-before-replace 與 Command 去重持續有效。未驗證成功不得先換局或取消當局 AI；未來遺跡改規則由 C6 另提 migration，不在 UI 整合時靜默套入。
+
 這是本機完整真相保存格式。保存包含雙方世界資訊与request ledger，不能提供公開保密觀戰。回放目前用於重建驗證，沒有逐幀播放器。源碼為 `types.ts:20–26` 與 `persistence.ts:14–108`。
 
 ## 版本與兼容

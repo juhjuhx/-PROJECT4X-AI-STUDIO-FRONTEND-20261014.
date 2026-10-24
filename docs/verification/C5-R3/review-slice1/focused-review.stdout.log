@@ -1,0 +1,25 @@
+✔ C5-R2：斥候已移動仍攻擊守軍，不為本回合不可能的探索空過 (5.688125ms)
+✔ C5-R2：斥候未移動但無合法探索路線，也不因遠方未知格拒絕攻城 (1.521584ms)
+✔ C5-R2：斥候仍有合法新情報移動時，保留既有探索優先 (4.145625ms)
+✔ C5-R2：同分同路程候選優先靠近目標，避免座標排序選回繞路入口 (1.27725ms)
+✔ C5-R2：駐軍可移位完成同一擊殺時，先釋放據點並在同回合補兵 (3.338667ms)
+✔ C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機會移位 (1.0545ms)
+✔ C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點 (6.009541ms)
+{"case":"fifth","baseline":{"type":"Move","unitId":"walker","to":{"x":3,"y":4}},"candidate":{"type":"Move","unitId":"walker","to":{"x":3,"y":6}},"reducerAccepted":true}
+{"case":"equal-bound","candidate":{"type":"Move","unitId":"walker","to":{"x":4,"y":5}},"mutant":{"type":"Move","unitId":"walker","to":{"x":5,"y":6}}}
+{"case":"differential","count":256,"movable":256,"moves":256,"unknown":128,"seed":120719}
+✔ 第五目標：真實合法 Move 通過 reducer，baseline 必須失敗 (17.042709ms)
+✔ 等上界必須保留：後選目標實際同分但 y 較小；<= mutant 必須失敗 (7.621708ms)
+✔ 前四不可達：穿越整張地圖的友軍牆後，第五個可達目標仍選中 (3.263625ms)
+✔ 全部目標被友軍牆切斷：保留合法 EndTurn (2.634458ms)
+✔ 私有世界變更但 Observation 相同：未知地形、敵軍與據點不影響選擇 (4.767166ms)
+✔ 無隱式記憶：不同決策穿插、深度凍結輸入與回傳物件修改不改選擇 (12.69875ms)
+✔ 256個有障礙、友軍佔位、已知及未知地圖：剪枝選擇等於完全評估 (731.121291ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 976.369167

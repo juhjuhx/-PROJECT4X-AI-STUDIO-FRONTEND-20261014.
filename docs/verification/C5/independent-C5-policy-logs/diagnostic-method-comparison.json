@@ -1,0 +1,8 @@
+{
+  "baseline": "f7ec05a1f7b4ff73c97ba55b3e4c5994723fdc8b",
+  "oldScriptSha256": "54932262062f26af70e7aec346aac6b6e2a59775f9909de13383aa0ad0e54e77",
+  "currentScriptSha256": "331dfe16683fe9e57ce432708cdfd03a836148e8e1bb0635e95c96fd52d8b105",
+  "onlyAddedTerminalWinner": true,
+  "newWrapperSha256": "f359afb1a85b0167e64080eba4d2f7ceab1d1361dcde3e880536377c2883b089",
+  "wrapperFollowup": "Only adds undefined fallback for assertion message; no gate behavior change"
+}

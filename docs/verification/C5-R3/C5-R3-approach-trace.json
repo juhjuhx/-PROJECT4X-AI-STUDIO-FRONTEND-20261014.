@@ -1,0 +1,20 @@
+{
+  "label": "C5-R3-approach-trace",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "scripts/ai-decision-trace.mjs",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R3-private/approach-prefix"
+  ],
+  "startedAt": "2026-10-19T03:47:56.784834+00:00",
+  "snapshotSha256": "8c0e35509d9aa495d5b7957df419ab9bbebf82ff6059c6d4bb3de6ac61e1f634",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "8acc52698b9553e74961d38c54e11dfa301268e5",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-19T03:48:07.071610+00:00",
+  "durationSeconds": 10.287,
+  "log": "C5-R3-approach-trace.log"
+}

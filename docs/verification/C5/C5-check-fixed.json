@@ -1,0 +1,18 @@
+{
+  "label": "C5-check-fixed",
+  "cwd": ".",
+  "command": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "startedAt": "2026-10-18T04:51:52.685572+00:00",
+  "snapshotSha256": "131873e72a0d464704d359543a9356016889bf7be04e689968647a92f675d989",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "4cddfb3c9b50b80b45f85c1c4749e9f41ae392c9",
+  "timeoutSeconds": 240,
+  "exitCode": 0,
+  "endedAt": "2026-10-18T04:51:53.134547+00:00",
+  "durationSeconds": 0.449,
+  "log": "C5-check-fixed.log"
+}

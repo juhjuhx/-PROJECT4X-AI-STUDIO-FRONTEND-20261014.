@@ -1,0 +1,17 @@
+{
+  "protectedCount": 42,
+  "declaredProtectedCount": 42,
+  "protectedMismatch": [],
+  "rawComputed": "b33f0d9268c250a937023b908e590492e4841f426fadb58c47202d90a20647ce",
+  "rawDeclared": "b33f0d9268c250a937023b908e590492e4841f426fadb58c47202d90a20647ce",
+  "portableComputed": "e45f3cda4a0ba008a57262f9549cd857cee83cec9189dfb7a5a68773b2fdc196",
+  "portableDeclared": "e45f3cda4a0ba008a57262f9549cd857cee83cec9189dfb7a5a68773b2fdc196",
+  "rawPortablePathDifference": [
+    "src/.DS_Store"
+  ],
+  "sharedHashDifferences": [],
+  "portableCurrentMismatch": [],
+  "portableMapCount": 44,
+  "rawMapCount": 45,
+  "finalAi": "82618e54129d96274c2dd5d4a8c1a430bf17714d4b4aba1d7cbf122b8004005e"
+}

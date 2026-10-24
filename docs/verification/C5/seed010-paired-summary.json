@@ -1,0 +1,87 @@
+{
+  "schema": "project4x-qa-headless-1",
+  "generatedAt": "2026-10-18T12:38:12.646Z",
+  "status": "FAIL",
+  "ruleset": "g1-ccts-1",
+  "node": "v26.10.0",
+  "seedRange": {
+    "first": 10,
+    "last": 10
+  },
+  "requestedGames": 1,
+  "finishedGames": 1,
+  "completedGames": 0,
+  "failedGames": 1,
+  "unfinishedGames": 0,
+  "workers": 1,
+  "milliseconds": 163734,
+  "limits": {
+    "maxTurns": 800,
+    "maxCommands": 40000,
+    "harnessOnly": true,
+    "noGameClockOrSyntheticWinner": true
+  },
+  "inputBoundary": "chooseAction receives only observe(state, active); command always goes through applyCommand",
+  "sourceStart": {
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/ai.ts": "06402a6394082b71a12a3aa50fef270f0895cd9839c0b047185920747237ea40",
+    "src/core/persistence.ts": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+  },
+  "sourceEnd": {
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/ai.ts": "06402a6394082b71a12a3aa50fef270f0895cd9839c0b047185920747237ea40",
+    "src/core/persistence.ts": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+  },
+  "sourceUnchanged": true,
+  "methodFingerprint": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+  "methodEnd": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+  "methodUnchanged": true,
+  "fixtureFailure": null,
+  "workerFailure": null,
+  "humanPlayability": "NOT_VERIFIED",
+  "physicalMobile": "NOT_VERIFIED",
+  "games": [
+    {
+      "seed": "獨立QA-010",
+      "status": "FAIL",
+      "winner": null,
+      "turns": 801,
+      "commands": 17937,
+      "hash": "dd7f6750f7161d6b",
+      "milliseconds": 163607,
+      "metrics": {
+        "actions": {
+          "Move": 13723,
+          "Attack": 2626,
+          "Capture": 10,
+          "Recruit": 768,
+          "Research": 6,
+          "ResolveRelic": 4,
+          "EstablishCapital": 0,
+          "EndTurn": 800
+        },
+        "relicGold": 2,
+        "relicIntel": 2,
+        "exileEntries": 0,
+        "centersEstablished": 0,
+        "eliminations": 0,
+        "maxUnits": 56
+      },
+      "timing": {
+        "observeMs": 17851,
+        "aiMs": 56770,
+        "applyMs": 88909
+      },
+      "finalLife": [
+        "active",
+        "active"
+      ],
+      "failure": "HARNESS_TURN_LIMIT_NOT_A_DRAW_OR_VICTORY"
+    }
+  ],
+  "omitted": "完整世界／units／sites／lastCommands只留專案外私有證據，非HUD或AI輸入"
+}

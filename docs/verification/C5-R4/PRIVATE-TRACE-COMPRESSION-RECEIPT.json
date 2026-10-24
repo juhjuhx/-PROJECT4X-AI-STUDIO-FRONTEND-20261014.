@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-10-20T12:45:01.871621+00:00",
+  "original": "decisions.jsonl",
+  "originalBytes": 160290142,
+  "originalSha256": "8818a94fd79fb28cbb1f840e9810d698c06d96c8a82379d36538e9259f0210f8",
+  "archive": "decisions.jsonl.gz",
+  "archiveBytes": 9180515,
+  "decompressedSha256": "8818a94fd79fb28cbb1f840e9810d698c06d96c8a82379d36538e9259f0210f8",
+  "verifiedLossless": true,
+  "reason": "disk-space recovery of this task own newly generated private diagnostic; older trace/ZIP/source untouched"
+}

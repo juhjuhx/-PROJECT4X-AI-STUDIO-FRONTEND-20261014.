@@ -1,0 +1,446 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { platform, arch, cpus, release } from 'node:os';
+import { resolve } from 'node:path';
+import { artifactHashes } from './artifact-proof.mjs';
+const base = process.env.PROJECT4X_URL || 'http://127.0.0.1:4173';
+const evidenceDir = resolve(process.env.PROJECT4X_EVIDENCE_DIR || '證據');
+const evidenceFile = name => resolve(evidenceDir, name);
+// 私有匯出只留在 QA 記憶體作等值／命令斷言；不寫入公開證據或產品 UI。
+async function privateSave(page) {
+  const dialog = page.locator('.record-dialog');
+  const opened = !await dialog.isVisible();
+  if (opened) await page.getByRole('button', { name: '航行紀錄', exact: true }).click();
+  const pending = page.waitForEvent('download');
+  await dialog.getByRole('button', { name: '匯出保存', exact: true }).click();
+  const download = await pending;
+  try { return await readFile(await download.path(), 'utf8'); }
+  finally {
+    await download.delete();
+    if (opened) await dialog.getByRole('button', { name: '關閉', exact: true }).click();
+  }
+}
+
+// C3/C4共用既有玩法Gate：同一真實遊戲旅程，不替換存檔、不注入遊戲setter。
+// 診斷oracle只在Node QA端持有私有匯出；選擇策略只接玩家Observation。
+async function verifyGameplayJourney(page) {
+  const { observe } = await import('../src/core/game.ts');
+  const { chooseAction } = await import('../src/core/ai.ts');
+  const { deserializeGame } = await import('../src/core/persistence.ts');
+  const { TECH_STATS, UNIT_STATS } = await import('../src/core/types.ts');
+  const trace = [];
+  evidence.gameplayTrace = trace;
+  const seen = new Set();
+  const state = async () => deserializeGame(await privateSave(page));
+  let before = await state();
+  let humanCommands = 0;
+  for (let step = 0; humanCommands < 220 && !(seen.has('Attack') && seen.has('Capture')); step++) {
+    assert.equal(before.winner, null, '達成戰鬥與佔領前不能把終局或AI暫停算PASS');
+    assert.equal(before.active, 0);
+    const view = observe(before, 0), action = chooseAction(view);
+    assert.ok(action && view.legalActions.some(a => JSON.stringify(a) === JSON.stringify(action)));
+    if ('unitId' in action) {
+      const unit = view.units.find(u => u.id === action.unitId && u.owner === 0);
+      assert.ok(unit);
+      const coordinates = new RegExp(`^${unit.x + 1} · ${unit.y + 1} /`);
+      await page.locator('.unit-row').filter({ has:page.locator('.unit-copy > span').filter({ hasText:coordinates }) }).click();
+    }
+    if (action.type === 'Move') {
+      await page.locator('.move-list summary').click();
+      await page.locator('.tile-actions').getByRole('button', { name:`${action.to.x + 1} · ${action.to.y + 1}`, exact:true }).click();
+    } else if (action.type === 'Attack') {
+      const attacks = view.legalActions.filter(a => a.type === 'Attack' && a.unitId === action.unitId);
+      await page.locator('.attack-button').nth(attacks.findIndex(a => a.targetId === action.targetId)).click();
+    } else if (action.type === 'Capture') {
+      await page.getByRole('button', { name:'占領據點', exact:true }).click();
+    } else if (action.type === 'Research') {
+      await page.locator('.tech-row').filter({ hasText:TECH_STATS[action.tech].name }).getByRole('button').click();
+    } else if (action.type === 'Recruit' || action.type === 'EstablishCapital') {
+      const site = view.tiles.find(t => t.site?.id === action.siteId);
+      const center = view.tiles.find(t => t.site?.id === view.faction.centerId);
+      assert.ok(site && center, '此固定旅程需可知政治中心供鍵盤選格起點');
+      await page.locator('canvas').focus(); await page.keyboard.press('Home');
+      for (const [delta,positive,negative] of [[site.x-center.x,'ArrowRight','ArrowLeft'],[site.y-center.y,'ArrowDown','ArrowUp']]) {
+        for (let k=0;k<Math.abs(delta);k++) await page.keyboard.press(delta>0?positive:negative);
+      }
+      await page.getByRole('button', { name:action.type==='Recruit'?`${UNIT_STATS[action.kind].name} · ${UNIT_STATS[action.kind].cost} 金`:'建立新政治中心 · 免費', exact:true }).click();
+    } else if (action.type === 'EndTurn') {
+      await page.getByRole('button', { name:/結束回合/ }).click();
+      await page.waitForFunction(() => document.querySelector('.turn-status strong')?.textContent === '輪到你了');
+    } else { throw new Error(`本旅程沒有預期的獨立action: ${action.type}`); }
+    // Move可同步觸發強制遺跡；以真按鈕處置後才能開啟私有檔案controls。
+    let relicChoice = null;
+    if (await page.locator('.relic-dialog').isVisible()) {
+      const intel = page.locator('.relic-dialog').getByRole('button', { name:/解讀地形/ });
+      relicChoice = await intel.isEnabled() ? 'intel' : 'gold';
+      await (relicChoice === 'intel'?intel:page.locator('.relic-dialog').getByRole('button', { name:/金幣/ })).click();
+      await page.locator('.relic-dialog').waitFor({ state:'hidden' });
+    }
+    const after = await state(), appended = after.history.slice(before.history.length);
+    assert.ok(appended.length >= 1);
+    assert.equal(appended[0].actor, 0);
+    assert.deepEqual(appended[0].action, action, '真UI必須提交所選完整合法Action');
+    const ownCommands = appended.filter(c=>c.actor===0);
+    const expectedActions = relicChoice ? [action,{type:'ResolveRelic',choice:relicChoice}] : [action];
+    assert.deepEqual(ownCommands.map(c=>c.action),expectedActions,'包含EndTurn與遺跡選項在內，不能混入額外或錯誤的人類command');
+    if (action.type !== 'EndTurn') assert.equal(appended.length, expectedActions.length);
+    humanCommands += ownCommands.length;
+    assert.ok(humanCommands<=220,'強制遺跡command也必須計入220上限');
+    if (action.type === 'Attack') {
+      const target = view.units.find(u=>u.id===action.targetId), unit=view.units.find(u=>u.id===action.unitId);
+      const tile=view.tiles[target.y*view.width+target.x];
+      const cover=['forest','hill'].includes(tile.terrain)||tile.site?.owner===target.owner?1:0;
+      const damage=Math.max(1,UNIT_STATS[unit.kind].attack-UNIT_STATS[target.kind].defense-cover);
+      const remaining=after.units.find(u=>u.id===target.id);
+      assert.equal(remaining?.hp??0,Math.max(0,target.hp-damage), '攻擊必須真正造成規則傷害');
+    }
+    if (action.type === 'Capture') {
+      const unit=view.units.find(u=>u.id===action.unitId), site=view.tiles[unit.y*view.width+unit.x].site;
+      assert.ok(site && site.owner!==0);
+      assert.equal(after.sites.find(s=>s.id===site.id).owner,0,'占領必須真正改變據點控制權');
+    }
+    seen.add(action.type);
+    trace.push({step,humanCommands,turn:before.turn,versionBefore:before.version,versionAfter:after.version,action,relicChoice});
+    if (step % 25 === 0) console.log(`GAMEPLAY progress steps=${step+1} commands=${humanCommands} turn=${after.turn} attack=${seen.has('Attack')} capture=${seen.has('Capture')}`);
+    before=after;
+  }
+  assert.ok(seen.has('Attack')&&seen.has('Capture'),'220個真人方command內必須實際完成Attack與Capture，不能跳過');
+  const allHuman = new Set(before.history.filter(c=>c.actor===0).map(c=>c.action.type));
+  for (const type of ['Move','Attack','Capture','Recruit','Research','ResolveRelic','EndTurn']) assert.ok(allHuman.has(type),`連續旅程缺少${type}`);
+  const priorSave=await privateSave(page);
+  await page.getByRole('button',{name:'航行紀錄',exact:true}).click();
+  const pending=page.waitForEvent('download');
+  await page.getByRole('button',{name:'匯出回放',exact:true}).click();
+  const replay=await pending;
+  try { await page.locator('.record-dialog input[type=file]').nth(1).setInputFiles(await replay.path());
+    await page.waitForFunction(()=>document.querySelector('.replay-result')?.textContent?.includes('驗證通過'));
+  } finally {await replay.delete();}
+  await page.locator('.record-dialog').getByRole('button',{name:'關閉',exact:true}).click();
+  assert.equal(await privateSave(page),priorSave,'回放驗證不能改動進行中局');
+  await page.screenshot({path:evidenceFile('真實戰鬥佔領旅程.png')});
+  return {status:'PASS',driver:'real DOM/keyboard buttons; production opponent AI; Observation-only test policy',maxHumanCommands:220,humanCommands,policySteps:trace.length,turn:before.turn,actions:[...allHuman].sort(),trace,replayVerified:true,privateExportPersisted:false};
+}
+
+// 測試端量測真實 Canvas 繪製與瀏覽器 PointerEvents；不存取 WorldMap 私有 state。
+function monitorMapPaint() {
+  const metrics = window.__qaMapMetrics = { paint: null, active: [], maxTouchPointers: 0, events: [] };
+  const active = new Set();
+  for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
+    window.addEventListener(type, event => {
+      if (!(event.target instanceof HTMLCanvasElement)) return;
+      if (event.pointerType === 'touch') {
+        if (type === 'pointerdown') active.add(event.pointerId);
+        if (type === 'pointerup' || type === 'pointercancel') active.delete(event.pointerId);
+        metrics.active = [...active];
+        metrics.maxTouchPointers = Math.max(metrics.maxTouchPointers, active.size);
+      }
+      metrics.events.push({ type, pointerType: event.pointerType, pointerId: event.pointerId, trusted: event.isTrusted });
+    }, true);
+  }
+  const prototype = CanvasRenderingContext2D.prototype;
+  const originalScale = prototype.scale, originalTranslate = prototype.translate, originalFillText = prototype.fillText;
+  const frames = new WeakMap();
+  prototype.scale = function(x, y) {
+    const result = originalScale.call(this, x, y);
+    frames.set(this, { zoom: x, zoomY: y, transform: null });
+    return result;
+  };
+  prototype.translate = function(x, y) {
+    const result = originalTranslate.call(this, x, y), frame = frames.get(this);
+    if (frame) {
+      const m = this.getTransform();
+      frame.transform = { a: m.a, d: m.d, e: m.e, f: m.f };
+      // 直接量測世界scale/translate，不依賴會隨視覺版本變動的角落文案。
+      metrics.paint = { ...frame };
+    }
+    return result;
+  };
+  prototype.fillText = function(text, ...args) {
+    const result = originalFillText.call(this, text, ...args);
+    if (/^24 × 24.*\d+%$/.test(String(text))) {
+      const frame = frames.get(this);
+      if (frame?.transform) metrics.paint = { ...frame, label: String(text) };
+    }
+    return result;
+  };
+}
+
+async function verifyTouchGestures(page, context) {
+  const beforeSave = await privateSave(page);
+  await page.waitForFunction(() => window.__qaMapMetrics?.paint !== null);
+  const readPaint = () => page.evaluate(() => structuredClone(window.__qaMapMetrics.paint));
+  const before = await readPaint();
+  const anchor = await visibleTouchAnchor(page);
+  const { x, y } = anchor;
+  const cdp = await context.newCDPSession(page);
+  const touch = (id, px, py) => ({ id, x: px, y: py, radiusX: 1, radiusY: 1, force: 1 });
+  const send = (type, touchPoints) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints });
+  try {
+    await send('touchStart', [touch(1, x, y)]);
+    for (let step = 1; step <= 4; step++) await send('touchMove', [touch(1, x + step * 9, y + step * 5)]);
+    await send('touchEnd', []);
+    await page.waitForFunction(previous => {
+      const paint = window.__qaMapMetrics.paint;
+      return Math.abs(paint.transform.e - previous.transform.e) > 10 && Math.abs(paint.transform.f - previous.transform.f) > 10;
+    }, before);
+    const panned = await readPaint();
+    assert.equal(panned.zoom, before.zoom, '單指平移不應改變縮放');
+    await send('touchStart', [touch(2, x - 32, y), touch(3, x + 32, y)]);
+    for (let step = 1; step <= 4; step++) await send('touchMove', [touch(2, x - 32 - step * 6, y), touch(3, x + 32 + step * 6, y)]);
+    await send('touchEnd', []);
+    await page.waitForFunction(zoom => window.__qaMapMetrics.paint.zoom > zoom * 1.4, panned.zoom);
+    const pinched = await readPaint();
+    const pointer = await page.evaluate(() => ({ active: window.__qaMapMetrics.active, maxTouchPointers: window.__qaMapMetrics.maxTouchPointers, events: window.__qaMapMetrics.events }));
+    assert.equal(pointer.maxTouchPointers, 2, 'pinch 必須同時存在兩個 touch pointer');
+    assert.deepEqual(pointer.active, []);
+    const touchEvents = pointer.events.filter(event => event.pointerType === 'touch');
+    assert.ok(touchEvents.filter(event => event.type === 'pointerdown').length >= 3);
+    assert.ok(touchEvents.some(event => event.type === 'pointermove'));
+    assert.ok(touchEvents.every(event => event.trusted), '手勢需來自 CDP 真實輸入，不能 dispatch 偽 PointerEvent');
+    const afterSave = await privateSave(page);
+    assert.equal(afterSave, beforeSave, '平移／雙指縮放不得產生 gameplay command 或改動完整保存');
+    return { input: 'CDP Input.dispatchTouchEvent', anchor, before, panned, pinched, maxTouchPointers: pointer.maxTouchPointers, trustedTouchEvents: touchEvents.length, privateSaveUnchanged: true };
+  } finally {
+    await send('touchCancel', []).catch(() => {});
+    await cdp.detach();
+  }
+}
+
+async function visibleTouchAnchor(page) {
+  const result = await page.evaluate(() => {
+    const canvas = document.querySelector('canvas'), r = canvas.getBoundingClientRect();
+    const bounds = { x: r.x, y: r.y, width: r.width, height: r.height };
+    const viewport = { width: innerWidth, height: innerHeight };
+    const centerHit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2);
+    const boundingCenterHit = centerHit ? { tag: centerHit.tagName, className: centerHit.className } : null;
+    // boundingBox 可延伸到 viewport 外；每個實際觸點也須通過遮擋 hit test。
+    const left = Math.max(0, r.left) + 60, right = Math.min(innerWidth, r.right) - 60;
+    const top = Math.max(0, r.top) + 8, bottom = Math.min(innerHeight, r.bottom) - 28;
+    const offsets = [[0, 0], ...Array.from({ length: 4 }, (_, i) => [(i + 1) * 9, (i + 1) * 5]),
+      ...Array.from({ length: 5 }, (_, i) => [[-32 - i * 6, 0], [32 + i * 6, 0]]).flat()];
+    const xs = [(left + right) / 2, left, right];
+    const ys = [(top + bottom) / 2];
+    for (let y = top; y <= bottom; y += 8) ys.push(y);
+    for (const y of ys) for (const x of xs) {
+      if (left <= right && top <= bottom && offsets.every(([dx, dy]) => document.elementFromPoint(x + dx, y + dy) === canvas)) {
+        return { x, y, bounds, viewport, boundingCenterHit, allGesturePointsHitCanvas: true };
+      }
+    }
+    return { bounds, viewport, boundingCenterHit, allGesturePointsHitCanvas: false };
+  });
+  assert.equal(result.allGesturePointsHitCanvas, true, `沒有足夠且未被遮擋的 Canvas 手勢區域：${JSON.stringify(result)}`);
+  return result;
+}
+await mkdir(evidenceDir, { recursive: true });
+let browser;
+const evidence = { url: base, generatedAt: new Date().toISOString(), browser: null, artifactHashes: artifactHashes(resolve('dist')), servedAssets: {}, device: { platform: platform(), release: release(), arch: arch(), cpu: cpus()[0]?.model }, scenarios: [], errors: [], status: 'RUNNING' };
+try {
+  browser = await chromium.launch({ headless: true, ...(process.env.PROJECT4X_CHROMIUM_PATH ? { executablePath: process.env.PROJECT4X_CHROMIUM_PATH } : {}) });
+  evidence.browser = browser.version();
+  const context = await browser.newContext({ viewport: { width: 1440, height: 960 }, reducedMotion: 'reduce', acceptDownloads: true });
+  const page = await context.newPage();
+  const assetChecks = [];
+  page.on('response', response => {
+    const url = new URL(response.url());
+    if (url.origin === new URL(base).origin && /\.(js|css)$/.test(url.pathname)) assetChecks.push((async () => {
+      const path = decodeURIComponent(url.pathname).replace(/^\//, '');
+      const hash = createHash('sha256').update(await response.body()).digest('hex');
+      assert.equal(hash, evidence.artifactHashes[path], `服務資產與本輪建置不同：${path}`);
+      evidence.servedAssets[path] = hash;
+    })().catch(error => { errors.push(error.message); }));
+  });
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errors.push(m.text()); });
+  page.on('dialog', dialog => dialog.accept());
+  const start = performance.now();
+  const response = await page.goto(base);
+  assert.equal(response.status(), 200);
+  evidence.servedIndexSha256 = createHash('sha256').update(await response.body()).digest('hex');
+  assert.ok(response.headers()['content-security-policy']);
+  await page.getByRole('heading', { name: '霧境初航', exact: true }).waitFor();
+  const nativeSafety = await page.evaluate(() => {
+    let invalidSelectorsThrow = 0;
+    for (const target of [document, document.body, document.createDocumentFragment()]) {
+      for (const method of ['querySelector','querySelectorAll']) {
+        try { target[method]('#'); } catch (error) { if (error instanceof DOMException && error.name === 'SyntaxError') invalidSelectorsThrow++; }
+      }
+    }
+    let observedError = false, observedRejection = false;
+    const onError = () => { observedError = true; };
+    const onRejection = () => { observedRejection = true; };
+    window.addEventListener('error', onError);
+    window.addEventListener('unhandledrejection', onRejection);
+    const error = new ErrorEvent('error', { message:'first-party shadowRoot querySelectorAll regression', filename:location.href, cancelable:true });
+    const rejection = new PromiseRejectionEvent('unhandledrejection', { promise:Promise.resolve(), reason:new Error('first-party shadowRoot regression'), cancelable:true });
+    window.dispatchEvent(error); window.dispatchEvent(rejection);
+    window.removeEventListener('error', onError); window.removeEventListener('unhandledrejection', onRejection);
+    return { invalidSelectorsThrow, observedError, observedRejection, errorCanceled:error.defaultPrevented, rejectionCanceled:rejection.defaultPrevented };
+  });
+  assert.deepEqual(nativeSafety, { invalidSelectorsThrow:6, observedError:true, observedRejection:true, errorCanceled:false, rejectionCanceled:false });
+  evidence.scenarios.push({ id:'first-party-error-observable-native-selectors', status:'PASS', nativeSafety });
+
+  await page.locator('.unit-row').filter({ hasText: '斥候' }).click();
+  await page.screenshot({ path: evidenceFile('桌面初局.png') });
+  evidence.scenarios.push({ id: 'desktop-load', milliseconds: Math.round(performance.now() - start), status: 'PASS' });
+  await page.locator('.move-list summary').click();
+  await page.locator('.tile-actions').getByRole('button', { name: '6 · 4', exact: true }).click();
+  const relic = page.locator('.relic-dialog');
+  await relic.waitFor({ state: 'visible' });
+  assert.match(await relic.innerText(), /3 格/);
+  await page.keyboard.press('Escape');
+  assert.equal(await relic.isVisible(), true);
+  await page.screenshot({ path: evidenceFile('遺跡選擇.png') });
+  await relic.getByRole('button', { name: /解讀地形/ }).click();
+  await relic.waitFor({ state: 'hidden' });
+  await page.locator('.tech-row').filter({ hasText: '耕作' }).getByRole('button', { name: '5 金', exact: true }).click();
+  assert.equal(await page.locator('.resource-value').first().innerText(), '3');
+  await page.locator('.unit-row').filter({ hasText: '步兵' }).first().click();
+  await page.locator('.move-list summary').click();
+  await page.locator('.tile-actions').getByRole('button', { name: '5 · 4', exact: true }).click();
+  await page.getByRole('button', { name: /結束回合/ }).click();
+  await page.waitForFunction(() => document.querySelector('.turn-status strong')?.textContent === '輪到你了');
+  assert.equal(await page.locator('.resource-value').first().innerText(), '6');
+  await page.getByRole('button', { name: '中心', exact: true }).click();
+  await page.waitForFunction(() => document.querySelector('.inspect-panel .site-block')?.textContent?.includes('己方據點'));
+  await page.getByRole('button', { name: '步兵 · 4 金', exact: true }).click();
+  assert.equal(await page.locator('.resource-value').first().innerText(), '2');
+  assert.equal(await page.locator('.unit-row').count(), 3);
+  evidence.scenarios.push({ id: 'explore-relic-escapeblocked-intel-tech-move-income-recruit', status: 'PASS' });
+  await page.getByRole('button', { name: '航行紀錄', exact: true }).click();
+  assert.match(await page.locator('.save-notice').innerText(), /目前有未保存的進度/);
+  const saving = page.waitForEvent('download');
+  await page.getByRole('button', { name: '匯出保存', exact: true }).click();
+  const save = await saving; const savePath = await save.path();
+  const savedText = await readFile(savePath, 'utf8');
+  await save.delete();
+  assert.match(await page.locator('.status-message').innerText(), /保存已發起匯出/);
+  assert.match(await page.locator('.save-notice').innerText(), /目前有未保存的進度/, '下載沒有可靠的落盤回執，不能清 dirty');
+  // 僅在隔離 QA page 故障注入；不修改產品，也不攔截／吞掉其他例外。
+  await page.evaluate(() => {
+    const descriptor = Object.getOwnPropertyDescriptor(Storage.prototype, 'setItem');
+    window.__qaStorageFailureCalls = 0;
+    window.__qaRestoreSetItem = () => Object.defineProperty(Storage.prototype, 'setItem', descriptor);
+    Object.defineProperty(Storage.prototype, 'setItem', { ...descriptor, value: function(key, value) {
+      if (this === localStorage && key === 'project4x-save-1') {
+        window.__qaStorageFailureCalls++;
+        throw new DOMException('QA 保存容量已滿', 'QuotaExceededError');
+      }
+      return descriptor.value.call(this, key, value);
+    } });
+  });
+  try {
+    await page.getByRole('button', { name: '保存進度', exact: true }).click();
+    await page.waitForFunction(() => document.querySelector('.status-message')?.textContent?.includes('保存失敗'));
+    assert.equal(await page.evaluate(() => window.__qaStorageFailureCalls), 1, '必須真實呼叫一次失敗的 storage 寫入');
+    assert.match(await page.locator('.save-notice').innerText(), /目前有未保存的進度/, 'storage 失敗不能 acknowledge 或清 dirty');
+  } finally {
+    await page.evaluate(() => {
+      window.__qaRestoreSetItem();
+      delete window.__qaRestoreSetItem;
+      delete window.__qaStorageFailureCalls;
+    });
+  }
+  await page.getByRole('button', { name: '保存進度', exact: true }).click();
+  await page.waitForFunction(() => document.querySelector('.status-message')?.textContent?.includes('進度已保存在此瀏覽器'));
+  assert.match(await page.locator('.save-notice').innerText(), /目前進度尚未變更/);
+  assert.doesNotMatch(await page.locator('.save-notice').innerText(), /目前有未保存的進度/);
+  evidence.scenarios.push({ id: 'storage-failure-export-do-not-ack', status: 'PASS', exportPreservesDirty: true, storageFailurePreservesDirty: true, restoredStorageClearsDirty: true });
+  const recruited = JSON.parse(savedText).units.find(unit => unit.owner === 0 && unit.x === 3 && unit.y === 3);
+  assert.ok(recruited?.moved && recruited.acted, '剛招募的新兵本回合不能再行動');
+  const replaying = page.waitForEvent('download');
+  await page.getByRole('button', { name: '匯出回放', exact: true }).click();
+  const replay = await replaying;
+  await page.locator('.record-dialog input[type=file]').nth(1).setInputFiles(await replay.path());
+  await page.waitForFunction(() => document.querySelector('.replay-result')?.textContent?.includes('驗證通過'));
+  const replaySummary = await page.locator('.replay-result').innerText();
+  assert.match(replaySummary, /project4x-replay-1/);
+  assert.match(replaySummary, /g1-ccts-1/);
+  assert.doesNotMatch(replaySummary, /[a-f0-9]{16}|canonical|hash/i, '公開回放摘要不得包含 canonical hash');
+  await replay.delete();
+  await page.locator('.record-dialog input[type=file]').first().setInputFiles({ name: '壞保存.json', mimeType: 'application/json', buffer: Buffer.from('{"schema":"bad"}') });
+  await page.waitForFunction(() => document.querySelector('.status-message')?.textContent?.includes('匯入失敗'));
+  assert.equal(await page.locator('.resource-value').first().innerText(), '2');
+  await page.reload();
+  await page.getByRole('button', { name: '航行紀錄', exact: true }).click();
+  await page.getByRole('button', { name: '讀取保存', exact: true }).click();
+  await page.locator('.record-dialog').waitFor({ state: 'hidden' });
+  assert.equal(await page.locator('.unit-row').count(), 3);
+  await page.getByRole('button', { name: /結束回合/ }).click();
+  await page.waitForFunction(() => document.querySelector('.turn-status strong')?.textContent === '輪到你了');
+  assert.equal(await page.locator('.resource-value').first().innerText(), '5');
+  await page.locator('.unit-row').filter({ hasText: '步兵' }).filter({ hasText: '4 · 4 /' }).click();
+  await page.locator('.move-list summary').click();
+  const destination = page.locator('.tile-actions').getByRole('button').first();
+  const coordinates = (await destination.innerText()).match(/(\d+)\s*·\s*(\d+)/);
+  assert.ok(coordinates, '新兵下一己方回合必須有合法移動按鈕');
+  await destination.click();
+  const movedSave = JSON.parse(await privateSave(page));
+  const movedRecruit = movedSave.units.find(unit => unit.id === recruited.id);
+  assert.deepEqual({ x: movedRecruit.x, y: movedRecruit.y }, { x: Number(coordinates[1]) - 1, y: Number(coordinates[2]) - 1 });
+  assert.equal(movedRecruit.moved, true);
+  assert.equal(movedSave.history.at(-1).action.type, 'Move');
+  assert.equal(movedSave.history.at(-1).action.unitId, recruited.id);
+  evidence.scenarios.push({ id: 'recruited-unit-next-own-turn-real-move', status: 'PASS', unitId: recruited.id });
+  await page.getByRole('button', { name: '航行紀錄', exact: true }).click();
+  await page.getByRole('button', { name: '保存進度', exact: true }).click();
+  await page.reload();
+  await page.getByRole('button', { name: '航行紀錄', exact: true }).click();
+  await page.getByRole('button', { name: '讀取保存', exact: true }).click();
+  await page.locator('.record-dialog').waitFor({ state: 'hidden' });
+  await page.getByRole('button', { name: /結束回合/ }).click();
+  await page.waitForFunction(() => document.querySelector('.turn-status strong')?.textContent === '輪到你了');
+  assert.equal(await page.locator('.resource-value').first().innerText(), '8');
+  assert.ok(!/請求編號|遭拒/.test(await page.locator('.status-message').innerText()));
+  evidence.scenarios.push({ id: 'save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision', status: 'PASS', saveBytes: Buffer.byteLength(savedText) });
+  if (process.argv.includes('--gameplay')) evidence.scenarios.push({id:'continuous-existing-gameplay', ...await verifyGameplayJourney(page)});
+  await page.locator('canvas').focus();
+  await page.keyboard.press('n');
+  await page.keyboard.press('ArrowRight');
+  assert.match(await page.locator('.coordinates').innerText(), /座標/);
+  await page.keyboard.press('Home');
+  evidence.scenarios.push({ id: 'keyboard-selection-navigation', status: 'PASS' });
+  assert.deepEqual(errors, []);
+  await Promise.all(assetChecks);
+  assert.deepEqual(errors, []);
+  await context.close();
+  for (const [label, width, height] of [['手機直式',375,812],['手機橫式',812,375],['窄手機',320,640]]) {
+    const mobile = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, reducedMotion: 'reduce', acceptDownloads: true });
+    await mobile.addInitScript(monitorMapPaint);
+    const p = await mobile.newPage();
+    p.on('pageerror', e => evidence.errors.push(e.message));
+    p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') evidence.errors.push(m.text()); });
+    await p.goto(base); await p.locator('.unit-row').filter({ hasText: '斥候' }).waitFor();
+    await p.locator('.map-controls').getByRole('button', { name: '中心', exact: true }).tap();
+    if (width === 375) {
+      const beforeSelection = await privateSave(p);
+      await p.getByRole('tab', { name: '科技研發', exact: true }).tap();
+      assert.equal(await p.locator('.tech-panel').isVisible(), true);
+      await p.waitForFunction(() => window.__qaMapMetrics?.paint?.transform);
+      // 中心後沒有選取部隊；點合法可見、無單位的(3,4)，只改選格不送command。
+      const point = await p.evaluate(() => {
+        const rect = document.querySelector('canvas').getBoundingClientRect();
+        const m = window.__qaMapMetrics.paint.transform;
+        return { x:rect.x + (-38) * m.a + m.e, y:rect.y + 147 * m.d + m.f };
+      });
+      await p.touchscreen.tap(point.x, point.y);
+      assert.equal(await p.locator('.sidebar').getAttribute('data-tab'), 'inspect', '從科技分頁點地圖格必須自動顯示選格資訊');
+      assert.equal(await p.locator('.inspect-panel').isVisible(), true);
+      assert.match(await p.locator('.coordinates').innerText(), /4 · 5/);
+      assert.equal(await privateSave(p), beforeSelection, '純選格不能改動canonical保存');
+      evidence.scenarios.push({ id:'mobile-map-selection-opens-inspection', status:'PASS', point, privateSaveUnchanged:true });
+    }
+    const tapPoint = await visibleTouchAnchor(p);
+    await p.touchscreen.tap(tapPoint.x, tapPoint.y);
+    const gestures = await verifyTouchGestures(p, mobile);
+    const layout = await p.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth + 1, badTargets: [...document.querySelectorAll('button')].filter(b => b.getBoundingClientRect().width > 0 && b.getBoundingClientRect().height < 43).map(b=>b.textContent), end: (()=>{const r=document.querySelector('.end-turn').getBoundingClientRect();return { top:r.top,bottom:r.bottom,viewport:innerHeight };})() }));
+    assert.equal(layout.overflow, false); assert.deepEqual(layout.badTargets, []); assert.ok(layout.end.bottom <= layout.end.viewport+1);
+    await p.screenshot({ path: evidenceFile(`${label}.png`), fullPage: true });
+    evidence.scenarios.push({ id: label, viewport: { width,height }, status:'PASS', simulatedTouch:true, gestures, layout });
+    await mobile.close();
+  }
+  assert.deepEqual(evidence.errors, []); evidence.status = 'PASS';
+} catch (error) { evidence.status = 'FAIL'; evidence.failure = error.stack ?? String(error); process.exitCode = 1; }
+finally { await browser?.close(); await writeFile(evidenceFile('browser.json'), JSON.stringify(evidence,null,2)+'\n'); console.log(JSON.stringify(evidence)); }

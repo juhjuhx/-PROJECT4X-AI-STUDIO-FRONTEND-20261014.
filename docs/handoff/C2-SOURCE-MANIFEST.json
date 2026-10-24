@@ -1,0 +1,160 @@
+{
+  "schema": "project4x-c2-source-manifest-1",
+  "baseline": "c21b16cd75572d069369f41426f7323c63c05083",
+  "scope": "全部src/tests/scripts檔案、執行設定、lock與正式契約；不含本manifest自身、其餘文件、Git、node_modules、dist與外層私有evidence。歷史PUBLISH-MANIFEST不代表本版。",
+  "fileCount": 38,
+  "files": {
+    ".opencodereview/rule.json": {
+      "sha256": "d95c1673d7c251692a2c826388a883609245d8c7688e7ae905a66aceb0275b8e",
+      "bytes": 1509
+    },
+    "docs/contracts/FRONTEND-CORE-CONTRACT.md": {
+      "sha256": "e2452315a6bbb52578a8293c3b62b6a04c3ff480a8e271db5b5c99cfc241cdc9",
+      "bytes": 19726
+    },
+    "docs/contracts/frontend-core-v1.d.ts": {
+      "sha256": "eafc4bacb60e41d3f90ababb681cd75f2fc1ae4f84003c832b3cbbf68d968f1d",
+      "bytes": 5723
+    },
+    "index.html": {
+      "sha256": "a992106a222555a62c6effb2e698815ff900eac8ae0c018d3335e8abd936345d",
+      "bytes": 464
+    },
+    "package-lock.json": {
+      "sha256": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67",
+      "bytes": 54117
+    },
+    "package.json": {
+      "sha256": "4afefded4d0f407d5cb31329a92a9ed92f98ff57b2f2761762db7dd932dd2406",
+      "bytes": 691
+    },
+    "scripts/artifact-proof.mjs": {
+      "sha256": "685004b990ccd4fd1bf9a45038890b815d1d74c9193a660d785fe576618d1367",
+      "bytes": 532
+    },
+    "scripts/browser-check.mjs": {
+      "sha256": "ad0dd50cc02dbb1042133437e59217904503afb3d61926d2f8900a85bddf9ead",
+      "bytes": 20367
+    },
+    "scripts/context-init.mjs": {
+      "sha256": "671e78bc5be93b23862e4c43a5f54b3b995e51f2ae8bffe955598df89577b93b",
+      "bytes": 1371
+    },
+    "scripts/headless.ts": {
+      "sha256": "269234c84b46a5bea6de80af8323322bf0b4b531b102d61ebb75fee7e6e5062d",
+      "bytes": 13370
+    },
+    "scripts/serve.mjs": {
+      "sha256": "155a692b7da8fa18fdc8140f96db31e0b551cfdc75c90e32b09a6dfedd33dc38",
+      "bytes": 3133
+    },
+    "scripts/verify.mjs": {
+      "sha256": "65c04bc35542d588d26a8882abbd19b8a7a1710e97bceff0abdab940498f1553",
+      "bytes": 6827
+    },
+    "src/core/ai.ts": {
+      "sha256": "a97d731df122b363bfcce498af256d93a34a5aa35160cd90aaab7418ff9b447a",
+      "bytes": 12685
+    },
+    "src/core/game.ts": {
+      "sha256": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+      "bytes": 18193
+    },
+    "src/core/persistence.ts": {
+      "sha256": "5ebd2cf08a052c8783ea491a706a73f66474d4cb363c7fe61e1e1482baa588c8",
+      "bytes": 9564
+    },
+    "src/core/types.ts": {
+      "sha256": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+      "bytes": 3393
+    },
+    "src/main.ts": {
+      "sha256": "75abbf3890d2360169b5f9cb7d68156cd80e9c9b9525b4f72b740f297f529795",
+      "bytes": 34315
+    },
+    "src/presentation/events.ts": {
+      "sha256": "3be960186042af847caa1caed9d62df3bf69964fa3491ac6177c2b54563dc53b",
+      "bytes": 5819
+    },
+    "src/session/ai-driver.ts": {
+      "sha256": "b19f1a17372e93640ac7ca7f08a3b65e04f5e2eaf122c4ae2bc1af0858b8740d",
+      "bytes": 3212
+    },
+    "src/session/contracts.ts": {
+      "sha256": "c8751a8a43ca2cc8d2a2cbd1f0a8bfd18ac2eac9794d4e093c53e0bed094ae8b",
+      "bytes": 142
+    },
+    "src/session/errors.ts": {
+      "sha256": "ef689209695a54169fbd6f6c87458b146ba46ef76900c3e6a5bf6cd2a14fdbf5",
+      "bytes": 1684
+    },
+    "src/session/game-session.ts": {
+      "sha256": "a28986cf385b2e7b35a81b9be17e8bfeb83091ed79e6e581666a153c4d6a13d4",
+      "bytes": 10658
+    },
+    "src/session/immutable.ts": {
+      "sha256": "82f684610efe4422b2b6e33e13eb443c0b17fa08baebe25ef05da44bca559269",
+      "bytes": 400
+    },
+    "src/session/persistence.ts": {
+      "sha256": "905f933b124baf1b2e83fac621b6ab3ed2be2246c9e02f44e172e4d239192eaf",
+      "bytes": 1293
+    },
+    "src/styles.css": {
+      "sha256": "1a7b061e780823db8a11ce6dd0fbfee2e617c368cb1fa7bc05c3f6039ab4615c",
+      "bytes": 16993
+    },
+    "src/ui/assets.d.ts": {
+      "sha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "bytes": 24
+    },
+    "src/ui/map.ts": {
+      "sha256": "07958f8f029e5ab3ebf3b8dd1628da040ed2a7b350ea2cfa2cd9aa2b2654cda8",
+      "bytes": 17445
+    },
+    "tests/ai-driver.test.ts": {
+      "sha256": "63cf1d9efe47d9a237b994bdd27e69ea03d5764582f8a747ce19e2039a962b05",
+      "bytes": 9678
+    },
+    "tests/artifact-proof.test.mjs": {
+      "sha256": "06d4fbb2310c42b049b57b41a8ce95670d11506cbd9f37f539f8c785d79e96e6",
+      "bytes": 1348
+    },
+    "tests/core.test.ts": {
+      "sha256": "db5f3abe507827783b3c6a9fdda1ba93b871536bab442e23f3d74c3f0451bcfb",
+      "bytes": 19265
+    },
+    "tests/helpers/terminal-journey.ts": {
+      "sha256": "2919b2691294e67ba4966046c550dce2081d94cd264e791785abe56945ddd5b9",
+      "bytes": 4407
+    },
+    "tests/presentation.test.ts": {
+      "sha256": "9eab4f40d6962667807a6401fa49a39dc231dd20cc5a9ad08e2949fff7f43658",
+      "bytes": 16752
+    },
+    "tests/review.test.ts": {
+      "sha256": "3f24d06ab152953d14c234537d2e6b0f6b2bfc52538e175abba4a46d0e7398ab",
+      "bytes": 22810
+    },
+    "tests/session-boundaries.test.mjs": {
+      "sha256": "0614b6ce617cdd3eece0ec553f63e432d48d9ec26f4849f8b8730e8d447ba41f",
+      "bytes": 1435
+    },
+    "tests/session.test.ts": {
+      "sha256": "de57e7504d2583a3ce21723a3021dfc03b3b52a887513aa9c29f3e5795e0163d",
+      "bytes": 22125
+    },
+    "tests/流亡重建.test.ts": {
+      "sha256": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394",
+      "bytes": 5934
+    },
+    "tsconfig.json": {
+      "sha256": "25a9a8b3805cb40bead5e4956a3075224e7c418fc5a98dedba326f8d1996d645",
+      "bytes": 350
+    },
+    "vite.config.ts": {
+      "sha256": "c6c788976ebe37ef8daaebd8cf130c7faea96a80dd1ae1a3641e0a86a61a213b",
+      "bytes": 142
+    }
+  }
+}

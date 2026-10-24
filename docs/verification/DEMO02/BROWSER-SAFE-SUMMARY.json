@@ -1,0 +1,265 @@
+{
+  "scope": "RECONSTRUCTED_SAFE_PROJECTION：僅情境身份及必要計數；不公開完整trace/world，原收據SHA可回查專案外私人原件。",
+  "gates": [
+    {
+      "evidence": "browser-release-001/browser.json",
+      "sha256": "a113d29e26717e9594de9243f7c02a48594038109bf06f9f8590be7957d58af0",
+      "status": "PASS",
+      "scenarios": [
+        {
+          "id": "first-party-error-observable-native-selectors",
+          "status": "PASS"
+        },
+        {
+          "id": "desktop-load",
+          "status": "PASS"
+        },
+        {
+          "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+          "status": "PASS"
+        },
+        {
+          "id": "storage-failure-export-do-not-ack",
+          "status": "PASS"
+        },
+        {
+          "id": "recruited-unit-next-own-turn-real-move",
+          "status": "PASS"
+        },
+        {
+          "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+          "status": "PASS"
+        },
+        {
+          "id": "keyboard-selection-navigation",
+          "status": "PASS"
+        },
+        {
+          "id": "mobile-map-selection-opens-inspection",
+          "status": "PASS"
+        },
+        {
+          "id": "手機直式",
+          "status": "PASS",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "simulatedTouch": true
+        },
+        {
+          "id": "手機橫式",
+          "status": "PASS",
+          "viewport": {
+            "width": 812,
+            "height": 375
+          },
+          "simulatedTouch": true
+        },
+        {
+          "id": "窄手機",
+          "status": "PASS",
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "simulatedTouch": true
+        }
+      ],
+      "cleanup": "PASS"
+    },
+    {
+      "evidence": "demo-release-001/demo.json",
+      "sha256": "69b2f26de654e51001c6f3263f2c7cec266bd477fa777f0df528115181bb2941",
+      "status": "PASS",
+      "scenarios": [
+        {
+          "id": "desktop-load-prevalidation-and-intent-cancellation",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "desktop-real-exploration-journal-save-load",
+          "status": "TESTED_PASS",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "simulatedTouch": false,
+          "commands": 3,
+          "militaryWinner": null
+        },
+        {
+          "id": "phone-load-prevalidation-and-intent-cancellation",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-real-exploration-journal-save-load",
+          "status": "TESTED_PASS",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "simulatedTouch": true,
+          "commands": 3,
+          "militaryWinner": null
+        }
+      ],
+      "cleanup": "PASS"
+    },
+    {
+      "evidence": "gameplay-stable-001/browser.json",
+      "sha256": "2b0ab2f349bcb87ff37e35f4a76b3dc499a95a1aba0d50e95936fcdb4126ccc2",
+      "status": "PASS",
+      "scenarios": [
+        {
+          "id": "first-party-error-observable-native-selectors",
+          "status": "PASS"
+        },
+        {
+          "id": "desktop-load",
+          "status": "PASS"
+        },
+        {
+          "id": "explore-relic-escapeblocked-intel-tech-move-income-recruit",
+          "status": "PASS"
+        },
+        {
+          "id": "storage-failure-export-do-not-ack",
+          "status": "PASS"
+        },
+        {
+          "id": "recruited-unit-next-own-turn-real-move",
+          "status": "PASS"
+        },
+        {
+          "id": "save-export-replay-invalidimport-preserves-reload-load-twice-no-requestcollision",
+          "status": "PASS"
+        },
+        {
+          "id": "continuous-existing-gameplay",
+          "status": "PASS",
+          "captureAfterAttack": true,
+          "maxHumanCommands": 220,
+          "humanCommands": 209,
+          "policySteps": 208,
+          "actions": [
+            "Attack",
+            "Capture",
+            "EndTurn",
+            "Move",
+            "Recruit",
+            "Research",
+            "ResolveRelic"
+          ],
+          "replayVerified": true,
+          "privateExportPersisted": false
+        },
+        {
+          "id": "keyboard-selection-navigation",
+          "status": "PASS"
+        },
+        {
+          "id": "mobile-map-selection-opens-inspection",
+          "status": "PASS"
+        },
+        {
+          "id": "手機直式",
+          "status": "PASS",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "simulatedTouch": true
+        },
+        {
+          "id": "手機橫式",
+          "status": "PASS",
+          "viewport": {
+            "width": 812,
+            "height": 375
+          },
+          "simulatedTouch": true
+        },
+        {
+          "id": "窄手機",
+          "status": "PASS",
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "simulatedTouch": true
+        }
+      ],
+      "cleanup": "PASS"
+    },
+    {
+      "evidence": "pwa-stable-001/pwa.json",
+      "sha256": "f57639d165b8616f0c8e5d120394e62e8397be813edeed703526c2e9da108a5b",
+      "status": "PASS",
+      "scenarios": [
+        {
+          "id": "manifest-installability-static-only-cache",
+          "status": "TESTED_PASS",
+          "cachedAssets": 9,
+          "revision": "2ea4d10eb5b2463a400439237daf4b2c826340d422b205b77be1ccf7a0d28aa3",
+          "scope": "/"
+        },
+        {
+          "id": "offline-reload-real-world-local-save-load",
+          "status": "TESTED_PASS",
+          "commands": 2
+        }
+      ],
+      "cleanup": [
+        {
+          "stage": "context.close",
+          "status": "PASS"
+        },
+        {
+          "stage": "owned-profile",
+          "status": "PASS",
+          "remainingBefore": 0,
+          "rootAbsent": true
+        }
+      ]
+    },
+    {
+      "evidence": "pwa-subpath-001/pwa.json",
+      "sha256": "5bd601932b2a9964e7a138fdc95c2f3a97d9f866d655c93f51bb9b0bae964fd4",
+      "status": "PASS",
+      "scenarios": [
+        {
+          "id": "manifest-installability-static-only-cache",
+          "status": "TESTED_PASS",
+          "cachedAssets": 9,
+          "revision": "2ea4d10eb5b2463a400439237daf4b2c826340d422b205b77be1ccf7a0d28aa3",
+          "scope": "/games/demo/"
+        },
+        {
+          "id": "offline-reload-real-world-local-save-load",
+          "status": "TESTED_PASS",
+          "commands": 2
+        }
+      ],
+      "cleanup": [
+        {
+          "stage": "context.close",
+          "status": "PASS"
+        },
+        {
+          "stage": "owned-profile",
+          "status": "PASS",
+          "remainingBefore": 0,
+          "rootAbsent": true
+        }
+      ]
+    },
+    {
+      "evidence": "pwa-update-002/update.json",
+      "sha256": "1173ea4cce6bcafd4e33c4c0afdb0d43251bff575b64b21e763d6a39e139f644",
+      "status": "PASS",
+      "scenarios": [],
+      "cleanup": "PASS"
+    }
+  ]
+}

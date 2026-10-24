@@ -1,0 +1,32 @@
+{
+  "command": [
+    "node",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--target",
+    "es2022",
+    "--module",
+    "esnext",
+    "--moduleResolution",
+    "bundler",
+    "--skipLibCheck",
+    "--types",
+    "node",
+    "--typeRoots",
+    "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project/node_modules/@types",
+    "有界性能.ts",
+    "frozen/baseline/src/core/ai.ts",
+    "frozen/baseline/src/core/measured-ai.ts",
+    "frozen/baseline/src/core/game.ts",
+    "frozen/baseline/src/core/types.ts",
+    "frozen/candidate/src/core/ai.ts",
+    "frozen/candidate/src/core/measured-ai.ts",
+    "frozen/candidate/src/core/game.ts",
+    "frozen/candidate/src/core/types.ts"
+  ],
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/evidence/C5-R4-performance/最終候選8261",
+  "exitCode": 0,
+  "at": "2026-10-20T05:12:24.192829+00:00",
+  "lspDiagnostics": "Tool not available; real TypeScript checker used.",
+  "pythonSyntax": "Both external Python helpers parsed successfully with ast.parse; no pycache created."
+}

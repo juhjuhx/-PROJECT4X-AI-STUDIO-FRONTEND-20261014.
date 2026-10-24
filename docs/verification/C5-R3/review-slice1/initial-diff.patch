@@ -1,0 +1,56 @@
+diff --git a/src/core/ai.ts b/src/core/ai.ts
+index 32e6c70..a5c3f1e 100644
+--- a/src/core/ai.ts
++++ b/src/core/ai.ts
+@@ -146,8 +146,20 @@ export function chooseAction(view: Observation): Action | null {
+       // Compare reachable objectives by value and route length. A historical
+       // capital must not redirect the entire front past nearby enemy supplies.
+       const promising = roles.filter(g => Number.isFinite(g.distances[i])).sort((a, b) => b.weight / (b.distances[i] + 4) - a.weight / (a.distances[i] + 4) || a.tile.y - b.tile.y || a.tile.x - b.tile.x);
+-      const candidates = promising.slice(0, 4).map(g => ({ ...g, distances: distances(g.sources, blocked) })).filter(g => Number.isFinite(g.distances[i]));
+-      if (!candidates.length) for (const g of promising.slice(4)) { const d = distances(g.sources, blocked); if (Number.isFinite(d[i])) { candidates.push({ ...g, distances: d }); break; } }
++      const candidates: typeof goals = [];
++      let bestValue = 0;
++      for (const g of promising) {
++        // Terrain distance is an optimistic bound, not a fixed top-four cutoff:
++        // friendly traffic can make a lower-ranked objective the better route.
++        // Occupied graphs only remove edges, so later bounds cannot beat this
++        // value. Keep equal bounds for the deterministic coordinate tie-break.
++        if (g.weight / (g.distances[i] + 4) < bestValue) break;
++        const d = distances(g.sources, blocked);
++        if (Number.isFinite(d[i])) {
++          candidates.push({ ...g, distances: d });
++          bestValue = Math.max(bestValue, g.weight / (d[i] + 4));
++        }
++      }
+       candidates.sort((a, b) => b.weight / (b.distances[i] + 4) - a.weight / (a.distances[i] + 4) || a.tile.y - b.tile.y || a.tile.x - b.tile.x);
+       if (candidates[0]) unitGoals.set(unit.id, candidates[0]);
+     }
+diff --git a/tests/ai-stalemate.test.ts b/tests/ai-stalemate.test.ts
+index 2ad3950..487a731 100644
+--- a/tests/ai-stalemate.test.ts
++++ b/tests/ai-stalemate.test.ts
+@@ -101,3 +101,24 @@ test('C5-R2：無補兵金幣時保留原地擊殺，不為不存在的招募機
+   s.explored[0].fill(true); s.surveyed[0].fill(true);
+   assert.deepEqual(chooseAction(observe(s, 0)), { type: 'Attack', unitId: 'scout', targetId: 'guard' });
+ });
++
++test('C5-R3：友軍使前四目標繞遠時，不忽略第五個更可達的已知據點', () => {
++  const s = createGame('C5-R3-goal-pruning');
++  s.terrain.fill('plain'); s.relics = []; s.pendingRelic = null;
++  s.factions[0].gold = 0;
++  s.explored[0].fill(true); s.surveyed[0].fill(true);
++  s.units = [{ id: 'walker', owner: 0, kind: 'infantry', x: 3, y: 5, hp: 10, moved: false, acted: false }];
++  // A temporary friendly wall, not impassable terrain. Only walker can move.
++  for (let y = 2; y <= 8; y++) s.units.push({ id: `blocker-${y}`, owner: 0, kind: 'infantry', x: 4, y, hp: 10, moved: true, acted: true });
++  s.sites = [{ x: 5, y: 5 }, { x: 5, y: 4 }, { x: 5, y: 6 }, { x: 6, y: 5 }, { x: 3, y: 9 }]
++    .map((p, n) => ({ ...p, id: `goal-${n}`, kind: 'village', name: `Objective ${n}`, owner: 1, heldSince: 0, recruited: false }));
++  const view = observe(s, 0), before = structuredClone(view);
++  assert.ok(view.tiles.filter(t => t.site).every(t => t.site!.owner === 1), '五據點的身份均為合法可見資訊');
++  assert.ok(view.legalActions.some(a => a.type === 'Move' && a.unitId === 'walker' && a.to.x === 3 && a.to.y === 6));
++  // Terrain-only distances: 2,3,3,3,4. With the friendly wall: 10,9,9,11,4.
++  // Equal-value holdings must prefer the four-step southern route over a
++  // nine-step detour. The old top-four cutoff selected north (3,4).
++  assert.deepEqual(chooseAction(view), { type: 'Move', unitId: 'walker', to: { x: 3, y: 6 } });
++  assert.deepEqual(chooseAction(structuredClone(view)), chooseAction(view), '確定性');
++  assert.deepEqual(view, before, '唯讀Observation');
++});

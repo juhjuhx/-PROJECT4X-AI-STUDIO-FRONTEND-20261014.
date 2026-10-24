@@ -1,0 +1,20 @@
+{
+  "label": "C3-recruit-red",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/recruit-presentation.test.ts"
+  ],
+  "startedAt": "2026-10-17T23:49:40.763034+00:00",
+  "snapshotSha256": "099016ffcd6d459337598db086754f1207ae7aa158a12307e4691ab29b183a98",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "e5bc16fedde9245e29284a4ec954299212089139",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-17T23:49:41.008483+00:00",
+  "durationSeconds": 0.245,
+  "log": "C3-recruit-red.log"
+}

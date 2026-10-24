@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "../evidence/C5-R4-root-analysis/唯讀診斷.ts"
+  ],
+  "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+  "startedAt": "2026-10-19T13:04:28.805211+00:00",
+  "exitCode": 0,
+  "node": "v26.10.0",
+  "head": "2d7da2a5808ddd58292f160a7a908bc7347e8279"
+}

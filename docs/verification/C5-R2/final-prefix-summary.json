@@ -1,0 +1,80 @@
+{
+  "schema": "project4x-private-ai-trace-1",
+  "sourceStart": "4490459c2b690dacddf8a0a780cba42b76871ff945d5cfd9486d29ee3545e655",
+  "sourceEnd": "4490459c2b690dacddf8a0a780cba42b76871ff945d5cfd9486d29ee3545e655",
+  "seed": "獨立QA-010",
+  "inputBoundary": "same actor Observation only; no canonical/history supplied to policy",
+  "maxTurns": 100,
+  "maxCommands": 4000,
+  "commands": 2345,
+  "turn": 101,
+  "winner": null,
+  "actions": {
+    "Move": 1801,
+    "ResolveRelic": 4,
+    "Recruit": 122,
+    "EndTurn": 100,
+    "Capture": 10,
+    "Attack": 302,
+    "Research": 6
+  },
+  "captures": [
+    {
+      "command": 21,
+      "turn": 5,
+      "actor": 0
+    },
+    {
+      "command": 28,
+      "turn": 6,
+      "actor": 1
+    },
+    {
+      "command": 129,
+      "turn": 17,
+      "actor": 0
+    },
+    {
+      "command": 171,
+      "turn": 20,
+      "actor": 1
+    },
+    {
+      "command": 214,
+      "turn": 23,
+      "actor": 0
+    },
+    {
+      "command": 231,
+      "turn": 24,
+      "actor": 1
+    },
+    {
+      "command": 618,
+      "turn": 42,
+      "actor": 1
+    },
+    {
+      "command": 672,
+      "turn": 44,
+      "actor": 1
+    },
+    {
+      "command": 701,
+      "turn": 45,
+      "actor": 0
+    },
+    {
+      "command": 1205,
+      "turn": 62,
+      "actor": 1
+    }
+  ],
+  "unusedAttackTurns": [
+    51,
+    60
+  ],
+  "milliseconds": 17591,
+  "decisionParity": true,
+  "scope": "bounded diagnostic, not a completion or playability gate"
+}

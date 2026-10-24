@@ -1,0 +1,10 @@
+[
+  {
+    "path": "src/core/ai.ts",
+    "sha256": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5"
+  },
+  {
+    "path": "tests/ai-stalemate.test.ts",
+    "sha256": "297f8a93753baa080cf6bd0c46e44891d7e8aac13c2852f0596592e64cc088ef"
+  }
+]

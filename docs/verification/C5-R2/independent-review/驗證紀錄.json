@@ -1,0 +1,96 @@
+{
+  "base": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "AI_SHA256": "4490459c2b690dacddf8a0a780cba42b76871ff945d5cfd9486d29ee3545e655",
+  "新增測試SHA256": "521bdfd35acc28a3165a20e8863e689ae7209195b9412fcbc99d4dba5dc50b55",
+  "node": "v26.10.0",
+  "runs": [
+    {
+      "名稱": "新增四項回歸",
+      "argv": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/ai-stalemate.test.ts"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": null,
+      "開始UTC": "2026-10-18T17:40:05.192871+00:00",
+      "exit": 0,
+      "預期exit": 0,
+      "log": "新增四項回歸原始log.txt",
+      "原始輸出bytes": 509,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0
+      }
+    },
+    {
+      "名稱": "既有十五項聚焦",
+      "argv": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-name-pattern=AI|斥候|攻城|繞路|迷霧",
+        "tests/core.test.ts",
+        "tests/review.test.ts"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": null,
+      "開始UTC": "2026-10-18T17:40:05.456695+00:00",
+      "exit": 0,
+      "預期exit": 0,
+      "log": "既有十五項聚焦原始log.txt",
+      "原始輸出bytes": 1566,
+      "counts": {
+        "tests": 15,
+        "pass": 15,
+        "fail": 0
+      }
+    },
+    {
+      "名稱": "基線敏感性",
+      "argv": [
+        "node",
+        "--import",
+        "tsx",
+        "--input-type=module",
+        "-"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": "基線敏感性原始腳本.stdin.mjs",
+      "開始UTC": "2026-10-18T17:40:06.460723+00:00",
+      "exit": 1,
+      "預期exit": 1,
+      "log": "基線敏感性原始log.txt",
+      "原始輸出bytes": 159412,
+      "counts": {
+        "tests": 4,
+        "pass": 1,
+        "fail": 3
+      }
+    },
+    {
+      "名稱": "探索邊界窄驗",
+      "argv": [
+        "node",
+        "--import",
+        "tsx",
+        "--input-type=module",
+        "-"
+      ],
+      "cwd": "LOCAL_HOME/Desktop/Fake-Polytopia/工程整合/C3-20261018-074653/project",
+      "stdin腳本": "探索邊界窄驗.stdin.mjs",
+      "開始UTC": "2026-10-18T17:40:06.700869+00:00",
+      "exit": 0,
+      "預期exit": 0,
+      "log": "探索邊界窄驗原始log.txt",
+      "原始輸出bytes": 150,
+      "counts": {
+        "檢查群組": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "sevenCellCorridor": {
+    "legalActions": [
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "EndTurn"
+      }
+    ],
+    "oldAction": {
+      "type": "EndTurn"
+    },
+    "requiredDirection": {
+      "type": "Move",
+      "unitId": "patrol-0",
+      "to": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    "oracle": "Moving east is reducer-accepted and newly observes remembered passable tile (5,2); moving west has no reachable newly observed land.",
+    "eastMoveNewlyObservesKnownLand": [
+      {
+        "x": 5,
+        "y": 2
+      }
+    ]
+  },
+  "friendlyBottleneck": {
+    "legalActions": [
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "EndTurn"
+      }
+    ],
+    "oldAction": {
+      "type": "EndTurn"
+    },
+    "reachableNextCell": {
+      "type": "Move",
+      "unitId": "patrol-0",
+      "to": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    "oracle": "A legal empty approach cell exists before spent friendly (4,2), while known land (7,2)/(8,2) is currently nonvisible; no crossing is legal."
+  },
+  "isolatedKnownLand": {
+    "legalActions": [
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "Move",
+        "unitId": "patrol-0",
+        "to": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "EndTurn"
+      }
+    ],
+    "oldAction": {
+      "type": "EndTurn"
+    },
+    "oracle": "The currently nonvisible passable endpoint is behind known mountain (4,2); no reachable unseen land exists, so EndTurn is justified."
+  },
+  "tacticalPreemption": {
+    "action": {
+      "type": "Attack",
+      "unitId": "patrol-0",
+      "targetId": "survivor-1"
+    },
+    "oracle": "Visible adjacent enemy must retain existing Attack priority."
+  }
+}

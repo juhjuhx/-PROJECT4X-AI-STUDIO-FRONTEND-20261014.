@@ -1,0 +1,20 @@
+{
+  "label": "C5-R2-scout-RED",
+  "cwd": ".",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/ai-stalemate.test.ts"
+  ],
+  "startedAt": "2026-10-18T17:34:00.750327+00:00",
+  "snapshotSha256": "91199ddbb7a114fe99dc7d95588d14e711670e17d8896095a6fea2897bb80bc7",
+  "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)",
+  "head": "5b0483ec9431958d1852866368f2775557ab98f8",
+  "timeoutSeconds": 240,
+  "exitCode": 1,
+  "endedAt": "2026-10-18T17:34:01.263466+00:00",
+  "durationSeconds": 0.513,
+  "log": "C5-R2-scout-RED.log"
+}

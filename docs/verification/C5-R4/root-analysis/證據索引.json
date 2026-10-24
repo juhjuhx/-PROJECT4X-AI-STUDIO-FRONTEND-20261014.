@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-10-19T13:07:36.450531+00:00",
+  "files": {
+    "唯讀診斷.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "唯讀診斷.stdout.json": "773e9cef9d1aedb7b48b37df06509174d19f6e73d23089012db5b9a6baf99fd3",
+    "唯讀診斷.ts": "45d380bd7af8e4b769c7c24790ec80abca4de0257dbdc985e95dff740e7dcb23",
+    "因果分析與回歸建議.md": "4168eecde5ead3a355a8c267366c9a2c5f38d48fc5570fa1be5c1d85c7700b2f",
+    "執行紀錄.json": "f725ec97e9a69eb182116af33fe85381b8a4555e0f3f6421f92fff7ddbf3b7b0",
+    "最小反例.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "最小反例.stdout.json": "04acd702fd5111bef874f754c9e8922fa74c34037afa6ad0e5884429437ff287",
+    "最小反例.ts": "04cd4d35c8556b99b409657dae6250d7294e2836a61a2e35ff6f50a8f4018727",
+    "診斷工具先行斷言失敗.stderr.log": "f91a09a360ced279e3998c156a4bd992ba750d54eb7573be9616bd5786387cc2"
+  },
+  "headAtFinish": "2d7da2a5808ddd58292f160a7a908bc7347e8279",
+  "gitStatusAtFinish": "",
+  "aiSha256AtFinish": "c16c640e5453b85c0939b405d43067c5d00bccab180dd4bac1c3bb96c73caddd"
+}

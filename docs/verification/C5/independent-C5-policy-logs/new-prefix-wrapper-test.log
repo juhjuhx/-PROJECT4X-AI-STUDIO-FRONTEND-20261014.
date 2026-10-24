@@ -1,0 +1,17 @@
+START 2026-10-18T12:42:21.871121+00:00
+COMMAND ["node", "--import", "tsx", "--test", "tests/ai-oscillation.test.ts"]
+EXIT 0
+STDOUT
+✔ C5 真生成seed010 prefix不應連續六次兩格往返，亦保留真終局 (13035.345917ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13198.238083
+
+STDERR
+
+END 2026-10-18T12:42:35.177958+00:00

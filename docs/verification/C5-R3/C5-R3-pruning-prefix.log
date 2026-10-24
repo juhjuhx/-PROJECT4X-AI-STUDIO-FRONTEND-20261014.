@@ -1,0 +1,24 @@
+{"label": "C5-R3-pruning-prefix", "cwd": ".", "command": ["npm", "run", "qa:ai:oscillation"], "startedAt": "2026-10-19T03:42:51.176281+00:00", "snapshotSha256": "a2c4e352c99393b871f94d579d5f4ae0d40f017a64c291ef3913b68fd97457e9", "snapshotAlgorithm": "SHA256(JSON.stringify(sorted path->sha256), compact UTF-8, ensure_ascii=true)", "head": "8acc52698b9553e74961d38c54e11dfa301268e5", "timeoutSeconds": 240}
+
+> project-4x-mvp@0.1.0 qa:ai:oscillation
+> node --import tsx scripts/ai-oscillation-check.ts
+
+{
+  "schema": "project4x-ai-oscillation-1",
+  "seed": "獨立QA-010",
+  "maxCommands": 1100,
+  "commands": 1100,
+  "terminalWinner": null,
+  "status": "TESTED_PASS",
+  "scope": "six consecutive unit Moves alternating two cells, no new exploration/Attack/Capture or HP change; finite generated prefix only",
+  "policyBoundary": "chooseAction(observe(state, actor))",
+  "sourceStart": {
+    "src/core/ai.ts": "763d1086b11fd23898fa98a670cfd941fcfc5ea7146a158e17bfcc57e9304aa5",
+    "src/core/game.ts": "d9153ec8a934f53b318dda2d21f4450b1ad8030e4d6d067ad089994fd26affb7",
+    "src/core/types.ts": "8db6e1c4dd8e62e7271bf6d1820683fa9edab729fb7655b5e76515ced5a05edd",
+    "package-lock.json": "23ead3d9b7bad847837036b1edeac1480717bb6b7f9358f82c00333c4eb69a67"
+  },
+  "milliseconds": 2070,
+  "loops": [],
+  "limitations": "Does not establish global causality, completion, or full100 rate. Output is QA-only; never a HUD data source."
+}
