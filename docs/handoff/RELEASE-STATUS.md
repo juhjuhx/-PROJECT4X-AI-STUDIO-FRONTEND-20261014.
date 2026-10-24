@@ -1,6 +1,6 @@
 # Demo02 Release 狀態（唯一遠端發布入口）
 
-目前狀態：IN_PROGRESS；尚無真PR/merge/Release URL，不宣稱DONE。
+目前狀態：IN_PROGRESS；PR1已建立，merge／Release尚未完成，不宣稱DONE。
 
 | 欄位 | 真實值 |
 |---|---|
