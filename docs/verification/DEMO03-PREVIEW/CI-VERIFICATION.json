@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "gate": "Demo03 isolated preview plus legacy engineering; not full100 or Playable Alpha",
+  "checks": [
+    {
+      "label": "publication",
+      "command": [
+        "node",
+        "scripts/check-publication.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 122,
+      "logSha256": "dc8f8b951b86059982beade36882e71691ae8df2e9a5faea86de3e1c6dda09a0"
+    },
+    {
+      "label": "check",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "exitCode": 0,
+      "milliseconds": 457,
+      "logSha256": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627"
+    },
+    {
+      "label": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "milliseconds": 3974,
+      "logSha256": "78c4db15d4f5305ab291364b544a57a720bfca17b9a4edefc49e65068b18d75e",
+      "testCounts": {
+        "tests": 257,
+        "pass": 257,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "label": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "milliseconds": 650,
+      "logSha256": "de3f7506c7ff49c880cdce29e4227352ffe026619f0fe225c2aef523723284bc"
+    },
+    {
+      "label": "browser",
+      "command": [
+        "node",
+        "scripts/browser-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 7457,
+      "logSha256": "6858c9f281e43b4ffc2978e1916fed3041437617969ddf78bba8bb65d098e41f"
+    },
+    {
+      "label": "gameplay",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/browser-check.mjs",
+        "--gameplay"
+      ],
+      "exitCode": 0,
+      "milliseconds": 80711,
+      "logSha256": "e537a068669789493eeca1ecd9cf6bf255cd59e635fdfca7a7917171449f6871"
+    },
+    {
+      "label": "demo",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/demo-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 14178,
+      "logSha256": "604363a274e163d825d32cd1d8523b47d96c8acca8e3735b30e8a20b16b42339"
+    },
+    {
+      "label": "pwa",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/pwa-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 5553,
+      "logSha256": "5a9c68fb3677cd46600d5b59350d6176f67715cf3ae23b60d9fb415500a3466b"
+    },
+    {
+      "label": "preview",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 26464,
+      "logSha256": "d4b5f6831cf548ee2ea5b5b011fd99123ef72d9592cbe222f26f862eff03bae4"
+    },
+    {
+      "label": "preview-version",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/preview-version-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 5697,
+      "logSha256": "83292a1ecfb835a736fc0df6af0dd435620f0cc54a0ba38636cea587be18ba1b"
+    },
+    {
+      "label": "pwa-update",
+      "command": [
+        "node",
+        "scripts/pwa-update-check.mjs"
+      ],
+      "exitCode": 0,
+      "milliseconds": 3986,
+      "logSha256": "ebda4404cd3f2e88b8f82d019795d1e42a55b30d970695c387267cc7990235f0"
+    }
+  ],
+  "proofs": [
+    {
+      "kind": "browser",
+      "status": "PASS",
+      "scenarioCount": 11,
+      "receiptSha256": "0750662bccbf35cc9fba735c271f26197f1aaaad1218f7639767ff2f5ad1f888"
+    },
+    {
+      "kind": "gameplay",
+      "status": "PASS",
+      "scenarioCount": 12,
+      "receiptSha256": "be596ec04dfc51755b1602fea270d620e33c5d0ae46540318751977802cbd82c"
+    },
+    {
+      "kind": "demo",
+      "status": "PASS",
+      "scenarioCount": 4,
+      "scenarios": [
+        {
+          "id": "desktop-load-prevalidation-and-intent-cancellation",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "desktop-real-exploration-journal-save-load",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-load-prevalidation-and-intent-cancellation",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-real-exploration-journal-save-load",
+          "status": "TESTED_PASS"
+        }
+      ],
+      "artifacts": {
+        "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+        "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+        "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
+        "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+        "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+        "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+        "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+        "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
+        "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+        "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
+        "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+        "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
+      },
+      "receiptSha256": "6db2c89c7e806668fb7875997853f7ce9da6a4ca1f44d01731dd5ff3fb008431"
+    },
+    {
+      "kind": "pwa",
+      "status": "PASS",
+      "scenarioCount": 2,
+      "scenarios": [
+        {
+          "id": "manifest-installability-static-only-cache",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "offline-reload-real-world-local-save-load",
+          "status": "TESTED_PASS"
+        }
+      ],
+      "artifacts": {
+        "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+        "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+        "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
+        "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+        "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+        "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+        "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+        "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
+        "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+        "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
+        "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+        "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
+      },
+      "receiptSha256": "1ea25e7043276e6e98e446b63ba540da2d6a5fe01ac7c1558040b982f7725398"
+    },
+    {
+      "kind": "preview",
+      "status": "PASS",
+      "scenarioCount": 2,
+      "scenarios": [
+        {
+          "id": "desktop-preview-legal-journey",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-preview-legal-journey",
+          "status": "TESTED_PASS"
+        }
+      ],
+      "artifacts": {
+        "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+        "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+        "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
+        "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+        "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+        "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+        "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+        "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
+        "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+        "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
+        "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+        "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
+      },
+      "receiptSha256": "efff0ce53967f39192a9c4239d80515b3018046e8665dd4d713376acb5c193b0"
+    },
+    {
+      "kind": "preview-version",
+      "status": "PASS",
+      "scenarioCount": 4,
+      "scenarios": [
+        {
+          "id": "desktop-demo03-preview-1-cross-import-next-game",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "desktop-g1-ccts-1-cross-import-next-game",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-demo03-preview-1-cross-import-next-game",
+          "status": "TESTED_PASS"
+        },
+        {
+          "id": "phone-g1-ccts-1-cross-import-next-game",
+          "status": "TESTED_PASS"
+        }
+      ],
+      "artifacts": {
+        "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+        "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+        "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
+        "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+        "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+        "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+        "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+        "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
+        "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+        "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
+        "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+        "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
+      },
+      "receiptSha256": "c9e429b5a0441961fd7140049f81ba27103337d9565f0367a14f81346e954cfc"
+    },
+    {
+      "kind": "pwa-update",
+      "status": "PASS",
+      "waitingWithOldClient": "TESTED_PASS",
+      "activationAfterOldClientsClosed": "TESTED_PASS",
+      "receiptSha256": "68fdf1d9940d8f23b048ad7224a74e43833097895f08f8899cbe6a283a173039"
+    }
+  ],
+  "sourceUnchanged": true,
+  "sourceFingerprint": "95336c8748e0003005d7c7bf6aba8d8ba91118505fc5aa26a4eab71ec06901c0",
+  "artifacts": {
+    "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
+    "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
+    "assets/index-Da24ImY-.js": "905c93bbb7f799836a6a40246de1ebeb5c6946ba7bcc09284df9d583da9f68a5",
+    "favicon.ico": "4281428d43810175a209402d54d50c5dc8143993828da4a0b546a6ffd01197f2",
+    "icon.svg": "cabfa5d1b4dc0ad2359f08b8f4e7ff5fc40f7a37f1fbaef0cbce57f1d2ae931f",
+    "icons/icon-192.png": "99dc3d0e19974f0fbe12d077fbb0bc6ee64877f658d8278789f4fc4d93967e8f",
+    "icons/icon-512.png": "227aaac55d3cf0412a7ca3c75b43f2d4c094c399b1a9db8b598b8b71058f6c2c",
+    "index.html": "db3b3aeea205f352dcc30039cd215b074d32c6aedc94df91c400f1f9ca13f629",
+    "manifest.webmanifest": "f5df6a1e2c3501fc7b4628faf110bad755a1805be54694816d3250055a62cea5",
+    "pwa-assets.json": "e9e9e5e857ba79fd560ead6ee51712ee4a43b91c91ad34b7d591654643a9509f",
+    "register-sw.js": "031b338d4c12bef28c0bb66d1a010c2abebd1e170b4e35bf09b483283b98c5ac",
+    "service-worker.js": "e82bba4c29777685b1a46403366b2ac6589d5b3b2de583c40d738ecdfcde992b"
+  },
+  "human": "UNVERIFIED",
+  "physicalPhone": "UNVERIFIED",
+  "cleanup": [
+    {
+      "stage": "owned-server",
+      "status": "PASS"
+    }
+  ],
+  "primaryFailure": null
+}

@@ -17,3 +17,7 @@
 原Fake-Polytopia約2 GiB含活動Git/私人證據，不搬、不刪。既有歷史交接捷徑保持原樣。完整移動來源/目的地/每檔SHA與本機worktree清單位於管理根06-VERIFICATION-INDEX，不公開個人路由或private world。安全摘要與原manifest hash見RELEASE02/WORKSPACE-SUMMARY.json。
 
 回退工具預設只檢查；--apply前確認所有檔案/權限/捷徑仍符合manifest才搬回，未通過就停止。3個隔離fixture測試通過，真實資料只做dry check，沒有為測試再次搬動原件。管理根是本機入口，不是可整包公開的source交付；GitHub是公開source。
+
+## Demo03 隔離預覽追加索引
+
+新增experiment/demo03-gameplay-preview獨立worktree，原所有worktree未移動。統一桌面根追加「Demo03-玩法預覽」捷徑及預覽入口說明；新Web ZIP在02-RELEASES/Demo03-Preview，公開安全身份見DEMO03-PREVIEW/PACKAGE-SUMMARY。R02 53檔歸檔及Archive Manifest SHA保持，rollback --check仍READY_TO_ROLLBACK/changed=false，未執行真回退。本輪沒有刪使用者資料或處理Downloads，僅清理各QA自有browser/server/temporary artifacts。

@@ -2,7 +2,7 @@
   "schema": "project4x-preview-task5-verification-1",
   "baseCommit": "cf0e72e8d2c7056c4d01fdcb618517cf6872cb89",
   "status": "TESTED_PASS",
-  "tests": 254,
+  "tests": 257,
   "failed": 0,
   "skipped": 0,
   "results": [
@@ -181,10 +181,51 @@
       "logSha": "176e4eea26688c10f09b38a83a234b1518f51bbf6649b3109205e9a4405869f3",
       "changedFiles": [],
       "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ci-contract-red-20261025-035443-ea5ca514",
+      "command": [
+        "node",
+        "--test",
+        "tests/preview-proof.test.mjs"
+      ],
+      "sourceFingerprint": "769541bfb18509c21564e0de512a95e3ca36981443f9d0a106ea91e0ae326bcb",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T19:54:44.700697+00:00",
+      "logSha": "95e2f082c46003fa82f1a17facaae8c6417c9230f290c8fda8f234b45a8d0280",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-ci-contract-green-20261025-035514-93353bfd",
+      "command": [
+        "node",
+        "--test",
+        "tests/preview-proof.test.mjs"
+      ],
+      "sourceFingerprint": "ea2707b508ba16de971ef3d31ede5430aa81c9c831594ac54d6fd4d9ca0c92a5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:55:15.154955+00:00",
+      "logSha": "8cecae3507b859058a4475b3f6c0554e936ebf035b7f389cbcfb8b47f352aeec",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "unified-preview-ci-local-20261025-035526-d2bd4ad5",
+      "command": [
+        "node",
+        "scripts/verify-demo02.mjs"
+      ],
+      "sourceFingerprint": "ea2707b508ba16de971ef3d31ede5430aa81c9c831594ac54d6fd4d9ca0c92a5",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T19:57:56.548581+00:00",
+      "logSha": "d119acf4769ed1a8a21fc175aadd330e22095edc3f22d73a7bdd929d15fc935e",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
     }
   ],
   "productSourceHash": "0f7099307d28cc8652f34845799a0e95a8846e8a6d2c3b9bc7dd151ec9782fb7",
-  "methodFingerprint": "7de61a07f893cad8a6141cf92417e0b19f4c5048cdbb32f2a2b24b2ede89835e",
+  "methodFingerprint": "0922fe6b8f1e324f2a920413f37c1d7643f5f521a6ee788dd94498ded7559c60",
   "artifacts": {
     "art/menu-diorama.svg": "baf3d5f05bbb930a1dbfb76a12e0b6eb4889be90b173f6285226960f2a1b7e56",
     "assets/index-6gbQYlQX.css": "8013b72bbafe59e72edd7796ca6c116c6b8e94d96fd3cd6e08df61b44c9765bb",
@@ -405,5 +446,9 @@
     "importantFindings": 1,
     "finding": "P2 跨版本匯入後，UI未先說明下一新局的factory規則",
     "resolution": "root以真Browser RED→4桌機/觸控雙向GREEN、2預覽旅程和整套254/Browser/Gameplay/Demo/PWA重新通過；單次fix pass，未冒稱reviewer重新APPROVE"
-  }
+  },
+  "testCountChange": "254→257：新增3項CI收據合約正/負例；沒有刪除或skip舊測試。",
+  "ciScope": "PROJECT4X_PREVIEW_QA=1原G1全部Gate後追加真預覽2＋跨版本4情境；收據驗必要ID/去重/build/error/cleanup/220，已本機完整257與新增CI獨立review APPROVE。GitHub fresh結果以PR4精確HEAD checks為準，不冒稱本機=hosted。",
+  "previewPR": "https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./pull/4",
+  "previewPRMode": "DRAFT; no main merge, no production balance/release"
 }

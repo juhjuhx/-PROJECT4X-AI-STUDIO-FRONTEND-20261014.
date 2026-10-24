@@ -30,3 +30,28 @@ export function publicVerificationSummary(result){
 export function validateUpdateProof(proof,expectedRevision){
  assert.equal(proof?.status,'PASS');assert.equal(proof.waitingWithOldClient,'TESTED_PASS');assert.equal(proof.activationAfterOldClientsClosed,'TESTED_PASS');assert.equal(proof.cleanup,'PASS');assert.equal(proof.revisions.a,expectedRevision);assert.equal(typeof proof.revisions.b,'string');assert.notEqual(proof.revisions.a,proof.revisions.b);
 }
+
+/** 新預覽的真實瀏覽器收據；只驗契約，不能代替實際操作的測試程式。 */
+export function validatePreviewProof(proof,kind,artifacts){
+ const required={preview:['desktop-preview-legal-journey','phone-preview-legal-journey'],
+  'preview-version':['desktop-demo03-preview-1-cross-import-next-game','desktop-g1-ccts-1-cross-import-next-game','phone-demo03-preview-1-cross-import-next-game','phone-g1-ccts-1-cross-import-next-game']};
+ assert.ok(Object.hasOwn(required,kind),'unknown preview proof');assert.equal(proof?.status,'PASS');
+ assert.deepEqual(proof.artifacts,artifacts,'preview build bytes differ');assert.deepEqual(proof.errors,[]);assert.deepEqual(proof.failures,[]);
+ assert.ok(Array.isArray(proof.scenarios));assert.equal(proof.scenarios.length,required[kind].length);
+ assert.equal(new Set(proof.scenarios.map(x=>x.id)).size,proof.scenarios.length,'duplicate preview scenario');
+ for(const id of required[kind]){
+  const s=proof.scenarios.find(x=>x.id===id);assert.ok(s,'missing preview scenario: '+id);assert.equal(s.status,'TESTED_PASS');assert.equal(s.simulatedTouch,id.startsWith('phone'));
+  if(kind==='preview'){
+   assert.ok(Number.isSafeInteger(s.humanCommands)&&s.humanCommands>0&&s.humanCommands<=220);
+   assert.deepEqual(s.research,['defensiveEngineering','pathfinding','militaryMobility']);assert.deepEqual(s.recruited,['shieldGuard','mobileScout']);
+   assert.equal(s.threeTileMove,true);assert.equal(s.legacySlotUnchanged,true);assert.equal(s.saveLoadReplay,true);
+  }else{
+   const factory=id.includes('g1-ccts-1')?'g1-ccts-1':'demo03-preview-1';
+   assert.equal(s.newGameRuleset,factory);assert.equal(s.loadedRuleset,factory==='g1-ccts-1'?'demo03-preview-1':'g1-ccts-1');
+   assert.equal(s.menuCaptionVerified,true);assert.equal(s.recordCaptionAndConfirmationVerified,true);
+  }
+ }
+ assert.ok(Array.isArray(proof.cleanup)&&proof.cleanup.every(x=>x.status==='PASS'));
+ for(const stage of['browser.close','private-artifacts'])assert.equal(proof.cleanup.filter(x=>x.stage===stage).length,1);
+ const privateCleanup=proof.cleanup.find(x=>x.stage==='private-artifacts');assert.equal(privateCleanup.rootAbsent,true);assert.equal(privateCleanup.remainingBefore,0);
+}

@@ -15,14 +15,14 @@
 | R02-009 | Codex | P1 | R02-008 | DONE | cd59f348；verification見RELEASE02 | 七分區索引/安全可回退歸檔；來源目的SHA | 本機Archive Manifest＋53檔SHA/mode＋3回退fixture測試 | 舊路徑捷徑相容 |
 | R02-010 | Codex | P0 | R02-007/R02-009 | DONE | 4448ade基線／本branch差異 | URLs/final Git/恢復入口/精確下一步一致 | PR2 eedc6ea4/main CI40064775568 PASS，本機舊worktree轉接checkpoint | 續Demo03獨立branch |
 | D03-V01 | Codex呈現/Gemini可接手 | P1 | R02-007 | DONE | 4448ade基線／本branch差異 | 獨立branch實際menu/兵模/地形/遺跡/手機diff與比較 | DEMO03-V01 233tests/4真互動/8截圖，review APPROVE | PR3 merge 578a3d0e；PR/main CI PASS |
-| D03-001 | Codex | P1 | R02-007 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 版本registry/合法引用/依賴/fallback且可玩閉環 | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
-| D03-002 | Codex | P1 | D03-001＋數值裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 盾衛真招募/防禦/AI/存檔旅程 | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
-| D03-003 | Codex | P1 | D03-001＋數值裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 機動偵察真招募/機動/AI/存檔旅程 | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
-| D03-004 | Codex | P1 | D03-002/D03-003＋科技裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 新科技分支，舊三科技行為保留 | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
+| D03-001 | Codex | P1 | R02-007 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 版本registry/合法引用/依賴/fallback且可玩閉環 | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
+| D03-002 | Codex | P1 | D03-001＋數值裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 盾衛真招募/防禦/AI/存檔旅程 | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
+| D03-003 | Codex | P1 | D03-001＋數值裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 機動偵察真招募/機動/AI/存檔旅程 | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
+| D03-004 | Codex | P1 | D03-002/D03-003＋科技裁決 | TESTED_PASS | cf0e72e核心＋本分支Task5 | 新科技分支，舊三科技行為保留 | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
 | D03-005 | Codex | P1 | 城市裁決 | TODO | 4448ade基線／本branch差異 | 一完整簡化投資/成長循環 | 目前僅候選 | 提出精確最小規則 |
 | D03-006 | Codex | P1 | 地形/遺跡裁決 | TODO | 4448ade基線／本branch差異 | 新互動及獨立ruleset migration，不改G1 | Relic proposal | 先舊版兼容/正負例 |
-| D03-007 | Codex | P0 | 已實作片段 | TESTED_PASS | cf0e72e核心＋本分支Task5 | AI/Fog/確定性/不變性/SaveReplay/真Gameplay | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
-| D03-008 | Codex/Gemini | P1 | D03-V01/Gameplay契約 | TESTED_PASS | cf0e72e核心＋本分支Task5 | UI真Action/安全events，無第二reducer | DEMO03-PREVIEW/TASK1～5與254tests/真旅程 | final review/隔離PR，非正式平衡或Release |
+| D03-007 | Codex | P0 | 已實作片段 | TESTED_PASS | cf0e72e核心＋本分支Task5 | AI/Fog/確定性/不變性/SaveReplay/真Gameplay | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
+| D03-008 | Codex/Gemini | P1 | D03-V01/Gameplay契約 | TESTED_PASS | cf0e72e核心＋本分支Task5 | UI真Action/安全events，無第二reducer | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
 | D03-009 | 主創 | P0 | D03-007/D03-008 | TODO | cd59f348 Demo02基線 | 真人/真機實際操作與體驗紀錄 | 無，不能以Browser代答 | 提供可玩候選後測 |
 | D03-010 | Codex | P1 | D03-007/D03-008 | TODO | 4448ade基線／本branch差異 | 獨立PR/RC及限制列示，不覆蓋Demo02 | 待 | Gate成立才發布 |
 

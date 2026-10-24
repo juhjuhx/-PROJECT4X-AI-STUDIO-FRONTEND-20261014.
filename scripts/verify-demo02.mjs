@@ -11,8 +11,9 @@ import {resolve,dirname,sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {artifactHashes} from './artifact-proof.mjs';
 import {validateBrowserEvidence} from './qa-browser-contract.mjs';
-import {validateClientProof,publicClientSummary,validateUpdateProof,publicVerificationSummary} from './release-proof.mjs';
+import {validateClientProof,publicClientSummary,validateUpdateProof,publicVerificationSummary,validatePreviewProof} from './release-proof.mjs';
 async function verify(){
+const previewMode=process.env.PROJECT4X_PREVIEW_QA==='1';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const capture=()=>Object.fromEntries([...new Set(execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean))].sort().map(p=>[p,sha(readFileSync(resolve(root,p)))]));
@@ -32,13 +33,13 @@ try{
  await run('check','npm',['run','check']);await run('tests','npm',['test']);await run('build','npm',['run','build']);artifacts=artifactHashes(resolve(root,'dist'));
  const selectedPort=await port(),url='http://127.0.0.1:'+selectedPort;serverLog=openSync(resolve(evidence,'server.log'),'wx');server=spawn(process.execPath,['scripts/serve.mjs'],{cwd:root,stdio:['ignore',serverLog,serverLog],env:{...process.env,PROJECT4X_PORT:String(selectedPort)}});let spawnError;server.once('error',e=>{spawnError=e;});
  let ready=false;for(let i=0;i<50&&!ready;i++){if(spawnError)throw spawnError;if(server.exitCode!==null)throw new Error('owned server exited');try{const response=await fetch(url,{signal:AbortSignal.timeout(300)});ready=response.ok&&sha(Buffer.from(await response.arrayBuffer()))===artifacts['index.html'];}catch{ready=false;}if(!ready)await new Promise(r=>setTimeout(r,100));}assert.ok(ready,'owned server not ready');
- for(const [kind,args]of [['browser',['scripts/browser-check.mjs']],['gameplay',['--import','tsx','scripts/browser-check.mjs','--gameplay']],['demo',['--import','tsx','scripts/demo-check.mjs']],['pwa',['--import','tsx','scripts/pwa-check.mjs']]]){
-  const dir=resolve(evidence,kind);await run(kind,process.execPath,args,{PROJECT4X_URL:url,PROJECT4X_EVIDENCE_DIR:dir});const path=resolve(dir,kind==='demo'?'demo.json':kind==='pwa'?'pwa.json':'browser.json');const receipt=JSON.parse(await readFile(path,'utf8'));
+ for(const [kind,args]of [['browser',['scripts/browser-check.mjs']],['gameplay',['--import','tsx','scripts/browser-check.mjs','--gameplay']],['demo',['--import','tsx','scripts/demo-check.mjs']],['pwa',['--import','tsx','scripts/pwa-check.mjs']],...(previewMode?[['preview',['--import','tsx','scripts/preview-check.mjs']],['preview-version',['--import','tsx','scripts/preview-version-check.mjs']]]:[])]){
+  const dir=resolve(evidence,kind);await run(kind,process.execPath,args,{PROJECT4X_URL:url,PROJECT4X_EVIDENCE_DIR:dir});const path=resolve(dir,kind==='demo'?'demo.json':kind==='pwa'?'pwa.json':kind==='preview'?'preview.json':kind==='preview-version'?'preview-version.json':'browser.json');const receipt=JSON.parse(await readFile(path,'utf8'));
   if(kind==='browser'||kind==='gameplay'){
    validateBrowserEvidence(receipt,{artifacts,servedIndexSha256:artifacts['index.html'],gameplay:kind==='gameplay'});
    if(kind==='gameplay'){const journey=receipt.scenarios.find(x=>x.id==='continuous-existing-gameplay');assert.equal(journey.maxHumanCommands,220);assert.ok(journey.humanCommands<=220);assert.equal(journey.captureAfterAttack,true);assert.equal(journey.replayVerified,true);}
    proofs.push({kind,status:'PASS',scenarioCount:receipt.scenarios.length,receiptSha256:sha(await readFile(path))});
-  }else{validateClientProof(receipt,kind,artifacts);proofs.push({...publicClientSummary(receipt,kind),receiptSha256:sha(await readFile(path))});}
+  }else{if(kind==='preview'||kind==='preview-version')validatePreviewProof(receipt,kind,artifacts);else validateClientProof(receipt,kind,artifacts);proofs.push({...publicClientSummary(receipt,kind),receiptSha256:sha(await readFile(path))});}
  }
  const updateDir=resolve(evidence,'pwa-update');await run('pwa-update',process.execPath,['scripts/pwa-update-check.mjs'],{PROJECT4X_EVIDENCE_DIR:updateDir});const updatePath=resolve(updateDir,'update.json');const update=JSON.parse(await readFile(updatePath,'utf8'));validateUpdateProof(update,JSON.parse(await readFile(resolve(root,'dist/pwa-assets.json'),'utf8')).revision);proofs.push({kind:'pwa-update',status:'PASS',waitingWithOldClient:update.waitingWithOldClient,activationAfterOldClientsClosed:update.activationAfterOldClientsClosed,receiptSha256:sha(await readFile(updatePath))});
  assert.equal(server.exitCode,null,'owned server unexpectedly exited');
@@ -47,7 +48,7 @@ finally{
  try{if(server&&server.exitCode===null){const done=once(server,'exit');server.kill('SIGTERM');let timer;try{await Promise.race([done,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('server cleanup timeout')),5000);})]);}finally{clearTimeout(timer);if(server.exitCode===null)server.kill('SIGKILL');}}cleanup.push({stage:'owned-server',status:'PASS'});}catch(e){cleanup.push({stage:'owned-server',status:'FAIL',message:e.message});}
  if(serverLog!==undefined)closeSync(serverLog);
  let same=false;try{assert.deepEqual(capture(),source);if(artifacts)assert.deepEqual(artifactHashes(resolve(root,'dist')),artifacts);same=true;}catch{error??='source/build changed during verification';}
- const result={status:!error&&cleanup.every(x=>x.status==='PASS')?'PASS':'FAIL',gate:'Demo02 engineering; not full100 or Playable Alpha',checks,proofs,cleanup,sourceUnchanged:same,sourceFingerprint:sha(JSON.stringify(source)),artifacts:artifacts??null,primaryFailure:error,failedStage:error?activeStage:null,human:'UNVERIFIED',physicalPhone:'UNVERIFIED'};
+ const result={status:!error&&cleanup.every(x=>x.status==='PASS')?'PASS':'FAIL',gate:previewMode?'Demo03 isolated preview plus legacy engineering; not full100 or Playable Alpha':'Demo02 engineering; not full100 or Playable Alpha',checks,proofs,cleanup,sourceUnchanged:same,sourceFingerprint:sha(JSON.stringify(source)),artifacts:artifacts??null,primaryFailure:error,failedStage:error?activeStage:null,human:'UNVERIFIED',physicalPhone:'UNVERIFIED'};
  await writeFile(resolve(evidence,'demo02-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(publicVerificationSummary(result),null,2));if(result.status!=='PASS')process.exitCode=1;
 }
 }

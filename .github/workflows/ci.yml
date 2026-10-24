@@ -26,7 +26,9 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Install existing Playwright Chromium on CI only
         run: npx --no-install playwright install --with-deps chromium
-      - name: Publication, types, tests, build and real Browser/Gameplay/Demo/PWA
+      - name: Publication, types, tests, build and real G1/Preview Browser/Gameplay/PWA
+        env:
+          PROJECT4X_PREVIEW_QA: '1'
         run: node scripts/verify-demo02.mjs
 # No raw private world/trace/browser artifact upload. The verifier publishes only
 # a safe result/hash summary. Full100, human and physical mobile are separate gates.

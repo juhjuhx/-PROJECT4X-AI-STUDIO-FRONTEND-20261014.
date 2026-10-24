@@ -2,7 +2,7 @@
   "schema": "project4x-demo03-preview-source-1",
   "baseCommit": "620669ebabbd417fdd72a19d3e4796d6e3e05ebb",
   "productSourceHash": "0f7099307d28cc8652f34845799a0e95a8846e8a6d2c3b9bc7dd151ec9782fb7",
-  "methodFingerprint": "7de61a07f893cad8a6141cf92417e0b19f4c5048cdbb32f2a2b24b2ede89835e",
+  "methodFingerprint": "0922fe6b8f1e324f2a920413f37c1d7643f5f521a6ee788dd94498ded7559c60",
   "aiSha256": "954b3305e8b6da4bff14655d1733349f2405ad4924a93757d09b7c191c7cfd75",
   "rulesets": [
     "g1-ccts-1",
@@ -71,10 +71,10 @@
     "scripts/qa-match.ts": "fb814cf0082e38abbfb67b8e869224dc64769c22b5797d6084b1a5d699ac08de",
     "scripts/qa-pwa-update-lifecycle.mjs": "605a2b345a7db242e6c13f144a1d546f4e434f761750aa6c3951b3560729bf62",
     "scripts/qa-source.ts": "e6fb069e5f5a2582e1449795ec99aec96f392bd763cb5422e43780021daf1078",
-    "scripts/release-proof.mjs": "c67a86e56c4663c796ee1ea1c86892d3b4aa15c45d55abd52648717882ce20a6",
+    "scripts/release-proof.mjs": "443720490afe49bedb2dbbc9ad87ceb1c0c520d400d18e390b739f23a928eb5e",
     "scripts/serve.mjs": "07c0ef6d3db61baed7803a4e641100e71074fdf9f314d5a1aa650570d9890d1d",
     "scripts/validate-headless.ts": "f0507ba635d98dabb9ef3d37386de40227ca7ec78e91bcbda920d6dfba4d6f99",
-    "scripts/verify-demo02.mjs": "f03780ea1135d4ce876b3806916ab13d978d76d78134a03e5c434a5ce4979c0d",
+    "scripts/verify-demo02.mjs": "6069f4c1ca7742486c9e5044329a650be59c9153542df851fe4ef2ed6ab8da70",
     "scripts/verify.mjs": "bc732b968c385f32db7b155018b921d16b1fac7e09851eedf29bdcb26b728b98",
     "scripts/visual-check.mjs": "03ffa2ee2e75563bb4a5a387bc5e23fc90866e6e91d82e794f453854a97c7c02"
   },

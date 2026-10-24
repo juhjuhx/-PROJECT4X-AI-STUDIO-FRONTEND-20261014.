@@ -206,6 +206,17 @@
       "loaded": true,
       "workflow": "source→approved spec→isolated plan→G1 golden→registry RED/GREEN→suite/check/build→read-only review",
       "limitations": "Native worktree tool failed at home cwd; Git fallback. No external hooks/new dependencies installed. No LSP tool available."
+    },
+    {
+      "phase": "Demo03 preview CI handoff",
+      "skills": [
+        "addyosmani-ci-cd-and-automation",
+        "test-driven-development",
+        "verification-before-completion",
+        "requesting-code-review"
+      ],
+      "loaded": true,
+      "purpose": "將兩預覽與四跨版本真Browser情境接CI，必要ID/build/error/cleanup/220收據合約RED/GREEN與獨立只讀review；不部署或安裝新工具"
     }
   ]
 }
