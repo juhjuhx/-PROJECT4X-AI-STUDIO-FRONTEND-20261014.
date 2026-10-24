@@ -153,3 +153,9 @@ U-LATEST 的原始用戶要求由根代理保留在 [USER-REQUEST-DECISIONS](../
 | ENG-C3-1018 | 主創Engineering Continuation Master Harness：C2驗證→D3修復/整合→既有玩法E2E→AI診斷，隔離分支、不push main | USER_CONFIRMED | 本輪執行授權，局部取代前輪停止C2/等待D3；不變更世界觀或玩法數值 |
 | ENG-AI-QUESTION | 主創要求新架構/品質/排版取捨先grill-me；本輪詢問『現有無記憶policy最小修正』或『帶觀測記憶策略層設計』 | USER_CONFIRMED（本輪主創答覆） | 先修現有無記憶策略最小反例；不新增策略記憶層/Save schema |
 | ENG-UI-QUESTION | 詢問保留D3手機分頁先玩法驗收、或交Gemini另提新排版 | USER_CONFIRMED（本輪主創答覆） | 保留D3分頁，先完成真玩法驗收；原D Hybrid方向持續有效 |
+
+## D03-PREVIEW-001｜2026-10-24 隔離預覽測試基準
+
+USER_CONFIRMED（僅隔離預覽測試，非正式平衡/Canon）：主創批准DEMO03-GAMEPLAY-DECISIONS提案。盾衛費6/HP10/攻3/防2/射1/移1/視2；機動偵察費7/HP7/攻3/防0/射1/移3/基礎視3；防禦工程研究7解鎖盾衛，軍事機動研究6、前置pathfinding解鎖機動偵察。採新局專用new ruleset預覽，舊G1存檔依舊規則續玩，Demo02不改。
+
+新內容尚NOT_IMPLEMENTED；預覽驗證成功也不代表平衡/真人驗收完成。尋徑原效果維持對原scout的+1，不因新兵名稱自行擴大效果；新種額外視野加成尚未另行裁決。城市/地形/遺跡migration仍另審。來源為本輪主創明確選擇「批准為隔離預覽測試基準」。

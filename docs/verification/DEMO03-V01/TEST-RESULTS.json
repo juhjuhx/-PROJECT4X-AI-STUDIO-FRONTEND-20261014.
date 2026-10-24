@@ -299,10 +299,11 @@
     "newPwa": 1,
     "newProbe": 1,
     "newHitTest": 1,
-    "total": 231,
-    "pass": 231,
+    "total": 233,
+    "pass": 233,
     "fail": 0,
-    "skip": 0
+    "skip": 0,
+    "newPermanentHitBoundaries": 2
   },
   "priorFailuresPreserved": [
     {
@@ -389,5 +390,15 @@
     "alpha": "PARTIAL",
     "newGameplay": "NOT_IMPLEMENTED",
     "full100": "UNVERIFIED"
+  },
+  "finalUnitRun": {
+    "id": "final-unit-suite-20261024-180040-fbed6df8",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 0,
+    "logSha256": "4e19c9a7eede232f31a9411028853ceba76a5906ae82649e42e3a66c35a50eef",
+    "scope": "後續只補2個常駐命中/Fog/zoom邊界，產品runtime未變；完整Browser Gate當時231仍原樣保留"
   }
 }

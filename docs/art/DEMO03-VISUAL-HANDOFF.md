@@ -1,6 +1,6 @@
 # Demo03-V01 前端增量交接
 
-狀態 IMPLEMENTED＋本機TESTED_PASS；獨立review與PR待完成，不代表完整Demo03或Alpha。
+狀態 IMPLEMENTED＋本機TESTED_PASS；獨立code review APPROVE，PR待建立，不代表完整Demo03或Alpha。
 
 ## 已實作
 沿用主創確認Mistbound Diorama 70/20/10、Canvas2D、Native DOM、D3手機分頁及相機。G1三兵改為站立原創微縮兵模，五地形palette集中管理，森林增加幾何變化、山丘增加刻線。主選單加入原創裝飾地景SVG及圖桌排版，手機主要操作全寬；手札與遺跡仍顯示真實合法資料。遺跡有440ms一次性transform/opacity動畫，reduce停用。無新框架或外部字體依賴。
@@ -31,7 +31,7 @@
 Frontend-Core v1沒有新增API。Unit/Terrain visual registry已用；通用Gameplay/Building/Civilization/Event registry尚未完成，不能用本切片冒稱內容引擎。
 
 ## 真實驗證與失敗
-231/231 tests（223原＋8新）、check/build、Browser11、Gameplay12（209/220）、Demo4、Fog、Save/Replay、PWA離線及A/B更新PASS。另4項真Chromium測試：桌機mouse/手機touch點頭選對單位，Save bytes不變；真Move觸發並ResolveRelic；正常440ms動畫實際完成、reduce無動畫。不是mouse替代touch。
+完整整合231/231；後續2個常駐縮放/碰撞邊界加入後fresh233/233（223原＋10新）、check/build、Browser11、Gameplay12（209/220）、Demo4、Fog、Save/Replay、PWA離線及A/B更新PASS。另4項真Chromium測試：桌機mouse/手機touch點頭選對單位，Save bytes不變；真Move觸發並ResolveRelic；正常440ms動畫實際完成、reduce無動畫。不是mouse替代touch。
 
 保留全部FAIL：證據父目錄缺件（未跑玩法）；未登錄SVG被PWA拒絕；舊QA探針把局部translate當camera；QA scrollIntoView把手機觸點放在sticky header下。後者改為先恢復可見地圖，elementFromPoint仍嚴格要求Canvas，未改預期座標。相機探針與頭部命中均有RED→GREEN。raw logs只留private evidence，公開TEST-RESULTS有run IDs/exit/hash/限制。
 

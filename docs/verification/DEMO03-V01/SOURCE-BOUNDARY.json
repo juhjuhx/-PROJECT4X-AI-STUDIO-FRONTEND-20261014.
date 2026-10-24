@@ -46,7 +46,7 @@
     "scripts/qa-browser-error-evidence-check.mjs": "58e8eab8e5f126546d193af77501ddeca07206a6e46953c0a7b78cb762d6c29e",
     "scripts/qa-download.mjs": "354d0c33084bf9eec3f8edef031e542b5c1a1b18b4de02690b8b7cbe513885d3",
     "scripts/qa-ledger.ts": "5aad4884792765b8bc8f7abdee4f38a3489ed09d54eddf439d8c2fd5ede7ee42",
-    "scripts/qa-map-probe.mjs": "44f629d866be41ef2f27cf07a5eee29c8d0cc4933967f421719f1de8ea4331f4",
+    "scripts/qa-map-probe.mjs": "54d98aae167d412f98dff0b12afa5589b20f7cfb5a550256f9139a6abb727302",
     "scripts/qa-match.ts": "fb814cf0082e38abbfb67b8e869224dc64769c22b5797d6084b1a5d699ac08de",
     "scripts/qa-pwa-update-lifecycle.mjs": "605a2b345a7db242e6c13f144a1d546f4e434f761750aa6c3951b3560729bf62",
     "scripts/qa-source.ts": "e6fb069e5f5a2582e1449795ec99aec96f392bd763cb5422e43780021daf1078",
@@ -90,7 +90,7 @@
     "tests/demo-journal.test.ts": "d0173e6e2780de4d93b2a865765a22e6dfd2fd7c9bbb5fb4da9cad6fcffa2fc0",
     "tests/demo-local-progress.test.ts": "3320bf2103ad2ffa02a03d44b837f126cdf812ff7ab501f1d21badc7ddd9a6a7",
     "tests/helpers/terminal-journey.ts": "2919b2691294e67ba4966046c550dce2081d94cd264e791785abe56945ddd5b9",
-    "tests/miniature-selection.test.ts": "6a3a50cf9fc88e873185377649aae25fa4333db32bb8d9e15249be196d13dca9",
+    "tests/miniature-selection.test.ts": "a138648096047067258114fe4f4f7c9d4a0113c2a3f9dd5ca5392bf289231653",
     "tests/presentation.test.ts": "9eab4f40d6962667807a6401fa49a39dc231dd20cc5a9ad08e2949fff7f43658",
     "tests/publication-cli.test.mjs": "3ad273823308964d158038ea1b8b897470f56e3ed4a63728722fa827a4b40486",
     "tests/publication-safety.test.mjs": "d12819bae8d208ad68218348f3b651cf38a2f52e1574a34e59d2621d599ccdd1",
@@ -115,6 +115,7 @@
     "tests/流亡重建.test.ts": "0f968c97e1c48d34ff748cfcd7f6c705abf50c6c47b280b95b103720abb7b394",
     "tsconfig.json": "25a9a8b3805cb40bead5e4956a3075224e7c418fc5a98dedba326f8d1996d645"
   },
-  "codeFingerprint": "a2890a616b8a46c5d30d39f1ed4c269b40f29f0fb8378315ba66952bfeb555b5",
-  "method": "不含文件自身；raw run另綁整棵來源；full regression後只新增QA腳本/文件，產品未再變"
+  "codeFingerprint": "da3d4c711d0043f90d2f5c3b4067336b33bc754794bd937bdfc42f0bbc7f2454",
+  "method": "不含文件自身；raw run另綁整棵來源；full regression後只新增QA腳本/文件，產品未再變",
+  "postRegressionChanges": "僅新增visual QA腳本、常駐邊界測試及probe末尾空白；產品runtime逐bytes仍等於已驗run"
 }

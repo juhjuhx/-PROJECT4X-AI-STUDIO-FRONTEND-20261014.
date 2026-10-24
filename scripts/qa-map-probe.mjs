@@ -49,4 +49,3 @@ export function monitorMapPaint() {
     return result;
   };
 }
-
