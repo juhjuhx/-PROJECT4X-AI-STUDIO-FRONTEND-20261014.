@@ -1,15 +1,11 @@
 # NEXT-ACTION
 
-Demo02已正式發布，Tag/Web/歸檔不變。Demo03視覺PR3已merge578a3d0e，精確head620669e的PR/main CI均SUCCESS；未發Demo03正式Release。
+目前branch experiment/demo03-gameplay-preview；PR4維持DRAFT，不merge main。D03-001～008已交隔離預覽工程，Demo02 Release保持；新數值僅D03-PREVIEW-001試驗基準。產品及method身份見verification/DEMO03-PREVIEW/SOURCE-BOUNDARY。
 
-目前branch experiment/demo03-gameplay-preview，base620669e。D03-PREVIEW-001批准的盾衛/機動偵察及兩科技已完成隔離閉環：唯一reducer/Session、固定兩包/內容SHA、Save2/Replay2、AI只讀Observation、安全事件、真UI及分開存檔槽。runtime checkpoint分片見git log 62e210b→6d91550→9841994→cf0e72e→Task5。權威計畫在product/DEMO03-PREVIEW-IMPLEMENTATION-PLAN。
+本輪恢復已核GitHub與本機HEAD d35a977fa5b126b58275bc70d3813f828f794664、乾淨；對應CI40127870051 completed/success。這是基線紀錄，不代表之後提交已通過。257 tests及原G1/新預覽/跨版本工程證據在TASK5-RESULTS及CI-VERIFICATION，不重新做Demo02或改舊Save/Replay。
 
-最新凍結runtime Gate：257 tests/check/build、Browser11/Gameplay12（原220門檻）/Demo4/PWA2/更新PASS；桌面1440×960與手機375×812真觸控模擬各20玩家指令，真研究/招募/三格移動/保存/讀取/Replay及舊槽不變PASS。Core獨立審查APPROVE；Task5全分支審查提出1項P2新局規則提示，已真RED→四個雙向桌機/觸控GREEN及完整Gate重跑關閉，原REQUEST_CHANGES及修復證據保留。來源/收據/圖在verification/DEMO03-PREVIEW，原private/world在專案外。
+**現在D03-009：唯一人工Gate/試玩清單/回饋紀錄在 [D03-009-PLAYTEST](../verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md)。** 文件已備，真人/實體手機/平衡/新版Full100仍未驗；手機連線前置未取得可驗證受控HTTPS URL。127.0.0.1僅本機，觸控模擬不能替實機。主創回報基線GPT-6唯讀審查尚無確認工程阻擋，新diff仍交GPT-6獨立審查，不自行Ready。
 
-G1 seed010補驗：winner1、247 EndTurn、6705commands，自然終局且Terminal Save/Replay PASS。這是1局，不是新Full100；R5原87/13與R6失敗不變，新ruleset Full100/T3/T6未驗。Alpha PARTIAL、真人/真機/平衡未驗。
+追加已授權順序：完成試玩準備文件→整理符合當前版本的README/新Banner與真實圖/遊戲意圖與長期思路→commit/push原分支→盤點桌面PROJECT-4X/Fake-Polytopia相關資料與安全可回退歸檔。MASTER-TODO的D03-DOC01、D03-WS01追蹤；不移動有效Git worktrees、不刪私人world/歷史/Downloads舊ZIP、不改未批准玩法數值。
 
-NEXT：Draft PR4已建立；Web預覽包72120bc7已CRC/19檔SHA/乾淨解壓/真Node launcher HTTP PASS，PACKAGE-SUMMARY可查。CI補強把原Gate與新2＋4情境納入同runner，新增3合約test後257全過、獨立CI review APPROVE。hosted CI請查PR4 checks對當前HEAD，不拿本機PASS代替。接下來由主創真人/真機試玩（D03-009）；不將測試數值升格正式平衡，不自動合併新規則main。再交主創真人試玩；城市/道路/新遺跡須另裁決，不自行補數值。尋徑額外視野仍僅舊scout。
-
-CURRENT_BRANCH：experiment/demo03-gameplay-preview。已驗runtime為72120bc7（product SHA見SOURCE-BOUNDARY）；後續只補CI/文件。PR4為DRAFT，沒有merge main/發Demo03 Release。最新HEAD以git讀取；public authority是本分支的MASTER-TODO/NEXT與PR4，舊私人工程worktree只轉接不push。
-
-NEXT_COMMAND：git status --porcelain=v2 --untracked-files=all → 核對PR4最新checks → 取PACKAGE-SUMMARY指定預覽ZIP或npm ci --ignore-scripts / npm run build / npm start，開 /?preview=demo03。自動完整Gate：PROJECT4X_PREVIEW_QA=1 node scripts/verify-demo02.mjs；Chromium僅依環境指定既有executable，不自動新SDK。先真人驗證兩兵策略取捨，城市/地形/遺跡待獨立數值裁決，不直接實作。
+NEXT_COMMAND：git status --porcelain=v2 --untracked-files=all → gh pr view 4（核最新完整HEAD及checks）→讀D03-009權威Gate表。收集真人/裝置版本/來源/evidence後才填實測。產品Alpha維持PARTIAL；R5原87/13與歷史FAIL保留，新規則Full100/T3/T6沒有新PASS。

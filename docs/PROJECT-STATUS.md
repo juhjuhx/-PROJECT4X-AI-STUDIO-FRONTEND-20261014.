@@ -1,3 +1,5 @@
+> D03-009試玩準備已進行；人工Gate、裝置前置與回饋紀錄只在 [D03-009-PLAYTEST](verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md) 維護。新的README/圖像與安全工作區整理排入MASTER-TODO，不改規則或Demo02。
+
 > Demo03隔離預覽工程更新：兩兵/兩科技、固定版本registry/Save2/Replay2/Session/AI/事件/UI已實作；257tests、舊完整工程Gate與新桌機/觸控20指令旅程PASS，Core獨立review APPROVE，全分支UI review提出1項P2已真RED/GREEN修復，PR4 DRAFT及已驗本機Web預覽包，不merge新規則main。入口README→MASTER-TODO→NEXT-ACTION；不是正式平衡或Demo03 Release。以下保留Demo02已發布狀態與歷史。
 
 # PROJECT-4X 當前工程狀態

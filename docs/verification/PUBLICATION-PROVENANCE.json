@@ -42,7 +42,7 @@
     {
       "path": "docs/handoff/NEXT-ACTION.md",
       "originalSha256": "ef1e64d6619abf77463acca4a1b85914f8c9b4600cb463c5456684d18756e512",
-      "publicSha256": "f707cb6446b17516877d0185d0b19c5e1073a268ffbe2c456312aa19faf4c5ca",
+      "publicSha256": "cb80c816a7f4207e1ae78170291288ae113357e8ec1edf59757e59a626e53588",
       "kind": "PUBLIC_AUTHORITY_UPDATE",
       "change": "去識別後按本輪授權更新當前入口；原文件版本留原完整Git，非原始raw receipt"
     },
