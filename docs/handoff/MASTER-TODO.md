@@ -25,9 +25,8 @@
 | D03-008 | Codex/Gemini | P1 | D03-V01/Gameplay契約 | TESTED_PASS | cf0e72e核心＋本分支Task5 | UI真Action/安全events，無第二reducer | DEMO03-PREVIEW/TASK1～5與257tests/真旅程 | PR4 DRAFT＋本機ZIP；先真人/真機及平衡，非正式Release |
 | D03-009 | 主創實測／Codex準備 | P0 | D03-007/D03-008 | IN_PROGRESS | d35a977已驗基線，後續HEAD即時查PR4 | 真人/真機實際操作與體驗紀錄，未測不PASS | DEMO03-PREVIEW/D03-009-PLAYTEST 唯一Gate表/空白回饋紀錄；0真人/0實機 | 先取得受控HTTPS與真人/實機紀錄；再由GPT-6審新diff |
 | D03-010 | Codex | P1 | D03-007/D03-008 | TODO | 4448ade基線／本branch差異 | 獨立PR/RC及限制列示，不覆蓋Demo02 | 待 | Gate成立才發布 |
-
-| D03-DOC01 | Codex | P1 | D03-009試玩準備 | TESTED_PASS | 本分支當前HEAD | 符合Demo02發布/ Demo03隔離現況的README、Banner、真圖與概念/架構入口 | README＋media/readme/ASSET-MANIFEST；真截圖來源/排版人工視檢/連結及publication核對 | 原分支push後核對新CI；新diff交GPT-6 |
-| D03-WS01 | Codex | P1 | D03-DOC01 | TODO | 本機inventory即時核對 | 桌面/專案統一索引與可回退歸檔，Git worktree路徑/原件/證據保留 | 主創追加授權；先唯讀盤點，既有R02歸檔不覆寫 | 盤點後只處理有明確所有權/安全範圍項目 |
+| D03-DOC01 | Codex | P1 | D03-009試玩準備 | DONE | 本分支當前HEAD | 符合Demo02發布/ Demo03隔離現況的README、Banner、真圖與概念/架構入口 | README＋media/readme/ASSET-MANIFEST；真截圖來源/排版人工視檢/連結及publication核對 | 283d8c0已push，CI40197690324 success；新diff仍交GPT-6 |
+| D03-WS01 | Codex | P1 | D03-DOC01 | DONE | 本機inventory即時核對 | 桌面/專案統一索引與可回退歸檔，Git worktree路徑/原件/證據保留 | WORKSPACE-REFRESH；12 retarget/5捷徑歸類、9 Git狀態不變、兩rollback只check | 依當前入口續D03-009；原件/Downloads/工作樹全保留 |
 
 ## 執行紀律
 - 有明確授權則持續下一個安全Task；新規則裁決/資料安全/權限阻擋才停該項。

@@ -3,6 +3,8 @@
 工作語言：繁體中文。先讀README→本檔→docs/handoff/PROJECT-STATUS→MASTER-TODO→NEXT-ACTION→實際source/verification。權威文件索引在docs/INDEX.md；任務狀態以MASTER-TODO為準，遠端發布事實以RELEASE-STATUS及實際GitHub為準。
 
 ## 本輪授權與邊界
+
+當前開發入口為experiment/demo03-gameplay-preview／Draft PR4；D03-009人工驗收只在docs/verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md維護。新diff由GPT-6獨立審查後，才考慮Ready；本輪不merge main。README介紹兩版本，正式Demo02的Release與舊G1語意保持。
 使用者已明確授權Demo02：隔離release分支、PR、fresh CI、獨立review、驗收後安全merge、GitHub Release與Web r3附件。這取代先前僅本地不push的輪次限制。不得force push、重寫不明遠端提交或未驗收就合併。若權限/規則阻擋，保留BLOCKED並處理獨立工作。
 
 Demo03在獨立開發分支，不能覆蓋Demo02 Release。既有Mistbound Diorama方向已確認，不重問同一風格。新兵種/科技/城市/地形數值仍需Decision Record；未批准只能隔離實驗，不能標成USER_CONFIRMED。

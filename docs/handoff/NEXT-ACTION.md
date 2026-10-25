@@ -1,13 +1,26 @@
 # NEXT-ACTION
 
-目前branch experiment/demo03-gameplay-preview；PR4維持DRAFT，不merge main。D03-001～008已交隔離預覽工程，Demo02 Release保持；新數值僅D03-PREVIEW-001試驗基準。產品及method身份見verification/DEMO03-PREVIEW/SOURCE-BOUNDARY。
+**現在繼續D03-009。** branch `experiment/demo03-gameplay-preview`；[PR4](https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./pull/4)維持DRAFT，不merge main、不改正式Demo02或未批准平衡。
 
-本輪恢復已核GitHub與本機HEAD d35a977fa5b126b58275bc70d3813f828f794664、乾淨；對應CI40127870051 completed/success。這是基線紀錄，不代表之後提交已通過。257 tests及原G1/新預覽/跨版本工程證據在TASK5-RESULTS及CI-VERIFICATION，不重新做Demo02或改舊Save/Replay。
+## 本輪已完成
 
-**現在D03-009：唯一人工Gate/試玩清單/回饋紀錄在 [D03-009-PLAYTEST](../verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md)。** 文件已備，真人/實體手機/平衡/新版Full100仍未驗；手機連線前置未取得可驗證受控HTTPS URL。127.0.0.1僅本機，觸控模擬不能替實機。主創回報基線GPT-6唯讀審查尚無確認工程阻擋，新diff仍交GPT-6獨立審查，不自行Ready。
+- D03-009真人／實機清單與回饋表：43ebb9b，CI40196643483 success。
+- README、Banner、真實圖版與版本／世界意圖／架構／路線入口：283d8c0a8026b03a5e911a1651df41eff9d48c44，CI40197690324 success。新圖像來源及SHA見media/readme/ASSET-MANIFEST；宣傳裝飾與真實截圖已區分。
+- D03-WS01本機入口再整理：12個文件／規則捷徑指向當前預覽；5個舊捷徑依版本/完成狀態分類，原始worktrees/Git/證據/Downloads均保留。9個Git目錄操作前後狀態相同，3處原有修改未動；新舊rollback只check均READY。詳WORKSPACE-INVENTORY及DEMO03-PREVIEW/WORKSPACE-REFRESH。
 
-追加已授權順序：完成試玩準備文件→整理符合當前版本的README/新Banner與真實圖/遊戲意圖與長期思路→commit/push原分支→盤點桌面PROJECT-4X/Fake-Polytopia相關資料與安全可回退歸檔。MASTER-TODO的D03-DOC01、D03-WS01追蹤；不移動有效Git worktrees、不刪私人world/歷史/Downloads舊ZIP、不改未批准玩法數值。
+本文件所在提交的最終HEAD/CI須即時查PR4，以上明確SHA的結果不冒稱涵蓋後續提交。產品35檔與method29檔仍對應DEMO03-PREVIEW/SOURCE-BOUNDARY；本輪未改runtime。預覽257tests及原G1/新預覽/跨版本工程證據見TASK5-RESULTS/CI-VERIFICATION，沒有重新建立Demo02。
 
-NEXT_COMMAND：git status --porcelain=v2 --untracked-files=all → gh pr view 4（核最新完整HEAD及checks）→讀D03-009權威Gate表。收集真人/裝置版本/來源/evidence後才填實測。產品Alpha維持PARTIAL；R5原87/13與歷史FAIL保留，新規則Full100/T3/T6沒有新PASS。
+## 唯一待驗Gate
 
-README/圖像切片：已按Demo02發布、Demo03視覺merge及隔離玩法現況重寫首頁，Banner採真實截圖＋明標AI裝飾背景；新增圖像來源與SHA，不改產品及驗證method。D03-009文件提交43ebb9b的CI40196643483已success；不能代表之後提交。下一安全工作為D03-WS01：將集中入口從舊Release文件指向當前預覽，保留舊入口並製作可回退本機操作收據。
+人工Gate、裝置前置、操作表與回饋只在 [D03-009-PLAYTEST](../verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md) 維護。真人／實體手機／平衡／新版Full100仍未驗；手機前置尚缺可驗證的受控HTTPS URL。127.0.0.1僅本機，touch模擬不可代替實機。
+
+主創回報GPT-6對d35a977基線唯讀審查尚無確認工程阻擋；**本輪新增diff仍待GPT-6獨立審查**，不自行改Ready。R5原87/13及歷史T3/T6 FAIL保留，新規則Full100/T3/T6 UNVERIFIED；Alpha PARTIAL。
+
+## 下一個實際動作
+
+1. `git status --porcelain=v2 --untracked-files=all`、`git rev-parse HEAD`；查PR4最新完整HEAD與checks，不把舊CI當新證據。
+2. 將最新GitHub diff交GPT-6，只讀獨立審查；依確認finding另立最小修補，不能先改平衡。
+3. 在獨立測試profile以`PROJECT4X_PORT=4174 npm start`啟動，開`http://127.0.0.1:4174/?preview=demo03`；依D03-009收集真實真人紀錄。實體手機由部署owner先提供同build受控HTTPS，再逐項執行；缺項保持UNVERIFIED。
+4. 只有實際新回饋／Gate／source變動才commit/push原分支。新Review、人工與產品Gate成立後才由主創考慮Ready及RC，不自動合併。
+
+本機恢復從統一管理根00-START-HERE進01-ACTIVE-WORKSPACE的Demo03-玩法預覽；04-DOCUMENTATION已指當前文件，舊完成工作在05-ARCHIVES捷徑。舊MVP有未提交staged檔案及unborn HEAD，禁止誤用或清理。

@@ -22,7 +22,7 @@ README → AGENTS → handoff/PROJECT-STATUS（指向既有docs/PROJECT-STATUS�
 ## 驗證與公開投影
 
 [Demo03 真人／實體手機試玩與發布Gate唯一紀錄](verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md)；實測未執行維持UNVERIFIED，不以工程CI代答。
-DEMO02為已交付本機候選證據，RELEASE02將記本輪fresh/CI/review；歷史C0–C5/R6不是當前全部PASS。scripts/verify-demo02.mjs專測Demo，原scripts/verify.mjs保留Full100。
+DEMO02保留原候選證據，RELEASE02記錄正式發布驗證；DEMO03-V01為已merge視覺切片，DEMO03-PREVIEW為當前隔離玩法工程／版本／人工Gate入口。歷史C0–C5/R6不是當前全部PASS。scripts/verify-demo02.mjs專測Demo，預覽加PROJECT4X_PREVIEW_QA=1，原scripts/verify.mjs保留Full100。
 
 歷史150份QA文件的公開副本已去識別，詳[PUBLICATION-PROVENANCE](verification/PUBLICATION-PROVENANCE.json)。它們的原logSha/sourceFingerprint仍指本機保留原件，不表示公開投影bytes相同；不公開private world或hidden trace。舊CURRENT、舊no-push及絕對路徑敘述不取代本輪授權/權威入口。
 
