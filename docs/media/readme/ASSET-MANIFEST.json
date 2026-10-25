@@ -1,0 +1,102 @@
+{
+  "schema": "project4x-readme-assets-1",
+  "created": "2026-10-25",
+  "scope": "README宣傳排版；不修改任何遊戲runtime、原始截圖或ruleset",
+  "productSourceHash": "0f7099307d28cc8652f34845799a0e95a8846e8a6d2c3b9bc7dd151ec9782fb7",
+  "license": "專案LICENSE(MIT)；新增裝飾背景使用內建imagegen生成，無第三方遊戲素材、無外部字體檔案",
+  "artDirection": "已確認Mistbound Diorama，真實畫面主導；靜態編輯排版 variance6/motion1/density3",
+  "backgroundGeneration": {
+    "tool": "image_gen.imagegen",
+    "generatedOn": "2026-10-25",
+    "purpose": "裝飾紋理，非概念遊戲畫面、地圖或實作證據",
+    "prompt": "Wide landscape 3:1 original abstract cartographic atmosphere. Deep muted forest green #172b2a on the left fading into misty sage and aged ivory on the right; restrained antique gold contour-line engraving at corners, gentle paper grain. Calm negative space for title and genuine screenshot composition. No actual map, terrain tiles, buildings, characters, units, UI, text, logos, numbers or watermark. Original decorative promotional material, no existing proprietary game assets.",
+    "reproducibility": "生成結果非確定性；本檔SHA鎖定採納的實際bytes，不宣稱重跑prompt必得同圖。"
+  },
+  "rendering": {
+    "method": "既有Playwright Chromium離線載入本目錄HTML，等待fonts/images後輸出PNG；無外部請求或新依賴",
+    "banner": "1600x680",
+    "fieldNotes": "1600x1000",
+    "font": "macOS系統既有Songti TC/serif渲染為PNG，未散布字體檔案",
+    "limits": "排版圖版不是新增玩法截圖；手機touch模擬不等於實機；原viewport與fullPage圖片像素不同"
+  },
+  "sourceScreenshots": [
+    {
+      "path": "docs/verification/DEMO03-PREVIEW/screenshots/desktop-preview.png",
+      "kind": "ACTUAL_CHROMIUM_SCREENSHOT",
+      "sha256": "dcd568417060bb457d31bbfdd36ca8c206c303f601af8190026640349d890073",
+      "bytes": 456010,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "physicalDevice": false,
+      "source": "DEMO03-PREVIEW/SCREENSHOTS.json + TASK5-RESULTS.json",
+      "state": "Demo03隔離預覽，真實UI旅程後；未改動原始截圖bytes",
+      "imagePixels": {
+        "width": 1440,
+        "height": 991
+      }
+    },
+    {
+      "path": "docs/verification/DEMO03-PREVIEW/screenshots/phone-preview.png",
+      "kind": "ACTUAL_CHROMIUM_SCREENSHOT",
+      "sha256": "cfb3f7fe68a8ac5faf4722aba0e6a566ac23d70b228d4aedc5b6e8bb6f492ef5",
+      "bytes": 224462,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "physicalDevice": false,
+      "source": "DEMO03-PREVIEW/SCREENSHOTS.json + TASK5-RESULTS.json",
+      "state": "Demo03隔離預覽，真實UI旅程後；未改動原始截圖bytes",
+      "imagePixels": {
+        "width": 375,
+        "height": 1495
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "docs/media/readme/mist-background.png",
+      "kind": "AI_GENERATED_DECORATION",
+      "sha256": "e8b5289dad7af2e8d7ae7ad57dd84f6ccb4302bd813bda2a1f9d94ddfcca4c45",
+      "bytes": 2386933,
+      "imagePixels": {
+        "width": 2172,
+        "height": 724
+      }
+    },
+    {
+      "path": "docs/media/readme/banner.html",
+      "kind": "CODE_AUTHORED_LAYOUT",
+      "sha256": "543370b24bbbc0834e941b058e5e46e3379fb00973750ab2eb63c0e9c21aae51",
+      "bytes": 2029
+    },
+    {
+      "path": "docs/media/readme/field-notes.html",
+      "kind": "CODE_AUTHORED_LAYOUT",
+      "sha256": "ed08aa5834edcd11c23f28b1673dd5f96c2d882e9223394c6818de9f6e986426",
+      "bytes": 1876
+    },
+    {
+      "path": "docs/media/readme/banner.png",
+      "kind": "PROMOTIONAL_COMPOSITE",
+      "sha256": "7f9dacd2be9db06f0bdfd43e7b3c89ddf8843cc52016922c07bd30d9e7e55129",
+      "bytes": 863932,
+      "imagePixels": {
+        "width": 1600,
+        "height": 680
+      }
+    },
+    {
+      "path": "docs/media/readme/field-notes.png",
+      "kind": "SCREENSHOT_LAYOUT",
+      "sha256": "1b5c891bb5ee914fbe3c56909785f1b52094faa3e5a94d675b3994d74d9aa32e",
+      "bytes": 504440,
+      "imagePixels": {
+        "width": 1600,
+        "height": 1000
+      }
+    }
+  ]
+}

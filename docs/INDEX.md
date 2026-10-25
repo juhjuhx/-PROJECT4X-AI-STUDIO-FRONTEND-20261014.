@@ -5,6 +5,7 @@ README → AGENTS → handoff/PROJECT-STATUS（指向既有docs/PROJECT-STATUS�
 
 - Task唯一Ledger：[MASTER-TODO](handoff/MASTER-TODO.md)
 - 發布URLs/merge/附件/CI：[RELEASE-STATUS](handoff/RELEASE-STATUS.md)
+- README圖像：[來源／SHA／宣傳排版說明](media/readme/ASSET-MANIFEST.json)
 - 路線：[ROADMAP](roadmap/ROADMAP.md)
 - 本機整理：[WORKSPACE-INVENTORY](handoff/WORKSPACE-INVENTORY.md)
 - 功能及證據：[FEATURE-MATRIX](handoff/FEATURE-MATRIX.md)、[KNOWN-DEFECTS](handoff/KNOWN-DEFECTS.md)

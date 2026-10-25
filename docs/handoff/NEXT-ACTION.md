@@ -9,3 +9,5 @@
 追加已授權順序：完成試玩準備文件→整理符合當前版本的README/新Banner與真實圖/遊戲意圖與長期思路→commit/push原分支→盤點桌面PROJECT-4X/Fake-Polytopia相關資料與安全可回退歸檔。MASTER-TODO的D03-DOC01、D03-WS01追蹤；不移動有效Git worktrees、不刪私人world/歷史/Downloads舊ZIP、不改未批准玩法數值。
 
 NEXT_COMMAND：git status --porcelain=v2 --untracked-files=all → gh pr view 4（核最新完整HEAD及checks）→讀D03-009權威Gate表。收集真人/裝置版本/來源/evidence後才填實測。產品Alpha維持PARTIAL；R5原87/13與歷史FAIL保留，新規則Full100/T3/T6沒有新PASS。
+
+README/圖像切片：已按Demo02發布、Demo03視覺merge及隔離玩法現況重寫首頁，Banner採真實截圖＋明標AI裝飾背景；新增圖像來源與SHA，不改產品及驗證method。D03-009文件提交43ebb9b的CI40196643483已success；不能代表之後提交。下一安全工作為D03-WS01：將集中入口從舊Release文件指向當前預覽，保留舊入口並製作可回退本機操作收據。

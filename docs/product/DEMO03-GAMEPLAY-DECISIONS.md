@@ -20,7 +20,7 @@
 
 推薦第一個預覽採新局專用新ruleset，舊G1存檔仍以legacy模式續玩；不原地轉換舊局。採demo03-preview-1 / project4x-save-2 / project4x-replay-2，綁固定內容SHA-256與g1-mapgen-1。契約及兩包已通過獨立Core審查。另一方案是立即做跨ruleset局中遷移，但需處理歷史指令在哪版重播、初始世界、canonical hash及復原，成本更高，不建議第一片同時做。
 
-source事實：Observation.ruleset已存在（src/core/types.ts:32）；UNIT_STATS/TECH_STATS是封閉G1資料（:38/:43）；persistence.ts:16/:104嚴格只接受save1/replay1＋g1。Save1沒有content hash/generator version欄位，不能假裝已具備通用內容包相容性。
+版本設計前的歷史source事實：Observation.ruleset已存在（src/core/types.ts:32）；UNIT_STATS/TECH_STATS是封閉G1資料（:38/:43）；persistence.ts:16/:104嚴格只接受save1/replay1＋g1。Save1沒有content hash/generator version欄位。現行版本已實作新DTO及固定兩包分流，不能用這段歷史基線判定runtime仍只接受G1；也不能宣稱已有任意外掛包相容性。
 
 目標是唯一applyCommand依版本化Definition選規則，不複製第二個reducer。Definition須有穩定namespace/ID/version、前置DAG、合法引用、白名單效果、素材fallback及hash。AI仍只讀Observation，依其ruleset解析公開Definition，不讀全知state。GameSession保留requestId/version/generation/AI取消/先驗後替換。新DTO才可增加content hash/generator version，舊schema exact keys及canonical/replay語意不靜默變更。
 
@@ -33,7 +33,7 @@ source事實：Observation.ruleset已存在（src/core/types.ts:32）；UNIT_STA
 5. 舊save/replay golden fixtures仍通過；新局完成Save/Load/Replay、generation失效/重送/失敗import等契約回歸。
 6. 真Gameplay旅程與真人試玩；完整Demo03至少一個新策略循環。城市/道路/遺跡發現取得分離另立後續數值與遷移裁決。
 
-目前D03-V01已merge PR3。隔離預覽已實作固定Gameplay registry、兩新種、兩新科技、同reducer版本分流、Save2/Replay2、Session/AI/事件及真UI閉環；254tests/check/build、既有Browser11/Gameplay12/Demo/PWA及桌機/觸控預覽旅程PASS，source/evidence見verification/DEMO03-PREVIEW。尚未等同正式平衡、Canon或Demo03 Release。城市/地形/遺跡新版仍NOT_IMPLEMENTED；未決新偵察額外視野不啟用。
+目前D03-V01已merge PR3。隔離預覽已實作固定Gameplay registry、兩新種、兩新科技、同reducer版本分流、Save2/Replay2、Session/AI/事件及真UI閉環；257tests/check/build、既有Browser11/Gameplay12/Demo/PWA及桌機/觸控預覽旅程PASS，source/evidence見verification/DEMO03-PREVIEW。尚未等同正式平衡、Canon或Demo03 Release。城市/地形/遺跡新版仍NOT_IMPLEMENTED；未決新偵察額外視野不啟用。
 
 ### D03-VERSION-001 的取捨與恢復
 
