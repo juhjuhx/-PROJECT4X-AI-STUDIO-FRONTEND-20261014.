@@ -1,3 +1,5 @@
+> 最新隔離預覽：D03-PREVIEW-001兩兵/科技、固定registry、版本化Save/Replay、AI與UI閉環IMPLEMENTED；254tests與真桌機/觸控旅程TESTED_PASS。舊G1三兵三科技不變。以下保留Demo02/歷史矩陣；新數值不是正式平衡。詳見DEMO03-PREVIEW/TASK5-RESULTS及product/DEMO03-GAMEPLAY-DECISIONS。
+
 > Demo03-V01候選：三兵站立視覺、五地形visual registry、主選單/手札/遺跡/手機已實作並有231tests/4真互動證據，review/PR待完成。不是新兵種或Gameplay registry。
 
 # Demo02 當前功能矩陣（2026-10-24）

@@ -1,0 +1,128 @@
+{
+  "schema": "project4x-preview-task4-verification-1",
+  "baseCommit": "98419945fd7bd9888ae0952a4b11fe38329744fa",
+  "status": "TESTED_PASS",
+  "tests": 252,
+  "failed": 0,
+  "skipped": 0,
+  "results": [
+    {
+      "runId": "preview-ai-events-red-20261024-230132-2d3f9e16",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-ai.test.ts",
+        "tests/preview-events.test.ts"
+      ],
+      "sourceFingerprint": "3aa8d6e338576498887bdd6dc2a7fb3e9783a3aeb36bc7c19a920de9c6f0aeb4",
+      "exitCode": 1,
+      "finishedAt": "2026-10-24T15:01:33.164070+00:00",
+      "logSha": "f75dae27620565717eab94c6854b379a2cc5fe13380dcd5dfef9593eda4441c1",
+      "changedFiles": [],
+      "status": "TESTED_FAIL"
+    },
+    {
+      "runId": "preview-ai-events-green-20261024-230211-ec746975",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/preview-ai.test.ts",
+        "tests/preview-events.test.ts"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:11.970681+00:00",
+      "logSha": "30cebcd87c03d8746cea164d3dd82d1957248b487e6145d968444b4e34342488",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ai-events-check-20261024-230212-e55918bd",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:12.631325+00:00",
+      "logSha": "d94f9cffbbb8b6c931bc73b87363ce36a4eb766745a7250a3b3286e6721be627",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ai-suite-20261024-230232-d8610904",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:37.237390+00:00",
+      "logSha": "941e453e3d289b16becb85b7e9b4396d97e0a1bd5e8dd357254ed4a585350e8a",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ai-build-20261024-230237-48c0c935",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:38.152559+00:00",
+      "logSha": "bf5898220e326e9c191987a67c0622959efe38608dc97a51ad7ee143212b9018",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ai-prefix-20261024-230238-fad5e6f4",
+      "command": [
+        "npm",
+        "run",
+        "qa:ai:oscillation"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:41.027831+00:00",
+      "logSha": "45e0cd7dc1da73d90632f6613faace04d818a7c7f8d1e974e42ef729ba4f83e1",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    },
+    {
+      "runId": "preview-ai-d02-20261024-230241-8d77f7b8",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/ai-endgame-search-check.ts"
+      ],
+      "sourceFingerprint": "4c7d1285f22aaef1d9406246d56e39363d61ebe207bdf89cc01a282d98384591",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T15:02:41.793228+00:00",
+      "logSha": "122ad665c7284b95d768df03efd266ef9f3bb77ac6ed12649c70b7055e728a20",
+      "changedFiles": [],
+      "status": "TESTED_PASS"
+    }
+  ],
+  "scope": "預覽合法研究/招募偏好、新兵沿既有移攻/Frontier政策與安全事件版本白名單；G1政策分支不擴充新內容",
+  "guardrails": [
+    "Observation-only",
+    "Stateless",
+    "Deterministic",
+    "Fog non-interference: differing hidden canonical worlds assert identical real Observations/actions",
+    "Input immutable/deepfreeze/clone/interleaved",
+    "No synthetic winner / schema or balance change in AI slice"
+  ],
+  "limitations": [
+    "只有合成觀測與prefix/D02，沒有新版Full100或平衡驗收",
+    "UI preview真旅程尚未實作",
+    "整合分支正式PR前仍需whole-branch獨立審查"
+  ]
+}

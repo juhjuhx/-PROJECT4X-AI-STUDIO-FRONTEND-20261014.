@@ -1,4 +1,4 @@
-import { UNIT_STATS } from '../core/types';
+import { getRuleset } from '../core/rulesets';
 import type { Observation } from '../core/types';
 import type { DeepReadonly } from '../session/contracts';
 
@@ -11,6 +11,6 @@ export function recruitmentStatus(view: DeepReadonly<Observation>, siteId: strin
   if (view.pendingRelic) return 'pending-relic';
   if (view.active !== view.actor) return 'waiting';
   if (view.legalActions.some(a => a.type === 'Recruit' && a.siteId === siteId)) return 'available';
-  if (view.faction.gold < Math.min(...Object.values(UNIT_STATS).map(u => u.cost))) return 'insufficient-gold';
+  if (view.faction.gold < Math.min(...getRuleset(view.ruleset).units.map(u => u.cost))) return 'insufficient-gold';
   return 'unavailable';
 }

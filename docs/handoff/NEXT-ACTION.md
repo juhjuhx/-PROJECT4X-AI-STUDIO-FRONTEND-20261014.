@@ -1,9 +1,26 @@
 # NEXT-ACTION
 
-Demo02 R02-001～010 DONE：PR1 merge cd59f348，PR2文件merge eedc6ea4及兩輪main CI PASS；Tag/Web匿名下載SHA/CRC PASS。正式URLs見RELEASE-STATUS。本機七區與53檔歸檔SHA/mode相符，原Git/worktree/Downloads/private evidence保留；原整合worktree只加本機轉接checkpoint，不push私人history。
+**現在繼續D03-009。** branch `experiment/demo03-gameplay-preview`；[PR4](https://github.com/juhjuhx/-PROJECT4X-AI-STUDIO-FRONTEND-20261014./pull/4)維持DRAFT，不merge main、不改正式Demo02或未批准平衡。
 
-目前branch feature/demo03-mistbound-visuals，base eedc6ea4。D03-V01為實際呈現候選：233tests（原完整整合231＋2邊界）/check/build、既有11Browser/12Gameplay/4Demo/PWA及4真滑鼠/觸控/動畫驗收PASS。8真圖/來源邊界在verification/DEMO03-V01，交接在art/DEMO03-VISUAL-HANDOFF。獨立code review已APPROVE；下一步核Git status/source hashes→最終增量複核/PR CI，並開始已批准的隔離玩法規劃；尚無Demo03 Release。
+## 本輪已完成
 
-D03-001 Gameplay registry仍TODO，與已用的UI visual registry不同。主創已以D03-PREVIEW-001批准兩新兵/科技的隔離測試數值與新局專用方向；D03-001先做版本/registry契約與TDD，再依序D03-002/003/004，不靜默改G1。CONTENT-EXTENSION-PROPOSAL保留；城市/地形/遺跡遷移另審。不重建GameSession或複製第二個reducer。
+- D03-009真人／實機清單與回饋表：43ebb9b，CI40196643483 success。
+- README、Banner、真實圖版與版本／世界意圖／架構／路線入口：283d8c0a8026b03a5e911a1651df41eff9d48c44，CI40197690324 success。新圖像來源及SHA見media/readme/ASSET-MANIFEST；宣傳裝飾與真實截圖已區分。
+- D03-WS01本機入口再整理：12個文件／規則捷徑指向當前預覽；5個舊捷徑依版本/完成狀態分類，原始worktrees/Git/證據/Downloads均保留。9個Git目錄操作前後狀態相同，3處原有修改未動；新舊rollback只check均READY。詳WORKSPACE-INVENTORY及DEMO03-PREVIEW/WORKSPACE-REFRESH。
 
-core/session/main/demo runtime/AI與base15檔逐bytes相同，g1-ccts-1/save1/replay1不變；獨立candidate不覆寫Demo02 Tag。R5 87/13與R6 FAIL保留，現行Full100/T3/T6未重跑，Alpha PARTIAL、真人/真機/45–90分鐘UNVERIFIED。
+本文件所在提交的最終HEAD/CI須即時查PR4，以上明確SHA的結果不冒稱涵蓋後續提交。產品35檔與method29檔仍對應DEMO03-PREVIEW/SOURCE-BOUNDARY；本輪未改runtime。預覽257tests及原G1/新預覽/跨版本工程證據見TASK5-RESULTS/CI-VERIFICATION，沒有重新建立Demo02。
+
+## 唯一待驗Gate
+
+人工Gate、裝置前置、操作表與回饋只在 [D03-009-PLAYTEST](../verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md) 維護。真人／實體手機／平衡／新版Full100仍未驗；手機前置尚缺可驗證的受控HTTPS URL。127.0.0.1僅本機，touch模擬不可代替實機。
+
+主創回報GPT-6對d35a977基線唯讀審查尚無確認工程阻擋；**本輪新增diff仍待GPT-6獨立審查**，不自行改Ready。R5原87/13及歷史T3/T6 FAIL保留，新規則Full100/T3/T6 UNVERIFIED；Alpha PARTIAL。
+
+## 下一個實際動作
+
+1. `git status --porcelain=v2 --untracked-files=all`、`git rev-parse HEAD`；查PR4最新完整HEAD與checks，不把舊CI當新證據。
+2. 將最新GitHub diff交GPT-6，只讀獨立審查；依確認finding另立最小修補，不能先改平衡。
+3. 在獨立測試profile以`PROJECT4X_PORT=4174 npm start`啟動，開`http://127.0.0.1:4174/?preview=demo03`；依D03-009收集真實真人紀錄。實體手機由部署owner先提供同build受控HTTPS，再逐項執行；缺項保持UNVERIFIED。
+4. 只有實際新回饋／Gate／source變動才commit/push原分支。新Review、人工與產品Gate成立後才由主創考慮Ready及RC，不自動合併。
+
+本機恢復從統一管理根00-START-HERE進01-ACTIVE-WORKSPACE的Demo03-玩法預覽；04-DOCUMENTATION已指當前文件，舊完成工作在05-ARCHIVES捷徑。舊MVP有未提交staged檔案及unborn HEAD，禁止誤用或清理。

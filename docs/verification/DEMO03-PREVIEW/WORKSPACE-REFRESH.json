@@ -1,0 +1,27 @@
+{
+  "schema": "project4x-workspace-refresh-public-1",
+  "runId": "D03-WS01-20261025-213002-9a2e7a",
+  "status": "TESTED_PASS",
+  "sourceCommit": "283d8c0a8026b03a5e911a1651df41eff9d48c44",
+  "privateReceiptSha256": "0a027c24e274c87ec71de569c1c40c1159c68042de405689ba43d3251b8a06ce",
+  "privateInventorySha256": "c4af7181829e69832069d7fb233b631e2e6b5ea754acef332067d3e8a19f6d82",
+  "originalArchiveManifestSha256": "01b2326ed9c42b4b592516a75920edcfc08515a3b0eb724d80c3e297c008793d",
+  "retargetedSymlinks": 12,
+  "archivedSymlinks": 5,
+  "updatedLocalEntries": 5,
+  "gitLocationsChecked": 9,
+  "originalDirtyLocationsPreserved": 3,
+  "worktreesMoved": 0,
+  "originalFilesDeleted": 0,
+  "downloadsChanged": 0,
+  "freedBytes": 0,
+  "checks": {
+    "allGitStatusesUnchanged": true,
+    "originalArchiveManifestUnchanged": true,
+    "noBrokenSymlinks": true,
+    "legacyUnbornStagedPreserved": true,
+    "newRollbackCheck": "READY_TO_ROLLBACK / changed=false",
+    "oldRollbackCheck": "READY_TO_ROLLBACK / changed=false"
+  },
+  "scope": "本輪只整理捷徑與入口；原碼、原ZIP、私人world、歷史收據與Git refs保持；未執行真rollback。個人路由與完整Git狀態只留本機。"
+}

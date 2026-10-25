@@ -1,3 +1,7 @@
+> D03-009試玩準備已進行；人工Gate、裝置前置與回饋紀錄只在 [D03-009-PLAYTEST](verification/DEMO03-PREVIEW/D03-009-PLAYTEST.md) 維護。README/新Banner與真實圖版已更新並push；本機文件路由及安全捷徑歸檔已完成，見WORKSPACE-INVENTORY；不改規則或Demo02。
+
+> Demo03隔離預覽工程更新：兩兵/兩科技、固定版本registry/Save2/Replay2/Session/AI/事件/UI已實作；257tests、舊完整工程Gate與新桌機/觸控20指令旅程PASS，Core獨立review APPROVE，全分支UI review提出1項P2已真RED/GREEN修復，PR4 DRAFT及已驗本機Web預覽包，不merge新規則main。入口README→MASTER-TODO→NEXT-ACTION；不是正式平衡或Demo03 Release。以下保留Demo02已發布狀態與歷史。
+
 # PROJECT-4X 當前工程狀態
 
 Demo02為已發布的既有規則可玩Web/PWA預覽版，package0.1.0／g1-ccts-1／save1／replay1；Playable Alpha PARTIAL。正式玩法：24×24程序地圖、三兵/三科技、探索/攻擊/佔領/招募/遺跡、流亡/建中心、AI與Save/Replay。

@@ -1,6 +1,6 @@
 import type { KnownTile, Observation, Point, Unit } from '../core/types';
 import type { DeepReadonly } from '../session/contracts';
-import { UNIT_STATS } from '../core/types';
+import { unitDefinition } from '../core/rulesets';
 import { getTerrainVisual } from './visual-registry';
 import { paintMiniature } from './miniatures';
 
@@ -560,7 +560,7 @@ export class WorldMap {
     const chosen = unit.id === this.selection.unitId;
     const c = this.ctx;
     const x = p.x, y = p.y - 11;
-    const maxHp = UNIT_STATS[unit.kind].hp;
+    const maxHp = unitDefinition(this.view!.ruleset,unit.kind).hp;
 
     // Unit shadow
     c.fillStyle = 'rgba(12, 26, 21, 0.4)';

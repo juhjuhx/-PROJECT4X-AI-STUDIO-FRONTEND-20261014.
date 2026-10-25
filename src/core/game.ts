@@ -1,4 +1,5 @@
-import { UNIT_STATS, TECH_STATS } from './types';
+import { getRuleset, unitDefinition, technologyDefinition } from './rulesets';
+import type { RulesetId } from './rulesets';
 import type { Action, Actor, ApplyResult, Command, Faction, GameState, KnownTile, Observation, Point, Terrain, Unit } from './types';
 
 export const clone = <T>(value: T): T => structuredClone(value);
@@ -37,11 +38,12 @@ function faction(id: Actor): Faction {
   return { id, identityId: `文明-${id}`, lineageId: `文化-${id}`, gold: 8, techs: [], life: 'active', centerId: `首都-${id}`, originalCapitalId: `首都-${id}`, ownTurns: id === 0 ? 1 : 0, completedTurns: 0 };
 }
 
-export function createGame(seed: string): GameState {
+export function createGame(seed: string, ruleset: RulesetId = 'g1-ccts-1'): GameState {
+  const definition = getRuleset(ruleset);
   if (typeof seed !== 'string' || !seed.length || seed.length > 256) throw new Error('世界種子必須是1至256字元');
   const random = seeded(seed);
   const state: GameState = {
-    schema: 'project4x-save-1', ruleset: 'g1-ccts-1', seed, width: 24, height: 24, terrain: [],
+    ...(ruleset === 'g1-ccts-1' ? { schema: 'project4x-save-1' as const, ruleset } : { schema: 'project4x-save-2' as const, ruleset, contentHash: definition.contentHash, generatorVersion: definition.generatorVersion }), seed, width: 24, height: 24, terrain: [],
     units: [
       { id: '兵-0', owner: 0, kind: 'infantry', x: 3, y: 3, hp: 10, moved: false, acted: false },
       { id: '兵-1', owner: 0, kind: 'scout', x: 4, y: 3, hp: 7, moved: false, acted: false },
@@ -87,7 +89,7 @@ export function createGame(seed: string): GameState {
 export function visibility(state: GameState, actor: Actor): boolean[] {
   const seen = Array<boolean>(state.width * state.height).fill(false);
   const sources = [
-    ...state.units.filter(u => u.owner === actor).map(u => ({ ...u, radius: UNIT_STATS[u.kind].sight + (u.kind === 'scout' && state.factions[actor].techs.includes('pathfinding') ? 1 : 0) })),
+    ...state.units.filter(u => u.owner === actor).map(u => ({ ...u, radius: unitDefinition(state.ruleset,u.kind).sight + getRuleset(state.ruleset).technologies.filter(t => state.factions[actor].techs.includes(t.id)).flatMap(t => t.effects).reduce((n,e) => n + (e.type === 'unitSight' && e.unit === u.kind ? e.amount : 0),0) })),
     ...state.sites.filter(s => s.owner === actor).map(s => ({ ...s, radius: 1 })),
   ];
   for (const source of sources) for (let y = Math.max(0, source.y - source.radius); y <= Math.min(state.height - 1, source.y + source.radius); y++) for (let x = Math.max(0, source.x - source.radius); x <= Math.min(state.width - 1, source.x + source.radius); x++) if (distance(source, { x, y }) <= source.radius) seen[y * state.width + x] = true;
@@ -117,7 +119,7 @@ function moves(state: GameState, unit: Unit): Point[] {
   const queue: { p: Point; steps: number }[] = [{ p: unit, steps: 0 }];
   for (let q = 0; q < queue.length; q++) {
     const { p, steps } = queue[q];
-    if (steps === UNIT_STATS[unit.kind].move) continue;
+    if (steps === unitDefinition(state.ruleset,unit.kind).move) continue;
     for (const next of neighbors(p)) {
       const k = index(state, next);
       if (!within(state, next) || seen.has(k) || !passable(state.terrain[k]) || state.units.some(u => same(u, next))) continue;
@@ -134,14 +136,17 @@ export function legalActions(state: GameState, actor: Actor): Action[] {
   for (const unit of state.units.filter(u => u.owner === actor)) {
     for (const to of moves(state, unit)) result.push({ type: 'Move', unitId: unit.id, to });
     if (unit.acted) continue;
-    for (const target of state.units) if (target.owner !== actor && seen[index(state, target)] && distance(unit, target) <= UNIT_STATS[unit.kind].range) result.push({ type: 'Attack', unitId: unit.id, targetId: target.id });
+    for (const target of state.units) if (target.owner !== actor && seen[index(state, target)] && distance(unit, target) <= unitDefinition(state.ruleset,unit.kind).range) result.push({ type: 'Attack', unitId: unit.id, targetId: target.id });
     if (state.sites.some(s => same(s, unit) && s.owner !== actor)) result.push({ type: 'Capture', unitId: unit.id });
   }
   for (const site of state.sites.filter(s => s.owner === actor)) {
-    if (!site.recruited && !state.units.some(u => same(u, site))) for (const kind of ['infantry', 'scout', 'archer'] as const) if (f.gold >= UNIT_STATS[kind].cost && (kind !== 'archer' || f.techs.includes('archery'))) result.push({ type: 'Recruit', siteId: site.id, kind });
+    if (!site.recruited && !state.units.some(u => same(u, site))) for (const unit of getRuleset(state.ruleset).units) {
+      const unlocks = getRuleset(state.ruleset).technologies.filter(t => t.effects.some(e => e.type === 'unlockUnit' && e.unit === unit.id));
+      if (f.gold >= unit.cost && (!unlocks.length || unlocks.some(t => f.techs.includes(t.id)))) result.push({ type: 'Recruit', siteId: site.id, kind: unit.id });
+    }
     if (f.life === 'exiled' && state.factions[other(actor)].completedTurns > site.heldSince) result.push({ type: 'EstablishCapital', siteId: site.id });
   }
-  for (const tech of ['farm', 'archery', 'pathfinding'] as const) if (!f.techs.includes(tech) && f.gold >= TECH_STATS[tech].cost) result.push({ type: 'Research', tech });
+  for (const tech of getRuleset(state.ruleset).technologies) if (!f.techs.includes(tech.id) && f.gold >= tech.cost && tech.prerequisites.every(id => f.techs.includes(id))) result.push({ type: 'Research', tech: tech.id });
   result.push({ type: 'EndTurn' });
   return result;
 }
@@ -167,14 +172,14 @@ const record = (value: unknown): value is Record<string, unknown> => value !== n
 const keysAre = (value: Record<string, unknown>, keys: string[]): boolean => Object.keys(value).length === keys.length && keys.every(k => Object.hasOwn(value, k));
 const id = (value: unknown): value is string => typeof value === 'string' && value.length > 0 && value.length <= 256;
 
-export function validAction(value: unknown): value is Action {
+export function validAction(value: unknown, ruleset: RulesetId = 'g1-ccts-1'): value is Action {
   if (!record(value)) return false;
   switch (value.type) {
     case 'Move': return keysAre(value, ['type', 'unitId', 'to']) && id(value.unitId) && record(value.to) && keysAre(value.to, ['x', 'y']) && Number.isInteger(value.to.x) && Number.isInteger(value.to.y);
     case 'Attack': return keysAre(value, ['type', 'unitId', 'targetId']) && id(value.unitId) && id(value.targetId);
     case 'Capture': return keysAre(value, ['type', 'unitId']) && id(value.unitId);
-    case 'Recruit': return keysAre(value, ['type', 'siteId', 'kind']) && id(value.siteId) && ['infantry', 'scout', 'archer'].includes(value.kind as string);
-    case 'Research': return keysAre(value, ['type', 'tech']) && ['farm', 'archery', 'pathfinding'].includes(value.tech as string);
+    case 'Recruit': return keysAre(value, ['type', 'siteId', 'kind']) && id(value.siteId) && getRuleset(ruleset).units.some(u => u.id === value.kind);
+    case 'Research': return keysAre(value, ['type', 'tech']) && getRuleset(ruleset).technologies.some(t => t.id === value.tech);
     case 'ResolveRelic': return keysAre(value, ['type', 'choice']) && ['gold', 'intel'].includes(value.choice as string);
     case 'EstablishCapital': return keysAre(value, ['type', 'siteId']) && id(value.siteId);
     case 'EndTurn': return keysAre(value, ['type']);
@@ -182,8 +187,8 @@ export function validAction(value: unknown): value is Action {
   }
 }
 
-export function validCommand(value: unknown): value is Command {
-  return record(value) && keysAre(value, ['actor', 'requestId', 'expectedVersion', 'action']) && (value.actor === 0 || value.actor === 1) && id(value.requestId) && Number.isSafeInteger(value.expectedVersion) && (value.expectedVersion as number) >= 0 && validAction(value.action);
+export function validCommand(value: unknown, ruleset: RulesetId = 'g1-ccts-1'): value is Command {
+  return record(value) && keysAre(value, ['actor', 'requestId', 'expectedVersion', 'action']) && (value.actor === 0 || value.actor === 1) && id(value.requestId) && Number.isSafeInteger(value.expectedVersion) && (value.expectedVersion as number) >= 0 && validAction(value.action, ruleset);
 }
 
 function lifecycle(state: GameState): void {
@@ -204,7 +209,7 @@ function immutableCommand(command: Command): Command {
 
 export function applyCommand(state: GameState, command: Command): ApplyResult {
   const fail = (error: string): ApplyResult => ({ ok: false, state, error, events: [] });
-  if (!validCommand(command)) return fail('指令格式不正確');
+  if (!validCommand(command, state.ruleset)) return fail('指令格式不正確');
   const payload = stableStringify({ actor: command.actor, expectedVersion: command.expectedVersion, action: command.action });
   if (Object.hasOwn(state.requests, command.requestId)) return state.requests[command.requestId] === payload ? { ok: true, state, events: [] } : fail('此請求編號已使用其他指令');
   if (command.expectedVersion !== state.version) return fail('狀態版本已過期');
@@ -228,7 +233,7 @@ export function applyCommand(state: GameState, command: Command): ApplyResult {
       const unit = next.units.find(u => u.id === action.unitId)!, target = next.units.find(u => u.id === action.targetId)!;
       const terrain = next.terrain[index(next, target)];
       const cover = terrain === 'forest' || terrain === 'hill' || next.sites.some(s => same(s, target) && s.owner === target.owner) ? 1 : 0;
-      target.hp -= Math.max(1, UNIT_STATS[unit.kind].attack - UNIT_STATS[target.kind].defense - cover);
+      target.hp -= Math.max(1, unitDefinition(next.ruleset,unit.kind).attack - unitDefinition(next.ruleset,target.kind).defense - cover);
       unit.moved = true; unit.acted = true;
       if (target.hp <= 0) next.units = next.units.filter(u => u.id !== target.id);
       break;
@@ -241,11 +246,11 @@ export function applyCommand(state: GameState, command: Command): ApplyResult {
     }
     case 'Recruit': {
       const site = next.sites.find(s => s.id === action.siteId)!;
-      f.gold -= UNIT_STATS[action.kind].cost; site.recruited = true;
-      next.units.push({ id: `兵-${next.nextUnitId++}`, owner: actor, kind: action.kind, x: site.x, y: site.y, hp: UNIT_STATS[action.kind].hp, moved: true, acted: true });
+      f.gold -= unitDefinition(next.ruleset,action.kind).cost; site.recruited = true;
+      next.units.push({ id: `兵-${next.nextUnitId++}`, owner: actor, kind: action.kind, x: site.x, y: site.y, hp: unitDefinition(next.ruleset,action.kind).hp, moved: true, acted: true });
       break;
     }
-    case 'Research': f.gold -= TECH_STATS[action.tech].cost; f.techs.push(action.tech); break;
+    case 'Research': f.gold -= technologyDefinition(next.ruleset,action.tech).cost; f.techs.push(action.tech); break;
     case 'ResolveRelic': {
       const relic = next.relics.find(r => r.id === next.pendingRelic!.relicId)!;
       if (action.choice === 'gold') f.gold += 4;
@@ -259,7 +264,7 @@ export function applyCommand(state: GameState, command: Command): ApplyResult {
       next.active = other(actor); next.turn++;
       const incoming = next.factions[next.active];
       incoming.ownTurns++;
-      if (incoming.ownTurns > 1) incoming.gold += next.sites.filter(s => s.owner === next.active).length * (2 + (incoming.techs.includes('farm') ? 1 : 0));
+      if (incoming.ownTurns > 1) incoming.gold += next.sites.filter(s => s.owner === next.active).length * (2 + getRuleset(next.ruleset).technologies.filter(t => incoming.techs.includes(t.id)).flatMap(t => t.effects).reduce((n,e) => n + (e.type === 'siteIncome' ? e.amount : 0),0));
       for (const unit of next.units.filter(u => u.owner === next.active)) { unit.moved = false; unit.acted = false; }
       for (const site of next.sites.filter(s => s.owner === next.active)) site.recruited = false;
       break;

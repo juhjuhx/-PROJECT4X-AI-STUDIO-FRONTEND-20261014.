@@ -1,7 +1,8 @@
 import './styles.css';
 import { createGameSession } from './session/game-session';
 import type { DeepReadonly } from './session/contracts';
-import { TECH_STATS, UNIT_STATS } from './core/types';
+import { getRuleset, technologyDefinition, unitDefinition } from './core/rulesets';
+import { entryRuleset, storageKeys } from './ui/preview-entry';
 import type { Action, KnownTile, Point, Tech, UnitKind } from './core/types';
 import { WorldMap } from './ui/map';
 import { recruitmentStatus } from './ui/recruitment';
@@ -9,12 +10,13 @@ import { createDemoShell } from './demo/shell';
 import { bindProgressToSave, readBoundProgress } from './demo/local-progress';
 
 const HUMAN = 0;
-const SAVE_KEY = 'project4x-save-1';
-const DEMO_SAVE_KEY = 'project4x-demo-progress-1';
+const initialRuleset = entryRuleset(window.location.search);
+const nextRulesetLabel = initialRuleset === 'demo03-preview-1' ? 'Demo03隔離預覽' : 'G1既有規則';
+const currentStorage = () => storageKeys(gameplay.getObservation().ruleset);
 const MAX_IMPORT_BYTES = 10 * 1024 * 1024;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const requestSession = crypto.randomUUID();
-const { gameplay, files, dispose } = createGameSession({ seed: '霧境初航-01', reducedMotion });
+const { gameplay, files, dispose } = createGameSession({ seed: '霧境初航-01', ruleset: initialRuleset, reducedMotion });
 let view = gameplay.getObservation();
 let selection: Point | null = null;
 let selectedUnitId: string | null = null;
@@ -231,8 +233,8 @@ seedLabel.htmlFor = 'world-seed';
 const seedInput = el('input', 'seed-input');
 seedInput.id = 'world-seed'; seedInput.maxLength = 120; seedInput.value = view.seed;
 const newGameRow = el('div', 'seed-row');
-newGameRow.append(seedInput, button('重新開局', () => newGame(), 'danger-button'));
-newGameBlock.append(seedLabel, newGameRow, el('p', 'muted', '相同種子與規則版本會生成相同世界。更換文字即可展開新地圖。'));
+newGameRow.append(seedInput, button(initialRuleset === 'demo03-preview-1' ? '重新開局（Demo03隔離預覽）' : '重新開局', () => newGame(), 'danger-button'));
+newGameBlock.append(el('p', 'next-game-ruleset', `下一新局：${nextRulesetLabel}。載入的戰局維持原規則。`), seedLabel, newGameRow, el('p', 'muted', '相同種子與規則版本會生成相同世界。更換文字即可展開新地圖。'));
 recordDialog.append(recordHead, recordDescription, saveNotice, recordFeedback, saveRow, saveInput, replayBlock, newGameBlock);
 
 const helpDialog = el('dialog', 'game-dialog help-dialog');
@@ -361,8 +363,8 @@ function actionLabel(action: Action): string {
     case 'Move': return `探險隊移至 ${action.to.x + 1} · ${action.to.y + 1}。`;
     case 'Attack': return '部隊已交戰。傷亡與可用行動已更新。';
     case 'Capture': return '旗幟已升起，據點加入你的城邦。';
-    case 'Recruit': return `${UNIT_STATS[action.kind].name}加入探險隊。`;
-    case 'Research': return `已習得「${TECH_STATS[action.tech].name}」。`;
+    case 'Recruit': return `${unitDefinition(view.ruleset,action.kind).name}加入探險隊。`;
+    case 'Research': return `已習得「${technologyDefinition(view.ruleset,action.tech).name}」。`;
     case 'ResolveRelic': return action.choice === 'gold' ? '遺跡帶來 4 金幣。' : '古老的紋路揭開了更多地形。';
     case 'EstablishCapital': return '新中心已建立，城邦結束流亡。';
     case 'EndTurn': return '對手行動中。';
@@ -393,6 +395,7 @@ function dispatch(action: Action): void {
 
 function render(): void {
   view = gameplay.getObservation();
+  brandCopy.querySelector('.brand-subtitle')!.textContent = view.ruleset === 'demo03-preview-1' ? 'Demo03 隔離玩法預覽 · 測試數值，尚未完成平衡驗收' : 'PROJECT-4X · 探索、征服與重建';
   const aiPaused = gameplay.getSnapshot().ai.phase === 'paused';
   if (selectedUnitId && !selectedUnit()) selectedUnitId = null;
   goldValue.textContent = String(view.faction.gold);
@@ -408,7 +411,7 @@ function render(): void {
   factionDescription.textContent = center ? `政治中心 · ${center.site!.name}` : view.faction.life === 'exiled' ? '旗幟仍在。守住據點跨過完整對手回合，就能主動重建中心。' : '你的航程已告一段落。';
   factionNumbers.replaceChildren(el('span', '', `${ownSites.length} 據點`), el('span', '', `${ownUnits.length} 部隊`));
   coordinates.textContent = selection ? `座標 ${selection.x + 1} · ${selection.y + 1}` : '尚未選格';
-  canvas.setAttribute('aria-description', `${exploredLabel.textContent}。${coordinates.textContent}。${selectedUnit() ? `已選取${UNIT_STATS[selectedUnit()!.kind].name}` : '未選取部隊'}。`);
+  canvas.setAttribute('aria-description', `${exploredLabel.textContent}。${coordinates.textContent}。${selectedUnit() ? `已選取${unitDefinition(view.ruleset,selectedUnit()!.kind).name}` : '未選取部隊'}。`);
   activeLabel.textContent = view.winner !== null ? '此局已結束' : aiPaused ? '對手已暫停' : view.active === HUMAN ? '輪到你了' : '對手行動中';
   continueAI.hidden = !aiPaused;
   endTurnButton.disabled = !canAct() || !isLegal({ type: 'EndTurn' });
@@ -431,8 +434,8 @@ function renderInspection(): void {
   const tile = tileAt(selection);
   const title = inspectPanel.node.querySelector('h2')!;
   if (unit) {
-    title.textContent = UNIT_STATS[unit.kind].name;
-    const stats = UNIT_STATS[unit.kind];
+    title.textContent = unitDefinition(view.ruleset,unit.kind).name;
+    const stats = unitDefinition(view.ruleset,unit.kind);
     const status = el('div', 'unit-status');
     status.append(el('span', unit.moved ? 'spent' : '', unit.moved ? '已移動' : '可移動'), el('span', unit.acted ? 'spent' : '', unit.acted ? '已攻擊' : '可攻擊'));
     const hp = el('div', 'hp-display');
@@ -452,7 +455,7 @@ function renderInspection(): void {
     legal.forEach((a) => {
       if (a.type === 'Attack') {
         const enemy = view.units.find((u) => u.id === a.targetId);
-        attackActions.append(makeActionButton(enemy ? `攻擊${UNIT_STATS[enemy.kind].name} (${enemy.hp} HP)` : '攻擊目標', a, 'attack-button'));
+        attackActions.append(makeActionButton(enemy ? `攻擊${unitDefinition(view.ruleset,enemy.kind).name} (${enemy.hp} HP)` : '攻擊目標', a, 'attack-button'));
       }
       if (a.type === 'Capture') attackActions.append(makeActionButton('占領據點', a, 'primary-button'));
     });
@@ -488,9 +491,9 @@ function renderInspection(): void {
         if (occupyingUnit) {
           const alert = el('div', 'garrison-alert');
           const badge = el('div', 'garrison-badge', '⚠️ 城內已有部隊駐防');
-          const desc = el('p', 'garrison-text', `駐軍：${UNIT_STATS[occupyingUnit.kind].name} (${occupyingUnit.hp} HP)。`);
+          const desc = el('p', 'garrison-text', `駐軍：${unitDefinition(view.ruleset,occupyingUnit.kind).name} (${occupyingUnit.hp} HP)。`);
           const caution = el('p', 'garrison-warn', '請先移開駐軍，才能在此招募。');
-          const moveOutBtn = button(`選取${UNIT_STATS[occupyingUnit.kind].name}並指揮移出`, () => selectUnit(occupyingUnit.id), 'secondary-button full-width');
+          const moveOutBtn = button(`選取${unitDefinition(view.ruleset,occupyingUnit.kind).name}並指揮移出`, () => selectUnit(occupyingUnit.id), 'secondary-button full-width');
           alert.append(badge, desc);
           if (occupyingUnit.owner === HUMAN) alert.append(caution, moveOutBtn);
           else { badge.textContent = '敵方部隊佔據據點'; alert.append(el('p', 'garrison-warn', '需先排除敵軍才能徵召。')); }
@@ -506,8 +509,8 @@ function renderInspection(): void {
         recruitSection.append(recruitHeader);
 
         const recruits = el('div', 'recruit-list');
-        (['infantry', 'scout', 'archer'] as UnitKind[]).forEach((kind) => {
-          const stat = UNIT_STATS[kind];
+        getRuleset(view.ruleset).units.forEach(({id:kind}) => {
+          const stat = unitDefinition(view.ruleset,kind);
           const action: Action = { type: 'Recruit', siteId: site.id, kind };
           const legal = isLegal(action);
           const item = el('div', 'recruit-card');
@@ -525,8 +528,9 @@ function renderInspection(): void {
             reason = recruitLabel;
           } else if (view.faction.gold < stat.cost) {
             reason = `金幣不足 (${view.faction.gold}/${stat.cost}G)`;
-          } else if (kind === 'archer' && !view.faction.techs.includes('archery')) {
-            reason = '需先研發【弓術】';
+          } else if (getRuleset(view.ruleset).technologies.some(t => !view.faction.techs.includes(t.id) && t.effects.some(e => e.type === 'unlockUnit' && e.unit === kind))) {
+            const required = getRuleset(view.ruleset).technologies.find(t => t.effects.some(e => e.type === 'unlockUnit' && e.unit === kind))!;
+            reason = `需先研發【${required.name}】`;
           } else {
             reason = '暫不可招募';
           }
@@ -562,9 +566,9 @@ function renderUnits(): void {
   const list = el('div', 'unit-list');
   units.forEach((unit) => {
     const node = button('', () => selectUnit(unit.id), unit.id === selectedUnitId ? 'unit-row selected' : 'unit-row');
-    const glyph = el('span', `unit-glyph ${unit.kind}`, unit.kind === 'infantry' ? '步' : unit.kind === 'scout' ? '斥' : '弓'); glyph.setAttribute('aria-hidden', 'true');
+    const glyph = el('span', `unit-glyph ${unit.kind}`, ({infantry:'步',scout:'斥',archer:'弓',shieldGuard:'盾',mobileScout:'巡'} as const)[unit.kind]); glyph.setAttribute('aria-hidden', 'true');
     const copy = el('span', 'unit-copy');
-    copy.append(el('strong', '', UNIT_STATS[unit.kind].name), el('span', '', `${unit.x + 1} · ${unit.y + 1} / ${unit.hp} HP`));
+    copy.append(el('strong', '', unitDefinition(view.ruleset,unit.kind).name), el('span', '', `${unit.x + 1} · ${unit.y + 1} / ${unit.hp} HP`));
     node.append(glyph, copy, el('span', 'unit-ready', unit.moved && unit.acted ? '已行動' : '待命'));
     node.setAttribute('aria-pressed', String(unit.id === selectedUnitId));
     list.append(node);
@@ -574,7 +578,7 @@ function renderUnits(): void {
 
 function renderTech(): void {
   techPanel.body.replaceChildren();
-  const currentTechs = ['farm', 'archery', 'pathfinding'] as Tech[];
+  const currentTechs = getRuleset(view.ruleset).technologies.map(t => t.id);
   const researchedCount = currentTechs.filter((t) => view.faction.techs.includes(t)).length;
   const overview = el('div', 'tech-overview');
   overview.append(
@@ -584,7 +588,7 @@ function renderTech(): void {
 
   currentTechs.forEach((tech, index) => {
     const known = view.faction.techs.includes(tech);
-    const stat = TECH_STATS[tech];
+    const stat = technologyDefinition(view.ruleset,tech);
     const canAfford = view.faction.gold >= stat.cost;
     const row = el('div', known ? 'tech-row researched' : 'tech-row');
     const copy = el('div', 'tech-copy');
@@ -596,6 +600,7 @@ function renderTech(): void {
     const action: Action = { type: 'Research', tech };
     const research = makeActionButton(known ? '已習得' : `${stat.cost} 金`, action, known ? 'secondary-button' : 'primary-button');
     research.title = known ? '已完成研究' : `研究「${stat.name}」（需 ${stat.cost} 金幣）`;
+    if (!known && stat.prerequisites.some(id => !view.faction.techs.includes(id))) copy.append(el('p','muted',`前置：${stat.prerequisites.map(id => technologyDefinition(view.ruleset,id).name).join('、')}`));
     row.append(copy, research);
     techPanel.body.append(row);
   });
@@ -623,28 +628,30 @@ function updateRelic(): void {
 
 function updateSaveNotice(): void {
   try {
-    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(SAVE_KEY) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
+    saveNotice.textContent = `${gameplay.getSnapshot().hasUnsavedChanges ? '目前有未保存的進度' : '目前進度尚未變更'} · ${localStorage.getItem(currentStorage().save) ? '本機有一份保存' : '本機尚無保存'} · 種子 ${view.seed}`;
   } catch (error) { saveNotice.textContent = `本機保存無法存取：${errorText(error)}。仍可匯出檔案。`; }
 }
 
 function saveLocal(): void {
   const result = files.save();
   if (!result.ok) { notify(result.error.message, true); return; }
+  const keys = currentStorage();
+  const savedRuleset = view.ruleset;
   try {
-    localStorage.setItem(SAVE_KEY, result.file.text);
+    localStorage.setItem(keys.save, result.file.text);
     const acknowledged = files.acknowledgeSave(result.file.stamp);
     if (!acknowledged.ok) { notify(acknowledged.error.message, true); return; }
     const journal = demo.getProgress();
-    void bindProgressToSave(result.file.text, journal).then(sidecar => {
-      if (localStorage.getItem(SAVE_KEY) === result.file.text) localStorage.setItem(DEMO_SAVE_KEY, sidecar);
+    void bindProgressToSave(result.file.text, journal, savedRuleset).then(sidecar => {
+      if (localStorage.getItem(keys.save) === result.file.text) localStorage.setItem(keys.progress, sidecar);
     }).catch(error => notify(`戰局已保存，但探索手札保存失敗：${errorText(error)}`, true));
     notify('進度已保存在此瀏覽器。也可匯出檔案備份。');
     updateSaveNotice();
   } catch (error) { notify(`保存失敗：${errorText(error)}。請使用匯出保存。`, true); updateSaveNotice(); }
 }
 
-function confirmReplacement(): boolean {
-  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm('目前有未保存的進度。是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。');
+function confirmReplacement(nextGame?: string): boolean {
+  return !gameplay.getSnapshot().hasUnsavedChanges || window.confirm(`目前有未保存的進度。${nextGame ? `下一新局將採${nextGame}。` : ''}是否捨棄目前進度？取消後可先按「保存進度」或「匯出保存」。`);
 }
 
 function showReplacement(message: string): void {
@@ -659,7 +666,7 @@ function showReplacement(message: string): void {
 function newGame(): void {
   const seed = seedInput.value.trim();
   if (!seed) { notify('請輸入世界種子。', true); seedInput.focus(); return; }
-  if (!window.confirm('重新開局會結束目前航程。請確認需要的進度已保存或匯出。')) return;
+  if (!window.confirm(`重新開局會結束目前航程，下一新局將採${nextRulesetLabel}。請確認需要的進度已保存或匯出。`)) return;
   const result = files.newGame(seed, gameplay.getSnapshot().stamp);
   if (result.ok) showReplacement(`以「${seed}」展開新的航程。`);
   else notify(`建立世界失敗：${result.error.message}`, true);
@@ -667,14 +674,15 @@ function newGame(): void {
 
 async function loadLocal(isCurrent: () => boolean = () => true): Promise<boolean> {
   const expected = gameplay.getSnapshot().stamp;
+  const keys = currentStorage();
   try {
-    const text = localStorage.getItem(SAVE_KEY);
+    const text = localStorage.getItem(keys.save);
     if (!text) { notify('此瀏覽器尚無保存。可選擇匯入保存檔。', true); return false; }
     if (!confirmReplacement()) return false;
     let journal = null;
     let journalError: unknown = null;
     try {
-      const sidecar = localStorage.getItem(DEMO_SAVE_KEY);
+      const sidecar = localStorage.getItem(keys.progress);
       if (sidecar) journal = await readBoundProgress(text, sidecar);
     } catch (error) { journalError = error; }
     const now = gameplay.getSnapshot().stamp;
@@ -750,9 +758,9 @@ window.addEventListener('keydown', (event) => {
 
 const demo = createDemoShell({
   gameplay, mount: sidebar,
-  hasSave: () => { try { return Boolean(localStorage.getItem(SAVE_KEY)); } catch { return false; } },
+  hasSave: () => { try { return Boolean(localStorage.getItem(currentStorage().save)); } catch { return false; } },
   start: seed => {
-    if (!confirmReplacement()) return false;
+    if (!confirmReplacement(nextRulesetLabel)) return false;
     const result = files.newGame(seed, gameplay.getSnapshot().stamp);
     if (!result.ok) { notify(result.error.message, true); return false; }
     showReplacement(`以「${seed}」展開探索Demo。`); return true;

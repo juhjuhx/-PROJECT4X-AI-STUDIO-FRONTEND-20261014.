@@ -1,3 +1,11 @@
+## Demo03 隔離預覽版本擴充（D03-PREVIEW-001）
+
+IMPLEMENTED／聚焦 runtime TESTED_PASS：factory `SessionOptions.ruleset?: RulesetId`，預設 G1；初始化及 `newGame(seed, expected)` 使用建立時固定設定，兩參數 port 不變。load 不遷移載入局；預覽入口載入 G1 仍用 G1 續玩，再開新局回預覽設定。唯一 Session/reducer、去重/generation/先驗後替換與 capability 不變。
+
+新增已知版本配對 `demo03-preview-1` / `project4x-save-2` / `project4x-replay-2`；舊 G1 格式及 bytes 不變。新資料綁固定內建 Definition 的 SHA-256 和 `g1-mapgen-1`，未知/混搭拒絕。ReplayVerificationResult 新增預覽成功分支，回傳實際已驗版本。frontend-1 保留既有結構與方法，Observation.ruleset 表示內容語意；更新的同 bundle consumer 須理解新增 literal，不能假稱未更新的外部 v1 consumer 已相容所有預覽結果。UI 入口/新事件及真人尚未驗收，詳見 PREVIEW 計畫 Task3–5。
+
+以下 C1/C2 原規格保留為 G1 行為與歷史，不能用它否定上方明確擴充。
+
 # Frontend-Core 正式契約 v1
 
 > 2026-10-18：C3整合仍使用同一v1 signature與能力邊界；core/session/presentation沒有改動。fresh runtime／browser證據見[最新C3狀態](../handoff/C3-IMPLEMENTATION-STATUS.md)。新增呈現helper不增加或另造API。

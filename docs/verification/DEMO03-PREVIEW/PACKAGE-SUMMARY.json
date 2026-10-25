@@ -1,0 +1,16 @@
+{
+  "status": "TESTED_PASS",
+  "zipSha256": "15a946ae6c0492d89a0280e89241666a767bba23ae7e5b6b0a2d62ee0f6a89a4",
+  "zipBytes": 93006,
+  "sourceCommit": "72120bc7cc97bfae3f6a7549f695ce4b9e05eece",
+  "productSourceHash": "0f7099307d28cc8652f34845799a0e95a8846e8a6d2c3b9bc7dd151ec9782fb7",
+  "crc": true,
+  "manifestFilesChecked": 19,
+  "freshExtract": true,
+  "launcherSyntax": true,
+  "realLauncherHttp": true,
+  "ownedServerCleanup": true,
+  "limitations": "Node HTTP launcher verified; no OS Gatekeeper GUI or physical phone install claim",
+  "zipName": "PROJECT4X-DEMO03-PREVIEW-72120bc7.zip",
+  "downloadMode": "local preview artifact; not GitHub Release"
+}

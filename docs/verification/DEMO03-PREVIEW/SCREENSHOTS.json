@@ -1,0 +1,28 @@
+[
+  {
+    "path": "screenshots/desktop-preview.png",
+    "viewport": {
+      "width": 1440,
+      "height": 960
+    },
+    "fullPage": true,
+    "simulatedTouch": false,
+    "realExecution": true,
+    "runId": "preview-dom-002",
+    "state": "修正新局規則提示後的真研究/招募兩新兵/三格移動/Save Load Replay旅程",
+    "sha256": "dcd568417060bb457d31bbfdd36ca8c206c303f601af8190026640349d890073"
+  },
+  {
+    "path": "screenshots/phone-preview.png",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "fullPage": true,
+    "simulatedTouch": true,
+    "realExecution": true,
+    "runId": "preview-dom-002",
+    "state": "修正新局規則提示後的真研究/招募兩新兵/三格移動/Save Load Replay旅程",
+    "sha256": "cfb3f7fe68a8ac5faf4722aba0e6a566ac23d70b228d4aedc5b6e8bb6f492ef5"
+  }
+]

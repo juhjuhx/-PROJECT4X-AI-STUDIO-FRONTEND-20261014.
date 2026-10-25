@@ -14,8 +14,10 @@ export function validateImport(text: string, kind: 'save' | 'replay'): Candidate
     const value: unknown = JSON.parse(text);
     if (value && typeof value === 'object' && !Array.isArray(value)) {
       const record = value as Record<string, unknown>;
-      if ((Object.hasOwn(record, 'schema') && record.schema !== `project4x-${kind}-1`) ||
-          (Object.hasOwn(record, 'ruleset') && record.ruleset !== 'g1-ccts-1')) return { ok: false, code: 'UNSUPPORTED_VERSION' };
+      const knownSchema = record.schema === `project4x-${kind}-1` || record.schema === `project4x-${kind}-2`;
+      const knownRuleset = record.ruleset === 'g1-ccts-1' || record.ruleset === 'demo03-preview-1';
+      if (Object.hasOwn(record,'schema') && !knownSchema || Object.hasOwn(record,'ruleset') && !knownRuleset
+        || knownSchema && knownRuleset && ((record.schema === `project4x-${kind}-1`) !== (record.ruleset === 'g1-ccts-1'))) return { ok:false, code:'UNSUPPORTED_VERSION' };
     }
     return { ok: true, state: kind === 'save' ? deserializeGame(text) : replayGame(text) };
   } catch { return { ok: false, code: invalid }; }

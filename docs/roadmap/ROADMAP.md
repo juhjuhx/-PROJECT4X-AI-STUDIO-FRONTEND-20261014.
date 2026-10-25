@@ -1,12 +1,13 @@
 # PROJECT-4X Roadmap
 
-當前：Demo02既有規則Web/PWA正式發布流程；Alpha仍PARTIAL。Task狀態與依賴以MASTER-TODO唯一維護，不在此複製一份不同進度。
+當前：Demo02已發布、Demo03視覺已合併；兩兵／兩科技隔離預覽位於Draft PR4，正進入D03-009真人／真機驗收準備。Alpha仍PARTIAL。Task狀態與依賴以MASTER-TODO唯一維護，不在此複製一份不同進度。
 
     已驗核心／Session／D3／探索敘事／PWA
         → 公開安全source → PR/CI/review → Demo02 Release
         → Desktop安全索引/歸檔 → 真人/真機驗收
         → Demo03：獨立branch、視覺registry/tokens/原創呈現
-            → 內容registry → 兩兵種＋科技（待精確裁決）
+            → 固定兩包內容registry → 兩兵種＋科技（隔離基準已批准且工程實作）
+                → 真人／真機／平衡／新diff獨立審查（未完成）
             → 簡化城市成長 → 新地形/遺跡版本化
             → AI/Fog/SaveReplay → 真Gameplay → 獨立RC
 

@@ -14,12 +14,14 @@ export function getTerrainVisual(tile: {visibility: string; terrain?: string | n
  if (tile.visibility === 'unknown') return FOG;
  return tile.terrain && Object.hasOwn(TERRAINS, tile.terrain) ? TERRAINS[tile.terrain] : MISSING_TERRAIN;
 }
-export type UnitVisual = Readonly<{id: string; silhouette: 'soldier' | 'wanderer' | 'bowman' | 'unidentified'}>;
+export type UnitVisual = Readonly<{id: string; silhouette: 'soldier' | 'wanderer' | 'bowman' | 'bulwark' | 'runner' | 'unidentified'}>;
 const MISSING_UNIT: UnitVisual = Object.freeze({id:'unidentified',silhouette:'unidentified'});
 const UNITS: Readonly<Record<string, UnitVisual>> = Object.freeze({
  infantry: Object.freeze({id:'infantry',silhouette:'soldier'}),
  scout: Object.freeze({id:'scout',silhouette:'wanderer'}),
  archer: Object.freeze({id:'archer',silhouette:'bowman'}),
+ shieldGuard: Object.freeze({id:'shieldGuard',silhouette:'bulwark'}),
+ mobileScout: Object.freeze({id:'mobileScout',silhouette:'runner'}),
 });
 export function getUnitVisual(kind: string): UnitVisual {
  return Object.hasOwn(UNITS, kind) ? UNITS[kind] : MISSING_UNIT;
